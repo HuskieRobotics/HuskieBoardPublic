@@ -6,11 +6,11 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
@@ -58,22 +58,22 @@
 <library>
 <packages>
 <package name="ITG-3400">
-<smd name="P$4" x="-1.5" y="0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$1" x="-1.5" y="0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$2" x="-1.5" y="-0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$5" x="-1.5" y="-0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$8" x="1.5" y="0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$9" x="1.5" y="0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$10" x="1.5" y="-0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$11" x="1.5" y="-0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$13" x="-0.2" y="1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$14" x="0.2" y="1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$15" x="0.6" y="1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$17" x="-0.6" y="1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$20" x="-0.6" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$21" x="-0.2" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$22" x="0.2" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
-<smd name="P$23" x="0.6" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="NC1" x="-1.5" y="0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC2" x="-1.5" y="0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC3" x="-1.5" y="-0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC4" x="-1.5" y="-0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC9" x="1.5" y="0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC8" x="1.5" y="0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC7" x="1.5" y="-0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC6" x="1.5" y="-0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NCS" x="-0.2" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="NC5" x="0.2" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="RESV-20" x="0.6" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="SCL" x="-0.6" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="VDDIO" x="-0.6" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="SDO" x="-0.2" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="REGOUT" x="0.2" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="FSYNC" x="0.6" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21" style="longdash"/>
 <wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21" style="longdash"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21" style="longdash"/>
@@ -205,6 +205,14 @@
 <vertex x="-1.15" y="1.05"/>
 <vertex x="-1.25" y="1.15"/>
 </polygon>
+<smd name="NC0" x="-1.524" y="1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="P$2" x="-1.016" y="1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="RESV-19" x="1.016" y="1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="GND" x="1.524" y="1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="VDD" x="1.524" y="-1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="INT" x="1.016" y="-1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="NC11" x="-1.016" y="-1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="NC10" x="-1.524" y="-1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -228,9 +236,10 @@
 <devicesets>
 <deviceset name="ITG-3400">
 <gates>
+<gate name="G$1" symbol="ITG-3400" x="7.62" y="-17.78"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="ITG-3400">
 <technologies>
 <technology name=""/>
 </technologies>
