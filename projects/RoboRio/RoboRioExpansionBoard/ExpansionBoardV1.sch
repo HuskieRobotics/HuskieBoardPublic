@@ -5452,7 +5452,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="parallax_propeller (1)" deviceset="P8X32A-D40" device=""/>
+<part name="PROPELLER" library="parallax_propeller (1)" deviceset="P8X32A-D40" device=""/>
 <part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49U70"/>
 <part name="EEPROM" library="microchip" deviceset="24*" device="P" technology="LC256"/>
 <part name="IC2" library="oli" deviceset="LM1086*" device="" technology="-3.3"/>
@@ -5471,7 +5471,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="P8X32A-D40" x="38.1" y="76.2"/>
+<instance part="PROPELLER" gate="P8X32A-D40" x="38.1" y="76.2"/>
 <instance part="Q1" gate="G$1" x="60.96" y="50.8"/>
 <instance part="EEPROM" gate="G$1" x="76.2" y="180.34"/>
 <instance part="IC2" gate="G$1" x="-35.56" y="162.56"/>
@@ -5493,6 +5493,19 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <wire x1="55.88" y1="162.56" x2="55.88" y2="187.96" width="0.762" layer="92"/>
 <wire x1="60.96" y1="162.56" x2="121.92" y2="162.56" width="0.762" layer="92"/>
 <wire x1="121.92" y1="162.56" x2="121.92" y2="180.34" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="IO[0..31]">
+<segment>
+<wire x1="58.42" y1="58.42" x2="58.42" y2="86.36" width="0.762" layer="92"/>
+<wire x1="58.42" y1="58.42" x2="66.04" y2="58.42" width="0.762" layer="92"/>
+<wire x1="66.04" y1="58.42" x2="71.12" y2="53.34" width="0.762" layer="92"/>
+<wire x1="71.12" y1="53.34" x2="71.12" y2="48.26" width="0.762" layer="92"/>
+<wire x1="71.12" y1="48.26" x2="66.04" y2="43.18" width="0.762" layer="92"/>
+<wire x1="66.04" y1="43.18" x2="22.86" y2="43.18" width="0.762" layer="92"/>
+<wire x1="22.86" y1="43.18" x2="17.78" y2="48.26" width="0.762" layer="92"/>
+<wire x1="17.78" y1="48.26" x2="17.78" y2="96.52" width="0.762" layer="92"/>
+<wire x1="71.12" y1="53.34" x2="116.84" y2="53.34" width="0.762" layer="92"/>
 </segment>
 </bus>
 </busses>
@@ -5536,7 +5549,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="P8X32A-D40" pin="XO"/>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="XO"/>
 <pinref part="Q1" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
 <junction x="55.88" y="50.8"/>
@@ -5546,7 +5559,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <net name="N$2" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="P8X32A-D40" pin="XI"/>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="XI"/>
 <wire x1="63.5" y1="50.8" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="53.34" x2="55.88" y2="53.34" width="0.1524" layer="91"/>
 <junction x="63.5" y="50.8"/>
@@ -5555,22 +5568,16 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 </net>
 <net name="SPECIAL28" class="0">
 <segment>
-<pinref part="U$1" gate="P8X32A-D40" pin="P28"/>
-<wire x1="60.96" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
-<junction x="55.88" y="88.9"/>
-</segment>
-<segment>
 <pinref part="EEPROM" gate="G$1" pin="SCL"/>
 <wire x1="55.88" y1="187.96" x2="63.5" y2="187.96" width="0.1524" layer="91"/>
 <junction x="63.5" y="187.96"/>
 </segment>
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P28"/>
+<wire x1="60.96" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SPECIAL29" class="0">
-<segment>
-<pinref part="U$1" gate="P8X32A-D40" pin="P29"/>
-<wire x1="60.96" y1="91.44" x2="55.88" y2="91.44" width="0.1524" layer="91"/>
-<junction x="55.88" y="91.44"/>
-</segment>
 <segment>
 <pinref part="EEPROM" gate="G$1" pin="SDA"/>
 <wire x1="91.44" y1="162.56" x2="91.44" y2="180.34" width="0.1524" layer="91"/>
@@ -5579,33 +5586,29 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <wire x1="101.6" y1="190.5" x2="101.6" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="180.34" x2="91.44" y2="180.34" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P29"/>
+<wire x1="60.96" y1="91.44" x2="55.88" y2="91.44" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SPECIAL30" class="0">
-<segment>
-<pinref part="U$1" gate="P8X32A-D40" pin="P30"/>
-<wire x1="60.96" y1="93.98" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
-<junction x="55.88" y="93.98"/>
-</segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="&gt;RX"/>
 <wire x1="121.92" y1="175.26" x2="134.62" y2="175.26" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P30"/>
+<wire x1="60.96" y1="93.98" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SPECIAL31" class="0">
-<segment>
-<pinref part="U$1" gate="P8X32A-D40" pin="P31"/>
-<wire x1="60.96" y1="96.52" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
-<junction x="55.88" y="96.52"/>
-</segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="&lt;TX"/>
 <wire x1="121.92" y1="177.8" x2="134.62" y2="177.8" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="N$4" class="0">
 <segment>
-<pinref part="U$1" gate="P8X32A-D40" pin="P27"/>
-<junction x="55.88" y="86.36"/>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P31"/>
+<wire x1="60.96" y1="96.52" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -5628,7 +5631,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <wire x1="60.96" y1="104.14" x2="50.8" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="104.14" x2="43.18" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="96.52" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="P8X32A-D40" pin="RES/"/>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="RES/"/>
 <wire x1="43.18" y1="58.42" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <junction x="22.86" y="50.8"/>
@@ -5637,6 +5640,172 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <segment>
 <pinref part="U$3" gate="G$1" pin="RES"/>
 <wire x1="121.92" y1="180.34" x2="134.62" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO0" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P0"/>
+<wire x1="17.78" y1="96.52" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO1" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P1"/>
+<wire x1="17.78" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO2" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P2"/>
+<wire x1="17.78" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO3" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P3"/>
+<wire x1="17.78" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO4" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P4"/>
+<wire x1="17.78" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO5" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P5"/>
+<wire x1="17.78" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO6" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P6"/>
+<wire x1="17.78" y1="81.28" x2="22.86" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO7" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P7"/>
+<wire x1="17.78" y1="78.74" x2="22.86" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO8" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P8"/>
+<wire x1="17.78" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO9" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P9"/>
+<wire x1="17.78" y1="73.66" x2="22.86" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO10" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P10"/>
+<wire x1="17.78" y1="71.12" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO11" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P11"/>
+<wire x1="17.78" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO12" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P12"/>
+<wire x1="17.78" y1="66.04" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO13" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P13"/>
+<wire x1="17.78" y1="63.5" x2="22.86" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO15" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P14"/>
+<wire x1="17.78" y1="60.96" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P15"/>
+<wire x1="17.78" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO16" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P16"/>
+<wire x1="58.42" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO17" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P17"/>
+<wire x1="58.42" y1="60.96" x2="55.88" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO18" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P18"/>
+<wire x1="58.42" y1="63.5" x2="55.88" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO19" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P19"/>
+<wire x1="58.42" y1="66.04" x2="55.88" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO20" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P20"/>
+<wire x1="58.42" y1="68.58" x2="55.88" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO21" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P21"/>
+<wire x1="58.42" y1="71.12" x2="55.88" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO22" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P22"/>
+<wire x1="58.42" y1="73.66" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO23" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P23"/>
+<wire x1="58.42" y1="76.2" x2="55.88" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO24" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P24"/>
+<wire x1="58.42" y1="78.74" x2="55.88" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO25" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P25"/>
+<wire x1="58.42" y1="81.28" x2="55.88" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO26" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P26"/>
+<wire x1="58.42" y1="83.82" x2="55.88" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="IO27" class="0">
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P27"/>
+<wire x1="58.42" y1="86.36" x2="55.88" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
