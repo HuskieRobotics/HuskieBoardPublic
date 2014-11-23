@@ -2205,80 +2205,6 @@ I2C</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="oli">
-<description>&lt;b&gt;Olis Library&lt;/b&gt;
-&lt;p&gt;
-&lt;hr&gt;
-&lt;i&gt;Created by Oliver Saal.&lt;br&gt;&lt;a href="http://www.oliver-saal.de/elektronik/eagle/"&gt;http://www.oliver-saal.de/elektronik/eagle/&lt;/a&gt;&lt;/i&gt;
-&lt;/p&gt;</description>
-<packages>
-<package name="TO220V">
-<description>&lt;b&gt;TO 200 vertical&lt;/b&gt;</description>
-<wire x1="5.08" y1="-1.143" x2="4.953" y2="-4.064" width="0.127" layer="21"/>
-<wire x1="4.699" y1="-4.318" x2="4.953" y2="-4.064" width="0.127" layer="21"/>
-<wire x1="4.699" y1="-4.318" x2="-4.699" y2="-4.318" width="0.127" layer="21"/>
-<wire x1="-4.953" y1="-4.064" x2="-4.699" y2="-4.318" width="0.127" layer="21"/>
-<wire x1="-4.953" y1="-4.064" x2="-5.08" y2="-1.143" width="0.127" layer="21"/>
-<circle x="-4.4958" y="-3.7084" radius="0.254" width="0.127" layer="21"/>
-<pad name="1" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-3.175" y="-3.175" size="1.27" layer="51" ratio="10">1</text>
-<text x="-0.635" y="-3.175" size="1.27" layer="51" ratio="10">2</text>
-<text x="1.905" y="-3.175" size="1.27" layer="51" ratio="10">3</text>
-<rectangle x1="-5.334" y1="-0.762" x2="5.334" y2="0" layer="21"/>
-<rectangle x1="-5.334" y1="-1.27" x2="-3.429" y2="-0.762" layer="21"/>
-<rectangle x1="-1.651" y1="-1.27" x2="-0.889" y2="-0.762" layer="21"/>
-<rectangle x1="-3.429" y1="-1.27" x2="-1.651" y2="-0.762" layer="51"/>
-<rectangle x1="0.889" y1="-1.27" x2="1.651" y2="-0.762" layer="21"/>
-<rectangle x1="3.429" y1="-1.27" x2="5.334" y2="-0.762" layer="21"/>
-<rectangle x1="-0.889" y1="-1.27" x2="0.889" y2="-0.762" layer="51"/>
-<rectangle x1="1.651" y1="-1.27" x2="3.429" y2="-0.762" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="78XX">
-<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.4064" layer="94"/>
-<text x="-7.62" y="5.715" size="1.778" layer="95">&gt;NAME</text>
-<text x="-7.62" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-2.032" y="-4.318" size="1.524" layer="95">GND</text>
-<pin name="VI" x="-10.16" y="0" length="short" direction="in"/>
-<pin name="GND" x="0" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="VO" x="10.16" y="0" length="short" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LM1086*" prefix="IC">
-<description>&lt;h1&gt;LM1086 1.5A Low Dropout Positive Regulators&lt;/h1&gt;</description>
-<gates>
-<gate name="G$1" symbol="78XX" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TO220V">
-<connects>
-<connect gate="G$1" pin="GND" pad="1"/>
-<connect gate="G$1" pin="VI" pad="3"/>
-<connect gate="G$1" pin="VO" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-<technology name="-1.8"/>
-<technology name="-2.5"/>
-<technology name="-2.85"/>
-<technology name="-3.3"/>
-<technology name="-3.45"/>
-<technology name="-5"/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="supply1">
 <description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
  GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
@@ -2308,6 +2234,12 @@ I2C</description>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="+5V">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2341,6 +2273,19 @@ I2C</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="+3V3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+5V" prefix="P+">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="+5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -5731,9 +5676,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <part name="PROPELLER" library="parallax_propeller (1)" deviceset="P8X32A-D40" device=""/>
 <part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49U70"/>
 <part name="EEPROM" library="microchip" deviceset="24*" device="P" technology="LC256"/>
-<part name="IC2" library="oli" deviceset="LM1086*" device="" technology="-3.3"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="VSS1" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
@@ -5743,6 +5686,7 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="RoboRioConnector" deviceset="RRINTERFACE-FEMALE" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5752,18 +5696,17 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <instance part="PROPELLER" gate="P8X32A-D40" x="38.1" y="76.2"/>
 <instance part="Q1" gate="G$1" x="60.96" y="50.8"/>
 <instance part="EEPROM" gate="G$1" x="76.2" y="180.34"/>
-<instance part="IC2" gate="G$1" x="-35.56" y="162.56"/>
 <instance part="GND1" gate="1" x="83.82" y="167.64"/>
-<instance part="GND2" gate="1" x="-35.56" y="152.4"/>
 <instance part="GND3" gate="1" x="7.62" y="160.02"/>
 <instance part="VSS1" gate="G$1" x="7.62" y="165.1" rot="R180"/>
-<instance part="+3V1" gate="G$1" x="-22.86" y="162.56" rot="R270"/>
+<instance part="+3V1" gate="G$1" x="-66.04" y="68.58" rot="R270"/>
 <instance part="+3V2" gate="G$1" x="86.36" y="198.12" rot="R270"/>
 <instance part="R1" gate="G$1" x="96.52" y="190.5" rot="R180"/>
 <instance part="U$3" gate="G$1" x="157.48" y="185.42"/>
 <instance part="GND4" gate="1" x="127" y="185.42"/>
 <instance part="U$1" gate="G$1" x="-106.68" y="88.9"/>
 <instance part="GND5" gate="1" x="-78.74" y="73.66"/>
+<instance part="P+1" gate="1" x="-66.04" y="60.96" rot="R270"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],RESET">
@@ -5808,11 +5751,6 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <junction x="63.5" y="175.26"/>
 <junction x="83.82" y="170.18"/>
 <junction x="63.5" y="185.42"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="GND"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<junction x="-35.56" y="154.94"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="VSS"/>
@@ -5910,10 +5848,6 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 </net>
 <net name="+3V3" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="VO"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-</segment>
-<segment>
 <pinref part="EEPROM" gate="G$1" pin="VCC"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="83.82" y1="198.12" x2="83.82" y2="193.04" width="0.1524" layer="91"/>
@@ -5921,6 +5855,12 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <wire x1="91.44" y1="193.04" x2="91.44" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="193.04" x2="83.82" y2="193.04" width="0.1524" layer="91"/>
 <junction x="83.82" y="193.04"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P33-+3.3V"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="-83.82" y1="66.04" x2="-71.12" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="66.04" x2="-68.58" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -6103,6 +6043,14 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P27"/>
 <wire x1="58.42" y1="86.36" x2="55.88" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+5V" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="P1-5V"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
+<wire x1="-83.82" y1="63.5" x2="-71.12" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="63.5" x2="-68.58" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
