@@ -466,9 +466,9 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <pin name="32-IO14-I2C_SCL" x="-22.86" y="25.4" length="middle"/>
 <pin name="30-DGND" x="22.86" y="-15.24" length="middle" rot="R180"/>
 <pin name="28-DGND" x="22.86" y="-12.7" length="middle" rot="R180"/>
-<pin name="26*-IO13-PWM9" x="-22.86" y="-2.54" length="middle"/>
+<pin name="26*-DIO13-PWM9" x="-22.86" y="-2.54" length="middle"/>
 <pin name="24-DGND" x="22.86" y="-10.16" length="middle" rot="R180"/>
-<pin name="22*-IO12-PWM8" x="-22.86" y="-5.08" length="middle"/>
+<pin name="22*-DIO12-PWM8" x="-22.86" y="-5.08" length="middle"/>
 <pin name="20-DGND" x="22.86" y="-7.62" length="middle" rot="R180"/>
 <pin name="18*-DIO11-PWM7" x="-22.86" y="-7.62" length="middle"/>
 <pin name="16-DGND" x="22.86" y="-5.08" length="middle" rot="R180"/>
@@ -480,9 +480,9 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <pin name="4-AO1" x="22.86" y="12.7" length="middle" rot="R180"/>
 <pin name="2-AO0" x="22.86" y="10.16" length="middle" rot="R180"/>
 <pin name="P33-+3.3V" x="22.86" y="-22.86" length="middle" rot="R180"/>
-<pin name="31*-IO10-PWM6" x="-22.86" y="-10.16" length="middle"/>
-<pin name="29*-IO9-PWM5" x="-22.86" y="-12.7" length="middle"/>
-<pin name="27*-IO8-PWM4" x="-22.86" y="-15.24" length="middle"/>
+<pin name="31*-DIO10-PWM6" x="-22.86" y="-10.16" length="middle"/>
+<pin name="29*-DIO9-PWM5" x="-22.86" y="-12.7" length="middle"/>
+<pin name="27*-DIO8-PWM4" x="-22.86" y="-15.24" length="middle"/>
 <pin name="25-IO7-SPI_MOSI" x="-22.86" y="5.08" length="middle"/>
 <pin name="23-IO4-SPI_MISO" x="-22.86" y="2.54" length="middle"/>
 <pin name="21-IO5-SPI_CLK" x="-22.86" y="7.62" length="middle"/>
@@ -524,17 +524,17 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <connect gate="G$1" pin="2-AO0" pad="2"/>
 <connect gate="G$1" pin="20-DGND" pad="20"/>
 <connect gate="G$1" pin="21-IO5-SPI_CLK" pad="21"/>
-<connect gate="G$1" pin="22*-IO12-PWM8" pad="22"/>
+<connect gate="G$1" pin="22*-DIO12-PWM8" pad="22"/>
 <connect gate="G$1" pin="23-IO4-SPI_MISO" pad="23"/>
 <connect gate="G$1" pin="24-DGND" pad="24"/>
 <connect gate="G$1" pin="25-IO7-SPI_MOSI" pad="25"/>
-<connect gate="G$1" pin="26*-IO13-PWM9" pad="26"/>
-<connect gate="G$1" pin="27*-IO8-PWM4" pad="27"/>
+<connect gate="G$1" pin="26*-DIO13-PWM9" pad="26"/>
+<connect gate="G$1" pin="27*-DIO8-PWM4" pad="27"/>
 <connect gate="G$1" pin="28-DGND" pad="28"/>
-<connect gate="G$1" pin="29*-IO9-PWM5" pad="29"/>
+<connect gate="G$1" pin="29*-DIO9-PWM5" pad="29"/>
 <connect gate="G$1" pin="3-AI0" pad="3"/>
 <connect gate="G$1" pin="30-DGND" pad="30"/>
-<connect gate="G$1" pin="31*-IO10-PWM6" pad="31"/>
+<connect gate="G$1" pin="31*-DIO10-PWM6" pad="31"/>
 <connect gate="G$1" pin="32-IO14-I2C_SCL" pad="32"/>
 <connect gate="G$1" pin="34-IO15-I2C_SDA" pad="34"/>
 <connect gate="G$1" pin="4-AO1" pad="4"/>
