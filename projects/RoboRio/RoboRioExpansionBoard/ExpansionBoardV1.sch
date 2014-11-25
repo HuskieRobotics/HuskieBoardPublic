@@ -5979,7 +5979,7 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="121.92" y1="162.56" x2="121.92" y2="180.34" width="0.762" layer="92"/>
 </segment>
 </bus>
-<bus name="IO[0..31]">
+<bus name="I2C_SCL,I2C_SDA,IO[2..31]">
 <segment>
 <wire x1="58.42" y1="58.42" x2="58.42" y2="86.36" width="0.762" layer="92"/>
 <wire x1="58.42" y1="58.42" x2="66.04" y2="58.42" width="0.762" layer="92"/>
@@ -5990,6 +5990,7 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="25.4" y1="40.64" x2="17.78" y2="48.26" width="0.762" layer="92"/>
 <wire x1="17.78" y1="48.26" x2="17.78" y2="96.52" width="0.762" layer="92"/>
 <wire x1="71.12" y1="53.34" x2="116.84" y2="53.34" width="0.762" layer="92"/>
+<wire x1="17.78" y1="48.26" x2="-63.5" y2="48.26" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
@@ -6002,7 +6003,8 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="-78.74" y1="121.92" x2="-78.74" y2="99.06" width="0.762" layer="92"/>
 <wire x1="-137.16" y1="88.9" x2="-139.7" y2="88.9" width="0.762" layer="92"/>
 <wire x1="-139.7" y1="88.9" x2="-142.24" y2="86.36" width="0.762" layer="92"/>
-<wire x1="-142.24" y1="86.36" x2="-142.24" y2="38.1" width="0.762" layer="92"/>
+<wire x1="-142.24" y1="86.36" x2="-142.24" y2="50.8" width="0.762" layer="92"/>
+<wire x1="-142.24" y1="50.8" x2="-142.24" y2="38.1" width="0.762" layer="92"/>
 <wire x1="-142.24" y1="38.1" x2="-129.54" y2="25.4" width="0.762" layer="92"/>
 <wire x1="-129.54" y1="25.4" x2="-124.46" y2="30.48" width="0.762" layer="92"/>
 <wire x1="-124.46" y1="30.48" x2="-81.28" y2="30.48" width="0.762" layer="92"/>
@@ -6010,6 +6012,7 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="-76.2" y1="25.4" x2="-76.2" y2="7.62" width="0.762" layer="92"/>
 <wire x1="-129.54" y1="25.4" x2="-132.08" y2="22.86" width="0.762" layer="92"/>
 <wire x1="-132.08" y1="22.86" x2="-132.08" y2="-27.94" width="0.762" layer="92"/>
+<wire x1="-142.24" y1="50.8" x2="-58.42" y2="50.8" width="0.762" layer="92"/>
 </segment>
 </bus>
 </busses>
@@ -6209,18 +6212,6 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <segment>
 <pinref part="U$3" gate="G$1" pin="RES"/>
 <wire x1="121.92" y1="180.34" x2="134.62" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="IO0" class="0">
-<segment>
-<pinref part="PROPELLER" gate="P8X32A-D40" pin="P0"/>
-<wire x1="17.78" y1="96.52" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="IO1" class="0">
-<segment>
-<pinref part="PROPELLER" gate="P8X32A-D40" pin="P1"/>
-<wire x1="17.78" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO2" class="0">
@@ -6560,6 +6551,13 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <pinref part="U$2" gate="G$2" pin="34-IO15-12C_SDA"/>
 <wire x1="-132.08" y1="20.32" x2="-127" y2="20.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P1"/>
+<wire x1="17.78" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-58.42" y1="50.8" x2="-58.42" y2="48.26" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="I2C_SCL" class="0">
 <segment>
@@ -6569,6 +6567,13 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <segment>
 <pinref part="U$2" gate="G$2" pin="32-IO14-12C_SCL"/>
 <wire x1="-132.08" y1="22.86" x2="-127" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PROPELLER" gate="P8X32A-D40" pin="P0"/>
+<wire x1="17.78" y1="96.52" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="50.8" x2="-63.5" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AI3" class="0">
