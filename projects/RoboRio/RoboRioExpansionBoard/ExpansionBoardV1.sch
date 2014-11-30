@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6640,13 +6640,11 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,83.82,96.52,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,83.82,93.98,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,101.6,96.52,PROPELLERP,VSS,GND,,,"/>
-<approved hash="104,1,101.6,93.98,PROPELLERP,VSS,GND,,,"/>
+<approved hash="104,1,22.86,124.46,PROPELLERP,VDD,+3V3,,,"/>
+<approved hash="104,1,22.86,121.92,PROPELLERP,VDD,+3V3,,,"/>
+<approved hash="104,1,40.64,124.46,PROPELLERP,VSS,GND,,,"/>
+<approved hash="104,1,40.64,121.92,PROPELLERP,VSS,GND,,,"/>
 <approved hash="104,1,83.82,193.04,EEPROM,VCC,+3V3,,,"/>
-<approved hash="106,1,22.86,96.52,IO0,,,,,"/>
-<approved hash="106,1,22.86,93.98,IO1,,,,,"/>
 <approved hash="106,1,22.86,91.44,IO2,,,,,"/>
 <approved hash="106,1,22.86,88.9,IO3,,,,,"/>
 <approved hash="106,1,22.86,86.36,IO4,,,,,"/>
