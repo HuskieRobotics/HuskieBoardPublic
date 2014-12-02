@@ -5913,6 +5913,246 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 </deviceset>
 </devicesets>
 </library>
+<library name="ITG 3400 Gyro">
+<packages>
+<package name="ITG-3400">
+<smd name="NC1" x="-1.5" y="0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC2" x="-1.5" y="0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC3" x="-1.5" y="-0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC4" x="-1.5" y="-0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC9" x="1.5" y="0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC8" x="1.5" y="0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC7" x="1.5" y="-0.2" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NC6" x="1.5" y="-0.6" dx="0.3" dy="0.7" layer="1" rot="R90"/>
+<smd name="NCS" x="-0.2" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="NC5" x="0.2" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="RESV-20" x="0.6" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="SCL" x="-0.6" y="1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="VDDIO" x="-0.6" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="SDO" x="-0.2" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="REGOUT" x="0.2" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<smd name="FSYNC" x="0.6" y="-1.5" dx="0.3" dy="0.7" layer="1"/>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="-1.15" y="0.85"/>
+<vertex x="-1.85" y="0.85"/>
+<vertex x="-1.85" y="1.15"/>
+<vertex x="-1.25" y="1.15"/>
+<vertex x="-1.15" y="1.05"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="-1.05" y="1.15"/>
+<vertex x="-1.15" y="1.25"/>
+<vertex x="-1.15" y="1.85"/>
+<vertex x="-0.85" y="1.85"/>
+<vertex x="-0.85" y="1.15"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="1.15" y="-0.85"/>
+<vertex x="1.85" y="-0.85"/>
+<vertex x="1.85" y="-1.15"/>
+<vertex x="1.25" y="-1.15"/>
+<vertex x="1.15" y="-1.05"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="0.85" y="1.15"/>
+<vertex x="0.85" y="1.85"/>
+<vertex x="1.15" y="1.85"/>
+<vertex x="1.15" y="1.25"/>
+<vertex x="1.05" y="1.15"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="-1.15" y="-1.05"/>
+<vertex x="-1.25" y="-1.15"/>
+<vertex x="-1.85" y="-1.15"/>
+<vertex x="-1.85" y="-0.85"/>
+<vertex x="-1.15" y="-0.85"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="-0.85" y="-1.15"/>
+<vertex x="-0.85" y="-1.85"/>
+<vertex x="-1.15" y="-1.85"/>
+<vertex x="-1.15" y="-1.25"/>
+<vertex x="-1.05" y="-1.15"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="1.05" y="-1.15"/>
+<vertex x="1.15" y="-1.25"/>
+<vertex x="1.15" y="-1.85"/>
+<vertex x="0.85" y="-1.85"/>
+<vertex x="0.85" y="-1.15"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="1.15" y="1.05"/>
+<vertex x="1.25" y="1.15"/>
+<vertex x="1.85" y="1.15"/>
+<vertex x="1.85" y="0.85"/>
+<vertex x="1.15" y="0.85"/>
+</polygon>
+<polygon width="0" layer="1" spacing="0.254">
+<vertex x="-1.15" y="0.85"/>
+<vertex x="-1.85" y="0.85"/>
+<vertex x="-1.85" y="1.15"/>
+<vertex x="-1.25" y="1.15"/>
+<vertex x="-1.15" y="1.05"/>
+</polygon>
+<rectangle x1="-1.95" y1="0.75" x2="-1.05" y2="1.25" layer="29"/>
+<rectangle x1="-1.2" y1="1.05" x2="-0.75" y2="1.95" layer="29"/>
+<rectangle x1="1.05" y1="0.85" x2="1.95" y2="1.25" layer="29"/>
+<rectangle x1="0.75" y1="1.05" x2="1.25" y2="1.95" layer="29"/>
+<rectangle x1="1.05" y1="-1.25" x2="1.95" y2="-0.75" layer="29"/>
+<rectangle x1="0.75" y1="-1.95" x2="1.25" y2="-1.05" layer="29"/>
+<rectangle x1="-1.25" y1="-1.95" x2="-0.75" y2="-1.05" layer="29"/>
+<rectangle x1="-1.95" y1="-1.25" x2="-1.05" y2="-0.75" layer="29"/>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="-1.85" y="-0.85"/>
+<vertex x="-1.85" y="-1.15"/>
+<vertex x="-1.25" y="-1.15"/>
+<vertex x="-1.15" y="-1.05"/>
+<vertex x="-1.15" y="-0.85"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="-1.15" y="-1.85"/>
+<vertex x="-1.15" y="-1.25"/>
+<vertex x="-1.05" y="-1.15"/>
+<vertex x="-0.85" y="-1.15"/>
+<vertex x="-0.85" y="-1.85"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="0.85" y="-1.85"/>
+<vertex x="0.85" y="-1.15"/>
+<vertex x="1.05" y="-1.15"/>
+<vertex x="1.15" y="-1.25"/>
+<vertex x="1.15" y="-1.85"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="1.15" y="-0.85"/>
+<vertex x="1.15" y="-1.05"/>
+<vertex x="1.25" y="-1.15"/>
+<vertex x="1.85" y="-1.15"/>
+<vertex x="1.85" y="-0.85"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="1.85" y="0.85"/>
+<vertex x="1.85" y="1.15"/>
+<vertex x="1.25" y="1.15"/>
+<vertex x="1.15" y="1.05"/>
+<vertex x="1.15" y="0.85"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="0.85" y="1.85"/>
+<vertex x="1.15" y="1.85"/>
+<vertex x="1.15" y="1.25"/>
+<vertex x="1.05" y="1.15"/>
+<vertex x="0.85" y="1.15"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="-1.15" y="1.85"/>
+<vertex x="-0.85" y="1.85"/>
+<vertex x="-0.85" y="1.15"/>
+<vertex x="-1.05" y="1.15"/>
+<vertex x="-1.15" y="1.25"/>
+</polygon>
+<polygon width="0" layer="31" spacing="0.254">
+<vertex x="-1.85" y="1.15"/>
+<vertex x="-1.85" y="0.85"/>
+<vertex x="-1.15" y="0.85"/>
+<vertex x="-1.15" y="1.05"/>
+<vertex x="-1.25" y="1.15"/>
+</polygon>
+<smd name="NC0" x="-1.524" y="1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="SDA" x="-1.016" y="1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="RESV-19" x="1.016" y="1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="GND" x="1.524" y="1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="VDD" x="1.524" y="-1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="INT" x="1.016" y="-1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="NC11" x="-1.016" y="-1.524" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<smd name="NC10" x="-1.524" y="-1.016" dx="0.0254" dy="0.0254" layer="1" rot="R90"/>
+<text x="-1.6" y="2.1" size="0.6096" layer="25">name</text>
+<text x="-1.6" y="-2.6" size="0.6096" layer="27">value</text>
+<wire x1="-1.3" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21" style="longdash"/>
+<wire x1="-1.5" y1="1.3" x2="-1.3" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.3" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.3" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.3" y1="-1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="1.3" width="0.127" layer="21"/>
+<wire x1="1.4" y1="1.5" x2="1.3" y2="1.5" width="0.127" layer="21"/>
+<circle x="-2.3" y="1" radius="0.15" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ITG-3400">
+<pin name="VDDIO" x="-15.24" y="-7.62" length="middle"/>
+<pin name="AD0/SDO" x="-15.24" y="0" length="middle"/>
+<pin name="REGOUT" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="FSYNC" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="INT" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="VDD" x="-15.24" y="-5.08" length="middle"/>
+<pin name="GND" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="NCS" x="-15.24" y="7.62" length="middle"/>
+<pin name="SCL" x="-15.24" y="5.08" length="middle"/>
+<pin name="SDA" x="-15.24" y="2.54" length="middle"/>
+<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ITG-3400">
+<gates>
+<gate name="G$1" symbol="ITG-3400" x="7.62" y="-17.78"/>
+</gates>
+<devices>
+<device name="" package="ITG-3400">
+<connects>
+<connect gate="G$1" pin="AD0/SDO" pad="SDO"/>
+<connect gate="G$1" pin="FSYNC" pad="FSYNC"/>
+<connect gate="G$1" pin="GND" pad="GND RESV-20"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="NCS" pad="NCS"/>
+<connect gate="G$1" pin="REGOUT" pad="REGOUT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+<connect gate="G$1" pin="VDDIO" pad="VDDIO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="docu-dummy">
+<description>Dummy symbols</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="CAPACITOR">
+<wire x1="0" y1="-5.08" x2="0" y2="-2.032" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<rectangle x1="-2.032" y1="-2.032" x2="2.032" y2="-1.524" layer="94"/>
+<rectangle x1="-2.032" y1="-1.016" x2="2.032" y2="-0.508" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="C" prefix="C">
+<description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5942,10 +6182,22 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
+<part name="GYRO" library="ITG 3400 Gyro" deviceset="ITG-3400" device=""/>
+<part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="C1" library="docu-dummy" deviceset="C" device="" value=".1uf"/>
+<part name="C2" library="docu-dummy" deviceset="C" device=""/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="C3" library="docu-dummy" deviceset="C" device="" value=".1uf"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="137.16" y="152.4" size="1.778" layer="91">Gyro</text>
+<text x="162.56" y="152.4" size="1.778" layer="91">Gyro has the LSB of the address set to 1</text>
 </plain>
 <instances>
 <instance part="PROPELLER" gate="P8X32A-D40" x="38.1" y="76.2"/>
@@ -5968,6 +6220,16 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <instance part="GND6" gate="1" x="12.7" y="50.8"/>
 <instance part="+3V4" gate="G$1" x="20.32" y="121.92" rot="R90"/>
 <instance part="PROPELLER" gate="P" x="33.02" y="119.38"/>
+<instance part="GYRO" gate="G$1" x="144.78" y="142.24"/>
+<instance part="+3V5" gate="G$1" x="93.98" y="124.46" rot="R90"/>
+<instance part="+3V6" gate="G$1" x="96.52" y="137.16" rot="R90"/>
+<instance part="GND7" gate="1" x="160.02" y="132.08"/>
+<instance part="C1" gate="G$1" x="106.68" y="137.16"/>
+<instance part="C2" gate="G$1" x="104.14" y="121.92"/>
+<instance part="GND8" gate="1" x="106.68" y="129.54"/>
+<instance part="GND9" gate="1" x="104.14" y="114.3"/>
+<instance part="GND10" gate="1" x="160.02" y="144.78"/>
+<instance part="C3" gate="G$1" x="170.18" y="137.16"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -5977,6 +6239,7 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="55.88" y1="162.56" x2="55.88" y2="187.96" width="0.762" layer="92"/>
 <wire x1="60.96" y1="162.56" x2="121.92" y2="162.56" width="0.762" layer="92"/>
 <wire x1="121.92" y1="162.56" x2="121.92" y2="180.34" width="0.762" layer="92"/>
+<wire x1="121.92" y1="162.56" x2="121.92" y2="142.24" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="I2C_SCL,I2C_SDA,IO[2..31]">
@@ -6103,6 +6366,26 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="40.64" y1="124.46" x2="40.64" y2="121.92" width="0.1524" layer="91"/>
 <junction x="40.64" y="121.92"/>
 </segment>
+<segment>
+<pinref part="GYRO" gate="G$1" pin="GND"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<junction x="160.02" y="134.62"/>
+<wire x1="170.18" y1="132.08" x2="167.64" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="134.62" x2="160.02" y2="134.62" width="0.1524" layer="91"/>
+<junction x="170.18" y="132.08"/>
+</segment>
+<segment>
+<pinref part="GND9" gate="1" pin="GND"/>
+<junction x="104.14" y="116.84"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<junction x="106.68" y="132.08"/>
+</segment>
+<segment>
+<pinref part="GYRO" gate="G$1" pin="FSYNC"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -6128,10 +6411,15 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <pinref part="EEPROM" gate="G$1" pin="SCL"/>
 <wire x1="55.88" y1="187.96" x2="63.5" y2="187.96" width="0.1524" layer="91"/>
 <junction x="63.5" y="187.96"/>
+<label x="48.26" y="190.5" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P28"/>
 <wire x1="60.96" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GYRO" gate="G$1" pin="SCL"/>
+<wire x1="121.92" y1="147.32" x2="129.54" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPECIAL29" class="0">
@@ -6142,10 +6430,15 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="190.5" x2="101.6" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="180.34" x2="91.44" y2="180.34" width="0.1524" layer="91"/>
+<label x="93.98" y="182.88" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P29"/>
 <wire x1="60.96" y1="91.44" x2="55.88" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GYRO" gate="G$1" pin="SDA"/>
+<wire x1="129.54" y1="144.78" x2="121.92" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPECIAL30" class="0">
@@ -6196,6 +6489,40 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <pinref part="PROPELLER" gate="P" pin="VDD@1"/>
 <wire x1="22.86" y1="124.46" x2="22.86" y2="121.92" width="0.1524" layer="91"/>
 <junction x="22.86" y="121.92"/>
+</segment>
+<segment>
+<pinref part="GYRO" gate="G$1" pin="VDD"/>
+<wire x1="129.54" y1="137.16" x2="132.08" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="139.7" x2="137.16" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="139.7" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="GYRO" gate="G$1" pin="INT"/>
+<wire x1="152.4" y1="154.94" x2="154.94" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="154.94" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<junction x="160.02" y="149.86"/>
+<wire x1="129.54" y1="137.16" x2="124.46" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="137.16" x2="121.92" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<wire x1="121.92" y1="139.7" x2="106.68" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="139.7" x2="101.6" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="139.7" x2="99.06" y2="137.16" width="0.1524" layer="91"/>
+<junction x="106.68" y="139.7"/>
+<junction x="129.54" y="137.16"/>
+<pinref part="GYRO" gate="G$1" pin="AD0/SDO"/>
+<wire x1="129.54" y1="142.24" x2="129.54" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="154.94" x2="129.54" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="GYRO" gate="G$1" pin="NCS"/>
+<wire x1="129.54" y1="154.94" x2="129.54" y2="149.86" width="0.1524" layer="91"/>
+<junction x="152.4" y="154.94"/>
+<junction x="129.54" y="149.86"/>
+</segment>
+<segment>
+<pinref part="GYRO" gate="G$1" pin="VDDIO"/>
+<wire x1="129.54" y1="134.62" x2="119.38" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="134.62" x2="109.22" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
+<wire x1="109.22" y1="124.46" x2="104.14" y2="124.46" width="0.1524" layer="91"/>
+<junction x="104.14" y="124.46"/>
+<wire x1="104.14" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -6554,6 +6881,7 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P1"/>
 <wire x1="17.78" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+<label x="17.78" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-58.42" y1="50.8" x2="-58.42" y2="48.26" width="0.1524" layer="91"/>
@@ -6571,6 +6899,7 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P0"/>
 <wire x1="17.78" y1="96.52" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
+<label x="17.78" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-63.5" y1="50.8" x2="-63.5" y2="48.26" width="0.1524" layer="91"/>
@@ -6634,6 +6963,14 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <segment>
 <pinref part="U$2" gate="G$2" pin="2-AO0"/>
 <wire x1="-76.2" y1="7.62" x2="-81.28" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="GYRO" gate="G$1" pin="REGOUT"/>
+<wire x1="170.18" y1="139.7" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
+<junction x="160.02" y="139.7"/>
+<junction x="170.18" y="139.7"/>
 </segment>
 </net>
 </nets>
