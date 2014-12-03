@@ -6252,8 +6252,10 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <wire x1="63.5" y1="40.64" x2="25.4" y2="40.64" width="0.762" layer="92"/>
 <wire x1="25.4" y1="40.64" x2="17.78" y2="48.26" width="0.762" layer="92"/>
 <wire x1="17.78" y1="48.26" x2="17.78" y2="96.52" width="0.762" layer="92"/>
-<wire x1="71.12" y1="53.34" x2="116.84" y2="53.34" width="0.762" layer="92"/>
+<wire x1="71.12" y1="53.34" x2="91.44" y2="53.34" width="0.762" layer="92"/>
+<wire x1="91.44" y1="53.34" x2="116.84" y2="53.34" width="0.762" layer="92"/>
 <wire x1="17.78" y1="48.26" x2="-63.5" y2="48.26" width="0.762" layer="92"/>
+<wire x1="91.44" y1="53.34" x2="91.44" y2="-20.32" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
