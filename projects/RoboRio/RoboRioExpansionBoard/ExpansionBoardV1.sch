@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6313,7 +6313,7 @@ W = angled&lt;p&gt;
 <instance part="GND2" gate="1" x="-76.2" y="-15.24"/>
 <instance part="+3V3" gate="G$1" x="-68.58" y="-22.86" rot="R270"/>
 <instance part="P+2" gate="1" x="-68.58" y="-30.48" rot="R270"/>
-<instance part="GND6" gate="1" x="12.7" y="50.8"/>
+<instance part="GND6" gate="1" x="-2.54" y="50.8"/>
 <instance part="+3V4" gate="G$1" x="20.32" y="121.92" rot="R90"/>
 <instance part="PROPELLER" gate="P" x="33.02" y="119.38"/>
 <instance part="GYRO" gate="G$1" x="144.78" y="142.24"/>
@@ -6358,12 +6358,12 @@ W = angled&lt;p&gt;
 <wire x1="66.04" y1="58.42" x2="71.12" y2="53.34" width="0.762" layer="92"/>
 <wire x1="71.12" y1="53.34" x2="71.12" y2="48.26" width="0.762" layer="92"/>
 <wire x1="71.12" y1="48.26" x2="63.5" y2="40.64" width="0.762" layer="92"/>
-<wire x1="63.5" y1="40.64" x2="25.4" y2="40.64" width="0.762" layer="92"/>
-<wire x1="25.4" y1="40.64" x2="17.78" y2="48.26" width="0.762" layer="92"/>
-<wire x1="17.78" y1="48.26" x2="17.78" y2="96.52" width="0.762" layer="92"/>
+<wire x1="63.5" y1="40.64" x2="10.16" y2="40.64" width="0.762" layer="92"/>
+<wire x1="10.16" y1="40.64" x2="2.54" y2="48.26" width="0.762" layer="92"/>
+<wire x1="2.54" y1="48.26" x2="2.54" y2="96.52" width="0.762" layer="92"/>
 <wire x1="71.12" y1="53.34" x2="91.44" y2="53.34" width="0.762" layer="92"/>
 <wire x1="91.44" y1="53.34" x2="116.84" y2="53.34" width="0.762" layer="92"/>
-<wire x1="17.78" y1="48.26" x2="-63.5" y2="48.26" width="0.762" layer="92"/>
+<wire x1="2.54" y1="48.26" x2="-63.5" y2="48.26" width="0.762" layer="92"/>
 <wire x1="91.44" y1="53.34" x2="91.44" y2="27.94" width="0.762" layer="92"/>
 <wire x1="91.44" y1="27.94" x2="91.44" y2="-20.32" width="0.762" layer="92"/>
 <wire x1="91.44" y1="27.94" x2="55.88" y2="27.94" width="0.762" layer="92"/>
@@ -6372,15 +6372,12 @@ W = angled&lt;p&gt;
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
 <segment>
-<wire x1="-137.16" y1="63.5" x2="-137.16" y2="88.9" width="0.762" layer="92"/>
-<wire x1="-137.16" y1="88.9" x2="-137.16" y2="121.92" width="0.762" layer="92"/>
-<wire x1="-137.16" y1="121.92" x2="-134.62" y2="124.46" width="0.762" layer="92"/>
-<wire x1="-134.62" y1="124.46" x2="-81.28" y2="124.46" width="0.762" layer="92"/>
-<wire x1="-81.28" y1="124.46" x2="-78.74" y2="121.92" width="0.762" layer="92"/>
-<wire x1="-78.74" y1="121.92" x2="-78.74" y2="99.06" width="0.762" layer="92"/>
-<wire x1="-137.16" y1="88.9" x2="-139.7" y2="88.9" width="0.762" layer="92"/>
-<wire x1="-139.7" y1="88.9" x2="-142.24" y2="86.36" width="0.762" layer="92"/>
-<wire x1="-142.24" y1="86.36" x2="-142.24" y2="50.8" width="0.762" layer="92"/>
+<wire x1="-152.4" y1="60.96" x2="-152.4" y2="121.92" width="0.762" layer="92"/>
+<wire x1="-152.4" y1="121.92" x2="-149.86" y2="124.46" width="0.762" layer="92"/>
+<wire x1="-149.86" y1="124.46" x2="-55.88" y2="124.46" width="0.762" layer="92"/>
+<wire x1="-55.88" y1="124.46" x2="-53.34" y2="121.92" width="0.762" layer="92"/>
+<wire x1="-53.34" y1="121.92" x2="-53.34" y2="99.06" width="0.762" layer="92"/>
+<wire x1="-152.4" y1="60.96" x2="-142.24" y2="50.8" width="0.762" layer="92"/>
 <wire x1="-142.24" y1="50.8" x2="-142.24" y2="38.1" width="0.762" layer="92"/>
 <wire x1="-142.24" y1="38.1" x2="-129.54" y2="25.4" width="0.762" layer="92"/>
 <wire x1="-129.54" y1="25.4" x2="-124.46" y2="30.48" width="0.762" layer="92"/>
@@ -6473,7 +6470,7 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="BOE/"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="22.86" y1="53.34" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="53.34" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P" pin="VSS@2"/>
@@ -6678,13 +6675,10 @@ W = angled&lt;p&gt;
 </net>
 <net name="!RESET" class="0">
 <segment>
-<wire x1="60.96" y1="104.14" x2="50.8" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="104.14" x2="43.18" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="96.52" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="104.14" x2="20.32" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="RES/"/>
-<wire x1="43.18" y1="58.42" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
-<junction x="22.86" y="50.8"/>
+<wire x1="20.32" y1="104.14" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <label x="50.8" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -6695,83 +6689,84 @@ W = angled&lt;p&gt;
 <net name="IO2" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P2"/>
-<wire x1="17.78" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+<label x="2.54" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO3" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P3"/>
-<wire x1="17.78" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO4" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P4"/>
-<wire x1="17.78" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO5" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P5"/>
-<wire x1="17.78" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO6" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P6"/>
-<wire x1="17.78" y1="81.28" x2="22.86" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="81.28" x2="22.86" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO7" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P7"/>
-<wire x1="17.78" y1="78.74" x2="22.86" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="78.74" x2="22.86" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO8" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P8"/>
-<wire x1="17.78" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO9" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P9"/>
-<wire x1="17.78" y1="73.66" x2="22.86" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="73.66" x2="22.86" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO10" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P10"/>
-<wire x1="17.78" y1="71.12" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="71.12" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO11" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P11"/>
-<wire x1="17.78" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO12" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P12"/>
-<wire x1="17.78" y1="66.04" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="66.04" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO13" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P13"/>
-<wire x1="17.78" y1="63.5" x2="22.86" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="63.5" x2="22.86" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO15" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P14"/>
-<wire x1="17.78" y1="60.96" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="60.96" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P15"/>
-<wire x1="17.78" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO16" class="0">
@@ -6898,7 +6893,7 @@ W = angled&lt;p&gt;
 <net name="DIO0" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="11*-DIO0-PWM0"/>
-<wire x1="-137.16" y1="63.5" x2="-129.54" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="63.5" x2="-129.54" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="11*-DIO0-PWM0"/>
@@ -6912,7 +6907,7 @@ W = angled&lt;p&gt;
 <net name="DIO1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="13*-DIO1-PWM1"/>
-<wire x1="-137.16" y1="66.04" x2="-129.54" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="66.04" x2="-129.54" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="13*-DIO1-PWM1"/>
@@ -6926,7 +6921,7 @@ W = angled&lt;p&gt;
 <net name="DIO2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="15*-DIO2-PWM2"/>
-<wire x1="-137.16" y1="68.58" x2="-129.54" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="68.58" x2="-129.54" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="15*-DIO2-PWM2"/>
@@ -6940,7 +6935,7 @@ W = angled&lt;p&gt;
 <net name="DIO3" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="17*-DIO3-PWM3"/>
-<wire x1="-137.16" y1="71.12" x2="-129.54" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="71.12" x2="-129.54" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="17*-DIO3-PWM3"/>
@@ -6954,7 +6949,7 @@ W = angled&lt;p&gt;
 <net name="DIO8" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="27*-IO8-PWM4"/>
-<wire x1="-137.16" y1="73.66" x2="-129.54" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="73.66" x2="-129.54" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="27*-IO8-PWM4"/>
@@ -6968,7 +6963,7 @@ W = angled&lt;p&gt;
 <net name="DIO9" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="29*-IO9-PWM5"/>
-<wire x1="-137.16" y1="76.2" x2="-129.54" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="76.2" x2="-129.54" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="29*-IO9-PWM5"/>
@@ -6982,7 +6977,7 @@ W = angled&lt;p&gt;
 <net name="DIO10" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="31*-IO10-PWM6"/>
-<wire x1="-137.16" y1="78.74" x2="-129.54" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="78.74" x2="-129.54" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="31*-IO10-PWM6"/>
@@ -7000,7 +6995,7 @@ W = angled&lt;p&gt;
 <net name="DIO11" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="18*-DIO11-PWM7"/>
-<wire x1="-137.16" y1="81.28" x2="-129.54" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="81.28" x2="-129.54" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="18*-DIO11-PWM7"/>
@@ -7014,7 +7009,7 @@ W = angled&lt;p&gt;
 <net name="DIO12" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="22*-IO12-PWM8"/>
-<wire x1="-137.16" y1="83.82" x2="-129.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="83.82" x2="-129.54" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="22*-IO12-PWM8"/>
@@ -7028,7 +7023,7 @@ W = angled&lt;p&gt;
 <net name="DIO13" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="26*-IO13-PWM9"/>
-<wire x1="-137.16" y1="86.36" x2="-129.54" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="86.36" x2="-129.54" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="26*-IO13-PWM9"/>
@@ -7042,7 +7037,7 @@ W = angled&lt;p&gt;
 <net name="SPI_MISO" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="23-IO4-SPI_MISO"/>
-<wire x1="-137.16" y1="91.44" x2="-129.54" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="91.44" x2="-129.54" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="23-IO4-SPI_MISO"/>
@@ -7052,7 +7047,7 @@ W = angled&lt;p&gt;
 <net name="SPI_MOSI" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="25-IO7-SPI_MOSI"/>
-<wire x1="-137.16" y1="93.98" x2="-129.54" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="93.98" x2="-129.54" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="25-IO7-SPI_MOSI"/>
@@ -7062,7 +7057,7 @@ W = angled&lt;p&gt;
 <net name="SPI_CLK" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="21-IO5-SPI_CLK"/>
-<wire x1="-129.54" y1="96.52" x2="-137.16" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="96.52" x2="-152.4" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="21-IO5-SPI_CLK"/>
@@ -7072,7 +7067,7 @@ W = angled&lt;p&gt;
 <net name="SPI_CS" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="19-IO4-SPI_CS"/>
-<wire x1="-129.54" y1="99.06" x2="-137.16" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="99.06" x2="-152.4" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="19-IO4-SPI_CS"/>
@@ -7082,7 +7077,8 @@ W = angled&lt;p&gt;
 <net name="UART_RX" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="10-UART_RX"/>
-<wire x1="-137.16" y1="104.14" x2="-129.54" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="104.14" x2="-129.54" y2="104.14" width="0.1524" layer="91"/>
+<label x="-149.86" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="10-UART_RX"/>
@@ -7092,7 +7088,8 @@ W = angled&lt;p&gt;
 <net name="UART_TX" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="14-UART_TX"/>
-<wire x1="-129.54" y1="106.68" x2="-137.16" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="106.68" x2="-152.4" y2="106.68" width="0.1524" layer="91"/>
+<label x="-149.86" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="14-UART_TX"/>
@@ -7102,7 +7099,8 @@ W = angled&lt;p&gt;
 <net name="I2C_SDA" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="34-IO15-I2C_SDA"/>
-<wire x1="-129.54" y1="111.76" x2="-137.16" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="111.76" x2="-152.4" y2="111.76" width="0.1524" layer="91"/>
+<label x="-149.86" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="34-IO15-12C_SDA"/>
@@ -7110,8 +7108,8 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P1"/>
-<wire x1="17.78" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
-<label x="17.78" y="93.98" size="1.778" layer="95"/>
+<wire x1="2.54" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+<label x="2.54" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-58.42" y1="50.8" x2="-58.42" y2="48.26" width="0.1524" layer="91"/>
@@ -7120,7 +7118,8 @@ W = angled&lt;p&gt;
 <net name="I2C_SCL" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="32-IO14-I2C_SCL"/>
-<wire x1="-129.54" y1="114.3" x2="-137.16" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="114.3" x2="-152.4" y2="114.3" width="0.1524" layer="91"/>
+<label x="-149.86" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="32-IO14-12C_SCL"/>
@@ -7128,8 +7127,8 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P0"/>
-<wire x1="17.78" y1="96.52" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
-<label x="17.78" y="96.52" size="1.778" layer="95"/>
+<wire x1="2.54" y1="96.52" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
+<label x="2.54" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-63.5" y1="50.8" x2="-63.5" y2="48.26" width="0.1524" layer="91"/>
@@ -7138,7 +7137,8 @@ W = angled&lt;p&gt;
 <net name="AI3" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="9-AI3"/>
-<wire x1="-78.74" y1="114.3" x2="-83.82" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="114.3" x2="-83.82" y2="114.3" width="0.1524" layer="91"/>
+<label x="-81.28" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="9-AI3"/>
@@ -7148,7 +7148,8 @@ W = angled&lt;p&gt;
 <net name="AI2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="7-AI2"/>
-<wire x1="-78.74" y1="111.76" x2="-83.82" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="111.76" x2="-83.82" y2="111.76" width="0.1524" layer="91"/>
+<label x="-81.28" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="7-AI2"/>
@@ -7158,7 +7159,8 @@ W = angled&lt;p&gt;
 <net name="AI1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="5-AI1"/>
-<wire x1="-83.82" y1="109.22" x2="-78.74" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="109.22" x2="-53.34" y2="109.22" width="0.1524" layer="91"/>
+<label x="-81.28" y="109.22" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="5-AI1"/>
@@ -7168,7 +7170,8 @@ W = angled&lt;p&gt;
 <net name="AI0" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="3-AI0"/>
-<wire x1="-78.74" y1="106.68" x2="-83.82" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="106.68" x2="-83.82" y2="106.68" width="0.1524" layer="91"/>
+<label x="-81.28" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="3-AI0"/>
@@ -7178,7 +7181,8 @@ W = angled&lt;p&gt;
 <net name="AO1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="4-AO1"/>
-<wire x1="-83.82" y1="101.6" x2="-78.74" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="101.6" x2="-53.34" y2="101.6" width="0.1524" layer="91"/>
+<label x="-81.28" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="4-AO1"/>
@@ -7188,7 +7192,8 @@ W = angled&lt;p&gt;
 <net name="AO0" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="2-AO0"/>
-<wire x1="-83.82" y1="99.06" x2="-78.74" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="99.06" x2="-53.34" y2="99.06" width="0.1524" layer="91"/>
+<label x="-81.28" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$2" pin="2-AO0"/>
