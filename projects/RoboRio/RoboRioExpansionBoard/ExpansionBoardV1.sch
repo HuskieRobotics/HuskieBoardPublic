@@ -6149,6 +6149,81 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="display-hp">
+<description>&lt;b&gt;Hewlett Packard LED Displays&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="HLMP6">
+<description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
+2 mm horizontal, RM 2.54 mm</description>
+<wire x1="-2.413" y1="-1.27" x2="2.921" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="1.27" x2="2.921" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="1.27" x2="-2.413" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="-1.27" x2="-2.413" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="-2.794" y1="-0.889" x2="-2.794" y2="0.889" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-2.794" y1="0.889" x2="-2.413" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="0.889" x2="-2.413" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-2.794" y1="-0.889" x2="-2.413" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="-0.889" x2="-2.413" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-2.794" y1="0.635" x2="-2.794" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.048" y1="0.508" x2="-3.048" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-3.302" y1="0.254" x2="-3.302" y2="-0.254" width="0.1524" layer="21"/>
+<pad name="A" x="-1.27" y="0" drill="0.8128" shape="long" rot="R90"/>
+<pad name="K" x="1.27" y="0" drill="0.8128" shape="long" rot="R90"/>
+<text x="3.429" y="0.127" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.429" y="-1.397" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LED">
+<wire x1="1.27" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="1.778" x2="-3.429" y2="0.381" width="0.1524" layer="94"/>
+<wire x1="-3.429" y1="0.381" x2="-2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.762" x2="-3.048" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="1.27" x2="-3.429" y2="0.381" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="-0.762" x2="-2.413" y2="-0.381" width="0.1524" layer="94"/>
+<wire x1="-2.413" y1="-0.381" x2="-2.921" y2="0.127" width="0.1524" layer="94"/>
+<wire x1="-2.921" y1="0.127" x2="-3.302" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="0.635" x2="-3.302" y2="-0.762" width="0.1524" layer="94"/>
+<text x="3.302" y="-1.524" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.461" y="-1.524" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="K" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A" x="0" y="5.08" visible="off" length="point" direction="pas" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="HLMP6" prefix="D">
+<description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
+2mm horizontal</description>
+<gates>
+<gate name="A" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HLMP6">
+<connects>
+<connect gate="A" pin="A" pad="A"/>
+<connect gate="A" pin="K" pad="K"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="AGILENT TECHNOLOGIES" constant="no"/>
+<attribute name="MPN" value="HLMP-6500" constant="no"/>
+<attribute name="OC_FARNELL" value="1652490" constant="no"/>
+<attribute name="OC_NEWARK" value="40K0088" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6194,10 +6269,14 @@ W = angled&lt;p&gt;
 <part name="IC1" library="adafruit" deviceset="MCP3008" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
+<part name="D1" library="display-hp" deviceset="HLMP6" device=""/>
+<part name="D2" library="display-hp" deviceset="HLMP6" device=""/>
+<part name="D3" library="display-hp" deviceset="HLMP6" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="-279.4" y="88.9" size="1.778" layer="91">Dont worry that the LED is not the same model name as the one specified, The dimensions are identical</text>
 </plain>
 <instances>
 <instance part="PROPELLER" gate="P8X32A-D40" x="38.1" y="76.2"/>
@@ -6236,6 +6315,9 @@ W = angled&lt;p&gt;
 <instance part="IC1" gate="G$1" x="99.06" y="124.46" rot="R180"/>
 <instance part="GND7" gate="1" x="78.74" y="114.3"/>
 <instance part="+3V5" gate="G$1" x="81.28" y="109.22" rot="R90"/>
+<instance part="D1" gate="A" x="-231.14" y="99.06"/>
+<instance part="D2" gate="A" x="-220.98" y="99.06"/>
+<instance part="D3" gate="A" x="-210.82" y="99.06"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -6549,6 +6631,13 @@ W = angled&lt;p&gt;
 <wire x1="2.54" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
 <label x="2.54" y="91.44" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="2.54" y1="91.44" x2="2.54" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="139.7" x2="-195.58" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="-195.58" y1="139.7" x2="-195.58" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-195.58" y1="93.98" x2="-210.82" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-210.82" y1="93.98" x2="-210.82" y2="99.06" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="IO3" class="0">
 <segment>
@@ -6556,12 +6645,26 @@ W = angled&lt;p&gt;
 <wire x1="2.54" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
 <label x="2.54" y="88.9" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="2.54" y1="93.98" x2="2.54" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="147.32" x2="-215.9" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="147.32" x2="-215.9" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-215.9" y1="93.98" x2="-220.98" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-220.98" y1="93.98" x2="-220.98" y2="99.06" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="IO4" class="0">
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P4"/>
 <wire x1="2.54" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
 <label x="2.54" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="2.54" y1="93.98" x2="2.54" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="154.94" x2="-223.52" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="-223.52" y1="154.94" x2="-223.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-223.52" y1="93.98" x2="-231.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-231.14" y1="93.98" x2="-231.14" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO5" class="0">
@@ -7070,6 +7173,21 @@ W = angled&lt;p&gt;
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P14"/>
 <wire x1="2.54" y1="60.96" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
 <label x="2.54" y="60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<wire x1="35.56" y1="124.46" x2="35.56" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="175.26" x2="-180.34" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="D3" gate="A" pin="A"/>
+<wire x1="-180.34" y1="175.26" x2="-180.34" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="-180.34" y1="104.14" x2="-210.82" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="D2" gate="A" pin="A"/>
+<wire x1="-210.82" y1="104.14" x2="-220.98" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="D1" gate="A" pin="A"/>
+<wire x1="-220.98" y1="104.14" x2="-231.14" y2="104.14" width="0.1524" layer="91"/>
+<junction x="-210.82" y="104.14"/>
+<junction x="-220.98" y="104.14"/>
 </segment>
 </net>
 </nets>
