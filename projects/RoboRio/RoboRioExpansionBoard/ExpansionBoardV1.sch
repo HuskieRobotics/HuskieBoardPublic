@@ -6281,16 +6281,8 @@ W = angled&lt;p&gt;
 <part name="SV15" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV16" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV17" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V11" library="supply1" deviceset="+3V3" device=""/>
 <part name="SV18" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
 <part name="SV19" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -6299,6 +6291,20 @@ W = angled&lt;p&gt;
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="P+4" library="supply1" deviceset="+5V" device=""/>
+<part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="P+7" library="supply1" deviceset="+5V" device=""/>
+<part name="P+8" library="supply1" deviceset="+5V" device=""/>
+<part name="P+9" library="supply1" deviceset="+5V" device=""/>
+<part name="P+10" library="supply1" deviceset="+5V" device=""/>
+<part name="P+11" library="supply1" deviceset="+5V" device=""/>
+<part name="SV20" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="SV21" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="SV22" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="SV23" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="SV24" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="SV25" library="con-lstb" deviceset="MA03-1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6354,16 +6360,8 @@ W = angled&lt;p&gt;
 <instance part="SV15" gate="G$1" x="167.64" y="99.06" rot="R180"/>
 <instance part="SV16" gate="G$1" x="167.64" y="86.36" rot="R180"/>
 <instance part="SV17" gate="G$1" x="167.64" y="73.66" rot="R180"/>
-<instance part="+3V6" gate="G$1" x="160.02" y="137.16" rot="R270"/>
-<instance part="+3V8" gate="G$1" x="160.02" y="111.76" rot="R270"/>
-<instance part="+3V9" gate="G$1" x="160.02" y="99.06" rot="R270"/>
-<instance part="+3V10" gate="G$1" x="160.02" y="86.36" rot="R270"/>
-<instance part="+3V11" gate="G$1" x="160.02" y="73.66" rot="R270"/>
 <instance part="SV18" gate="G$1" x="167.64" y="60.96" rot="R180"/>
-<instance part="+3V12" gate="G$1" x="160.02" y="60.96" rot="R270"/>
 <instance part="SV19" gate="G$1" x="167.64" y="48.26" rot="R180"/>
-<instance part="+3V13" gate="G$1" x="160.02" y="124.46" rot="R270"/>
-<instance part="+3V7" gate="G$1" x="160.02" y="48.26" rot="R270"/>
 <instance part="GND12" gate="1" x="157.48" y="139.7" rot="R270"/>
 <instance part="GND13" gate="1" x="157.48" y="127" rot="R270"/>
 <instance part="GND14" gate="1" x="157.48" y="101.6" rot="R270"/>
@@ -6372,6 +6370,20 @@ W = angled&lt;p&gt;
 <instance part="GND17" gate="1" x="157.48" y="76.2" rot="R270"/>
 <instance part="GND18" gate="1" x="157.48" y="63.5" rot="R270"/>
 <instance part="GND19" gate="1" x="157.48" y="50.8" rot="R270"/>
+<instance part="P+4" gate="1" x="160.02" y="99.06" rot="R270"/>
+<instance part="P+5" gate="1" x="160.02" y="111.76" rot="R270"/>
+<instance part="P+6" gate="1" x="160.02" y="124.46" rot="R270"/>
+<instance part="P+7" gate="1" x="160.02" y="137.16" rot="R270"/>
+<instance part="P+8" gate="1" x="160.02" y="86.36" rot="R270"/>
+<instance part="P+9" gate="1" x="160.02" y="73.66" rot="R270"/>
+<instance part="P+10" gate="1" x="160.02" y="60.96" rot="R270"/>
+<instance part="P+11" gate="1" x="160.02" y="48.26" rot="R270"/>
+<instance part="SV20" gate="G$1" x="121.92" y="12.7" rot="R180"/>
+<instance part="SV21" gate="G$1" x="121.92" y="-2.54" rot="R180"/>
+<instance part="SV22" gate="G$1" x="121.92" y="-17.78" rot="R180"/>
+<instance part="SV23" gate="G$1" x="121.92" y="-33.02" rot="R180"/>
+<instance part="SV24" gate="G$1" x="121.92" y="27.94" rot="R180"/>
+<instance part="SV25" gate="G$1" x="121.92" y="-48.26" rot="R180"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -6388,15 +6400,19 @@ W = angled&lt;p&gt;
 <wire x1="58.42" y1="58.42" x2="58.42" y2="86.36" width="0.762" layer="92"/>
 <wire x1="58.42" y1="58.42" x2="66.04" y2="58.42" width="0.762" layer="92"/>
 <wire x1="66.04" y1="58.42" x2="71.12" y2="53.34" width="0.762" layer="92"/>
-<wire x1="71.12" y1="53.34" x2="71.12" y2="48.26" width="0.762" layer="92"/>
+<wire x1="71.12" y1="53.34" x2="71.12" y2="50.8" width="0.762" layer="92"/>
+<wire x1="71.12" y1="50.8" x2="71.12" y2="48.26" width="0.762" layer="92"/>
 <wire x1="71.12" y1="48.26" x2="63.5" y2="40.64" width="0.762" layer="92"/>
 <wire x1="63.5" y1="40.64" x2="10.16" y2="40.64" width="0.762" layer="92"/>
 <wire x1="10.16" y1="40.64" x2="2.54" y2="48.26" width="0.762" layer="92"/>
-<wire x1="71.12" y1="53.34" x2="116.84" y2="53.34" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="-63.5" y2="48.26" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="2.54" y2="170.18" width="0.762" layer="92"/>
 <wire x1="2.54" y1="170.18" x2="-205.74" y2="170.18" width="0.762" layer="92"/>
 <wire x1="-205.74" y1="170.18" x2="-213.36" y2="162.56" width="0.762" layer="92"/>
+<wire x1="71.12" y1="50.8" x2="88.9" y2="50.8" width="0.762" layer="92"/>
+<wire x1="88.9" y1="50.8" x2="88.9" y2="30.48" width="0.762" layer="92"/>
+<wire x1="88.9" y1="30.48" x2="88.9" y2="27.94" width="0.762" layer="92"/>
+<wire x1="88.9" y1="27.94" x2="88.9" y2="-50.8" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
@@ -7270,17 +7286,11 @@ W = angled&lt;p&gt;
 <label x="2.54" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="109.22" y1="134.62" x2="162.56" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <wire x1="109.22" y1="132.08" x2="144.78" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="SV13" gate="G$1" pin="3"/>
-<wire x1="160.02" y1="121.92" x2="144.78" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="121.92" x2="144.78" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="121.92" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -7288,8 +7298,8 @@ W = angled&lt;p&gt;
 <pinref part="IC1" gate="G$1" pin="CH5"/>
 <wire x1="111.76" y1="129.54" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="109.22" x2="134.62" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="109.22" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="109.22" x2="162.56" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -7305,9 +7315,7 @@ W = angled&lt;p&gt;
 <segment>
 <wire x1="109.22" y1="124.46" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="124.46" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="SV16" gate="G$1" pin="3"/>
-<wire x1="121.92" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="83.82" x2="162.56" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="83.82" x2="162.56" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -7329,11 +7337,15 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$10" class="0">
 <segment>
+<wire x1="111.76" y1="45.72" x2="162.56" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="CH0"/>
-<wire x1="111.76" y1="116.84" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="55.88" x2="154.94" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="55.88" x2="154.94" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="45.72" x2="162.56" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="116.84" x2="111.76" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="116.84" x2="111.76" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<wire x1="109.22" y1="134.62" x2="162.56" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
