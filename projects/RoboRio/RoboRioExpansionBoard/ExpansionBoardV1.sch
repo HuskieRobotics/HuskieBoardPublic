@@ -6406,6 +6406,7 @@ Based on the following sources:
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6429,7 +6430,7 @@ Based on the following sources:
 <instance part="GND2" gate="1" x="-76.2" y="-15.24"/>
 <instance part="+3V3" gate="G$1" x="-68.58" y="-22.86" rot="R270"/>
 <instance part="P+2" gate="1" x="-68.58" y="-30.48" rot="R270"/>
-<instance part="GND6" gate="1" x="-2.54" y="50.8"/>
+<instance part="GND6" gate="1" x="12.7" y="50.8"/>
 <instance part="+3V4" gate="G$1" x="20.32" y="121.92" rot="R90"/>
 <instance part="PROPELLER" gate="P" x="33.02" y="119.38"/>
 <instance part="RRDIO0" gate="G$1" x="-284.48" y="-76.2" rot="R90"/>
@@ -6488,6 +6489,7 @@ Based on the following sources:
 <instance part="P+12" gate="1" x="25.4" y="10.16"/>
 <instance part="GND9" gate="1" x="48.26" y="27.94"/>
 <instance part="+3V6" gate="G$1" x="33.02" y="7.62" rot="R270"/>
+<instance part="+3V7" gate="G$1" x="12.7" y="20.32" rot="R90"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -6614,7 +6616,7 @@ Based on the following sources:
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="BOE/"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="22.86" y1="53.34" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="53.34" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P" pin="VSS@2"/>
@@ -6820,14 +6822,14 @@ Based on the following sources:
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <pinref part="IC1" gate="G$1" pin="VDD"/>
 <wire x1="83.82" y1="109.22" x2="83.82" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="119.38" x2="83.82" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="VREF"/>
-<junction x="83.82" y="116.84"/>
-<junction x="83.82" y="119.38"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="P" pin="VCC"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="A" pin="ENABLE"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
