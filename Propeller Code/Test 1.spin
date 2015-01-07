@@ -19,9 +19,10 @@ PUB main
     
        
 
-PUB sayHi
+PUB sayHi   : a
   serial.Str(@hi)
-
+  a:=3
+  
 DAT
 name    byte  "string_data"
 hi      byte  "Hi!",13,0  
