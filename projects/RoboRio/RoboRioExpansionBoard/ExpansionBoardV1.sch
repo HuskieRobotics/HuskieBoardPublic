@@ -6309,7 +6309,6 @@ W = angled&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
-<text x="-279.4" y="88.9" size="1.778" layer="91">Dont worry that the LED is not the same model name as the one specified, The dimensions are identical</text>
 </plain>
 <instances>
 <instance part="PROPELLER" gate="P8X32A-D40" x="38.1" y="76.2"/>
@@ -6348,12 +6347,12 @@ W = angled&lt;p&gt;
 <instance part="IC1" gate="G$1" x="99.06" y="124.46" rot="R180"/>
 <instance part="GND7" gate="1" x="78.74" y="114.3"/>
 <instance part="+3V5" gate="G$1" x="81.28" y="109.22" rot="R90"/>
-<instance part="D1" gate="A" x="-231.14" y="99.06"/>
-<instance part="D2" gate="A" x="-220.98" y="99.06"/>
-<instance part="D3" gate="A" x="-210.82" y="99.06"/>
-<instance part="GND8" gate="1" x="-231.14" y="106.68" rot="R180"/>
-<instance part="GND9" gate="1" x="-220.98" y="106.68" rot="R180"/>
-<instance part="GND10" gate="1" x="-210.82" y="106.68" rot="R180"/>
+<instance part="D1" gate="A" x="142.24" y="243.84"/>
+<instance part="D2" gate="A" x="152.4" y="243.84"/>
+<instance part="D3" gate="A" x="162.56" y="243.84"/>
+<instance part="GND8" gate="1" x="142.24" y="251.46" rot="R180"/>
+<instance part="GND9" gate="1" x="152.4" y="251.46" rot="R180"/>
+<instance part="GND10" gate="1" x="162.56" y="251.46" rot="R180"/>
 <instance part="SV12" gate="G$1" x="167.64" y="137.16" rot="R180"/>
 <instance part="SV13" gate="G$1" x="167.64" y="124.46" rot="R180"/>
 <instance part="SV14" gate="G$1" x="167.64" y="111.76" rot="R180"/>
@@ -6407,12 +6406,10 @@ W = angled&lt;p&gt;
 <wire x1="10.16" y1="40.64" x2="2.54" y2="48.26" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="-63.5" y2="48.26" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="2.54" y2="170.18" width="0.762" layer="92"/>
-<wire x1="2.54" y1="170.18" x2="-205.74" y2="170.18" width="0.762" layer="92"/>
-<wire x1="-205.74" y1="170.18" x2="-213.36" y2="162.56" width="0.762" layer="92"/>
+<wire x1="2.54" y1="170.18" x2="139.7" y2="307.34" width="0.762" layer="92"/>
+<wire x1="139.7" y1="307.34" x2="160.02" y2="307.34" width="0.762" layer="92"/>
 <wire x1="71.12" y1="50.8" x2="88.9" y2="50.8" width="0.762" layer="92"/>
-<wire x1="88.9" y1="50.8" x2="88.9" y2="30.48" width="0.762" layer="92"/>
-<wire x1="88.9" y1="30.48" x2="88.9" y2="27.94" width="0.762" layer="92"/>
-<wire x1="88.9" y1="27.94" x2="88.9" y2="-50.8" width="0.762" layer="92"/>
+<wire x1="88.9" y1="50.8" x2="88.9" y2="-50.8" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
@@ -6743,13 +6740,14 @@ W = angled&lt;p&gt;
 <label x="2.54" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-210.82" y1="93.98" x2="-210.82" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-203.2" y1="93.98" x2="-210.82" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-203.2" y1="154.94" x2="-203.2" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-203.2" y1="154.94" x2="-205.74" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-205.74" y1="157.48" x2="-208.28" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-213.36" y1="162.56" x2="-210.82" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="-210.82" y1="162.56" x2="-208.28" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="238.76" x2="162.56" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="241.3" x2="162.56" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="238.76" x2="162.56" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="299.72" x2="170.18" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="307.34" x2="162.56" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="307.34" x2="170.18" y2="299.72" width="0.1524" layer="91"/>
+<pinref part="D3" gate="A" pin="K"/>
+<junction x="162.56" y="241.3"/>
 </segment>
 </net>
 <net name="IO3" class="0">
@@ -6759,9 +6757,12 @@ W = angled&lt;p&gt;
 <label x="2.54" y="88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-213.36" y1="162.56" x2="-213.36" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-213.36" y1="93.98" x2="-220.98" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-220.98" y1="99.06" x2="-220.98" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="307.34" x2="160.02" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="238.76" x2="152.4" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="243.84" x2="152.4" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="D2" gate="A" pin="K"/>
+<wire x1="152.4" y1="241.3" x2="152.4" y2="238.76" width="0.1524" layer="91"/>
+<junction x="152.4" y="241.3"/>
 </segment>
 </net>
 <net name="IO4" class="0">
@@ -6771,11 +6772,14 @@ W = angled&lt;p&gt;
 <label x="2.54" y="86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-223.52" y1="154.94" x2="-223.52" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-223.52" y1="154.94" x2="-215.9" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="-213.36" y1="162.56" x2="-215.9" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="-231.14" y1="93.98" x2="-231.14" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-223.52" y1="93.98" x2="-231.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="299.72" x2="149.86" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="299.72" x2="157.48" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="307.34" x2="157.48" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="238.76" x2="142.24" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="241.3" x2="142.24" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="238.76" x2="142.24" y2="238.76" width="0.1524" layer="91"/>
+<pinref part="D1" gate="A" pin="K"/>
+<junction x="142.24" y="241.3"/>
 </segment>
 </net>
 <net name="IO5" class="0">
