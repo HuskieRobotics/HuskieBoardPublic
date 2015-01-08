@@ -6915,38 +6915,38 @@ Based on the following sources:
 <instance part="+3V10" gate="G$1" x="157.48" y="124.46" rot="R90"/>
 <instance part="+3V11" gate="G$1" x="157.48" y="137.16" rot="R90"/>
 <instance part="P+7" gate="1" x="81.28" y="119.38" rot="R90"/>
-<instance part="IO0-SPI-CS" gate="G$1" x="121.92" y="12.7" rot="R180"/>
-<instance part="IO1-SPI-CLK" gate="G$1" x="121.92" y="-2.54" rot="R180"/>
-<instance part="IO2-SPI-MOSI" gate="G$1" x="121.92" y="-17.78" rot="R180"/>
-<instance part="IO3-SPI-MISO" gate="G$1" x="121.92" y="-33.02" rot="R180"/>
-<instance part="IO4" gate="G$1" x="121.92" y="-48.26" rot="R180"/>
-<instance part="IO5" gate="G$1" x="121.92" y="-63.5" rot="R180"/>
-<instance part="IO6" gate="G$1" x="121.92" y="-78.74" rot="R180"/>
-<instance part="IO7" gate="G$1" x="121.92" y="-93.98" rot="R180"/>
-<instance part="IO8" gate="G$1" x="121.92" y="-109.22" rot="R180"/>
-<instance part="IO9" gate="G$1" x="121.92" y="-124.46" rot="R180"/>
-<instance part="IO10" gate="G$1" x="121.92" y="-139.7" rot="R180"/>
-<instance part="IO11" gate="G$1" x="121.92" y="-154.94" rot="R180"/>
-<instance part="IO12" gate="G$1" x="121.92" y="-170.18" rot="R180"/>
-<instance part="IO13" gate="G$1" x="121.92" y="-185.42" rot="R180"/>
-<instance part="IO14" gate="G$1" x="121.92" y="-200.66" rot="R180"/>
-<instance part="IO15" gate="G$1" x="121.92" y="-215.9" rot="R180"/>
-<instance part="IO16" gate="G$1" x="121.92" y="-231.14" rot="R180"/>
-<instance part="IO17" gate="G$1" x="121.92" y="-246.38" rot="R180"/>
-<instance part="IO18" gate="G$1" x="121.92" y="-261.62" rot="R180"/>
-<instance part="IO19" gate="G$1" x="121.92" y="-276.86" rot="R180"/>
-<instance part="IO20" gate="G$1" x="121.92" y="-292.1" rot="R180"/>
-<instance part="IO21" gate="G$1" x="121.92" y="-307.34" rot="R180"/>
-<instance part="IO22" gate="G$1" x="121.92" y="-322.58" rot="R180"/>
-<instance part="IO23" gate="G$1" x="121.92" y="-337.82" rot="R180"/>
-<instance part="IO24" gate="G$1" x="121.92" y="-353.06" rot="R180"/>
-<instance part="IO25" gate="G$1" x="121.92" y="-368.3" rot="R180"/>
-<instance part="IO26" gate="G$1" x="121.92" y="-383.54" rot="R180"/>
-<instance part="IO27" gate="G$1" x="121.92" y="-398.78" rot="R180"/>
-<instance part="IO28" gate="G$1" x="121.92" y="-414.02" rot="R180"/>
-<instance part="IO29" gate="G$1" x="121.92" y="-429.26" rot="R180"/>
-<instance part="IO30" gate="G$1" x="121.92" y="-444.5" rot="R180"/>
-<instance part="IO31" gate="G$1" x="121.92" y="-459.74" rot="R180"/>
+<instance part="IO0-SPI-CS" gate="G$1" x="124.46" y="12.7" rot="R180"/>
+<instance part="IO1-SPI-CLK" gate="G$1" x="124.46" y="-2.54" rot="R180"/>
+<instance part="IO2-SPI-MOSI" gate="G$1" x="124.46" y="-17.78" rot="R180"/>
+<instance part="IO3-SPI-MISO" gate="G$1" x="124.46" y="-33.02" rot="R180"/>
+<instance part="IO4" gate="G$1" x="124.46" y="-48.26" rot="R180"/>
+<instance part="IO5" gate="G$1" x="124.46" y="-63.5" rot="R180"/>
+<instance part="IO6" gate="G$1" x="124.46" y="-78.74" rot="R180"/>
+<instance part="IO7" gate="G$1" x="124.46" y="-93.98" rot="R180"/>
+<instance part="IO8" gate="G$1" x="124.46" y="-109.22" rot="R180"/>
+<instance part="IO9" gate="G$1" x="124.46" y="-124.46" rot="R180"/>
+<instance part="IO10" gate="G$1" x="124.46" y="-139.7" rot="R180"/>
+<instance part="IO11" gate="G$1" x="124.46" y="-154.94" rot="R180"/>
+<instance part="IO12" gate="G$1" x="124.46" y="-170.18" rot="R180"/>
+<instance part="IO13" gate="G$1" x="124.46" y="-185.42" rot="R180"/>
+<instance part="IO14" gate="G$1" x="124.46" y="-200.66" rot="R180"/>
+<instance part="IO15" gate="G$1" x="124.46" y="-215.9" rot="R180"/>
+<instance part="IO16" gate="G$1" x="124.46" y="-231.14" rot="R180"/>
+<instance part="IO17" gate="G$1" x="124.46" y="-246.38" rot="R180"/>
+<instance part="IO18" gate="G$1" x="124.46" y="-261.62" rot="R180"/>
+<instance part="IO19" gate="G$1" x="124.46" y="-276.86" rot="R180"/>
+<instance part="IO20" gate="G$1" x="124.46" y="-292.1" rot="R180"/>
+<instance part="IO21" gate="G$1" x="124.46" y="-307.34" rot="R180"/>
+<instance part="IO22" gate="G$1" x="124.46" y="-322.58" rot="R180"/>
+<instance part="IO23" gate="G$1" x="124.46" y="-337.82" rot="R180"/>
+<instance part="IO24" gate="G$1" x="124.46" y="-353.06" rot="R180"/>
+<instance part="IO25" gate="G$1" x="124.46" y="-368.3" rot="R180"/>
+<instance part="IO26" gate="G$1" x="124.46" y="-383.54" rot="R180"/>
+<instance part="IO27" gate="G$1" x="124.46" y="-398.78" rot="R180"/>
+<instance part="IO28" gate="G$1" x="124.46" y="-414.02" rot="R180"/>
+<instance part="IO29" gate="G$1" x="124.46" y="-429.26" rot="R180"/>
+<instance part="IO30" gate="G$1" x="124.46" y="-444.5" rot="R180"/>
+<instance part="IO31" gate="G$1" x="124.46" y="-459.74" rot="R180"/>
 <instance part="GND20" gate="1" x="109.22" y="35.56" rot="R180"/>
 <instance part="+3V12" gate="G$1" x="106.68" y="25.4" rot="R270"/>
 <instance part="LEVELSHIFTER" gate="B" x="27.94" y="-30.48"/>
@@ -7221,7 +7221,7 @@ Based on the following sources:
 <wire x1="109.22" y1="-439.42" x2="109.22" y2="-454.66" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="-454.66" x2="111.76" y2="-457.2" width="0.1524" layer="91"/>
 <pinref part="IO31" gate="G$1" pin="1"/>
-<wire x1="111.76" y1="-457.2" x2="114.3" y2="-457.2" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-457.2" x2="116.84" y2="-457.2" width="0.1524" layer="91"/>
 <junction x="109.22" y="-134.62"/>
 <junction x="109.22" y="-149.86"/>
 <junction x="109.22" y="-165.1"/>
@@ -7254,31 +7254,30 @@ Based on the following sources:
 <pinref part="IO1-SPI-CLK" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="15.24" x2="109.22" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="2.54" x2="109.22" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="2.54" x2="114.3" y2="0" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="2.54" x2="111.76" y2="0" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="0" x2="116.84" y2="0" width="0.1524" layer="91"/>
 <pinref part="IO0-SPI-CS" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="15.24" x2="114.3" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="15.24" x2="116.84" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="IO2-SPI-MOSI" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-12.7" x2="114.3" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-12.7" x2="111.76" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-15.24" x2="116.84" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="IO3-SPI-MISO" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-27.94" x2="114.3" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-27.94" x2="111.76" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-30.48" x2="116.84" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="IO4" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-43.18" x2="114.3" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-43.18" x2="111.76" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-45.72" x2="116.84" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="IO5" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-58.42" x2="114.3" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-58.42" x2="111.76" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-60.96" x2="116.84" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="IO6" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-73.66" x2="114.3" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-73.66" x2="111.76" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-76.2" x2="116.84" y2="-76.2" width="0.1524" layer="91"/>
 <pinref part="IO7" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-88.9" x2="114.3" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-88.9" x2="111.76" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-91.44" x2="116.84" y2="-91.44" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="-104.14" x2="111.76" y2="-106.68" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-106.68" x2="116.84" y2="-106.68" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-91.44" x2="116.84" y2="-91.44" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-76.2" x2="116.84" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-60.96" x2="116.84" y2="-60.96" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-45.72" x2="116.84" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-30.48" x2="116.84" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-15.24" x2="116.84" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="0" x2="116.84" y2="0" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="15.24" x2="116.84" y2="15.24" width="0.1524" layer="91"/>
 <junction x="109.22" y="2.54"/>
 <wire x1="109.22" y1="-119.38" x2="111.76" y2="-121.92" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-121.92" x2="116.84" y2="-121.92" width="0.1524" layer="91"/>
@@ -7304,8 +7303,7 @@ Based on the following sources:
 <wire x1="111.76" y1="-274.32" x2="116.84" y2="-274.32" width="0.1524" layer="91"/>
 <pinref part="IO20" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="-287.02" x2="111.76" y2="-289.56" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="-289.56" x2="114.3" y2="-289.56" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-289.56" x2="114.3" y2="-289.56" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-289.56" x2="116.84" y2="-289.56" width="0.1524" layer="91"/>
 <junction x="109.22" y="-287.02"/>
 <wire x1="109.22" y1="-302.26" x2="111.76" y2="-304.8" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-304.8" x2="116.84" y2="-304.8" width="0.1524" layer="91"/>
@@ -7328,6 +7326,28 @@ Based on the following sources:
 <junction x="109.22" y="15.24"/>
 <wire x1="109.22" y1="-363.22" x2="111.76" y2="-365.76" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-365.76" x2="116.84" y2="-365.76" width="0.1524" layer="91"/>
+<pinref part="IO17" gate="G$1" pin="1"/>
+<pinref part="IO18" gate="G$1" pin="1"/>
+<pinref part="IO16" gate="G$1" pin="1"/>
+<pinref part="IO15" gate="G$1" pin="1"/>
+<pinref part="IO14" gate="G$1" pin="1"/>
+<pinref part="IO13" gate="G$1" pin="1"/>
+<pinref part="IO12" gate="G$1" pin="1"/>
+<pinref part="IO11" gate="G$1" pin="1"/>
+<pinref part="IO10" gate="G$1" pin="1"/>
+<pinref part="IO9" gate="G$1" pin="1"/>
+<pinref part="IO8" gate="G$1" pin="1"/>
+<pinref part="IO19" gate="G$1" pin="1"/>
+<pinref part="IO21" gate="G$1" pin="1"/>
+<pinref part="IO22" gate="G$1" pin="1"/>
+<pinref part="IO23" gate="G$1" pin="1"/>
+<pinref part="IO24" gate="G$1" pin="1"/>
+<pinref part="IO25" gate="G$1" pin="1"/>
+<pinref part="IO26" gate="G$1" pin="1"/>
+<pinref part="IO28" gate="G$1" pin="1"/>
+<pinref part="IO27" gate="G$1" pin="1"/>
+<pinref part="IO29" gate="G$1" pin="1"/>
+<pinref part="IO30" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="3V3_LCD" gate="G$1" pin="1"/>
@@ -7565,6 +7585,38 @@ Based on the following sources:
 <wire x1="104.14" y1="-459.74" x2="116.84" y2="-459.74" width="0.1524" layer="91"/>
 <junction x="104.14" y="-459.74"/>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
+<pinref part="IO17" gate="G$1" pin="2"/>
+<pinref part="IO18" gate="G$1" pin="2"/>
+<pinref part="IO16" gate="G$1" pin="2"/>
+<pinref part="IO15" gate="G$1" pin="2"/>
+<pinref part="IO14" gate="G$1" pin="2"/>
+<pinref part="IO13" gate="G$1" pin="2"/>
+<pinref part="IO12" gate="G$1" pin="2"/>
+<pinref part="IO11" gate="G$1" pin="2"/>
+<pinref part="IO10" gate="G$1" pin="2"/>
+<pinref part="IO9" gate="G$1" pin="2"/>
+<pinref part="IO8" gate="G$1" pin="2"/>
+<pinref part="IO7" gate="G$1" pin="2"/>
+<pinref part="IO6" gate="G$1" pin="2"/>
+<pinref part="IO5" gate="G$1" pin="2"/>
+<pinref part="IO4" gate="G$1" pin="2"/>
+<pinref part="IO3-SPI-MISO" gate="G$1" pin="2"/>
+<pinref part="IO2-SPI-MOSI" gate="G$1" pin="2"/>
+<pinref part="IO1-SPI-CLK" gate="G$1" pin="2"/>
+<pinref part="IO0-SPI-CS" gate="G$1" pin="2"/>
+<pinref part="IO19" gate="G$1" pin="2"/>
+<pinref part="IO20" gate="G$1" pin="2"/>
+<pinref part="IO21" gate="G$1" pin="2"/>
+<pinref part="IO22" gate="G$1" pin="2"/>
+<pinref part="IO23" gate="G$1" pin="2"/>
+<pinref part="IO24" gate="G$1" pin="2"/>
+<pinref part="IO25" gate="G$1" pin="2"/>
+<pinref part="IO26" gate="G$1" pin="2"/>
+<pinref part="IO28" gate="G$1" pin="2"/>
+<pinref part="IO27" gate="G$1" pin="2"/>
+<pinref part="IO29" gate="G$1" pin="2"/>
+<pinref part="IO30" gate="G$1" pin="2"/>
+<pinref part="IO31" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="LEVELSHIFTER" gate="B" pin="ENABLE"/>
@@ -7606,6 +7658,7 @@ Based on the following sources:
 <segment>
 <wire x1="101.6" y1="-50.8" x2="116.84" y2="-50.8" width="0.1524" layer="91"/>
 <label x="104.14" y="-50.8" size="1.778" layer="95"/>
+<pinref part="IO4" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO5" class="0">
@@ -7622,6 +7675,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-66.04" x2="101.6" y2="-66.04" width="0.1524" layer="91"/>
 <label x="104.14" y="-66.04" size="1.778" layer="95"/>
+<pinref part="IO5" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO6" class="0">
@@ -7639,6 +7693,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-81.28" x2="101.6" y2="-81.28" width="0.1524" layer="91"/>
 <label x="104.14" y="-81.28" size="1.778" layer="95"/>
+<pinref part="IO6" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO7" class="0">
@@ -7655,6 +7710,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-96.52" x2="101.6" y2="-96.52" width="0.1524" layer="91"/>
 <label x="104.14" y="-96.52" size="1.778" layer="95"/>
+<pinref part="IO7" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO8" class="0">
@@ -7666,6 +7722,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-111.76" x2="101.6" y2="-111.76" width="0.1524" layer="91"/>
 <label x="104.14" y="-111.76" size="1.778" layer="95"/>
+<pinref part="IO8" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <wire x1="2.54" y1="-7.62" x2="7.62" y2="-12.7" width="0.1524" layer="91"/>
@@ -7687,6 +7744,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-127" x2="101.6" y2="-127" width="0.1524" layer="91"/>
 <label x="104.14" y="-127" size="1.778" layer="95"/>
+<pinref part="IO9" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO10" class="0">
@@ -7698,6 +7756,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-142.24" x2="101.6" y2="-142.24" width="0.1524" layer="91"/>
 <label x="104.14" y="-142.24" size="1.778" layer="95"/>
+<pinref part="IO10" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO11" class="0">
@@ -7709,6 +7768,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-157.48" x2="101.6" y2="-157.48" width="0.1524" layer="91"/>
 <label x="104.14" y="-157.48" size="1.778" layer="95"/>
+<pinref part="IO11" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO12" class="0">
@@ -7719,7 +7779,7 @@ Based on the following sources:
 </segment>
 <segment>
 <pinref part="IO12" gate="G$1" pin="3"/>
-<wire x1="101.6" y1="-172.72" x2="114.3" y2="-172.72" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-172.72" x2="116.84" y2="-172.72" width="0.1524" layer="91"/>
 <label x="104.14" y="-172.72" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -7731,7 +7791,7 @@ Based on the following sources:
 </segment>
 <segment>
 <pinref part="IO13" gate="G$1" pin="3"/>
-<wire x1="114.3" y1="-187.96" x2="101.6" y2="-187.96" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-187.96" x2="101.6" y2="-187.96" width="0.1524" layer="91"/>
 <label x="104.14" y="-187.96" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -7744,6 +7804,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-218.44" x2="101.6" y2="-218.44" width="0.1524" layer="91"/>
 <label x="104.14" y="-218.44" size="1.778" layer="95"/>
+<pinref part="IO15" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO16" class="0">
@@ -7754,6 +7815,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-233.68" x2="101.6" y2="-233.68" width="0.1524" layer="91"/>
 <label x="104.14" y="-233.68" size="1.778" layer="95"/>
+<pinref part="IO16" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO17" class="0">
@@ -7764,6 +7826,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-248.92" x2="101.6" y2="-248.92" width="0.1524" layer="91"/>
 <label x="104.14" y="-248.92" size="1.778" layer="95"/>
+<pinref part="IO17" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO18" class="0">
@@ -7774,6 +7837,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-264.16" x2="101.6" y2="-264.16" width="0.1524" layer="91"/>
 <label x="104.14" y="-264.16" size="1.778" layer="95"/>
+<pinref part="IO18" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO19" class="0">
@@ -7784,6 +7848,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-279.4" x2="101.6" y2="-279.4" width="0.1524" layer="91"/>
 <label x="104.14" y="-279.4" size="1.778" layer="95"/>
+<pinref part="IO19" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO20" class="0">
@@ -7794,6 +7859,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-294.64" x2="101.6" y2="-294.64" width="0.1524" layer="91"/>
 <label x="104.14" y="-294.64" size="1.778" layer="95"/>
+<pinref part="IO20" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO21" class="0">
@@ -7804,6 +7870,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-309.88" x2="101.6" y2="-309.88" width="0.1524" layer="91"/>
 <label x="104.14" y="-309.88" size="1.778" layer="95"/>
+<pinref part="IO21" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO22" class="0">
@@ -7814,6 +7881,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-325.12" x2="101.6" y2="-325.12" width="0.1524" layer="91"/>
 <label x="104.14" y="-325.12" size="1.778" layer="95"/>
+<pinref part="IO22" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO23" class="0">
@@ -7824,6 +7892,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-340.36" x2="101.6" y2="-340.36" width="0.1524" layer="91"/>
 <label x="104.14" y="-340.36" size="1.778" layer="95"/>
+<pinref part="IO23" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO24" class="0">
@@ -7834,6 +7903,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-355.6" x2="101.6" y2="-355.6" width="0.1524" layer="91"/>
 <label x="104.14" y="-355.6" size="1.778" layer="95"/>
+<pinref part="IO24" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO25" class="0">
@@ -7844,6 +7914,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-370.84" x2="101.6" y2="-370.84" width="0.1524" layer="91"/>
 <label x="104.14" y="-370.84" size="1.778" layer="95"/>
+<pinref part="IO25" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO26" class="0">
@@ -7854,6 +7925,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-386.08" x2="101.6" y2="-386.08" width="0.1524" layer="91"/>
 <label x="104.14" y="-386.08" size="1.778" layer="95"/>
+<pinref part="IO26" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO27" class="0">
@@ -7864,6 +7936,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-401.32" x2="101.6" y2="-401.32" width="0.1524" layer="91"/>
 <label x="104.14" y="-401.32" size="1.778" layer="95"/>
+<pinref part="IO27" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -8136,6 +8209,7 @@ Based on the following sources:
 <segment>
 <wire x1="101.6" y1="-35.56" x2="116.84" y2="-35.56" width="0.1524" layer="91"/>
 <label x="86.36" y="-35.56" size="1.778" layer="95"/>
+<pinref part="IO3-SPI-MISO" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SPI_MOSI" class="0">
@@ -8160,6 +8234,7 @@ Based on the following sources:
 <segment>
 <wire x1="101.6" y1="-20.32" x2="116.84" y2="-20.32" width="0.1524" layer="91"/>
 <label x="86.36" y="-20.32" size="1.778" layer="95"/>
+<pinref part="IO2-SPI-MOSI" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SPI_CLK" class="0">
@@ -8184,6 +8259,7 @@ Based on the following sources:
 <segment>
 <wire x1="101.6" y1="-5.08" x2="116.84" y2="-5.08" width="0.1524" layer="91"/>
 <label x="86.36" y="-5.08" size="1.778" layer="95"/>
+<pinref part="IO1-SPI-CLK" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SPI_CS" class="0">
@@ -8208,6 +8284,7 @@ Based on the following sources:
 <segment>
 <wire x1="101.6" y1="10.16" x2="116.84" y2="10.16" width="0.1524" layer="91"/>
 <label x="86.36" y="10.16" size="1.778" layer="95"/>
+<pinref part="IO0-SPI-CS" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="UART_RX" class="0">
@@ -8339,6 +8416,7 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-203.2" x2="101.6" y2="-203.2" width="0.1524" layer="91"/>
 <label x="104.14" y="-203.2" size="1.778" layer="95"/>
+<pinref part="IO14" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -8438,24 +8516,28 @@ Based on the following sources:
 <segment>
 <wire x1="116.84" y1="-416.56" x2="101.6" y2="-416.56" width="0.1524" layer="91"/>
 <label x="104.14" y="-416.56" size="1.778" layer="95"/>
+<pinref part="IO28" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO29" class="0">
 <segment>
 <wire x1="116.84" y1="-431.8" x2="101.6" y2="-431.8" width="0.1524" layer="91"/>
 <label x="104.14" y="-431.8" size="1.778" layer="95"/>
+<pinref part="IO29" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO30" class="0">
 <segment>
 <wire x1="116.84" y1="-447.04" x2="101.6" y2="-447.04" width="0.1524" layer="91"/>
 <label x="104.14" y="-447.04" size="1.778" layer="95"/>
+<pinref part="IO30" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="IO31" class="0">
 <segment>
 <wire x1="116.84" y1="-462.28" x2="101.6" y2="-462.28" width="0.1524" layer="91"/>
 <label x="104.14" y="-462.28" size="1.778" layer="95"/>
+<pinref part="IO31" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$15" class="0">
