@@ -7108,17 +7108,6 @@ Based on the following sources:
 <pinref part="NEOPIXEL" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
 </segment>
-<<<<<<< HEAD
-=======
-<segment>
-<pinref part="GND20" gate="1" pin="GND"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="185.42" x2="33.02" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<junction x="33.02" y="205.74"/>
-<wire x1="33.02" y1="185.42" x2="33.02" y2="205.74" width="0.1524" layer="91"/>
-</segment>
->>>>>>> cd97a4d0e598ad7885acf7d4475d7f4afa4810bb
 </net>
 <net name="N$1" class="0">
 <segment>
