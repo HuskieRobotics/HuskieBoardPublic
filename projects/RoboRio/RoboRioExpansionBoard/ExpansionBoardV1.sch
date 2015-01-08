@@ -6966,6 +6966,10 @@ Based on the following sources:
 <wire x1="55.88" y1="162.56" x2="55.88" y2="187.96" width="0.762" layer="92"/>
 <wire x1="60.96" y1="162.56" x2="121.92" y2="162.56" width="0.762" layer="92"/>
 <wire x1="121.92" y1="162.56" x2="121.92" y2="180.34" width="0.762" layer="92"/>
+<wire x1="60.96" y1="88.9" x2="81.28" y2="68.58" width="0.762" layer="92"/>
+<wire x1="81.28" y1="68.58" x2="81.28" y2="-386.08" width="0.762" layer="92"/>
+<wire x1="81.28" y1="-386.08" x2="96.52" y2="-401.32" width="0.762" layer="92"/>
+<wire x1="96.52" y1="-401.32" x2="96.52" y2="-462.28" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,IO[4..31]">
@@ -6983,8 +6987,7 @@ Based on the following sources:
 <wire x1="2.54" y1="190.5" x2="7.62" y2="195.58" width="0.762" layer="92"/>
 <wire x1="71.12" y1="50.8" x2="101.6" y2="50.8" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="2.54" y2="-83.82" width="0.762" layer="92"/>
-<wire x1="101.6" y1="50.8" x2="101.6" y2="-462.28" width="0.762" layer="92"/>
-<wire x1="101.6" y1="-464.82" x2="101.6" y2="-462.28" width="0.762" layer="92"/>
+<wire x1="101.6" y1="50.8" x2="101.6" y2="-401.32" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
@@ -7391,6 +7394,11 @@ Based on the following sources:
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P28"/>
 <wire x1="60.96" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IO28" gate="G$1" pin="3"/>
+<wire x1="96.52" y1="-416.56" x2="116.84" y2="-416.56" width="0.1524" layer="91"/>
+<label x="78.74" y="-416.56" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SPECIAL29" class="0">
 <segment>
@@ -7406,6 +7414,11 @@ Based on the following sources:
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P29"/>
 <wire x1="60.96" y1="91.44" x2="55.88" y2="91.44" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IO29" gate="G$1" pin="3"/>
+<wire x1="96.52" y1="-431.8" x2="116.84" y2="-431.8" width="0.1524" layer="91"/>
+<label x="78.74" y="-431.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SPECIAL30" class="0">
 <segment>
@@ -7417,6 +7430,11 @@ Based on the following sources:
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P30"/>
 <wire x1="60.96" y1="93.98" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IO30" gate="G$1" pin="3"/>
+<wire x1="96.52" y1="-447.04" x2="116.84" y2="-447.04" width="0.1524" layer="91"/>
+<label x="78.74" y="-447.04" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SPECIAL31" class="0">
 <segment>
@@ -7427,6 +7445,11 @@ Based on the following sources:
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P31"/>
 <wire x1="60.96" y1="96.52" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IO31" gate="G$1" pin="3"/>
+<wire x1="96.52" y1="-462.28" x2="116.84" y2="-462.28" width="0.1524" layer="91"/>
+<label x="78.74" y="-462.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -8510,34 +8533,6 @@ Based on the following sources:
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="RED" gate="A" pin="A"/>
 <wire x1="25.4" y1="205.74" x2="20.32" y2="205.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="IO28" class="0">
-<segment>
-<wire x1="116.84" y1="-416.56" x2="101.6" y2="-416.56" width="0.1524" layer="91"/>
-<label x="104.14" y="-416.56" size="1.778" layer="95"/>
-<pinref part="IO28" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="IO29" class="0">
-<segment>
-<wire x1="116.84" y1="-431.8" x2="101.6" y2="-431.8" width="0.1524" layer="91"/>
-<label x="104.14" y="-431.8" size="1.778" layer="95"/>
-<pinref part="IO29" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="IO30" class="0">
-<segment>
-<wire x1="116.84" y1="-447.04" x2="101.6" y2="-447.04" width="0.1524" layer="91"/>
-<label x="104.14" y="-447.04" size="1.778" layer="95"/>
-<pinref part="IO30" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="IO31" class="0">
-<segment>
-<wire x1="116.84" y1="-462.28" x2="101.6" y2="-462.28" width="0.1524" layer="91"/>
-<label x="104.14" y="-462.28" size="1.778" layer="95"/>
-<pinref part="IO31" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$15" class="0">
