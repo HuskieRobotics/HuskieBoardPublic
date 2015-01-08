@@ -6826,7 +6826,7 @@ Based on the following sources:
 <part name="IO30" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="IO31" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="P+9" library="supply1" deviceset="+5V" device=""/>
+<part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6941,7 +6941,7 @@ Based on the following sources:
 <instance part="IO30" gate="G$1" x="121.92" y="-444.5" rot="R180"/>
 <instance part="IO31" gate="G$1" x="121.92" y="-459.74" rot="R180"/>
 <instance part="GND20" gate="1" x="109.22" y="35.56" rot="R180"/>
-<instance part="P+9" gate="1" x="104.14" y="27.94" rot="R180"/>
+<instance part="+3V12" gate="G$1" x="104.14" y="27.94" rot="R180"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
