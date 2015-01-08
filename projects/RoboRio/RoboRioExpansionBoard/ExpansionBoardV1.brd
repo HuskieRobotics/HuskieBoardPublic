@@ -2169,11 +2169,11 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-58.42" y="96.52" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-58.42" y="96.52" size="1.778" layer="27" display="off"/>
 </element>
-<element name="EEPROM" library="microchip" package="DIL8" value="24LC256P" x="-63.5" y="6.35">
-<attribute name="OC_NEWARK" value="92C7169" x="-63.5" y="6.35" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="24LC256-E/P" x="-63.5" y="6.35" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="MICROCHIP" x="-63.5" y="6.35" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="9757970" x="-63.5" y="6.35" size="1.778" layer="27" display="off"/>
+<element name="EEPROM" library="microchip" package="DIL8" value="24LC256P" x="78.74" y="71.12" rot="R270">
+<attribute name="OC_NEWARK" value="92C7169" x="78.74" y="71.12" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="24LC256-E/P" x="78.74" y="71.12" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MICROCHIP" x="78.74" y="71.12" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="9757970" x="78.74" y="71.12" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="IC1" library="adafruit" package="DIL16" value="MCP3008" x="-82.55" y="6.35"/>
 <element name="IO0-SPI-CS" library="con-lstb-modified" package="MA03-1" value="" x="-62.23" y="83.82">
@@ -2224,29 +2224,29 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-17.78" y="109.22" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-17.78" y="109.22" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO16" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="13.97" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="13.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="13.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="13.97" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="13.97" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO16" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="10.16" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="10.16" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="10.16" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="10.16" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="10.16" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO17" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="16.51" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO17" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="12.7" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO18" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="19.05" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="19.05" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="19.05" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="19.05" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="19.05" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO18" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="15.24" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO19" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="21.59" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="21.59" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="21.59" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="21.59" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="21.59" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO19" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="17.78" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="IO2-SPI-MOSI" library="con-lstb-modified" package="MA03-1" value="" x="-21.59" y="83.82">
 <attribute name="OC_NEWARK" value="unknown" x="-21.59" y="83.82" size="1.778" layer="27" display="off"/>
@@ -2254,65 +2254,65 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-21.59" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-21.59" y="83.82" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO20" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="24.13" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="24.13" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="24.13" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="24.13" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="24.13" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO20" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="20.32" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="20.32" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="20.32" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="20.32" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="20.32" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO21" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="26.67" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="26.67" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="26.67" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="26.67" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="26.67" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO21" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="22.86" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="22.86" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="22.86" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="22.86" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="22.86" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO22" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="29.21" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="29.21" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="29.21" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="29.21" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="29.21" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO22" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="25.4" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="25.4" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="25.4" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="25.4" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="25.4" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO23" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="31.75" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="31.75" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="31.75" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="31.75" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="31.75" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO23" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="27.94" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="27.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="27.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="27.94" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="27.94" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO24" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="44.45" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO24" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="40.64" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO25" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="46.99" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="46.99" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="46.99" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="46.99" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="46.99" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO25" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="43.18" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO26" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="49.53" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO26" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="45.72" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO27" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="52.07" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="52.07" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="52.07" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="52.07" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="52.07" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO27" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="48.26" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO28" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="54.61" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="54.61" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="54.61" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="54.61" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="54.61" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO28" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="50.8" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="50.8" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="50.8" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="50.8" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="50.8" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO29" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="57.15" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="57.15" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="57.15" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="57.15" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="57.15" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO29" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="53.34" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="53.34" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="53.34" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="53.34" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="53.34" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="IO3-SPI-MISO" library="con-lstb-modified" package="MA03-1" value="" x="-35.56" y="83.82">
 <attribute name="OC_NEWARK" value="unknown" x="-35.56" y="83.82" size="1.778" layer="27" display="off"/>
@@ -2320,17 +2320,17 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-35.56" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-35.56" y="83.82" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO30" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="59.69" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="59.69" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO30" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="55.88" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="IO31" library="con-lstb-modified" package="MA03-1" value="" x="93.98" y="62.23" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="93.98" y="62.23" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="93.98" y="62.23" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="93.98" y="62.23" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="93.98" y="62.23" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="IO31" library="con-lstb-modified" package="MA03-1" value="" x="92.71" y="58.42" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="92.71" y="58.42" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="92.71" y="58.42" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="92.71" y="58.42" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="92.71" y="58.42" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="IO4" library="con-lstb-modified" package="MA03-1" value="" x="-68.58" y="96.52">
 <attribute name="OC_NEWARK" value="unknown" x="-68.58" y="96.52" size="1.778" layer="27" display="off"/>
@@ -2375,12 +2375,12 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-73.66" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-73.66" y="83.82" size="1.778" layer="27" display="off"/>
 </element>
-<element name="PROPELLER" library="parallax_propeller (1)" package="P8X32A-D40" value="P8X32A-D40" x="76.2" y="38.1"/>
-<element name="Q1" library="crystal" package="HC49U70" value="5MHz" x="92.71" y="38.1">
-<attribute name="OC_NEWARK" value="unknown" x="92.71" y="38.1" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="92.71" y="38.1" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="92.71" y="38.1" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="92.71" y="38.1" size="1.778" layer="27" display="off"/>
+<element name="PROPELLER" library="parallax_propeller (1)" package="P8X32A-D40" value="P8X32A-D40" x="74.93" y="34.29"/>
+<element name="Q1" library="crystal" package="HC49U70" value="5MHz" x="91.44" y="34.29">
+<attribute name="OC_NEWARK" value="unknown" x="91.44" y="34.29" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="91.44" y="34.29" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="91.44" y="34.29" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="91.44" y="34.29" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R1" library="resistor" package="0309V" value="10k" x="-69.85" y="73.66"/>
 <element name="R2" library="resistor" package="0309V" value="10k" x="-77.47" y="73.66"/>
@@ -2539,29 +2539,15 @@ design rules under a new name.</description>
 <contactref element="RED" pad="K"/>
 <contactref element="YELLOW" pad="K"/>
 <contactref element="GREEN" pad="K"/>
-<wire x1="96.52" y1="62.23" x2="96.52" y2="74.93" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="59.69" x2="96.52" y2="62.23" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="57.15" x2="96.52" y2="59.69" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="54.61" x2="96.52" y2="57.15" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="52.07" x2="96.52" y2="54.61" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="49.53" x2="96.52" y2="52.07" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="46.99" x2="96.52" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="44.45" x2="96.52" y2="46.99" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="31.75" x2="96.52" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="29.21" x2="96.52" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="26.67" x2="96.52" y2="29.21" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="24.13" x2="96.52" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="21.59" x2="96.52" y2="24.13" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="19.05" x2="96.52" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="16.51" x2="96.52" y2="19.05" width="0" layer="19" extent="1-1"/>
-<wire x1="96.52" y1="13.97" x2="96.52" y2="16.51" width="0" layer="19" extent="1-1"/>
-<wire x1="83.82" y1="33.655" x2="96.52" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="68.58" y1="38.735" x2="83.82" y2="33.655" width="0" layer="19" extent="1-1"/>
-<wire x1="68.58" y1="41.275" x2="68.58" y2="38.735" width="0" layer="19" extent="1-1"/>
-<wire x1="65.24" y1="71.42" x2="68.58" y2="41.275" width="0" layer="19" extent="1-1"/>
-<wire x1="62.7" y1="71.42" x2="65.24" y2="71.42" width="0" layer="19" extent="1-1"/>
-<wire x1="65.29" y1="76.39" x2="65.24" y2="71.42" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="72.39" x2="96.52" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="74.93" y1="72.39" x2="82.55" y2="72.39" width="0" layer="19" extent="1-1"/>
+<wire x1="74.93" y1="74.93" x2="74.93" y2="72.39" width="0" layer="19" extent="1-1"/>
+<wire x1="74.93" y1="69.85" x2="74.93" y2="72.39" width="0" layer="19" extent="1-1"/>
+<wire x1="74.93" y1="67.31" x2="74.93" y2="69.85" width="0" layer="19" extent="1-1"/>
+<wire x1="65.29" y1="76.39" x2="74.93" y2="74.93" width="0" layer="19" extent="1-1"/>
 <wire x1="62.75" y1="76.39" x2="65.29" y2="76.39" width="0" layer="19" extent="1-1"/>
+<wire x1="65.24" y1="71.42" x2="65.29" y2="76.39" width="0" layer="19" extent="1-1"/>
+<wire x1="62.7" y1="71.42" x2="65.24" y2="71.42" width="0" layer="19" extent="1-1"/>
 <wire x1="57.67" y1="76.39" x2="62.75" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="57.62" y1="71.42" x2="57.67" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="52.59" y1="76.39" x2="57.67" y2="76.39" width="0" layer="19" extent="1-1"/>
@@ -2574,6 +2560,25 @@ design rules under a new name.</description>
 <wire x1="34.81" y1="76.39" x2="37.35" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="37.3" y1="71.42" x2="37.35" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="34.76" y1="71.42" x2="37.3" y2="71.42" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="58.42" x2="96.52" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="55.88" x2="95.25" y2="58.42" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="53.34" x2="95.25" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="50.8" x2="95.25" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="48.26" x2="95.25" y2="50.8" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="45.72" x2="95.25" y2="48.26" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="43.18" x2="95.25" y2="45.72" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="40.64" x2="95.25" y2="43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="27.94" x2="95.25" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="25.4" x2="95.25" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="22.86" x2="95.25" y2="25.4" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="20.32" x2="95.25" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="17.78" x2="95.25" y2="20.32" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="15.24" x2="95.25" y2="17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="12.7" x2="95.25" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="10.16" x2="95.25" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="29.845" x2="95.25" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="34.925" x2="82.55" y2="29.845" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="37.465" x2="67.31" y2="34.925" width="0" layer="19" extent="1-1"/>
 <wire x1="-15.24" y1="90.17" x2="34.81" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.32" y1="96.52" x2="-15.24" y2="90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.32" y1="102.87" x2="-20.32" y2="96.52" width="0" layer="19" extent="1-1"/>
@@ -2611,57 +2616,52 @@ design rules under a new name.</description>
 <wire x1="-55.88" y1="121.92" x2="-45.72" y2="121.92" width="0" layer="19" extent="1-1"/>
 <wire x1="-66.04" y1="121.92" x2="-55.88" y2="121.92" width="0" layer="19" extent="1-1"/>
 <wire x1="-76.2" y1="121.92" x2="-66.04" y2="121.92" width="0" layer="19" extent="1-1"/>
-<wire x1="-64.77" y1="10.16" x2="-64.77" y2="83.82" width="0" layer="19" extent="1-1"/>
-<wire x1="-64.77" y1="2.54" x2="-64.77" y2="10.16" width="0" layer="19" extent="1-1"/>
-<wire x1="-67.31" y1="2.54" x2="-64.77" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="-62.23" y1="2.54" x2="-64.77" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="-59.69" y1="2.54" x2="-62.23" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="-73.66" y1="10.16" x2="-64.77" y2="10.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-73.66" y1="10.16" x2="-76.2" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="10.16" x2="-73.66" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-3.81" x2="-86.36" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-11.43" x2="-90.17" y2="-3.81" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-19.05" x2="-90.17" y2="-11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-34.29" y1="2.54" x2="-59.69" y2="2.54" width="0" layer="19" extent="1-1"/>
+<wire x1="-34.29" y1="2.54" x2="-73.66" y2="10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="PROPELLER" pad="31"/>
 <contactref element="Q1" pad="1"/>
-<wire x1="83.82" y1="38.735" x2="90.297" y2="38.1" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="34.925" x2="89.027" y2="34.29" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="Q1" pad="2"/>
 <contactref element="PROPELLER" pad="30"/>
-<wire x1="83.82" y1="36.195" x2="95.123" y2="38.1" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="32.385" x2="93.853" y2="34.29" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPECIAL28">
 <contactref element="EEPROM" pad="6"/>
 <contactref element="PROPELLER" pad="37"/>
 <contactref element="IO28" pad="3"/>
-<wire x1="83.82" y1="53.975" x2="91.44" y2="54.61" width="0" layer="19" extent="1-1"/>
-<wire x1="-62.23" y1="10.16" x2="83.82" y2="53.975" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="50.165" x2="82.55" y2="69.85" width="0" layer="19" extent="1-1"/>
+<wire x1="90.17" y1="50.8" x2="82.55" y2="50.165" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPECIAL29">
 <contactref element="EEPROM" pad="5"/>
 <contactref element="R1" pad="1"/>
 <contactref element="PROPELLER" pad="38"/>
 <contactref element="IO29" pad="3"/>
-<wire x1="83.82" y1="56.515" x2="91.44" y2="57.15" width="0" layer="19" extent="1-1"/>
-<wire x1="-59.69" y1="10.16" x2="83.82" y2="56.515" width="0" layer="19" extent="1-1"/>
-<wire x1="-71.12" y1="73.66" x2="-59.69" y2="10.16" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="52.705" x2="82.55" y2="67.31" width="0" layer="19" extent="1-1"/>
+<wire x1="90.17" y1="53.34" x2="82.55" y2="52.705" width="0" layer="19" extent="1-1"/>
+<wire x1="-71.12" y1="73.66" x2="82.55" y2="67.31" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPECIAL30">
 <contactref element="U$3" pad="&gt;RX"/>
 <contactref element="PROPELLER" pad="39"/>
 <contactref element="IO30" pad="3"/>
-<wire x1="91.44" y1="59.69" x2="88.9" y2="74.93" width="0" layer="19" extent="1-1"/>
-<wire x1="83.82" y1="59.055" x2="91.44" y2="59.69" width="0" layer="19" extent="1-1"/>
+<wire x1="90.17" y1="55.88" x2="88.9" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="55.245" x2="90.17" y2="55.88" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPECIAL31">
 <contactref element="U$3" pad="&lt;TX"/>
 <contactref element="PROPELLER" pad="40"/>
 <contactref element="IO31" pad="3"/>
-<wire x1="91.44" y1="62.23" x2="91.44" y2="74.93" width="0" layer="19" extent="1-1"/>
-<wire x1="83.82" y1="61.595" x2="91.44" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="90.17" y1="58.42" x2="91.44" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="57.785" x2="90.17" y2="58.42" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="EEPROM" pad="8"/>
@@ -2711,24 +2711,25 @@ design rules under a new name.</description>
 <contactref element="IO29" pad="2"/>
 <contactref element="IO30" pad="2"/>
 <contactref element="IO31" pad="2"/>
-<wire x1="93.98" y1="59.69" x2="93.98" y2="62.23" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="57.15" x2="93.98" y2="59.69" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="54.61" x2="93.98" y2="57.15" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="52.07" x2="93.98" y2="54.61" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="49.53" x2="93.98" y2="52.07" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="46.99" x2="93.98" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="44.45" x2="93.98" y2="46.99" width="0" layer="19" extent="1-1"/>
-<wire x1="83.82" y1="41.275" x2="93.98" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="31.75" x2="93.98" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="29.21" x2="93.98" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="26.67" x2="93.98" y2="29.21" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="24.13" x2="93.98" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="21.59" x2="93.98" y2="24.13" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="19.05" x2="93.98" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="16.51" x2="93.98" y2="19.05" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="13.97" x2="93.98" y2="16.51" width="0" layer="19" extent="1-1"/>
-<wire x1="68.58" y1="33.655" x2="83.82" y2="41.275" width="0" layer="19" extent="1-1"/>
-<wire x1="29.68" y1="73.96" x2="68.58" y2="33.655" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="58.42" x2="82.55" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="55.88" x2="92.71" y2="58.42" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="53.34" x2="92.71" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="50.8" x2="92.71" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="48.26" x2="92.71" y2="50.8" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="45.72" x2="92.71" y2="48.26" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="43.18" x2="92.71" y2="45.72" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="40.64" x2="92.71" y2="43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="37.465" x2="92.71" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="27.94" x2="92.71" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="25.4" x2="92.71" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="22.86" x2="92.71" y2="25.4" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="20.32" x2="92.71" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="17.78" x2="92.71" y2="20.32" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="15.24" x2="92.71" y2="17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="12.7" x2="92.71" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="10.16" x2="92.71" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="29.845" x2="82.55" y2="37.465" width="0" layer="19" extent="1-1"/>
+<wire x1="29.68" y1="73.96" x2="82.55" y2="74.93" width="0" layer="19" extent="1-1"/>
 <wire x1="29.73" y1="78.93" x2="29.68" y2="73.96" width="0" layer="19" extent="1-1"/>
 <wire x1="-21.59" y1="83.82" x2="29.73" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-35.56" y1="83.82" x2="-21.59" y2="83.82" width="0" layer="19" extent="1-1"/>
@@ -2752,43 +2753,42 @@ design rules under a new name.</description>
 <wire x1="-49.53" y1="83.82" x2="-48.26" y2="96.52" width="0" layer="19" extent="1-1"/>
 <wire x1="-62.23" y1="83.82" x2="-49.53" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-68.58" y1="73.66" x2="-62.23" y2="83.82" width="0" layer="19" extent="1-1"/>
-<wire x1="-67.31" y1="10.16" x2="-68.58" y2="73.66" width="0" layer="19" extent="1-1"/>
-<wire x1="-52.07" y1="2.54" x2="-67.31" y2="10.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-91.44" y1="10.16" x2="-68.58" y2="73.66" width="0" layer="19" extent="1-1"/>
+<wire x1="-52.07" y1="2.54" x2="-91.44" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-49.53" y1="2.54" x2="-52.07" y2="2.54" width="0" layer="19" extent="1-1"/>
 <wire x1="-36.83" y1="2.54" x2="-49.53" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="-91.44" y1="10.16" x2="-67.31" y2="10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="!RESET">
 <contactref element="PROPELLER" pad="11"/>
 <contactref element="U$3" pad="RES"/>
-<wire x1="68.58" y1="36.195" x2="93.98" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="32.385" x2="93.98" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO4">
 <contactref element="PROPELLER" pad="5"/>
 <contactref element="R4" pad="1"/>
 <contactref element="IO4" pad="3"/>
-<wire x1="-66.04" y1="96.52" x2="68.58" y2="51.435" width="0" layer="19" extent="1-1"/>
+<wire x1="-66.04" y1="96.52" x2="67.31" y2="47.625" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.98" y1="73.66" x2="-66.04" y2="96.52" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO5">
 <contactref element="PROPELLER" pad="6"/>
 <contactref element="R2" pad="2"/>
 <contactref element="IO5" pad="3"/>
-<wire x1="-76.2" y1="73.66" x2="68.58" y2="48.895" width="0" layer="19" extent="1-1"/>
+<wire x1="-76.2" y1="73.66" x2="67.31" y2="45.085" width="0" layer="19" extent="1-1"/>
 <wire x1="-76.2" y1="96.52" x2="-76.2" y2="73.66" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO6">
 <contactref element="PROPELLER" pad="7"/>
 <contactref element="R3" pad="2"/>
 <contactref element="IO6" pad="3"/>
-<wire x1="-83.82" y1="73.66" x2="68.58" y2="46.355" width="0" layer="19" extent="1-1"/>
+<wire x1="-83.82" y1="73.66" x2="67.31" y2="42.545" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="96.52" x2="-83.82" y2="73.66" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO7">
 <contactref element="PROPELLER" pad="8"/>
 <contactref element="LEVELSHIFTER" pad="3"/>
 <contactref element="IO7" pad="3"/>
-<wire x1="-15.24" y1="102.87" x2="68.58" y2="43.815" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.24" y1="102.87" x2="67.31" y2="40.005" width="0" layer="19" extent="1-1"/>
 <wire x1="-46.99" y1="2.54" x2="-15.24" y2="102.87" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO8">
@@ -2796,99 +2796,99 @@ design rules under a new name.</description>
 <contactref element="LEVELSHIFTER" pad="6"/>
 <contactref element="3V3_LCD" pad="3"/>
 <contactref element="IO8" pad="3"/>
-<wire x1="-39.37" y1="2.54" x2="68.58" y2="31.115" width="0" layer="19" extent="1-1"/>
+<wire x1="-39.37" y1="2.54" x2="67.31" y2="27.305" width="0" layer="19" extent="1-1"/>
 <wire x1="-35.56" y1="90.17" x2="-39.37" y2="2.54" width="0" layer="19" extent="1-1"/>
 <wire x1="-25.4" y1="102.87" x2="-35.56" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO9">
 <contactref element="PROPELLER" pad="14"/>
 <contactref element="IO9" pad="3"/>
-<wire x1="-35.56" y1="102.87" x2="68.58" y2="28.575" width="0" layer="19" extent="1-1"/>
+<wire x1="-35.56" y1="102.87" x2="67.31" y2="24.765" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO10">
 <contactref element="PROPELLER" pad="15"/>
 <contactref element="IO10" pad="3"/>
-<wire x1="-45.72" y1="102.87" x2="68.58" y2="26.035" width="0" layer="19" extent="1-1"/>
+<wire x1="-45.72" y1="102.87" x2="67.31" y2="22.225" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO11">
 <contactref element="PROPELLER" pad="16"/>
 <contactref element="IO11" pad="3"/>
-<wire x1="-55.88" y1="102.87" x2="68.58" y2="23.495" width="0" layer="19" extent="1-1"/>
+<wire x1="-55.88" y1="102.87" x2="67.31" y2="19.685" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO12">
 <contactref element="PROPELLER" pad="17"/>
 <contactref element="IO12" pad="3"/>
-<wire x1="-66.04" y1="102.87" x2="68.58" y2="20.955" width="0" layer="19" extent="1-1"/>
+<wire x1="-66.04" y1="102.87" x2="67.31" y2="17.145" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO13">
 <contactref element="PROPELLER" pad="18"/>
 <contactref element="IO13" pad="3"/>
-<wire x1="-76.2" y1="102.87" x2="68.58" y2="18.415" width="0" layer="19" extent="1-1"/>
+<wire x1="-76.2" y1="102.87" x2="67.31" y2="14.605" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO15">
 <contactref element="PROPELLER" pad="20"/>
 <contactref element="IO15" pad="3"/>
-<wire x1="68.58" y1="13.335" x2="-15.24" y2="109.22" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="9.525" x2="-15.24" y2="109.22" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO16">
 <contactref element="PROPELLER" pad="21"/>
 <contactref element="IO16" pad="3"/>
-<wire x1="83.82" y1="13.335" x2="91.44" y2="13.97" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="9.525" x2="90.17" y2="10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO17">
 <contactref element="PROPELLER" pad="22"/>
 <contactref element="IO17" pad="3"/>
-<wire x1="83.82" y1="15.875" x2="91.44" y2="16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="12.065" x2="90.17" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO18">
 <contactref element="PROPELLER" pad="23"/>
 <contactref element="IO18" pad="3"/>
-<wire x1="83.82" y1="18.415" x2="91.44" y2="19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="14.605" x2="90.17" y2="15.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO19">
 <contactref element="PROPELLER" pad="24"/>
 <contactref element="IO19" pad="3"/>
-<wire x1="83.82" y1="20.955" x2="91.44" y2="21.59" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="17.145" x2="90.17" y2="17.78" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO20">
 <contactref element="PROPELLER" pad="25"/>
 <contactref element="IO20" pad="3"/>
-<wire x1="83.82" y1="23.495" x2="91.44" y2="24.13" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="19.685" x2="90.17" y2="20.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO21">
 <contactref element="PROPELLER" pad="26"/>
 <contactref element="IO21" pad="3"/>
-<wire x1="83.82" y1="26.035" x2="91.44" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="22.225" x2="90.17" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO22">
 <contactref element="PROPELLER" pad="27"/>
 <contactref element="IO22" pad="3"/>
-<wire x1="83.82" y1="28.575" x2="91.44" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="24.765" x2="90.17" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO23">
 <contactref element="PROPELLER" pad="28"/>
 <contactref element="IO23" pad="3"/>
-<wire x1="83.82" y1="31.115" x2="91.44" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="27.305" x2="90.17" y2="27.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO24">
 <contactref element="PROPELLER" pad="33"/>
 <contactref element="IO24" pad="3"/>
-<wire x1="83.82" y1="43.815" x2="91.44" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="40.005" x2="90.17" y2="40.64" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO25">
 <contactref element="PROPELLER" pad="34"/>
 <contactref element="IO25" pad="3"/>
-<wire x1="83.82" y1="46.355" x2="91.44" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="42.545" x2="90.17" y2="43.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO26">
 <contactref element="PROPELLER" pad="35"/>
 <contactref element="IO26" pad="3"/>
-<wire x1="83.82" y1="48.895" x2="91.44" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="45.085" x2="90.17" y2="45.72" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO27">
 <contactref element="PROPELLER" pad="36"/>
 <contactref element="IO27" pad="3"/>
-<wire x1="83.82" y1="51.435" x2="91.44" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="82.55" y1="47.625" x2="90.17" y2="48.26" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="U$1" pad="1"/>
@@ -3004,8 +3004,8 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="23"/>
 <contactref element="PROPELLER" pad="4"/>
 <contactref element="IO3-SPI-MISO" pad="3"/>
-<wire x1="42.38" y1="73.96" x2="68.58" y2="53.975" width="0" layer="19" extent="1-1"/>
-<wire x1="42.43" y1="78.93" x2="42.38" y2="73.96" width="0" layer="19" extent="1-1"/>
+<wire x1="42.38" y1="73.96" x2="42.43" y2="78.93" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="50.165" x2="42.38" y2="73.96" width="0" layer="19" extent="1-1"/>
 <wire x1="-33.02" y1="83.82" x2="42.43" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_MOSI">
@@ -3013,8 +3013,8 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="25"/>
 <contactref element="PROPELLER" pad="3"/>
 <contactref element="IO2-SPI-MOSI" pad="3"/>
-<wire x1="39.84" y1="73.96" x2="68.58" y2="56.515" width="0" layer="19" extent="1-1"/>
-<wire x1="39.89" y1="78.93" x2="39.84" y2="73.96" width="0" layer="19" extent="1-1"/>
+<wire x1="39.84" y1="73.96" x2="39.89" y2="78.93" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="52.705" x2="39.84" y2="73.96" width="0" layer="19" extent="1-1"/>
 <wire x1="-19.05" y1="83.82" x2="39.89" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_CLK">
@@ -3022,8 +3022,8 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="21"/>
 <contactref element="PROPELLER" pad="2"/>
 <contactref element="IO1-SPI-CLK" pad="3"/>
-<wire x1="44.92" y1="73.96" x2="68.58" y2="59.055" width="0" layer="19" extent="1-1"/>
-<wire x1="44.97" y1="78.93" x2="44.92" y2="73.96" width="0" layer="19" extent="1-1"/>
+<wire x1="44.92" y1="73.96" x2="44.97" y2="78.93" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="55.245" x2="44.92" y2="73.96" width="0" layer="19" extent="1-1"/>
 <wire x1="-46.99" y1="83.82" x2="44.97" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_CS">
@@ -3031,8 +3031,8 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="19"/>
 <contactref element="PROPELLER" pad="1"/>
 <contactref element="IO0-SPI-CS" pad="3"/>
-<wire x1="47.46" y1="73.96" x2="68.58" y2="61.595" width="0" layer="19" extent="1-1"/>
-<wire x1="47.51" y1="78.93" x2="47.46" y2="73.96" width="0" layer="19" extent="1-1"/>
+<wire x1="47.46" y1="73.96" x2="47.51" y2="78.93" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="57.785" x2="47.46" y2="73.96" width="0" layer="19" extent="1-1"/>
 <wire x1="-59.69" y1="83.82" x2="47.51" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="UART_RX">
@@ -3088,7 +3088,7 @@ design rules under a new name.</description>
 <signal name="IO14">
 <contactref element="PROPELLER" pad="19"/>
 <contactref element="IO14" pad="3"/>
-<wire x1="-86.36" y1="102.87" x2="68.58" y2="15.875" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="102.87" x2="67.31" y2="12.065" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="IC1" pad="6"/>
