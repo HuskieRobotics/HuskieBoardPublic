@@ -6774,14 +6774,7 @@ Based on the following sources:
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="P+4" library="supply1" deviceset="+5V" device=""/>
-<part name="P+5" library="supply1" deviceset="+5V" device=""/>
-<part name="P+6" library="supply1" deviceset="+5V" device=""/>
-<part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
-<part name="P+9" library="supply1" deviceset="+5V" device=""/>
-<part name="P+10" library="supply1" deviceset="+5V" device=""/>
-<part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="SV20" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV21" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV22" library="con-lstb" deviceset="MA03-1" device=""/>
@@ -6798,6 +6791,14 @@ Based on the following sources:
 <part name="R2" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
+<part name="P+4" library="supply1" deviceset="+5V" device=""/>
+<part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V11" library="supply1" deviceset="+3V3" device=""/>
+<part name="P+7" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6839,9 +6840,9 @@ Based on the following sources:
 <instance part="IC1" gate="G$1" x="99.06" y="124.46" rot="R180"/>
 <instance part="GND7" gate="1" x="78.74" y="114.3"/>
 <instance part="+3V5" gate="G$1" x="81.28" y="109.22" rot="R90"/>
-<instance part="GREEN" gate="A" x="22.86" y="185.42" rot="R270"/>
-<instance part="YELLOW" gate="A" x="22.86" y="195.58" rot="R270"/>
-<instance part="RED" gate="A" x="22.86" y="205.74" rot="R270"/>
+<instance part="GREEN" gate="A" x="30.48" y="185.42" rot="R90"/>
+<instance part="YELLOW" gate="A" x="30.48" y="195.58" rot="R90"/>
+<instance part="RED" gate="A" x="30.48" y="205.74" rot="R90"/>
 <instance part="GND10" gate="1" x="35.56" y="182.88"/>
 <instance part="ADC7" gate="G$1" x="167.64" y="137.16" rot="R180"/>
 <instance part="ADC6" gate="G$1" x="167.64" y="124.46" rot="R180"/>
@@ -6859,14 +6860,7 @@ Based on the following sources:
 <instance part="GND17" gate="1" x="157.48" y="76.2" rot="R270"/>
 <instance part="GND18" gate="1" x="157.48" y="63.5" rot="R270"/>
 <instance part="GND19" gate="1" x="157.48" y="50.8" rot="R270"/>
-<instance part="P+4" gate="1" x="160.02" y="99.06" rot="R270"/>
-<instance part="P+5" gate="1" x="160.02" y="111.76" rot="R270"/>
-<instance part="P+6" gate="1" x="160.02" y="124.46" rot="R270"/>
-<instance part="P+7" gate="1" x="160.02" y="137.16" rot="R270"/>
-<instance part="P+8" gate="1" x="160.02" y="86.36" rot="R270"/>
-<instance part="P+9" gate="1" x="160.02" y="73.66" rot="R270"/>
-<instance part="P+10" gate="1" x="160.02" y="60.96" rot="R270"/>
-<instance part="P+11" gate="1" x="160.02" y="48.26" rot="R270"/>
+<instance part="P+8" gate="1" x="157.48" y="86.36" rot="R90"/>
 <instance part="SV20" gate="G$1" x="121.92" y="12.7" rot="R180"/>
 <instance part="SV21" gate="G$1" x="121.92" y="-2.54" rot="R180"/>
 <instance part="SV22" gate="G$1" x="121.92" y="-17.78" rot="R180"/>
@@ -6884,6 +6878,14 @@ Based on the following sources:
 <instance part="R2" gate="G$1" x="15.24" y="195.58" rot="R180"/>
 <instance part="R3" gate="G$1" x="15.24" y="205.74" rot="R180"/>
 <instance part="R4" gate="G$1" x="15.24" y="185.42"/>
+<instance part="P+4" gate="1" x="157.48" y="73.66" rot="R90"/>
+<instance part="P+5" gate="1" x="157.48" y="60.96" rot="R90"/>
+<instance part="P+6" gate="1" x="157.48" y="48.26" rot="R90"/>
+<instance part="+3V8" gate="G$1" x="157.48" y="99.06" rot="R90"/>
+<instance part="+3V9" gate="G$1" x="157.48" y="111.76" rot="R90"/>
+<instance part="+3V10" gate="G$1" x="157.48" y="124.46" rot="R90"/>
+<instance part="+3V11" gate="G$1" x="157.48" y="137.16" rot="R90"/>
+<instance part="P+7" gate="1" x="81.28" y="119.38" rot="R90"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -7063,17 +7065,6 @@ Based on the following sources:
 <junction x="78.74" y="116.84"/>
 </segment>
 <segment>
-<pinref part="GREEN" gate="A" pin="A"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="35.56" y1="185.42" x2="27.94" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="RED" gate="A" pin="A"/>
-<pinref part="YELLOW" gate="A" pin="A"/>
-<wire x1="27.94" y1="195.58" x2="27.94" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="195.58" x2="27.94" y2="185.42" width="0.1524" layer="91"/>
-<junction x="27.94" y="185.42"/>
-<junction x="27.94" y="195.58"/>
-</segment>
-<segment>
 <pinref part="ADC7" gate="G$1" pin="1"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
@@ -7113,6 +7104,17 @@ Based on the following sources:
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="NEOPIXEL" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="GREEN" gate="A" pin="K"/>
+<wire x1="35.56" y1="185.42" x2="33.02" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="YELLOW" gate="A" pin="K"/>
+<wire x1="33.02" y1="185.42" x2="33.02" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="RED" gate="A" pin="K"/>
+<wire x1="33.02" y1="195.58" x2="33.02" y2="205.74" width="0.1524" layer="91"/>
+<junction x="33.02" y="195.58"/>
+<junction x="33.02" y="185.42"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7225,6 +7227,22 @@ Based on the following sources:
 <pinref part="IC2" gate="A" pin="ENABLE"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
 </segment>
+<segment>
+<pinref part="ADC4" gate="G$1" pin="2"/>
+<pinref part="+3V8" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="ADC5" gate="G$1" pin="2"/>
+<pinref part="+3V9" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="ADC6" gate="G$1" pin="2"/>
+<pinref part="+3V10" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="ADC7" gate="G$1" pin="2"/>
+<pinref part="+3V11" gate="G$1" pin="+3V3"/>
+</segment>
 </net>
 <net name="!RESET" class="0">
 <segment>
@@ -7248,8 +7266,6 @@ Based on the following sources:
 </segment>
 <segment>
 <label x="10.16" y="180.34" size="1.778" layer="95"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="7.62" y1="195.58" x2="10.16" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="195.58" x2="7.62" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="190.5" x2="10.16" y2="185.42" width="0.1524" layer="91"/>
@@ -7260,6 +7276,11 @@ Based on the following sources:
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P5"/>
 <wire x1="2.54" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
 <label x="5.08" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="195.58" x2="10.16" y2="195.58" width="0.1524" layer="91"/>
+<label x="10.16" y="198.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO6" class="0">
@@ -7455,6 +7476,26 @@ Based on the following sources:
 <segment>
 <pinref part="IC2" gate="P" pin="VDD"/>
 <pinref part="P+12" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="ADC3" gate="G$1" pin="2"/>
+<pinref part="P+8" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="ADC2" gate="G$1" pin="2"/>
+<pinref part="P+4" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="ADC1" gate="G$1" pin="2"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="ADC0" gate="G$1" pin="2"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VREF"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="DIO0" class="0">
@@ -7906,20 +7947,23 @@ Based on the following sources:
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="YELLOW" gate="A" pin="K"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="GREEN" gate="A" pin="A"/>
+<wire x1="25.4" y1="185.42" x2="20.32" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="RED" gate="A" pin="K"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="YELLOW" gate="A" pin="A"/>
+<wire x1="25.4" y1="195.58" x2="20.32" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="GREEN" gate="A" pin="K"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="RED" gate="A" pin="A"/>
+<wire x1="25.4" y1="205.74" x2="20.32" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
