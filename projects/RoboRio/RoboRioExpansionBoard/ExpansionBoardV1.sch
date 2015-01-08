@@ -6720,8 +6720,9 @@ Based on the following sources:
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="185.42" x2="33.02" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<junction x="33.02" y="205.74"/>
 <wire x1="33.02" y1="185.42" x2="33.02" y2="205.74" width="0.1524" layer="91"/>
+<junction x="33.02" y="205.74"/>
+<junction x="33.02" y="185.42"/>
 </segment>
 </net>
 <net name="N$1" class="0">
