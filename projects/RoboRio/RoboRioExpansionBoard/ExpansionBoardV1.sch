@@ -6774,6 +6774,14 @@ Based on the following sources:
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="P+4" library="supply1" deviceset="+5V" device=""/>
+<part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="P+7" library="supply1" deviceset="+5V" device=""/>
+<part name="P+8" library="supply1" deviceset="+5V" device=""/>
+<part name="P+9" library="supply1" deviceset="+5V" device=""/>
+<part name="P+10" library="supply1" deviceset="+5V" device=""/>
+<part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="SV20" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV21" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV22" library="con-lstb" deviceset="MA03-1" device=""/>
@@ -6787,14 +6795,6 @@ Based on the following sources:
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V11" library="supply1" deviceset="+3V3" device=""/>
-<part name="P+4" library="supply1" deviceset="+5V" device=""/>
-<part name="P+5" library="supply1" deviceset="+5V" device=""/>
-<part name="P+8" library="supply1" deviceset="+5V" device=""/>
-<part name="P+6" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6856,6 +6856,14 @@ Based on the following sources:
 <instance part="GND17" gate="1" x="157.48" y="76.2" rot="R270"/>
 <instance part="GND18" gate="1" x="157.48" y="63.5" rot="R270"/>
 <instance part="GND19" gate="1" x="157.48" y="50.8" rot="R270"/>
+<instance part="P+4" gate="1" x="160.02" y="99.06" rot="R270"/>
+<instance part="P+5" gate="1" x="160.02" y="111.76" rot="R270"/>
+<instance part="P+6" gate="1" x="160.02" y="124.46" rot="R270"/>
+<instance part="P+7" gate="1" x="160.02" y="137.16" rot="R270"/>
+<instance part="P+8" gate="1" x="160.02" y="86.36" rot="R270"/>
+<instance part="P+9" gate="1" x="160.02" y="73.66" rot="R270"/>
+<instance part="P+10" gate="1" x="160.02" y="60.96" rot="R270"/>
+<instance part="P+11" gate="1" x="160.02" y="48.26" rot="R270"/>
 <instance part="SV20" gate="G$1" x="121.92" y="12.7" rot="R180"/>
 <instance part="SV21" gate="G$1" x="121.92" y="-2.54" rot="R180"/>
 <instance part="SV22" gate="G$1" x="121.92" y="-17.78" rot="R180"/>
@@ -6870,14 +6878,6 @@ Based on the following sources:
 <instance part="GND9" gate="1" x="48.26" y="27.94"/>
 <instance part="+3V6" gate="G$1" x="33.02" y="7.62" rot="R270"/>
 <instance part="+3V7" gate="G$1" x="12.7" y="20.32" rot="R90"/>
-<instance part="+3V8" gate="G$1" x="157.48" y="137.16" rot="R90"/>
-<instance part="+3V9" gate="G$1" x="157.48" y="124.46" rot="R90"/>
-<instance part="+3V10" gate="G$1" x="157.48" y="111.76" rot="R90"/>
-<instance part="+3V11" gate="G$1" x="157.48" y="99.06" rot="R90"/>
-<instance part="P+4" gate="1" x="157.48" y="86.36" rot="R90"/>
-<instance part="P+5" gate="1" x="157.48" y="73.66" rot="R90"/>
-<instance part="P+8" gate="1" x="157.48" y="48.26" rot="R90"/>
-<instance part="P+6" gate="1" x="157.48" y="60.96" rot="R90"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -7231,22 +7231,6 @@ Based on the following sources:
 <pinref part="IC2" gate="A" pin="ENABLE"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
 </segment>
-<segment>
-<pinref part="ADC7" gate="G$1" pin="2"/>
-<pinref part="+3V8" gate="G$1" pin="+3V3"/>
-</segment>
-<segment>
-<pinref part="ADC6" gate="G$1" pin="2"/>
-<pinref part="+3V9" gate="G$1" pin="+3V3"/>
-</segment>
-<segment>
-<pinref part="ADC5" gate="G$1" pin="2"/>
-<pinref part="+3V10" gate="G$1" pin="+3V3"/>
-</segment>
-<segment>
-<pinref part="ADC4" gate="G$1" pin="2"/>
-<pinref part="+3V11" gate="G$1" pin="+3V3"/>
-</segment>
 </net>
 <net name="!RESET" class="0">
 <segment>
@@ -7480,22 +7464,6 @@ Based on the following sources:
 <segment>
 <pinref part="IC2" gate="P" pin="VDD"/>
 <pinref part="P+12" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="ADC3" gate="G$1" pin="2"/>
-<pinref part="P+4" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="ADC2" gate="G$1" pin="2"/>
-<pinref part="P+5" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="ADC0" gate="G$1" pin="2"/>
-<pinref part="P+8" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="ADC1" gate="G$1" pin="2"/>
-<pinref part="P+6" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="DIO0" class="0">
