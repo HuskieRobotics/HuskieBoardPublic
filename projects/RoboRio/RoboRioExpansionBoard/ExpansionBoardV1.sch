@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -6822,18 +6822,18 @@ W = angled&lt;p&gt;
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
-<part name="RRDIO0" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="RRDIO0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="RRDIO1" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO2" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO8" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO3" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO9" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO10" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO11" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO12" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="RRDIO13" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="RRDIO1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO10" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO11" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO12" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="RRDIO13" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IC1" library="adafruit" deviceset="MCP3008" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
@@ -6841,14 +6841,14 @@ W = angled&lt;p&gt;
 <part name="YELLOW" library="display-hp" deviceset="HLMP6" device=""/>
 <part name="RED" library="display-hp" deviceset="HLMP6" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="ADC7" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC6" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC5" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC4" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC3" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC2" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC1" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="ADC0" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="ADC7" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC6" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="ADC0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -6859,7 +6859,7 @@ W = angled&lt;p&gt;
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="LEVELSHIFTER" library="40xx-2" deviceset="40109" device=""/>
-<part name="NEOPIXEL" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="NEOPIXEL" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
@@ -6879,39 +6879,39 @@ W = angled&lt;p&gt;
 <part name="IO0-SPI-CS" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO1-SPI-CLK" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO2-SPI-MOSI" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO3-SPI-MISO" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="IO3-SPI-MISO" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO6" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO7" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO9" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="IO9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO10" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO11" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO12" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO13" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="IO12" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO13" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="IO14" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO15" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO16" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO17" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO18" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO19" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO20" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO21" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO22" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO23" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO24" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO25" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO26" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO27" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO28" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO29" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO30" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="IO31" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="IO15" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO16" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO17" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO18" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO19" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO20" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO21" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO22" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO23" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO24" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO25" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO26" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO27" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO28" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO29" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO30" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="IO31" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
-<part name="3V3_LCD" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="5V_LCD" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="3V3_LCD" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="5V_LCD" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V14" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
@@ -6962,14 +6962,14 @@ W = angled&lt;p&gt;
 <instance part="YELLOW" gate="A" x="30.48" y="195.58" rot="R90"/>
 <instance part="RED" gate="A" x="30.48" y="205.74" rot="R90"/>
 <instance part="GND10" gate="1" x="35.56" y="182.88"/>
-<instance part="ADC7" gate="G$1" x="167.64" y="137.16" rot="R180"/>
-<instance part="ADC6" gate="G$1" x="167.64" y="124.46" rot="R180"/>
-<instance part="ADC5" gate="G$1" x="167.64" y="111.76" rot="R180"/>
-<instance part="ADC4" gate="G$1" x="167.64" y="99.06" rot="R180"/>
-<instance part="ADC3" gate="G$1" x="167.64" y="86.36" rot="R180"/>
-<instance part="ADC2" gate="G$1" x="167.64" y="73.66" rot="R180"/>
-<instance part="ADC1" gate="G$1" x="167.64" y="60.96" rot="R180"/>
-<instance part="ADC0" gate="G$1" x="167.64" y="48.26" rot="R180"/>
+<instance part="ADC7" gate="G$1" x="170.18" y="137.16" rot="R180"/>
+<instance part="ADC6" gate="G$1" x="170.18" y="124.46" rot="R180"/>
+<instance part="ADC5" gate="G$1" x="170.18" y="111.76" rot="R180"/>
+<instance part="ADC4" gate="G$1" x="170.18" y="99.06" rot="R180"/>
+<instance part="ADC3" gate="G$1" x="170.18" y="86.36" rot="R180"/>
+<instance part="ADC2" gate="G$1" x="170.18" y="73.66" rot="R180"/>
+<instance part="ADC1" gate="G$1" x="170.18" y="60.96" rot="R180"/>
+<instance part="ADC0" gate="G$1" x="170.18" y="48.26" rot="R180"/>
 <instance part="GND12" gate="1" x="157.48" y="139.7" rot="R270"/>
 <instance part="GND13" gate="1" x="157.48" y="127" rot="R270"/>
 <instance part="GND14" gate="1" x="157.48" y="101.6" rot="R270"/>
@@ -7225,34 +7225,42 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="ADC7" gate="G$1" pin="1"/>
 <pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="162.56" y1="139.7" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC6" gate="G$1" pin="1"/>
 <pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="162.56" y1="127" x2="160.02" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC4" gate="G$1" pin="1"/>
 <pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="162.56" y1="101.6" x2="160.02" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC5" gate="G$1" pin="1"/>
 <pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="162.56" y1="114.3" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC3" gate="G$1" pin="1"/>
 <pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="162.56" y1="88.9" x2="160.02" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC2" gate="G$1" pin="1"/>
 <pinref part="GND17" gate="1" pin="GND"/>
+<wire x1="162.56" y1="76.2" x2="160.02" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC1" gate="G$1" pin="1"/>
 <pinref part="GND18" gate="1" pin="GND"/>
+<wire x1="162.56" y1="63.5" x2="160.02" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC0" gate="G$1" pin="1"/>
 <pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="162.56" y1="50.8" x2="160.02" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LEVELSHIFTER" gate="P" pin="VSS"/>
@@ -7580,18 +7588,22 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="ADC4" gate="G$1" pin="2"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
+<wire x1="162.56" y1="99.06" x2="160.02" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC5" gate="G$1" pin="2"/>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
+<wire x1="162.56" y1="111.76" x2="160.02" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC6" gate="G$1" pin="2"/>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
+<wire x1="162.56" y1="124.46" x2="160.02" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC7" gate="G$1" pin="2"/>
 <pinref part="+3V11" gate="G$1" pin="+3V3"/>
+<wire x1="162.56" y1="137.16" x2="160.02" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="104.14" y1="25.4" x2="104.14" y2="12.7" width="0.1524" layer="91"/>
@@ -8097,18 +8109,22 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="ADC3" gate="G$1" pin="2"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
+<wire x1="162.56" y1="86.36" x2="160.02" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC2" gate="G$1" pin="2"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
+<wire x1="162.56" y1="73.66" x2="160.02" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC1" gate="G$1" pin="2"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
+<wire x1="162.56" y1="60.96" x2="160.02" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC0" gate="G$1" pin="2"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
+<wire x1="162.56" y1="48.26" x2="160.02" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VREF"/>
@@ -8527,67 +8543,72 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$4" class="0">
 <segment>
-<wire x1="109.22" y1="132.08" x2="144.78" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="132.08" x2="144.78" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="121.92" x2="144.78" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="121.92" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="CH6"/>
+<pinref part="ADC6" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="CH5"/>
 <wire x1="111.76" y1="129.54" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="109.22" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="109.22" x2="162.56" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="ADC5" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="CH4"/>
-<wire x1="111.76" y1="127" x2="109.22" y2="127" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="127" x2="129.54" y2="127" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="127" x2="129.54" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="96.52" x2="162.56" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="ADC4" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<wire x1="109.22" y1="124.46" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="124.46" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="124.46" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="83.82" x2="162.56" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="CH3"/>
+<pinref part="ADC3" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="ADC2" gate="G$1" pin="3"/>
-<wire x1="160.02" y1="71.12" x2="116.84" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="71.12" x2="116.84" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="71.12" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="CH2"/>
 <wire x1="116.84" y1="121.92" x2="111.76" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="121.92" x2="109.22" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<wire x1="109.22" y1="119.38" x2="114.3" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="119.38" x2="114.3" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="119.38" x2="114.3" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="58.42" x2="162.56" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="CH1"/>
+<pinref part="ADC1" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<wire x1="111.76" y1="45.72" x2="160.02" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="45.72" x2="162.56" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="CH0"/>
-<wire x1="160.02" y1="45.72" x2="162.56" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="116.84" x2="111.76" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="116.84" x2="111.76" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="ADC0" gate="G$1" pin="3"/>
-<junction x="160.02" y="45.72"/>
+<junction x="162.56" y="45.72"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<wire x1="109.22" y1="134.62" x2="162.56" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="134.62" x2="162.56" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="CH7"/>
+<pinref part="ADC7" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -8634,30 +8655,12 @@ W = angled&lt;p&gt;
 <approved hash="104,1,40.64,124.46,PROPELLERP,VSS,GND,,,"/>
 <approved hash="104,1,40.64,121.92,PROPELLERP,VSS,GND,,,"/>
 <approved hash="104,1,83.82,193.04,EEPROM,VCC,+3V3,,,"/>
-<approved hash="106,1,22.86,91.44,IO2,,,,,"/>
-<approved hash="106,1,22.86,88.9,IO3,,,,,"/>
-<approved hash="106,1,22.86,86.36,IO4,,,,,"/>
-<approved hash="106,1,22.86,83.82,IO5,,,,,"/>
-<approved hash="106,1,22.86,81.28,IO6,,,,,"/>
-<approved hash="106,1,22.86,78.74,IO7,,,,,"/>
-<approved hash="106,1,22.86,76.2,IO8,,,,,"/>
-<approved hash="106,1,22.86,73.66,IO9,,,,,"/>
-<approved hash="106,1,22.86,71.12,IO10,,,,,"/>
-<approved hash="106,1,22.86,68.58,IO11,,,,,"/>
-<approved hash="106,1,22.86,66.04,IO12,,,,,"/>
-<approved hash="106,1,22.86,63.5,IO13,,,,,"/>
-<approved hash="106,1,55.88,58.42,IO16,,,,,"/>
-<approved hash="106,1,55.88,60.96,IO17,,,,,"/>
-<approved hash="106,1,55.88,63.5,IO18,,,,,"/>
-<approved hash="106,1,55.88,66.04,IO19,,,,,"/>
-<approved hash="106,1,55.88,68.58,IO20,,,,,"/>
-<approved hash="106,1,55.88,71.12,IO21,,,,,"/>
-<approved hash="106,1,55.88,73.66,IO22,,,,,"/>
-<approved hash="106,1,55.88,76.2,IO23,,,,,"/>
-<approved hash="106,1,55.88,78.74,IO24,,,,,"/>
-<approved hash="106,1,55.88,81.28,IO25,,,,,"/>
-<approved hash="106,1,55.88,83.82,IO26,,,,,"/>
-<approved hash="106,1,55.88,86.36,IO27,,,,,"/>
+<approved hash="209,1,111.76,134.62,N$3,,,,,"/>
+<approved hash="209,1,111.76,132.08,N$4,,,,,"/>
+<approved hash="209,1,111.76,129.54,N$5,,,,,"/>
+<approved hash="209,1,111.76,127,N$6,,,,,"/>
+<approved hash="209,1,111.76,124.46,N$7,,,,,"/>
+<approved hash="209,1,111.76,119.38,N$9,,,,,"/>
 </errors>
 </schematic>
 </drawing>
