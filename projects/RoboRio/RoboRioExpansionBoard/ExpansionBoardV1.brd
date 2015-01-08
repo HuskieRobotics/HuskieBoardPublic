@@ -1887,9 +1887,7 @@ W = angled&lt;p&gt;
 <pad name="1" x="-2.54" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
 <pad name="2" x="0" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
 <pad name="3" x="2.54" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
-<text x="-3.81" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-0.635" size="1.27" layer="21" ratio="10">1</text>
-<text x="-3.81" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="3.81" y="0" size="1.27" layer="25" ratio="10" align="center-left">&gt;NAME</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
@@ -1917,6 +1915,23 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <pad name="K" x="1.27" y="0" drill="0.8128" shape="octagon"/>
 <text x="3.175" y="0.5334" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="3.2004" y="-1.8034" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+</library>
+<library name="RESETBUTTON3000">
+<packages>
+<package name="RESETBUTTON300000MILLION">
+<description>This is an advanced reset button hand crafted by the most weathered engineers.</description>
+<pad name="P4" x="-6.5" y="-4.5" drill="1" shape="square"/>
+<pad name="P3" x="-6.5" y="0" drill="1" shape="square"/>
+<pad name="P1" x="0" y="0" drill="1" shape="square"/>
+<pad name="P2" x="0" y="-4.5" drill="1" shape="square"/>
+<polygon width="0.127" layer="25">
+<vertex x="-6.5" y="0"/>
+<vertex x="0" y="0"/>
+<vertex x="0" y="-4.5"/>
+<vertex x="-6.5" y="-4.5"/>
+</polygon>
 </package>
 </packages>
 </library>
@@ -2452,6 +2467,7 @@ design rules under a new name.</description>
 <element name="RED" library="led" package="LED5MM" value="" x="-91.44" y="-3.81"/>
 <element name="YELLOW" library="led" package="LED5MM" value="" x="-91.44" y="-11.43"/>
 <element name="GREEN" library="led" package="LED5MM" value="" x="-91.44" y="-19.05"/>
+<element name="U$4" library="RESETBUTTON3000" package="RESETBUTTON300000MILLION" value="BUTTON" x="-87.63" y="-24.13"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2539,6 +2555,8 @@ design rules under a new name.</description>
 <contactref element="RED" pad="K"/>
 <contactref element="YELLOW" pad="K"/>
 <contactref element="GREEN" pad="K"/>
+<contactref element="U$4" pad="P4"/>
+<contactref element="U$4" pad="P3"/>
 <wire x1="82.55" y1="72.39" x2="96.52" y2="74.93" width="0" layer="19" extent="1-1"/>
 <wire x1="74.93" y1="72.39" x2="82.55" y2="72.39" width="0" layer="19" extent="1-1"/>
 <wire x1="74.93" y1="74.93" x2="74.93" y2="72.39" width="0" layer="19" extent="1-1"/>
@@ -2621,6 +2639,8 @@ design rules under a new name.</description>
 <wire x1="-90.17" y1="-3.81" x2="-86.36" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-11.43" x2="-90.17" y2="-3.81" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-19.05" x2="-90.17" y2="-11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="-94.13" y1="-24.13" x2="-90.17" y2="-19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="-94.13" y1="-28.63" x2="-94.13" y2="-24.13" width="0" layer="19" extent="1-1"/>
 <wire x1="-34.29" y1="2.54" x2="-73.66" y2="10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
@@ -2761,7 +2781,11 @@ design rules under a new name.</description>
 <signal name="!RESET">
 <contactref element="PROPELLER" pad="11"/>
 <contactref element="U$3" pad="RES"/>
+<contactref element="U$4" pad="P1"/>
+<contactref element="U$4" pad="P2"/>
 <wire x1="67.31" y1="32.385" x2="93.98" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="-87.63" y1="-24.13" x2="67.31" y2="32.385" width="0" layer="19" extent="1-1"/>
+<wire x1="-87.63" y1="-28.63" x2="-87.63" y2="-24.13" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO4">
 <contactref element="PROPELLER" pad="5"/>

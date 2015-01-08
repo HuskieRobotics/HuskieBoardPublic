@@ -6185,9 +6185,9 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <pin name="32-IO14-I2C_SCL" x="-22.86" y="25.4" length="middle"/>
 <pin name="30-DGND" x="22.86" y="-15.24" length="middle" rot="R180"/>
 <pin name="28-DGND" x="22.86" y="-12.7" length="middle" rot="R180"/>
-<pin name="26*-IO13-PWM9" x="-22.86" y="-2.54" length="middle"/>
+<pin name="26*-DIO13-PWM9" x="-22.86" y="-2.54" length="middle"/>
 <pin name="24-DGND" x="22.86" y="-10.16" length="middle" rot="R180"/>
-<pin name="22*-IO12-PWM8" x="-22.86" y="-5.08" length="middle"/>
+<pin name="22*-DIO12-PWM8" x="-22.86" y="-5.08" length="middle"/>
 <pin name="20-DGND" x="22.86" y="-7.62" length="middle" rot="R180"/>
 <pin name="18*-DIO11-PWM7" x="-22.86" y="-7.62" length="middle"/>
 <pin name="16-DGND" x="22.86" y="-5.08" length="middle" rot="R180"/>
@@ -6199,9 +6199,9 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <pin name="4-AO1" x="22.86" y="12.7" length="middle" rot="R180"/>
 <pin name="2-AO0" x="22.86" y="10.16" length="middle" rot="R180"/>
 <pin name="P33-+3.3V" x="22.86" y="-22.86" length="middle" rot="R180"/>
-<pin name="31*-IO10-PWM6" x="-22.86" y="-10.16" length="middle"/>
-<pin name="29*-IO9-PWM5" x="-22.86" y="-12.7" length="middle"/>
-<pin name="27*-IO8-PWM4" x="-22.86" y="-15.24" length="middle"/>
+<pin name="31*-DIO10-PWM6" x="-22.86" y="-10.16" length="middle"/>
+<pin name="29*-DIO9-PWM5" x="-22.86" y="-12.7" length="middle"/>
+<pin name="27*-DIO8-PWM4" x="-22.86" y="-15.24" length="middle"/>
 <pin name="25-IO7-SPI_MOSI" x="-22.86" y="5.08" length="middle"/>
 <pin name="23-IO4-SPI_MISO" x="-22.86" y="2.54" length="middle"/>
 <pin name="21-IO5-SPI_CLK" x="-22.86" y="7.62" length="middle"/>
@@ -6287,17 +6287,17 @@ Pin number, built in use 1, built in use 2.&lt;br/&gt;&lt;b&gt;* indicates that 
 <connect gate="G$1" pin="2-AO0" pad="2"/>
 <connect gate="G$1" pin="20-DGND" pad="20"/>
 <connect gate="G$1" pin="21-IO5-SPI_CLK" pad="21"/>
-<connect gate="G$1" pin="22*-IO12-PWM8" pad="22"/>
+<connect gate="G$1" pin="22*-DIO12-PWM8" pad="22"/>
 <connect gate="G$1" pin="23-IO4-SPI_MISO" pad="23"/>
 <connect gate="G$1" pin="24-DGND" pad="24"/>
 <connect gate="G$1" pin="25-IO7-SPI_MOSI" pad="25"/>
-<connect gate="G$1" pin="26*-IO13-PWM9" pad="26"/>
-<connect gate="G$1" pin="27*-IO8-PWM4" pad="27"/>
+<connect gate="G$1" pin="26*-DIO13-PWM9" pad="26"/>
+<connect gate="G$1" pin="27*-DIO8-PWM4" pad="27"/>
 <connect gate="G$1" pin="28-DGND" pad="28"/>
-<connect gate="G$1" pin="29*-IO9-PWM5" pad="29"/>
+<connect gate="G$1" pin="29*-DIO9-PWM5" pad="29"/>
 <connect gate="G$1" pin="3-AI0" pad="3"/>
 <connect gate="G$1" pin="30-DGND" pad="30"/>
-<connect gate="G$1" pin="31*-IO10-PWM6" pad="31"/>
+<connect gate="G$1" pin="31*-DIO10-PWM6" pad="31"/>
 <connect gate="G$1" pin="32-IO14-I2C_SCL" pad="32"/>
 <connect gate="G$1" pin="34-IO15-I2C_SDA" pad="34"/>
 <connect gate="G$1" pin="4-AO1" pad="4"/>
@@ -6668,9 +6668,7 @@ W = angled&lt;p&gt;
 <pad name="1" x="-2.54" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
 <pad name="2" x="0" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
 <pad name="3" x="2.54" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
-<text x="-3.81" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-0.635" size="1.27" layer="21" ratio="10">1</text>
-<text x="-3.81" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="3.81" y="0" size="1.27" layer="25" ratio="10" align="center-left">&gt;NAME</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
@@ -8223,6 +8221,48 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="RESETBUTTON3000">
+<packages>
+<package name="RESETBUTTON300000MILLION">
+<description>This is an advanced reset button hand crafted by the most weathered engineers.</description>
+<pad name="P4" x="-6.5" y="-4.5" drill="1" shape="square"/>
+<pad name="P3" x="-6.5" y="0" drill="1" shape="square"/>
+<pad name="P1" x="0" y="0" drill="1" shape="square"/>
+<pad name="P2" x="0" y="-4.5" drill="1" shape="square"/>
+<polygon width="0.127" layer="25">
+<vertex x="-6.5" y="0"/>
+<vertex x="0" y="0"/>
+<vertex x="0" y="-4.5"/>
+<vertex x="-6.5" y="-4.5"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="RESETBUTTON">
+<pin name="P$1" x="-17.78" y="5.08" length="middle"/>
+<pin name="P$2" x="2.54" y="5.08" length="middle" rot="R180"/>
+<wire x1="-12.7" y1="5.08" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BUTTON">
+<gates>
+<gate name="G$1" symbol="RESETBUTTON" x="7.62" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="RESETBUTTON300000MILLION">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P1 P2"/>
+<connect gate="G$1" pin="P$2" pad="P3 P4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8347,6 +8387,8 @@ Source: www.kingbright.com</description>
 <part name="RED" library="led" deviceset="LED" device="5MM"/>
 <part name="YELLOW" library="led" deviceset="LED" device="5MM"/>
 <part name="GREEN" library="led" deviceset="LED" device="5MM"/>
+<part name="U$4" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
+<part name="GND23" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8470,6 +8512,8 @@ Source: www.kingbright.com</description>
 <instance part="RED" gate="G$1" x="27.94" y="205.74" rot="R90"/>
 <instance part="YELLOW" gate="G$1" x="27.94" y="195.58" rot="R90"/>
 <instance part="GREEN" gate="G$1" x="27.94" y="185.42" rot="R90"/>
+<instance part="U$4" gate="G$1" x="114.3" y="147.32"/>
+<instance part="GND23" gate="1" x="119.38" y="152.4" rot="R90"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -8884,6 +8928,10 @@ Source: www.kingbright.com</description>
 <wire x1="58.42" y1="-22.86" x2="45.72" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="P$2"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -9179,11 +9227,16 @@ Source: www.kingbright.com</description>
 </net>
 <net name="!RESET" class="0">
 <segment>
-<wire x1="60.96" y1="104.14" x2="20.32" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="104.14" x2="45.72" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="RES/"/>
+<wire x1="45.72" y1="104.14" x2="20.32" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="104.14" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <label x="50.8" y="104.14" size="1.778" layer="95"/>
+<wire x1="45.72" y1="104.14" x2="83.82" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="142.24" x2="83.82" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="P$1"/>
+<wire x1="83.82" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="RES"/>
@@ -9639,7 +9692,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="DIO8" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="27*-IO8-PWM4"/>
+<pinref part="U$1" gate="G$1" pin="27*-DIO8-PWM4"/>
 <wire x1="-152.4" y1="73.66" x2="-129.54" y2="73.66" width="0.1524" layer="91"/>
 <label x="-149.86" y="73.66" size="1.778" layer="95"/>
 </segment>
@@ -9656,7 +9709,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="DIO9" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="29*-IO9-PWM5"/>
+<pinref part="U$1" gate="G$1" pin="29*-DIO9-PWM5"/>
 <wire x1="-152.4" y1="76.2" x2="-129.54" y2="76.2" width="0.1524" layer="91"/>
 <label x="-149.86" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -9673,7 +9726,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="DIO10" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="31*-IO10-PWM6"/>
+<pinref part="U$1" gate="G$1" pin="31*-DIO10-PWM6"/>
 <wire x1="-152.4" y1="78.74" x2="-129.54" y2="78.74" width="0.1524" layer="91"/>
 <label x="-149.86" y="78.74" size="1.778" layer="95"/>
 </segment>
@@ -9707,7 +9760,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="DIO12" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="22*-IO12-PWM8"/>
+<pinref part="U$1" gate="G$1" pin="22*-DIO12-PWM8"/>
 <wire x1="-152.4" y1="83.82" x2="-129.54" y2="83.82" width="0.1524" layer="91"/>
 <label x="-149.86" y="83.82" size="1.778" layer="95"/>
 </segment>
@@ -9724,7 +9777,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="DIO13" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="26*-IO13-PWM9"/>
+<pinref part="U$1" gate="G$1" pin="26*-DIO13-PWM9"/>
 <wire x1="-152.4" y1="86.36" x2="-129.54" y2="86.36" width="0.1524" layer="91"/>
 <label x="-149.86" y="86.36" size="1.778" layer="95"/>
 </segment>
