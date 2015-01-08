@@ -6795,6 +6795,9 @@ Based on the following sources:
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
+<part name="R2" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -6836,10 +6839,10 @@ Based on the following sources:
 <instance part="IC1" gate="G$1" x="99.06" y="124.46" rot="R180"/>
 <instance part="GND7" gate="1" x="78.74" y="114.3"/>
 <instance part="+3V5" gate="G$1" x="81.28" y="109.22" rot="R90"/>
-<instance part="GREEN" gate="A" x="17.78" y="185.42" rot="R270"/>
-<instance part="YELLOW" gate="A" x="17.78" y="195.58" rot="R270"/>
-<instance part="RED" gate="A" x="17.78" y="205.74" rot="R270"/>
-<instance part="GND10" gate="1" x="30.48" y="182.88"/>
+<instance part="GREEN" gate="A" x="22.86" y="185.42" rot="R270"/>
+<instance part="YELLOW" gate="A" x="22.86" y="195.58" rot="R270"/>
+<instance part="RED" gate="A" x="22.86" y="205.74" rot="R270"/>
+<instance part="GND10" gate="1" x="35.56" y="182.88"/>
 <instance part="ADC7" gate="G$1" x="167.64" y="137.16" rot="R180"/>
 <instance part="ADC6" gate="G$1" x="167.64" y="124.46" rot="R180"/>
 <instance part="ADC5" gate="G$1" x="167.64" y="111.76" rot="R180"/>
@@ -6878,6 +6881,9 @@ Based on the following sources:
 <instance part="GND9" gate="1" x="48.26" y="27.94"/>
 <instance part="+3V6" gate="G$1" x="33.02" y="7.62" rot="R270"/>
 <instance part="+3V7" gate="G$1" x="12.7" y="20.32" rot="R90"/>
+<instance part="R2" gate="G$1" x="15.24" y="195.58" rot="R180"/>
+<instance part="R3" gate="G$1" x="15.24" y="205.74" rot="R180"/>
+<instance part="R4" gate="G$1" x="15.24" y="185.42"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -7059,13 +7065,13 @@ Based on the following sources:
 <segment>
 <pinref part="GREEN" gate="A" pin="A"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="30.48" y1="185.42" x2="22.86" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="185.42" x2="27.94" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="RED" gate="A" pin="A"/>
 <pinref part="YELLOW" gate="A" pin="A"/>
-<wire x1="22.86" y1="195.58" x2="22.86" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="195.58" x2="22.86" y2="185.42" width="0.1524" layer="91"/>
-<junction x="22.86" y="185.42"/>
-<junction x="22.86" y="195.58"/>
+<wire x1="27.94" y1="195.58" x2="27.94" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="195.58" x2="27.94" y2="185.42" width="0.1524" layer="91"/>
+<junction x="27.94" y="185.42"/>
+<junction x="27.94" y="195.58"/>
 </segment>
 <segment>
 <pinref part="ADC7" gate="G$1" pin="1"/>
@@ -7241,10 +7247,12 @@ Based on the following sources:
 <label x="5.08" y="86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="GREEN" gate="A" pin="K"/>
-<wire x1="7.62" y1="195.58" x2="7.62" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="193.04" x2="15.24" y2="185.42" width="0.1524" layer="91"/>
-<label x="10.16" y="185.42" size="1.778" layer="95"/>
+<label x="10.16" y="180.34" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="195.58" x2="10.16" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="195.58" x2="7.62" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="7.62" y1="190.5" x2="10.16" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO5" class="0">
@@ -7252,11 +7260,6 @@ Based on the following sources:
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P5"/>
 <wire x1="2.54" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
 <label x="5.08" y="83.82" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="YELLOW" gate="A" pin="K"/>
-<wire x1="7.62" y1="195.58" x2="15.24" y2="195.58" width="0.1524" layer="91"/>
-<label x="10.16" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO6" class="0">
@@ -7266,10 +7269,10 @@ Based on the following sources:
 <label x="5.08" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RED" gate="A" pin="K"/>
-<wire x1="7.62" y1="195.58" x2="7.62" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="198.12" x2="15.24" y2="205.74" width="0.1524" layer="91"/>
-<label x="10.16" y="205.74" size="1.778" layer="95"/>
+<label x="10.16" y="208.28" size="1.778" layer="95"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="195.58" x2="7.62" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="203.2" x2="10.16" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO7" class="0">
@@ -7899,6 +7902,24 @@ Based on the following sources:
 <pinref part="IC2" gate="A" pin="OUT"/>
 <pinref part="NEOPIXEL" gate="G$1" pin="3"/>
 <wire x1="58.42" y1="25.4" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="YELLOW" gate="A" pin="K"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="RED" gate="A" pin="K"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="GREEN" gate="A" pin="K"/>
 </segment>
 </net>
 </nets>
