@@ -9578,6 +9578,7 @@ naming: grid - package width</description>
 <part name="GREEN1" library="led" deviceset="LED" device="5MM"/>
 <part name="+3V15" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
+<part name="R5" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9710,9 +9711,10 @@ naming: grid - package width</description>
 <instance part="C10" gate="G$1" x="66.04" y="125.73" rot="R90"/>
 <instance part="C12" gate="G$1" x="-22.86" y="24.13"/>
 <instance part="C13" gate="G$1" x="-17.78" y="27.94"/>
-<instance part="GREEN1" gate="G$1" x="-148.59" y="203.2" rot="R90"/>
-<instance part="+3V15" gate="G$1" x="-153.67" y="203.2" rot="R90"/>
-<instance part="GND24" gate="1" x="-140.97" y="203.2" rot="R90"/>
+<instance part="GREEN1" gate="G$1" x="-137.16" y="194.31" rot="R90"/>
+<instance part="+3V15" gate="G$1" x="-152.4" y="194.31" rot="R90"/>
+<instance part="GND24" gate="1" x="-129.54" y="194.31" rot="R90"/>
+<instance part="R5" gate="G$1" x="-144.78" y="194.31" rot="R180"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -10464,7 +10466,7 @@ naming: grid - package width</description>
 <wire x1="45.72" y1="-2.54" x2="58.42" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GREEN1" gate="G$1" pin="A"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="+3V15" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
@@ -11388,6 +11390,12 @@ naming: grid - package width</description>
 <pinref part="C13" gate="G$1" pin="2"/>
 <wire x1="-17.78" y1="22.86" x2="-12.7" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="22.86" x2="-10.16" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="GREEN1" gate="G$1" pin="A"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
