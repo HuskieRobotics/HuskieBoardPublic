@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -9471,18 +9471,18 @@ naming: grid - package width</description>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
-<part name="RRDIO0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="RRDIO1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO10" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO11" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO12" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="RRDIO13" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM6" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM7" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="PWM9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="ADC" library="adafruit" deviceset="MCP3008" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
@@ -9577,12 +9577,12 @@ naming: grid - package width</description>
 <part name="+3V15" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="R5" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
-<part name="IO0-SPI-CS3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO0-SPI-CS4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO0-SPI-CS1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO0-SPI-CS2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO0-SPI-CS5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="IO0-SPI-CS6" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AI2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AI3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AI1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AI4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AI5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AIO" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 </parts>
@@ -9590,6 +9590,7 @@ naming: grid - package width</description>
 <sheet>
 <plain>
 <text x="152.4" y="-121.92" size="1.778" layer="91" rot="R270">Change AAAALLL of these to 4 pins. Library is already there?</text>
+<text x="-292.1" y="45.72" size="1.778" layer="91">POWER LED</text>
 </plain>
 <instances>
 <instance part="PROPELLER" gate="P8X32A-D40" x="38.1" y="76.2"/>
@@ -9612,18 +9613,18 @@ naming: grid - package width</description>
 <instance part="GND6" gate="1" x="12.7" y="50.8"/>
 <instance part="+3V4" gate="G$1" x="20.32" y="121.92" rot="R90"/>
 <instance part="PROPELLER" gate="P" x="33.02" y="119.38"/>
-<instance part="RRDIO0" gate="G$1" x="-284.48" y="-76.2" rot="R90"/>
-<instance part="P+3" gate="1" x="-284.48" y="-86.36" rot="R180"/>
-<instance part="GND11" gate="1" x="-287.02" y="-88.9"/>
-<instance part="RRDIO1" gate="G$1" x="-284.48" y="-66.04" rot="R90"/>
-<instance part="RRDIO2" gate="G$1" x="-284.48" y="-55.88" rot="R90"/>
-<instance part="RRDIO8" gate="G$1" x="-284.48" y="-35.56" rot="R90"/>
-<instance part="RRDIO3" gate="G$1" x="-284.48" y="-45.72" rot="R90"/>
-<instance part="RRDIO9" gate="G$1" x="-284.48" y="-25.4" rot="R90"/>
-<instance part="RRDIO10" gate="G$1" x="-284.48" y="-15.24" rot="R90"/>
-<instance part="RRDIO11" gate="G$1" x="-284.48" y="-5.08" rot="R90"/>
-<instance part="RRDIO12" gate="G$1" x="-284.48" y="5.08" rot="R90"/>
-<instance part="RRDIO13" gate="G$1" x="-284.48" y="15.24" rot="R90"/>
+<instance part="PWM0" gate="G$1" x="-147.32" y="269.24" rot="R270"/>
+<instance part="P+3" gate="1" x="-147.32" y="279.4"/>
+<instance part="GND11" gate="1" x="-144.78" y="281.94" rot="R180"/>
+<instance part="PWM1" gate="G$1" x="-147.32" y="259.08" rot="R270"/>
+<instance part="PWM2" gate="G$1" x="-147.32" y="248.92" rot="R270"/>
+<instance part="PWM4" gate="G$1" x="-147.32" y="228.6" rot="R270"/>
+<instance part="PWM3" gate="G$1" x="-147.32" y="238.76" rot="R270"/>
+<instance part="PWM5" gate="G$1" x="-147.32" y="218.44" rot="R270"/>
+<instance part="PWM6" gate="G$1" x="-147.32" y="208.28" rot="R270"/>
+<instance part="PWM7" gate="G$1" x="-147.32" y="198.12" rot="R270"/>
+<instance part="PWM8" gate="G$1" x="-147.32" y="187.96" rot="R270"/>
+<instance part="PWM9" gate="G$1" x="-147.32" y="177.8" rot="R270"/>
 <instance part="ADC" gate="G$1" x="7.62" y="-104.14" rot="R180"/>
 <instance part="GND7" gate="1" x="-12.7" y="-119.38"/>
 <instance part="+3V5" gate="G$1" x="-5.08" y="-127" rot="R270"/>
@@ -9716,16 +9717,16 @@ naming: grid - package width</description>
 <instance part="C10" gate="G$1" x="-20.32" y="-111.76"/>
 <instance part="C12" gate="G$1" x="-22.86" y="24.13"/>
 <instance part="C13" gate="G$1" x="-17.78" y="27.94"/>
-<instance part="GREEN1" gate="G$1" x="-137.16" y="194.31" rot="R90"/>
-<instance part="+3V15" gate="G$1" x="-152.4" y="194.31" rot="R90"/>
-<instance part="GND24" gate="1" x="-129.54" y="194.31" rot="R90"/>
-<instance part="R5" gate="G$1" x="-144.78" y="194.31" rot="R180"/>
-<instance part="IO0-SPI-CS3" gate="G$1" x="-237.49" y="109.22" rot="R180"/>
-<instance part="IO0-SPI-CS4" gate="G$1" x="-237.49" y="95.25" rot="R180"/>
-<instance part="IO0-SPI-CS1" gate="G$1" x="-237.49" y="123.19" rot="R180"/>
-<instance part="IO0-SPI-CS2" gate="G$1" x="-237.49" y="81.28" rot="R180"/>
-<instance part="IO0-SPI-CS5" gate="G$1" x="-237.49" y="67.31" rot="R180"/>
-<instance part="IO0-SPI-CS6" gate="G$1" x="-237.49" y="137.16" rot="R180"/>
+<instance part="GREEN1" gate="G$1" x="-281.94" y="52.07" rot="R90"/>
+<instance part="+3V15" gate="G$1" x="-297.18" y="52.07" rot="R90"/>
+<instance part="GND24" gate="1" x="-274.32" y="52.07" rot="R90"/>
+<instance part="R5" gate="G$1" x="-289.56" y="52.07" rot="R180"/>
+<instance part="AI2" gate="G$1" x="-237.49" y="109.22" rot="R180"/>
+<instance part="AI3" gate="G$1" x="-237.49" y="95.25" rot="R180"/>
+<instance part="AI1" gate="G$1" x="-237.49" y="123.19" rot="R180"/>
+<instance part="AI4" gate="G$1" x="-237.49" y="81.28" rot="R180"/>
+<instance part="AI5" gate="G$1" x="-237.49" y="67.31" rot="R180"/>
+<instance part="AIO" gate="G$1" x="-237.49" y="137.16" rot="R180"/>
 <instance part="P+10" gate="1" x="-250.19" y="149.86" rot="MR180"/>
 <instance part="GND25" gate="1" x="-247.65" y="149.86" rot="MR180"/>
 </instances>
@@ -9759,13 +9760,14 @@ naming: grid - package width</description>
 <wire x1="71.12" y1="50.8" x2="101.6" y2="50.8" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="2.54" y2="-83.82" width="0.762" layer="92"/>
 <wire x1="101.6" y1="50.8" x2="101.6" y2="-401.32" width="0.762" layer="92"/>
-<wire x1="2.54" y1="-83.82" x2="-16.51" y2="-86.36" width="0.762" layer="92"/>
-<wire x1="-16.51" y1="-86.36" x2="-16.51" y2="-106.68" width="0.762" layer="92"/>
+<wire x1="2.54" y1="-83.82" x2="-16.51" y2="-83.82" width="0.762" layer="92"/>
+<wire x1="-16.51" y1="-83.82" x2="-16.51" y2="-104.14" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
 <segment>
-<wire x1="-152.4" y1="60.96" x2="-152.4" y2="121.92" width="0.762" layer="92"/>
+<wire x1="-152.4" y1="60.96" x2="-152.4" y2="111.76" width="0.762" layer="92"/>
+<wire x1="-152.4" y1="111.76" x2="-152.4" y2="121.92" width="0.762" layer="92"/>
 <wire x1="-152.4" y1="121.92" x2="-149.86" y2="124.46" width="0.762" layer="92"/>
 <wire x1="-149.86" y1="124.46" x2="-73.66" y2="124.46" width="0.762" layer="92"/>
 <wire x1="-73.66" y1="124.46" x2="-71.12" y2="121.92" width="0.762" layer="92"/>
@@ -9778,8 +9780,9 @@ naming: grid - package width</description>
 <wire x1="-142.24" y1="30.48" x2="-142.24" y2="-27.94" width="0.762" layer="92"/>
 <wire x1="-142.24" y1="50.8" x2="-58.42" y2="50.8" width="0.762" layer="92"/>
 <wire x1="-142.24" y1="50.8" x2="-254" y2="50.8" width="0.762" layer="92"/>
-<wire x1="-254" y1="50.8" x2="-254" y2="-71.12" width="0.762" layer="92"/>
 <wire x1="-254" y1="50.8" x2="-254" y2="143.51" width="0.762" layer="92"/>
+<wire x1="-152.4" y1="111.76" x2="-167.64" y2="111.76" width="0.762" layer="92"/>
+<wire x1="-167.64" y1="111.76" x2="-167.64" y2="276.86" width="0.762" layer="92"/>
 </segment>
 </bus>
 </busses>
@@ -9875,36 +9878,36 @@ naming: grid - package width</description>
 <pinref part="C2" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="RRDIO0" gate="G$1" pin="3"/>
+<pinref part="PWM0" gate="G$1" pin="3"/>
 <pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="-287.02" y1="-86.36" x2="-287.02" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-287.02" y="-68.58"/>
-<pinref part="RRDIO1" gate="G$1" pin="3"/>
-<wire x1="-287.02" y1="-58.42" x2="-287.02" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-287.02" y="-58.42"/>
-<wire x1="-287.02" y1="-58.42" x2="-287.02" y2="-48.26" width="0.1524" layer="91"/>
-<pinref part="RRDIO2" gate="G$1" pin="3"/>
-<wire x1="-287.02" y1="-48.26" x2="-287.02" y2="-38.1" width="0.1524" layer="91"/>
-<junction x="-287.02" y="-48.26"/>
-<pinref part="RRDIO3" gate="G$1" pin="3"/>
-<pinref part="RRDIO13" gate="G$1" pin="3"/>
-<wire x1="-287.02" y1="-38.1" x2="-287.02" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="-287.02" y="-38.1"/>
-<pinref part="RRDIO8" gate="G$1" pin="3"/>
-<junction x="-287.02" y="-27.94"/>
-<wire x1="-287.02" y1="-27.94" x2="-287.02" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="RRDIO9" gate="G$1" pin="3"/>
-<junction x="-287.02" y="-17.78"/>
-<wire x1="-287.02" y1="-17.78" x2="-287.02" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="RRDIO10" gate="G$1" pin="3"/>
-<junction x="-287.02" y="-7.62"/>
-<wire x1="-287.02" y1="-7.62" x2="-287.02" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="RRDIO11" gate="G$1" pin="3"/>
-<junction x="-287.02" y="2.54"/>
-<wire x1="-287.02" y1="2.54" x2="-287.02" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="RRDIO12" gate="G$1" pin="3"/>
-<junction x="-287.02" y="12.7"/>
-<wire x1="-287.02" y1="12.7" x2="-287.02" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="279.4" x2="-144.78" y2="261.62" width="0.1524" layer="91"/>
+<junction x="-144.78" y="261.62"/>
+<pinref part="PWM1" gate="G$1" pin="3"/>
+<wire x1="-144.78" y1="251.46" x2="-144.78" y2="261.62" width="0.1524" layer="91"/>
+<junction x="-144.78" y="251.46"/>
+<wire x1="-144.78" y1="251.46" x2="-144.78" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="PWM2" gate="G$1" pin="3"/>
+<wire x1="-144.78" y1="241.3" x2="-144.78" y2="231.14" width="0.1524" layer="91"/>
+<junction x="-144.78" y="241.3"/>
+<pinref part="PWM3" gate="G$1" pin="3"/>
+<pinref part="PWM9" gate="G$1" pin="3"/>
+<wire x1="-144.78" y1="231.14" x2="-144.78" y2="220.98" width="0.1524" layer="91"/>
+<junction x="-144.78" y="231.14"/>
+<pinref part="PWM4" gate="G$1" pin="3"/>
+<junction x="-144.78" y="220.98"/>
+<wire x1="-144.78" y1="220.98" x2="-144.78" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="PWM5" gate="G$1" pin="3"/>
+<junction x="-144.78" y="210.82"/>
+<wire x1="-144.78" y1="210.82" x2="-144.78" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="PWM6" gate="G$1" pin="3"/>
+<junction x="-144.78" y="200.66"/>
+<wire x1="-144.78" y1="200.66" x2="-144.78" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="PWM7" gate="G$1" pin="3"/>
+<junction x="-144.78" y="190.5"/>
+<wire x1="-144.78" y1="190.5" x2="-144.78" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="PWM8" gate="G$1" pin="3"/>
+<junction x="-144.78" y="180.34"/>
+<wire x1="-144.78" y1="180.34" x2="-144.78" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC" gate="G$1" pin="AGND"/>
@@ -10158,7 +10161,7 @@ naming: grid - package width</description>
 </segment>
 <segment>
 <pinref part="GND25" gate="1" pin="GND"/>
-<pinref part="IO0-SPI-CS5" gate="G$1" pin="1"/>
+<pinref part="AI5" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="147.32" x2="-247.65" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="-247.65" y1="139.7" x2="-247.65" y2="125.73" width="0.1524" layer="91"/>
 <wire x1="-247.65" y1="125.73" x2="-247.65" y2="111.76" width="0.1524" layer="91"/>
@@ -10166,15 +10169,15 @@ naming: grid - package width</description>
 <wire x1="-247.65" y1="97.79" x2="-247.65" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-247.65" y1="83.82" x2="-247.65" y2="72.39" width="0.1524" layer="91"/>
 <wire x1="-247.65" y1="72.39" x2="-245.11" y2="69.85" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS6" gate="G$1" pin="1"/>
+<pinref part="AIO" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="139.7" x2="-245.11" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS1" gate="G$1" pin="1"/>
+<pinref part="AI1" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="125.73" x2="-245.11" y2="125.73" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS3" gate="G$1" pin="1"/>
+<pinref part="AI2" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="111.76" x2="-245.11" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS4" gate="G$1" pin="1"/>
+<pinref part="AI3" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="97.79" x2="-245.11" y2="97.79" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS2" gate="G$1" pin="1"/>
+<pinref part="AI4" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="83.82" x2="-245.11" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10625,6 +10628,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="ADC" gate="G$1" pin="/CS"/>
 <wire x1="-7.62" y1="-96.52" x2="-16.51" y2="-96.52" width="0.1524" layer="91"/>
+<label x="-20.32" y="-96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO13" class="0">
@@ -10641,6 +10645,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="ADC" gate="G$1" pin="DIN"/>
 <wire x1="-7.62" y1="-99.06" x2="-16.51" y2="-99.06" width="0.1524" layer="91"/>
+<label x="-20.32" y="-99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO15" class="0">
@@ -10822,36 +10827,36 @@ naming: grid - package width</description>
 <wire x1="-73.66" y1="-27.94" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RRDIO1" gate="G$1" pin="2"/>
-<pinref part="RRDIO0" gate="G$1" pin="2"/>
+<pinref part="PWM1" gate="G$1" pin="2"/>
+<pinref part="PWM0" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<wire x1="-284.48" y1="-83.82" x2="-284.48" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-284.48" y="-68.58"/>
-<wire x1="-284.48" y1="-68.58" x2="-284.48" y2="-58.42" width="0.1524" layer="91"/>
-<junction x="-284.48" y="-58.42"/>
-<wire x1="-284.48" y1="-58.42" x2="-284.48" y2="-48.26" width="0.1524" layer="91"/>
-<pinref part="RRDIO2" gate="G$1" pin="2"/>
-<wire x1="-284.48" y1="-48.26" x2="-284.48" y2="-38.1" width="0.1524" layer="91"/>
-<junction x="-284.48" y="-48.26"/>
-<pinref part="RRDIO3" gate="G$1" pin="2"/>
-<pinref part="RRDIO13" gate="G$1" pin="2"/>
-<wire x1="-284.48" y1="-38.1" x2="-284.48" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="-284.48" y="-38.1"/>
-<pinref part="RRDIO8" gate="G$1" pin="2"/>
-<junction x="-284.48" y="-27.94"/>
-<wire x1="-284.48" y1="-27.94" x2="-284.48" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="RRDIO9" gate="G$1" pin="2"/>
-<junction x="-284.48" y="-17.78"/>
-<wire x1="-284.48" y1="-17.78" x2="-284.48" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="RRDIO10" gate="G$1" pin="2"/>
-<junction x="-284.48" y="-7.62"/>
-<wire x1="-284.48" y1="-7.62" x2="-284.48" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="RRDIO11" gate="G$1" pin="2"/>
-<junction x="-284.48" y="2.54"/>
-<wire x1="-284.48" y1="2.54" x2="-284.48" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="RRDIO12" gate="G$1" pin="2"/>
-<junction x="-284.48" y="12.7"/>
-<wire x1="-284.48" y1="12.7" x2="-284.48" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="276.86" x2="-147.32" y2="261.62" width="0.1524" layer="91"/>
+<junction x="-147.32" y="261.62"/>
+<wire x1="-147.32" y1="261.62" x2="-147.32" y2="251.46" width="0.1524" layer="91"/>
+<junction x="-147.32" y="251.46"/>
+<wire x1="-147.32" y1="251.46" x2="-147.32" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="PWM2" gate="G$1" pin="2"/>
+<wire x1="-147.32" y1="241.3" x2="-147.32" y2="231.14" width="0.1524" layer="91"/>
+<junction x="-147.32" y="241.3"/>
+<pinref part="PWM3" gate="G$1" pin="2"/>
+<pinref part="PWM9" gate="G$1" pin="2"/>
+<wire x1="-147.32" y1="231.14" x2="-147.32" y2="220.98" width="0.1524" layer="91"/>
+<junction x="-147.32" y="231.14"/>
+<pinref part="PWM4" gate="G$1" pin="2"/>
+<junction x="-147.32" y="220.98"/>
+<wire x1="-147.32" y1="220.98" x2="-147.32" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="PWM5" gate="G$1" pin="2"/>
+<junction x="-147.32" y="210.82"/>
+<wire x1="-147.32" y1="210.82" x2="-147.32" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="PWM6" gate="G$1" pin="2"/>
+<junction x="-147.32" y="200.66"/>
+<wire x1="-147.32" y1="200.66" x2="-147.32" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="PWM7" gate="G$1" pin="2"/>
+<junction x="-147.32" y="190.5"/>
+<wire x1="-147.32" y1="190.5" x2="-147.32" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="PWM8" gate="G$1" pin="2"/>
+<junction x="-147.32" y="180.34"/>
+<wire x1="-147.32" y1="180.34" x2="-147.32" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LEVELSHIFTER" gate="P" pin="VDD"/>
@@ -10903,9 +10908,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO0" gate="G$1" pin="1"/>
-<wire x1="-254" y1="-68.58" x2="-281.94" y2="-68.58" width="0.1524" layer="91"/>
-<label x="-274.32" y="-68.58" size="1.778" layer="95"/>
+<pinref part="PWM0" gate="G$1" pin="1"/>
+<wire x1="-167.64" y1="261.62" x2="-149.86" y2="261.62" width="0.1524" layer="91"/>
+<label x="-157.48" y="261.62" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO1" class="0">
@@ -10920,9 +10925,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO1" gate="G$1" pin="1"/>
-<wire x1="-254" y1="-58.42" x2="-281.94" y2="-58.42" width="0.1524" layer="91"/>
-<label x="-274.32" y="-58.42" size="1.778" layer="95"/>
+<pinref part="PWM1" gate="G$1" pin="1"/>
+<wire x1="-167.64" y1="251.46" x2="-149.86" y2="251.46" width="0.1524" layer="91"/>
+<label x="-157.48" y="251.46" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO2" class="0">
@@ -10937,9 +10942,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO2" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="-48.26" x2="-254" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-274.32" y="-48.26" size="1.778" layer="95"/>
+<pinref part="PWM2" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="241.3" x2="-167.64" y2="241.3" width="0.1524" layer="91"/>
+<label x="-157.48" y="241.3" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO3" class="0">
@@ -10954,9 +10959,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO3" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="-38.1" x2="-254" y2="-38.1" width="0.1524" layer="91"/>
-<label x="-274.32" y="-38.1" size="1.778" layer="95"/>
+<pinref part="PWM3" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="231.14" x2="-167.64" y2="231.14" width="0.1524" layer="91"/>
+<label x="-157.48" y="231.14" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO8" class="0">
@@ -10971,9 +10976,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO8" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="-27.94" x2="-254" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-274.32" y="-27.94" size="1.778" layer="95"/>
+<pinref part="PWM4" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="220.98" x2="-167.64" y2="220.98" width="0.1524" layer="91"/>
+<label x="-157.48" y="220.98" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO9" class="0">
@@ -10988,9 +10993,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO9" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="-17.78" x2="-254" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-274.32" y="-17.78" size="1.778" layer="95"/>
+<pinref part="PWM5" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="210.82" x2="-167.64" y2="210.82" width="0.1524" layer="91"/>
+<label x="-157.48" y="210.82" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO10" class="0">
@@ -11005,9 +11010,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO10" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="-7.62" x2="-254" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-274.32" y="-7.62" size="1.778" layer="95"/>
+<pinref part="PWM6" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="200.66" x2="-167.64" y2="200.66" width="0.1524" layer="91"/>
+<label x="-157.48" y="200.66" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO11" class="0">
@@ -11022,9 +11027,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO11" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="2.54" x2="-254" y2="2.54" width="0.1524" layer="91"/>
-<label x="-274.32" y="2.54" size="1.778" layer="95"/>
+<pinref part="PWM7" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="190.5" x2="-167.64" y2="190.5" width="0.1524" layer="91"/>
+<label x="-157.48" y="190.5" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO12" class="0">
@@ -11039,9 +11044,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO12" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="12.7" x2="-254" y2="12.7" width="0.1524" layer="91"/>
-<label x="-274.32" y="12.7" size="1.778" layer="95"/>
+<pinref part="PWM8" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="180.34" x2="-167.64" y2="180.34" width="0.1524" layer="91"/>
+<label x="-157.48" y="180.34" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="DIO13" class="0">
@@ -11056,9 +11061,9 @@ naming: grid - package width</description>
 <label x="-139.7" y="-5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RRDIO13" gate="G$1" pin="1"/>
-<wire x1="-281.94" y1="22.86" x2="-254" y2="22.86" width="0.1524" layer="91"/>
-<label x="-274.32" y="22.86" size="1.778" layer="95"/>
+<pinref part="PWM9" gate="G$1" pin="1"/>
+<wire x1="-149.86" y1="170.18" x2="-167.64" y2="170.18" width="0.1524" layer="91"/>
+<label x="-157.48" y="170.18" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="SPI_MISO" class="0">
@@ -11222,7 +11227,7 @@ naming: grid - package width</description>
 <label x="-78.74" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IO0-SPI-CS4" gate="G$1" pin="3"/>
+<pinref part="AI3" gate="G$1" pin="3"/>
 <wire x1="-254" y1="92.71" x2="-245.11" y2="92.71" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11238,7 +11243,7 @@ naming: grid - package width</description>
 <label x="-78.74" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IO0-SPI-CS3" gate="G$1" pin="3"/>
+<pinref part="AI2" gate="G$1" pin="3"/>
 <wire x1="-254" y1="106.68" x2="-245.11" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11254,7 +11259,7 @@ naming: grid - package width</description>
 <label x="-78.74" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IO0-SPI-CS1" gate="G$1" pin="3"/>
+<pinref part="AI1" gate="G$1" pin="3"/>
 <wire x1="-254" y1="120.65" x2="-245.11" y2="120.65" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11270,7 +11275,7 @@ naming: grid - package width</description>
 <label x="-78.74" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IO0-SPI-CS6" gate="G$1" pin="3"/>
+<pinref part="AIO" gate="G$1" pin="3"/>
 <wire x1="-254" y1="134.62" x2="-245.11" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11286,7 +11291,7 @@ naming: grid - package width</description>
 <label x="-78.74" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IO0-SPI-CS5" gate="G$1" pin="3"/>
+<pinref part="AI5" gate="G$1" pin="3"/>
 <wire x1="-254" y1="64.77" x2="-245.11" y2="64.77" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11302,7 +11307,7 @@ naming: grid - package width</description>
 <label x="-78.74" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IO0-SPI-CS2" gate="G$1" pin="3"/>
+<pinref part="AI4" gate="G$1" pin="3"/>
 <wire x1="-254" y1="78.74" x2="-245.11" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11320,6 +11325,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="ADC" gate="G$1" pin="DOUT"/>
 <wire x1="-7.62" y1="-101.6" x2="-16.51" y2="-101.6" width="0.1524" layer="91"/>
+<label x="-20.32" y="-101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -11443,7 +11449,7 @@ naming: grid - package width</description>
 <net name="N$18" class="0">
 <segment>
 <wire x1="-250.19" y1="149.86" x2="-250.19" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS5" gate="G$1" pin="2"/>
+<pinref part="AI5" gate="G$1" pin="2"/>
 <wire x1="-250.19" y1="137.16" x2="-250.19" y2="123.19" width="0.1524" layer="91"/>
 <wire x1="-250.19" y1="123.19" x2="-250.19" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="-250.19" y1="109.22" x2="-250.19" y2="95.25" width="0.1524" layer="91"/>
@@ -11453,17 +11459,17 @@ naming: grid - package width</description>
 <junction x="-250.19" y="81.28"/>
 <junction x="-250.19" y="95.25"/>
 <junction x="-250.19" y="137.16"/>
-<pinref part="IO0-SPI-CS6" gate="G$1" pin="2"/>
+<pinref part="AIO" gate="G$1" pin="2"/>
 <wire x1="-250.19" y1="137.16" x2="-245.11" y2="137.16" width="0.1524" layer="91"/>
 <junction x="-250.19" y="123.19"/>
-<pinref part="IO0-SPI-CS1" gate="G$1" pin="2"/>
+<pinref part="AI1" gate="G$1" pin="2"/>
 <wire x1="-250.19" y1="123.19" x2="-245.11" y2="123.19" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS4" gate="G$1" pin="2"/>
+<pinref part="AI3" gate="G$1" pin="2"/>
 <wire x1="-250.19" y1="95.25" x2="-245.11" y2="95.25" width="0.1524" layer="91"/>
-<pinref part="IO0-SPI-CS2" gate="G$1" pin="2"/>
+<pinref part="AI4" gate="G$1" pin="2"/>
 <wire x1="-250.19" y1="81.28" x2="-245.11" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-250.19" y="109.22"/>
-<pinref part="IO0-SPI-CS3" gate="G$1" pin="2"/>
+<pinref part="AI2" gate="G$1" pin="2"/>
 <wire x1="-250.19" y1="109.22" x2="-245.11" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>

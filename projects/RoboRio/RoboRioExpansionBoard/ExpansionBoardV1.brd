@@ -2428,61 +2428,61 @@ design rules under a new name.</description>
 <element name="R2" library="resistor" package="0309V" value="10k" x="-77.47" y="73.66"/>
 <element name="R3" library="resistor" package="0309V" value="10k" x="-85.09" y="73.66"/>
 <element name="R4" library="resistor" package="0309V" value="10k" x="-92.71" y="73.66"/>
-<element name="RRDIO0" library="con-lstb-modified" package="MA03-1" value="" x="-27.94" y="121.92">
+<element name="PWM0" library="con-lstb-modified" package="MA03-1" value="" x="-27.94" y="121.92">
 <attribute name="OC_NEWARK" value="unknown" x="-27.94" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-27.94" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-27.94" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-27.94" y="121.92" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO1" library="con-lstb-modified" package="MA03-1" value="" x="-38.1" y="121.92">
+<element name="PWM1" library="con-lstb-modified" package="MA03-1" value="" x="-38.1" y="121.92">
 <attribute name="OC_NEWARK" value="unknown" x="-38.1" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-38.1" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-38.1" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-38.1" y="121.92" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO10" library="con-lstb-modified" package="MA03-1" value="" x="-83.82" y="83.82">
+<element name="PWM6" library="con-lstb-modified" package="MA03-1" value="" x="-83.82" y="83.82">
 <attribute name="OC_NEWARK" value="unknown" x="-83.82" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-83.82" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-83.82" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-83.82" y="83.82" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO11" library="con-lstb-modified" package="MA03-1" value="" x="-48.26" y="90.17">
+<element name="PWM7" library="con-lstb-modified" package="MA03-1" value="" x="-48.26" y="90.17">
 <attribute name="OC_NEWARK" value="unknown" x="-48.26" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-48.26" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-48.26" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-48.26" y="90.17" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO12" library="con-lstb-modified" package="MA03-1" value="" x="-17.78" y="90.17">
+<element name="PWM8" library="con-lstb-modified" package="MA03-1" value="" x="-17.78" y="90.17">
 <attribute name="OC_NEWARK" value="unknown" x="-17.78" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-17.78" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-17.78" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-17.78" y="90.17" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO13" library="con-lstb-modified" package="MA03-1" value="" x="-27.94" y="90.17">
+<element name="PWM9" library="con-lstb-modified" package="MA03-1" value="" x="-27.94" y="90.17">
 <attribute name="OC_NEWARK" value="unknown" x="-27.94" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-27.94" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-27.94" y="90.17" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-27.94" y="90.17" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO2" library="con-lstb-modified" package="MA03-1" value="" x="-48.26" y="121.92">
+<element name="PWM2" library="con-lstb-modified" package="MA03-1" value="" x="-48.26" y="121.92">
 <attribute name="OC_NEWARK" value="unknown" x="-48.26" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-48.26" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-48.26" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-48.26" y="121.92" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO3" library="con-lstb-modified" package="MA03-1" value="" x="-58.42" y="121.92">
+<element name="PWM3" library="con-lstb-modified" package="MA03-1" value="" x="-58.42" y="121.92">
 <attribute name="OC_NEWARK" value="unknown" x="-58.42" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-58.42" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-58.42" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-58.42" y="121.92" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO8" library="con-lstb-modified" package="MA03-1" value="" x="-68.58" y="121.92">
+<element name="PWM4" library="con-lstb-modified" package="MA03-1" value="" x="-68.58" y="121.92">
 <attribute name="OC_NEWARK" value="unknown" x="-68.58" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-68.58" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-68.58" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-68.58" y="121.92" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RRDIO9" library="con-lstb-modified" package="MA03-1" value="" x="-78.74" y="121.92">
+<element name="PWM5" library="con-lstb-modified" package="MA03-1" value="" x="-78.74" y="121.92">
 <attribute name="OC_NEWARK" value="unknown" x="-78.74" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-78.74" y="121.92" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-78.74" y="121.92" size="1.778" layer="27" display="off"/>
@@ -2502,37 +2502,37 @@ design rules under a new name.</description>
 <element name="C13" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-149.352"/>
 <element name="GREEN1" library="led" package="LED5MM" value="" x="-92.202" y="-155.956"/>
 <element name="R5" library="resistor" package="0309V" value="10k" x="-92.71" y="-162.052"/>
-<element name="IO0-SPI-CS3" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-171.704">
+<element name="AI2" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-171.704">
 <attribute name="OC_NEWARK" value="unknown" x="-91.694" y="-171.704" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-91.694" y="-171.704" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-91.694" y="-171.704" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-171.704" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO0-SPI-CS4" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-174.498">
+<element name="AI3" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-174.498">
 <attribute name="OC_NEWARK" value="unknown" x="-91.694" y="-174.498" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-91.694" y="-174.498" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-91.694" y="-174.498" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-174.498" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO0-SPI-CS1" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-177.292">
+<element name="AI1" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-177.292">
 <attribute name="OC_NEWARK" value="unknown" x="-91.694" y="-177.292" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-91.694" y="-177.292" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-91.694" y="-177.292" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-177.292" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO0-SPI-CS2" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-180.086">
+<element name="AI4" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-180.086">
 <attribute name="OC_NEWARK" value="unknown" x="-91.694" y="-180.086" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-91.694" y="-180.086" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-91.694" y="-180.086" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-180.086" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO0-SPI-CS5" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-182.88">
+<element name="AI5" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-182.88">
 <attribute name="OC_NEWARK" value="unknown" x="-91.694" y="-182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-91.694" y="-182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-91.694" y="-182.88" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-182.88" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IO0-SPI-CS6" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-185.674">
+<element name="AIO" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-185.674">
 <attribute name="OC_NEWARK" value="unknown" x="-91.694" y="-185.674" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-91.694" y="-185.674" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-91.694" y="-185.674" size="1.778" layer="27" display="off"/>
@@ -2566,16 +2566,16 @@ design rules under a new name.</description>
 <contactref element="PROPELLER" pad="10"/>
 <contactref element="PROPELLER" pad="29"/>
 <contactref element="PROPELLER" pad="9"/>
-<contactref element="RRDIO0" pad="3"/>
-<contactref element="RRDIO1" pad="3"/>
-<contactref element="RRDIO2" pad="3"/>
-<contactref element="RRDIO3" pad="3"/>
-<contactref element="RRDIO13" pad="3"/>
-<contactref element="RRDIO8" pad="3"/>
-<contactref element="RRDIO9" pad="3"/>
-<contactref element="RRDIO10" pad="3"/>
-<contactref element="RRDIO11" pad="3"/>
-<contactref element="RRDIO12" pad="3"/>
+<contactref element="PWM0" pad="3"/>
+<contactref element="PWM1" pad="3"/>
+<contactref element="PWM2" pad="3"/>
+<contactref element="PWM3" pad="3"/>
+<contactref element="PWM9" pad="3"/>
+<contactref element="PWM4" pad="3"/>
+<contactref element="PWM5" pad="3"/>
+<contactref element="PWM6" pad="3"/>
+<contactref element="PWM7" pad="3"/>
+<contactref element="PWM8" pad="3"/>
 <contactref element="ADC" pad="14"/>
 <contactref element="ADC" pad="9"/>
 <contactref element="ADC7" pad="1"/>
@@ -2632,12 +2632,12 @@ design rules under a new name.</description>
 <contactref element="C10" pad="2"/>
 <contactref element="C12" pad="2"/>
 <contactref element="GREEN1" pad="K"/>
-<contactref element="IO0-SPI-CS5" pad="1"/>
-<contactref element="IO0-SPI-CS6" pad="1"/>
-<contactref element="IO0-SPI-CS1" pad="1"/>
-<contactref element="IO0-SPI-CS3" pad="1"/>
-<contactref element="IO0-SPI-CS4" pad="1"/>
-<contactref element="IO0-SPI-CS2" pad="1"/>
+<contactref element="AI5" pad="1"/>
+<contactref element="AIO" pad="1"/>
+<contactref element="AI1" pad="1"/>
+<contactref element="AI2" pad="1"/>
+<contactref element="AI3" pad="1"/>
+<contactref element="AI4" pad="1"/>
 <wire x1="-86.36" y1="-141.224" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-171.704" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-174.498" x2="-94.234" y2="-171.704" width="0" layer="19" extent="1-1"/>
@@ -3023,16 +3023,16 @@ design rules under a new name.</description>
 <signal name="+5V">
 <contactref element="U$1" pad="1"/>
 <contactref element="U$2" pad="1"/>
-<contactref element="RRDIO1" pad="2"/>
-<contactref element="RRDIO0" pad="2"/>
-<contactref element="RRDIO2" pad="2"/>
-<contactref element="RRDIO3" pad="2"/>
-<contactref element="RRDIO13" pad="2"/>
-<contactref element="RRDIO8" pad="2"/>
-<contactref element="RRDIO9" pad="2"/>
-<contactref element="RRDIO10" pad="2"/>
-<contactref element="RRDIO11" pad="2"/>
-<contactref element="RRDIO12" pad="2"/>
+<contactref element="PWM1" pad="2"/>
+<contactref element="PWM0" pad="2"/>
+<contactref element="PWM2" pad="2"/>
+<contactref element="PWM3" pad="2"/>
+<contactref element="PWM9" pad="2"/>
+<contactref element="PWM4" pad="2"/>
+<contactref element="PWM5" pad="2"/>
+<contactref element="PWM6" pad="2"/>
+<contactref element="PWM7" pad="2"/>
+<contactref element="PWM8" pad="2"/>
 <contactref element="LEVELSHIFTER" pad="16"/>
 <contactref element="ADC3" pad="2"/>
 <contactref element="ADC2" pad="2"/>
@@ -3066,70 +3066,70 @@ design rules under a new name.</description>
 <signal name="DIO0">
 <contactref element="U$1" pad="11"/>
 <contactref element="U$2" pad="11"/>
-<contactref element="RRDIO0" pad="1"/>
+<contactref element="PWM0" pad="1"/>
 <wire x1="57.62" y1="73.96" x2="57.67" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-30.48" y1="121.92" x2="57.67" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO1">
 <contactref element="U$1" pad="13"/>
 <contactref element="U$2" pad="13"/>
-<contactref element="RRDIO1" pad="1"/>
+<contactref element="PWM1" pad="1"/>
 <wire x1="55.08" y1="73.96" x2="55.13" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-40.64" y1="121.92" x2="55.13" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO2">
 <contactref element="U$1" pad="15"/>
 <contactref element="U$2" pad="15"/>
-<contactref element="RRDIO2" pad="1"/>
+<contactref element="PWM2" pad="1"/>
 <wire x1="52.54" y1="73.96" x2="52.59" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-50.8" y1="121.92" x2="52.59" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO3">
 <contactref element="U$1" pad="17"/>
 <contactref element="U$2" pad="17"/>
-<contactref element="RRDIO3" pad="1"/>
+<contactref element="PWM3" pad="1"/>
 <wire x1="50" y1="73.96" x2="50.05" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-60.96" y1="121.92" x2="50.05" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO8">
 <contactref element="U$1" pad="27"/>
 <contactref element="U$2" pad="27"/>
-<contactref element="RRDIO8" pad="1"/>
+<contactref element="PWM4" pad="1"/>
 <wire x1="37.3" y1="73.96" x2="37.35" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-71.12" y1="121.92" x2="37.35" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO9">
 <contactref element="U$1" pad="29"/>
 <contactref element="U$2" pad="29"/>
-<contactref element="RRDIO9" pad="1"/>
+<contactref element="PWM5" pad="1"/>
 <wire x1="34.76" y1="73.96" x2="34.81" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-81.28" y1="121.92" x2="34.81" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO10">
 <contactref element="U$1" pad="31"/>
 <contactref element="U$2" pad="31"/>
-<contactref element="RRDIO10" pad="1"/>
+<contactref element="PWM6" pad="1"/>
 <wire x1="32.22" y1="73.96" x2="32.27" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="83.82" x2="32.27" y2="78.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO11">
 <contactref element="U$1" pad="18"/>
 <contactref element="U$2" pad="18"/>
-<contactref element="RRDIO11" pad="1"/>
+<contactref element="PWM7" pad="1"/>
 <wire x1="50" y1="71.42" x2="50.05" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-50.8" y1="90.17" x2="50.05" y2="76.39" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO12">
 <contactref element="U$1" pad="22"/>
 <contactref element="U$2" pad="22"/>
-<contactref element="RRDIO12" pad="1"/>
+<contactref element="PWM8" pad="1"/>
 <wire x1="44.92" y1="71.42" x2="44.97" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.32" y1="90.17" x2="44.97" y2="76.39" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIO13">
 <contactref element="U$1" pad="26"/>
 <contactref element="U$2" pad="26"/>
-<contactref element="RRDIO13" pad="1"/>
+<contactref element="PWM9" pad="1"/>
 <wire x1="39.84" y1="71.42" x2="39.89" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-30.48" y1="90.17" x2="39.89" y2="76.39" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -3192,42 +3192,42 @@ design rules under a new name.</description>
 <signal name="AI3">
 <contactref element="U$1" pad="9"/>
 <contactref element="U$2" pad="9"/>
-<contactref element="IO0-SPI-CS4" pad="3"/>
+<contactref element="AI3" pad="3"/>
 <wire x1="60.16" y1="73.96" x2="60.21" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-89.154" y1="-174.498" x2="60.16" y2="73.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AI2">
 <contactref element="U$1" pad="7"/>
 <contactref element="U$2" pad="7"/>
-<contactref element="IO0-SPI-CS3" pad="3"/>
+<contactref element="AI2" pad="3"/>
 <wire x1="62.7" y1="73.96" x2="62.75" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-89.154" y1="-171.704" x2="62.7" y2="73.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AI1">
 <contactref element="U$1" pad="5"/>
 <contactref element="U$2" pad="5"/>
-<contactref element="IO0-SPI-CS1" pad="3"/>
+<contactref element="AI1" pad="3"/>
 <wire x1="65.24" y1="73.96" x2="65.29" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-89.154" y1="-177.292" x2="65.24" y2="73.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AI0">
 <contactref element="U$1" pad="3"/>
 <contactref element="U$2" pad="3"/>
-<contactref element="IO0-SPI-CS6" pad="3"/>
+<contactref element="AIO" pad="3"/>
 <wire x1="67.78" y1="73.96" x2="67.83" y2="78.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-89.154" y1="-185.674" x2="67.78" y2="73.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AO1">
 <contactref element="U$1" pad="4"/>
 <contactref element="U$2" pad="4"/>
-<contactref element="IO0-SPI-CS5" pad="3"/>
+<contactref element="AI5" pad="3"/>
 <wire x1="67.78" y1="71.42" x2="67.83" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-89.154" y1="-182.88" x2="67.78" y2="71.42" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AO0">
 <contactref element="U$1" pad="2"/>
 <contactref element="U$2" pad="2"/>
-<contactref element="IO0-SPI-CS2" pad="3"/>
+<contactref element="AI4" pad="3"/>
 <wire x1="70.32" y1="71.42" x2="70.37" y2="76.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-89.154" y1="-180.086" x2="70.32" y2="71.42" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -3312,12 +3312,12 @@ design rules under a new name.</description>
 <wire x1="-93.98" y1="-162.052" x2="-93.472" y2="-155.956" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$18">
-<contactref element="IO0-SPI-CS5" pad="2"/>
-<contactref element="IO0-SPI-CS6" pad="2"/>
-<contactref element="IO0-SPI-CS1" pad="2"/>
-<contactref element="IO0-SPI-CS4" pad="2"/>
-<contactref element="IO0-SPI-CS2" pad="2"/>
-<contactref element="IO0-SPI-CS3" pad="2"/>
+<contactref element="AI5" pad="2"/>
+<contactref element="AIO" pad="2"/>
+<contactref element="AI1" pad="2"/>
+<contactref element="AI3" pad="2"/>
+<contactref element="AI4" pad="2"/>
+<contactref element="AI2" pad="2"/>
 <wire x1="-91.694" y1="-182.88" x2="-91.694" y2="-185.674" width="0" layer="19" extent="1-1"/>
 <wire x1="-91.694" y1="-180.086" x2="-91.694" y2="-182.88" width="0" layer="19" extent="1-1"/>
 <wire x1="-91.694" y1="-177.292" x2="-91.694" y2="-180.086" width="0" layer="19" extent="1-1"/>
