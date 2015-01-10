@@ -2495,17 +2495,11 @@ design rules under a new name.</description>
 <element name="YELLOW" library="led" package="LED5MM" value="" x="-91.44" y="-11.43"/>
 <element name="GREEN" library="led" package="LED5MM" value="" x="-91.44" y="-19.05"/>
 <element name="U$4" library="RESETBUTTON3000" package="RESETBUTTON300000MILLION" value="BUTTON" x="89.916" y="74.168" rot="R180"/>
-<element name="C1" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-27.432"/>
 <element name="C4" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-51.816"/>
 <element name="C5" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-59.944"/>
-<element name="C6" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-68.072"/>
-<element name="C7" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-76.2"/>
 <element name="C2" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-84.328"/>
-<element name="C8" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-100.584"/>
 <element name="C3" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-108.712"/>
-<element name="C9" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-116.84"/>
 <element name="C10" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-124.968"/>
-<element name="C11" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-133.096"/>
 <element name="C12" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-141.224"/>
 <element name="C13" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-149.352"/>
 <element name="GREEN1" library="led" package="LED5MM" value="" x="-92.202" y="-155.956"/>
@@ -2598,32 +2592,20 @@ design rules under a new name.</description>
 <contactref element="GREEN" pad="K"/>
 <contactref element="U$4" pad="P4"/>
 <contactref element="U$4" pad="P3"/>
-<contactref element="C1" pad="2"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C5" pad="1"/>
-<contactref element="C6" pad="2"/>
 <contactref element="C2" pad="2"/>
-<contactref element="C8" pad="2"/>
-<contactref element="C7" pad="2"/>
 <contactref element="C3" pad="2"/>
-<contactref element="C9" pad="1"/>
 <contactref element="C10" pad="2"/>
-<contactref element="C11" pad="1"/>
 <contactref element="C12" pad="2"/>
 <contactref element="GREEN1" pad="K"/>
 <wire x1="-86.36" y1="-141.224" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-133.096" x2="-86.36" y2="-141.224" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-124.968" x2="-93.98" y2="-133.096" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-116.84" x2="-86.36" y2="-124.968" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-108.712" x2="-93.98" y2="-116.84" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-100.584" x2="-86.36" y2="-108.712" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-84.328" x2="-86.36" y2="-100.584" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-76.2" x2="-86.36" y2="-84.328" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-68.072" x2="-86.36" y2="-76.2" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-59.944" x2="-86.36" y2="-68.072" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="-124.968" x2="-86.36" y2="-141.224" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="-108.712" x2="-86.36" y2="-124.968" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="-84.328" x2="-86.36" y2="-108.712" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.98" y1="-59.944" x2="-86.36" y2="-84.328" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="-51.816" x2="-93.98" y2="-59.944" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-27.432" x2="-86.36" y2="-51.816" width="0" layer="19" extent="1-1"/>
-<wire x1="-90.17" y1="-19.05" x2="-86.36" y2="-27.432" width="0" layer="19" extent="1-1"/>
+<wire x1="-90.17" y1="-19.05" x2="-86.36" y2="-51.816" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-11.43" x2="-90.17" y2="-19.05" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-3.81" x2="-90.17" y2="-11.43" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="10.16" x2="-90.17" y2="-3.81" width="0" layer="19" extent="1-1"/>
@@ -2798,24 +2780,16 @@ design rules under a new name.</description>
 <contactref element="IO29" pad="2"/>
 <contactref element="IO30" pad="2"/>
 <contactref element="IO31" pad="2"/>
-<contactref element="C1" pad="1"/>
 <contactref element="C4" pad="1"/>
 <contactref element="C5" pad="2"/>
 <contactref element="C2" pad="1"/>
-<contactref element="C6" pad="1"/>
-<contactref element="C9" pad="2"/>
-<contactref element="C11" pad="2"/>
 <contactref element="C12" pad="1"/>
 <contactref element="GREEN1" pad="A"/>
 <wire x1="-93.98" y1="-141.224" x2="-93.472" y2="-155.956" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-133.096" x2="-93.98" y2="-141.224" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-116.84" x2="-86.36" y2="-133.096" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-84.328" x2="-86.36" y2="-116.84" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-68.072" x2="-93.98" y2="-84.328" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-59.944" x2="-93.98" y2="-68.072" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.98" y1="-84.328" x2="-93.98" y2="-141.224" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="-59.944" x2="-93.98" y2="-84.328" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.98" y1="-51.816" x2="-86.36" y2="-59.944" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-27.432" x2="-93.98" y2="-51.816" width="0" layer="19" extent="1-1"/>
-<wire x1="-91.44" y1="10.16" x2="-93.98" y2="-27.432" width="0" layer="19" extent="1-1"/>
+<wire x1="-91.44" y1="10.16" x2="-93.98" y2="-51.816" width="0" layer="19" extent="1-1"/>
 <wire x1="-52.07" y1="2.54" x2="-91.44" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-49.53" y1="2.54" x2="-52.07" y2="2.54" width="0" layer="19" extent="1-1"/>
 <wire x1="-36.83" y1="2.54" x2="-49.53" y2="2.54" width="0" layer="19" extent="1-1"/>
@@ -3019,16 +2993,12 @@ design rules under a new name.</description>
 <contactref element="ADC0" pad="2"/>
 <contactref element="ADC" pad="15"/>
 <contactref element="5V_LCD" pad="2"/>
-<contactref element="C8" pad="1"/>
-<contactref element="C7" pad="1"/>
 <contactref element="C3" pad="1"/>
 <contactref element="C10" pad="1"/>
 <contactref element="C13" pad="1"/>
 <wire x1="-93.98" y1="-124.968" x2="-93.98" y2="-149.352" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.98" y1="-108.712" x2="-93.98" y2="-124.968" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-100.584" x2="-93.98" y2="-108.712" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-76.2" x2="-93.98" y2="-100.584" width="0" layer="19" extent="1-1"/>
-<wire x1="-88.9" y1="10.16" x2="-93.98" y2="-76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="-88.9" y1="10.16" x2="-93.98" y2="-108.712" width="0" layer="19" extent="1-1"/>
 <wire x1="-52.07" y1="10.16" x2="-88.9" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-83.82" y1="83.82" x2="-88.9" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-78.74" y1="90.17" x2="-83.82" y2="83.82" width="0" layer="19" extent="1-1"/>

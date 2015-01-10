@@ -9568,17 +9568,11 @@ naming: grid - package width</description>
 <part name="GREEN" library="led" deviceset="LED" device="5MM"/>
 <part name="U$4" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
-<part name="C1" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C4" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C5" library="capacitor-wima" deviceset="C" device="7.5/6"/>
-<part name="C6" library="capacitor-wima" deviceset="C" device="7.5/6"/>
-<part name="C7" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C2" library="capacitor-wima" deviceset="C" device="7.5/6"/>
-<part name="C8" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C3" library="capacitor-wima" deviceset="C" device="7.5/6"/>
-<part name="C9" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C10" library="capacitor-wima" deviceset="C" device="7.5/6"/>
-<part name="C11" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C12" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="C13" library="capacitor-wima" deviceset="C" device="7.5/6"/>
 <part name="GREEN1" library="led" deviceset="LED" device="5MM"/>
@@ -9709,19 +9703,13 @@ naming: grid - package width</description>
 <instance part="GREEN" gate="G$1" x="27.94" y="185.42" rot="R90"/>
 <instance part="U$4" gate="G$1" x="114.3" y="147.32"/>
 <instance part="GND23" gate="1" x="119.38" y="152.4" rot="R90"/>
-<instance part="C1" gate="G$1" x="40.64" y="5.08" rot="R180"/>
 <instance part="C4" gate="G$1" x="71.12" y="109.22" rot="R180"/>
 <instance part="C5" gate="G$1" x="-73.66" y="78.74" rot="R90"/>
-<instance part="C6" gate="G$1" x="-58.42" y="-15.24" rot="R180"/>
-<instance part="C7" gate="G$1" x="-58.42" y="-27.94" rot="R180"/>
 <instance part="C2" gate="G$1" x="30.48" y="114.3" rot="R90"/>
-<instance part="C8" gate="G$1" x="43.18" y="-15.24" rot="R180"/>
 <instance part="C3" gate="G$1" x="-58.42" y="67.31"/>
-<instance part="C9" gate="G$1" x="31.75" y="-41.91" rot="R270"/>
 <instance part="C10" gate="G$1" x="66.04" y="125.73" rot="R90"/>
-<instance part="C11" gate="G$1" x="30.48" y="11.43" rot="R270"/>
 <instance part="C12" gate="G$1" x="-22.86" y="24.13"/>
-<instance part="C13" gate="G$1" x="-17.78" y="39.37" rot="R90"/>
+<instance part="C13" gate="G$1" x="-17.78" y="27.94"/>
 <instance part="GREEN1" gate="G$1" x="-148.59" y="203.2" rot="R90"/>
 <instance part="+3V15" gate="G$1" x="-153.67" y="203.2" rot="R90"/>
 <instance part="GND24" gate="1" x="-140.97" y="203.2" rot="R90"/>
@@ -9861,12 +9849,6 @@ naming: grid - package width</description>
 <junction x="-81.28" y="-12.7"/>
 <junction x="-81.28" y="-15.24"/>
 <junction x="-81.28" y="-17.78"/>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="-76.2" y1="-12.7" x2="-76.2" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-10.16" x2="-58.42" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="-76.2" y1="-12.7" x2="-68.58" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-12.7" x2="-58.42" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="BOE/"/>
@@ -9984,9 +9966,6 @@ naming: grid - package width</description>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="NEOPIXEL" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="11.43" x2="33.02" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="15.24" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
@@ -10165,20 +10144,11 @@ naming: grid - package width</description>
 <pinref part="GND21" gate="1" pin="GND"/>
 <wire x1="58.42" y1="0" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="10.16" x2="45.72" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="10.16" x2="45.72" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="5V_LCD" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="-22.86" x2="48.26" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
-<wire x1="48.26" y1="-10.16" x2="43.18" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="48.26" y1="-10.16" x2="74.93" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="74.93" y1="-10.16" x2="74.93" y2="-26.67" width="0.1524" layer="91"/>
-<wire x1="74.93" y1="-26.67" x2="59.69" y2="-41.91" width="0.1524" layer="91"/>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="59.69" y1="-41.91" x2="34.29" y2="-41.91" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="P$2"/>
@@ -10300,9 +10270,6 @@ naming: grid - package width</description>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <wire x1="-81.28" y1="-25.4" x2="-73.66" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-25.4" x2="-71.12" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="-22.86" x2="-71.12" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="-71.12" y1="-17.78" x2="-58.42" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P" pin="VDD@2"/>
@@ -10334,8 +10301,6 @@ naming: grid - package width</description>
 <segment>
 <pinref part="LEVELSHIFTER" gate="A" pin="ENABLE"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
-<pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="20.32" x2="25.4" y2="11.43" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC4" gate="G$1" pin="2"/>
@@ -10491,16 +10456,12 @@ naming: grid - package width</description>
 <segment>
 <pinref part="LEVELSHIFTER" gate="B" pin="ENABLE"/>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="-33.02" x2="26.67" y2="-41.91" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="3V3_LCD" gate="G$1" pin="2"/>
 <pinref part="+3V13" gate="G$1" pin="+3V3"/>
 <wire x1="40.64" y1="2.54" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="-2.54" x2="58.42" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<junction x="40.64" y="2.54"/>
 </segment>
 <segment>
 <pinref part="GREEN1" gate="G$1" pin="A"/>
@@ -10839,11 +10800,6 @@ naming: grid - package width</description>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="-81.28" y1="-27.94" x2="-73.66" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-27.94" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="-30.48" x2="-71.12" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="-27.94" x2="-60.96" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="-27.94" x2="-60.96" y2="-30.48" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="-60.96" y1="-30.48" x2="-58.42" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RRDIO1" gate="G$1" pin="2"/>
@@ -10880,9 +10836,8 @@ naming: grid - package width</description>
 <segment>
 <pinref part="LEVELSHIFTER" gate="P" pin="VDD"/>
 <pinref part="P+12" gate="1" pin="+5V"/>
-<wire x1="-12.7" y1="30.48" x2="-20.32" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="-20.32" y1="30.48" x2="-20.32" y2="39.37" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ADC3" gate="G$1" pin="2"/>
@@ -10918,8 +10873,6 @@ naming: grid - package width</description>
 <pinref part="P+9" gate="1" pin="+5V"/>
 <wire x1="55.88" y1="-25.4" x2="48.26" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="-17.78" x2="43.18" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<junction x="43.18" y="-17.78"/>
 </segment>
 </net>
 <net name="DIO0" class="0">
@@ -11433,7 +11386,7 @@ naming: grid - package width</description>
 <net name="N$16" class="0">
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="39.37" x2="-12.7" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="22.86" x2="-12.7" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="22.86" x2="-10.16" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
