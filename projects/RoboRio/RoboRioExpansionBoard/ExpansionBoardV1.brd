@@ -2495,11 +2495,10 @@ design rules under a new name.</description>
 <element name="YELLOW" library="led" package="LED5MM" value="" x="-91.44" y="-11.43"/>
 <element name="GREEN" library="led" package="LED5MM" value="" x="-91.44" y="-19.05"/>
 <element name="U$4" library="RESETBUTTON3000" package="RESETBUTTON300000MILLION" value="BUTTON" x="89.916" y="74.168" rot="R180"/>
-<element name="C4" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-51.816"/>
-<element name="C2" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-84.328"/>
-<element name="C10" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-124.968"/>
-<element name="C12" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-141.224"/>
-<element name="C13" library="capacitor-wima" package="C7.5B6" value="" x="-90.17" y="-149.352"/>
+<element name="C4" library="capacitor-wima" package="C7.5B6" value=".1uF" x="-90.17" y="-51.816"/>
+<element name="C2" library="capacitor-wima" package="C7.5B6" value=".1uF" x="-90.17" y="-84.328"/>
+<element name="C12" library="capacitor-wima" package="C7.5B6" value=".1 uF" x="-90.17" y="-141.224"/>
+<element name="C13" library="capacitor-wima" package="C7.5B6" value=".1uF" x="-90.17" y="-149.352"/>
 <element name="GREEN1" library="led" package="LED5MM" value="" x="-92.202" y="-155.956"/>
 <element name="R5" library="resistor" package="0309V" value="10k" x="-92.71" y="-162.052"/>
 <element name="AI2" library="con-lstb-modified" package="MA03-1" value="" x="-91.694" y="-171.704">
@@ -2538,6 +2537,7 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-91.694" y="-185.674" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-185.674" size="1.778" layer="27" display="off"/>
 </element>
+<element name="C1" library="capacitor-wima" package="C7.5B6" value=".1uF" x="-90.17" y="-192.024"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2628,7 +2628,6 @@ design rules under a new name.</description>
 <contactref element="U$4" pad="P3"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C2" pad="2"/>
-<contactref element="C10" pad="2"/>
 <contactref element="C12" pad="2"/>
 <contactref element="GREEN1" pad="K"/>
 <contactref element="AI5" pad="1"/>
@@ -2638,6 +2637,7 @@ design rules under a new name.</description>
 <contactref element="AI3" pad="1"/>
 <contactref element="AI4" pad="1"/>
 <contactref element="5V_LCD" pad="1"/>
+<contactref element="C1" pad="1"/>
 <wire x1="-86.36" y1="-141.224" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-171.704" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-174.498" x2="-94.234" y2="-171.704" width="0" layer="19" extent="1-1"/>
@@ -2645,8 +2645,8 @@ design rules under a new name.</description>
 <wire x1="-94.234" y1="-180.086" x2="-94.234" y2="-177.292" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-182.88" x2="-94.234" y2="-180.086" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-185.674" x2="-94.234" y2="-182.88" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-124.968" x2="-86.36" y2="-141.224" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.36" y1="-84.328" x2="-86.36" y2="-124.968" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.98" y1="-192.024" x2="-94.234" y2="-185.674" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="-84.328" x2="-86.36" y2="-141.224" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="-51.816" x2="-86.36" y2="-84.328" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-19.05" x2="-86.36" y2="-51.816" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-11.43" x2="-90.17" y2="-19.05" width="0" layer="19" extent="1-1"/>
@@ -2782,7 +2782,6 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="33"/>
 <contactref element="PROPELLER" pad="32"/>
 <contactref element="PROPELLER" pad="12"/>
-<contactref element="ADC" pad="16"/>
 <contactref element="LEVELSHIFTER" pad="1"/>
 <contactref element="LEVELSHIFTER" pad="2"/>
 <contactref element="ADC4" pad="2"/>
@@ -2823,18 +2822,17 @@ design rules under a new name.</description>
 <contactref element="IO29" pad="2"/>
 <contactref element="IO30" pad="2"/>
 <contactref element="IO31" pad="2"/>
-<contactref element="C4" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="C12" pad="1"/>
 <contactref element="R5" pad="2"/>
+<contactref element="C1" pad="2"/>
 <wire x1="-93.98" y1="-141.224" x2="-91.44" y2="-162.052" width="0" layer="19" extent="1-1"/>
+<wire x1="-86.36" y1="-192.024" x2="-91.44" y2="-162.052" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.98" y1="-84.328" x2="-93.98" y2="-141.224" width="0" layer="19" extent="1-1"/>
-<wire x1="-93.98" y1="-51.816" x2="-93.98" y2="-84.328" width="0" layer="19" extent="1-1"/>
-<wire x1="-91.44" y1="10.16" x2="-93.98" y2="-51.816" width="0" layer="19" extent="1-1"/>
-<wire x1="-52.07" y1="2.54" x2="-91.44" y2="10.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-52.07" y1="2.54" x2="-93.98" y2="-84.328" width="0" layer="19" extent="1-1"/>
 <wire x1="-49.53" y1="2.54" x2="-52.07" y2="2.54" width="0" layer="19" extent="1-1"/>
 <wire x1="-36.83" y1="2.54" x2="-49.53" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="-68.58" y1="73.66" x2="-91.44" y2="10.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-68.58" y1="73.66" x2="-52.07" y2="2.54" width="0" layer="19" extent="1-1"/>
 <wire x1="-62.23" y1="83.82" x2="-68.58" y2="73.66" width="0" layer="19" extent="1-1"/>
 <wire x1="-49.53" y1="83.82" x2="-62.23" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-48.26" y1="96.52" x2="-49.53" y2="83.82" width="0" layer="19" extent="1-1"/>
@@ -3038,17 +3036,21 @@ design rules under a new name.</description>
 <contactref element="ADC2" pad="2"/>
 <contactref element="ADC1" pad="2"/>
 <contactref element="ADC0" pad="2"/>
-<contactref element="ADC" pad="15"/>
-<contactref element="C10" pad="1"/>
 <contactref element="C13" pad="1"/>
-<wire x1="-93.98" y1="-124.968" x2="-93.98" y2="-149.352" width="0" layer="19" extent="1-1"/>
-<wire x1="-88.9" y1="10.16" x2="-93.98" y2="-124.968" width="0" layer="19" extent="1-1"/>
+<contactref element="5V_LCD" pad="2"/>
+<contactref element="ADC" pad="16"/>
+<contactref element="C4" pad="1"/>
+<contactref element="ADC" pad="15"/>
+<wire x1="-93.98" y1="-51.816" x2="-93.98" y2="-149.352" width="0" layer="19" extent="1-1"/>
+<wire x1="-91.44" y1="10.16" x2="-93.98" y2="-51.816" width="0" layer="19" extent="1-1"/>
+<wire x1="-88.9" y1="10.16" x2="-91.44" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-52.07" y1="10.16" x2="-88.9" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-83.82" y1="83.82" x2="-88.9" y2="10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-78.74" y1="90.17" x2="-83.82" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-88.9" y1="90.17" x2="-83.82" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-68.58" y1="90.17" x2="-78.74" y2="90.17" width="0" layer="19" extent="1-1"/>
-<wire x1="-48.26" y1="90.17" x2="-68.58" y2="90.17" width="0" layer="19" extent="1-1"/>
+<wire x1="-58.42" y1="90.17" x2="-68.58" y2="90.17" width="0" layer="19" extent="1-1"/>
+<wire x1="-48.26" y1="90.17" x2="-58.42" y2="90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-27.94" y1="90.17" x2="-48.26" y2="90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-17.78" y1="90.17" x2="-27.94" y2="90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-17.78" y1="96.52" x2="-17.78" y2="90.17" width="0" layer="19" extent="1-1"/>
