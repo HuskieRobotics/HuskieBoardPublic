@@ -10147,11 +10147,6 @@ naming: grid - package width</description>
 <wire x1="48.26" y1="10.16" x2="45.72" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="5V_LCD" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="-22.86" x2="48.26" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="GND22" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="U$4" gate="G$1" pin="P$2"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 </segment>
@@ -10179,6 +10174,12 @@ naming: grid - package width</description>
 <wire x1="-247.65" y1="97.79" x2="-245.11" y2="97.79" width="0.1524" layer="91"/>
 <pinref part="AI4" gate="G$1" pin="1"/>
 <wire x1="-247.65" y1="83.82" x2="-245.11" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="5V_LCD" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="-22.86" x2="50.8" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="50.8" y1="-10.16" x2="48.26" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10889,8 +10890,6 @@ naming: grid - package width</description>
 <junction x="-20.32" y="-109.22"/>
 </segment>
 <segment>
-<pinref part="5V_LCD" gate="G$1" pin="2"/>
-<wire x1="58.42" y1="-25.4" x2="55.88" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
 <wire x1="55.88" y1="-25.4" x2="48.26" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="-17.78" x2="43.18" y2="-17.78" width="0.1524" layer="91"/>
