@@ -9583,6 +9583,9 @@ naming: grid - package width</description>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
+<part name="R6" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
+<part name="R7" library="resistor" deviceset="R-US_" device="0309/V" value="300"/>
+<part name="GND22" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9728,6 +9731,9 @@ naming: grid - package width</description>
 <instance part="P+11" gate="1" x="-5.08" y="-31.75" rot="R270"/>
 <instance part="P+13" gate="1" x="-5.08" y="-48.26" rot="R270"/>
 <instance part="P+14" gate="1" x="-5.08" y="-64.77" rot="R270"/>
+<instance part="R6" gate="G$1" x="-57.15" y="-101.6" rot="R180"/>
+<instance part="R7" gate="G$1" x="-67.31" y="-101.6" rot="R180"/>
+<instance part="GND22" gate="1" x="-72.39" y="-104.14"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -10198,6 +10204,10 @@ naming: grid - package width</description>
 <junction x="-67.31" y="171.45"/>
 <junction x="-67.31" y="157.48"/>
 </segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -10625,6 +10635,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="LEVELSHIFTER" gate="B" pin="IN"/>
 <wire x1="2.54" y1="-36.83" x2="-7.62" y2="-36.83" width="0.1524" layer="91"/>
+<label x="-3.81" y="-36.83" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO13" class="0">
@@ -10641,6 +10652,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="LEVELSHIFTER" gate="C" pin="IN"/>
 <wire x1="2.54" y1="-53.34" x2="-7.62" y2="-53.34" width="0.1524" layer="91"/>
+<label x="-5.08" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO15" class="0">
@@ -11190,6 +11202,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="LEVELSHIFTER" gate="D" pin="IN"/>
 <wire x1="2.54" y1="-69.85" x2="-7.62" y2="-69.85" width="0.1524" layer="91"/>
+<label x="-3.81" y="-69.85" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -11460,6 +11473,20 @@ naming: grid - package width</description>
 <wire x1="-36.83" y1="-69.85" x2="-36.83" y2="-104.14" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="CLK"/>
 <wire x1="-36.83" y1="-104.14" x2="-7.62" y2="-104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="ADC" gate="G$1" pin="DOUT"/>
+<wire x1="-7.62" y1="-101.6" x2="-52.07" y2="-101.6" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="-62.23" y1="-101.6" x2="-62.23" y2="-85.09" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

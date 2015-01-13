@@ -2532,6 +2532,8 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="-91.694" y="-185.674" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C1" library="capacitor-wima" package="C7.5B6" value=".1uF" x="-90.17" y="-192.024"/>
+<element name="R6" library="resistor" package="0309V" value="150" x="-92.71" y="-198.12"/>
+<element name="R7" library="resistor" package="0309V" value="300" x="-92.71" y="-203.708"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2632,6 +2634,7 @@ design rules under a new name.</description>
 <contactref element="AI4" pad="1"/>
 <contactref element="C1" pad="1"/>
 <contactref element="C13" pad="2"/>
+<contactref element="R7" pad="2"/>
 <wire x1="-86.36" y1="-149.352" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="-141.224" x2="-86.36" y2="-149.352" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-171.704" x2="-90.932" y2="-155.956" width="0" layer="19" extent="1-1"/>
@@ -2641,6 +2644,7 @@ design rules under a new name.</description>
 <wire x1="-94.234" y1="-182.88" x2="-94.234" y2="-180.086" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.234" y1="-185.674" x2="-94.234" y2="-182.88" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.98" y1="-192.024" x2="-94.234" y2="-185.674" width="0" layer="19" extent="1-1"/>
+<wire x1="-91.44" y1="-203.708" x2="-93.98" y2="-192.024" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="-84.328" x2="-86.36" y2="-141.224" width="0" layer="19" extent="1-1"/>
 <wire x1="-86.36" y1="-51.816" x2="-86.36" y2="-84.328" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.17" y1="-19.05" x2="-86.36" y2="-51.816" width="0" layer="19" extent="1-1"/>
@@ -3319,6 +3323,16 @@ design rules under a new name.</description>
 <contactref element="LEVELSHIFTER" pad="13"/>
 <contactref element="ADC" pad="13"/>
 <wire x1="-44.45" y1="10.16" x2="-83.82" y2="10.16" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$19">
+<contactref element="ADC" pad="12"/>
+<contactref element="R6" pad="1"/>
+<wire x1="-93.98" y1="-198.12" x2="-81.28" y2="10.16" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$20">
+<contactref element="R6" pad="2"/>
+<contactref element="R7" pad="1"/>
+<wire x1="-91.44" y1="-198.12" x2="-93.98" y2="-203.708" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
