@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -58,22 +58,23 @@
 <library>
 <packages>
 <package name="SDCARDLIB">
-<smd name="P$1" x="-11.91" y="13.18" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$2" x="-10.71" y="13.18" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$3" x="-9.41" y="13.18" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$4" x="-7.73" y="13.16" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$5" x="-5.3" y="13.18" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$6" x="-2.88" y="13.17" dx="1.5" dy="0.7" layer="1" rot="R270"/>
-<smd name="P$7" x="-0.46" y="13.17" dx="1.5" dy="0.7" layer="1" rot="R270"/>
-<smd name="P$8" x="2.06" y="13.17" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$9" x="4.5" y="13.17" dx="1.5" dy="0.7" layer="1" rot="R270"/>
-<smd name="P$10" x="6.95" y="13.14" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$11" x="9.37" y="13.13" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$12" x="11.89" y="13.13" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<hole x="-11.9" y="10.37" drill="1.1"/>
-<hole x="11.93" y="10.33" drill="1.6"/>
-<smd name="P$13" x="11.31" y="-4.04" dx="3" dy="2" layer="1"/>
-<smd name="P$14" x="0.19" y="-6" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$1" x="-14.42" y="13.4" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$2" x="-13.22" y="13.4" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$3" x="-11.92" y="13.4" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$4" x="-10.24" y="13.38" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$5" x="-7.81" y="13.4" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$6" x="-5.56" y="12.57" dx="1.5" dy="1" layer="1" rot="R270"/>
+<smd name="P$7" x="-3.08" y="12.57" dx="1.5" dy="1" layer="1" rot="R270"/>
+<smd name="P$8" x="-0.57" y="12.57" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="1.92" y="12.57" dx="1.5" dy="1" layer="1" rot="R270"/>
+<smd name="P$10" x="4.42" y="12.57" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="6.86" y="12.6" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="9.35" y="12.6" dx="1.5" dy="1" layer="1" rot="R90"/>
+<hole x="-14.41" y="10.6" drill="1.1"/>
+<hole x="9.43" y="10.43" drill="1.6"/>
+<smd name="P$13" x="-15.91" y="-13.33" dx="3" dy="2" layer="1"/>
+<smd name="P$14" x="17.19" y="-13.33" dx="3" dy="2" layer="1" rot="R180"/>
+<wire x1="-14.31" y1="12.52" x2="-14.46" y2="12.52" width="0.127" layer="25"/>
 </package>
 </packages>
 <symbols>
