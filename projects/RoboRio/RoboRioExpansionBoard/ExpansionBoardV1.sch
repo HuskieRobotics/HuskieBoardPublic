@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -9442,6 +9442,79 @@ naming: grid - package width</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SDcardlibraryroborio">
+<packages>
+<package name="SDCARDCONNECTION">
+<smd name="9" x="9.23" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="1" x="6.74" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="2" x="4.24" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="3" x="1.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="4" x="-0.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="5" x="-3.25" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="6" x="-5.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="7" x="-8.18" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="8" x="-9.89" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="CARDDETECT" x="-11.18" y="15.73" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="WRITEPROTECT" x="-12.38" y="15.73" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$12" x="-14.95" y="-12.02" dx="3" dy="2" layer="1" rot="R270"/>
+<hole x="-11.87" y="13.21" drill="1.1"/>
+<hole x="9.23" y="12.93" drill="1.6"/>
+<smd name="P$13" x="15.14" y="-12.03" dx="3" dy="2" layer="1" rot="R270"/>
+<wire x1="14.08" y1="-15.82" x2="14.08" y2="14.91" width="0.127" layer="21"/>
+<wire x1="14.08" y1="14.91" x2="-13.89" y2="14.91" width="0.127" layer="21"/>
+<wire x1="-13.89" y1="14.91" x2="-13.89" y2="-15.83" width="0.127" layer="21"/>
+<wire x1="14.08" y1="-15.83" x2="-13.89" y2="-15.83" width="0.127" layer="21"/>
+<wire x1="11.95" y1="14.875" x2="14.075" y2="12.75" width="0.127" layer="21"/>
+<text x="-7.7" y="-3.01" size="1.27" layer="21">SD-RSMT-2-MQ-WF
+
+</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SDCARDLIBSYMB">
+<pin name="CS" x="1.27" y="25.4" length="middle" rot="R180"/>
+<pin name="DI" x="1.27" y="22.86" length="middle" rot="R180"/>
+<pin name="VDD" x="1.27" y="5.08" length="middle" rot="R180"/>
+<pin name="SCLK" x="1.27" y="20.32" length="middle" rot="R180"/>
+<pin name="DO" x="1.27" y="17.78" length="middle" rot="R180"/>
+<pin name="DAT1" x="1.27" y="15.24" length="middle" rot="R180"/>
+<pin name="DAT2" x="1.27" y="27.94" length="middle" rot="R180"/>
+<pin name="GND" x="1.37" y="2.485" length="middle" rot="R180"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="29.21" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="29.21" x2="-19.05" y2="29.21" width="0.254" layer="94"/>
+<wire x1="-19.05" y1="29.21" x2="-19.05" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-19.05" y1="1.27" x2="-3.81" y2="1.27" width="0.254" layer="94"/>
+<pin name="WRITEPROTECT" x="1.27" y="12.7" length="middle" rot="R180"/>
+<pin name="CARDDETECT" x="1.27" y="10.16" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SDCARDLIBDEV">
+<gates>
+<gate name="G$1" symbol="SDCARDLIBSYMB" x="2.54" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="SDCARDCONNECTION">
+<connects>
+<connect gate="G$1" pin="CARDDETECT" pad="CARDDETECT"/>
+<connect gate="G$1" pin="CS" pad="1"/>
+<connect gate="G$1" pin="DAT1" pad="8"/>
+<connect gate="G$1" pin="DAT2" pad="9"/>
+<connect gate="G$1" pin="DI" pad="2"/>
+<connect gate="G$1" pin="DO" pad="7"/>
+<connect gate="G$1" pin="GND" pad="3 6 P$12 P$13"/>
+<connect gate="G$1" pin="SCLK" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+<connect gate="G$1" pin="WRITEPROTECT" pad="WRITEPROTECT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9510,9 +9583,9 @@ naming: grid - package width</description>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
-<part name="R2" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
-<part name="R3" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
-<part name="R4" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
@@ -9586,6 +9659,7 @@ naming: grid - package width</description>
 <part name="R6" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="0309/V" value="300"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
+<part name="U$5" library="SDcardlibraryroborio" deviceset="SDCARDLIBDEV" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9734,6 +9808,7 @@ naming: grid - package width</description>
 <instance part="R6" gate="G$1" x="-57.15" y="-101.6" rot="R180"/>
 <instance part="R7" gate="G$1" x="-67.31" y="-101.6" rot="R180"/>
 <instance part="GND22" gate="1" x="-72.39" y="-104.14"/>
+<instance part="U$5" gate="G$1" x="-24.13" y="62.23"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -9760,11 +9835,14 @@ naming: grid - package width</description>
 <wire x1="63.5" y1="40.64" x2="10.16" y2="40.64" width="0.762" layer="92"/>
 <wire x1="10.16" y1="40.64" x2="2.54" y2="48.26" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="-66.04" y2="48.26" width="0.762" layer="92"/>
-<wire x1="2.54" y1="48.26" x2="2.54" y2="190.5" width="0.762" layer="92"/>
+<wire x1="2.54" y1="48.26" x2="2.54" y2="95.25" width="0.762" layer="92"/>
+<wire x1="2.54" y1="95.25" x2="2.54" y2="190.5" width="0.762" layer="92"/>
 <wire x1="2.54" y1="190.5" x2="7.62" y2="195.58" width="0.762" layer="92"/>
 <wire x1="71.12" y1="50.8" x2="101.6" y2="50.8" width="0.762" layer="92"/>
 <wire x1="2.54" y1="48.26" x2="2.54" y2="-83.82" width="0.762" layer="92"/>
 <wire x1="101.6" y1="50.8" x2="101.6" y2="-401.32" width="0.762" layer="92"/>
+<wire x1="2.54" y1="95.25" x2="-18.415" y2="95.25" width="0.762" layer="92"/>
+<wire x1="-18.415" y1="95.25" x2="-18.415" y2="62.23" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,SPI_CS,SPI_CLK,SPI_MOSI,SPI_MISO,I2C_SCL,I2C_SDA">
@@ -10637,6 +10715,10 @@ naming: grid - package width</description>
 <wire x1="2.54" y1="-36.83" x2="-7.62" y2="-36.83" width="0.1524" layer="91"/>
 <label x="-3.81" y="-36.83" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="CS"/>
+<wire x1="-18.415" y1="87.63" x2="-22.86" y2="87.63" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="IO13" class="0">
 <segment>
@@ -11204,6 +11286,10 @@ naming: grid - package width</description>
 <wire x1="2.54" y1="-69.85" x2="-7.62" y2="-69.85" width="0.1524" layer="91"/>
 <label x="-3.81" y="-69.85" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="SCLK"/>
+<wire x1="-18.415" y1="82.55" x2="-22.86" y2="82.55" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -11534,4 +11620,10 @@ naming: grid - package width</description>
 </errors>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
