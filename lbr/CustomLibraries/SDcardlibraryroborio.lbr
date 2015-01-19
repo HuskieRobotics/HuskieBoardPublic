@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -66,13 +66,13 @@
 <smd name="P$6" x="-7.06" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
 <smd name="P$7" x="-9.56" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
 <smd name="P$8" x="-11.99" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$10" x="-13.69" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$9" x="-14.99" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$12" x="-16.29" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$11" x="-17.78" y="-23.53" dx="3" dy="2" layer="1" rot="R90"/>
-<wire x1="-16.85" y1="2.3" x2="-16.85" y2="-26.33" width="0.127" layer="21"/>
-<wire x1="-16.85" y1="-26.33" x2="-16.83" y2="-26.33" width="0.127" layer="21"/>
-<smd name="P$13" x="13.01" y="-22.54" dx="3" dy="2" layer="1" rot="R90"/>
+<smd name="P$9" x="-13.7" y="3.03" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$10" x="-14.99" y="3.03" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$11" x="-16.19" y="3.03" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$12" x="-18.76" y="-24.72" dx="3" dy="2" layer="1" rot="R270"/>
+<hole x="-15.68" y="0.51" drill="1.1"/>
+<hole x="5.42" y="0.23" drill="1.6"/>
+<smd name="P$13" x="11.33" y="-24.73" dx="3" dy="2" layer="1" rot="R270"/>
 </package>
 </packages>
 <symbols>
