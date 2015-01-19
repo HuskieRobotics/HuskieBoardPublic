@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -9591,7 +9591,7 @@ naming: grid - package width</description>
 <sheet>
 <plain>
 <text x="152.4" y="-121.92" size="1.778" layer="91" rot="R270">Change AAAALLL of these to 4 pins. Library is already there?</text>
-<text x="-114.3" y="-82.55" size="1.778" layer="91">POWER LED</text>
+<text x="-45.72" y="105.41" size="1.778" layer="91">POWER LED</text>
 <text x="-299.72" y="226.06" size="1.778" layer="97">test</text>
 </plain>
 <instances>
@@ -9699,7 +9699,7 @@ naming: grid - package width</description>
 <instance part="IO31" gate="G$1" x="124.46" y="-459.74" rot="R180"/>
 <instance part="GND20" gate="1" x="109.22" y="35.56" rot="R180"/>
 <instance part="+3V12" gate="G$1" x="106.68" y="25.4" rot="R270"/>
-<instance part="LEVELSHIFTER" gate="B" x="-20.32" y="-34.29" rot="R180"/>
+<instance part="LEVELSHIFTER" gate="B" x="-21.59" y="-34.29" rot="R180"/>
 <instance part="5V_LCD" gate="G$1" x="67.31" y="-2.54" rot="R180"/>
 <instance part="P+9" gate="1" x="40.64" y="1.27" rot="R90"/>
 <instance part="GND21" gate="1" x="46.99" y="7.62"/>
@@ -9707,15 +9707,15 @@ naming: grid - package width</description>
 <instance part="YELLOW" gate="G$1" x="27.94" y="195.58" rot="R90"/>
 <instance part="GREEN" gate="G$1" x="27.94" y="185.42" rot="R90"/>
 <instance part="U$4" gate="G$1" x="114.3" y="147.32"/>
-<instance part="GND23" gate="1" x="119.38" y="152.4" rot="R90"/>
+<instance part="GND23" gate="1" x="116.84" y="147.32"/>
 <instance part="C4" gate="G$1" x="-20.32" y="-121.92" rot="R180"/>
 <instance part="C2" gate="G$1" x="30.48" y="114.3" rot="R90"/>
 <instance part="C12" gate="G$1" x="-35.56" y="26.67"/>
 <instance part="C13" gate="G$1" x="-25.4" y="26.67"/>
-<instance part="GREEN1" gate="G$1" x="-104.14" y="-76.2" rot="R90"/>
-<instance part="+3V15" gate="G$1" x="-119.38" y="-76.2" rot="R90"/>
-<instance part="GND24" gate="1" x="-96.52" y="-76.2" rot="R90"/>
-<instance part="R5" gate="G$1" x="-111.76" y="-76.2" rot="R180"/>
+<instance part="GREEN1" gate="G$1" x="-35.56" y="111.76" rot="R90"/>
+<instance part="+3V15" gate="G$1" x="-50.8" y="111.76" rot="R90"/>
+<instance part="GND24" gate="1" x="-27.94" y="111.76" rot="R90"/>
+<instance part="R5" gate="G$1" x="-43.18" y="111.76" rot="R180"/>
 <instance part="AI2" gate="G$1" x="-57.15" y="182.88" rot="R180"/>
 <instance part="AI3" gate="G$1" x="-57.15" y="168.91" rot="R180"/>
 <instance part="AI1" gate="G$1" x="-57.15" y="196.85" rot="R180"/>
@@ -9726,14 +9726,14 @@ naming: grid - package width</description>
 <instance part="GND25" gate="1" x="-62.23" y="220.98" rot="MR0"/>
 <instance part="C1" gate="G$1" x="78.74" y="198.12" rot="R90"/>
 <instance part="P+7" gate="1" x="-7.62" y="-129.54" rot="R180"/>
-<instance part="LEVELSHIFTER" gate="C" x="-20.32" y="-50.8" rot="R180"/>
-<instance part="LEVELSHIFTER" gate="D" x="-20.32" y="-67.31" rot="R180"/>
-<instance part="P+11" gate="1" x="-5.08" y="-31.75" rot="R270"/>
-<instance part="P+13" gate="1" x="-5.08" y="-48.26" rot="R270"/>
-<instance part="P+14" gate="1" x="-5.08" y="-64.77" rot="R270"/>
-<instance part="R6" gate="G$1" x="-57.15" y="-101.6" rot="R180"/>
-<instance part="R7" gate="G$1" x="-67.31" y="-101.6" rot="R180"/>
-<instance part="GND22" gate="1" x="-72.39" y="-104.14"/>
+<instance part="LEVELSHIFTER" gate="C" x="-21.59" y="-50.8" rot="R180"/>
+<instance part="LEVELSHIFTER" gate="D" x="-21.59" y="-67.31" rot="R180"/>
+<instance part="P+11" gate="1" x="-6.35" y="-31.75" rot="R270"/>
+<instance part="P+13" gate="1" x="-6.35" y="-48.26" rot="R270"/>
+<instance part="P+14" gate="1" x="-6.35" y="-64.77" rot="R270"/>
+<instance part="R6" gate="G$1" x="-50.8" y="-101.6" rot="R180"/>
+<instance part="R7" gate="G$1" x="-60.96" y="-101.6" rot="R180"/>
+<instance part="GND22" gate="1" x="-66.04" y="-104.14"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -10172,6 +10172,7 @@ naming: grid - package width</description>
 <segment>
 <pinref part="U$4" gate="G$1" pin="P$2"/>
 <pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="116.84" y1="149.86" x2="116.84" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GREEN1" gate="G$1" pin="C"/>
@@ -10513,6 +10514,7 @@ naming: grid - package width</description>
 <pinref part="U$4" gate="G$1" pin="P$1"/>
 <wire x1="93.98" y1="162.56" x2="93.98" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="154.94" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
+<label x="86.36" y="152.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO4" class="0">
@@ -10634,7 +10636,7 @@ naming: grid - package width</description>
 </segment>
 <segment>
 <pinref part="LEVELSHIFTER" gate="B" pin="IN"/>
-<wire x1="2.54" y1="-36.83" x2="-7.62" y2="-36.83" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-36.83" x2="-8.89" y2="-36.83" width="0.1524" layer="91"/>
 <label x="-3.81" y="-36.83" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -10651,8 +10653,8 @@ naming: grid - package width</description>
 </segment>
 <segment>
 <pinref part="LEVELSHIFTER" gate="C" pin="IN"/>
-<wire x1="2.54" y1="-53.34" x2="-7.62" y2="-53.34" width="0.1524" layer="91"/>
-<label x="-5.08" y="-53.34" size="1.778" layer="95"/>
+<wire x1="2.54" y1="-53.34" x2="-8.89" y2="-53.34" width="0.1524" layer="91"/>
+<label x="-6.35" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO15" class="0">
@@ -10665,6 +10667,13 @@ naming: grid - package width</description>
 <wire x1="116.84" y1="-218.44" x2="101.6" y2="-218.44" width="0.1524" layer="91"/>
 <label x="104.14" y="-218.44" size="1.778" layer="95"/>
 <pinref part="IO15" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="-55.88" y1="-101.6" x2="-55.88" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-78.74" x2="-55.88" y2="-78.74" width="0.1524" layer="91"/>
+<label x="-3.81" y="-78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO16" class="0">
@@ -11201,7 +11210,7 @@ naming: grid - package width</description>
 </segment>
 <segment>
 <pinref part="LEVELSHIFTER" gate="D" pin="IN"/>
-<wire x1="2.54" y1="-69.85" x2="-7.62" y2="-69.85" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-69.85" x2="-8.89" y2="-69.85" width="0.1524" layer="91"/>
 <label x="-3.81" y="-69.85" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -11451,42 +11460,35 @@ naming: grid - package width</description>
 <net name="N$15" class="0">
 <segment>
 <pinref part="LEVELSHIFTER" gate="B" pin="OUT"/>
-<wire x1="-33.02" y1="-36.83" x2="-41.91" y2="-36.83" width="0.1524" layer="91"/>
-<wire x1="-41.91" y1="-36.83" x2="-41.91" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="-34.29" y1="-36.83" x2="-43.18" y2="-36.83" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-36.83" x2="-43.18" y2="-96.52" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="/CS"/>
-<wire x1="-41.91" y1="-96.52" x2="-7.62" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-96.52" x2="-7.62" y2="-96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
 <pinref part="LEVELSHIFTER" gate="C" pin="OUT"/>
-<wire x1="-33.02" y1="-53.34" x2="-39.37" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="-39.37" y1="-53.34" x2="-39.37" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="-34.29" y1="-53.34" x2="-40.64" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-53.34" x2="-40.64" y2="-99.06" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="DIN"/>
-<wire x1="-39.37" y1="-99.06" x2="-7.62" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-99.06" x2="-7.62" y2="-99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="LEVELSHIFTER" gate="D" pin="OUT"/>
-<wire x1="-33.02" y1="-69.85" x2="-36.83" y2="-69.85" width="0.1524" layer="91"/>
-<wire x1="-36.83" y1="-69.85" x2="-36.83" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="-34.29" y1="-69.85" x2="-38.1" y2="-69.85" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-69.85" x2="-38.1" y2="-104.14" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="CLK"/>
-<wire x1="-36.83" y1="-104.14" x2="-7.62" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-104.14" x2="-7.62" y2="-104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
 <segment>
 <pinref part="ADC" gate="G$1" pin="DOUT"/>
-<wire x1="-7.62" y1="-101.6" x2="-52.07" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-101.6" x2="-45.72" y2="-101.6" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="-62.23" y1="-101.6" x2="-62.23" y2="-85.09" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
