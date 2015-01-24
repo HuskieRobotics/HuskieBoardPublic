@@ -6349,104 +6349,6 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="40xx-2">
-<description>&lt;b&gt;CMOS Logic Devices, 4000 Series&lt;/b&gt;&lt;p&gt;
-Based on the following sources:
-&lt;ul&gt;
-&lt;li&gt;Motorola &lt;i&gt;CMOS LOGIC DATA&lt;/i&gt;; book, 02/88, DL131 REV 1
-&lt;li&gt;http://www.elexp.com
-&lt;li&gt;http://www.intersil.com
-&lt;li&gt;http://www.ls3c.com.tw/product/1/COMOS.html
-&lt;/ul&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="DIL16">
-<description>&lt;b&gt;Dual In Line Package&lt;/b&gt;</description>
-<wire x1="10.16" y1="2.921" x2="-10.16" y2="2.921" width="0.1524" layer="21"/>
-<wire x1="-10.16" y1="-2.921" x2="10.16" y2="-2.921" width="0.1524" layer="21"/>
-<wire x1="10.16" y1="2.921" x2="10.16" y2="-2.921" width="0.1524" layer="21"/>
-<wire x1="-10.16" y1="2.921" x2="-10.16" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="-10.16" y1="-2.921" x2="-10.16" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="-10.16" y1="1.016" x2="-10.16" y2="-1.016" width="0.1524" layer="21" curve="-180"/>
-<pad name="1" x="-8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="2" x="-6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="7" x="6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="8" x="8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="3" x="-3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="4" x="-1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="6" x="3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="5" x="1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="9" x="8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="10" x="6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="11" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="12" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="13" x="-1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="14" x="-3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="15" x="-6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="16" x="-8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<text x="-10.541" y="-2.921" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="-7.493" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="40109">
-<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.4064" layer="94"/>
-<text x="-7.62" y="5.715" size="1.778" layer="95">&gt;NAME</text>
-<text x="-7.62" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="IN" x="-12.7" y="2.54" length="middle" direction="in" swaplevel="1"/>
-<pin name="ENABLE" x="-12.7" y="-2.54" length="middle" direction="in" swaplevel="1"/>
-<pin name="OUT" x="12.7" y="2.54" length="middle" direction="hiz" swaplevel="1" rot="R180"/>
-</symbol>
-<symbol name="PWR3">
-<text x="-2.54" y="-1.016" size="1.778" layer="95">&gt;NAME</text>
-<text x="-0.635" y="2.54" size="1.27" layer="95" rot="R90">VDD</text>
-<text x="1.905" y="-5.842" size="1.27" layer="95" rot="R90">VSS</text>
-<text x="4.445" y="2.54" size="1.27" layer="95" rot="R90">VCC</text>
-<pin name="VSS" x="0" y="-7.62" visible="pad" length="middle" direction="pwr" rot="R90"/>
-<pin name="VDD" x="-2.54" y="7.62" visible="pad" length="middle" direction="pwr" rot="R270"/>
-<pin name="VCC" x="2.54" y="7.62" visible="pad" length="middle" direction="pwr" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="40109" prefix="IC">
-<gates>
-<gate name="A" symbol="40109" x="-10.16" y="15.24" swaplevel="1"/>
-<gate name="B" symbol="40109" x="22.86" y="15.24" swaplevel="1"/>
-<gate name="C" symbol="40109" x="-10.16" y="-10.16" swaplevel="1"/>
-<gate name="D" symbol="40109" x="22.86" y="-10.16" swaplevel="1"/>
-<gate name="P" symbol="PWR3" x="-50.8" y="5.08" addlevel="request"/>
-</gates>
-<devices>
-<device name="" package="DIL16">
-<connects>
-<connect gate="A" pin="ENABLE" pad="2"/>
-<connect gate="A" pin="IN" pad="3"/>
-<connect gate="A" pin="OUT" pad="4"/>
-<connect gate="B" pin="ENABLE" pad="7"/>
-<connect gate="B" pin="IN" pad="6"/>
-<connect gate="B" pin="OUT" pad="5"/>
-<connect gate="C" pin="ENABLE" pad="9"/>
-<connect gate="C" pin="IN" pad="10"/>
-<connect gate="C" pin="OUT" pad="11"/>
-<connect gate="D" pin="ENABLE" pad="15"/>
-<connect gate="D" pin="IN" pad="14"/>
-<connect gate="D" pin="OUT" pad="13"/>
-<connect gate="P" pin="VCC" pad="1"/>
-<connect gate="P" pin="VDD" pad="16"/>
-<connect gate="P" pin="VSS" pad="8"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="con-lstb-modified">
 <description>&lt;b&gt;Pin Headers&lt;/b&gt;&lt;p&gt;
 Naming:&lt;p&gt;
@@ -10007,10 +9909,7 @@ Wickmann</description>
 <part name="PWM8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="PWM9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="ADC" library="adafruit" deviceset="MCP3008" device=""/>
-<part name="LEVELSHIFTER" library="40xx-2" deviceset="40109" device=""/>
 <part name="NEOPIXEL" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="P+12" library="supply1" deviceset="+5V" device=""/>
-<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="0309/V" value="150"/>
@@ -10021,8 +9920,6 @@ Wickmann</description>
 <part name="GREEN" library="led" deviceset="LED" device="5MM"/>
 <part name="U$4" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
 <part name="C2" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
-<part name="C12" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1 uF"/>
-<part name="C13" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
 <part name="AI2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
@@ -10051,7 +9948,6 @@ Wickmann</description>
 <part name="SUPPLY12" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
-<part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY18" library="supply2" deviceset="DGND" device=""/>
 <part name="ADC0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R20" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
@@ -10200,10 +10096,7 @@ Wickmann</description>
 <instance part="PWM8" gate="G$1" x="-355.6" y="12.7" rot="R270"/>
 <instance part="PWM9" gate="G$1" x="-355.6" y="0" rot="R270"/>
 <instance part="ADC" gate="G$1" x="-7.62" y="-83.82" rot="R180"/>
-<instance part="LEVELSHIFTER" gate="P" x="-342.9" y="-71.12"/>
 <instance part="NEOPIXEL" gate="G$1" x="-223.52" y="-53.34" rot="R180"/>
-<instance part="P+12" gate="1" x="-345.44" y="-60.96"/>
-<instance part="+3V6" gate="G$1" x="-337.82" y="-54.61" rot="R270"/>
 <instance part="R2" gate="G$1" x="-71.12" y="149.86" rot="R180"/>
 <instance part="R3" gate="G$1" x="-71.12" y="160.02" rot="R180"/>
 <instance part="R4" gate="G$1" x="-71.12" y="139.7"/>
@@ -10214,8 +10107,6 @@ Wickmann</description>
 <instance part="GREEN" gate="G$1" x="-58.42" y="139.7" rot="R90"/>
 <instance part="U$4" gate="G$1" x="27.94" y="101.6"/>
 <instance part="C2" gate="G$1" x="-55.88" y="68.58" rot="R90"/>
-<instance part="C12" gate="G$1" x="-368.3" y="-67.31"/>
-<instance part="C13" gate="G$1" x="-358.14" y="-67.31"/>
 <instance part="AI2" gate="G$1" x="-189.23" y="45.72" rot="R180"/>
 <instance part="AI3" gate="G$1" x="-189.23" y="31.75" rot="R180"/>
 <instance part="AI1" gate="G$1" x="-189.23" y="59.69" rot="R180"/>
@@ -10244,7 +10135,6 @@ Wickmann</description>
 <instance part="SUPPLY12" gate="G$1" x="33.02" y="106.68" rot="R90"/>
 <instance part="SUPPLY13" gate="G$1" x="36.83" y="-27.94"/>
 <instance part="SUPPLY14" gate="G$1" x="-241.3" y="-50.8" rot="R270"/>
-<instance part="SUPPLY15" gate="G$1" x="-342.9" y="-81.28"/>
 <instance part="SUPPLY18" gate="G$1" x="-259.08" y="27.94"/>
 <instance part="ADC0" gate="G$1" x="71.12" y="-266.7" rot="R180"/>
 <instance part="R20" gate="G$1" x="55.88" y="-269.24" rot="MR180"/>
@@ -10267,11 +10157,11 @@ Wickmann</description>
 <instance part="IC2" gate="B" x="-284.48" y="-124.46"/>
 <instance part="IC2" gate="C" x="-284.48" y="-83.82"/>
 <instance part="IC2" gate="D" x="-284.48" y="-104.14"/>
-<instance part="IC2" gate="P" x="-269.24" y="-48.26" rot="R90"/>
+<instance part="IC2" gate="P" x="-246.38" y="-38.1" rot="R90"/>
 <instance part="SUPPLY37" gate="G$1" x="-285.75" y="-71.12"/>
-<instance part="P+4" gate="1" x="-292.1" y="-48.26" rot="R90"/>
-<instance part="C17" gate="G$1" x="-267.97" y="-43.18" rot="R270"/>
-<instance part="SUPPLY38" gate="G$1" x="-257.302" y="-48.26" rot="R90"/>
+<instance part="P+4" gate="1" x="-269.24" y="-38.1" rot="R90"/>
+<instance part="C17" gate="G$1" x="-245.11" y="-22.86" rot="R270"/>
+<instance part="SUPPLY38" gate="G$1" x="-234.442" y="-38.1" rot="R90"/>
 <instance part="ADC1" gate="G$1" x="71.12" y="-236.22" rot="R180"/>
 <instance part="R6" gate="G$1" x="55.88" y="-238.76" rot="MR180"/>
 <instance part="R8" gate="G$1" x="38.1" y="-245.11" rot="MR90"/>
@@ -10524,15 +10414,6 @@ Wickmann</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="LEVELSHIFTER" gate="P" pin="VCC"/>
-<pinref part="+3V6" gate="G$1" pin="+3V3"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="-340.36" y1="-54.61" x2="-340.36" y2="-63.5" width="0.1524" layer="91"/>
-<junction x="-340.36" y="-54.61"/>
-<wire x1="-340.36" y1="-54.61" x2="-368.3" y2="-54.61" width="0.1524" layer="91"/>
-<wire x1="-368.3" y1="-54.61" x2="-368.3" y2="-64.77" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$6" gate="G$1" pin="VDD"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="-162.56" y1="45.72" x2="-160.02" y2="45.72" width="0.1524" layer="91"/>
@@ -10648,11 +10529,6 @@ Wickmann</description>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P4"/>
 <wire x1="-83.82" y1="40.64" x2="-63.5" y2="40.64" width="0.1524" layer="91"/>
 <label x="-81.28" y="40.64" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="-299.72" y1="-55.88" x2="-274.32" y2="-55.88" width="0.1524" layer="91"/>
-<label x="-292.1" y="-55.88" size="1.778" layer="95"/>
-<pinref part="IC2" gate="A" pin="I"/>
 </segment>
 </net>
 <net name="IO5" class="0">
@@ -10917,14 +10793,6 @@ Wickmann</description>
 <wire x1="-355.6" y1="5.08" x2="-355.6" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LEVELSHIFTER" gate="P" pin="VDD"/>
-<pinref part="P+12" gate="1" pin="+5V"/>
-<wire x1="-345.44" y1="-63.5" x2="-358.14" y2="-63.5" width="0.1524" layer="91"/>
-<wire x1="-358.14" y1="-63.5" x2="-358.14" y2="-64.77" width="0.1524" layer="91"/>
-<pinref part="C13" gate="G$1" pin="1"/>
-<junction x="-345.44" y="-63.5"/>
-</segment>
-<segment>
 <pinref part="5V_LCD" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="-34.29" x2="36.83" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="36.83" y1="-38.1" x2="49.53" y2="-38.1" width="0.1524" layer="91"/>
@@ -10964,13 +10832,13 @@ Wickmann</description>
 </segment>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="-289.56" y1="-48.26" x2="-281.94" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-281.94" y1="-48.26" x2="-281.94" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-266.7" y1="-38.1" x2="-259.08" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-259.08" y1="-38.1" x2="-259.08" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="C17" gate="G$1" pin="2"/>
-<wire x1="-273.05" y1="-43.18" x2="-281.94" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-250.19" y1="-22.86" x2="-259.08" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="VCC"/>
-<wire x1="-281.94" y1="-48.26" x2="-276.86" y2="-48.26" width="0.1524" layer="91"/>
-<junction x="-281.94" y="-48.26"/>
+<wire x1="-259.08" y1="-38.1" x2="-254" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="-259.08" y="-38.1"/>
 </segment>
 <segment>
 <pinref part="ADC1" gate="G$1" pin="2"/>
@@ -11464,17 +11332,6 @@ Wickmann</description>
 <pinref part="SUPPLY14" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="LEVELSHIFTER" gate="P" pin="VSS"/>
-<pinref part="C12" gate="G$1" pin="2"/>
-<junction x="-342.9" y="-78.74"/>
-<wire x1="-342.9" y1="-78.74" x2="-368.3" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-368.3" y1="-78.74" x2="-368.3" y2="-72.39" width="0.1524" layer="91"/>
-<pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="-342.9" y1="-78.74" x2="-358.14" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-358.14" y1="-78.74" x2="-358.14" y2="-72.39" width="0.1524" layer="91"/>
-<pinref part="SUPPLY15" gate="G$1" pin="DGND"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="8-DGND"/>
 <pinref part="U$1" gate="G$1" pin="16-DGND"/>
 <wire x1="-264.16" y1="40.64" x2="-264.16" y2="38.1" width="0.1524" layer="91"/>
@@ -11572,12 +11429,12 @@ Wickmann</description>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="1"/>
-<wire x1="-265.43" y1="-43.18" x2="-259.842" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-242.57" y1="-22.86" x2="-236.982" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="GND"/>
-<wire x1="-259.842" y1="-43.18" x2="-259.842" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-259.842" y1="-48.26" x2="-261.62" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-236.982" y1="-22.86" x2="-236.982" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-236.982" y1="-38.1" x2="-238.76" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY38" gate="G$1" pin="DGND"/>
-<junction x="-259.842" y="-48.26"/>
+<junction x="-236.982" y="-38.1"/>
 </segment>
 <segment>
 <pinref part="ADC1" gate="G$1" pin="1"/>
