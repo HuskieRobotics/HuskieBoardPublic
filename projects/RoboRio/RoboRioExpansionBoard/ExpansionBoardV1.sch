@@ -9918,6 +9918,64 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="fuse">
+<description>&lt;b&gt;Fuses and Fuse Holders&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TR5">
+<description>&lt;b&gt;FUSE&lt;/b&gt;&lt;p&gt;
+Wickmann</description>
+<wire x1="-2.159" y1="0" x2="2.159" y2="0" width="0.1524" layer="51"/>
+<wire x1="-1.27" y1="0.381" x2="-1.27" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="-1.27" y1="-0.381" x2="1.27" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="1.27" y1="0.381" x2="1.27" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="1.27" y1="0.381" x2="-1.27" y2="0.381" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="4.318" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="0.8128" diameter="1.778" shape="long" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="0.8128" diameter="1.778" shape="long" rot="R90"/>
+<text x="-2.54" y="5.08" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<wire x1="-3.81" y1="-0.762" x2="3.81" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0.762" x2="-3.81" y2="0.762" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-0.762" x2="3.81" y2="0.762" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0.762" x2="-3.81" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.397" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-2.921" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TR5" prefix="F" uservalue="yes">
+<description>&lt;b&gt;FUSE&lt;/b&gt;&lt;p&gt;
+Wickmann</description>
+<gates>
+<gate name="1" symbol="FUSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TR5">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10105,6 +10163,10 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY34" library="supply2" deviceset="DGND" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
+<part name="F1" library="fuse" deviceset="TR5" device=""/>
+<part name="F2" library="fuse" deviceset="TR5" device=""/>
+<part name="P+15" library="supply1" deviceset="+5V" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10196,7 +10258,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <instance part="AIO" gate="G$1" x="-57.15" y="210.82" rot="R180"/>
 <instance part="P+10" gate="1" x="-69.85" y="232.41" rot="MR0"/>
 <instance part="C1" gate="G$1" x="78.74" y="198.12" rot="R90"/>
-<instance part="U$6" gate="G$1" x="26.67" y="238.76"/>
+<instance part="U$6" gate="G$1" x="24.13" y="238.76"/>
 <instance part="+3V5" gate="G$1" x="30.48" y="243.84" rot="R270"/>
 <instance part="RN1" gate="G$1" x="53.3146" y="256.54" rot="R270"/>
 <instance part="+3V14" gate="G$1" x="66.0146" y="266.7" rot="R270"/>
@@ -10238,8 +10300,8 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <instance part="R7" gate="G$1" x="-10.16" y="-73.66" rot="R180"/>
 <instance part="P+2" gate="1" x="71.12" y="-280.67"/>
 <instance part="IC2" gate="A" x="45.72" y="25.4" rot="MR180"/>
-<instance part="IC2" gate="B" x="-101.6" y="-35.56"/>
-<instance part="IC2" gate="C" x="-127" y="-50.8"/>
+<instance part="IC2" gate="B" x="-99.06" y="-35.56"/>
+<instance part="IC2" gate="C" x="-124.46" y="-50.8"/>
 <instance part="IC2" gate="D" x="-81.28" y="-66.04"/>
 <instance part="IC2" gate="P" x="40.64" y="33.02" rot="R90"/>
 <instance part="SUPPLY37" gate="G$1" x="24.13" y="10.16"/>
@@ -10295,6 +10357,10 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <instance part="SUPPLY30" gate="G$1" x="76.2" y="-88.9" rot="R270"/>
 <instance part="SUPPLY34" gate="G$1" x="63.5" y="-110.49"/>
 <instance part="P+14" gate="1" x="71.12" y="-85.09"/>
+<instance part="F1" gate="1" x="-177.8" y="43.18" rot="R180"/>
+<instance part="F2" gate="1" x="-177.8" y="48.26" rot="R180"/>
+<instance part="P+15" gate="1" x="-185.42" y="43.18" rot="R90"/>
+<instance part="+3V3" gate="G$1" x="-185.42" y="48.26" rot="R90"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -10317,7 +10383,6 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <wire x1="71.12" y1="50.8" x2="71.12" y2="48.26" width="0.762" layer="92"/>
 <wire x1="71.12" y1="48.26" x2="63.5" y2="40.64" width="0.762" layer="92"/>
 <wire x1="63.5" y1="40.64" x2="2.54" y2="40.64" width="0.762" layer="92"/>
-<wire x1="2.54" y1="40.64" x2="-66.04" y2="40.64" width="0.762" layer="92"/>
 <wire x1="2.54" y1="40.64" x2="2.54" y2="129.54" width="0.762" layer="92"/>
 <wire x1="2.54" y1="129.54" x2="2.54" y2="190.5" width="0.762" layer="92"/>
 <wire x1="2.54" y1="190.5" x2="7.62" y2="195.58" width="0.762" layer="92"/>
@@ -10327,7 +10392,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <wire x1="2.54" y1="129.54" x2="17.78" y2="129.54" width="0.762" layer="92"/>
 <wire x1="17.78" y1="129.54" x2="40.64" y2="152.4" width="0.762" layer="92"/>
 <wire x1="40.64" y1="152.4" x2="40.64" y2="266.7" width="0.762" layer="92"/>
-<wire x1="-66.04" y1="40.64" x2="-66.04" y2="50.8" width="0.762" layer="92"/>
+<wire x1="2.54" y1="40.64" x2="-63.5" y2="40.64" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="IO[0..31],AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,IO0,I2C_SCL,I2C_SDA">
@@ -10341,8 +10406,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <wire x1="-149.86" y1="124.46" x2="-73.66" y2="124.46" width="0.762" layer="92"/>
 <wire x1="-152.4" y1="121.92" x2="-152.4" y2="91.44" width="0.762" layer="92"/>
 <wire x1="-71.12" y1="95.25" x2="-63.5" y2="95.25" width="0.762" layer="92"/>
-<wire x1="-63.5" y1="95.25" x2="-63.5" y2="58.42" width="0.762" layer="92"/>
-<wire x1="-63.5" y1="58.42" x2="-66.04" y2="50.8" width="0.762" layer="92"/>
+<wire x1="-63.5" y1="95.25" x2="-63.5" y2="40.64" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="PWM[0..9]">
@@ -10617,6 +10681,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <segment>
 <pinref part="U$6" gate="G$1" pin="VDD"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
+<wire x1="25.4" y1="243.84" x2="27.94" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RN1" gate="G$1" pin="1"/>
@@ -10646,6 +10711,10 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <wire x1="-20.32" y1="-111.76" x2="-20.32" y2="-119.38" width="0.1524" layer="91"/>
 <junction x="-20.32" y="-111.76"/>
 <junction x="-15.24" y="-111.76"/>
+</segment>
+<segment>
+<pinref part="F2" gate="1" pin="2"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -10766,11 +10835,9 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="CS"/>
-<wire x1="27.94" y1="264.16" x2="38.1" y2="264.16" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="264.16" x2="48.2346" y2="264.16" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="264.16" x2="48.2346" y2="264.16" width="0.1524" layer="91"/>
 <junction x="48.26" y="264.16"/>
 <wire x1="48.2346" y1="264.16" x2="48.26" y2="264.16" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="264.16" x2="38.1" y2="264.16" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="3"/>
 <junction x="48.2346" y="264.16"/>
 </segment>
@@ -10790,9 +10857,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="U$6" gate="G$1" pin="MISO"/>
 <wire x1="48.26" y1="261.62" x2="48.2346" y2="261.62" width="0.1524" layer="91"/>
 <junction x="48.26" y="261.62"/>
-<wire x1="48.2346" y1="261.62" x2="40.64" y2="261.62" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="261.62" x2="27.94" y2="261.62" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="261.62" x2="38.1" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="48.2346" y1="261.62" x2="25.4" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="4"/>
 <junction x="48.2346" y="261.62"/>
 </segment>
@@ -10814,11 +10879,9 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="SCLK"/>
-<wire x1="27.94" y1="259.08" x2="38.1" y2="259.08" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="259.08" x2="48.2346" y2="259.08" width="0.1524" layer="91"/>
 <junction x="48.26" y="259.08"/>
-<wire x1="40.64" y1="259.08" x2="48.2346" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="48.2346" y1="259.08" x2="48.26" y2="259.08" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="259.08" x2="38.1" y2="259.08" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="5"/>
 <junction x="48.2346" y="259.08"/>
 </segment>
@@ -10842,9 +10905,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="U$6" gate="G$1" pin="MOSI"/>
 <wire x1="48.26" y1="256.54" x2="48.2346" y2="256.54" width="0.1524" layer="91"/>
 <junction x="48.26" y="256.54"/>
-<wire x1="48.2346" y1="256.54" x2="40.64" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="256.54" x2="27.94" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="256.54" x2="38.1" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="48.2346" y1="256.54" x2="25.4" y2="256.54" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="6"/>
 <junction x="48.2346" y="256.54"/>
 </segment>
@@ -11147,6 +11208,10 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <wire x1="71.12" y1="-91.44" x2="71.12" y2="-87.63" width="0.1524" layer="91"/>
 <pinref part="P+14" gate="1" pin="+5V"/>
 </segment>
+<segment>
+<pinref part="F1" gate="1" pin="2"/>
+<pinref part="P+15" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="SPI_MISO" class="0">
 <segment>
@@ -11303,11 +11368,9 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="CARDDETECT"/>
-<wire x1="27.94" y1="248.92" x2="38.1" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="248.92" x2="48.2346" y2="248.92" width="0.1524" layer="91"/>
 <junction x="48.26" y="248.92"/>
-<wire x1="40.64" y1="248.92" x2="48.2346" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="48.2346" y1="248.92" x2="48.26" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="248.92" x2="38.1" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="9"/>
 <junction x="48.2346" y="248.92"/>
 </segment>
@@ -11469,7 +11532,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <net name="N$21" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="DAT2"/>
-<wire x1="27.94" y1="266.7" x2="48.2346" y2="266.7" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="266.7" x2="48.2346" y2="266.7" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="2"/>
 <wire x1="48.2346" y1="266.7" x2="48.26" y2="266.7" width="0.1524" layer="91"/>
 <junction x="48.2346" y="266.7"/>
@@ -11478,7 +11541,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <net name="N$26" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="DAT1"/>
-<wire x1="27.94" y1="254" x2="48.2346" y2="254" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="254" x2="48.2346" y2="254" width="0.1524" layer="91"/>
 <junction x="48.26" y="254"/>
 <pinref part="RN1" gate="G$1" pin="7"/>
 <wire x1="48.2346" y1="254" x2="48.26" y2="254" width="0.1524" layer="91"/>
@@ -11491,7 +11554,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <wire x1="48.26" y1="251.46" x2="48.2346" y2="251.46" width="0.1524" layer="91"/>
 <junction x="48.26" y="251.46"/>
 <pinref part="RN1" gate="G$1" pin="8"/>
-<wire x1="48.2346" y1="251.46" x2="27.94" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="48.2346" y1="251.46" x2="25.4" y2="251.46" width="0.1524" layer="91"/>
 <junction x="48.2346" y="251.46"/>
 </segment>
 </net>
@@ -11767,6 +11830,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <segment>
 <pinref part="U$6" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
+<wire x1="25.4" y1="241.3" x2="27.94" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="VSS"/>
@@ -12284,10 +12348,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <errors>
 <approved hash="104,1,22.86,124.46,PROPELLERP,VDD,+3V3,,,"/>
 <approved hash="104,1,22.86,121.92,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,40.64,124.46,PROPELLERP,VSS,GND,,,"/>
-<approved hash="104,1,40.64,121.92,PROPELLERP,VSS,GND,,,"/>
 <approved hash="104,1,83.82,193.04,EEPROM,VCC,+3V3,,,"/>
-<approved hash="104,1,-10.16,15.24,LEVELSHIFTERP,VSS,GND,,,"/>
 <approved hash="104,1,-12.7,30.48,LEVELSHIFTERP,VDD,+5V,,,"/>
 <approved hash="104,1,-7.62,30.48,LEVELSHIFTERP,VCC,+3V3,,,"/>
 <approved hash="113,1,117.532,-19.2447,IO2-SPI-MOSI,,,,,"/>
