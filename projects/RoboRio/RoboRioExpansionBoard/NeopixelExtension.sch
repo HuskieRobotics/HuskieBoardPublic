@@ -9439,6 +9439,71 @@ diameter 5 mm, grid 2.54 mm</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="NeopixelConnector">
+<packages>
+<package name="NEODIRECTSOLDERORMA03-1">
+<wire x1="-3.175" y1="3.81" x2="-1.905" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="3.81" x2="-1.27" y2="3.175" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="3.175" x2="-0.635" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="3.81" x2="0.635" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="3.81" x2="1.27" y2="3.175" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="3.175" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="3.81" x2="-3.81" y2="3.175" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="3.175" x2="1.905" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="3.81" x2="3.175" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="3.81" x2="3.81" y2="3.175" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="3.175" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="DATA" x="-2.54" y="0" drill="1.016" diameter="2.1844" shape="offset" rot="R90" thermals="no"/>
+<pad name="5V" x="0" y="0" drill="1.016" diameter="2.1844" shape="offset" rot="R90"/>
+<pad name="GND" x="2.54" y="0" drill="1.016" diameter="2.1844" shape="offset" rot="R90" thermals="no"/>
+<text x="-6.35" y="-1.27" size="1.27" layer="25" ratio="10" rot="R90" align="center-left">&gt;NAME</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<text x="-5.08" y="0" size="1.016" layer="21" rot="R90" align="top-left">DAT</text>
+<text x="4.1275" y="-0.3175" size="1.016" layer="21" rot="R90" align="top-left">GND</text>
+</package>
+</packages>
+<symbols>
+<symbol name="NEOPIXEL">
+<pin name="VCC" x="-5.08" y="0" length="middle" direction="pwr"/>
+<pin name="SIGNAL" x="-5.08" y="2.54" length="middle"/>
+<pin name="GND" x="-5.08" y="-2.54" length="middle" direction="pwr"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="10.16" y2="-5.08" width="0.6096" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="10.16" y2="5.08" width="0.6096" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-2.54" y2="5.08" width="0.6096" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NEOPIXEL1">
+<gates>
+<gate name="G$1" symbol="NEOPIXEL" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="NEODIRECTSOLDERORMA03-1">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SIGNAL" pad="DATA"/>
+<connect gate="G$1" pin="VCC" pad="5V"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9449,20 +9514,19 @@ diameter 5 mm, grid 2.54 mm</description>
 </class>
 </classes>
 <parts>
-<part name="NEOPIXEL" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R22" library="resistor" deviceset="R-US_" device="0309/V" value="470"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="0309/V" value="470"/>
 <part name="IC2" library="74xx-eu" deviceset="74*125" device="N" technology="HCT"/>
 <part name="IN" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="C1" library="adafruit" deviceset="CPOL-US" device="E5-10.5" value="1000uf"/>
 <part name="U$1" library="Molex-39543-0002" deviceset="POWER" device=""/>
+<part name="U$2" library="NeopixelConnector" deviceset="NEOPIXEL1" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="NEOPIXEL" gate="G$1" x="109.22" y="30.48" rot="R180"/>
-<instance part="R22" gate="G$1" x="88.9" y="27.94" rot="R180"/>
+<instance part="R1" gate="G$1" x="88.9" y="27.94" rot="R180"/>
 <instance part="IC2" gate="D" x="63.5" y="25.4"/>
 <instance part="IC2" gate="P" x="50.8" y="40.64"/>
 <instance part="IN" gate="G$1" x="20.32" y="30.48" rot="MR180"/>
@@ -9471,15 +9535,16 @@ diameter 5 mm, grid 2.54 mm</description>
 <instance part="IC2" gate="A" x="106.68" y="-2.54"/>
 <instance part="C1" gate="G$1" x="40.64" y="38.1"/>
 <instance part="U$1" gate="G$1" x="33.02" y="50.8" rot="R270"/>
+<instance part="U$2" gate="G$1" x="106.68" y="30.48" rot="MR180"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="NEOPIXEL" gate="G$1" pin="3"/>
-<pinref part="R22" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="27.94" x2="101.6" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="U$2" gate="G$1" pin="SIGNAL"/>
+<wire x1="101.6" y1="27.94" x2="93.98" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -9492,9 +9557,6 @@ diameter 5 mm, grid 2.54 mm</description>
 <wire x1="40.64" y1="33.02" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="33.02" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
 <junction x="50.8" y="33.02"/>
-<pinref part="NEOPIXEL" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="33.02" x2="101.6" y2="33.02" width="0.1524" layer="91"/>
-<junction x="63.5" y="33.02"/>
 <wire x1="50.8" y1="33.02" x2="50.8" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="B" pin="OE"/>
 <pinref part="IC2" gate="C" pin="OE"/>
@@ -9508,6 +9570,9 @@ diameter 5 mm, grid 2.54 mm</description>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="35.56" y1="45.72" x2="35.56" y2="33.02" width="0.1524" layer="91"/>
 <junction x="35.56" y="33.02"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="101.6" y1="33.02" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
+<junction x="63.5" y="33.02"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -9521,25 +9586,25 @@ diameter 5 mm, grid 2.54 mm</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="IC2" gate="D" pin="O"/>
-<pinref part="R22" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="73.66" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="25.4" x2="83.82" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="NEOPIXEL" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="30.48" x2="96.52" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="VCC"/>
 <wire x1="40.64" y1="40.64" x2="45.72" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="45.72" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="48.26" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="30.48" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="48.26" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
 <junction x="50.8" y="48.26"/>
 <pinref part="C1" gate="G$1" pin="+"/>
 <pinref part="U$1" gate="G$1" pin="5V"/>
 <junction x="45.72" y="45.72"/>
+<pinref part="U$2" gate="G$1" pin="VCC"/>
+<wire x1="101.6" y1="30.48" x2="96.52" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="30.48" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -9550,7 +9615,6 @@ diameter 5 mm, grid 2.54 mm</description>
 <approved hash="202,1,40.64,-2.54,IC2B,I,,,,"/>
 <approved hash="202,1,68.58,-2.54,IC2C,I,,,,"/>
 <approved hash="104,1,45.72,45.72,U$1,5V,VCC,,,"/>
-<approved hash="113,1,104.126,29.0153,NEOPIXEL,,,,,"/>
 <approved hash="113,1,25.3577,29.0153,IN,,,,,"/>
 </errors>
 </schematic>
