@@ -9393,6 +9393,52 @@ diameter 5 mm, grid 2.54 mm</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Molex-39543-0002">
+<packages>
+<package name="POWER">
+<pad name="5V" x="0" y="3.5" drill="1.4" diameter="3"/>
+<pad name="GND" x="0" y="-2.5" drill="1.4" diameter="3"/>
+<wire x1="0" y1="-5" x2="2" y2="-5" width="0.127" layer="21"/>
+<wire x1="4.75" y1="-5" x2="4.75" y2="6" width="0.127" layer="21"/>
+<wire x1="4.75" y1="6" x2="-4.75" y2="6" width="0.127" layer="21"/>
+<wire x1="-4.75" y1="6" x2="-4.75" y2="-5" width="0.127" layer="21"/>
+<wire x1="-4.75" y1="-5" x2="4.75" y2="-5" width="0.127" layer="21"/>
+<rectangle x1="-4.75" y1="2" x2="-4" y2="5" layer="21"/>
+<rectangle x1="-4.75" y1="-4" x2="-4" y2="-1" layer="21"/>
+<text x="1.27" y="5.08" size="1.27" layer="21" align="center-left">+</text>
+<text x="1.27" y="-1.27" size="1.27" layer="21">-</text>
+</package>
+</packages>
+<symbols>
+<symbol name="POWER">
+<pin name="5V" x="5.08" y="12.7" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="5.08" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<wire x1="0" y1="15.24" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="15.24" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="15.24" width="0.254" layer="94"/>
+<text x="-7.62" y="17.78" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="POWER">
+<gates>
+<gate name="G$1" symbol="POWER" x="2.54" y="-7.62"/>
+</gates>
+<devices>
+<device name="" package="POWER">
+<connects>
+<connect gate="G$1" pin="5V" pad="5V"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9408,6 +9454,7 @@ diameter 5 mm, grid 2.54 mm</description>
 <part name="IC2" library="74xx-eu" deviceset="74*125" device="N" technology="HCT"/>
 <part name="IN" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="C1" library="adafruit" deviceset="CPOL-US" device="E5-10.5" value="1000uf"/>
+<part name="U$1" library="Molex-39543-0002" deviceset="POWER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9416,13 +9463,14 @@ diameter 5 mm, grid 2.54 mm</description>
 <instances>
 <instance part="NEOPIXEL" gate="G$1" x="109.22" y="30.48" rot="R180"/>
 <instance part="R22" gate="G$1" x="88.9" y="27.94" rot="R180"/>
-<instance part="IC2" gate="A" x="63.5" y="25.4"/>
+<instance part="IC2" gate="D" x="63.5" y="25.4"/>
 <instance part="IC2" gate="P" x="50.8" y="40.64"/>
 <instance part="IN" gate="G$1" x="20.32" y="30.48" rot="MR180"/>
 <instance part="IC2" gate="B" x="50.8" y="-2.54"/>
 <instance part="IC2" gate="C" x="78.74" y="-2.54"/>
-<instance part="IC2" gate="D" x="106.68" y="-2.54"/>
+<instance part="IC2" gate="A" x="106.68" y="-2.54"/>
 <instance part="C1" gate="G$1" x="40.64" y="38.1"/>
+<instance part="U$1" gate="G$1" x="33.02" y="50.8" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -9437,9 +9485,10 @@ diameter 5 mm, grid 2.54 mm</description>
 <net name="GND" class="0">
 <segment>
 <pinref part="IN" gate="G$1" pin="1"/>
-<pinref part="IC2" gate="A" pin="OE"/>
-<wire x1="27.94" y1="33.02" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="D" pin="OE"/>
+<wire x1="27.94" y1="33.02" x2="35.56" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="GND"/>
+<wire x1="35.56" y1="33.02" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="33.02" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="33.02" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
 <junction x="50.8" y="33.02"/>
@@ -9450,17 +9499,20 @@ diameter 5 mm, grid 2.54 mm</description>
 <pinref part="IC2" gate="B" pin="OE"/>
 <pinref part="IC2" gate="C" pin="OE"/>
 <wire x1="50.8" y1="5.08" x2="78.74" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="D" pin="OE"/>
+<pinref part="IC2" gate="A" pin="OE"/>
 <wire x1="78.74" y1="5.08" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
 <junction x="50.8" y="5.08"/>
 <junction x="78.74" y="5.08"/>
 <pinref part="C1" gate="G$1" pin="-"/>
 <junction x="40.64" y="33.02"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="35.56" y1="45.72" x2="35.56" y2="33.02" width="0.1524" layer="91"/>
+<junction x="35.56" y="33.02"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="IC2" gate="A" pin="I"/>
+<pinref part="IC2" gate="D" pin="I"/>
 <pinref part="IN" gate="G$1" pin="3"/>
 <wire x1="53.34" y1="25.4" x2="30.48" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="25.4" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
@@ -9468,7 +9520,7 @@ diameter 5 mm, grid 2.54 mm</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="IC2" gate="A" pin="O"/>
+<pinref part="IC2" gate="D" pin="O"/>
 <pinref part="R22" gate="G$1" pin="2"/>
 <wire x1="73.66" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="25.4" x2="83.82" y2="27.94" width="0.1524" layer="91"/>
@@ -9479,23 +9531,27 @@ diameter 5 mm, grid 2.54 mm</description>
 <pinref part="NEOPIXEL" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="30.48" x2="96.52" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="VCC"/>
-<wire x1="40.64" y1="40.64" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="40.64" x2="45.72" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="45.72" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="48.26" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="30.48" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="48.26" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
 <junction x="50.8" y="48.26"/>
 <pinref part="C1" gate="G$1" pin="+"/>
+<pinref part="U$1" gate="G$1" pin="5V"/>
+<junction x="45.72" y="45.72"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
+<approved hash="202,1,96.52,-2.54,IC2A,I,,,,"/>
 <approved hash="202,1,40.64,-2.54,IC2B,I,,,,"/>
 <approved hash="202,1,68.58,-2.54,IC2C,I,,,,"/>
-<approved hash="202,1,96.52,-2.54,IC2D,I,,,,"/>
+<approved hash="104,1,45.72,45.72,U$1,5V,VCC,,,"/>
 <approved hash="113,1,104.126,29.0153,NEOPIXEL,,,,,"/>
-<approved hash="113,1,27.534,29.0153,INPUTSIGNAL,,,,,"/>
+<approved hash="113,1,25.3577,29.0153,IN,,,,,"/>
 </errors>
 </schematic>
 </drawing>
