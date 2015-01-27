@@ -9509,7 +9509,6 @@ Wickmann</description>
 <part name="PROPELLER" library="parallax_propeller (1)" deviceset="P8X32A-D40" device=""/>
 <part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49U70" value="5MHz"/>
 <part name="EEPROM" library="microchip" deviceset="24*" device="P" technology="LC256"/>
-<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="0309/V" value="10k"/>
 <part name="U$3" library="PropPlug" deviceset="PROP_PLUG" device=""/>
@@ -9540,8 +9539,8 @@ Wickmann</description>
 <part name="AI2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="AI4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="AI5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AO0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AO1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AIO" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="C1" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
@@ -9686,7 +9685,6 @@ Wickmann</description>
 <instance part="PROPELLER" gate="P8X32A-D40" x="-48.26" y="30.48"/>
 <instance part="Q1" gate="G$1" x="-25.4" y="5.08"/>
 <instance part="EEPROM" gate="G$1" x="-10.16" y="134.62"/>
-<instance part="+3V1" gate="G$1" x="-248.92" y="25.4"/>
 <instance part="+3V2" gate="G$1" x="0" y="152.4" rot="R270"/>
 <instance part="R1" gate="G$1" x="10.16" y="144.78" rot="R180"/>
 <instance part="U$3" gate="G$1" x="71.12" y="139.7"/>
@@ -9718,8 +9716,8 @@ Wickmann</description>
 <instance part="AI2" gate="G$1" x="-189.23" y="45.72" rot="R180"/>
 <instance part="AI3" gate="G$1" x="-189.23" y="31.75" rot="R180"/>
 <instance part="AI1" gate="G$1" x="-189.23" y="59.69" rot="R180"/>
-<instance part="AI4" gate="G$1" x="-189.23" y="17.78" rot="R180"/>
-<instance part="AI5" gate="G$1" x="-189.23" y="3.81" rot="R180"/>
+<instance part="AO0" gate="G$1" x="-189.23" y="17.78" rot="R180"/>
+<instance part="AO1" gate="G$1" x="-189.23" y="3.81" rot="R180"/>
 <instance part="AIO" gate="G$1" x="-189.23" y="73.66" rot="R180"/>
 <instance part="P+10" gate="1" x="-201.93" y="95.25" rot="MR0"/>
 <instance part="C1" gate="G$1" x="-7.62" y="152.4" rot="R90"/>
@@ -9940,6 +9938,7 @@ Wickmann</description>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P28"/>
 <wire x1="-25.4" y1="43.18" x2="-30.48" y2="43.18" width="0.1524" layer="91"/>
+<label x="-27.94" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPECIAL29" class="0">
@@ -9955,6 +9954,7 @@ Wickmann</description>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P29"/>
 <wire x1="-25.4" y1="45.72" x2="-30.48" y2="45.72" width="0.1524" layer="91"/>
+<label x="-27.94" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPECIAL30" class="0">
@@ -9966,6 +9966,7 @@ Wickmann</description>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P30"/>
 <wire x1="-25.4" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
+<label x="-27.94" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPECIAL31" class="0">
@@ -9977,6 +9978,7 @@ Wickmann</description>
 <segment>
 <pinref part="PROPELLER" gate="P8X32A-D40" pin="P31"/>
 <wire x1="-25.4" y1="50.8" x2="-30.48" y2="50.8" width="0.1524" layer="91"/>
+<label x="-27.94" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -9990,14 +9992,6 @@ Wickmann</description>
 <junction x="-2.54" y="147.32"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <junction x="-2.54" y="152.4"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="P33-+3.3V"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="-264.16" y1="20.32" x2="-251.46" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-251.46" y1="20.32" x2="-248.92" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="F2" gate="1" pin="2"/>
-<junction x="-248.92" y="22.86"/>
 </segment>
 <segment>
 <pinref part="PROPELLER" gate="P" pin="VDD@2"/>
@@ -10128,11 +10122,11 @@ Wickmann</description>
 <label x="-81.28" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-83.82" y1="-35.56" x2="-7.62" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-33.02" x2="-7.62" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="5V_LCD" gate="G$1" pin="3"/>
 <wire x1="-7.62" y1="-40.64" x2="54.61" y2="-40.64" width="0.1524" layer="91"/>
 <label x="-72.39" y="-35.56" size="1.778" layer="95"/>
-<wire x1="-7.62" y1="-35.56" x2="-7.62" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-33.02" x2="-7.62" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IO5" gate="G$1" pin="3"/>
@@ -10159,11 +10153,11 @@ Wickmann</description>
 <label x="-81.28" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-55.88" y1="-81.28" x2="-55.88" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="-30.48" x2="-55.88" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-44.45" y1="-81.28" x2="-44.45" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-48.26" x2="-44.45" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="DOUT"/>
-<wire x1="-55.88" y1="-81.28" x2="-17.78" y2="-81.28" width="0.1524" layer="91"/>
-<label x="-73.66" y="-27.94" size="1.778" layer="95" rot="R180"/>
+<wire x1="-44.45" y1="-81.28" x2="-17.78" y2="-81.28" width="0.1524" layer="91"/>
+<label x="-73.66" y="-45.72" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="IO7" gate="G$1" pin="3"/>
@@ -10255,11 +10249,11 @@ Wickmann</description>
 <label x="-81.28" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="-81.407" y="-43.053" size="1.778" layer="95"/>
-<wire x1="-83.82" y1="-43.18" x2="-46.99" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-46.99" y1="-43.18" x2="-46.99" y2="-76.2" width="0.1524" layer="91"/>
+<label x="-81.407" y="-37.973" size="1.778" layer="95"/>
+<wire x1="-83.82" y1="-38.1" x2="-49.53" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-49.53" y1="-38.1" x2="-49.53" y2="-76.2" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="/CS"/>
-<wire x1="-46.99" y1="-76.2" x2="-17.78" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-49.53" y1="-76.2" x2="-17.78" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="SCLK"/>
@@ -10279,11 +10273,11 @@ Wickmann</description>
 <label x="-81.28" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="-81.28" y="-48.26" size="1.778" layer="95"/>
-<wire x1="-41.91" y1="-48.26" x2="-41.91" y2="-78.74" width="0.1524" layer="91"/>
+<label x="-81.28" y="-43.18" size="1.778" layer="95"/>
+<wire x1="-39.37" y1="-43.18" x2="-39.37" y2="-78.74" width="0.1524" layer="91"/>
 <pinref part="ADC" gate="G$1" pin="DIN"/>
-<wire x1="-41.91" y1="-78.74" x2="-17.78" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-41.91" y1="-48.26" x2="-83.82" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-39.37" y1="-78.74" x2="-17.78" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-39.37" y1="-43.18" x2="-83.82" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="MOSI"/>
@@ -10445,7 +10439,7 @@ Wickmann</description>
 </segment>
 <segment>
 <wire x1="-201.93" y1="92.71" x2="-201.93" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="AI5" gate="G$1" pin="2"/>
+<pinref part="AO1" gate="G$1" pin="2"/>
 <wire x1="-201.93" y1="73.66" x2="-201.93" y2="59.69" width="0.1524" layer="91"/>
 <wire x1="-201.93" y1="59.69" x2="-201.93" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-201.93" y1="45.72" x2="-201.93" y2="31.75" width="0.1524" layer="91"/>
@@ -10462,7 +10456,7 @@ Wickmann</description>
 <wire x1="-201.93" y1="59.69" x2="-196.85" y2="59.69" width="0.1524" layer="91"/>
 <pinref part="AI3" gate="G$1" pin="2"/>
 <wire x1="-201.93" y1="31.75" x2="-196.85" y2="31.75" width="0.1524" layer="91"/>
-<pinref part="AI4" gate="G$1" pin="2"/>
+<pinref part="AO0" gate="G$1" pin="2"/>
 <wire x1="-201.93" y1="17.78" x2="-196.85" y2="17.78" width="0.1524" layer="91"/>
 <junction x="-201.93" y="45.72"/>
 <pinref part="AI2" gate="G$1" pin="2"/>
@@ -10577,7 +10571,7 @@ Wickmann</description>
 <label x="-261.62" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AI5" gate="G$1" pin="3"/>
+<pinref part="AO1" gate="G$1" pin="3"/>
 <wire x1="-205.74" y1="1.27" x2="-196.85" y2="1.27" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10588,7 +10582,7 @@ Wickmann</description>
 <label x="-261.62" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AI4" gate="G$1" pin="3"/>
+<pinref part="AO0" gate="G$1" pin="3"/>
 <wire x1="-205.74" y1="15.24" x2="-196.85" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10643,6 +10637,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="11*-DIO0-PWM0"/>
 <wire x1="-332.74" y1="17.78" x2="-309.88" y2="17.78" width="0.1524" layer="91"/>
+<label x="-325.12" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM1" class="0">
@@ -10653,6 +10648,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="13*-DIO1-PWM1"/>
 <wire x1="-332.74" y1="20.32" x2="-309.88" y2="20.32" width="0.1524" layer="91"/>
+<label x="-325.12" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM2" class="0">
@@ -10663,6 +10659,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="15*-DIO2-PWM2"/>
 <wire x1="-332.74" y1="22.86" x2="-309.88" y2="22.86" width="0.1524" layer="91"/>
+<label x="-322.58" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM3" class="0">
@@ -10673,6 +10670,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="17*-DIO3-PWM3"/>
 <wire x1="-332.74" y1="25.4" x2="-309.88" y2="25.4" width="0.1524" layer="91"/>
+<label x="-325.12" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM8" class="0">
@@ -10683,6 +10681,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="22*-DIO12-PWM8"/>
 <wire x1="-332.74" y1="38.1" x2="-309.88" y2="38.1" width="0.1524" layer="91"/>
+<label x="-325.12" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM9" class="0">
@@ -10693,6 +10692,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="26*-DIO13-PWM9"/>
 <wire x1="-332.74" y1="40.64" x2="-309.88" y2="40.64" width="0.1524" layer="91"/>
+<label x="-325.12" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM7" class="0">
@@ -10703,6 +10703,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="18*-DIO11-PWM7"/>
 <wire x1="-332.74" y1="35.56" x2="-309.88" y2="35.56" width="0.1524" layer="91"/>
+<label x="-325.12" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM6" class="0">
@@ -10713,6 +10714,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="31*-DIO10-PWM6"/>
 <wire x1="-332.74" y1="33.02" x2="-309.88" y2="33.02" width="0.1524" layer="91"/>
+<label x="-325.12" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM5" class="0">
@@ -10723,6 +10725,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="29*-DIO9-PWM5"/>
 <wire x1="-332.74" y1="30.48" x2="-309.88" y2="30.48" width="0.1524" layer="91"/>
+<label x="-325.12" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM4" class="0">
@@ -10733,6 +10736,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="27*-DIO8-PWM4"/>
 <wire x1="-332.74" y1="27.94" x2="-309.88" y2="27.94" width="0.1524" layer="91"/>
+<label x="-325.12" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -10744,6 +10748,7 @@ Wickmann</description>
 <pinref part="RN1" gate="G$1" pin="7"/>
 <wire x1="-109.2454" y1="55.88" x2="-109.22" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-109.2454" y="55.88"/>
+<label x="-124.46" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -10808,7 +10813,7 @@ Wickmann</description>
 <pinref part="SUPPLY7" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="AI5" gate="G$1" pin="1"/>
+<pinref part="AO1" gate="G$1" pin="1"/>
 <wire x1="-191.77" y1="81.28" x2="-199.39" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-199.39" y1="81.28" x2="-199.39" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="-199.39" y1="76.2" x2="-199.39" y2="62.23" width="0.1524" layer="91"/>
@@ -10825,7 +10830,7 @@ Wickmann</description>
 <wire x1="-199.39" y1="48.26" x2="-196.85" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="AI3" gate="G$1" pin="1"/>
 <wire x1="-199.39" y1="34.29" x2="-196.85" y2="34.29" width="0.1524" layer="91"/>
-<pinref part="AI4" gate="G$1" pin="1"/>
+<pinref part="AO0" gate="G$1" pin="1"/>
 <wire x1="-199.39" y1="20.32" x2="-196.85" y2="20.32" width="0.1524" layer="91"/>
 <junction x="-199.39" y="62.23"/>
 <junction x="-199.39" y="76.2"/>
@@ -10965,6 +10970,7 @@ Wickmann</description>
 <wire x1="-16.51" y1="152.4" x2="-10.16" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY33" gate="G$1" pin="DGND"/>
 <junction x="-2.54" y="124.46"/>
+<label x="10.16" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C14" gate="G$1" pin="1"/>
@@ -11430,6 +11436,14 @@ Wickmann</description>
 <wire x1="10.16" y1="-88.9" x2="22.86" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="-88.9" x2="22.86" y2="-238.76" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-238.76" x2="22.86" y2="-238.76" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="P33-+3.3V"/>
+<wire x1="-264.16" y1="20.32" x2="-251.46" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-251.46" y1="20.32" x2="-248.92" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="F2" gate="1" pin="2"/>
 </segment>
 </net>
 </nets>
