@@ -9156,79 +9156,6 @@ naming: grid - package width</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SDcardlibraryroborio">
-<packages>
-<package name="SDCARDCONNECTION">
-<smd name="9" x="9.23" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="1" x="6.74" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="4.24" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="3" x="1.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="4" x="-0.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="5" x="-3.25" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="6" x="-5.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="7" x="-8.18" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="8" x="-9.89" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
-<smd name="CARDDETECT" x="-11.18" y="15.73" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="WRITEPROTECT" x="-12.38" y="15.73" dx="1.5" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$12" x="-14.95" y="-12.02" dx="3" dy="2" layer="1" rot="R270"/>
-<hole x="-11.87" y="13.21" drill="1.1"/>
-<hole x="9.23" y="12.93" drill="1.6"/>
-<smd name="P$13" x="15.14" y="-12.03" dx="3" dy="2" layer="1" rot="R270"/>
-<wire x1="14.08" y1="-15.82" x2="14.08" y2="14.91" width="0.127" layer="21"/>
-<wire x1="14.08" y1="14.91" x2="-13.89" y2="14.91" width="0.127" layer="21"/>
-<wire x1="-13.89" y1="14.91" x2="-13.89" y2="-15.83" width="0.127" layer="21"/>
-<wire x1="14.08" y1="-15.83" x2="-13.89" y2="-15.83" width="0.127" layer="21"/>
-<wire x1="11.95" y1="14.875" x2="14.075" y2="12.75" width="0.127" layer="21"/>
-<text x="-7.7" y="-3.01" size="1.27" layer="21">SD-RSMT-2-MQ-WF
-
-</text>
-</package>
-</packages>
-<symbols>
-<symbol name="SDCARDLIBSYMB">
-<pin name="CS" x="1.27" y="25.4" length="middle" rot="R180"/>
-<pin name="MISO" x="1.27" y="22.86" length="middle" rot="R180"/>
-<pin name="VDD" x="1.27" y="5.08" length="middle" rot="R180"/>
-<pin name="SCLK" x="1.27" y="20.32" length="middle" rot="R180"/>
-<pin name="MOSI" x="1.27" y="17.78" length="middle" rot="R180"/>
-<pin name="DAT1" x="1.27" y="15.24" length="middle" rot="R180"/>
-<pin name="DAT2" x="1.27" y="27.94" length="middle" rot="R180"/>
-<wire x1="-3.81" y1="1.27" x2="-3.81" y2="29.21" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="29.21" x2="-19.05" y2="29.21" width="0.254" layer="94"/>
-<wire x1="-19.05" y1="29.21" x2="-19.05" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-19.05" y1="1.27" x2="-3.81" y2="1.27" width="0.254" layer="94"/>
-<pin name="WRITEPROTECT" x="1.27" y="12.7" length="middle" rot="R180"/>
-<pin name="CARDDETECT" x="1.27" y="10.16" length="middle" rot="R180"/>
-<pin name="GND" x="1.27" y="2.54" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SDCARDLIBDEV">
-<gates>
-<gate name="G$1" symbol="SDCARDLIBSYMB" x="2.54" y="7.62"/>
-</gates>
-<devices>
-<device name="" package="SDCARDCONNECTION">
-<connects>
-<connect gate="G$1" pin="CARDDETECT" pad="CARDDETECT"/>
-<connect gate="G$1" pin="CS" pad="1"/>
-<connect gate="G$1" pin="DAT1" pad="8"/>
-<connect gate="G$1" pin="DAT2" pad="9"/>
-<connect gate="G$1" pin="GND" pad="3 6 P$12 P$13"/>
-<connect gate="G$1" pin="MISO" pad="2"/>
-<connect gate="G$1" pin="MOSI" pad="7"/>
-<connect gate="G$1" pin="SCLK" pad="5"/>
-<connect gate="G$1" pin="VDD" pad="4"/>
-<connect gate="G$1" pin="WRITEPROTECT" pad="WRITEPROTECT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="resistor-sil">
 <description>&lt;b&gt;Resistors in Single Inline Packages&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -9496,6 +9423,79 @@ Wickmann</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SDcardlibraryroborio">
+<packages>
+<package name="SDCARDCONNECTION">
+<smd name="9" x="9.23" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="1" x="6.74" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="2" x="4.24" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="3" x="1.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="4" x="-0.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="5" x="-3.25" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="6" x="-5.75" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="7" x="-8.18" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="8" x="-9.89" y="15.73" dx="1.5" dy="1" layer="1" rot="R90"/>
+<smd name="CARDDETECT" x="-11.18" y="15.73" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="WRITEPROTECT" x="-12.38" y="15.73" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$12" x="-14.95" y="-12.02" dx="3" dy="2" layer="1" rot="R270"/>
+<hole x="-11.87" y="13.21" drill="1.1"/>
+<hole x="9.23" y="12.93" drill="1.6"/>
+<smd name="P$13" x="15.14" y="-12.03" dx="3" dy="2" layer="1" rot="R270"/>
+<wire x1="14.08" y1="-15.82" x2="14.08" y2="14.91" width="0.127" layer="21"/>
+<wire x1="14.08" y1="14.91" x2="-13.89" y2="14.91" width="0.127" layer="21"/>
+<wire x1="-13.89" y1="14.91" x2="-13.89" y2="-15.83" width="0.127" layer="21"/>
+<wire x1="14.08" y1="-15.83" x2="-13.89" y2="-15.83" width="0.127" layer="21"/>
+<wire x1="11.95" y1="14.875" x2="14.075" y2="12.75" width="0.127" layer="21"/>
+<text x="-7.7" y="-3.01" size="1.27" layer="21">SD-RSMT-2-MQ-WF
+
+</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SDCARDLIBSYMB">
+<pin name="CS" x="13.97" y="10.16" length="middle" rot="R180"/>
+<pin name="MISO" x="13.97" y="7.62" length="middle" rot="R180"/>
+<pin name="VDD" x="13.97" y="-10.16" length="middle" rot="R180"/>
+<pin name="SCLK" x="13.97" y="5.08" length="middle" rot="R180"/>
+<pin name="MOSI" x="13.97" y="2.54" length="middle" rot="R180"/>
+<pin name="DAT1" x="13.97" y="0" length="middle" rot="R180"/>
+<pin name="DAT2" x="13.97" y="12.7" length="middle" rot="R180"/>
+<wire x1="8.89" y1="-13.97" x2="8.89" y2="13.97" width="0.254" layer="94"/>
+<wire x1="8.89" y1="13.97" x2="-6.35" y2="13.97" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="13.97" x2="-6.35" y2="-13.97" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-13.97" x2="8.89" y2="-13.97" width="0.254" layer="94"/>
+<pin name="WRITEPROTECT" x="13.97" y="-2.54" length="middle" rot="R180"/>
+<pin name="CARDDETECT" x="13.97" y="-5.08" length="middle" rot="R180"/>
+<pin name="GND" x="13.97" y="-12.7" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SDCARDLIBDEV">
+<gates>
+<gate name="G$1" symbol="SDCARDLIBSYMB" x="2.54" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="SDCARDCONNECTION">
+<connects>
+<connect gate="G$1" pin="CARDDETECT" pad="CARDDETECT"/>
+<connect gate="G$1" pin="CS" pad="1"/>
+<connect gate="G$1" pin="DAT1" pad="8"/>
+<connect gate="G$1" pin="DAT2" pad="9"/>
+<connect gate="G$1" pin="GND" pad="3 6 P$12 P$13"/>
+<connect gate="G$1" pin="MISO" pad="2"/>
+<connect gate="G$1" pin="MOSI" pad="7"/>
+<connect gate="G$1" pin="SCLK" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+<connect gate="G$1" pin="WRITEPROTECT" pad="WRITEPROTECT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9544,7 +9544,6 @@ Wickmann</description>
 <part name="AIO" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="C1" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
-<part name="U$6" library="SDcardlibraryroborio" deviceset="SDCARDLIBDEV" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="RN1" library="resistor-sil" deviceset="G08R" device="" value="10k"/>
 <part name="+3V14" library="supply1" deviceset="+3V3" device=""/>
@@ -9674,6 +9673,7 @@ Wickmann</description>
 <part name="IO11" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="+3V21" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY50" library="supply2" deviceset="DGND" device=""/>
+<part name="U$2" library="SDcardlibraryroborio" deviceset="SDCARDLIBDEV" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9721,7 +9721,6 @@ Wickmann</description>
 <instance part="AIO" gate="G$1" x="-189.23" y="73.66" rot="R180"/>
 <instance part="P+10" gate="1" x="-201.93" y="95.25" rot="MR0"/>
 <instance part="C1" gate="G$1" x="-7.62" y="152.4" rot="R90"/>
-<instance part="U$6" gate="G$1" x="-133.35" y="40.64"/>
 <instance part="+3V5" gate="G$1" x="-127" y="45.72" rot="R270"/>
 <instance part="RN1" gate="G$1" x="-104.1654" y="58.42" rot="R270"/>
 <instance part="+3V14" gate="G$1" x="-91.4654" y="68.58" rot="R270"/>
@@ -9851,6 +9850,7 @@ Wickmann</description>
 <instance part="IO11" gate="G$1" x="149.86" y="7.62" rot="R180"/>
 <instance part="+3V21" gate="G$1" x="139.7" y="7.62" rot="R90"/>
 <instance part="SUPPLY50" gate="G$1" x="139.7" y="10.16" rot="R270"/>
+<instance part="U$2" gate="G$1" x="-148.59" y="55.88"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -10004,9 +10004,9 @@ Wickmann</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="VDD"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
-<wire x1="-132.08" y1="45.72" x2="-129.54" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="45.72" x2="-129.54" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="RN1" gate="G$1" pin="1"/>
@@ -10184,9 +10184,9 @@ Wickmann</description>
 <label x="-81.28" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DAT2"/>
-<wire x1="-116.84" y1="68.58" x2="-132.08" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="68.58" x2="-134.62" y2="68.58" width="0.1524" layer="91"/>
 <label x="-127" y="68.58" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="DAT2"/>
 </segment>
 <segment>
 <wire x1="-116.84" y1="68.58" x2="-109.22" y2="68.58" width="0.1524" layer="91"/>
@@ -10205,14 +10205,13 @@ Wickmann</description>
 <label x="-81.28" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="CS"/>
-<wire x1="-132.08" y1="66.04" x2="-116.84" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="66.04" x2="-109.2454" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="66.04" x2="-109.2454" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-109.22" y="66.04"/>
 <wire x1="-109.2454" y1="66.04" x2="-109.22" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="3"/>
 <junction x="-109.2454" y="66.04"/>
 <label x="-127" y="66.04" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="CS"/>
 </segment>
 <segment>
 <pinref part="IO10" gate="G$1" pin="3"/>
@@ -10227,14 +10226,13 @@ Wickmann</description>
 <label x="-81.28" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="MISO"/>
 <wire x1="-109.22" y1="63.5" x2="-109.2454" y2="63.5" width="0.1524" layer="91"/>
 <junction x="-109.22" y="63.5"/>
-<wire x1="-109.2454" y1="63.5" x2="-116.84" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="63.5" x2="-132.08" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-109.2454" y1="63.5" x2="-134.62" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="4"/>
 <junction x="-109.2454" y="63.5"/>
 <label x="-127" y="63.5" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="MISO"/>
 </segment>
 <segment>
 <pinref part="IO11" gate="G$1" pin="3"/>
@@ -10256,14 +10254,13 @@ Wickmann</description>
 <wire x1="-49.53" y1="-76.2" x2="-17.78" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="SCLK"/>
-<wire x1="-132.08" y1="60.96" x2="-116.84" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="60.96" x2="-109.2454" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="60.96" x2="-109.2454" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-109.22" y="60.96"/>
 <wire x1="-109.2454" y1="60.96" x2="-109.22" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="5"/>
 <junction x="-109.2454" y="60.96"/>
 <label x="-127" y="60.96" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="SCLK"/>
 </segment>
 </net>
 <net name="IO13" class="0">
@@ -10280,14 +10277,13 @@ Wickmann</description>
 <wire x1="-39.37" y1="-43.18" x2="-83.82" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="MOSI"/>
 <wire x1="-109.22" y1="58.42" x2="-109.2454" y2="58.42" width="0.1524" layer="91"/>
 <junction x="-109.22" y="58.42"/>
-<wire x1="-109.2454" y1="58.42" x2="-116.84" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="58.42" x2="-132.08" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-109.2454" y1="58.42" x2="-134.62" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="6"/>
 <junction x="-109.2454" y="58.42"/>
 <label x="-127" y="58.42" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="MOSI"/>
 </segment>
 </net>
 <net name="IO15" class="0">
@@ -10593,14 +10589,13 @@ Wickmann</description>
 <label x="-81.28" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="CARDDETECT"/>
-<wire x1="-132.08" y1="50.8" x2="-116.84" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="50.8" x2="-109.2454" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="50.8" x2="-109.2454" y2="50.8" width="0.1524" layer="91"/>
 <junction x="-109.22" y="50.8"/>
 <wire x1="-109.2454" y1="50.8" x2="-109.22" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="9"/>
 <junction x="-109.2454" y="50.8"/>
 <label x="-114.3" y="50.8" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="CARDDETECT"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
@@ -10741,25 +10736,23 @@ Wickmann</description>
 </net>
 <net name="N$26" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="DAT1"/>
-<wire x1="-132.08" y1="55.88" x2="-116.84" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="55.88" x2="-109.2454" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="55.88" x2="-109.2454" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-109.22" y="55.88"/>
 <pinref part="RN1" gate="G$1" pin="7"/>
 <wire x1="-109.2454" y1="55.88" x2="-109.22" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-109.2454" y="55.88"/>
 <label x="-124.46" y="55.88" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="DAT1"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="WRITEPROTECT"/>
 <wire x1="-109.22" y1="53.34" x2="-109.2454" y2="53.34" width="0.1524" layer="91"/>
 <junction x="-109.22" y="53.34"/>
 <pinref part="RN1" gate="G$1" pin="8"/>
-<wire x1="-109.2454" y1="53.34" x2="-116.84" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="53.34" x2="-132.08" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-109.2454" y1="53.34" x2="-134.62" y2="53.34" width="0.1524" layer="91"/>
 <junction x="-109.2454" y="53.34"/>
+<pinref part="U$2" gate="G$1" pin="WRITEPROTECT"/>
 </segment>
 </net>
 <net name="+2V5" class="0">
@@ -10872,9 +10865,9 @@ Wickmann</description>
 <pinref part="SUPPLY9" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
-<wire x1="-132.08" y1="43.18" x2="-129.54" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="43.18" x2="-129.54" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="VSS"/>
