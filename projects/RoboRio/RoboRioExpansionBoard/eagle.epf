@@ -7,6 +7,7 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
+UsedLibrary="/Users/nnrobot/Documents/eagle/roborioExpansion/lbr/CustomLibraries/SDcardlibraryroborio.lbr"
 
 [Win_1]
 Type="Control Panel"
