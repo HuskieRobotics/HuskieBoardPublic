@@ -9205,7 +9205,7 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 <part name="C1" library="adafruit" deviceset="CPOL-US" device="E5-10.5" value="1000uf"/>
 <part name="U$1" library="Molex-39543-0002" deviceset="POWER" device=""/>
 <part name="U$2" library="NeopixelConnector" deviceset="NEOPIXEL1" device=""/>
-<part name="U$3" library="SOT25" deviceset="74AHCT1G08" device=""/>
+<part name="S1" library="SOT25" deviceset="74AHCT1G08" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9217,7 +9217,7 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 <instance part="C1" gate="G$1" x="40.64" y="38.1"/>
 <instance part="U$1" gate="G$1" x="33.02" y="50.8" rot="R270"/>
 <instance part="U$2" gate="G$1" x="106.68" y="30.48" rot="MR180"/>
-<instance part="U$3" gate="AND" x="66.04" y="12.7"/>
+<instance part="S1" gate="AND" x="66.04" y="12.7"/>
 </instances>
 <busses>
 </busses>
@@ -9246,7 +9246,7 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 <wire x1="91.44" y1="33.02" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="33.02" x2="43.18" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="5.08" x2="50.8" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="AND" pin="GND"/>
+<pinref part="S1" gate="AND" pin="GND"/>
 <wire x1="50.8" y1="-2.54" x2="63.5" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="43.18" y="33.02"/>
 </segment>
@@ -9256,13 +9256,15 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 <pinref part="IN" gate="G$1" pin="3"/>
 <wire x1="50.8" y1="15.24" x2="40.64" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="15.24" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="S1" gate="AND" pin="A"/>
+<junction x="50.8" y="15.24"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="25.4" x2="81.28" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="AND" pin="Y"/>
+<pinref part="S1" gate="AND" pin="Y"/>
 <wire x1="76.2" y1="25.4" x2="76.2" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9278,14 +9280,14 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 <wire x1="63.5" y1="48.26" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="33.02" x2="93.98" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="33.02" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="AND" pin="VCC"/>
+<pinref part="S1" gate="AND" pin="VCC"/>
 <wire x1="63.5" y1="48.26" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
 <junction x="63.5" y="48.26"/>
 <junction x="63.5" y="27.94"/>
 <wire x1="63.5" y1="27.94" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="27.94" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="27.94" x2="48.26" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="AND" pin="B"/>
+<pinref part="S1" gate="AND" pin="B"/>
 <wire x1="48.26" y1="25.4" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="12.7" x2="50.8" y2="10.16" width="0.1524" layer="91"/>
 </segment>
@@ -9294,9 +9296,6 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 </sheet>
 </sheets>
 <errors>
-<approved hash="202,1,96.52,-2.54,IC2A,I,,,,"/>
-<approved hash="202,1,40.64,-2.54,IC2B,I,,,,"/>
-<approved hash="202,1,68.58,-2.54,IC2C,I,,,,"/>
 <approved hash="104,1,45.72,45.72,U$1,5V,VCC,,,"/>
 <approved hash="113,1,25.3577,29.0153,IN,,,,,"/>
 </errors>
