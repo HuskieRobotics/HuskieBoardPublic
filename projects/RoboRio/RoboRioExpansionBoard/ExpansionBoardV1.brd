@@ -129,8 +129,8 @@
 <wire x1="100" y1="0" x2="100" y2="80" width="0" layer="20"/>
 <wire x1="100" y1="80" x2="0" y2="80" width="0" layer="20"/>
 <wire x1="0" y1="80" x2="0" y2="0" width="0" layer="20"/>
-<hole x="97.0026" y="61.6458" drill="3.175"/>
-<hole x="96.5962" y="16.4338" drill="3.175"/>
+<hole x="96.647" y="64.77" drill="3.175"/>
+<hole x="96.6724" y="15.1892" drill="3.175"/>
 </plain>
 <libraries>
 <library name="con-lstb-modified">
