@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -9535,7 +9535,7 @@ Wickmann</description>
 <part name="YELLOW" library="led" deviceset="LED" device="5MM"/>
 <part name="GREEN" library="led" deviceset="LED" device="5MM"/>
 <part name="U$4" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
-<part name="C2" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C2" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="AI2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
@@ -9543,16 +9543,16 @@ Wickmann</description>
 <part name="AO1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AIO" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
-<part name="C1" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C1" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="RN1" library="resistor-sil" deviceset="G08R" device="" value="10k"/>
 <part name="+3V14" library="supply1" deviceset="+3V3" device=""/>
-<part name="C3" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C3" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="IC1" library="microchip" deviceset="MC15*" device="TO" technology="25"/>
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="DGND" device=""/>
-<part name="C6" library="capacitor-wima" deviceset="C" device="7.5/6" value="1uF"/>
+<part name="C6" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
 <part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V16" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
@@ -9566,14 +9566,14 @@ Wickmann</description>
 <part name="ADC0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R20" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R21" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C11" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C11" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY25" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY31" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY32" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY16" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY33" library="supply2" deviceset="DGND" device=""/>
-<part name="C14" library="capacitor-wima" deviceset="C" device="7.5/6" value="1uF"/>
-<part name="C15" library="capacitor-wima" deviceset="C" device="7.5/6" value="10uF"/>
+<part name="C14" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
+<part name="C15" library="capacitor-wima" deviceset="C" device="5/2.5" value="10uF"/>
 <part name="SUPPLY35" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY36" library="supply2" deviceset="DGND" device=""/>
 <part name="R7" library="resistor" deviceset="R-US_" device="0309/V" value="33"/>
@@ -9581,49 +9581,49 @@ Wickmann</description>
 <part name="ADC1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R6" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R8" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C4" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C4" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY4" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R9" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R10" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C5" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C5" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY19" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY20" library="supply2" deviceset="DGND" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R11" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R12" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C7" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C7" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY21" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY22" library="supply2" deviceset="DGND" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R13" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R14" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C8" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C8" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY23" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY24" library="supply2" deviceset="DGND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R15" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R16" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C9" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C9" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY26" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY27" library="supply2" deviceset="DGND" device=""/>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC6" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R17" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R18" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C10" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C10" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY29" library="supply2" deviceset="DGND" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC7" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="R19" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
 <part name="R24" library="resistor" deviceset="R-US_" device="0309/V" value="100"/>
-<part name="C16" library="capacitor-wima" deviceset="C" device="7.5/6" value=".1uF"/>
+<part name="C16" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY34" library="supply2" deviceset="DGND" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
