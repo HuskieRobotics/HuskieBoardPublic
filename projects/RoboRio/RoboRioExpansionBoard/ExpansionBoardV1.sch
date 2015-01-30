@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
@@ -9541,7 +9541,7 @@ Wickmann</description>
 <part name="AI1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AO0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AO1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="AIO" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="AI0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="C1" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
@@ -9718,11 +9718,11 @@ Wickmann</description>
 <instance part="AI1" gate="G$1" x="-179.07" y="59.69" rot="R180"/>
 <instance part="AO0" gate="G$1" x="-179.07" y="17.78" rot="R180"/>
 <instance part="AO1" gate="G$1" x="-179.07" y="3.81" rot="R180"/>
-<instance part="AIO" gate="G$1" x="-179.07" y="73.66" rot="R180"/>
+<instance part="AI0" gate="G$1" x="-179.07" y="73.66" rot="R180"/>
 <instance part="P+10" gate="1" x="-199.39" y="87.63" rot="MR0"/>
 <instance part="C1" gate="G$1" x="-12.7" y="160.02" rot="R180"/>
 <instance part="+3V5" gate="G$1" x="-127" y="45.72" rot="R270"/>
-<instance part="RN1" gate="G$1" x="-104.1654" y="58.42" rot="R270"/>
+<instance part="RN1" gate="G$1" x="-104.14" y="58.42" rot="R270"/>
 <instance part="+3V14" gate="G$1" x="-91.4654" y="68.58" rot="R270"/>
 <instance part="C3" gate="G$1" x="-106.68" y="-92.71"/>
 <instance part="IC1" gate="G$1" x="-83.82" y="-91.44"/>
@@ -10013,6 +10013,7 @@ Wickmann</description>
 <segment>
 <pinref part="RN1" gate="G$1" pin="1"/>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
+<wire x1="-93.98" y1="68.58" x2="-94.0054" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-106.68" y1="-91.44" x2="-106.68" y2="-90.17" width="0.1524" layer="91"/>
@@ -10047,6 +10048,7 @@ Wickmann</description>
 <wire x1="-236.22" y1="22.86" x2="-238.76" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-238.76" y1="22.86" x2="-238.76" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R25" gate="G$1" pin="1"/>
+<junction x="-238.76" y="27.94"/>
 </segment>
 <segment>
 <pinref part="IO0" gate="G$1" pin="2"/>
@@ -10185,13 +10187,11 @@ Wickmann</description>
 <label x="-81.28" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-116.84" y1="68.58" x2="-134.62" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="68.58" x2="-134.62" y2="68.58" width="0.1524" layer="91"/>
 <label x="-127" y="68.58" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="DAT2"/>
-</segment>
-<segment>
-<wire x1="-116.84" y1="68.58" x2="-109.22" y2="68.58" width="0.1524" layer="91"/>
 <junction x="-109.22" y="68.58"/>
+<pinref part="RN1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IO9" gate="G$1" pin="3"/>
@@ -10206,11 +10206,10 @@ Wickmann</description>
 <label x="-81.28" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-134.62" y1="66.04" x2="-109.2454" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="66.04" x2="-109.22" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-109.22" y="66.04"/>
-<wire x1="-109.2454" y1="66.04" x2="-109.22" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="3"/>
-<junction x="-109.2454" y="66.04"/>
+<junction x="-109.22" y="66.04"/>
 <label x="-127" y="66.04" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="CS"/>
 </segment>
@@ -10227,11 +10226,10 @@ Wickmann</description>
 <label x="-81.28" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-109.22" y1="63.5" x2="-109.2454" y2="63.5" width="0.1524" layer="91"/>
 <junction x="-109.22" y="63.5"/>
-<wire x1="-109.2454" y1="63.5" x2="-134.62" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="63.5" x2="-134.62" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="4"/>
-<junction x="-109.2454" y="63.5"/>
+<junction x="-109.22" y="63.5"/>
 <label x="-127" y="63.5" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="MISO"/>
 </segment>
@@ -10255,11 +10253,10 @@ Wickmann</description>
 <wire x1="-49.53" y1="-76.2" x2="-17.78" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-134.62" y1="60.96" x2="-109.2454" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="60.96" x2="-109.22" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-109.22" y="60.96"/>
-<wire x1="-109.2454" y1="60.96" x2="-109.22" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="5"/>
-<junction x="-109.2454" y="60.96"/>
+<junction x="-109.22" y="60.96"/>
 <label x="-127" y="60.96" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="SCLK"/>
 </segment>
@@ -10278,11 +10275,10 @@ Wickmann</description>
 <wire x1="-39.37" y1="-43.18" x2="-83.82" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-109.22" y1="58.42" x2="-109.2454" y2="58.42" width="0.1524" layer="91"/>
 <junction x="-109.22" y="58.42"/>
-<wire x1="-109.2454" y1="58.42" x2="-134.62" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="58.42" x2="-134.62" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="G$1" pin="6"/>
-<junction x="-109.2454" y="58.42"/>
+<junction x="-109.22" y="58.42"/>
 <label x="-127" y="58.42" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="MOSI"/>
 </segment>
@@ -10446,7 +10442,7 @@ Wickmann</description>
 <junction x="-199.39" y="17.78"/>
 <junction x="-199.39" y="31.75"/>
 <junction x="-199.39" y="73.66"/>
-<pinref part="AIO" gate="G$1" pin="2"/>
+<pinref part="AI0" gate="G$1" pin="2"/>
 <wire x1="-199.39" y1="73.66" x2="-186.69" y2="73.66" width="0.1524" layer="91"/>
 <junction x="-199.39" y="59.69"/>
 <pinref part="AI1" gate="G$1" pin="2"/>
@@ -10560,7 +10556,7 @@ Wickmann</description>
 <label x="-261.62" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AIO" gate="G$1" pin="3"/>
+<pinref part="AI0" gate="G$1" pin="3"/>
 <wire x1="-205.74" y1="71.12" x2="-186.69" y2="71.12" width="0.1524" layer="91"/>
 <label x="-203.2" y="71.12" size="1.778" layer="95"/>
 <label x="-203.2" y="71.12" size="1.778" layer="95"/>
@@ -10597,13 +10593,12 @@ Wickmann</description>
 <label x="-81.28" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-134.62" y1="50.8" x2="-109.2454" y2="50.8" width="0.1524" layer="91"/>
-<junction x="-109.22" y="50.8"/>
-<wire x1="-109.2454" y1="50.8" x2="-109.22" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="G$1" pin="9"/>
-<junction x="-109.2454" y="50.8"/>
 <label x="-114.3" y="48.26" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="CARDDETECT"/>
+<wire x1="-111.76" y1="50.8" x2="-134.62" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="RN1" gate="G$1" pin="8"/>
+<wire x1="-109.22" y1="53.34" x2="-111.76" y2="50.8" width="0.1524" layer="91"/>
+<junction x="-109.22" y="53.34"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
@@ -10665,7 +10660,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="15*-DIO2-PWM2"/>
 <wire x1="-332.74" y1="22.86" x2="-309.88" y2="22.86" width="0.1524" layer="91"/>
-<label x="-322.58" y="22.86" size="1.778" layer="95"/>
+<label x="-325.12" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM3" class="0">
@@ -10689,6 +10684,7 @@ Wickmann</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="22*-DIO12-PWM8"/>
 <wire x1="-332.74" y1="38.1" x2="-309.88" y2="38.1" width="0.1524" layer="91"/>
+<label x="-325.12" y="38.1" size="1.778" layer="95"/>
 <label x="-325.12" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -10754,22 +10750,20 @@ Wickmann</description>
 </net>
 <net name="N$26" class="0">
 <segment>
-<wire x1="-134.62" y1="55.88" x2="-109.2454" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="55.88" x2="-109.22" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-109.22" y="55.88"/>
 <pinref part="RN1" gate="G$1" pin="7"/>
-<wire x1="-109.2454" y1="55.88" x2="-109.22" y2="55.88" width="0.1524" layer="91"/>
-<junction x="-109.2454" y="55.88"/>
+<junction x="-109.22" y="55.88"/>
 <pinref part="U$2" gate="G$1" pin="DAT1"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
-<wire x1="-109.22" y1="53.34" x2="-109.2454" y2="53.34" width="0.1524" layer="91"/>
-<junction x="-109.22" y="53.34"/>
-<pinref part="RN1" gate="G$1" pin="8"/>
-<wire x1="-109.2454" y1="53.34" x2="-134.62" y2="53.34" width="0.1524" layer="91"/>
-<junction x="-109.2454" y="53.34"/>
+<wire x1="-111.76" y1="53.34" x2="-134.62" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="WRITEPROTECT"/>
+<pinref part="RN1" gate="G$1" pin="9"/>
+<wire x1="-111.76" y1="53.34" x2="-109.22" y2="50.8" width="0.1524" layer="91"/>
+<junction x="-109.22" y="50.8"/>
 </segment>
 </net>
 <net name="+2V5" class="0">
@@ -10832,7 +10826,7 @@ Wickmann</description>
 <wire x1="-196.85" y1="34.29" x2="-196.85" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-196.85" y1="20.32" x2="-196.85" y2="6.35" width="0.1524" layer="91"/>
 <wire x1="-196.85" y1="6.35" x2="-186.69" y2="6.35" width="0.1524" layer="91"/>
-<pinref part="AIO" gate="G$1" pin="1"/>
+<pinref part="AI0" gate="G$1" pin="1"/>
 <wire x1="-196.85" y1="76.2" x2="-186.69" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="AI1" gate="G$1" pin="1"/>
 <wire x1="-196.85" y1="62.23" x2="-186.69" y2="62.23" width="0.1524" layer="91"/>
@@ -11481,12 +11475,6 @@ Wickmann</description>
 <approved hash="113,1,-57.15,160.342,RED,,,,,"/>
 <approved hash="113,1,-57.15,150.182,YELLOW,,,,,"/>
 <approved hash="113,1,-57.15,140.022,GREEN,,,,,"/>
-<approved hash="113,1,-194.268,44.2553,AI2,,,,,"/>
-<approved hash="113,1,-194.268,30.2853,AI3,,,,,"/>
-<approved hash="113,1,-194.268,58.2253,AI1,,,,,"/>
-<approved hash="113,1,-194.268,16.3153,AI4,,,,,"/>
-<approved hash="113,1,-194.268,2.34527,AI5,,,,,"/>
-<approved hash="113,1,-194.268,72.1953,AIO,,,,,"/>
 <approved hash="113,1,71.1623,-268.165,ADC0,,,,,"/>
 <approved hash="113,1,71.1623,-237.685,ADC1,,,,,"/>
 <approved hash="113,1,71.1623,-209.745,ADC2,,,,,"/>
@@ -11495,8 +11483,6 @@ Wickmann</description>
 <approved hash="113,1,71.1623,-125.925,ADC5,,,,,"/>
 <approved hash="113,1,71.1623,-97.9847,ADC6,,,,,"/>
 <approved hash="113,1,71.1623,-72.5847,ADC7,,,,,"/>
-<approved hash="113,1,-221.365,23.1817,POWER3V3,,,,,"/>
-<approved hash="113,1,-220.655,15.5617,POWER5V,,,,,"/>
 <approved hash="113,1,27.9823,51.8753,IO0,,,,,"/>
 <approved hash="113,1,27.9823,36.6353,IO1,,,,,"/>
 <approved hash="113,1,27.9823,21.3953,IO2,,,,,"/>
@@ -11509,11 +11495,6 @@ Wickmann</description>
 <approved hash="113,1,144.822,36.6353,IO9,,,,,"/>
 <approved hash="113,1,144.822,21.3953,IO10,,,,,"/>
 <approved hash="113,1,144.822,6.15527,IO11,,,,,"/>
-<approved hash="115,1,-124.46,66.04,IO10,,,,,"/>
-<approved hash="115,1,-109.233,63.5,IO11,,,,,"/>
-<approved hash="115,1,-124.46,60.96,IO12,,,,,"/>
-<approved hash="115,1,-109.233,58.42,IO13,,,,,"/>
-<approved hash="115,1,-124.46,50.8,IO14,,,,,"/>
 </errors>
 </schematic>
 </drawing>
