@@ -15,29 +15,37 @@ VAR
   long pointer, lastpointer
   long buf[1]
   byte stop
+  long index
    
 OBJ
   sd : "fsrw"
   nums : "Simple_Numbers"
   str : "String"
-  ''pst : "Parallax Serial Terminal"
+  pst : "Parallax Serial Terminal"
   
 PUB init(datpointer) | insert_card 
-  ''waitcnt(clkfreq*6 + cnt)
-  ''pst.start(115_200)
-  ''pst.str(string("Program start!",13))
+  'waitcnt(clkfreq*4 + cnt)
+  pst.start(115_200)
+  pst.str(string("Program start!",13))
   stop := false
   insert_card := sd.mount_explicit(DO,CLK,DI,CS)
-  pst.dec(insert_card)
+  pst.str(string("Mounted",13))
   if insert_card < 0 ''if sd card not connected...
-    ''pst.str(string("Micro SD card not found!",13))
+    pst.str(string("Micro SD card not found!",13))
     return  -1  ''ends program
-  pointer := @datpointer
+  pointer := @datpointer 
   lastpointer := 0
-  
-  return cognew(do,stack[100])
+   sd.popen(string("test.txt"),"w")
+  sd.pputs(0)
+  sd.pclose
+  sd.popen(string("test.txt"),"a")
+  sd.pputs(@fdata)
+  sd.pclose
+  pst.str(string("Program done!"))
+  return -1
+  'return cognew(do,stack[100])
   ''pst.str(string("Micro SD card successfully connected!",13))      
-PRI do   | add
+{PRI do   | add
   'sd.popen(string("matches.csv"), "r")  ''appends to text file  
   'sd.pread(@buf,1)
   'add := buf[1]+1
@@ -54,7 +62,8 @@ PRI do   | add
 PUB end
   sd.pclose
   stop := true
-PUB setFileName(file)
-  datFileName := @file
+PUB setFileName(filename)
+  datFileName := @filename}
 DAT
-datfilename long "null_pointer",0        
+datfilename byte "test.txt",0
+fdata byte "FILE WRITE SUCCESS",13,10,"MULTIPLE LINES",0
