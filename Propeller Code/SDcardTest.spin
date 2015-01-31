@@ -5,10 +5,10 @@ CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
 
-        DO = 0
-        CLK = 1
-        DI = 2
-        CS = 3
+        DO = 7
+        CLK = 6
+        DI = 5
+        CS = 4
 
 VAR
   long  stack[256]
@@ -27,7 +27,7 @@ PUB init(datpointer) | insert_card
   ''pst.start(115_200)
   ''pst.str(string("Program start!",13))
   stop := false
-  insert_card := sd.mount_explicit(DO,CLK,DI,CS) ''I need values for these....
+  insert_card := sd.mount_explicit(DO,CLK,DI,CS)
   pst.dec(insert_card)
   if insert_card < 0 ''if sd card not connected...
     ''pst.str(string("Micro SD card not found!",13))
