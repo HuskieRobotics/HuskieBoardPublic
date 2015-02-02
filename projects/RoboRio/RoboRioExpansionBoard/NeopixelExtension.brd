@@ -1384,7 +1384,7 @@ Source: http://www.taiwansemi.com .. 5205_0409c.pdf</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="midwestpcb *">
+<designrules name="midwestpcb">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
