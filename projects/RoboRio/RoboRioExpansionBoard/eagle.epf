@@ -7,13 +7,13 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="/Users/nnrobot/Documents/eagle/roborioExpansion/lbr/CustomLibraries/SDcardlibraryroborio.lbr"
+UsedLibrary="/Users/nnrobot/Documents/eagle/roborioExpansion/lbr/CustomLibraries/NeopixelConnector.lbr"
 
 [Win_1]
 Type="Schematic Editor"
 Loc="480 302 1079 701"
-State=0
-Number=2
+State=2
+Number=1
 File="ExpansionBoardV1.sch"
 View="-384.271 -298.708 162.232 179.201"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
