@@ -61,7 +61,7 @@
 <description>Molex 5031821853</description>
 <smd name="P$1" x="5.1" y="5.73" dx="1.24" dy="0.8" layer="1" rot="R270"/>
 <smd name="P$2" x="4" y="5.74" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$3" x="2.9" y="5.74" dx="0.8" dy="1.24" layer="1"/>
+<smd name="P$3" x="2.9" y="5.73" dx="0.8" dy="1.24" layer="1"/>
 <smd name="P$4" x="1.8" y="5.73" dx="0.8" dy="1.24" layer="1"/>
 <smd name="P$5" x="0.7" y="5.73" dx="0.8" dy="1.24" layer="1"/>
 <smd name="P$6" x="-0.4" y="5.73" dx="0.8" dy="1.24" layer="1"/>
