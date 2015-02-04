@@ -1,21 +1,34 @@
 [Eagle]
 Version="07 02 00"
-Platform="Mac OS X"
+Platform="Windows"
 Serial="62191E841E-LSR-WLM-1EL"
 Globals="Globals"
 Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="/Users/nnrobot/Documents/eagle/roborioExpansion/lbr/CustomLibraries/NeopixelConnector.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/40xx-2.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/ITG 3400 Gyro.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/MicroSdSocket.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/Molex-39543-0002.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/NeopixelConnector.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/PropPlug.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/RESETBUTTON3000.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/RoboRioConnector.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/SDcardlibraryroborio.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/SOT25.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/adafruit.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/con-lstb-modified.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/oli.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/parallax_propeller (1).lbr"
 
 [Win_1]
 Type="Schematic Editor"
-Loc="480 302 1079 701"
-State=0
-Number=2
+Loc="492 231 1091 630"
+State=3
+Number=1
 File="ExpansionBoardV1.sch"
-View="-384.271 -298.708 162.232 179.201"
+View="-121.949 38.5789 5.15069 149.726"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
@@ -54,15 +67,16 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
+Views=" 1: -121.949 38.5789 5.15069 149.726"
 Sheet="1"
 
 [Win_2]
 Type="Control Panel"
-Loc="667 79 2583 1025"
-State=2
+Loc="667 79 1468 676"
+State=1
 Number=0
 
 [Desktop]
-Screen="1920 1080"
+Screen="1600 900"
 Window="Win_1"
 Window="Win_2"
