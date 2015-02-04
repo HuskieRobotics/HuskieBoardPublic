@@ -7960,16 +7960,14 @@ Source: www.kingbright.com</description>
 <packages>
 <package name="RESETBUTTON300000MILLION">
 <description>This is an advanced reset button hand crafted by the most weathered engineers.</description>
-<pad name="P4" x="-6.5" y="-4.5" drill="1" shape="square"/>
-<pad name="P3" x="-6.5" y="0" drill="1" shape="square"/>
-<pad name="P1" x="0" y="0" drill="1" shape="square"/>
-<pad name="P2" x="0" y="-4.5" drill="1" shape="square"/>
-<polygon width="0.127" layer="25">
-<vertex x="-6.5" y="0"/>
-<vertex x="0" y="0"/>
-<vertex x="0" y="-4.5"/>
-<vertex x="-6.5" y="-4.5"/>
-</polygon>
+<pad name="P4" x="-3.25" y="-2.45" drill="0.8" shape="square"/>
+<pad name="P3" x="-3.25" y="2.05" drill="0.8" shape="square"/>
+<pad name="P1" x="3.25" y="2.05" drill="0.8" shape="square"/>
+<pad name="P2" x="3.25" y="-2.45" drill="0.8" shape="square"/>
+<wire x1="-4.064" y1="2.794" x2="4.064" y2="2.794" width="0.127" layer="25"/>
+<wire x1="4.064" y1="2.794" x2="4.064" y2="-3.202" width="0.127" layer="25"/>
+<wire x1="4.064" y1="-3.202" x2="-4.064" y2="-3.202" width="0.127" layer="25"/>
+<wire x1="-4.064" y1="-3.202" x2="-4.064" y2="2.794" width="0.127" layer="25"/>
 </package>
 </packages>
 <symbols>
@@ -9449,8 +9447,8 @@ Wickmann</description>
 <package name="MICRO_SD_PUSH-PUSH">
 <description>Molex 5031821853</description>
 <smd name="P$1" x="5.1" y="5.73" dx="1.24" dy="0.8" layer="1" rot="R270"/>
-<smd name="P$2" x="3.99" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$3" x="2.9" y="5.74" dx="0.8" dy="1.24" layer="1"/>
+<smd name="P$2" x="4" y="5.74" dx="0.8" dy="1.24" layer="1"/>
+<smd name="P$3" x="2.9" y="5.73" dx="0.8" dy="1.24" layer="1"/>
 <smd name="P$4" x="1.8" y="5.73" dx="0.8" dy="1.24" layer="1"/>
 <smd name="P$5" x="0.7" y="5.73" dx="0.8" dy="1.24" layer="1"/>
 <smd name="P$6" x="-0.4" y="5.73" dx="0.8" dy="1.24" layer="1"/>
@@ -9466,15 +9464,15 @@ Wickmann</description>
 <text x="-7.4" y="-9.9" size="1.27" layer="25">&gt;NAME</text>
 <text x="-7.4" y="-11.9" size="1.27" layer="27">&gt;VALUES</text>
 <rectangle x1="-3.35" y1="-3.3" x2="5.85" y2="0.1" layer="39"/>
-<wire x1="-6.72" y1="7.6" x2="-5.14" y2="7.6" width="0.127" layer="27"/>
-<wire x1="-5.14" y1="7.6" x2="5.86" y2="7.6" width="0.127" layer="27"/>
-<wire x1="5.86" y1="7.6" x2="7.42" y2="7.6" width="0.127" layer="27"/>
-<wire x1="-6.72" y1="-7.35" x2="7.42" y2="-7.35" width="0.127" layer="27"/>
-<wire x1="-6.72" y1="-7.35" x2="-6.72" y2="7.6" width="0.127" layer="27"/>
-<wire x1="7.42" y1="7.6" x2="7.42" y2="-7.35" width="0.127" layer="27"/>
-<wire x1="-5.14" y1="7.6" x2="-5.14" y2="10" width="0.127" layer="27"/>
-<wire x1="-5.14" y1="10" x2="5.86" y2="10" width="0.127" layer="27"/>
-<wire x1="5.86" y1="10" x2="5.86" y2="7.6" width="0.127" layer="27"/>
+<wire x1="-6.72" y1="7.6" x2="-5.14" y2="7.6" width="0.127" layer="21"/>
+<wire x1="-5.14" y1="7.6" x2="5.86" y2="7.6" width="0.127" layer="21"/>
+<wire x1="5.86" y1="7.6" x2="7.42" y2="7.6" width="0.127" layer="21"/>
+<wire x1="-6.72" y1="-7.35" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
+<wire x1="-6.72" y1="-7.35" x2="-6.72" y2="7.6" width="0.127" layer="21"/>
+<wire x1="7.42" y1="7.6" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
+<wire x1="-5.14" y1="7.6" x2="-5.14" y2="10" width="0.127" layer="21"/>
+<wire x1="-5.14" y1="10" x2="5.86" y2="10" width="0.127" layer="21"/>
+<wire x1="5.86" y1="10" x2="5.86" y2="7.6" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -10056,6 +10054,8 @@ Wickmann</description>
 <pinref part="C13" gate="G$1" pin="1"/>
 <wire x1="-60.96" y1="78.74" x2="-66.04" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="78.74" x2="-66.04" y2="86.36" width="0.1524" layer="91"/>
+<junction x="-66.04" y="93.98"/>
+<junction x="-66.04" y="86.36"/>
 </segment>
 <segment>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
@@ -10383,14 +10383,11 @@ Wickmann</description>
 <label x="-27.94" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-71.12" y1="-53.34" x2="-83.82" y2="-53.34" width="0.1524" layer="91"/>
 <label x="-76.962" y="-51.562" size="1.778" layer="95" rot="R180"/>
-</segment>
-<segment>
 <pinref part="ADC" gate="G$1" pin="CLK"/>
 <wire x1="-17.78" y1="-83.82" x2="-52.4002" y2="-83.82" width="0.1524" layer="91"/>
 <wire x1="-52.4002" y1="-83.82" x2="-52.4002" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="-52.4002" y1="-53.34" x2="-71.12" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="-52.4002" y1="-53.34" x2="-83.82" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO21" class="0">
@@ -11551,10 +11548,10 @@ Wickmann</description>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,-63.5,78.74,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,-63.5,76.2,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,-45.72,78.74,PROPELLERP,VSS,DGND,,,"/>
-<approved hash="104,1,-45.72,76.2,PROPELLERP,VSS,DGND,,,"/>
+<approved hash="104,1,-63.5,106.68,PROPELLERP,VDD,+3V3,,,"/>
+<approved hash="104,1,-63.5,104.14,PROPELLERP,VDD,+3V3,,,"/>
+<approved hash="104,1,-45.72,106.68,PROPELLERP,VSS,DGND,,,"/>
+<approved hash="104,1,-45.72,104.14,PROPELLERP,VSS,DGND,,,"/>
 <approved hash="104,1,-2.54,147.32,EEPROM,VCC,+3V3,,,"/>
 <approved hash="104,1,-2.54,124.46,EEPROM,GND,DGND,,,"/>
 <approved hash="104,1,-17.78,-73.66,ADC,GND,DGND,,,"/>
