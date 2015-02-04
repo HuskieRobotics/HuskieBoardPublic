@@ -7,20 +7,18 @@ CON
 
 VAR
   long  stack
-  long  buffer[250]
-  long  pointer[4] 
+     
 OBJ
-  thing    : ""
+  io       : "FullDuplexSerial2"
   term     : "Parallax Serial Terminal"
   
-PUB start
-  coginit(1, @stack, com)
-  coginit(2, @stack, recv)
-  thing.start(1,0,0,256000)
+PUB start                 
+  cognew(@stack, com)
+  cognew(@stack, recv)
+  io.start(1,0,0,256000, stack)
   term.start(115200)
-PUB recv | count
-  
-PUB com  
+{PUB recv(origin) | temp
+PUB send(destination) | temp}   
 DAT
 name    byte  "string_data",0        
         
