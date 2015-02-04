@@ -6100,6 +6100,8 @@ This is a simple Propeller Plug (PropPLUG) design.</description>
 <rectangle x1="14.986" y1="1.016" x2="15.494" y2="1.524" layer="51"/>
 <rectangle x1="17.526" y1="1.016" x2="18.034" y2="1.524" layer="51"/>
 <rectangle x1="20.066" y1="1.016" x2="20.574" y2="1.524" layer="51"/>
+<hole x="-25.3238" y="-69.2658" drill="3.175"/>
+<hole x="25.3238" y="-69.2658" drill="3.175"/>
 </package>
 </packages>
 <symbols>
