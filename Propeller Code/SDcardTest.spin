@@ -1,14 +1,14 @@
-{Object_Title_and_Purpose}
+{AUTHOR: Mr Lucas Rezac}
 
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
 
-        DO = 7
+        DO  = 7
         CLK = 6
-        DI = 5
-        CS = 4
+        DI  = 5
+        CS  = 4
 
 VAR
   long  stack[256]
@@ -19,8 +19,8 @@ VAR
    
 OBJ
   sd : "fsrw"
-  nums : "Simple_Numbers"
-  str : "String"
+  'nums : "Simple_Numbers"
+  'str : "String"
   pst : "Parallax Serial Terminal"
   
 PUB init(datpointer) | insert_card 
@@ -35,25 +35,25 @@ PUB init(datpointer) | insert_card
     return  -1  ''ends program
   pointer := @datpointer 
   lastpointer := 0
-   sd.popen(string("test.txt"),"w")
+  {sd.popen(string("test.txt"),"w")
   sd.pputs(0)
   sd.pclose
   sd.popen(string("test.txt"),"a")
   sd.pputs(@fdata)
   sd.pclose
   pst.str(string("Program done!"))
-  return -1
-  'return cognew(do,stack[100])
+  return -1 }
+  return cognew(doStuff,stack[100])
   ''pst.str(string("Micro SD card successfully connected!",13))      
-{PRI do   | add
-  'sd.popen(string("matches.csv"), "r")  ''appends to text file  
+PRI doStuff 
+  {'sd.popen(string("matches.csv"), "r")  ''appends to text file  
   'sd.pread(@buf,1)
   'add := buf[1]+1
   'sd.pclose
   'sd.popen(string("matches.csv"),"w")
   'sd.pputs(add)
   'sd.pclose
-  'sd.popen(str.stringConcatenate(str.stringConcatenate(string("match"),nums.dec(add)),string(".csv")),"a")
+  'sd.popen(str.stringConcatenate(str.stringConcatenate(string("match"),nums.dec(add)),string(".csv")),"a")}
   sd.popen(@datfilename,"a")
   repeat while !stop
     if pointer <> lastpointer
@@ -63,7 +63,7 @@ PUB end
   sd.pclose
   stop := true
 PUB setFileName(filename)
-  datFileName := @filename}
+  datFileName := @filename
 DAT
 datfilename byte "test.txt",0
 fdata byte "FILE WRITE SUCCESS",13,10,"MULTIPLE LINES",0
