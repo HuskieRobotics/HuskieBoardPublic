@@ -9562,16 +9562,16 @@ Wickmann</description>
 <part name="PWM8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="PWM9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="U4" library="adafruit" deviceset="MCP3008" device=""/>
+<part name="RX1" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
-<part name="R4" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
 <part name="5V_LCD" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
 <part name="L2" library="led" deviceset="LED" device="5MM"/>
 <part name="L1" library="led" deviceset="LED" device="5MM"/>
 <part name="L3" library="led" deviceset="LED" device="5MM"/>
 <part name="U3" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
-<part name="C2" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="C1" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="AI2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
@@ -9579,16 +9579,16 @@ Wickmann</description>
 <part name="AO1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="AI0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
-<part name="C1" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="C6" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="RN1" library="resistor-sil" deviceset="G08R" device="" value="10k"/>
 <part name="+3V14" library="supply1" deviceset="+3V3" device=""/>
-<part name="C3" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="C2" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="U5" library="microchip" deviceset="MC15*" device="TO" technology="25"/>
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="DGND" device=""/>
-<part name="C6" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
+<part name="C4" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
 <part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V16" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="DGND" device=""/>
@@ -9599,64 +9599,64 @@ Wickmann</description>
 <part name="SUPPLY13" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY18" library="supply2" deviceset="DGND" device=""/>
 <part name="ADC0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R20" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R21" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C11" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R14" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C9" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY25" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY31" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY32" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY16" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY33" library="supply2" deviceset="DGND" device=""/>
-<part name="C14" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
-<part name="C15" library="capacitor-wima" deviceset="C" device="5/2.5" value="10uF"/>
+<part name="C3" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
+<part name="C5" library="capacitor-wima" deviceset="C" device="5/2.5" value="10uF"/>
 <part name="SUPPLY35" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY36" library="supply2" deviceset="DGND" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC1" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R6" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R8" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C4" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R7" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R15" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C10" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY4" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC2" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R9" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R10" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C5" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R8" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R16" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C11" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY19" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY20" library="supply2" deviceset="DGND" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC3" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R11" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R12" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C7" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R9" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R17" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C12" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY21" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY22" library="supply2" deviceset="DGND" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC4" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R13" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R14" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C8" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R10" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R18" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C13" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY23" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY24" library="supply2" deviceset="DGND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC5" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R15" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R16" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C9" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R11" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R19" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C14" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY26" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY27" library="supply2" deviceset="DGND" device=""/>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC6" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R17" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R18" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="C10" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
+<part name="R12" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R20" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="C15" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY29" library="supply2" deviceset="DGND" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="ADC7" library="con-lstb-modified" deviceset="MA03-1" device=""/>
-<part name="R19" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
-<part name="R24" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R13" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
+<part name="R21" library="resistor" deviceset="R-US_" device="0204/7" value="100"/>
 <part name="C16" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY34" library="supply2" deviceset="DGND" device=""/>
@@ -9669,8 +9669,8 @@ Wickmann</description>
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+16" library="supply1" deviceset="+5V" device=""/>
-<part name="R25" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
-<part name="R26" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
+<part name="R5" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
 <part name="IO0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="DGND" device=""/>
@@ -9709,8 +9709,8 @@ Wickmann</description>
 <part name="SUPPLY50" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
 <part name="J2" library="MicroSdSocket" deviceset="MICROSD" device=""/>
-<part name="C12" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
-<part name="C13" library="capacitor-wima" deviceset="C" device="5/2.5" value="10uF"/>
+<part name="C8" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
+<part name="C7" library="capacitor-wima" deviceset="C" device="5/2.5" value="10uF"/>
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 </parts>
@@ -9741,16 +9741,16 @@ Wickmann</description>
 <instance part="PWM8" gate="G$1" x="-355.6" y="12.7" rot="R270"/>
 <instance part="PWM9" gate="G$1" x="-355.6" y="0" rot="R270"/>
 <instance part="U4" gate="G$1" x="-2.54" y="-83.82" rot="R180"/>
-<instance part="R2" gate="G$1" x="-71.12" y="149.86" rot="R180"/>
-<instance part="R3" gate="G$1" x="-71.12" y="160.02" rot="R180"/>
-<instance part="R4" gate="G$1" x="-71.12" y="139.7"/>
+<instance part="RX1" gate="G$1" x="-71.12" y="149.86" rot="R180"/>
+<instance part="R2" gate="G$1" x="-71.12" y="160.02" rot="R180"/>
+<instance part="R3" gate="G$1" x="-71.12" y="139.7"/>
 <instance part="5V_LCD" gate="G$1" x="16.51" y="-30.48" rot="R180"/>
 <instance part="P+9" gate="1" x="3.81" y="-20.32"/>
 <instance part="L2" gate="G$1" x="-58.42" y="160.02" rot="R90"/>
 <instance part="L1" gate="G$1" x="-58.42" y="149.86" rot="R90"/>
 <instance part="L3" gate="G$1" x="-58.42" y="139.7" rot="R90"/>
 <instance part="U3" gate="G$1" x="27.94" y="101.6"/>
-<instance part="C2" gate="G$1" x="-58.42" y="93.98" rot="R90"/>
+<instance part="C1" gate="G$1" x="-58.42" y="93.98" rot="R90"/>
 <instance part="AI2" gate="G$1" x="-179.07" y="45.72" rot="R180"/>
 <instance part="AI3" gate="G$1" x="-179.07" y="31.75" rot="R180"/>
 <instance part="AI1" gate="G$1" x="-179.07" y="59.69" rot="R180"/>
@@ -9758,16 +9758,16 @@ Wickmann</description>
 <instance part="AO1" gate="G$1" x="-179.07" y="3.81" rot="R180"/>
 <instance part="AI0" gate="G$1" x="-179.07" y="73.66" rot="R180"/>
 <instance part="P+10" gate="1" x="-199.39" y="87.63" rot="MR0"/>
-<instance part="C1" gate="G$1" x="-12.7" y="160.02" rot="R180"/>
+<instance part="C6" gate="G$1" x="-12.7" y="160.02" rot="R180"/>
 <instance part="+3V5" gate="G$1" x="-165.1" y="76.2"/>
 <instance part="RN1" gate="G$1" x="-99.06" y="63.5" rot="R270"/>
 <instance part="+3V14" gate="G$1" x="-88.9" y="81.2546"/>
-<instance part="C3" gate="G$1" x="-106.68" y="-92.71"/>
+<instance part="C2" gate="G$1" x="-106.68" y="-92.71"/>
 <instance part="U5" gate="G$1" x="-83.82" y="-91.44"/>
 <instance part="SUPPLY1" gate="G$1" x="-106.68" y="-104.14"/>
 <instance part="+3V13" gate="G$1" x="-25.4" y="-63.5"/>
 <instance part="SUPPLY2" gate="G$1" x="-22.86" y="-99.06"/>
-<instance part="C6" gate="G$1" x="-53.34" y="-104.14" rot="R180"/>
+<instance part="C4" gate="G$1" x="-53.34" y="-104.14" rot="R180"/>
 <instance part="SUPPLY3" gate="G$1" x="-53.34" y="-111.76"/>
 <instance part="+3V16" gate="G$1" x="-106.68" y="-83.82"/>
 <instance part="SUPPLY7" gate="G$1" x="-45.72" y="73.66"/>
@@ -9778,64 +9778,64 @@ Wickmann</description>
 <instance part="SUPPLY13" gate="G$1" x="1.27" y="-40.64"/>
 <instance part="SUPPLY18" gate="G$1" x="-259.08" y="27.94"/>
 <instance part="ADC0" gate="G$1" x="76.2" y="-266.7" rot="R180"/>
-<instance part="R20" gate="G$1" x="60.96" y="-269.24" rot="MR180"/>
-<instance part="R21" gate="G$1" x="43.18" y="-275.59" rot="MR90"/>
-<instance part="C11" gate="G$1" x="53.34" y="-273.05" rot="MR0"/>
+<instance part="R6" gate="G$1" x="60.96" y="-269.24" rot="MR180"/>
+<instance part="R14" gate="G$1" x="43.18" y="-275.59" rot="MR90"/>
+<instance part="C9" gate="G$1" x="53.34" y="-273.05" rot="MR0"/>
 <instance part="SUPPLY25" gate="G$1" x="66.04" y="-264.16" rot="R270"/>
 <instance part="SUPPLY31" gate="G$1" x="53.34" y="-285.75"/>
 <instance part="SUPPLY32" gate="G$1" x="-73.66" y="5.08"/>
 <instance part="SUPPLY16" gate="G$1" x="-50.8" y="137.16"/>
 <instance part="SUPPLY33" gate="G$1" x="-2.54" y="121.92"/>
-<instance part="C14" gate="G$1" x="-40.64" y="-104.14" rot="R180"/>
-<instance part="C15" gate="G$1" x="-30.48" y="-104.14" rot="R180"/>
+<instance part="C3" gate="G$1" x="-40.64" y="-104.14" rot="R180"/>
+<instance part="C5" gate="G$1" x="-30.48" y="-104.14" rot="R180"/>
 <instance part="SUPPLY35" gate="G$1" x="-40.64" y="-111.76"/>
 <instance part="SUPPLY36" gate="G$1" x="-30.48" y="-111.76"/>
 <instance part="P+2" gate="1" x="60.96" y="-260.35"/>
 <instance part="ADC1" gate="G$1" x="76.2" y="-236.22" rot="R180"/>
-<instance part="R6" gate="G$1" x="60.96" y="-238.76" rot="MR180"/>
-<instance part="R8" gate="G$1" x="43.18" y="-245.11" rot="MR90"/>
-<instance part="C4" gate="G$1" x="53.34" y="-242.57" rot="MR0"/>
+<instance part="R7" gate="G$1" x="60.96" y="-238.76" rot="MR180"/>
+<instance part="R15" gate="G$1" x="43.18" y="-245.11" rot="MR90"/>
+<instance part="C10" gate="G$1" x="53.34" y="-242.57" rot="MR0"/>
 <instance part="SUPPLY4" gate="G$1" x="66.04" y="-233.68" rot="R270"/>
 <instance part="SUPPLY11" gate="G$1" x="53.34" y="-255.27"/>
 <instance part="P+5" gate="1" x="60.96" y="-229.87"/>
 <instance part="ADC2" gate="G$1" x="76.2" y="-208.28" rot="R180"/>
-<instance part="R9" gate="G$1" x="60.96" y="-210.82" rot="MR180"/>
-<instance part="R10" gate="G$1" x="43.18" y="-217.17" rot="MR90"/>
-<instance part="C5" gate="G$1" x="53.34" y="-214.63" rot="MR0"/>
+<instance part="R8" gate="G$1" x="60.96" y="-210.82" rot="MR180"/>
+<instance part="R16" gate="G$1" x="43.18" y="-217.17" rot="MR90"/>
+<instance part="C11" gate="G$1" x="53.34" y="-214.63" rot="MR0"/>
 <instance part="SUPPLY19" gate="G$1" x="66.04" y="-205.74" rot="R270"/>
 <instance part="SUPPLY20" gate="G$1" x="53.34" y="-227.33"/>
 <instance part="P+6" gate="1" x="60.96" y="-201.93"/>
 <instance part="ADC3" gate="G$1" x="76.2" y="-180.34" rot="R180"/>
-<instance part="R11" gate="G$1" x="60.96" y="-182.88" rot="MR180"/>
-<instance part="R12" gate="G$1" x="43.18" y="-189.23" rot="MR90"/>
-<instance part="C7" gate="G$1" x="53.34" y="-186.69" rot="MR0"/>
+<instance part="R9" gate="G$1" x="60.96" y="-182.88" rot="MR180"/>
+<instance part="R17" gate="G$1" x="43.18" y="-189.23" rot="MR90"/>
+<instance part="C12" gate="G$1" x="53.34" y="-186.69" rot="MR0"/>
 <instance part="SUPPLY21" gate="G$1" x="66.04" y="-177.8" rot="R270"/>
 <instance part="SUPPLY22" gate="G$1" x="53.34" y="-199.39"/>
 <instance part="P+7" gate="1" x="60.96" y="-173.99"/>
 <instance part="ADC4" gate="G$1" x="76.2" y="-152.4" rot="R180"/>
-<instance part="R13" gate="G$1" x="60.96" y="-154.94" rot="MR180"/>
-<instance part="R14" gate="G$1" x="43.18" y="-161.29" rot="MR90"/>
-<instance part="C8" gate="G$1" x="53.34" y="-158.75" rot="MR0"/>
+<instance part="R10" gate="G$1" x="60.96" y="-154.94" rot="MR180"/>
+<instance part="R18" gate="G$1" x="43.18" y="-161.29" rot="MR90"/>
+<instance part="C13" gate="G$1" x="53.34" y="-158.75" rot="MR0"/>
 <instance part="SUPPLY23" gate="G$1" x="66.04" y="-149.86" rot="R270"/>
 <instance part="SUPPLY24" gate="G$1" x="53.34" y="-171.45"/>
 <instance part="P+8" gate="1" x="60.96" y="-146.05"/>
 <instance part="ADC5" gate="G$1" x="76.2" y="-124.46" rot="R180"/>
-<instance part="R15" gate="G$1" x="60.96" y="-127" rot="MR180"/>
-<instance part="R16" gate="G$1" x="43.18" y="-133.35" rot="MR90"/>
-<instance part="C9" gate="G$1" x="53.34" y="-130.81" rot="MR0"/>
+<instance part="R11" gate="G$1" x="60.96" y="-127" rot="MR180"/>
+<instance part="R19" gate="G$1" x="43.18" y="-133.35" rot="MR90"/>
+<instance part="C14" gate="G$1" x="53.34" y="-130.81" rot="MR0"/>
 <instance part="SUPPLY26" gate="G$1" x="66.04" y="-121.92" rot="R270"/>
 <instance part="SUPPLY27" gate="G$1" x="53.34" y="-143.51"/>
 <instance part="P+11" gate="1" x="60.96" y="-118.11"/>
 <instance part="ADC6" gate="G$1" x="76.2" y="-96.52" rot="R180"/>
-<instance part="R17" gate="G$1" x="60.96" y="-99.06" rot="MR180"/>
-<instance part="R18" gate="G$1" x="43.18" y="-105.41" rot="MR90"/>
-<instance part="C10" gate="G$1" x="53.34" y="-102.87" rot="MR0"/>
+<instance part="R12" gate="G$1" x="60.96" y="-99.06" rot="MR180"/>
+<instance part="R20" gate="G$1" x="43.18" y="-105.41" rot="MR90"/>
+<instance part="C15" gate="G$1" x="53.34" y="-102.87" rot="MR0"/>
 <instance part="SUPPLY28" gate="G$1" x="66.04" y="-93.98" rot="R270"/>
 <instance part="SUPPLY29" gate="G$1" x="53.34" y="-115.57"/>
 <instance part="P+13" gate="1" x="60.96" y="-90.17"/>
 <instance part="ADC7" gate="G$1" x="76.2" y="-71.12" rot="R180"/>
-<instance part="R19" gate="G$1" x="60.96" y="-73.66" rot="MR180"/>
-<instance part="R24" gate="G$1" x="43.18" y="-80.01" rot="MR90"/>
+<instance part="R13" gate="G$1" x="60.96" y="-73.66" rot="MR180"/>
+<instance part="R21" gate="G$1" x="43.18" y="-80.01" rot="MR90"/>
 <instance part="C16" gate="G$1" x="53.34" y="-77.47" rot="MR0"/>
 <instance part="SUPPLY30" gate="G$1" x="66.04" y="-68.58" rot="R270"/>
 <instance part="SUPPLY34" gate="G$1" x="53.34" y="-90.17"/>
@@ -9848,8 +9848,8 @@ Wickmann</description>
 <instance part="SUPPLY40" gate="G$1" x="-213.36" y="22.86" rot="R90"/>
 <instance part="+3V7" gate="G$1" x="-238.76" y="30.48"/>
 <instance part="P+16" gate="1" x="-238.76" y="7.62" rot="R180"/>
-<instance part="R25" gate="G$1" x="-231.14" y="22.86"/>
-<instance part="R26" gate="G$1" x="-231.14" y="15.24"/>
+<instance part="R4" gate="G$1" x="-231.14" y="22.86"/>
+<instance part="R5" gate="G$1" x="-231.14" y="15.24"/>
 <instance part="IO0" gate="G$1" x="33.02" y="53.34" rot="R180"/>
 <instance part="+3V3" gate="G$1" x="22.86" y="53.34" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="22.86" y="55.88" rot="R270"/>
@@ -9888,8 +9888,8 @@ Wickmann</description>
 <instance part="SUPPLY50" gate="G$1" x="139.7" y="10.16" rot="R270"/>
 <instance part="SUPPLY14" gate="G$1" x="-12.7" y="154.94"/>
 <instance part="J2" gate="J$1" x="-147.32" y="58.42"/>
-<instance part="C12" gate="G$1" x="-58.42" y="86.36" rot="R90"/>
-<instance part="C13" gate="G$1" x="-58.42" y="78.74" rot="R90"/>
+<instance part="C8" gate="G$1" x="-58.42" y="86.36" rot="R90"/>
+<instance part="C7" gate="G$1" x="-58.42" y="78.74" rot="R90"/>
 <instance part="AGND1" gate="VR1" x="-254" y="40.64"/>
 <instance part="AGND2" gate="VR1" x="-196.85" y="-7.62"/>
 </instances>
@@ -10031,7 +10031,7 @@ Wickmann</description>
 <wire x1="5.08" y1="147.32" x2="5.08" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="147.32" x2="-2.54" y2="147.32" width="0.1524" layer="91"/>
 <junction x="-2.54" y="147.32"/>
-<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="C6" gate="G$1" pin="2"/>
 <junction x="-2.54" y="165.1"/>
 <wire x1="-2.54" y1="165.1" x2="-12.7" y2="165.1" width="0.1524" layer="91"/>
 </segment>
@@ -10039,7 +10039,7 @@ Wickmann</description>
 <pinref part="U1" gate="P" pin="VDD@2"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <pinref part="U1" gate="P" pin="VDD@1"/>
-<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="104.14" x2="-66.04" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="104.14" x2="-66.04" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="106.68" x2="-66.04" y2="111.76" width="0.1524" layer="91"/>
@@ -10048,10 +10048,10 @@ Wickmann</description>
 <wire x1="-60.96" y1="93.98" x2="-66.04" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="93.98" x2="-66.04" y2="104.14" width="0.1524" layer="91"/>
 <junction x="-66.04" y="104.14"/>
-<pinref part="C12" gate="G$1" pin="1"/>
+<pinref part="C8" gate="G$1" pin="1"/>
 <wire x1="-60.96" y1="86.36" x2="-66.04" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="86.36" x2="-66.04" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="C13" gate="G$1" pin="1"/>
+<pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="-60.96" y1="78.74" x2="-66.04" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="78.74" x2="-66.04" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-66.04" y="93.98"/>
@@ -10076,7 +10076,7 @@ Wickmann</description>
 <pinref part="+3V16" gate="G$1" pin="+3V3"/>
 <wire x1="-106.68" y1="-86.36" x2="-106.68" y2="-88.9" width="0.1524" layer="91"/>
 <junction x="-106.68" y="-88.9"/>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 <junction x="-106.68" y="-90.17"/>
 </segment>
 <segment>
@@ -10084,11 +10084,11 @@ Wickmann</description>
 <wire x1="-25.4" y1="-66.04" x2="-25.4" y2="-91.44" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="VDD"/>
 <wire x1="-25.4" y1="-91.44" x2="-17.78" y2="-91.44" width="0.1524" layer="91"/>
-<pinref part="C14" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="-99.06" x2="-40.64" y2="-91.44" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="-91.44" x2="-30.48" y2="-91.44" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="-91.44" x2="-30.48" y2="-91.44" width="0.1524" layer="91"/>
-<pinref part="C15" gate="G$1" pin="2"/>
+<pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-30.48" y1="-91.44" x2="-30.48" y2="-99.06" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-91.44"/>
 <junction x="-25.4" y="-91.44"/>
@@ -10100,7 +10100,7 @@ Wickmann</description>
 <junction x="-238.76" y="22.86"/>
 <wire x1="-236.22" y1="22.86" x2="-238.76" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-238.76" y1="22.86" x2="-238.76" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="R25" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="1"/>
 <junction x="-238.76" y="27.94"/>
 </segment>
 <segment>
@@ -10328,7 +10328,7 @@ Wickmann</description>
 <label x="-27.94" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="-78.74" y1="149.86" x2="-78.74" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="142.24" x2="-76.2" y2="139.7" width="0.1524" layer="91"/>
 <label x="-81.28" y="137.16" size="1.778" layer="95"/>
@@ -10342,7 +10342,7 @@ Wickmann</description>
 </segment>
 <segment>
 <wire x1="-78.74" y1="149.86" x2="-78.74" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="-78.74" y1="157.48" x2="-76.2" y2="160.02" width="0.1524" layer="91"/>
 <label x="-86.36" y="157.48" size="1.778" layer="95"/>
 </segment>
@@ -10354,7 +10354,7 @@ Wickmann</description>
 <label x="-27.94" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="RX1" gate="G$1" pin="2"/>
 <wire x1="-78.74" y1="149.86" x2="-76.2" y2="149.86" width="0.1524" layer="91"/>
 <label x="-86.36" y="149.86" size="1.778" layer="95"/>
 </segment>
@@ -10613,7 +10613,7 @@ Wickmann</description>
 <pinref part="P+16" gate="1" pin="+5V"/>
 <wire x1="-236.22" y1="15.24" x2="-238.76" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-238.76" y1="15.24" x2="-238.76" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="R26" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="AI3" class="0">
@@ -10708,21 +10708,21 @@ Wickmann</description>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-60.96" y1="139.7" x2="-66.04" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="L3" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="RX1" gate="G$1" pin="1"/>
 <wire x1="-60.96" y1="149.86" x2="-66.04" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-60.96" y1="160.02" x2="-66.04" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="L2" gate="G$1" pin="A"/>
 </segment>
@@ -10852,7 +10852,7 @@ Wickmann</description>
 <segment>
 <pinref part="U4" gate="G$1" pin="VREF"/>
 <wire x1="-17.78" y1="-88.9" x2="-53.34" y2="-88.9" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="U5" gate="G$1" pin="VO"/>
 <wire x1="-53.34" y1="-88.9" x2="-53.34" y2="-99.06" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-88.9" x2="-53.34" y2="-88.9" width="0.1524" layer="91"/>
@@ -10872,7 +10872,7 @@ Wickmann</description>
 <junction x="-22.86" y="-86.36"/>
 </segment>
 <segment>
-<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="-106.68" x2="-53.34" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="G$1" pin="DGND"/>
 </segment>
@@ -10883,7 +10883,7 @@ Wickmann</description>
 <wire x1="-106.68" y1="-97.79" x2="-106.68" y2="-96.52" width="0.1524" layer="91"/>
 <wire x1="-93.98" y1="-93.98" x2="-93.98" y2="-101.6" width="0.1524" layer="91"/>
 <wire x1="-93.98" y1="-101.6" x2="-106.68" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 <junction x="-106.68" y="-97.79"/>
 <junction x="-106.68" y="-101.6"/>
 </segment>
@@ -10891,11 +10891,11 @@ Wickmann</description>
 <pinref part="U1" gate="P" pin="VSS@2"/>
 <pinref part="U1" gate="P" pin="VSS@1"/>
 <wire x1="-45.72" y1="106.68" x2="-45.72" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY7" gate="G$1" pin="DGND"/>
-<pinref part="C13" gate="G$1" pin="2"/>
+<pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="-53.34" y1="78.74" x2="-45.72" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="C12" gate="G$1" pin="2"/>
+<pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="-45.72" y1="86.36" x2="-53.34" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="93.98" x2="-53.34" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="76.2" x2="-45.72" y2="78.74" width="0.1524" layer="91"/>
@@ -11008,9 +11008,9 @@ Wickmann</description>
 <pinref part="SUPPLY25" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C11" gate="G$1" pin="2"/>
+<pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-283.21" x2="53.34" y2="-281.813" width="0.1524" layer="91"/>
-<pinref part="R21" gate="G$1" pin="1"/>
+<pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-281.813" x2="53.34" y2="-278.13" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-280.67" x2="43.18" y2="-281.813" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-281.813" x2="53.34" y2="-281.813" width="0.1524" layer="91"/>
@@ -11054,12 +11054,12 @@ Wickmann</description>
 <label x="10.16" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="C14" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY35" gate="G$1" pin="DGND"/>
 <wire x1="-40.64" y1="-109.22" x2="-40.64" y2="-106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C15" gate="G$1" pin="1"/>
+<pinref part="C5" gate="G$1" pin="1"/>
 <pinref part="SUPPLY36" gate="G$1" pin="DGND"/>
 <wire x1="-30.48" y1="-109.22" x2="-30.48" y2="-106.68" width="0.1524" layer="91"/>
 </segment>
@@ -11068,9 +11068,9 @@ Wickmann</description>
 <pinref part="SUPPLY4" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-252.73" x2="53.34" y2="-251.333" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="1"/>
+<pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-251.333" x2="53.34" y2="-247.65" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-250.19" x2="43.18" y2="-251.333" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-251.333" x2="53.34" y2="-251.333" width="0.1524" layer="91"/>
@@ -11082,9 +11082,9 @@ Wickmann</description>
 <pinref part="SUPPLY19" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-224.79" x2="53.34" y2="-223.393" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-223.393" x2="53.34" y2="-219.71" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-222.25" x2="43.18" y2="-223.393" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-223.393" x2="53.34" y2="-223.393" width="0.1524" layer="91"/>
@@ -11096,9 +11096,9 @@ Wickmann</description>
 <pinref part="SUPPLY21" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C7" gate="G$1" pin="2"/>
+<pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-196.85" x2="53.34" y2="-195.453" width="0.1524" layer="91"/>
-<pinref part="R12" gate="G$1" pin="1"/>
+<pinref part="R17" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-195.453" x2="53.34" y2="-191.77" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-194.31" x2="43.18" y2="-195.453" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-195.453" x2="53.34" y2="-195.453" width="0.1524" layer="91"/>
@@ -11110,9 +11110,9 @@ Wickmann</description>
 <pinref part="SUPPLY23" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C8" gate="G$1" pin="2"/>
+<pinref part="C13" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-168.91" x2="53.34" y2="-167.513" width="0.1524" layer="91"/>
-<pinref part="R14" gate="G$1" pin="1"/>
+<pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-167.513" x2="53.34" y2="-163.83" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-166.37" x2="43.18" y2="-167.513" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-167.513" x2="53.34" y2="-167.513" width="0.1524" layer="91"/>
@@ -11124,9 +11124,9 @@ Wickmann</description>
 <pinref part="SUPPLY26" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C9" gate="G$1" pin="2"/>
+<pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-140.97" x2="53.34" y2="-139.573" width="0.1524" layer="91"/>
-<pinref part="R16" gate="G$1" pin="1"/>
+<pinref part="R19" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-139.573" x2="53.34" y2="-135.89" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-138.43" x2="43.18" y2="-139.573" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-139.573" x2="53.34" y2="-139.573" width="0.1524" layer="91"/>
@@ -11138,9 +11138,9 @@ Wickmann</description>
 <pinref part="SUPPLY28" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="C15" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-113.03" x2="53.34" y2="-111.633" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="1"/>
+<pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-111.633" x2="53.34" y2="-107.95" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-110.49" x2="43.18" y2="-111.633" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-111.633" x2="53.34" y2="-111.633" width="0.1524" layer="91"/>
@@ -11154,7 +11154,7 @@ Wickmann</description>
 <segment>
 <pinref part="C16" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="-87.63" x2="53.34" y2="-86.233" width="0.1524" layer="91"/>
-<pinref part="R24" gate="G$1" pin="1"/>
+<pinref part="R21" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-86.233" x2="53.34" y2="-82.55" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-85.09" x2="43.18" y2="-86.233" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-86.233" x2="53.34" y2="-86.233" width="0.1524" layer="91"/>
@@ -11218,7 +11218,7 @@ Wickmann</description>
 <pinref part="SUPPLY50" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="SUPPLY14" gate="G$1" pin="DGND"/>
 </segment>
 </net>
@@ -11226,16 +11226,16 @@ Wickmann</description>
 <segment>
 <pinref part="U4" gate="G$1" pin="CH0"/>
 <wire x1="10.16" y1="-91.44" x2="20.32" y2="-91.44" width="0.1524" layer="91"/>
-<pinref part="C11" gate="G$1" pin="1"/>
+<pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-270.51" x2="53.34" y2="-269.24" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-269.24" x2="55.88" y2="-269.24" width="0.1524" layer="91"/>
-<pinref part="R20" gate="G$1" pin="1"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-269.24" x2="43.18" y2="-269.24" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-269.24" x2="43.18" y2="-270.51" width="0.1524" layer="91"/>
 <junction x="53.34" y="-269.24"/>
 <wire x1="43.18" y1="-269.24" x2="20.32" y2="-269.24" width="0.1524" layer="91"/>
 <junction x="43.18" y="-269.24"/>
-<pinref part="R21" gate="G$1" pin="2"/>
+<pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="-91.44" x2="20.32" y2="-269.24" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11244,22 +11244,22 @@ Wickmann</description>
 <pinref part="U4" gate="G$1" pin="CH6"/>
 <wire x1="10.16" y1="-76.2" x2="35.56" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-76.2" x2="35.56" y2="-99.06" width="0.1524" layer="91"/>
-<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="C15" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-100.33" x2="53.34" y2="-99.06" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-99.06" x2="55.88" y2="-99.06" width="0.1524" layer="91"/>
-<pinref part="R17" gate="G$1" pin="1"/>
+<pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-99.06" x2="43.18" y2="-99.06" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-99.06" x2="43.18" y2="-100.33" width="0.1524" layer="91"/>
 <junction x="53.34" y="-99.06"/>
 <junction x="43.18" y="-99.06"/>
 <wire x1="43.18" y1="-99.06" x2="35.56" y2="-99.06" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="R20" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="ADC0" gate="G$1" pin="3"/>
-<pinref part="R20" gate="G$1" pin="2"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-269.24" x2="66.04" y2="-269.24" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11322,37 +11322,37 @@ Wickmann</description>
 <net name="N$7" class="0">
 <segment>
 <pinref part="ADC1" gate="G$1" pin="3"/>
-<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-238.76" x2="66.04" y2="-238.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
 <pinref part="ADC2" gate="G$1" pin="3"/>
-<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-210.82" x2="66.04" y2="-210.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
 <pinref part="ADC3" gate="G$1" pin="3"/>
-<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-182.88" x2="66.04" y2="-182.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$29" class="0">
 <segment>
 <pinref part="ADC4" gate="G$1" pin="3"/>
-<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-154.94" x2="66.04" y2="-154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$30" class="0">
 <segment>
-<pinref part="C9" gate="G$1" pin="1"/>
+<pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-128.27" x2="53.34" y2="-127" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-127" x2="55.88" y2="-127" width="0.1524" layer="91"/>
-<pinref part="R15" gate="G$1" pin="1"/>
+<pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-127" x2="43.18" y2="-127" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-127" x2="43.18" y2="-128.27" width="0.1524" layer="91"/>
 <junction x="53.34" y="-127"/>
@@ -11361,20 +11361,20 @@ Wickmann</description>
 <wire x1="33.02" y1="-78.74" x2="33.02" y2="-127" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-127" x2="33.02" y2="-127" width="0.1524" layer="91"/>
 <junction x="43.18" y="-127"/>
-<pinref part="R16" gate="G$1" pin="2"/>
+<pinref part="R19" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
 <pinref part="ADC5" gate="G$1" pin="3"/>
-<pinref part="R15" gate="G$1" pin="2"/>
+<pinref part="R11" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-127" x2="66.04" y2="-127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
 <segment>
 <pinref part="ADC6" gate="G$1" pin="3"/>
-<pinref part="R17" gate="G$1" pin="2"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-99.06" x2="66.04" y2="-99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11383,34 +11383,34 @@ Wickmann</description>
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-74.93" x2="53.34" y2="-73.66" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-73.66" x2="55.88" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="R19" gate="G$1" pin="1"/>
+<pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-73.66" x2="43.18" y2="-73.66" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-73.66" x2="43.18" y2="-74.93" width="0.1524" layer="91"/>
 <junction x="53.34" y="-73.66"/>
 <junction x="43.18" y="-73.66"/>
 <pinref part="U4" gate="G$1" pin="CH7"/>
 <wire x1="10.16" y1="-73.66" x2="43.18" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="R24" gate="G$1" pin="2"/>
+<pinref part="R21" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$36" class="0">
 <segment>
 <pinref part="ADC7" gate="G$1" pin="3"/>
-<pinref part="R19" gate="G$1" pin="2"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="-73.66" x2="66.04" y2="-73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L1" class="0">
 <segment>
 <pinref part="L4" gate="G$1" pin="A"/>
-<pinref part="R25" gate="G$1" pin="2"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="-223.52" y1="22.86" x2="-226.06" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="L5" gate="G$1" pin="A"/>
-<pinref part="R26" gate="G$1" pin="2"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="-223.52" y1="15.24" x2="-226.06" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11436,14 +11436,14 @@ Wickmann</description>
 </net>
 <net name="N$16" class="0">
 <segment>
-<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R16" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="-210.82" x2="43.18" y2="-212.09" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-212.09" x2="53.34" y2="-210.82" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-210.82" x2="43.18" y2="-210.82" width="0.1524" layer="91"/>
 <junction x="53.34" y="-210.82"/>
 <wire x1="53.34" y1="-210.82" x2="55.88" y2="-210.82" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="U4" gate="G$1" pin="CH2"/>
 <wire x1="10.16" y1="-86.36" x2="25.4" y2="-86.36" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="-86.36" x2="25.4" y2="-210.82" width="0.1524" layer="91"/>
@@ -11453,14 +11453,14 @@ Wickmann</description>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="R17" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="-182.88" x2="43.18" y2="-184.15" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="1"/>
+<pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-184.15" x2="53.34" y2="-182.88" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-182.88" x2="43.18" y2="-182.88" width="0.1524" layer="91"/>
 <junction x="53.34" y="-182.88"/>
 <wire x1="53.34" y1="-182.88" x2="55.88" y2="-182.88" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="R9" gate="G$1" pin="1"/>
 <pinref part="U4" gate="G$1" pin="CH3"/>
 <wire x1="10.16" y1="-83.82" x2="27.94" y2="-83.82" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-83.82" x2="27.94" y2="-182.88" width="0.1524" layer="91"/>
@@ -11470,14 +11470,14 @@ Wickmann</description>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="-154.94" x2="43.18" y2="-156.21" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="1"/>
+<pinref part="C13" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-156.21" x2="53.34" y2="-154.94" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-154.94" x2="43.18" y2="-154.94" width="0.1524" layer="91"/>
 <junction x="53.34" y="-154.94"/>
 <wire x1="53.34" y1="-154.94" x2="55.88" y2="-154.94" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="1"/>
+<pinref part="R10" gate="G$1" pin="1"/>
 <junction x="43.18" y="-154.94"/>
 <pinref part="U4" gate="G$1" pin="CH4"/>
 <wire x1="10.16" y1="-81.28" x2="30.48" y2="-81.28" width="0.1524" layer="91"/>
@@ -11487,14 +11487,14 @@ Wickmann</description>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="-238.76" x2="43.18" y2="-240.03" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="-240.03" x2="53.34" y2="-238.76" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-238.76" x2="43.18" y2="-238.76" width="0.1524" layer="91"/>
 <junction x="53.34" y="-238.76"/>
 <wire x1="53.34" y1="-238.76" x2="55.88" y2="-238.76" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="R7" gate="G$1" pin="1"/>
 <junction x="43.18" y="-238.76"/>
 <pinref part="U4" gate="G$1" pin="CH1"/>
 <wire x1="10.16" y1="-88.9" x2="22.86" y2="-88.9" width="0.1524" layer="91"/>
