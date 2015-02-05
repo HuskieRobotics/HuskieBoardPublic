@@ -21,16 +21,26 @@ OBJ
   cereal    : "FullDuplexSerial2"
    
 PUB init(dataPointer)
+''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
+''for use in the double buffering system
   buffer := false
+''creates a new cog cheeseburger
   cognew(main,@stack[256])
 PUB main | x
+''starts FullDuplexSerial2
   cereal.start(1,0,0,256_000, stack)
+''loops infinitely
   repeat
+  ''the command value
     cmd := cereal.rx
+  ''command number 1 : Recieve and write data
     if cmd == 1
+    ''length of string
       length := cereal.rx
+    'tests the length, has to be less than 250
       if not(length > 250)
+      'switches the data pointer to write to depending on the buffer value 0/1
         if buffer
           repeat x from 0 to length
            data1[x] := cereal.rx
@@ -43,7 +53,7 @@ PUB main | x
           buffer := true
     
       
-PUB setCheeseburger(newCheeseburger)
+PUB setCheeseburger(newCheeseburger) 
   cheeseburger := @newCheeseburger
   return -1
 
