@@ -9547,7 +9547,7 @@ Wickmann</description>
 <part name="U2" library="microchip" deviceset="24*" device="P" technology="LC256"/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="0204/7" value="10k"/>
-<part name="U$3" library="PropPlug" deviceset="PROP_PLUG" device=""/>
+<part name="J3" library="PropPlug" deviceset="PROP_PLUG" device=""/>
 <part name="J1" library="RoboRioConnector" deviceset="RRINTERFACE-FEMALE" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="PWM0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
@@ -9725,7 +9725,7 @@ Wickmann</description>
 <instance part="U2" gate="G$1" x="-10.16" y="134.62"/>
 <instance part="+3V2" gate="G$1" x="0" y="165.1" rot="R270"/>
 <instance part="R1" gate="G$1" x="10.16" y="144.78" rot="R180"/>
-<instance part="U$3" gate="G$1" x="71.12" y="139.7"/>
+<instance part="J3" gate="G$1" x="71.12" y="139.7"/>
 <instance part="J1" gate="G$1" x="-287.02" y="43.18"/>
 <instance part="+3V4" gate="G$1" x="-66.04" y="114.3"/>
 <instance part="U1" gate="P" x="-53.34" y="101.6"/>
@@ -10000,7 +10000,7 @@ Wickmann</description>
 </net>
 <net name="SPECIAL30" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="&gt;RX"/>
+<pinref part="J3" gate="G$1" pin="&gt;RX"/>
 <wire x1="35.56" y1="129.54" x2="48.26" y2="129.54" width="0.1524" layer="91"/>
 <label x="30.48" y="129.54" size="1.778" layer="95"/>
 </segment>
@@ -10012,7 +10012,7 @@ Wickmann</description>
 </net>
 <net name="SPECIAL31" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="&lt;TX"/>
+<pinref part="J3" gate="G$1" pin="&lt;TX"/>
 <wire x1="35.56" y1="132.08" x2="48.26" y2="132.08" width="0.1524" layer="91"/>
 <label x="30.48" y="132.08" size="1.778" layer="95"/>
 </segment>
@@ -10161,7 +10161,7 @@ Wickmann</description>
 <label x="-35.56" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="RES"/>
+<pinref part="J3" gate="G$1" pin="RES"/>
 <wire x1="35.56" y1="134.62" x2="48.26" y2="134.62" width="0.1524" layer="91"/>
 <label x="30.48" y="134.62" size="1.778" layer="95"/>
 </segment>
@@ -10967,7 +10967,7 @@ Wickmann</description>
 <junction x="-165.1" y="60.96"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="VSS"/>
+<pinref part="J3" gate="G$1" pin="VSS"/>
 <wire x1="40.64" y1="142.24" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="G$1" pin="DGND"/>
 </segment>
@@ -11548,15 +11548,15 @@ Wickmann</description>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,-63.5,106.68,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,-63.5,104.14,PROPELLERP,VDD,+3V3,,,"/>
-<approved hash="104,1,-45.72,106.68,PROPELLERP,VSS,DGND,,,"/>
-<approved hash="104,1,-45.72,104.14,PROPELLERP,VSS,DGND,,,"/>
-<approved hash="104,1,-2.54,147.32,EEPROM,VCC,+3V3,,,"/>
-<approved hash="104,1,-2.54,124.46,EEPROM,GND,DGND,,,"/>
-<approved hash="104,1,-17.78,-73.66,ADC,GND,DGND,,,"/>
-<approved hash="104,1,-17.78,-91.44,ADC,VDD,+3V3,,,"/>
-<approved hash="104,1,-17.78,-86.36,ADC,AGND,DGND,,,"/>
+<approved hash="104,1,-63.5,106.68,U1P,VDD,+3V3,,,"/>
+<approved hash="104,1,-63.5,104.14,U1P,VDD,+3V3,,,"/>
+<approved hash="104,1,-45.72,106.68,U1P,VSS,DGND,,,"/>
+<approved hash="104,1,-45.72,104.14,U1P,VSS,DGND,,,"/>
+<approved hash="104,1,-2.54,147.32,U2,VCC,+3V3,,,"/>
+<approved hash="104,1,-2.54,124.46,U2,GND,DGND,,,"/>
+<approved hash="104,1,-17.78,-73.66,U4,GND,DGND,,,"/>
+<approved hash="104,1,-17.78,-91.44,U4,VDD,+3V3,,,"/>
+<approved hash="104,1,-17.78,-86.36,U4,AGND,DGND,,,"/>
 <approved hash="113,1,-354.135,88.9423,PWM0,,,,,"/>
 <approved hash="113,1,-354.135,78.7823,PWM1,,,,,"/>
 <approved hash="113,1,-354.135,68.6223,PWM2,,,,,"/>
@@ -11568,9 +11568,6 @@ Wickmann</description>
 <approved hash="113,1,-354.135,7.66233,PWM8,,,,,"/>
 <approved hash="113,1,-354.135,-5.03767,PWM9,,,,,"/>
 <approved hash="113,1,11.4723,-31.9447,5V_LCD,,,,,"/>
-<approved hash="113,1,-57.15,160.342,RED,,,,,"/>
-<approved hash="113,1,-57.15,150.182,YELLOW,,,,,"/>
-<approved hash="113,1,-57.15,140.022,GREEN,,,,,"/>
 <approved hash="113,1,-184.108,44.2553,AI2,,,,,"/>
 <approved hash="113,1,-184.108,30.2853,AI3,,,,,"/>
 <approved hash="113,1,-184.108,58.2253,AI1,,,,,"/>
@@ -11585,8 +11582,6 @@ Wickmann</description>
 <approved hash="113,1,71.1623,-125.925,ADC5,,,,,"/>
 <approved hash="113,1,71.1623,-97.9847,ADC6,,,,,"/>
 <approved hash="113,1,71.1623,-72.5847,ADC7,,,,,"/>
-<approved hash="113,1,-221.365,23.1817,POWER3V3,,,,,"/>
-<approved hash="113,1,-220.655,15.5617,POWER5V,,,,,"/>
 <approved hash="113,1,27.9823,51.8753,IO0,,,,,"/>
 <approved hash="113,1,27.9823,36.6353,IO1,,,,,"/>
 <approved hash="113,1,27.9823,21.3953,IO2,,,,,"/>
