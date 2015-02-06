@@ -7964,17 +7964,19 @@ Source: www.kingbright.com</description>
 <pad name="P3" x="-3.25" y="2.05" drill="0.8" shape="square"/>
 <pad name="P1" x="3.25" y="2.05" drill="0.8" shape="square"/>
 <pad name="P2" x="3.25" y="-2.45" drill="0.8" shape="square"/>
-<wire x1="-4.064" y1="2.794" x2="4.064" y2="2.794" width="0.127" layer="25"/>
-<wire x1="4.064" y1="2.794" x2="4.064" y2="-3.202" width="0.127" layer="25"/>
-<wire x1="4.064" y1="-3.202" x2="-4.064" y2="-3.202" width="0.127" layer="25"/>
-<wire x1="-4.064" y1="-3.202" x2="-4.064" y2="2.794" width="0.127" layer="25"/>
+<wire x1="-4.064" y1="2.794" x2="4.064" y2="2.794" width="0.127" layer="27"/>
+<wire x1="4.064" y1="2.794" x2="4.064" y2="-3.202" width="0.127" layer="27"/>
+<wire x1="4.064" y1="-3.202" x2="-4.064" y2="-3.202" width="0.127" layer="27"/>
+<wire x1="-4.064" y1="-3.202" x2="-4.064" y2="2.794" width="0.127" layer="27"/>
+<text x="-2.54" y="-5.08" size="1.27" layer="25">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
 <symbol name="RESETBUTTON">
-<pin name="P$1" x="-17.78" y="5.08" length="middle"/>
-<pin name="P$2" x="2.54" y="5.08" length="middle" rot="R180"/>
-<wire x1="-12.7" y1="5.08" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<pin name="P$1" x="-10.16" y="0" length="middle"/>
+<pin name="P$2" x="10.16" y="0" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="0" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<text x="-10.16" y="-5.08" size="1.778" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -9565,7 +9567,7 @@ Wickmann</description>
 <part name="R2" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
 <part name="R5" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="0204/7" value="150"/>
-<part name="5V_LCD" library="con-lstb-modified" deviceset="MA03-1" device=""/>
+<part name="LCD" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
 <part name="D2" library="led" deviceset="LED" device="5MM"/>
 <part name="D1" library="led" deviceset="LED" device="5MM"/>
@@ -9744,12 +9746,12 @@ Wickmann</description>
 <instance part="R2" gate="G$1" x="-71.12" y="149.86" rot="R180"/>
 <instance part="R5" gate="G$1" x="-71.12" y="160.02" rot="R180"/>
 <instance part="R6" gate="G$1" x="-71.12" y="139.7"/>
-<instance part="5V_LCD" gate="G$1" x="16.51" y="-30.48" rot="R180"/>
+<instance part="LCD" gate="G$1" x="16.51" y="-30.48" rot="R180"/>
 <instance part="P+9" gate="1" x="3.81" y="-20.32"/>
 <instance part="D2" gate="G$1" x="-58.42" y="160.02" rot="R90"/>
 <instance part="D1" gate="G$1" x="-58.42" y="149.86" rot="R90"/>
 <instance part="D3" gate="G$1" x="-58.42" y="139.7" rot="R90"/>
-<instance part="S1" gate="G$1" x="33.02" y="101.6"/>
+<instance part="S1" gate="G$1" x="27.94" y="106.68"/>
 <instance part="C1" gate="G$1" x="-58.42" y="93.98" rot="R90"/>
 <instance part="AI2" gate="G$1" x="-179.07" y="45.72" rot="R180"/>
 <instance part="AI3" gate="G$1" x="-179.07" y="31.75" rot="R180"/>
@@ -10166,10 +10168,10 @@ Wickmann</description>
 <label x="30.48" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="P$1"/>
 <wire x1="7.62" y1="116.84" x2="7.62" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="106.68" x2="15.24" y2="106.68" width="0.1524" layer="91"/>
 <label x="17.78" y="111.76" size="1.778" layer="95" rot="R180"/>
+<pinref part="S1" gate="G$1" pin="P$1"/>
+<wire x1="7.62" y1="106.68" x2="17.78" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO5" class="0">
@@ -10318,7 +10320,7 @@ Wickmann</description>
 </segment>
 <segment>
 <wire x1="-83.82" y1="-33.02" x2="8.89" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="5V_LCD" gate="G$1" pin="3"/>
+<pinref part="LCD" gate="G$1" pin="3"/>
 <label x="-81.026" y="-33.02" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -10529,7 +10531,7 @@ Wickmann</description>
 <wire x1="-355.6" y1="5.08" x2="-355.6" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="5V_LCD" gate="G$1" pin="2"/>
+<pinref part="LCD" gate="G$1" pin="2"/>
 <wire x1="3.81" y1="-22.86" x2="3.81" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="3.81" y1="-30.48" x2="8.89" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
@@ -10973,12 +10975,7 @@ Wickmann</description>
 <pinref part="SUPPLY8" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="P$2"/>
-<pinref part="SUPPLY12" gate="G$1" pin="DGND"/>
-<wire x1="38.1" y1="106.68" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="5V_LCD" gate="G$1" pin="1"/>
+<pinref part="LCD" gate="G$1" pin="1"/>
 <wire x1="8.89" y1="-27.94" x2="1.27" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="1.27" y1="-27.94" x2="1.27" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY13" gate="G$1" pin="DGND"/>
@@ -11222,6 +11219,10 @@ Wickmann</description>
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="SUPPLY14" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="SUPPLY12" gate="G$1" pin="DGND"/>
+<pinref part="S1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 <net name="N$8" class="0">
