@@ -6,10 +6,10 @@ CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
 
-        DO  = 7
-        CLK = 6
-        DI  = 5
-        CS  = 4
+       ' DO  = 7
+        'CLK = 6
+        'DI  = 5
+        'CS  = 4
 
 VAR
   long  stack[256]
@@ -17,28 +17,33 @@ VAR
   long buf[1]
   byte stop
   long index
+  byte DO, CLK, DI, CS
    
 OBJ
   sd : "fsrw"
   'nums : "Simple_Numbers"
   'str : "String"
-  pst : "Parallax Serial Terminal"
+ ' pst : "Parallax Serial Terminal"
   
-PUB init(datpointer) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer) | insert_card
+  DO := d0
+  CLK := clk1
+  DI := di1
+  CS := cs1
 ''waits two (2) seconds, in theory
-  waitcnt(clkfreq*2 + cnt)
+  'waitcnt(clkfreq*2 + cnt)
 ''starts the Terminal
-  pst.start(115_200)
+  'pst.start(115_200)
 ''tells the user the program has started
-  pst.str(string("Program start!",13))
+  'pst.str(string("Program start!",13))
 ''sets the stop boolean to false (otherwise program will exit immediately)
   stop := false
 ''calls the insert card function
   insert_card := sd.mount_explicit(DO,CLK,DI,CS)
 ''if the card inserted correctly, display Mounted. Otherwise, program will exit.
-  pst.str(string("Mounted",13))
+ ' pst.str(string("Mounted",13))
   if insert_card < 0 ''if sd card not connected...  (this doesn't really work)
-    pst.str(string("Micro SD card not found!",13))
+   ' pst.str(string("Micro SD card not found!",13))
     return  -1  ''ends program
 ''sets this programs pointer to the given data pointer
   pointer := @datpointer

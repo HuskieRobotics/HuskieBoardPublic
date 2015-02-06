@@ -13,8 +13,8 @@ OBJ
   ace   : "SDcardTest"
   
 PUB main
-  wood.init(@idontcare)
-  ace.init(@idontcare)
+  wood.init(1,0,0,115200,@idontcare)
+  'ace.init(7,6,5,4,@idontcare)
 
 DAT
 name    byte  "string_data",0        
