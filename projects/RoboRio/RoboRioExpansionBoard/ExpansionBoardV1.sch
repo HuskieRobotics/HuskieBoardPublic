@@ -9543,7 +9543,7 @@ Wickmann</description>
 </classes>
 <parts>
 <part name="U1" library="parallax_propeller (1)" deviceset="P8X32A-D40" device=""/>
-<part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49U70" value="5MHz"/>
+<part name="Y1" library="crystal" deviceset="CRYSTAL" device="HC49U70" value="5MHz"/>
 <part name="U2" library="microchip" deviceset="24*" device="P" technology="LC256"/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="0204/7" value="10k"/>
@@ -9663,8 +9663,8 @@ Wickmann</description>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="F1" library="fuse" deviceset="TR5" device="" value="1A"/>
 <part name="F2" library="fuse" deviceset="TR5" device="" value="1A"/>
-<part name="L4" library="led" deviceset="LED" device="5MM"/>
-<part name="L5" library="led" deviceset="LED" device="5MM"/>
+<part name="D4" library="led" deviceset="LED" device="5MM"/>
+<part name="D5" library="led" deviceset="LED" device="5MM"/>
 <part name="SUPPLY39" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
@@ -9721,7 +9721,7 @@ Wickmann</description>
 </plain>
 <instances>
 <instance part="U1" gate="P8X32A-D40" x="-48.26" y="30.48"/>
-<instance part="Q1" gate="G$1" x="-25.4" y="5.08"/>
+<instance part="Y1" gate="G$1" x="-25.4" y="5.08"/>
 <instance part="U2" gate="G$1" x="-10.16" y="134.62"/>
 <instance part="+3V2" gate="G$1" x="0" y="165.1" rot="R270"/>
 <instance part="R1" gate="G$1" x="10.16" y="144.78" rot="R180"/>
@@ -9842,8 +9842,8 @@ Wickmann</description>
 <instance part="P+14" gate="1" x="60.96" y="-64.77"/>
 <instance part="F1" gate="1" x="-243.84" y="15.24" rot="R180"/>
 <instance part="F2" gate="1" x="-243.84" y="22.86" rot="R180"/>
-<instance part="L4" gate="G$1" x="-220.98" y="22.86" rot="R90"/>
-<instance part="L5" gate="G$1" x="-220.98" y="15.24" rot="R90"/>
+<instance part="D4" gate="G$1" x="-220.98" y="22.86" rot="R90"/>
+<instance part="D5" gate="G$1" x="-220.98" y="15.24" rot="R90"/>
 <instance part="SUPPLY39" gate="G$1" x="-213.36" y="15.24" rot="R90"/>
 <instance part="SUPPLY40" gate="G$1" x="-213.36" y="22.86" rot="R90"/>
 <instance part="+3V7" gate="G$1" x="-238.76" y="30.48"/>
@@ -9953,7 +9953,7 @@ Wickmann</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="U1" gate="P8X32A-D40" pin="XO"/>
-<pinref part="Q1" gate="G$1" pin="1"/>
+<pinref part="Y1" gate="G$1" pin="1"/>
 <wire x1="-30.48" y1="5.08" x2="-27.94" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-30.48" y="5.08"/>
 <junction x="-27.94" y="5.08"/>
@@ -9961,7 +9961,7 @@ Wickmann</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="2"/>
+<pinref part="Y1" gate="G$1" pin="2"/>
 <pinref part="U1" gate="P8X32A-D40" pin="XI"/>
 <wire x1="-22.86" y1="5.08" x2="-22.86" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="7.62" x2="-30.48" y2="7.62" width="0.1524" layer="91"/>
@@ -11162,11 +11162,11 @@ Wickmann</description>
 <junction x="53.34" y="-86.233"/>
 </segment>
 <segment>
-<pinref part="L5" gate="G$1" pin="C"/>
+<pinref part="D5" gate="G$1" pin="C"/>
 <pinref part="SUPPLY39" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="L4" gate="G$1" pin="C"/>
+<pinref part="D4" gate="G$1" pin="C"/>
 <pinref part="SUPPLY40" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
@@ -11402,14 +11402,14 @@ Wickmann</description>
 </net>
 <net name="L1" class="0">
 <segment>
-<pinref part="L4" gate="G$1" pin="A"/>
+<pinref part="D4" gate="G$1" pin="A"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="-223.52" y1="22.86" x2="-226.06" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="L5" gate="G$1" pin="A"/>
+<pinref part="D5" gate="G$1" pin="A"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="-223.52" y1="15.24" x2="-226.06" y2="15.24" width="0.1524" layer="91"/>
 </segment>
