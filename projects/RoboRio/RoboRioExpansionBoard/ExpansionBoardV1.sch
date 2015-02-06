@@ -7964,10 +7964,10 @@ Source: www.kingbright.com</description>
 <pad name="P3" x="-3.25" y="2.05" drill="0.8" shape="square"/>
 <pad name="P1" x="3.25" y="2.05" drill="0.8" shape="square"/>
 <pad name="P2" x="3.25" y="-2.45" drill="0.8" shape="square"/>
-<wire x1="-4.064" y1="2.794" x2="4.064" y2="2.794" width="0.127" layer="27"/>
-<wire x1="4.064" y1="2.794" x2="4.064" y2="-3.202" width="0.127" layer="27"/>
-<wire x1="4.064" y1="-3.202" x2="-4.064" y2="-3.202" width="0.127" layer="27"/>
-<wire x1="-4.064" y1="-3.202" x2="-4.064" y2="2.794" width="0.127" layer="27"/>
+<wire x1="-4.064" y1="2.794" x2="4.064" y2="2.794" width="0.127" layer="21"/>
+<wire x1="4.064" y1="2.794" x2="4.064" y2="-3.202" width="0.127" layer="21"/>
+<wire x1="4.064" y1="-3.202" x2="-4.064" y2="-3.202" width="0.127" layer="21"/>
+<wire x1="-4.064" y1="-3.202" x2="-4.064" y2="2.794" width="0.127" layer="21"/>
 <text x="-2.54" y="-5.08" size="1.27" layer="25">&gt;NAME</text>
 </package>
 </packages>
