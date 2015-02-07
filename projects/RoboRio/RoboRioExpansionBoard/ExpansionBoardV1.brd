@@ -136,7 +136,7 @@
 <text x="10.4648" y="65.0748" size="1.778" layer="121">PWM</text>
 <text x="96.1136" y="8.636" size="0.9398" layer="25" rot="SR270">(A)</text>
 <text x="74.93" y="25.654" size="1.016" layer="25" rot="SR270">(A)</text>
-<text x="94.996" y="8.636" size="0.9398" layer="25" distance="15" rot="SR270" align="top-left">R7
+<text x="95.123" y="8.636" size="0.9398" layer="25" distance="15" rot="SR270" align="top-left">R7
 C9
 R8
 C10
@@ -174,8 +174,8 @@ C16</text>
 <wire x1="62.23" y1="77.47" x2="57.15" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="72.39" y1="77.47" x2="77.47" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="62.23" y1="77.47" x2="62.23" y2="72.39" width="0.4064" layer="121"/>
-<wire x1="77.47" y1="8.128" x2="76.2" y2="9.398" width="0.2032" layer="121"/>
-<wire x1="76.2" y1="9.398" x2="76.2" y2="23.368" width="0.2032" layer="121"/>
+<wire x1="77.597" y1="8.763" x2="76.2" y2="10.16" width="0.2032" layer="121"/>
+<wire x1="76.2" y1="10.16" x2="76.2" y2="23.368" width="0.2032" layer="121"/>
 <text x="7.1628" y="73.787" size="1.27" layer="121">MXP PASSIVE
 FEED THROUGH</text>
 <text x="83.058" y="75.184" size="1.143" layer="121" distance="20" rot="SR0" align="center">PROCESSOR
@@ -1908,8 +1908,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <packages>
 <package name="P1-13">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
-<pad name="TP" x="0" y="0" drill="1.3208" diameter="2.159" shape="octagon"/>
+<circle x="0" y="0" radius="1.28" width="0.2" layer="51"/>
+<pad name="TP" x="0" y="0" drill="0.8" diameter="2.159" shape="octagon"/>
 <text x="-1.016" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
 <text x="-1.27" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
@@ -2458,7 +2458,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="" x="67.183" y="39.37" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="67.183" y="39.37" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="67.183" y="39.37" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="73.279" y="41.529" size="1.27" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="73.025" y="41.91" size="1.27" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="72.263" y="43.815" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="R1" library="resistor" package="0204/7" value="10k" x="88.8238" y="36.9316" smashed="yes" rot="R90">
@@ -2578,7 +2578,7 @@ design rules under a new name.</description>
 </element>
 <element name="TP3V3" library="testpad" package="P1-13" value="TPSPAD1-13" x="76.454" y="7.62" smashed="yes">
 <attribute name="TP_SIGNAL_NAME" value="" x="75.184" y="5.08" size="1" layer="37"/>
-<attribute name="NAME" x="75.819" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="75.692" y="5.969" size="1.27" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="76.454" y="7.62" size="0.0254" layer="27"/>
 </element>
 </elements>

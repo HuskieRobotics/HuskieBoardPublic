@@ -9558,8 +9558,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package>
 <package name="P1-13">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
-<pad name="TP" x="0" y="0" drill="1.3208" diameter="2.159" shape="octagon"/>
+<circle x="0" y="0" radius="1.28" width="0.2" layer="51"/>
+<pad name="TP" x="0" y="0" drill="0.8" diameter="2.159" shape="octagon"/>
 <text x="-1.016" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
 <text x="-1.27" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
