@@ -7,15 +7,16 @@ CON
 
 VAR
   long  idontcare
+  
    
 OBJ
   wood : "LOG STRING - Lucas Rezac"
   ace   : "SDcardTest"
   
-PUB main
-  wood.init(1,0,0,115200,@idontcare)
-  'ace.init(7,6,5,4,@idontcare)
+PUB main                            
+  wood.init(1,0,0,460_800,@idontcare,@datfilename) 
+  ace.init(7,6,5,4,@idontcare,@datfilename) 
 
 DAT
-name    byte  "string_data",0        
+datfilename byte "test.txt",0       
         

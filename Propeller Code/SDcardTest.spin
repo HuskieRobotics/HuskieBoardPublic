@@ -18,6 +18,7 @@ VAR
   byte stop
   long index
   byte DO, CLK, DI, CS
+  'long datfilename , lastfilename
    
 OBJ
   sd : "fsrw"
@@ -25,41 +26,24 @@ OBJ
   'str : "String"
  ' pst : "Parallax Serial Terminal"
   
-PUB init(d0, clk1, di1, cs1,datpointer) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer,savefilename) | insert_card
   DO := d0
   CLK := clk1
   DI := di1
   CS := cs1
-''waits two (2) seconds, in theory
-  'waitcnt(clkfreq*2 + cnt)
-''starts the Terminal
-  'pst.start(115_200)
-''tells the user the program has started
-  'pst.str(string("Program start!",13))
+  'datfilename := @savefilename 
 ''sets the stop boolean to false (otherwise program will exit immediately)
   stop := false
 ''calls the insert card function
   insert_card := sd.mount_explicit(DO,CLK,DI,CS)
-''if the card inserted correctly, display Mounted. Otherwise, program will exit.
- ' pst.str(string("Mounted",13))
   if insert_card < 0 ''if sd card not connected...  (this doesn't really work)
-   ' pst.str(string("Micro SD card not found!",13))
     return  -1  ''ends program
 ''sets this programs pointer to the given data pointer
   pointer := @datpointer
 ''sets the last pointer for reasons obviously apparent to even the most confused banana
   lastpointer := 0
-  {sd.popen(string("test.txt"),"w")
-  sd.pputs(0)
-  sd.pclose
-  sd.popen(string("test.txt"),"a")
-  sd.pputs(@fdata)
-  sd.pclose
-  pst.str(string("Program done!"))
-  return -1 }
 ''creates new cog
-  return cognew(doStuff,stack[100])
-  ''pst.str(string("Micro SD card successfully connected!",13))      
+  return cognew(doStuff,@stack[100])
 PRI doStuff 
   {'sd.popen(string("matches.csv"), "r")  ''appends to text file  
   'sd.pread(@buf,1)
@@ -69,14 +53,17 @@ PRI doStuff
   'sd.pputs(add)
   'sd.pclose
   'sd.popen(str.stringConcatenate(str.stringConcatenate(string("match"),nums.dec(add)),string(".csv")),"a")}
-''opens the log file
-  sd.popen(@datfilename,"a")
 ''repeats until this object's stop function is called
+  sd.popen(@datfilename,"a")
   repeat while !stop
+    {if datfilename <> lastfilename
+      sd.pclose
+      sd.popen(long[datfilename],"a")
+    lastfilename := @datfilename     }
   ''if pointer != lastpointer
     if pointer <> lastpointer
       sd.pputs(@pointer) ''writes data
-    lastpointer := pointer        
+    lastpointer := pointer      
 PUB end ''stops program
   sd.pclose
   stop := true
