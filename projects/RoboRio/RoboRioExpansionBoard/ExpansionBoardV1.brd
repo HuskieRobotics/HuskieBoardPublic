@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -127,7 +127,6 @@
 <plain>
 <wire x1="5.08" y1="0" x2="101.27" y2="0" width="0" layer="20"/>
 <wire x1="101.27" y1="0" x2="101.27" y2="80" width="0" layer="20"/>
-<wire x1="101.27" y1="80" x2="5.08" y2="80" width="0" layer="20"/>
 <wire x1="5.08" y1="80" x2="5.08" y2="0" width="0" layer="20"/>
 <text x="94.4118" y="72.0598" size="1.778" layer="121" rot="R180">GND</text>
 <text x="88.9762" y="67.691" size="1.778" layer="121">3.3V</text>
@@ -162,22 +161,32 @@ C16</text>
 <text x="71.12" y="72.644" size="1.27" layer="121" rot="SR270" align="center-right">CS</text>
 <text x="73.66" y="72.644" size="1.27" layer="121" rot="SR270" align="center-right">RX</text>
 <text x="76.2" y="72.644" size="1.27" layer="121" rot="SR270" align="center-right">TX</text>
-<text x="67.31" y="77.978" size="1.27" layer="121" distance="20" rot="SR0" align="center">MXP CONNECTOR
+<text x="67.31" y="77.978" size="1.27" layer="121" distance="20" rot="SR0" align="center">MXP / PROCESSOR I/O
 </text>
 <wire x1="72.39" y1="72.39" x2="72.39" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="57.15" y1="72.39" x2="57.15" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="77.47" y1="72.39" x2="77.47" y2="77.47" width="0.4064" layer="121"/>
-<text x="82.55" y="72.644" size="1.27" layer="121" distance="100" rot="SR270" align="center-right">GPIO0
-GPIO1
-GPIO2
-GPIO3</text>
-<wire x1="12.954" y1="58.928" x2="12.954" y2="16.256" width="0.4064" layer="121"/>
+<text x="82.55" y="73.152" size="1.27" layer="121" distance="100" rot="SR270" align="center-right">0
+1
+2
+3</text>
 <wire x1="72.39" y1="77.47" x2="62.23" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="62.23" y1="77.47" x2="57.15" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="72.39" y1="77.47" x2="77.47" y2="77.47" width="0.4064" layer="121"/>
 <wire x1="62.23" y1="77.47" x2="62.23" y2="72.39" width="0.4064" layer="121"/>
 <wire x1="77.47" y1="8.128" x2="76.2" y2="9.398" width="0.4064" layer="121"/>
 <wire x1="76.2" y1="9.398" x2="76.2" y2="23.368" width="0.4064" layer="121"/>
+<text x="7.1628" y="73.787" size="1.27" layer="121">MXP PASSIVE
+FEED THROUGH</text>
+<text x="83.058" y="75.184" size="1.143" layer="121" distance="20" rot="SR0" align="center">PROCESSOR
+GPIO
+</text>
+<wire x1="47.498" y1="64.262" x2="47.498" y2="78.994" width="0.4064" layer="121"/>
+<wire x1="47.498" y1="78.994" x2="6.604" y2="78.994" width="0.4064" layer="121"/>
+<wire x1="6.604" y1="78.994" x2="6.604" y2="64.262" width="0.4064" layer="121"/>
+<wire x1="6.604" y1="64.262" x2="47.498" y2="64.262" width="0.4064" layer="121"/>
+<text x="15.3416" y="50.292" size="1.27" layer="25" rot="SR270">3.3V</text>
+<text x="15.3416" y="33.02" size="1.27" layer="25" rot="SR270">5V</text>
 </plain>
 <libraries>
 <library name="con-lstb-modified">
@@ -190,19 +199,11 @@ W = angled&lt;p&gt;
 <packages>
 <package name="MA03-1">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
 <wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-3.81" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
@@ -211,8 +212,8 @@ W = angled&lt;p&gt;
 <wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
 <wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
 <pad name="1" x="-2.54" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1.016" diameter="1.6764" shape="square" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" diameter="1.6764" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" diameter="1.6764" rot="R90"/>
 <text x="3.81" y="0" size="1.27" layer="25" ratio="10" align="center-left">&gt;NAME</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
@@ -1872,10 +1873,15 @@ type 0204, grid 7.5 mm</description>
 <wire x1="5.86" y1="7.6" x2="7.42" y2="7.6" width="0.127" layer="21"/>
 <wire x1="-6.72" y1="-7.35" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
 <wire x1="-6.72" y1="-7.35" x2="-6.72" y2="7.6" width="0.127" layer="21"/>
-<wire x1="7.42" y1="7.6" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
 <wire x1="-5.14" y1="7.6" x2="-5.14" y2="10" width="0.127" layer="21"/>
 <wire x1="-5.14" y1="10" x2="5.86" y2="10" width="0.127" layer="21"/>
 <wire x1="5.86" y1="10" x2="5.86" y2="7.6" width="0.127" layer="21"/>
+<rectangle x1="7.374" y1="-4.801" x2="7.774" y2="-2.401" layer="39"/>
+<wire x1="7.4" y1="7.6" x2="7.421" y2="7.6" width="0.127" layer="21"/>
+<wire x1="7.421" y1="7.6" x2="7.421" y2="7.289" width="0.127" layer="21"/>
+<wire x1="7.421" y1="7.289" x2="7.419" y2="7.292" width="0.127" layer="21"/>
+<wire x1="7.419" y1="7.292" x2="7.444" y2="-2.293" width="0.127" layer="21"/>
+<wire x1="7.419" y1="-7.349" x2="7.424" y2="-4.899" width="0.127" layer="21"/>
 </package>
 </packages>
 </library>
@@ -2068,7 +2074,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="LCD" library="con-lstb-modified" package="MA03-1" value="" x="52.1462" y="68.5292" smashed="yes" rot="R270">
+<element name="LCD" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="52.1462" y="68.5292" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="52.1462" y="68.5292" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="52.1462" y="68.5292" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="52.1462" y="68.5292" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2079,98 +2085,98 @@ design rules under a new name.</description>
 <attribute name="NAME" x="43.18" y="34.29" size="0.9906" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="47.244" y="29.9212" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="ADC0" library="con-lstb-modified" package="MA03-1" value="" x="38.354" y="10.16" smashed="yes" rot="R90">
+<element name="ADC0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="38.354" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="38.354" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="38.354" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="38.354" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="38.354" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="38.354" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC1" library="con-lstb-modified" package="MA03-1" value="" x="43.434" y="10.16" smashed="yes" rot="R90">
+<element name="ADC1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="43.434" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="43.434" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="43.434" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="43.434" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="43.434" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="43.434" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC2" library="con-lstb-modified" package="MA03-1" value="" x="48.514" y="10.16" smashed="yes" rot="R90">
+<element name="ADC2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="48.514" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="48.514" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="48.514" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="48.514" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="48.514" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="48.514" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC3" library="con-lstb-modified" package="MA03-1" value="" x="53.594" y="10.16" smashed="yes" rot="R90">
+<element name="ADC3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="53.594" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="53.594" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="53.594" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="53.594" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="53.594" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="53.594" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC4" library="con-lstb-modified" package="MA03-1" value="" x="58.674" y="10.16" smashed="yes" rot="R90">
+<element name="ADC4" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="58.674" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="58.674" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="58.674" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="58.674" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="58.674" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="58.674" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC5" library="con-lstb-modified" package="MA03-1" value="" x="63.754" y="10.16" smashed="yes" rot="R90">
+<element name="ADC5" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="63.754" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="63.754" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="63.754" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="63.754" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="63.754" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="63.754" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC6" library="con-lstb-modified" package="MA03-1" value="" x="68.834" y="10.16" smashed="yes" rot="R90">
+<element name="ADC6" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="68.834" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="68.834" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="68.834" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="68.834" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="68.834" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="68.834" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="ADC7" library="con-lstb-modified" package="MA03-1" value="" x="73.914" y="10.16" smashed="yes" rot="R90">
+<element name="ADC7" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="73.914" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="73.914" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="73.914" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="73.914" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="73.914" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="73.914" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="AI1" library="con-lstb-modified" package="MA03-1" value="" x="25.654" y="10.16" smashed="yes" rot="R90">
+<element name="AI1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="25.654" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="25.654" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="25.654" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="25.654" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="25.654" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="25.654" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="AI2" library="con-lstb-modified" package="MA03-1" value="" x="28.194" y="10.16" smashed="yes" rot="R90">
+<element name="AI2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="28.194" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="28.194" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="28.194" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="28.194" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="28.194" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="28.194" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="AI3" library="con-lstb-modified" package="MA03-1" value="" x="30.734" y="10.16" smashed="yes" rot="R90">
+<element name="AI3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="30.734" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="30.734" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="30.734" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="30.734" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="30.734" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="30.734" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="AI0" library="con-lstb-modified" package="MA03-1" value="" x="23.114" y="10.16" smashed="yes" rot="R90">
+<element name="AI0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="23.114" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="23.114" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="23.114" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="23.114" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="23.114" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="23.114" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="AO0" library="con-lstb-modified" package="MA03-1" value="" x="18.034" y="10.16" smashed="yes" rot="R90">
+<element name="AO0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="18.034" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="18.034" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="18.034" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="18.034" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="18.034" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="18.034" y="6.096" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="AO1" library="con-lstb-modified" package="MA03-1" value="" x="20.574" y="10.16" smashed="yes" rot="R90">
+<element name="AO1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="20.574" y="10.16" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="20.574" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="20.574" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="20.574" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2238,7 +2244,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="" x="17.5768" y="19.6088" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="17.5768" y="19.6088" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="17.5768" y="19.6088" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="14.5288" y="25.6032" size="1.27" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="13.5128" y="25.3492" size="1.27" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="15.0368" y="17.0688" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="F1" library="fuse" package="TR5" value="1A" x="17.5768" y="60.3504" smashed="yes">
@@ -2246,7 +2252,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="" x="17.5768" y="60.3504" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="17.5768" y="60.3504" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="17.5768" y="60.3504" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="13.208" y="57.15" size="1.27" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="13.462" y="56.642" size="1.27" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="15.0368" y="57.8104" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="D3" library="led" package="LED5MM" value="" x="35.56" y="29.21" smashed="yes" rot="R90">
@@ -2261,154 +2267,154 @@ design rules under a new name.</description>
 <attribute name="NAME" x="41.91" y="34.29" size="0.9906" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="43.688" y="32.385" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="IO0" library="con-lstb-modified" package="MA03-1" value="" x="86.36" y="68.58" smashed="yes" rot="R270">
+<element name="GPIO0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="86.36" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="86.36" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="86.36" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="86.36" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="86.36" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO1" library="con-lstb-modified" package="MA03-1" value="" x="83.82" y="68.58" smashed="yes" rot="R270">
+<element name="GPIO1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="83.82" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="83.82" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="83.82" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="83.82" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="83.82" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO10" library="con-lstb-modified" package="MA03-1" value="" x="60.96" y="68.58" smashed="yes" rot="R270">
+<element name="IOSCL" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="60.96" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="60.96" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="60.96" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="60.96" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="60.96" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO11" library="con-lstb-modified" package="MA03-1" value="" x="58.42" y="68.58" smashed="yes" rot="R270">
+<element name="IOSDA" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="58.42" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="58.42" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="58.42" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="58.42" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="58.42" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO2" library="con-lstb-modified" package="MA03-1" value="" x="81.28" y="68.58" smashed="yes" rot="R270">
+<element name="GPIO2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="81.28" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="81.28" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="81.28" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="81.28" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="81.28" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO3" library="con-lstb-modified" package="MA03-1" value="" x="78.74" y="68.58" smashed="yes" rot="R270">
+<element name="GPIO3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="78.74" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="78.74" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="78.74" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="78.74" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="78.74" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO4" library="con-lstb-modified" package="MA03-1" value="" x="76.2" y="68.58" smashed="yes" rot="R270">
+<element name="IOTX" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="76.2" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="76.2" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="76.2" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="76.2" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="76.2" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO5" library="con-lstb-modified" package="MA03-1" value="" x="73.66" y="68.58" smashed="yes" rot="R270">
+<element name="IORX" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="73.66" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="73.66" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="73.66" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="73.66" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="73.66" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO6" library="con-lstb-modified" package="MA03-1" value="" x="71.12" y="68.58" smashed="yes" rot="R270">
+<element name="IOCS" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="71.12" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="71.12" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="71.12" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="71.12" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="71.12" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO7" library="con-lstb-modified" package="MA03-1" value="" x="68.58" y="68.58" smashed="yes" rot="R270">
+<element name="IOCLK" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="68.58" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="68.58" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="68.58" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="68.58" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="68.58" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO8" library="con-lstb-modified" package="MA03-1" value="" x="66.04" y="68.58" smashed="yes" rot="R270">
+<element name="IOMISO" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="66.04" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="66.04" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="66.04" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="66.04" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="66.04" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="IO9" library="con-lstb-modified" package="MA03-1" value="" x="63.5" y="68.58" smashed="yes" rot="R270">
+<element name="IOMOSI" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="63.5" y="68.58" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="63.5" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="63.5" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="63.5" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="63.5" y="68.58" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="D4" library="led" package="LED5MM" value="" x="20.3708" y="48.3616" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.4686" y="49.5554" size="1.27" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="23.0886" y="46.2534" size="1.27" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="22.1742" y="51.562" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="D5" library="led" package="LED5MM" value="" x="20.32" y="31.75" smashed="yes" rot="R270">
-<attribute name="NAME" x="15.5194" y="32.893" size="1.27" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="22.8854" y="36.449" size="1.27" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="18.5166" y="28.5496" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="U1" library="parallax_propeller (1)" package="P8X32A-D40" value="P8X32A-D40" x="67.945" y="51.943" smashed="yes" rot="R270">
 <attribute name="NAME" x="94.6658" y="60.8838" size="1.27" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="38.735" y="58.293" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="PWM0" library="con-lstb-modified" package="MA03-1" value="" x="45.974" y="68.58" smashed="yes" rot="R90">
+<element name="PWM0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="45.974" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="45.974" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="45.974" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="45.974" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="45.974" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="45.974" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM1" library="con-lstb-modified" package="MA03-1" value="" x="43.434" y="68.58" smashed="yes" rot="R90">
+<element name="PWM1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="43.434" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="43.434" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="43.434" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="43.434" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="43.434" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="43.434" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM2" library="con-lstb-modified" package="MA03-1" value="" x="40.894" y="68.58" smashed="yes" rot="R90">
+<element name="PWM2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="40.894" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="40.894" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="40.894" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="40.894" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="40.894" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="40.894" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM3" library="con-lstb-modified" package="MA03-1" value="" x="38.354" y="68.58" smashed="yes" rot="R90">
+<element name="PWM3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="38.354" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="38.354" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="38.354" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="38.354" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="38.354" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="38.354" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM4" library="con-lstb-modified" package="MA03-1" value="" x="35.814" y="68.58" smashed="yes" rot="R90">
+<element name="PWM4" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="35.814" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="35.814" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="35.814" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="35.814" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="35.814" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="35.814" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM5" library="con-lstb-modified" package="MA03-1" value="" x="33.274" y="68.58" smashed="yes" rot="R90">
+<element name="PWM5" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="33.274" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="33.274" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="33.274" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="33.274" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="33.274" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="33.274" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM6" library="con-lstb-modified" package="MA03-1" value="" x="30.734" y="68.58" smashed="yes" rot="R90">
+<element name="PWM6" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="30.734" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="30.734" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="30.734" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="30.734" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="30.734" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="30.734" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM7" library="con-lstb-modified" package="MA03-1" value="" x="28.194" y="68.58" smashed="yes" rot="R90">
+<element name="PWM7" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="28.194" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="28.194" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="28.194" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="28.194" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="28.194" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="28.194" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM8" library="con-lstb-modified" package="MA03-1" value="" x="25.654" y="68.58" smashed="yes" rot="R90">
+<element name="PWM8" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="25.654" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="25.654" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="25.654" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="25.654" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="25.654" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="25.654" y="78.232" size="1.27" layer="25" ratio="10" rot="SR270" align="center-left"/>
 </element>
-<element name="PWM9" library="con-lstb-modified" package="MA03-1" value="" x="23.114" y="68.58" smashed="yes" rot="R90">
+<element name="PWM9" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="23.114" y="68.58" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="23.114" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="23.114" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="23.114" y="68.58" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2478,11 +2484,11 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="71.8566" y="9.8044" size="0.9906" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="R3" library="resistor" package="0204/7" value="150" x="17.78" y="43.18" smashed="yes">
-<attribute name="NAME" x="22.8346" y="44.5008" size="0.9906" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="20.5486" y="41.9608" size="0.9906" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="16.1544" y="42.6974" size="0.9906" layer="27" ratio="10"/>
 </element>
 <element name="R4" library="resistor" package="0204/7" value="150" x="17.78" y="36.83" smashed="yes">
-<attribute name="NAME" x="22.8854" y="38.1" size="0.9906" layer="25" ratio="10" rot="SR270"/>
+<attribute name="NAME" x="14.2494" y="39.878" size="0.9906" layer="25" ratio="10" rot="SR270"/>
 <attribute name="VALUE" x="16.1544" y="36.3474" size="0.9906" layer="27" ratio="10"/>
 </element>
 <element name="R5" library="resistor" package="0204/7" value="150" x="36.83" y="35.56" smashed="yes">
@@ -2597,18 +2603,18 @@ design rules under a new name.</description>
 <contactref element="C4" pad="2"/>
 <contactref element="F1" pad="1"/>
 <contactref element="R3" pad="1"/>
-<contactref element="IO0" pad="2"/>
-<contactref element="IO1" pad="2"/>
-<contactref element="IO2" pad="2"/>
-<contactref element="IO3" pad="2"/>
-<contactref element="IO4" pad="2"/>
-<contactref element="IO5" pad="2"/>
-<contactref element="IO6" pad="2"/>
-<contactref element="IO7" pad="2"/>
-<contactref element="IO8" pad="2"/>
-<contactref element="IO9" pad="2"/>
-<contactref element="IO10" pad="2"/>
-<contactref element="IO11" pad="2"/>
+<contactref element="GPIO0" pad="2"/>
+<contactref element="GPIO1" pad="2"/>
+<contactref element="GPIO2" pad="2"/>
+<contactref element="GPIO3" pad="2"/>
+<contactref element="IOTX" pad="2"/>
+<contactref element="IORX" pad="2"/>
+<contactref element="IOCS" pad="2"/>
+<contactref element="IOCLK" pad="2"/>
+<contactref element="IOMISO" pad="2"/>
+<contactref element="IOMOSI" pad="2"/>
+<contactref element="IOSCL" pad="2"/>
+<contactref element="IOSDA" pad="2"/>
 <contactref element="J2" pad="P$4"/>
 <wire x1="86.36" y1="68.58" x2="83.82" y2="68.58" width="2.794" layer="1"/>
 <wire x1="83.82" y1="68.58" x2="81.28" y2="68.58" width="2.794" layer="1"/>
@@ -2712,7 +2718,7 @@ design rules under a new name.</description>
 <signal name="IO5">
 <contactref element="U1" pad="6"/>
 <wire x1="78.74" y1="60.9092" x2="78.74" y2="59.563" width="0.3048" layer="1"/>
-<contactref element="IO1" pad="3"/>
+<contactref element="GPIO1" pad="3"/>
 <wire x1="78.74" y1="60.9092" x2="80.0608" y2="62.23" width="0.254" layer="1"/>
 <wire x1="80.0608" y1="62.23" x2="81.28" y2="62.23" width="0.254" layer="1"/>
 <wire x1="81.28" y1="62.23" x2="83.82" y2="64.77" width="0.254" layer="1"/>
@@ -2721,7 +2727,7 @@ design rules under a new name.</description>
 <signal name="IO6">
 <contactref element="U1" pad="7"/>
 <wire x1="76.2" y1="60.9092" x2="76.2" y2="59.563" width="0.3048" layer="1"/>
-<contactref element="IO2" pad="3"/>
+<contactref element="GPIO2" pad="3"/>
 <wire x1="76.2" y1="60.9092" x2="78.7908" y2="63.5" width="0.254" layer="1"/>
 <wire x1="78.7908" y1="63.5" x2="80.01" y2="63.5" width="0.254" layer="1"/>
 <wire x1="80.01" y1="63.5" x2="81.28" y2="64.77" width="0.254" layer="1"/>
@@ -2729,7 +2735,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="IO7">
 <contactref element="U1" pad="8"/>
-<contactref element="IO4" pad="3"/>
+<contactref element="IOTX" pad="3"/>
 <wire x1="76.2" y1="66.04" x2="76.2" y2="63.5" width="0.3048" layer="1"/>
 <wire x1="76.2" y1="63.5" x2="73.914" y2="61.214" width="0.3048" layer="1"/>
 <wire x1="73.914" y1="61.214" x2="73.914" y2="59.817" width="0.3048" layer="1"/>
@@ -2737,7 +2743,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="IO8">
 <contactref element="U1" pad="13"/>
-<contactref element="IO5" pad="3"/>
+<contactref element="IORX" pad="3"/>
 <wire x1="60.96" y1="59.563" x2="60.96" y2="59.8424" width="0.3048" layer="1"/>
 <wire x1="60.96" y1="59.8424" x2="61.9252" y2="60.96" width="0.3048" layer="1"/>
 <wire x1="61.9252" y1="60.96" x2="62.738" y2="60.96" width="0.3048" layer="1"/>
@@ -2763,7 +2769,7 @@ design rules under a new name.</description>
 <signal name="IO9">
 <contactref element="U1" pad="14"/>
 <contactref element="J1" pad="19"/>
-<contactref element="IO6" pad="3"/>
+<contactref element="IOCS" pad="3"/>
 <wire x1="58.42" y1="59.563" x2="58.42" y2="60.96" width="0.3048" layer="1"/>
 <wire x1="58.42" y1="60.96" x2="58.928" y2="61.722" width="0.3048" layer="1"/>
 <wire x1="58.928" y1="61.722" x2="62.484" y2="61.722" width="0.3048" layer="1"/>
@@ -2786,7 +2792,7 @@ design rules under a new name.</description>
 <signal name="IO10">
 <contactref element="U1" pad="15"/>
 <contactref element="J1" pad="21"/>
-<contactref element="IO7" pad="3"/>
+<contactref element="IOCLK" pad="3"/>
 <wire x1="55.88" y1="59.563" x2="55.88" y2="60.96" width="0.3048" layer="1"/>
 <wire x1="55.88" y1="60.96" x2="57.15" y2="62.484" width="0.3048" layer="1"/>
 <wire x1="57.15" y1="62.484" x2="62.23" y2="62.484" width="0.3048" layer="1"/>
@@ -2809,7 +2815,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="16"/>
 <wire x1="56.8706" y1="63.246" x2="53.34" y2="59.7154" width="0.3048" layer="1"/>
 <wire x1="53.34" y1="59.7154" x2="53.34" y2="59.563" width="0.3048" layer="1"/>
-<contactref element="IO8" pad="3"/>
+<contactref element="IOMISO" pad="3"/>
 <wire x1="56.8706" y1="63.246" x2="61.722" y2="63.246" width="0.3048" layer="1"/>
 <wire x1="61.722" y1="63.246" x2="62.738" y2="64.262" width="0.3048" layer="1"/>
 <wire x1="62.738" y1="64.262" x2="64.262" y2="64.262" width="0.3048" layer="1"/>
@@ -2830,7 +2836,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="IO12">
 <contactref element="U1" pad="17"/>
-<contactref element="IO9" pad="3"/>
+<contactref element="IOMOSI" pad="3"/>
 <wire x1="50.8" y1="59.563" x2="50.8" y2="61.468" width="0.3048" layer="1"/>
 <wire x1="50.8" y1="61.468" x2="51.308" y2="61.976" width="0.3048" layer="1"/>
 <wire x1="51.308" y1="61.976" x2="53.594" y2="61.976" width="0.3048" layer="1"/>
@@ -2849,7 +2855,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="IO13">
 <contactref element="U1" pad="18"/>
-<contactref element="IO10" pad="3"/>
+<contactref element="IOSCL" pad="3"/>
 <wire x1="60.96" y1="66.04" x2="59.69" y2="64.77" width="0.3048" layer="1"/>
 <wire x1="59.69" y1="64.77" x2="54.61" y2="64.77" width="0.3048" layer="1"/>
 <wire x1="54.61" y1="64.77" x2="52.832" y2="62.992" width="0.3048" layer="1"/>
@@ -2899,7 +2905,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="IO19">
 <contactref element="U1" pad="24"/>
-<contactref element="IO3" pad="3"/>
+<contactref element="GPIO3" pad="3"/>
 <wire x1="78.74" y1="66.04" x2="78.74" y2="64.77" width="0.3048" layer="1"/>
 <wire x1="78.74" y1="64.77" x2="74.93" y2="60.96" width="0.3048" layer="1"/>
 <wire x1="51.6128" y1="46.99" x2="50.8508" y2="46.228" width="0.3048" layer="1"/>
@@ -2966,11 +2972,11 @@ design rules under a new name.</description>
 <contactref element="J2" pad="P$9"/>
 <contactref element="RN1" pad="2"/>
 <wire x1="73.66" y1="29.21" x2="73.66" y2="44.323" width="0.254" layer="1"/>
-<wire x1="76.962" y1="17.907" x2="76.962" y2="23.114" width="0.254" layer="1"/>
+<wire x1="76.327" y1="18.288" x2="76.327" y2="23.6855" width="0.254" layer="1"/>
 <wire x1="77.669" y1="15.95" x2="77.6605" y2="15.9585" width="0.4064" layer="1"/>
-<wire x1="77.6605" y1="15.9585" x2="77.6605" y2="17.2085" width="0.254" layer="1"/>
-<wire x1="77.6605" y1="17.2085" x2="76.962" y2="17.907" width="0.254" layer="1"/>
-<wire x1="76.962" y1="23.114" x2="73.66" y2="26.67" width="0.254" layer="1"/>
+<wire x1="77.6605" y1="15.9585" x2="77.6605" y2="17.018" width="0.254" layer="1"/>
+<wire x1="77.6605" y1="17.018" x2="76.327" y2="18.288" width="0.254" layer="1"/>
+<wire x1="76.327" y1="23.6855" x2="73.66" y2="26.67" width="0.254" layer="1"/>
 <wire x1="73.66" y1="26.67" x2="73.66" y2="29.21" width="0.254" layer="1"/>
 </signal>
 <signal name="IO25">
@@ -2984,10 +2990,10 @@ design rules under a new name.</description>
 <contactref element="RN1" pad="3"/>
 <wire x1="77.47" y1="30.48" x2="76.2" y2="29.21" width="0.254" layer="1"/>
 <wire x1="79.609" y1="13.32" x2="79.502" y2="13.34" width="0.254" layer="1"/>
-<wire x1="79.502" y1="13.34" x2="79.502" y2="16.256" width="0.254" layer="1"/>
-<wire x1="79.502" y1="16.256" x2="77.47" y2="18.288" width="0.254" layer="1"/>
-<wire x1="77.47" y1="18.288" x2="77.47" y2="23.368" width="0.254" layer="1"/>
-<wire x1="77.47" y1="23.368" x2="76.2" y2="24.638" width="0.254" layer="1"/>
+<wire x1="79.502" y1="13.34" x2="79.502" y2="17.526" width="0.254" layer="1"/>
+<wire x1="79.502" y1="17.526" x2="76.7969" y2="20.0025" width="0.254" layer="1"/>
+<wire x1="76.7969" y1="20.0025" x2="76.7969" y2="23.876" width="0.254" layer="1"/>
+<wire x1="76.7969" y1="23.876" x2="76.2" y2="24.638" width="0.254" layer="1"/>
 <wire x1="76.2" y1="24.638" x2="76.2" y2="29.21" width="0.254" layer="1"/>
 </signal>
 <signal name="IO26">
@@ -3014,11 +3020,13 @@ design rules under a new name.</description>
 <wire x1="82.55" y1="41.91" x2="81.28" y2="43.18" width="0.254" layer="1"/>
 <wire x1="80.709" y1="13.32" x2="80.772" y2="13.32" width="0.254" layer="1"/>
 <wire x1="80.772" y1="13.32" x2="80.772" y2="16.764" width="0.254" layer="1"/>
-<wire x1="80.772" y1="16.764" x2="79.502" y2="18.034" width="0.254" layer="1"/>
-<wire x1="79.502" y1="18.034" x2="78.74" y2="18.034" width="0.254" layer="1"/>
-<wire x1="78.74" y1="18.034" x2="77.978" y2="18.796" width="0.254" layer="1"/>
-<wire x1="77.978" y1="18.796" x2="77.978" y2="22.606" width="0.254" layer="1"/>
-<wire x1="77.978" y1="22.606" x2="81.28" y2="25.908" width="0.254" layer="1"/>
+<wire x1="80.772" y1="16.764" x2="82.55" y2="18.288" width="0.254" layer="1"/>
+<wire x1="82.55" y1="18.288" x2="87.884" y2="18.288" width="0.254" layer="1"/>
+<wire x1="87.884" y1="18.288" x2="88.392" y2="18.796" width="0.254" layer="1"/>
+<wire x1="88.392" y1="18.796" x2="88.392" y2="22.86" width="0.254" layer="1"/>
+<wire x1="88.392" y1="22.86" x2="87.63" y2="23.622" width="0.254" layer="1"/>
+<wire x1="87.63" y1="23.622" x2="83.566" y2="23.622" width="0.254" layer="1"/>
+<wire x1="83.566" y1="23.622" x2="81.28" y2="25.908" width="0.254" layer="1"/>
 <wire x1="81.28" y1="25.908" x2="81.28" y2="29.21" width="0.254" layer="1"/>
 </signal>
 <signal name="+5V">
@@ -3156,7 +3164,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="19"/>
 <wire x1="45.72" y1="59.563" x2="45.72" y2="62.23" width="0.3048" layer="1"/>
 <wire x1="45.72" y1="62.23" x2="47.244" y2="63.754" width="0.3048" layer="1"/>
-<contactref element="IO11" pad="3"/>
+<contactref element="IOSDA" pad="3"/>
 <wire x1="47.244" y1="63.754" x2="52.324" y2="63.754" width="0.3048" layer="1"/>
 <wire x1="52.324" y1="63.754" x2="54.61" y2="66.04" width="0.3048" layer="1"/>
 <wire x1="54.61" y1="66.04" x2="58.42" y2="66.04" width="0.3048" layer="1"/>
@@ -3384,18 +3392,18 @@ design rules under a new name.</description>
 <contactref element="R15" pad="1"/>
 <contactref element="D5" pad="K"/>
 <contactref element="D4" pad="K"/>
-<contactref element="IO0" pad="1"/>
-<contactref element="IO1" pad="1"/>
-<contactref element="IO2" pad="1"/>
-<contactref element="IO3" pad="1"/>
-<contactref element="IO4" pad="1"/>
-<contactref element="IO5" pad="1"/>
-<contactref element="IO6" pad="1"/>
-<contactref element="IO7" pad="1"/>
-<contactref element="IO8" pad="1"/>
-<contactref element="IO9" pad="1"/>
-<contactref element="IO10" pad="1"/>
-<contactref element="IO11" pad="1"/>
+<contactref element="GPIO0" pad="1"/>
+<contactref element="GPIO1" pad="1"/>
+<contactref element="GPIO2" pad="1"/>
+<contactref element="GPIO3" pad="1"/>
+<contactref element="IOTX" pad="1"/>
+<contactref element="IORX" pad="1"/>
+<contactref element="IOCS" pad="1"/>
+<contactref element="IOCLK" pad="1"/>
+<contactref element="IOMISO" pad="1"/>
+<contactref element="IOMOSI" pad="1"/>
+<contactref element="IOSCL" pad="1"/>
+<contactref element="IOSDA" pad="1"/>
 <contactref element="C6" pad="1"/>
 <contactref element="J2" pad="P$11"/>
 <contactref element="J2" pad="P$12"/>
@@ -3479,11 +3487,11 @@ design rules under a new name.</description>
 <contactref element="U1" pad="1"/>
 <contactref element="RN1" pad="9"/>
 <contactref element="J2" pad="P$8"/>
-<wire x1="87.309" y1="13.32" x2="88.646" y2="13.32" width="0.254" layer="1"/>
-<wire x1="88.646" y1="13.32" x2="89.408" y2="14.097" width="0.254" layer="1"/>
-<wire x1="90.932" y1="22.86" x2="90.17" y2="23.622" width="0.3048" layer="1"/>
-<wire x1="90.17" y1="23.622" x2="90.17" y2="27.94" width="0.254" layer="1"/>
-<wire x1="90.17" y1="27.94" x2="91.44" y2="29.21" width="0.254" layer="1"/>
+<wire x1="87.309" y1="13.32" x2="89.916" y2="13.32" width="0.254" layer="1"/>
+<wire x1="89.916" y1="13.32" x2="90.678" y2="14.097" width="0.254" layer="1"/>
+<wire x1="95.758" y1="25.654" x2="93.98" y2="27.432" width="0.3048" layer="1"/>
+<wire x1="93.98" y1="27.432" x2="92.202" y2="27.432" width="0.254" layer="1"/>
+<wire x1="92.202" y1="27.432" x2="91.44" y2="29.21" width="0.254" layer="1"/>
 <wire x1="91.44" y1="29.21" x2="93.9546" y2="29.21" width="0.3048" layer="1"/>
 <wire x1="93.9546" y1="29.21" x2="95.25" y2="30.5054" width="0.3048" layer="1"/>
 <wire x1="95.25" y1="30.5054" x2="95.25" y2="45.72" width="0.3048" layer="1"/>
@@ -3495,9 +3503,9 @@ design rules under a new name.</description>
 <wire x1="99.06" y1="52.832" x2="99.06" y2="56.642" width="0.3048" layer="1"/>
 <wire x1="99.06" y1="56.642" x2="96.139" y2="59.563" width="0.3048" layer="1"/>
 <wire x1="96.139" y1="59.563" x2="91.44" y2="59.563" width="0.3048" layer="1"/>
-<wire x1="90.932" y1="22.86" x2="90.932" y2="17.018" width="0.3048" layer="1"/>
-<wire x1="90.932" y1="17.018" x2="89.408" y2="15.494" width="0.3048" layer="1"/>
-<wire x1="89.408" y1="15.494" x2="89.408" y2="14.097" width="0.3048" layer="1"/>
+<wire x1="95.758" y1="25.654" x2="95.758" y2="22.606" width="0.3048" layer="1"/>
+<wire x1="95.758" y1="22.606" x2="90.678" y2="16.51" width="0.3048" layer="1"/>
+<wire x1="90.678" y1="16.51" x2="90.678" y2="14.097" width="0.3048" layer="1"/>
 </signal>
 <signal name="IO1">
 <contactref element="U1" pad="2"/>
@@ -3515,13 +3523,14 @@ design rules under a new name.</description>
 <wire x1="88.9" y1="29.21" x2="91.44" y2="31.75" width="0.3048" layer="1"/>
 <wire x1="91.44" y1="31.75" x2="91.44" y2="41.91" width="0.3048" layer="1"/>
 <wire x1="91.44" y1="41.91" x2="90.17" y2="43.18" width="0.3048" layer="1"/>
-<wire x1="86.209" y1="13.32" x2="86.233" y2="14.6685" width="0.3048" layer="1"/>
-<wire x1="86.233" y1="14.6685" x2="86.868" y2="15.494" width="0.3048" layer="1"/>
-<wire x1="86.868" y1="15.494" x2="88.392" y2="15.494" width="0.3048" layer="1"/>
-<wire x1="88.392" y1="15.494" x2="90.17" y2="17.272" width="0.3048" layer="1"/>
-<wire x1="90.17" y1="17.272" x2="90.17" y2="22.86" width="0.3048" layer="1"/>
-<wire x1="90.17" y1="22.86" x2="88.9" y2="24.13" width="0.3048" layer="1"/>
-<wire x1="88.9" y1="24.13" x2="88.9" y2="29.21" width="0.3048" layer="1"/>
+<wire x1="86.209" y1="13.32" x2="86.4235" y2="13.589" width="0.254" layer="1"/>
+<wire x1="86.4235" y1="13.589" x2="86.4235" y2="14.605" width="0.254" layer="1"/>
+<wire x1="86.4235" y1="14.605" x2="87.0585" y2="15.1765" width="0.254" layer="1"/>
+<wire x1="87.0585" y1="15.1765" x2="88.0745" y2="15.1765" width="0.254" layer="1"/>
+<wire x1="88.0745" y1="15.1765" x2="90.424" y2="17.526" width="0.254" layer="1"/>
+<wire x1="90.424" y1="17.526" x2="90.424" y2="26.924" width="0.254" layer="1"/>
+<wire x1="90.424" y1="26.924" x2="88.9" y2="28.448" width="0.3048" layer="1"/>
+<wire x1="88.9" y1="28.448" x2="88.9" y2="29.21" width="0.3048" layer="1"/>
 </signal>
 <signal name="IO2">
 <contactref element="U1" pad="3"/>
@@ -3537,15 +3546,15 @@ design rules under a new name.</description>
 <contactref element="RN1" pad="7"/>
 <wire x1="86.36" y1="29.21" x2="86.36" y2="28.448" width="0.254" layer="1"/>
 <wire x1="86.36" y1="28.448" x2="85.09" y2="27.178" width="0.254" layer="1"/>
-<wire x1="85.09" y1="27.178" x2="85.09" y2="24.13" width="0.254" layer="1"/>
-<wire x1="85.09" y1="24.13" x2="86.36" y2="22.86" width="0.254" layer="1"/>
-<wire x1="86.36" y1="22.86" x2="88.646" y2="22.86" width="0.254" layer="1"/>
-<wire x1="88.646" y1="22.86" x2="89.154" y2="22.352" width="0.254" layer="1"/>
-<wire x1="89.154" y1="22.352" x2="89.154" y2="18.542" width="0.254" layer="1"/>
-<wire x1="89.154" y1="18.542" x2="88.392" y2="17.78" width="0.254" layer="1"/>
-<wire x1="88.392" y1="17.78" x2="85.09" y2="17.78" width="0.254" layer="1"/>
-<wire x1="85.09" y1="17.78" x2="84.328" y2="17.018" width="0.254" layer="1"/>
-<wire x1="84.328" y1="17.018" x2="84.328" y2="13.32" width="0.254" layer="1"/>
+<wire x1="85.09" y1="27.178" x2="85.09" y2="25.4" width="0.254" layer="1"/>
+<wire x1="85.09" y1="25.4" x2="85.598" y2="24.892" width="0.254" layer="1"/>
+<wire x1="85.598" y1="24.892" x2="88.7095" y2="24.892" width="0.254" layer="1"/>
+<wire x1="88.7095" y1="24.892" x2="89.789" y2="23.9395" width="0.254" layer="1"/>
+<wire x1="89.789" y1="23.9395" x2="89.789" y2="17.78" width="0.254" layer="1"/>
+<wire x1="89.789" y1="17.78" x2="88.9" y2="17.018" width="0.254" layer="1"/>
+<wire x1="88.9" y1="17.018" x2="85.09" y2="17.018" width="0.254" layer="1"/>
+<wire x1="85.09" y1="17.018" x2="84.328" y2="16.256" width="0.254" layer="1"/>
+<wire x1="84.328" y1="16.256" x2="84.328" y2="13.32" width="0.254" layer="1"/>
 <wire x1="84.328" y1="13.32" x2="84.009" y2="13.32" width="0.254" layer="1"/>
 <wire x1="90.17" y1="31.75" x2="87.63" y2="31.75" width="0.3048" layer="1"/>
 <wire x1="87.63" y1="31.75" x2="86.36" y2="30.48" width="0.3048" layer="1"/>
@@ -3562,13 +3571,14 @@ design rules under a new name.</description>
 <wire x1="83.82" y1="57.2008" x2="83.82" y2="59.563" width="0.254" layer="1"/>
 <wire x1="81.809" y1="13.32" x2="81.788" y2="13.716" width="0.254" layer="1"/>
 <wire x1="81.788" y1="13.716" x2="81.788" y2="16.764" width="0.254" layer="1"/>
-<wire x1="81.788" y1="16.764" x2="80.01" y2="18.542" width="0.254" layer="1"/>
-<wire x1="80.01" y1="18.542" x2="78.994" y2="18.542" width="0.254" layer="1"/>
-<wire x1="78.994" y1="18.542" x2="78.486" y2="19.05" width="0.254" layer="1"/>
-<wire x1="78.486" y1="19.05" x2="78.486" y2="22.352" width="0.254" layer="1"/>
-<wire x1="78.486" y1="22.352" x2="82.042" y2="25.908" width="0.254" layer="1"/>
-<wire x1="82.042" y1="25.908" x2="82.042" y2="27.432" width="0.254" layer="1"/>
-<wire x1="82.042" y1="27.432" x2="83.82" y2="29.21" width="0.254" layer="1"/>
+<wire x1="81.788" y1="16.764" x2="82.55" y2="17.526" width="0.254" layer="1"/>
+<wire x1="82.55" y1="17.526" x2="88.392" y2="17.526" width="0.254" layer="1"/>
+<wire x1="88.392" y1="17.526" x2="89.154" y2="18.288" width="0.254" layer="1"/>
+<wire x1="89.154" y1="18.288" x2="89.154" y2="23.368" width="0.254" layer="1"/>
+<wire x1="89.154" y1="23.368" x2="88.138" y2="24.257" width="0.254" layer="1"/>
+<wire x1="88.138" y1="24.257" x2="84.7725" y2="24.257" width="0.254" layer="1"/>
+<wire x1="84.7725" y1="24.257" x2="83.82" y2="25.146" width="0.254" layer="1"/>
+<wire x1="83.82" y1="25.146" x2="83.82" y2="29.21" width="0.254" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="ADC1" pad="3"/>
@@ -3661,7 +3671,7 @@ design rules under a new name.</description>
 <signal name="IO4">
 <contactref element="U1" pad="5"/>
 <wire x1="81.28" y1="60.9346" x2="81.28" y2="59.563" width="0.3048" layer="1"/>
-<contactref element="IO0" pad="3"/>
+<contactref element="GPIO0" pad="3"/>
 <wire x1="81.28" y1="60.9346" x2="83.8454" y2="63.5" width="0.254" layer="1"/>
 <wire x1="83.8454" y1="63.5" x2="85.09" y2="63.5" width="0.254" layer="1"/>
 <wire x1="85.09" y1="63.5" x2="86.36" y2="64.77" width="0.254" layer="1"/>

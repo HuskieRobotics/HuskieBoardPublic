@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -82,10 +82,15 @@
 <wire x1="5.86" y1="7.6" x2="7.42" y2="7.6" width="0.127" layer="21"/>
 <wire x1="-6.72" y1="-7.35" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
 <wire x1="-6.72" y1="-7.35" x2="-6.72" y2="7.6" width="0.127" layer="21"/>
-<wire x1="7.42" y1="7.6" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
 <wire x1="-5.14" y1="7.6" x2="-5.14" y2="10" width="0.127" layer="21"/>
 <wire x1="-5.14" y1="10" x2="5.86" y2="10" width="0.127" layer="21"/>
 <wire x1="5.86" y1="10" x2="5.86" y2="7.6" width="0.127" layer="21"/>
+<rectangle x1="7.374" y1="-4.801" x2="7.774" y2="-2.401" layer="39"/>
+<wire x1="7.4" y1="7.6" x2="7.421" y2="7.6" width="0.127" layer="21"/>
+<wire x1="7.421" y1="7.6" x2="7.421" y2="7.289" width="0.127" layer="21"/>
+<wire x1="7.421" y1="7.289" x2="7.419" y2="7.292" width="0.127" layer="21"/>
+<wire x1="7.419" y1="7.292" x2="7.444" y2="-2.293" width="0.127" layer="21"/>
+<wire x1="7.419" y1="-7.349" x2="7.424" y2="-4.899" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
