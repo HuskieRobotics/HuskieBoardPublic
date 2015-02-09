@@ -3049,7 +3049,6 @@ FEED THROUGH</text>
 <text x="16.51" y="7.62" size="0.8128" layer="121" ratio="31" rot="SR270" align="top-center">GND</text>
 <text x="16.51" y="12.7" size="0.8128" layer="121" ratio="31" rot="SR270" align="top-center">S</text>
 <text x="16.51" y="10.16" size="0.8128" layer="121" ratio="31" rot="SR270" align="top-center">+5V</text>
-<text x="-13.934440625" y="-4.043684375" size="1.778" layer="144">LAYER-STACK</text>
 <text x="-4.155440625" y="-6.977384375" size="1.778" layer="145">01-16</text>
 <wire x1="82.55" y1="50.038" x2="82.55" y2="49.022" width="0.1016" layer="145"/>
 <wire x1="82.042" y1="49.53" x2="83.058" y2="49.53" width="0.1016" layer="145"/>
@@ -4444,7 +4443,6 @@ FEED THROUGH</text>
 <wire x1="97.0788" y1="65.3288" x2="96.5708" y2="65.8368" width="0.1016" layer="146"/>
 <wire x1="96.5708" y1="65.8368" x2="96.5708" y2="64.8208" width="0.1016" layer="146"/>
 <wire x1="96.5708" y1="64.8208" x2="96.0628" y2="65.3288" width="0.1016" layer="146"/>
-<text x="50" y="-4" size="1.778" layer="144">Standard hole tolerance: +/- .005</text>
 <wire x1="5" y1="86" x2="101" y2="86" width="0.4064" layer="49"/>
 <text x="37" y="87" size="1.778" layer="49">96 mm [3.8 in]</text>
 <wire x1="-2" y1="80" x2="-2" y2="0" width="0.4064" layer="49"/>
@@ -4470,6 +4468,16 @@ FEED THROUGH</text>
 <wire x1="105.25" y1="14.71" x2="105.28" y2="65.25" width="0.4064" layer="49"/>
 <wire x1="105.28" y1="65.25" x2="102.28" y2="65.25" width="0.4064" layer="49"/>
 <text x="106" y="49" size="1.778" layer="49" rot="SR270">50.65 mm [2.00 in]</text>
+<text x="50.065559375" y="-4.043684375" size="1.778" layer="144">NOTES:</text>
+<text x="62.065559375" y="-25.043684375" size="1.778" layer="144">1. PRIMARY / COMPONENT SIDE SHOWN.
+2. STACKUP, 2 SIDED PLATED THROUGH HOLE.
+2. THICKNESS, .062" FINISHED, +/-  .006".
+3. PLATING, 1/2 OZ. PLATED TO 1.5 OZ ON OUTER LAYERS.
+4. FINISH, SOLDER COATING.
+5. ANNULAR RING, .002" FOR EXTERNAL.
+6. SOLDERMASK, LPI, NO MASK TO APPEAR ON COMPONENT PADS.
+7. SILKSCREEN, WHITE NON-CONDUCTIVE INK.  NO INK TO APPEAR ON COMPONENT PADS.
+8. STANDARD HOLE TOLERANCE +/- .005".</text>
 </plain>
 <libraries>
 <library name="con-lstb-modified">
