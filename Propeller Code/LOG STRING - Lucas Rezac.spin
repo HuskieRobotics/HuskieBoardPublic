@@ -5,8 +5,10 @@
                   that you ever heard of this file. That would be great. AND as an extra incentive to do the above, let me just say
                   that I know where you live, and your mom's phone number, and your Social Security Card number. Don't make me use
                   that information, because I don't want to. But I will, if I have to.}
-{Revision: 1}
-
+{REVISON: 1}
+{REVISED BY: Brandon John, Bennett Johnson}
+{PURPOSE v1: This object is an API that is used to monitor the communication between the RR and The Propeller chip Via UART
+and Log data recieved between the two to a CSV file format on an onboard SD Card.}
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000

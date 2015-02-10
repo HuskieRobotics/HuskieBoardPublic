@@ -1,5 +1,7 @@
 {AUTHOR: Lucas Rezac}
-
+{REVISION: 1}
+{REVISED BY: Brandon John, Bennett Johnson}
+{PURPOSE: This Object is used to initiallize all code developed for the RoboRIO Expansion Board. At this time, Only SD Logging.}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
