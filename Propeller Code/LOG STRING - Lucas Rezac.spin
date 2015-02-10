@@ -5,7 +5,7 @@
                   that you ever heard of this file. That would be great. AND as an extra incentive to do the above, let me just say
                   that I know where you live, and your mom's phone number, and your Social Security Card number. Don't make me use
                   that information, because I don't want to. But I will, if I have to.}
-
+{Revision: 1}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
@@ -14,20 +14,24 @@ CON
 VAR
   long  stack[512]
   long stackSerial[512]
-  long  cmd, length, globaldatapointer
-  byte data1[256], data2[256], dataPt[256]
+  long  globaldatapointer
+  byte cmd, length
+  byte data1[256], data2[256]  'toLog buffer
+  long dataPt'pointer to location of the 'toLog' buffer
   byte sdfilename
   byte  filedata[256]
   long  testabfhg[128]
   byte buffer
-  byte cheeseburger
-  byte rx, tx, mode
+  byte rx, tx
+
+
+   long mode
   long baud
   byte checksum
 OBJ
-  'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!!
-  cereal : "rxSerialHSLP_11"
-  pst : "Parallax Serial Terminal"
+  'ser_rx    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! but it might
+  ser_rx : "rxSerialHSLP_11"
+  pst : "Parallax Serial Terminal"                
   util : "Util"
 PUB start | in, x, errors
   {Use this only to test the baudrates.
@@ -41,7 +45,7 @@ PUB start | in, x, errors
   pst.str(string("Program start!",13))
   
   pst.str(string("Baudrates:",13,"1. 460_800",13,"2. 230_400",13,"3. 256_000",13,"4. 115_200",13))
-  pst.str(string("Choose a baudrate from the menu (enter a number from 1 to 4): "))
+  pst.str(string("Choose a baudrate from the menu (enter a number from 1 to 4) Or press 5 to watch the world explode.: "))
   in := pst.decIn
   if in == 1
     baud := 460_800
@@ -58,12 +62,12 @@ PUB start | in, x, errors
   pst.dec(baud)
   pst.char(13)
   util.wait(1)
-  cereal.start(1,0,baud)
+  ser_rx.start(1,0,baud)
 
   errors := 0
   repeat
     repeat x from "0" to "9"
-      in := cereal.rx
+      in := ser_rx.rx
       pst.str(string("Recieved data: "))
       pst.dec(in)
       pst.str(string(", which is "))
@@ -84,89 +88,84 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename)
   tx := tx_
   mode := mode_
   baud := baudrate
-  sdfilename := @savefilename
+  sdfilename := savefilename
 ''for use in the double buffering system
   buffer := false
-''creates a new cog cheeseburger
   cognew(main,@stack[0])
 PUB main | x, in, errors, y
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  dira[15] := true
-  util.wait(3)
-  pst.start(115_200)                  
+  dira[15] := true'set pin 15 to output
+  util.wait(3)    'wait for debugging purposes
+  pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
-  cereal.start(rx,tx,baud)
+  ser_rx.start(rx,tx,baud) 'start the serial cog
       
   'RECIEVING CODE
   repeat
-    ''pst.str(string("  Outer loop",13))
-  ' the command value
-    cmd := cereal.rx
-    ''pst.dec(cmd)
+    pst.str(string("  Outer loop",13))
+    cmd := ser_rx.rxtime(100)    'get the command  
+    pst.dec(cmd)
     
   ' command number 1 : Recieve and write data
     if cmd == 1
     
       pst.str(string("cmd == 1",13))
-    ' length of string
-      length := cereal.rx
+   
+      length := ser_rx.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
       
-    ' tests if the length is less than 250
-      if length < 250
+      ' invalid packet if length is greater than 250
+      if length =< 250
 
-      ' switches the data pointer to write to depending on the buffer value (0/1)
+       ' switches to the data buffer that wasn't used last
         if buffer
           dataPt := @data1
         else
-          dataPt := @data2
-          
-      ' reverses the buffer value
-        buffer := !buffer
+          dataPt := @data2        
+        
         pst.str(string("Length:" ))
         pst.dec(length)
         checksum := cmd+length
-        'cereal.rx
+        'ser_rx.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
-      ' depending on the buffer value
-        pst.char(13)
-        pst.str(string("Recieved:"))                                                                                                                          
-        repeat x from 0 to length-3
-          dataPt[x] := cereal.rx
-          pst.hex(dataPt[x],2)
+      ' depending on the buffer value    
+        pst.str(string(13,"Recieved:"))                                                                                                                          
+        repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
+          byte[dataPt+x] := ser_rx.rx  'get next byte to log, store in buffer
+          pst.hex(byte[dataPt+x],2)    'print values recieved in hex
+          pst.char(13)
         ' updates the checksum value
-          checksum+=dataPt[x]
+          checksum+=byte[dataPt+x]
+        byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
         pst.char(13)  
       ' checks the sum against the given length
-      ' if it is bad, then doesn't save the packet
-        y := cereal.rx
-        if true'checksum == y
-          long[globaldatapointer] := @dataPt
+      ' if it is bad, then doesn't save the 0
+        y := ser_rx.rx  'get the checksum
+        if true'checksum == y 'is the checksum correct?
+          long[globaldatapointer] := dataPt
           pst.str(string("Line written: "))
-          pst.str(@globaldatapointer)
-          'buffer := !buffer
-          outa[15] := false
           pst.char(13)
+          pst.str(long[globaldatapointer])
+          buffer := !buffer 'switch to use the other buffer next time   
           
         else 'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("Bad checksum!",13))
           pst.str(string("Checksum should be "))
           pst.dec(checksum)
           pst.str(string(", found: "))
-          pst.dec(y)
-          pst.char(13)
-          pst.str(string("Data: "))
+          pst.dec(y)       
+          pst.str(string(13,"Data: "))
           pst.str(@dataPt)
           pst.char(13)
           outa[15]:=true
         'longfill(@dataPt,0,64)
-  ' command number 3 : Set SD save file name
-    if cmd == 3
+      ' command number 3 : Set SD save file name
+    elseif cmd == 3
     
       pst.str(string("cmd == 3",13))
     ' length of string
-      length := cereal.rx
+      length := ser_rx.rx
       
     ' tests if the length is less than 250
       if length < 250
@@ -176,38 +175,20 @@ PUB main | x, in, errors, y
       ' depending on the buffer value                                                                                                                          
         repeat x from 0 to length-3
         
-          filedata[x] := cereal.rx
+          filedata[x] := ser_rx.rx
         ' 
         ' updates the checksum value
           checksum+=filedata[x]
           
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
-        if checksum == cereal.rx
-          long[sdfilename] := @filedata
-          outa[15] := false
-          
+        if checksum == ser_rx.rx
+          bytemove(filedata,sdfilename, length-3)
+          byte[sdfilename+length-3] := 0 'set the end of the string
         else 'if some error occured, turns an LED on pin 15 : ON
           outa[15]:=true
         pst.str(string("File name changed to :"))
         pst.str(@filedata)
         pst.char(13)
         util.wait(1)
-    
-      
-PUB setCheeseburger(newCheeseburger) 
-  cheeseburger := @newCheeseburger
-  return -1
-
-DAT
-secret_string byte "THIS STRING IS NEVER USED IN THIS PROGRAM, BUT DO NOT DELETE IT. DOING SO WILL CRASH YOUR COMPUTER.",32766,0
-datfilename byte "Null",0 
-PRI iHateSpin
-  agree(true)
-PRI agree(agreed) | java, KING
-  java := 9001
-  KING := java
-  if not agreed
-    return -1
-  elseif java == KING
-    iHateSpin      
+   

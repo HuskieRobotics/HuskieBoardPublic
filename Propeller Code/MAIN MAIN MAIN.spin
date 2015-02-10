@@ -6,17 +6,21 @@ CON
         _xinfreq = 5_000_000
 
 VAR
-  long  idontcare
+  long  pointerToPointerThing
+  long  datFileName[32] 'name can't be longer than 128 bytes
   
    
 OBJ
-  wood : "LOG STRING - Lucas Rezac"
-  ace   : "SDcardTest"
+  RRConn : "LOG STRING - Lucas Rezac"
+  sd   : "SDcardTest"
   
-PUB main                            
-  wood.init(1,0,0,460_800,@idontcare,@datfilename) 
-  ace.init(7,6,5,4,@idontcare,@datfilename) 
-
-DAT
-datfilename byte "test.txt",0       
+PUB main
+  longfill(@datFileName,0,32)
+  datFileName[0] := $54657374 'Test
+  datFileName[1] := $312e6373 '1.cs
+  datFileName[2] := $76000000               
+  RRConn.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
+  sd.init(7,6,5,4,@pointerToPointerThing,@datFileName)
+  
+              
         
