@@ -388,6 +388,8 @@ pub setdate(year, month, day, hour, minute, second)
 }}
    pdate := ((year-1980) << 25) + (month << 21) + (day << 16)
    pdate += (hour << 11) + (minute << 5) + (second >> 1)
+pub setdatedirect(timestamp)
+  pdate:= timestamp
 pub popen(s, mode) : r | i, sentinel, dirptr, freeentry
 {{
 '   Close any currently open file, and open a new one with the given

@@ -45,32 +45,27 @@ PRI start
   repeat while \sd.mount_explicit(DO,CLK,DI,CS) < 0 ''wait until card is inseted, using the abort catch            
 ''sets the last pointer for reasons obviously apparent to even the most confused banana
   lastpointer := 0
-  doStuff
+
+  repeat while long[savefilename] == 0 and long[datpointer] == 0 'don't continue until we know the name of the file, or we are starting too have data to log
+
+  if long[savefilename] == 0 'has the filename still not been set?
+    sd.popen(String("match.csv"))    'just append to match.csv
+    sd.pputs(String(13,"-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-")) 'show that it is a new match
+  else
+    sd.popen(datfilename,"a")       'open a (probably) new file, but still appened just in case    
   
-PRI doStuff 
-  {'sd.popen(string("matches.csv"), "r")  ''appends to text file  
-  'sd.pread(@buf,1)
-  'add := buf[1]+1
-  'sd.pclose
-  'sd.popen(string("matches.csv"),"w")
-  'sd.pputs(add)
-  'sd.pclose
-  'sd.popen(str.stringConcatenate(str.stringConcatenate(string("match"),nums.dec(add)),string(".csv")),"a")}
+  
+  
+  mainLoop
+  
+PRI mainLoop                                                                                    
  'repeats until this object's stop function is called
-  sd.popen(datfilename,"a")
-  repeat while !stop
-    {if datfilename <> lastfilename
-      sd.pclose
-      sd.popen(long[datfilename],"a")
-    lastfilename := @datfilename     }
-  ''if pointer != lastpointer
+
     
-    if long[pointer] <> lastpointer
+  repeat while !stop    
+    if long[pointer] <> lastpointer  'is there new data to write?
       sd.pputs(long[pointer]) ''writes data
-    lastpointer := long[pointer]
-PRI openFile
-  repeat while long[datfilename]==0 'don't start writing files until the file name has been set
-  sd.popen(datfilename,"a")   
+    lastpointer := long[pointer] 'set the last pointer   
 PUB end ''stops program
   sd.pclose
   stop := true
