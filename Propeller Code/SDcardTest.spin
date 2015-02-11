@@ -70,6 +70,4 @@ PUB end ''stops program
   sd.pclose
   stop := true
 PUB setFileName(filename)  ''sets the file name. Defaults to test.txt.
-  datFileName := filename
-DAT
-datfilename byte "test.txt",0
+  datFileName := filename        
