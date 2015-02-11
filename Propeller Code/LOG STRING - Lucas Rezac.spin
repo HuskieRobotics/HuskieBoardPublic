@@ -6,33 +6,32 @@
                   that I know where you live, and your mom's phone number, and your Social Security Card number. Don't make me use
                   that information, because I don't want to. But I will, if I have to.}
 {REVISON: 1}
-{REVISED BY: Brandon John, Bennett Johnson}
-{PURPOSE v1: This object is an API that is used to monitor the communication between the RR and The Propeller chip Via UART
-and Log data recieved between the two to a CSV file format on an onboard SD Card.}
+{REVISED BY: Brandon John, Lucas Rezac, Ronald McDonald}
+{PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART
+and log data recieved between the two to a CSV file format on an onboard SD Card.}
+'99.9% of code (C) 2015 Lucas Rezac 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
 
 VAR
   long  stack[512]
-  long stackSerial[512]
+  long  stackSerial[512]
   long  globaldatapointer
-  byte cmd, length
-  byte data1[256], data2[256]  'toLog buffer
-  long dataPt'pointer to location of the 'toLog' buffer
-  byte sdfilename
+  long  atestbfhg[128]          'WTF is this garbage?!
+  long  dataPt
+  long mode
+  long baud                  'pointer to location of the 'toLog' buffer
+  byte  cmd, length
+  byte  data1[256], data2[256]  'toLog buffer
+  byte  sdfilename              'pointer to the location of the filename to write to the sd
   byte  filedata[256]
-  long  testabfhg[128]
-  byte buffer
-  byte rx, tx
-
-
-   long mode
-  long baud
+  byte  buffer
+  byte  rx, tx
   byte checksum
 OBJ
-  'ser_rx    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! but it might
-  ser_rx : "rxSerialHSLP_11"
+  'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 
+  cereal : "rxSerialHSLP_11"
   pst : "Parallax Serial Terminal"                
   util : "Util"
 PUB start | in, x, errors
@@ -64,12 +63,12 @@ PUB start | in, x, errors
   pst.dec(baud)
   pst.char(13)
   util.wait(1)
-  ser_rx.start(1,0,baud)
+  cereal.start(1,0,baud)
 
   errors := 0
   repeat
     repeat x from "0" to "9"
-      in := ser_rx.rx
+      in := cereal.rx
       pst.str(string("Recieved data: "))
       pst.dec(in)
       pst.str(string(", which is "))
@@ -90,6 +89,7 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename)
   tx := tx_
   mode := mode_
   baud := baudrate
+''sets the global file name to the given pointer
   sdfilename := savefilename
 ''for use in the double buffering system
   buffer := false
@@ -101,12 +101,12 @@ PUB main | x, in, errors, y
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
-  ser_rx.start(rx,tx,baud) 'start the serial cog
+  cereal.start(rx,tx,baud) 'start the serial cog
       
   'RECIEVING CODE
   repeat
     pst.str(string("  Outer loop",13))
-    cmd := ser_rx.rxtime(100)    'get the command  
+    cmd := cereal.rxtime(100)    'get the command  
     pst.dec(cmd)
     
   ' command number 1 : Recieve and write data
@@ -114,7 +114,7 @@ PUB main | x, in, errors, y
     
       pst.str(string("cmd == 1",13))
    
-      length := ser_rx.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
+      length := cereal.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
       
       ' invalid packet if length is greater than 250
       if length =< 250
@@ -128,13 +128,13 @@ PUB main | x, in, errors, y
         pst.str(string("Length:" ))
         pst.dec(length)
         checksum := cmd+length
-        'ser_rx.rx
+        'cereal.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
       ' depending on the buffer value    
         pst.str(string(13,"Recieved:"))                                                                                                                          
         repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
-          byte[dataPt+x] := ser_rx.rx  'get next byte to log, store in buffer
+          byte[dataPt+x] := cereal.rx  'get next byte to log, store in buffer
           pst.hex(byte[dataPt+x],2)    'print values recieved in hex
           pst.char(13)
         ' updates the checksum value
@@ -143,7 +143,7 @@ PUB main | x, in, errors, y
         pst.char(13)  
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the 0
-        y := ser_rx.rx  'get the checksum
+        y := cereal.rx  'get the checksum
         if true'checksum == y 'is the checksum correct?
           long[globaldatapointer] := dataPt
           pst.str(string("Line written: "))
@@ -162,12 +162,13 @@ PUB main | x, in, errors, y
           pst.char(13)
           outa[15]:=true
         'longfill(@dataPt,0,64)
-      ' command number 3 : Set SD save file name
+        
+    'command number 3 : Set SD save file name
     elseif cmd == 3
     
       pst.str(string("cmd == 3",13))
     ' length of string
-      length := ser_rx.rx
+      length := cereal.rx
       
     ' tests if the length is less than 250
       if length < 250
@@ -177,14 +178,14 @@ PUB main | x, in, errors, y
       ' depending on the buffer value                                                                                                                          
         repeat x from 0 to length-3
         
-          filedata[x] := ser_rx.rx
+          filedata[x] := cereal.rx
         ' 
         ' updates the checksum value
           checksum+=filedata[x]
           
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
-        if checksum == ser_rx.rx
+        if checksum == cereal.rx
           bytemove(filedata,sdfilename, length-3)
           byte[sdfilename+length-3] := 0 'set the end of the string
         else 'if some error occured, turns an LED on pin 15 : ON

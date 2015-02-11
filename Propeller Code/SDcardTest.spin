@@ -1,4 +1,4 @@
-{AUTHOR: Mr Lucas Rezac}
+{AUTHOR: Lucas Rezac}
 {TITLE: SDcardTest}
 {PURPOSE: To slap Eric in the face whenever he starts annoying people}
 
@@ -46,10 +46,10 @@ PRI start
 ''sets the last pointer for reasons obviously apparent to even the most confused banana
   lastpointer := 0
 
-  repeat while long[savefilename] == 0 and long[datpointer] == 0 'don't continue until we know the name of the file, or we are starting too have data to log
+  repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting too have data to log
 
-  if long[savefilename] == 0 'has the filename still not been set?
-    sd.popen(String("match.csv"))    'just append to match.csv
+  if long[datfilename] == 0 'has the filename still not been set?
+    sd.popen(String("match.csv"),"a")    'just append to match.csv
     sd.pputs(String(13,"-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-")) 'show that it is a new match
   else
     sd.popen(datfilename,"a")       'open a (probably) new file, but still appened just in case    
@@ -70,4 +70,6 @@ PUB end ''stops program
   sd.pclose
   stop := true
 PUB setFileName(filename)  ''sets the file name. Defaults to test.txt.
-  datFileName := filename        
+  datFileName := filename
+DAT
+datfilename byte "null",0      

@@ -1,7 +1,8 @@
 {AUTHOR: Lucas Rezac}
 {REVISION: 1}
 {REVISED BY: Brandon John, Bennett Johnson}
-{PURPOSE: This Object is used to initiallize all code developed for the RoboRIO Expansion Board. At this time, Only SD Logging.}
+{PURPOSE: This object (herefore to be referred to as Object) is used to initiallize all code
+                                developed for the RoboRIO Expansion Board(TM). At this time, Object can only do SD Logging.}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
@@ -13,7 +14,7 @@ VAR
   
    
 OBJ
-  RRConn : "LOG STRING - Lucas Rezac"
+  wood : "LOG STRING - Lucas Rezac"
   sd   : "SDcardTest"
   
 PUB main
@@ -21,7 +22,7 @@ PUB main
   datFileName[0] := $54657374 'Test
   datFileName[1] := $312e6373 '1.cs
   datFileName[2] := $76000000               
-  RRConn.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
+  wood.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
   sd.init(7,6,5,4,@pointerToPointerThing,@datFileName)
   
               
