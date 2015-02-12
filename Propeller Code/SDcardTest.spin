@@ -15,6 +15,7 @@ VAR
   long  stack[512]
   long pointer, lastpointer
   long buf[1]
+  long adcpointer
   byte stop
   long index
   byte DO, CLK, DI, CS
@@ -51,33 +52,41 @@ PRI start
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
     pst.str(string("Waiting for Bennet to become smart...",13)) 
-  'if long[datfilename] == 0 'has the filename still not been set?
-    sd.popen(String("match.csv"),"w")    'just append to match.csv
-    sd.pputs(String("-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",13,10)) 'show that it is a new match
-  'else
-    'sd.popen(datfilename,"w")       'open a (probably) new file   
-  
+  if long[datfilename] == 0 'has the filename still not been set?
+    sd.popen(@testb,"a")    'just append to match.csv
+    sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
+  else
+    sd.popen(@datfilename,"w")       'open a (probably) new file
+    
   pst.str(string("Starting main loop!"))
   
   mainLoop
   
-PRI mainLoop                                                                                    
+PRI mainLoop | x                                                                                    
  'repeats until this object's stop function is called
 
-  pst.dec(stop)  
-  repeat 'while !stop
+  
+  repeat 'while !stop       
     pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
+      lastpointer := long[pointer]
       sd.pputs(long[pointer]) ''writes data
+      sd.pputs(string(" ADC: " ))
+      repeat x from 0 to 7
+        sd.pputs(long[adcpointer+x])
+        sd.pputs(string(","))
+      sd.pputs(string(13,10))
       pst.str(string("Wrote data :"))
       pst.str(long[pointer])
       pst.char(13)
-      lastpointer := long[pointer] 'set the last pointer
+       'set the last pointer
   'sd.pclose   
 PUB end ''stops program
   sd.pclose
   stop := true
+  pst.str(string("Stopped!"))
 PUB setFileName(filename)  ''sets the file name. Defaults to test.txt.
   datFileName := filename
 DAT
-datfilename byte "null",0      
+datfilename byte "match.txt",0
+testb byte "match.txt",0  

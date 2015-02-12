@@ -95,7 +95,7 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename)
 ''for use in the double buffering system
   buffer := false
   cognew(main,@stack[0])
-PUB main | x, in, errors, y
+PRI main | x, in, errors, y
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
   dira[15] := true'set pin 15 to output
   util.wait(3)    'wait for debugging purposes
@@ -106,11 +106,12 @@ PUB main | x, in, errors, y
       
   'RECIEVING CODE
   repeat
-    pst.str(string("  Outer loop",13))
+    'pst.str(string("  Outer loop",13))
     cmd := cereal.rxtime(100)    'get the command  
-    pst.dec(cmd)
-    pst.str(string("Datapointer : "))
-    pst.hex(long[globaldatapointer], 8)
+    'pst.dec(cmd)
+    'pst.str(string("Datapointer : "))
+    'pst.hex(long[globaldatapointer], 8)
+    'pst.char(13)
   ' command number 1 : Recieve and write data
     if cmd == 1
     
@@ -151,6 +152,7 @@ PUB main | x, in, errors, y
           pst.str(string("Line written: "))
           pst.char(13)
           pst.str(long[globaldatapointer])
+          pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time   
           
         else 'if some error occured, turns an LED on pin 15 : ON

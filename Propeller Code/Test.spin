@@ -11,12 +11,14 @@ VAR
 OBJ
   pst : "Parallax Serial Terminal"
   util : "Util"
+  sd : "fsrw" 
   
 PUB main  | in
   pst.start(115_200)
-  util.wait(3)
-  pst.str(string("Program start!",13))
-  pst.dec("h")
+  repeat while \sd.mount_explicit(7,6,5,4) < 0
+  sd.popen(@name,"w")
+  sd.pputs(string("Test",13,10,"Test2"))
+  sd.pclose
 DAT
-name    byte  "string_data",0
+name    byte  "testwrite.txt",0
        
