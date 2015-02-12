@@ -1,6 +1,6 @@
 {AUTHOR: Lucas Rezac}
 {TITLE: SDcardTest}
-{PURPOSE: To slap Eric in the face whenever he starts annoying people}
+{PURPOSE: To slap Eric in the face whenever he starts annoying people and also get Lucas very frustrated.}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
@@ -12,7 +12,7 @@ CON
         'CS  = 4
 
 VAR
-  long  stack[256]
+  long  stack[512]
   long pointer, lastpointer
   long buf[1]
   byte stop
@@ -24,7 +24,8 @@ OBJ
   sd : "fsrw"
   'nums : "Simple_Numbers"
   'str : "String"
- ' pst : "Parallax Serial Terminal"
+  pst : "Parallax Serial Terminal"
+  
   
 PUB init(d0, clk1, di1, cs1,datpointer,savefilename) | insert_card
   DO := d0
@@ -32,40 +33,47 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename) | insert_card
   DI := di1
   CS := cs1
   datfilename := savefilename
-  
+  pst.startrxtx(-1,16,0,115_200)
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
-
+  pst.str(string("SD card works!",13))
 ''creates new cog
   return cognew(start,@stack)
 PRI start
 ''sets the stop boolean to false (otherwise program will exit immediately)
   stop := false
                                 ''calls the insert card function                   
-  repeat while \sd.mount_explicit(DO,CLK,DI,CS) < 0 ''wait until card is inseted, using the abort catch            
+  repeat while \sd.mount_explicit(DO,CLK,DI,CS) < 0 ''wait until card is inseted, using the abort catch
+    pst.str(string("Waiting for mount_explicit to return true!",13))
+  pst.str(string("Mounted SD!",13))         
 ''sets the last pointer for reasons obviously apparent to even the most confused banana
   lastpointer := 0
 
-  repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting too have data to log
-
-  if long[datfilename] == 0 'has the filename still not been set?
-    sd.popen(String("match.csv"),"a")    'just append to match.csv
-    sd.pputs(String(13,"-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-")) 'show that it is a new match
-  else
-    sd.popen(datfilename,"a")       'open a (probably) new file, but still appened just in case    
+  repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
+    pst.str(string("Waiting for Bennet to become smart...",13)) 
+  'if long[datfilename] == 0 'has the filename still not been set?
+    sd.popen(String("match.csv"),"w")    'just append to match.csv
+    sd.pputs(String("-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",13,10)) 'show that it is a new match
+  'else
+    'sd.popen(datfilename,"w")       'open a (probably) new file   
   
-  
+  pst.str(string("Starting main loop!"))
   
   mainLoop
   
 PRI mainLoop                                                                                    
  'repeats until this object's stop function is called
 
-    
-  repeat while !stop    
+  pst.dec(stop)  
+  repeat 'while !stop
+    pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
       sd.pputs(long[pointer]) ''writes data
-    lastpointer := long[pointer] 'set the last pointer   
+      pst.str(string("Wrote data :"))
+      pst.str(long[pointer])
+      pst.char(13)
+      lastpointer := long[pointer] 'set the last pointer
+  'sd.pclose   
 PUB end ''stops program
   sd.pclose
   stop := true

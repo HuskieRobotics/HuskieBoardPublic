@@ -16,7 +16,7 @@ PUB main  | in
   pst.start(115_200)
   util.wait(3)
   pst.str(string("Program start!",13))
-  pst.dec("ô")
+  pst.dec("h")
 DAT
-name    byte  "string_data",0        
-        
+name    byte  "string_data",0
+       

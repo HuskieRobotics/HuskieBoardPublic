@@ -32,7 +32,8 @@ VAR
 OBJ
   'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 
   cereal : "rxSerialHSLP_11"
-  pst : "Parallax Serial Terminal"                
+  pst : "Parallax Serial Terminal"
+                  
   util : "Util"
 PUB start | in, x, errors
   {Use this only to test the baudrates.
@@ -42,7 +43,7 @@ PUB start | in, x, errors
   a total error count.}
 
   util.wait(3)
-  pst.start(115_200)
+  pst.start(115_200)  
   pst.str(string("Program start!",13))
   
   pst.str(string("Baudrates:",13,"1. 460_800",13,"2. 230_400",13,"3. 256_000",13,"4. 115_200",13))
@@ -108,7 +109,8 @@ PUB main | x, in, errors, y
     pst.str(string("  Outer loop",13))
     cmd := cereal.rxtime(100)    'get the command  
     pst.dec(cmd)
-    
+    pst.str(string("Datapointer : "))
+    pst.hex(long[globaldatapointer], 8)
   ' command number 1 : Recieve and write data
     if cmd == 1
     

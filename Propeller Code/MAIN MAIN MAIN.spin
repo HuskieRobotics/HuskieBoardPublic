@@ -2,7 +2,8 @@
 {REVISION: 1}
 {REVISED BY: Brandon John, Bennett Johnson}
 {PURPOSE: This object (herefore to be referred to as Object) is used to initiallize all code
-                                developed for the RoboRIO Expansion Board(TM). At this time, Object can only do SD Logging.}
+                                developed for the RoboRIO Expansion Board(TM). At this time, Object can only do SD Logging,
+                                although it has been prophesized that it will do more in the future.}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
@@ -16,14 +17,16 @@ VAR
 OBJ
   wood : "LOG STRING - Lucas Rezac"
   sd   : "SDcardTest"
+  util : "Util"
   
 PUB main
   longfill(@datFileName,0,32)
   datFileName[0] := $54657374 'Test
   datFileName[1] := $312e6373 '1.cs
-  datFileName[2] := $76000000               
+  datFileName[2] := $76000000              
   wood.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
   sd.init(7,6,5,4,@pointerToPointerThing,@datFileName)
-  
+  util.wait(10)
+  sd.end
               
         
