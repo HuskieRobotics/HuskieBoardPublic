@@ -23,9 +23,7 @@ OBJ
   
 PUB main
   longfill(@datFileName,0,32)
-  datFileName[0] := $54657374 'Test
-  datFileName[1] := $312e6373 '2.cs
-  datFileName[2] := $76000000
+
   adc.start(17,19,18,$00FF)
   adcpointer := adc.pointer            
   wood.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
