@@ -18,6 +18,7 @@ OBJ
   wood : "LOG STRING - Lucas Rezac"
   sd   : "SDcardTest"
   util : "Util"
+  acdc : "ADC driver"
   
 PUB main
   longfill(@datFileName,0,32)
@@ -26,6 +27,8 @@ PUB main
   datFileName[2] := $76000000              
   wood.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
   sd.init(7,6,5,4,@pointerToPointerThing,@datFileName)
+  acdc.start(?,?,?,?)
+  
   util.wait(10)
   sd.end
               

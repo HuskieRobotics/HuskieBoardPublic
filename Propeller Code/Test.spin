@@ -6,19 +6,26 @@ CON
         _xinfreq = 5_000_000
 
 VAR
-  long  symbol
+  long  pointer
    
 OBJ
   pst : "Parallax Serial Terminal"
-  util : "Util"
-  sd : "fsrw" 
+  adc : "ADC driver"
   
-PUB main  | in
+PUB main  | channel
   pst.start(115_200)
-  repeat while \sd.mount_explicit(7,6,5,4) < 0
-  sd.popen(@name,"w")
-  sd.pputs(string("Test",13,10,"Test2"))
-  sd.pclose
+  waitcnt(cnt+clkfreq)
+  pst.dec(adc.start(17,19,18,$FF00))
+  pst.char(13)
+  pointer := adc.pointer
+  pst.hex(pointer,8)
+  repeat
+    repeat channel from 0 to 15
+      pst.dec(adc.in(channel))'word[pointer+channel] )
+      pst.char(" ")           
+    pst.char(13)
+    waitcnt(cnt+clkfreq/20)
+    
 DAT
 name    byte  "testwrite.txt",0
        
