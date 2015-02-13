@@ -15,7 +15,7 @@ OBJ
 PUB main  | channel
   pst.start(115_200)
   waitcnt(cnt+clkfreq)
-  pst.dec(adc.start(17,19,18,$FF00))
+  pst.dec(adc.start(17,19,18,$00FF))
   pst.char(13)
   pointer := adc.pointer
   pst.hex(pointer,8)

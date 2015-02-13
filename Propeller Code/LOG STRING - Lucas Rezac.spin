@@ -24,7 +24,7 @@ VAR
   long baud                  'pointer to location of the 'toLog' buffer
   byte  cmd, length
   byte  data1[256], data2[256]  'toLog buffer
-  byte  sdfilename              'pointer to the location of the filename to write to the sd
+  long  sdfilename              'pointer to the location of the filename to write to the sd
   byte  filedata[256]
   byte  buffer
   byte  rx, tx
@@ -198,4 +198,4 @@ PRI main | x, in, errors, y
         pst.str(@filedata)
         pst.char(13)
         util.wait(1)
-   
+  

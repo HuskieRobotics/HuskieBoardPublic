@@ -11,6 +11,7 @@ CON
 
 VAR
   long  pointerToPointerThing
+  long adcpointer
   long  datFileName[32] 'name can't be longer than 128 bytes
   
    
@@ -18,18 +19,20 @@ OBJ
   wood : "LOG STRING - Lucas Rezac"
   sd   : "SDcardTest"
   util : "Util"
-  acdc : "ADC driver"
+  adc : "ADC driver"
   
 PUB main
   longfill(@datFileName,0,32)
   datFileName[0] := $54657374 'Test
-  datFileName[1] := $312e6373 '1.cs
-  datFileName[2] := $76000000              
+  datFileName[1] := $312e6373 '2.cs
+  datFileName[2] := $76000000
+  adc.start(17,19,18,$00FF)
+  adcpointer := adc.pointer            
   wood.init(1,0,0,460_800,@pointerToPointerThing,@datFileName) 
-  sd.init(7,6,5,4,@pointerToPointerThing,@datFileName)
-  acdc.start(?,?,?,?)
+  sd.init(7,6,5,4,@pointerToPointerThing,@datFileName,adcpointer)
   
-  util.wait(10)
+  
+  util.wait(40)
   sd.end
               
         

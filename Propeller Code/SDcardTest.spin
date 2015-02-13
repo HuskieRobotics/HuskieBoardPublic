@@ -19,7 +19,7 @@ VAR
   byte stop
   long index
   byte DO, CLK, DI, CS
-  'long datfilename , lastfilename
+  long datfilename , lastfilename
    
 OBJ
   sd : "fsrw"
@@ -28,11 +28,12 @@ OBJ
   pst : "Parallax Serial Terminal"
   
   
-PUB init(d0, clk1, di1, cs1,datpointer,savefilename) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_) | insert_card
   DO := d0
   CLK := clk1
   DI := di1
   CS := cs1
+  adcpointer := adcpointer_
   datfilename := savefilename
   pst.startrxtx(-1,16,0,115_200)
 ''sets this programs pointer to the given data pointer
@@ -51,18 +52,19 @@ PRI start
   lastpointer := 0
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
-    pst.str(string("Waiting for Bennet to become smart...",13)) 
+    pst.str(string("Waiting for Bennet to become smart...",13))
+     
   if long[datfilename] == 0 'has the filename still not been set?
-    sd.popen(@testb,"a")    'just append to match.csv
+    sd.popen(@testb,"w")    'just append to match.csv
     sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
   else
-    sd.popen(@datfilename,"w")       'open a (probably) new file
+    sd.popen(datfilename,"w")       'open a (probably) new file
     
   pst.str(string("Starting main loop!"))
   
   mainLoop
   
-PRI mainLoop | x                                                                                    
+PRI mainLoop | x ,channel                                                                                   
  'repeats until this object's stop function is called
 
   
@@ -71,10 +73,10 @@ PRI mainLoop | x
     if long[pointer] <> lastpointer  'is there new data to write?
       lastpointer := long[pointer]
       sd.pputs(long[pointer]) ''writes data
-      sd.pputs(string(" ADC: " ))
-      repeat x from 0 to 7
-        sd.pputs(long[adcpointer+x])
-        sd.pputs(string(","))
+      repeat channel from 0 to 7
+        sd.pputc(",")
+        sdDec(word[adcpointer+channel])'word[pointer+channel] )
+        
       sd.pputs(string(13,10))
       pst.str(string("Wrote data :"))
       pst.str(long[pointer])
@@ -87,6 +89,29 @@ PUB end ''stops program
   pst.str(string("Stopped!"))
 PUB setFileName(filename)  ''sets the file name. Defaults to test.txt.
   datFileName := filename
+
+
+PUB sdDec(value) | i, x
+{{Send value as decimal characters.
+  Parameter:
+    value - byte, word, or long value to send as decimal characters.}}
+
+  x := value == NEGX                                                            'Check for max negative
+  if value < 0
+    value := ||(value+x)                                                        'If negative, make positive; adjust for max negative
+    sd.pputc("-")                                                                   'and output sign
+
+  i := 1_000_000_000                                                            'Initialize divisor
+
+  repeat 10                                                                     'Loop for 10 digits
+    if value => i                                                               
+      sd.pputc(value / i + "0" + x*(i == 1))                                        'If non-zero digit, output digit; adjust for max negative
+      value //= i                                                               'and digit from value
+      result~~                                                                  'flag non-zero found
+    elseif result or i == 1
+      sd.pputc("0")                                                                 'If zero digit (or only digit) output it
+    i /= 10                                                                     'Update divisor
+
 DAT
-datfilename byte "match.txt",0
-testb byte "match.txt",0  
+'datfilename byte "match.txt",0
+testb byte "match.csv",0  
