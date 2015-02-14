@@ -21,11 +21,14 @@ VAR
   long  atestbfhg[128]          'WTF is this garbage?!
   long  dataPt
   long mode
-  long baud                  'pointer to location of the 'toLog' buffer
+  long baud
+  long lcdbaud
+  byte ldcpin                 'pointer to location of the 'toLog' buffer
   byte  cmd, length
   byte  data1[256], data2[256]  'toLog buffer
   long  sdfilename              'pointer to the location of the filename to write to the sd
   byte  filedata[256]
+  byte  lcdstr[32]
   byte  buffer
   byte  rx, tx
   byte checksum
@@ -33,69 +36,26 @@ OBJ
   'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 
   cereal : "rxSerialHSLP_11"
   pst : "Parallax Serial Terminal"
-                  
+  lcd : "Serial_Lcd"                
   util : "Util"
-PUB start | in, x, errors
-  {Use this only to test the baudrates.
-  Set up the roboRIO code to send ASCII values of 0 to 9.
-  It will recieve them, and check if they are the same ones
-  using the below loop. If not, it will say so, and also display
-  a total error count.}
 
-  util.wait(3)
-  pst.start(115_200)  
-  pst.str(string("Program start!",13))
-  
-  pst.str(string("Baudrates:",13,"1. 460_800",13,"2. 230_400",13,"3. 256_000",13,"4. 115_200",13))
-  pst.str(string("Choose a baudrate from the menu (enter a number from 1 to 4) Or press 5 to watch the world explode.: "))
-  in := pst.decIn
-  if in == 1
-    baud := 460_800
-  elseif in == 2
-    baud := 230_400
-  elseif in == 3
-    baud := 256_000
-  elseif in == 4
-    baud := 115_200
-  else
-    pst.str(string("Error, that was not one of the options.",13))
-    baud := 460_800 
-  pst.str(string("Started program with baudrate "))
-  pst.dec(baud)
-  pst.char(13)
-  util.wait(1)
-  cereal.start(1,0,baud)
-
-  errors := 0
-  repeat
-    repeat x from "0" to "9"
-      in := cereal.rx
-      pst.str(string("Recieved data: "))
-      pst.dec(in)
-      pst.str(string(", which is "))
-      ifnot x == in
-       ''pst.str(string("not "))
-       ''else
-        pst.str(string("not "))
-        errors++
-        x--
-      pst.dec(x)   
-      pst.str(string("  Errors: "))
-      pst.dec(errors)
-      pst.char(13) 
-PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename)
+PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
   tx := tx_
   mode := mode_
   baud := baudrate
+  lcdbaud := lcdbaud_
+  lcdpin := lcdpin_
 ''sets the global file name to the given pointer
   sdfilename := savefilename
-''for use in the double buffering system
+  lcd.init(lcdpin,lcdbaud,2)
+  lcd.cls
+  'for use in the double buffering system
   buffer := false
   cognew(main,@stack[0])
-PRI main | x, in, errors, y
+PRI main | x, in, errors, y, lines
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
   dira[15] := true'set pin 15 to output
   util.wait(3)    'wait for debugging purposes
@@ -128,18 +88,18 @@ PRI main | x, in, errors, y
         else
           dataPt := @data2        
         
-        pst.str(string("Length:" ))
+        pst.str(string("SD: Length:" ))
         pst.dec(length)
         checksum := cmd+length
         'cereal.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
       ' depending on the buffer value    
-        pst.str(string(13,"Recieved:"))                                                                                                                          
+        pst.str(string(13,"SD: Recieved:"))                                                                                                                          
         repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
           byte[dataPt+x] := cereal.rx  'get next byte to log, store in buffer
-          pst.hex(byte[dataPt+x],2)    'print values recieved in hex
-          pst.char(13)
+          'pst.hex(byte[dataPt+x],2)    'print values recieved in hex
+          'pst.char(13)
         ' updates the checksum value
           checksum+=byte[dataPt+x]
         byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
@@ -149,14 +109,14 @@ PRI main | x, in, errors, y
         y := cereal.rx  'get the checksum
         if true'checksum == y 'is the checksum correct?
           long[globaldatapointer] := dataPt
-          pst.str(string("Line written: "))
-          pst.char(13)
+          pst.str(string("SD: Line written: "))
+          'pst.char(13)
           pst.str(long[globaldatapointer])
           pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time   
           
         else 'if some error occured, turns an LED on pin 15 : ON
-          pst.str(string("Bad checksum!",13))
+          pst.str(string("SD: Error: Bad checksum!",13))
           pst.str(string("Checksum should be "))
           pst.dec(checksum)
           pst.str(string(", found: "))
@@ -194,8 +154,43 @@ PRI main | x, in, errors, y
           byte[sdfilename+length-3] := 0 'set the end of the string
         else 'if some error occured, turns an LED on pin 15 : ON
           outa[15]:=true
-        pst.str(string("File name changed to :"))
+        pst.str(string("SD: Set file name to :"))
         pst.str(@filedata)
         pst.char(13)
         util.wait(1)
+        
+    'sets lcd display
+    elseif cmd == 8
+    
+      pst.str(string("cmd == 8",13))
+      'moves cursor to 0,0
+      lcd.home
+
+      length := cereal.rx
+
+      if length <= 32
+    '   gets all the string data                                                                                                                      
+        repeat x from 0 to length
+          lcdstr[x] := cereal.rx
+        
+        lcd.str(long[lcdstr])
+        pst.str(string("LCD: Set display string to :"))
+        pst.str(long[lcdstr])
+        pst.char(13)
+      else
+        pst.str(string("LCD: Error: Given length was > 32."))
+    'sets lcd size
+    elseif cmd == 9
+      pst.str(string("cmd == 9",13))
+
+      lcd.finalize
+
+      lines := cereal.rx
+
+      pst.str(string("LCD: # of lines set to: "))
+      pst.dec(lines)
+      
+      lcd.init(lcdpin_,lcdbaud_,lines)
+        
+    
   
