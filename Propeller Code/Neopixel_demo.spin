@@ -30,7 +30,7 @@ con { io pins }
   SDA  = 29                                                     ' eeprom / i2c
   SCL  = 28
 
-  LEDS = 14                                                     ' LED tx pin
+  LEDS = 8                                                    ' LED tx pin
 
 
 con
@@ -40,7 +40,7 @@ con
   
 obj
 
-  strip : "jm_ws2812"                                           ' WS2812 LED driver
+  strip : "Neopixel Driver"                                           ' WS2812 LED driver
 
 
 var
