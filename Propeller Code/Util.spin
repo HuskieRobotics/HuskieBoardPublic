@@ -8,5 +8,8 @@ CON
 VAR
   long  symbol
 
-PUB wait(seconds)
-  waitcnt(cnt+clkfreq*seconds)
+PUB wait(seconds)  | x, waitTil
+  waitTil := cnt
+  repeat x from 0 to seconds
+    waitTil += clkfreq
+    waitcnt(waitTil)

@@ -56,8 +56,12 @@ PRI start
      
   if long[datfilename] == 0 'has the filename still not been set?
     sd.popen(@testb,"w")    'just append to match.csv
-    sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
+    pst.Str(string("Opened: "))
+    pst.Str(@testb)
+    'sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
   else
+    pst.Str(string("Opened: "))
+    pst.Str(datfilename)
     sd.popen(datfilename,"w")       'open a (probably) new file
     
   pst.str(string("Starting main loop!"))
