@@ -31,18 +31,20 @@ VAR
   byte  buffer
   byte  rx, tx
   byte checksum
+  long  stopSDPointer
+  
 OBJ
   'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 
   cereal : "rxSerialHSLP_11"
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
-
+  
 PUB dontRunThisMethodDirectly 'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
 repeat
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
-PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_)
+PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
@@ -51,6 +53,7 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_)
   baud := baudrate
   lcdbaud := lcdbaud_
   lcdpin := lcdpin_
+  stopSDPointer := stopSDPointer_
 ''sets the global file name to the given pointer
   sdfilename := savefilename
   lcd.init(lcdpin,lcdbaud,2)
@@ -61,7 +64,7 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_)
 PRI main | x, in, errors, y, lines , checktmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
   dira[15] := true'set pin 15 to output
-  util.wait(3)    'wait for debugging purposes
+  util.wait(1)    'wait for debugging purposes
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
@@ -78,7 +81,7 @@ PRI main | x, in, errors, y, lines , checktmp
   ' command number 1 : Recieve and write data
     if cmd == 1
     
-      pst.str(string("cmd == 1",13))
+      'pst.str(string("cmd == 1",13))
    
       length := cereal.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
       
@@ -91,32 +94,27 @@ PRI main | x, in, errors, y, lines , checktmp
         else
           dataPt := @data2        
         
-        pst.str(string("SD: Length:" ))
-        pst.dec(length)
+        'pst.str(string("SD: Length:" ))
+        'pst.dec(length)
         checksum := cmd+length
         'cereal.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
-      ' depending on the buffer value    
-        pst.str(string(13,"SD: Recieved:"))                                                                                                                          
+      ' depending on the buffer value                                                                                                                                  
         repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
           byte[dataPt+x] := cereal.rx  'get next byte to log, store in buffer
-          'pst.hex(byte[dataPt+x],2)    'print values recieved in hex
-          'pst.char(13)
         ' updates the checksum value
           checksum+=byte[dataPt+x]
         byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
-        pst.char(13)  
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the 0
         checktmp := cereal.rx  'get the checksum          
         
         if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt
-          pst.str(string("SD: Line written: "))
+          'pst.str(string("SD: Line written: "))     
+          'pst.str(long[globaldatapointer])
           'pst.char(13)
-          pst.str(long[globaldatapointer])
-          pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time   
           
         else 'if some error occured, turns an LED on pin 15 : ON
@@ -167,6 +165,10 @@ PRI main | x, in, errors, y, lines , checktmp
           pst.str(string(", Expected: "))
           pst.hex(checktmp,8)  
     'sets lcd display
+    elseif cmd == 4
+      byte[stopSDPointer]:=$FF
+
+      cereal.stop
     elseif cmd == 8
     
       pst.str(string("cmd == 8",13))

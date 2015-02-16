@@ -16,7 +16,7 @@ VAR
   long pointer, lastpointer
   long buf[1]
   long adcpointer
-  byte stop
+  long stopPointer
   long index
   byte DO, CLK, DI, CS
   long datfilename , lastfilename
@@ -28,13 +28,14 @@ OBJ
   pst : "Parallax Serial Terminal"
   
   
-PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | insert_card
   DO := d0
   CLK := clk1
   DI := di1
   CS := cs1
   adcpointer := adcpointer_
   datfilename := savefilename
+  stopPointer := stopPointer_
   pst.startrxtx(-1,16,0,115_200)
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
@@ -42,8 +43,6 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_) | insert_card
 ''creates new cog
   return cognew(start,@stack)
 PRI start
-''sets the stop boolean to false (otherwise program will exit immediately)
-  stop := false
                                 ''calls the insert card function                   
   repeat while \sd.mount_explicit(DO,CLK,DI,CS) < 0 ''wait until card is inseted, using the abort catch
     pst.str(string("Waiting for mount_explicit to return true!",13))
@@ -72,8 +71,8 @@ PRI mainLoop | x ,channel
  'repeats until this object's stop function is called
 
   
-  repeat 'while !stop       
-    pst.str(string("Pointer testing...........................",13))
+  repeat while byte[stopPointer] == 0      
+    'pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
       lastpointer := long[pointer]
       sd.pputs(long[pointer]) ''writes data
@@ -82,14 +81,13 @@ PRI mainLoop | x ,channel
         sdDec(word[adcpointer+channel])'word[pointer+channel] )
         
       sd.pputs(string(13,10))
-      pst.str(string("Wrote data :"))
-      pst.str(long[pointer])
-      pst.char(13)
-       'set the last pointer
+      'pst.str(string("Wrote data :"))
+      'pst.str(long[pointer])
+      'pst.char(13)
+  end
   'sd.pclose   
 PUB end ''stops program
-  sd.pclose
-  stop := true
+  sd.pclose       
   pst.str(string("Stopped!"))
 PUB setFileName(filename)  ''sets the file name. Defaults to test.txt.
   datFileName := filename
