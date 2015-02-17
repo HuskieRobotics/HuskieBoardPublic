@@ -17,13 +17,12 @@ CON
 VAR
   long  stack[512]
   long  stackSerial[512]
-  long  globaldatapointer
-  long  atestbfhg[128]          'WTF is this garbage?!
+  long  globaldatapointer                                
   long  dataPt
   long mode
   long baud
   long lcdbaud
-  byte ldcpin                 'pointer to location of the 'toLog' buffer
+  byte lcdpin                 'pointer to location of the 'toLog' buffer
   byte  cmd, length
   byte  data1[256], data2[256]  'toLog buffer
   long  sdfilename              'pointer to the location of the filename to write to the sd
@@ -32,14 +31,20 @@ VAR
   byte  buffer
   byte  rx, tx
   byte checksum
+  long  stopSDPointer
+  
 OBJ
   'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 
   cereal : "rxSerialHSLP_11"
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
-
-PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_)
+  
+PUB dontRunThisMethodDirectly 'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
+pst.start(115200)
+repeat
+  pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
+PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
@@ -48,17 +53,18 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_)
   baud := baudrate
   lcdbaud := lcdbaud_
   lcdpin := lcdpin_
+  stopSDPointer := stopSDPointer_
 ''sets the global file name to the given pointer
   sdfilename := savefilename
   lcd.init(lcdpin,lcdbaud,2)
   lcd.cls
   'for use in the double buffering system
   buffer := false
-  cognew(main,@stack[0])
-PRI main | x, in, errors, y, lines
+  cognew(main,@stack)
+PRI main | x, in, errors, y, lines , checktmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
   dira[15] := true'set pin 15 to output
-  util.wait(3)    'wait for debugging purposes
+  util.wait(1)    'wait for debugging purposes
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
@@ -75,7 +81,7 @@ PRI main | x, in, errors, y, lines
   ' command number 1 : Recieve and write data
     if cmd == 1
     
-      pst.str(string("cmd == 1",13))
+      'pst.str(string("cmd == 1",13))
    
       length := cereal.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
       
@@ -88,31 +94,27 @@ PRI main | x, in, errors, y, lines
         else
           dataPt := @data2        
         
-        pst.str(string("SD: Length:" ))
-        pst.dec(length)
+        'pst.str(string("SD: Length:" ))
+        'pst.dec(length)
         checksum := cmd+length
         'cereal.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
-      ' depending on the buffer value    
-        pst.str(string(13,"SD: Recieved:"))                                                                                                                          
+      ' depending on the buffer value                                                                                                                                  
         repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
           byte[dataPt+x] := cereal.rx  'get next byte to log, store in buffer
-          'pst.hex(byte[dataPt+x],2)    'print values recieved in hex
-          'pst.char(13)
         ' updates the checksum value
           checksum+=byte[dataPt+x]
         byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
-        pst.char(13)  
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the 0
-        y := cereal.rx  'get the checksum
-        if true'checksum == y 'is the checksum correct?
+        checktmp := cereal.rx  'get the checksum          
+        
+        if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt
-          pst.str(string("SD: Line written: "))
+          'pst.str(string("SD: Line written: "))     
+          'pst.str(long[globaldatapointer])
           'pst.char(13)
-          pst.str(long[globaldatapointer])
-          pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time   
           
         else 'if some error occured, turns an LED on pin 15 : ON
@@ -133,33 +135,40 @@ PRI main | x, in, errors, y, lines
       pst.str(string("cmd == 3",13))
     ' length of string
       length := cereal.rx
-      
+      checksum := cmd+length 
     ' tests if the length is less than 250
       if length < 250
-        
       ' gets all the string data and stores
       ' it to either data1 or data2,
       ' depending on the buffer value                                                                                                                          
-        repeat x from 0 to length-3
+        repeat x from 0 to length-4
         
           filedata[x] := cereal.rx
         ' 
         ' updates the checksum value
-          checksum+=filedata[x]
-          
+          checksum+=filedata[x]                          
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
-        if checksum == cereal.rx
-          bytemove(filedata,sdfilename, length-3)
+        checktmp := cereal.rx  
+        'checksum //= 256 'mod 256 to calculate checksum
+        if checksum == checktmp
+          bytemove(sdfilename,@filedata, length-3)
           byte[sdfilename+length-3] := 0 'set the end of the string
+          pst.str(string("SD: Set file name to :"))
+          pst.str(sdfilename)
+          pst.char(13)
         else 'if some error occured, turns an LED on pin 15 : ON
           outa[15]:=true
-        pst.str(string("SD: Set file name to :"))
-        pst.str(@filedata)
-        pst.char(13)
-        util.wait(1)
-        
+          pst.str(string("Error setting filename!!!",13,7))
+          pst.str(string("Checksum: "))
+          pst.hex(checksum,8)
+          pst.str(string(", Expected: "))
+          pst.hex(checktmp,8)  
     'sets lcd display
+    elseif cmd == 4
+      byte[stopSDPointer]:=$FF
+
+      cereal.stop
     elseif cmd == 8
     
       pst.str(string("cmd == 8",13))
@@ -190,7 +199,7 @@ PRI main | x, in, errors, y, lines
       pst.str(string("LCD: # of lines set to: "))
       pst.dec(lines)
       
-      lcd.init(lcdpin_,lcdbaud_,lines)
+      lcd.init(lcdpin,lcdbaud,lines)
         
     
   
