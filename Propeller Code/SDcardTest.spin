@@ -81,6 +81,8 @@ PRI mainLoop | x ,channel
       pst.str(string("Wrote data :"))
       pst.str(long[pointer])
       pst.char(13)
+      sd.pclose
+      sd.popen(datfilename,"a")
        'set the last pointer
   'sd.pclose   
 PUB end ''stops program

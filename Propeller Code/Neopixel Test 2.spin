@@ -33,7 +33,7 @@ PUB main   | c, x, in
   waitcnt(cnt+clkfreq*2)
   
   setColors
-  gradient
+  stripes
   {
   METHOD LIST:
 
