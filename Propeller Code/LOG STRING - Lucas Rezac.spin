@@ -32,6 +32,7 @@ VAR
   byte  rx, tx
   byte checksum
   long  stopSDPointer
+  long neopointer
   
 OBJ
   'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 

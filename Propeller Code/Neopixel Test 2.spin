@@ -27,6 +27,7 @@ VAR
   byte isFlashingGreen
   byte isEnabled
   byte stop
+  byte flash
 OBJ
   neo : "Neopixel Driver"
   pst : "Parallax Serial Terminal"
@@ -40,6 +41,7 @@ PUB init(pin_,length_,pointer_)
   isFlashingOnOff := false
   isFlashingGreen := false
   stop := false
+  flash := false
   cognew(main,@stack[0])
 PUB main   | c, x, in
   neo.start(PIN,LENGTH)
@@ -50,8 +52,33 @@ PUB main   | c, x, in
 
   'waitcnt(cnt+clkfreq*2)
   repeat while !stop
-  
-  stripes
+    if isEnabled
+      if flash
+        flash := false
+      if isFlashingOnOff
+        neo.fill(0,64,BLACK)
+      elseif isFlashingGreen
+        neo.fill(0,64,GREEN)
+      else
+        'do stuff here
+        
+    else
+      repeat while !isEnabled
+        if !isEnabled
+          shade
+        if !isEnabled
+          gradient
+        if !isEnabled
+          bounce
+        if !isEnabled
+          center
+        if !isEnabled
+          rainbow
+        if !isEnabled
+          random
+        if !isEnabled
+          stripes
+    
   {
   METHOD LIST:
 
@@ -65,21 +92,24 @@ PUB main   | c, x, in
   }
 PUB activemode
   isEnabled := true
+PUB passiveMode
+  isEnabled := false
 PUB set20secsLeft
   isFlashingOnOff := true
-
-PRI shade  | c
+PUB halt
+  stop := true
+PRI shade  | c,count
   c := 0
-  repeat
+  repeat count from 0 to 20
     neo.fill(0,64,colors2[c])
     c++
     if c > 11
       c := 0
     waitcnt(cnt+clkfreq/2)
     
-PRI gradient | r,g,b,freq
+PRI gradient | r,g,b,freq , count
   freq := 9
-  repeat
+  repeat count from 0 to 1
     r := 255
     g := 0
     b := 0
@@ -101,9 +131,9 @@ PRI gradient | r,g,b,freq
     repeat b from 255 to 0
       neo.fill(0,64,neo.colorx(r,g,b,BRIGHTNESS))
       waitcnt(cnt+clkfreq/freq)
-PRI stripes | offset, x, i
+PRI stripes | offset, x, i, count
   offset := 0
-  repeat
+  repeat count from 0 to 40
     repeat x from 0+offset to 64+offset
       repeat i from 0 to 3
         neo.set(limit(x+i),ORANGE)
@@ -144,11 +174,11 @@ PRI bounce | c,x
     c++
     if c == 6
       c := 0
-PRI rainbow | x, i
+PRI rainbow | x, i , count
   channels[0] := 64
   repeat x from 1 to NUMCHANNELS
     channels[x] := channels[x-1]-12
-  repeat
+  repeat count from 0 to 40
     repeat i from 0 to NUMCHANNELS
       ch := channels[i]
       repeat x from ch to ch-11
@@ -158,8 +188,8 @@ PRI rainbow | x, i
       if channels[i]-1 > LENGTH
         channels[i] := 0
     waitcnt(cnt+clkfreq/10)
-PRI random | x 
-  repeat
+PRI random | x, count 
+  repeat count from 0 to 10
     repeat x from 0 to 64
       neo.set(x,neo.colorx(rand.random*255,rand.random*255,rand.random*255,BRIGHTNESS))
     waitcnt(cnt+clkfreq/10) 
