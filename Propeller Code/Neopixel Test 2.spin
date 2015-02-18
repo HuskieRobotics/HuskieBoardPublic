@@ -5,8 +5,6 @@ CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
 
-        LENGTH = 64
-        PIN = 8
 
         NUMCHANNELS = 5
         
@@ -16,23 +14,43 @@ VAR
   long RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, BLACK, WHITE
   long HUSKIEORANGE, HUSKIEBLUE 
   byte ch
+  byte PIN,LENGTH
   byte strinpt
+  long pointer
+  long neopixels[64]
   long colors[6], colors2[12]
-  byte channels[NUMCHANNELS]  
+  long stack[512]
+  byte channels[NUMCHANNELS]
+
+  ''BOOLEANS
+  byte isFlashingOnOff
+  byte isFlashingGreen
+  byte isEnabled
+  byte stop
 OBJ
   neo : "Neopixel Driver"
   pst : "Parallax Serial Terminal"
   str : "String"
   rand: "RealRandom"
-  
+PUB init(pin_,length_,pointer_)
+  PIN := pin_
+  LENGTH := length_
+  pointer := pointer_
+  isEnabled := false
+  isFlashingOnOff := false
+  isFlashingGreen := false
+  stop := false
+  cognew(main,@stack[0])
 PUB main   | c, x, in
   neo.start(PIN,LENGTH)
-  pst.start(115_200)
+  'pst.start(115_200)
   rand.start
+
+  setColors 
+
+  'waitcnt(cnt+clkfreq*2)
+  repeat while !stop
   
-  waitcnt(cnt+clkfreq*2)
-  
-  setColors
   stripes
   {
   METHOD LIST:
@@ -45,6 +63,11 @@ PUB main   | c, x, in
   stripes
   random
   }
+PUB activemode
+  isEnabled := true
+PUB set20secsLeft
+  isFlashingOnOff := true
+
 PRI shade  | c
   c := 0
   repeat
@@ -53,7 +76,7 @@ PRI shade  | c
     if c > 11
       c := 0
     waitcnt(cnt+clkfreq/2)
-  
+    
 PRI gradient | r,g,b,freq
   freq := 9
   repeat

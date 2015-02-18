@@ -16,6 +16,7 @@ VAR
   long pointer, lastpointer
   long buf[1]
   long adcpointer
+  long stopPointer
   byte stop
   long index
   byte DO, CLK, DI, CS
@@ -28,13 +29,14 @@ OBJ
   pst : "Parallax Serial Terminal"
   
   
-PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | insert_card
   DO := d0
   CLK := clk1
   DI := di1
   CS := cs1
   adcpointer := adcpointer_
   datfilename := savefilename
+  stopPointer := stopPointer_
   pst.startrxtx(-1,16,0,115_200)
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
