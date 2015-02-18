@@ -36,7 +36,8 @@ OBJ
   rand: "RealRandom"
 PUB init(pin_,length_,pointer_)
   PIN := pin_
-  LENGTH := length_
+  'LENGTH := length_
+  LENGTH := 64
   pointer := pointer_
   batteryLevel := 100
   isEnabled := false
@@ -46,13 +47,16 @@ PUB init(pin_,length_,pointer_)
   flash := false
   cognew(main,@stack[0])
 PUB main   | c, x, in
-  neo.start(PIN,LENGTH)
-  'pst.start(115_200)
+  'neo.start(PIN,LENGTH)
+  neo.start(20,64)
+  pst.start(115_200)
   rand.start
-
+  pst.str(string("Started!",13))
   setColors 
-
+   neo.fill(0,64,RED)
+  pst.str(string("Done setting colors!",13)) 
   'waitcnt(cnt+clkfreq*2)
+  'stripes
   repeat while !stop
     if isEnabled
       if flash
@@ -66,11 +70,12 @@ PUB main   | c, x, in
         neo.fill(0,10,HUSKIEORANGE)
         neo.fill(0,batteryLevel/10,HUSKIEBLUE)
 
-                
+       
     else
       repeat while !isEnabled
-        if !isEnabled
-          shade
+        pst.str(string("!isEnabled"))
+        'if !isEnabled
+          'shade
         if !isEnabled
           gradient
         if !isEnabled
@@ -115,8 +120,8 @@ PRI shade  | c,count
     waitcnt(cnt+clkfreq/2)
     
 PRI gradient | r,g,b,freq , count
-  freq := 9
-  repeat count from 0 to 1
+  freq := 50
+  'repeat count from 0 to 1
     r := 255
     g := 0
     b := 0
@@ -140,12 +145,12 @@ PRI gradient | r,g,b,freq , count
       waitcnt(cnt+clkfreq/freq)
 PRI stripes | offset, x, i, count
   offset := 0
-  repeat count from 0 to 40
+  repeat count from 0 to 100
     repeat x from 0+offset to 64+offset
       repeat i from 0 to 3
-        neo.set(limit(x+i),ORANGE)
+        neo.set(limit(x+i),HUSKIEORANGE)
       repeat i from 4 to 7
-        neo.set(limit(x+i),BLUE)
+        neo.set(limit(x+i),HUSKIEBLUE)
       'neo.fill(limit(x),limit(x+3),ORANGE)
       'neo.fill(limit(x+4),limit(x+7),BLUE)
       x+=7
@@ -171,9 +176,9 @@ PRI center | c, x
     c++
     if c == 6
       c := 0
-PRI bounce | c,x
+PRI bounce | c,x , count
   c := 0
-  repeat
+  repeat count from 0 to 2
     repeat x from 0 to 64
       neo.set(x,colors[c])
       neo.set(LENGTH-x, colors[c-2])

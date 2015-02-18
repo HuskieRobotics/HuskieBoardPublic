@@ -62,7 +62,7 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,sto
   lcd.cls
   'for use in the double buffering system
   buffer := false
-  neo.init(8,64, @neopointer) 
+  neo.init(14,64, @neopointer) 
   cognew(main,@stack)
 PRI main | x, in, errors, y, lines , checktmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
