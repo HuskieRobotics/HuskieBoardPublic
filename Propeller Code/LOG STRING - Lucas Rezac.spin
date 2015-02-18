@@ -6,7 +6,7 @@
                   that I know where you live, and your mom's phone number, and your Social Security Card number. Don't make me use
                   that information, because I don't want to. But I will, if I have to.}
 {REVISON: 1}
-{REVISED BY: Brandon John, Lucas Rezac, Ronald McDonald}
+{REVISED BY: Brandon John, Lucas Rezac}
 {PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART
 and log data recieved between the two to a CSV file format on an onboard SD Card.}
 '99.9% of code (C) 2015 Lucas Rezac 
@@ -40,6 +40,7 @@ OBJ
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
+  neo : "Neopixel Test 2"
   
 PUB dontRunThisMethodDirectly 'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
@@ -61,6 +62,7 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,sto
   lcd.cls
   'for use in the double buffering system
   buffer := false
+  neo.init(8,64, @neopointer) 
   cognew(main,@stack)
 PRI main | x, in, errors, y, lines , checktmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal

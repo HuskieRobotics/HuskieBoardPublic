@@ -19,14 +19,14 @@ VAR
   long  ldcpointer
   long  datFileName[32] 'name can't be longer than 128 bytes
   byte  stop
-  long neopointer
+  'long neopointer
    
 OBJ
   wood : "LOG STRING - Lucas Rezac"
   sd   : "SDcardTest"
   util : "Util"
   adc : "ADC driver"
-  neo : "Neopixel Test 2"
+  'neo : "Neopixel Test 2"
   
 PUB main
   longfill(@datFileName,0,32)
@@ -38,7 +38,7 @@ PUB main
   wood.init(1,0,0,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop)
   'starts the sd card 
   sd.init(7,6,5,4,@pointerToPointerThing,@datFileName,adcpointer, @stop)
-  neo.init(8,64, @neopointer)
+  
   'this will be replaced with something else, eventually
   'util.wait(30)'60*10)
   'sd.end

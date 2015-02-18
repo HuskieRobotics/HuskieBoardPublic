@@ -28,6 +28,7 @@ VAR
   byte isEnabled
   byte stop
   byte flash
+  byte batterylevel
 OBJ
   neo : "Neopixel Driver"
   pst : "Parallax Serial Terminal"
@@ -37,6 +38,7 @@ PUB init(pin_,length_,pointer_)
   PIN := pin_
   LENGTH := length_
   pointer := pointer_
+  batteryLevel := 100
   isEnabled := false
   isFlashingOnOff := false
   isFlashingGreen := false
@@ -61,7 +63,10 @@ PUB main   | c, x, in
         neo.fill(0,64,GREEN)
       else
         'do stuff here
-        
+        neo.fill(0,10,HUSKIEORANGE)
+        neo.fill(0,batteryLevel/10,HUSKIEBLUE)
+
+                
     else
       repeat while !isEnabled
         if !isEnabled
@@ -92,6 +97,8 @@ PUB main   | c, x, in
   }
 PUB activemode
   isEnabled := true
+PUB setBatteryLevel(level)
+  batterylevel :=  level
 PUB passiveMode
   isEnabled := false
 PUB set20secsLeft
