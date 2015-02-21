@@ -13,10 +13,10 @@ VAR
   long  stackSerial[512]
   long  globaldatapointer                                
   long  dataPt
-  long mode
-  long baud
-  long lcdbaud
-  byte lcdpin                 'pointer to location of the 'toLog' buffer
+  long  mode
+  long  baud
+  long  lcdbaud
+  byte  lcdpin                 'pointer to location of the 'toLog' buffer
   byte  cmd, length
   byte  data1[256], data2[256]  'toLog buffer
   long  sdfilename              'pointer to the location of the filename to write to the sd
@@ -24,9 +24,10 @@ VAR
   byte  lcdstr[32]
   byte  buffer
   byte  rx, tx
-  byte checksum
+  byte  checksum
   long  stopSDPointer
-  long neopointer
+  long  neopointer
+  long  LED_RED,LED_YELLOW,LED_GREEN
   
 OBJ
   'cereal    : "FullDuplexSerial2"  THIS ONE DOES NOT WORK FOR OUR NEEDS!!! AT ALL! 
@@ -40,7 +41,7 @@ PUB dontRunThisMethodDirectly 'this runs and tells the terminal that it is the w
 pst.start(115200)
 repeat
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
-PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_)
+PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_RED_,LED_YELLOW_,LED_GREEN_)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
@@ -48,7 +49,10 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,sto
   mode := mode_
   baud := baudrate
   lcdbaud := lcdbaud_
-  lcdpin := lcdpin_
+  lcdpin := lcdpin_  
+  LED_RED := LED_RED_
+  LED_YELLOW := LED_YELLOW_
+  LED_GREEN := LED_GREEN_
   stopSDPointer := stopSDPointer_
 ''sets the global file name to the given pointer
   sdfilename := savefilename
@@ -56,11 +60,11 @@ PUB init(rx_, tx_, mode_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,sto
   lcd.cls
   'for use in the double buffering system
   buffer := false
-  neo.init(14,64, @neopointer) 
+  neo.init(neopixelPin,64, @neopointer) 
   cognew(main,@stack)
 PRI main | x, in, errors, y, lines , checktmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  dira[15] := true'set pin 15 to output
+  dira[LED_RED] := true'set pin 15 to output
   util.wait(1)    'wait for debugging purposes
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
@@ -69,16 +73,16 @@ PRI main | x, in, errors, y, lines , checktmp
       
   'RECIEVING CODE
   repeat
-    'pst.str(string("  Outer loop",13))
+    pst.str(string("  Outer loop",13))
     cmd := cereal.rxtime(100)    'get the command  
-    'pst.dec(cmd)
-    'pst.str(string("Datapointer : "))
-    'pst.hex(long[globaldatapointer], 8)
-    'pst.char(13)
+    pst.dec(cmd)
+    pst.str(string("Datapointer : "))
+    pst.hex(long[globaldatapointer], 8)
+    pst.char(13)
   ' command number 1 : Recieve and write data
     if cmd == 1
     
-      'pst.str(string("cmd == 1",13))
+      pst.str(string("cmd == 1",13))
    
       length := cereal.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
       
@@ -109,9 +113,9 @@ PRI main | x, in, errors, y, lines , checktmp
         
         if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt
-          'pst.str(string("SD: Line written: "))     
-          'pst.str(long[globaldatapointer])
-          'pst.char(13)
+          pst.str(string("SD: Line written: "))     
+          pst.str(long[globaldatapointer])
+          pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time   
           
         else 'if some error occured, turns an LED on pin 15 : ON
@@ -123,7 +127,7 @@ PRI main | x, in, errors, y, lines , checktmp
           pst.str(string(13,"Data: "))
           pst.str(@dataPt)
           pst.char(13)
-          outa[15]:=true
+          outa[LED_RED]:=true
         'longfill(@dataPt,0,64)
         
     'command number 3 : Set SD save file name

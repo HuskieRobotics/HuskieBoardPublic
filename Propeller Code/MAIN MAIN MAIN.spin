@@ -11,7 +11,7 @@ CON
 
 
         PP_RX      = 31  'receive from propplug 
-        PP_RX      = 32  'trasmit to propplug
+        PP_TX      = 30  'trasmit to propplug
         EEPROM_SDA = 29
         EEPROM_SCL = 28
         
@@ -29,7 +29,7 @@ CON
         GPIO2      = 6
         GPIO3      = 7
 
-        RRIO_TX    = 7
+        RRIO_TX    = 19
         RRIO_RX    = 8
         RRIO_CS    = 9
         RRIO_CLK   = 10
@@ -56,7 +56,7 @@ CON
         LED_YELLOW = 17
         LED_RED    = 16
 
-        NEOPIXEL   = GPIO0
+        NEOPIXEL   = -1'GPIO0
 
 VAR
   long  pointerToPointerThing
@@ -79,9 +79,14 @@ PUB main
   adc.start(ADC_DO,ADC_CLK,ADC_CS,$00FF)'ADC WON'T WORK!! EXPECTS ONE PIN COMM, connected over 2!
   adcpointer := adc.pointer
   'starts the string logger            
-  RR_UART.init(RRIO_RX,RRIO_TX,0,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop)
-  'starts the sd card 
-  sd.init(SD_DO,SD_CLK,SD_DI,SD_CS,@pointerToPointerThing,@datFileName,adcpointer, @stop)
-
+  RR_UART.init(RRIO_RX,RRIO_TX,0,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN)
+  'starts the sd card
+                   
+  DIRA[25] :=  1
+  DIRA[0]  :=  1
+  OUTA[25] :=  0
+  OUTA[0]  :=  0
+  sd.init(1,2,3,27,@pointerToPointerThing,@datFileName,adcpointer, @stop)
+          'SD_DO,SD_SCLK,SD_DI,SD_CS
               
                           

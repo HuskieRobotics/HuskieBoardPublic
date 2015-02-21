@@ -31,7 +31,7 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | 
   adcpointer := adcpointer_
   datfilename := savefilename
   stopPointer := stopPointer_
-  pst.startrxtx(-1,16,0,115_200)
+  pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
   pst.str(string("SD card works!",13))
