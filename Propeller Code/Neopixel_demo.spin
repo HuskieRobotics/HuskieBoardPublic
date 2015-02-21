@@ -30,12 +30,12 @@ con { io pins }
   SDA  = 29                                                     ' eeprom / i2c
   SCL  = 28
 
-  LEDS = 8                                                    ' LED tx pin
+  LEDS = 4                                                    ' LED tx pin
 
 
 con
 
-  STRIP_LEN = 6
+  STRIP_LEN = 60
             
   
 obj

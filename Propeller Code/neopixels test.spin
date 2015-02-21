@@ -6,7 +6,7 @@ CON
         _xinfreq = 5_000_000
 
         LENGTH = 64
-        PIN = 8
+        PIN = 15
 
         NUMCHANNELS = 5
 

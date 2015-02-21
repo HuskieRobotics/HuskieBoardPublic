@@ -1,15 +1,9 @@
 {AUTHOR: Lucas Rezac}
 {TITLE: LOG STRING}
-{PURPOSE: This object has no purpose. Never use it. In fact, you should immediately delete this file, empty the garbage bin, and
-                  restart your computer. Do it. Now. Also, it'd be nice if you could forget about ever reading this text, or better yet,
-                  that you ever heard of this file. That would be great. AND as an extra incentive to do the above, let me just say
-                  that I know where you live, and your mom's phone number, and your Social Security Card number. Don't make me use
-                  that information, because I don't want to. But I will, if I have to.}
 {REVISON: 1}
 {REVISED BY: Brandon John, Lucas Rezac}
 {PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART
 and log data recieved between the two to a CSV file format on an onboard SD Card.}
-'99.9% of code (C) 2015 Lucas Rezac 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000

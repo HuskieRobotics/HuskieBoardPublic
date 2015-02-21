@@ -1,15 +1,11 @@
 {AUTHOR: Lucas Rezac}
 {TITLE: SDcardTest}
-{PURPOSE: To slap Eric in the face whenever he starts annoying people and also get Lucas very frustrated.}
+{PURPOSE: Log strings received by RR uart connection.}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
-
-       ' DO  = 7
-        'CLK = 6
-        'DI  = 5
-        'CS  = 4
+        
 
 VAR
   long  stack[512]
@@ -23,9 +19,7 @@ VAR
   long datfilename , lastfilename
    
 OBJ
-  sd : "fsrw"
-  'nums : "Simple_Numbers"
-  'str : "String"
+  sd : "fsrw"     
   pst : "Parallax Serial Terminal"
   
   
@@ -115,6 +109,5 @@ PUB sdDec(value) | i, x
       sd.pputc("0")                                                                 'If zero digit (or only digit) output it
     i /= 10                                                                     'Update divisor
 
-DAT
-'datfilename byte "match.txt",0
+DAT                              
 testb byte "match.csv",0  
