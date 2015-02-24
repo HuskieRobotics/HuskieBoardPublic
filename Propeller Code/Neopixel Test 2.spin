@@ -51,10 +51,10 @@ PUB main   | c, x, in
   neo.start(20,64)
   pst.start(115_200)
   rand.start
-  pst.str(string("Started!",13))
+ 'pst.str(string("Started!",13))
   setColors 
    neo.fill(0,64,RED)
-  pst.str(string("Done setting colors!",13)) 
+ 'pst.str(string("Done setting colors!",13)) 
   'waitcnt(cnt+clkfreq*2)
   'stripes
   repeat while !stop
@@ -73,7 +73,7 @@ PUB main   | c, x, in
        
     else
       repeat while !isEnabled
-        pst.str(string("!isEnabled"))
+       'pst.str(string("!isEnabled"))
         'if !isEnabled
           'shade
         if !isEnabled

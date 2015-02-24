@@ -48,8 +48,7 @@ PRI start
   lastpointer := 0
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
-    pst.str(string("Waiting for Bennet to become smart...",13))
-     
+    pst.str(string("Waiting for packet",13))
   if long[datfilename] == 0 'has the filename still not been set?
     sd.popen(@testb,"w")    'just append to match.csv
     sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
