@@ -8,7 +8,7 @@ CON
 
 VAR
   long null
-  byte batVolt
+  long batVolt
   byte A, Af, B, C, Cf, D, Df, E, F, Ff, G, Gf
    
 OBJ
@@ -36,20 +36,17 @@ PUB init(pin_,baud_,numLines_,batteryVoltagePtr)
   batVolt := batteryVoltagePtr
   main
 PUB main  | strng   ,note
-  {lcd.init(15,19_200,4)
+  lcd.init(15,19_200,4)
+  lcd.putc(lcd#LCD_BL_ON)
   lcd.cursor(0)
   lcd.cls
   lcd.str(string("Hello? Is anybody   there?"))
   util.wait(5)
   lcd.cls
-  lcd.str(string("I don't hate you."))
-  util.wait(5)
-  lcd.cls
-  lcd.str(string("Would you come over "))
-  waitcnt(cnt+(4*(clkfreq/5)))
-  lcd.str(string(" here?"))}
+  lcd.str(string("I don't hate you."))      
+  
   'GDGDCDCAfB
-
+  {
   lcd.putc(217)
   lcd.putc(211)
   lcd.putc(G)
@@ -98,7 +95,7 @@ PUB main  | strng   ,note
   lcd.putc(B)
   lcd.putc(G)
   lcd.putc(G)
-  lcd.putc(D)
+  lcd.putc(D)    }
 
   
  

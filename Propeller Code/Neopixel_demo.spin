@@ -56,7 +56,7 @@ pub main | pos
 
   strip.start_b(LEDS, STRIP_LEN)                                ' start led driver
   strip.off
-
+  'abort
   repeat 10
     color_chase(@Chakras, STRIP_LEN, 100)
     

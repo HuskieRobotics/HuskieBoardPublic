@@ -1,9 +1,6 @@
 {AUTHOR: Lucas Rezac}
 {REVISION: 1}
-{REVISED BY: Brandon John, Bennett Johnson}
-{PURPOSE: This object (herefore to be referred to as Object) is used to initiallize all code
-                                developed for the RoboRIO Expansion Board(TM). At this time, Object can only do SD Logging,
-                                although it has been prophesized that it will do more in the future.}
+{REVISED BY: Brandon John, Bennett Johnson}                                                          
 
 CON
         _clkmode   = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
@@ -70,8 +67,13 @@ CON
         LED_YELLOW = 17
         LED_RED    = 16
 
-        NEOPIXEL   = -1'GPIO0
+        NEOPIXEL   = GPIO0
 
+        input      = false
+        output     = true
+
+        on         = true
+        off        = false
 VAR
   long  pointerToPointerThing
   long  adcpointer
@@ -87,10 +89,10 @@ OBJ
   'neo : "Neopixel Test 2"
   
 PUB main
-  longfill(@datFileName,0,32)
+  longfill(@datFileName,0,32)        
 
   'starts analogue to digital converter
-  adc.start(ADC_DO,ADC_CLK,ADC_CS,$00FF)'ADC WON'T WORK!! EXPECTS ONE PIN COMM, connected over 2!
+  adc.start2pin(ADC_DI,ADC_DO,ADC_CLK,ADC_CS,$00FF)
   adcpointer := adc.pointer
   'starts the string logger            
   RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN)
@@ -102,5 +104,12 @@ PUB main
   'OUTA[0]  :=  0
   sd.init(27,25,0,1,@pointerToPointerThing,@datFileName,adcpointer, @stop)
           'SD_DO,SD_SCLK,SD_DI,SD_CS
-              
-                          
+
+
+  'update yellow and green LEDs to be inverse of I2C inputs
+  {DIRA[LED_YELLOW]:= output
+  DIRA[LED_GREEN]:= output    
+  repeat
+    OUTA[LED_YELLOW] := not INA[RRIO_SDA]
+    OUTA[LED_GREEN] := not INA[RRIO_SCL]          '}    
+                                                        

@@ -63,7 +63,8 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   cognew(main,@stack)
 PRI main | x, in, errors, y, lines , checktmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  dira[LED_RED] := true'set pin 15 to output
+  dira[LED_RED] := true'set red LED to output
+  dira[LED_YELLOW] := true 'set yellow LED to output
   util.wait(1)    'wait for debugging purposes
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
@@ -115,7 +116,8 @@ PRI main | x, in, errors, y, lines , checktmp
           pst.str(string("SD: Line written: "))     
           pst.str(long[globaldatapointer])
           pst.char(13)
-          buffer := !buffer 'switch to use the other buffer next time   
+          buffer := !buffer 'switch to use the other buffer next time
+          outa[LED_GREEN]:=true'mark that first LED has been set
           
         else 'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("SD: Error: Bad checksum!",13))

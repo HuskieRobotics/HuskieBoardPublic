@@ -8,7 +8,7 @@ CON
 
         NUMCHANNELS = 5
         
-        BRIGHTNESS = 100
+        BRIGHTNESS = 80
         
 VAR
   long RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, BLACK, WHITE
@@ -57,8 +57,8 @@ PUB main   | c, x, in
   rand.start
  'pst.str(string("Started!",13))
   setColors 
-   neo.fill(0,64,RED)
- 'pst.str(string("Done setting colors!",13)) 
+  neo.fill(0,64,RED)
+  'pst.str(string("Done setting colors!",13)) 
   'waitcnt(cnt+clkfreq*2)
   'stripes
   repeat while !stop

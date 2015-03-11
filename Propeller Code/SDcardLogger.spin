@@ -6,7 +6,7 @@ CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
         
-
+        LED_YELLOW = 17
 VAR
   long  stack[512]
   long pointer, lastpointer
@@ -37,22 +37,26 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | 
   pst.str(string("SD card works!",13))
 ''creates new cog
   return cognew(start,@stack)
-PRI start
+PRI start  | loc
+  dira[LED_YELLOW]:=true'set yellow LED to output
 ''sets the stop boolean to false (otherwise program will exit immediately)
   stop := false
                                 ''calls the insert card function                   
   repeat while \sd.mount_explicit(DO,CLK,DI,CS) < 0 ''wait until card is inseted, using the abort catch
     pst.str(string("Waiting for mount_explicit to return true!",13))
   pst.str(string("Mounted SD!",13))         
-''sets the last pointer for reasons obviously apparent to even the most confused banana
+''sets the last pointer
   lastpointer := 0
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
-    pst.str(string("Waiting for packet",13))
+    pst.str(string("Waiting for packet or file name",13))
   if long[datfilename] == 0 'has the filename still not been set?
     sd.popen(@testb,"w")    'just append to match.csv
     sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
   else
+    repeat loc from datfilename to datfilename+strsize(datfilename)
+      if not lookup(byte[loc]:"\","/",":","?","*","<",">","|",34) == 0   'double quote is 34
+        byte[loc]:="_"
     sd.popen(datfilename,"w")       'open a (probably) new file
     
   pst.str(string("Starting main loop!"))
@@ -77,6 +81,7 @@ PRI mainLoop | x ,channel
       pst.str(long[pointer])
       pst.char(13)
       sd.pflush
+      dira[LED_YELLOW]:=true'set yellow LED to on, signifying one line was written        
        'set the last pointer
   'sd.pclose   
 PUB end ''stops program
