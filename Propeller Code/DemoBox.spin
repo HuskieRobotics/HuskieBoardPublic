@@ -126,7 +126,7 @@ PUB LCD_Main
   lcd.home
   lcd.str(string("-----TEAM  3061-----"))'set top line
   lcd.str(string(lcd#LCD_LINE1,"  HUSKIE ROBOTICS!"))
-  lcd.str(string(lcd#LCD_LINE2,"Battery V: "))
+  lcd.str(string(lcd#LCD_LINE2,"Batttery V: "))
   'lcd.str(string(lcd#LCD_LINE3,"LED Current: "))
   waitcnt(cnt+clkfreq/1000)
   lcd.putc(217)
@@ -186,14 +186,12 @@ PUB Neopixels
      bounce  
      stripes
      rainbow
-     'random  
+     random  
      center
      police
      dumb
 
 PRI potentiometer
-  'pst.dec(adc.in(0))
-  'return adc.in(0)
   return 5000
 PRI buttonPressed
   if buttonPressed_
@@ -224,11 +222,23 @@ PRI police | count        ,i
     waitcnt(cnt+clkfreq/5)
       if buttonPressed
         return
-PRI dumb | count
+PRI dumb | count  ,i ,b1 ,c_ ,b2 
+  b1 := false
+  b2 := false
   
+  repeat count from 0 to 10
+    repeat i from 0 to 64
+      if b1
+        neo.fill(i,i+4,HUSKIEBLUE)
+      else
+        neo.fill(i,i+4,HUSKIEORANGE)
+      b1 := !b1
+      i+=4
+    waitcnt(cnt+clkfreq/2)
+    b2 := !b2
 PRI gradient | r,g_,b_,freq , count
-  freq := potentiometer/50
-  'repeat count from 0 to 1
+  freq := (potentiometer/50)*10
+  repeat count from 0 to 1                                              '                  count from 0 to 1
     r := 255
     g_ := 0
     b_ := 0
