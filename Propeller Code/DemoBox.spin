@@ -73,7 +73,7 @@ VAR
   long colors[6], colors2[12]
   byte brightness         
   long RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, BLACK, WHITE
-  long HUSKIEORANGE, HUSKIEBLUE
+  long HUSKIEORANGE, HUSKIEBLUE, DOGEPURPLE
   byte channels[NUMCHANNELS]
   byte ch
   
@@ -163,7 +163,7 @@ PUB SerialConnection  | cmd, channel, x
     repeat until ser.rx == $FF ' wait until $FF byte is sent. It represents start of loop.
                                 'Used to keep in sync since checksums are not implemented
     cmd := ser.rx
-    if cmd == "A" 'button was pressed
+    if cmd == "A" '''''''''''''''''''''''''''''''''''''''''''''button was pressed
       buttonPressed_ := true
     if cmd == "V" 'next 6 bytes, will show battery voltage as string
       repeat x from 0 to 4 'get battery voltage bytes
@@ -180,7 +180,7 @@ PUB SerialConnection  | cmd, channel, x
 
 PUB Neopixels
   'neo.fill(0,64,neo.color(255,255,255))
-  
+  doge
   repeat       
      gradient
      bounce  
@@ -222,6 +222,10 @@ PRI police | count        ,i
     waitcnt(cnt+clkfreq/5)
       if buttonPressed
         return
+PRI doge | count
+  repeat count from 1 to 5
+    neo.fill(0,64,DOGEPURPLE)
+    waitcnt(cnt+clkfreq/2)
 PRI dumb | count  ,i ,b1 ,c_ ,b2 
   b1 := false
   b2 := false
@@ -361,6 +365,7 @@ PRI setColors '| x , r, g_, b_, in
   WHITE := neo.colorx(255,255,255,BRIGHTNESS)
   HUSKIEORANGE := neo.colorx(230,92,0,BRIGHTNESS)
   HUSKIEBLUE := neo.colorx(6,0,120,BRIGHTNESS)
+  DOGEPURPLE := neo.colorx(26,255,0,BRIGHTNESS)
   colors[0] := RED
   colors[1] := ORANGE
   colors[2] := YELLOW
@@ -382,5 +387,5 @@ PRI setColors '| x , r, g_, b_, in
   colors2[11]:= neo.colorx(255,0,221,BRIGHTNESS)
   
 DAT
-name    byte  "string_data",0        
+name    byte  "doge such cool very wow much amaze many awesome",0        
         
