@@ -50,14 +50,18 @@ PRI start  | loc
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
     pst.str(string("Waiting for packet or file name",13))
+
+  'Don't forget that we are using FAT32, which means that our file name is 8.3 long (8 name, 3 extension chars)
+  'Longer file names will be compressed. Also, FAT32 doesn't support lower-case letters in the filename, so those
+  'are also automatically converted to caps. 
   if long[datfilename] == 0 'has the filename still not been set?
-    sd.popen(@testb,"w")    'just append to match.csv
+    sd.popen(@testb,"a")    'just append to match.csv
     sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
   else
     repeat loc from datfilename to datfilename+strsize(datfilename)      'don't allow illegal characters!
       if not lookup(byte[loc]:"\","/",":","?","*","<",">","|",34) == 0   'double quote is 34
         byte[loc]:="_"
-    sd.popen(datfilename,"w")       'open a (probably) new file
+    sd.popen(datfilename,"a")       'append to the file, not worrying if it already exists.
     
     
   pst.str(string("Starting main loop!"))
