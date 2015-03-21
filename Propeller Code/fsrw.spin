@@ -398,6 +398,7 @@ pub popen(s, mode) : r | i, sentinel, dirptr, freeentry
 '   file did not exist, and the mode was not "w" or "a", -1 will be
 '   returned.  Otherwise abort will be called with a negative error
 '   code.
+'   Will write the first 8 bytes of the filename, and up to 3 bytes of the file extension
 }}
    pclose
    i := 0

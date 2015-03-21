@@ -137,7 +137,7 @@ PRI main | x, in, errors, y, lines , checktmp
       pst.str(string("cmd == 3",13))
     ' length of string
       length := rx_serial_fast.rx
-      checksum := cmd+length 
+      checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
       if length < 250
       ' gets all the string data and stores

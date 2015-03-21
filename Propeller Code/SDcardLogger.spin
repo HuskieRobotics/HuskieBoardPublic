@@ -54,10 +54,11 @@ PRI start  | loc
     sd.popen(@testb,"w")    'just append to match.csv
     sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
   else
-    repeat loc from datfilename to datfilename+strsize(datfilename)
+    repeat loc from datfilename to datfilename+strsize(datfilename)      'don't allow illegal characters!
       if not lookup(byte[loc]:"\","/",":","?","*","<",">","|",34) == 0   'double quote is 34
         byte[loc]:="_"
     sd.popen(datfilename,"w")       'open a (probably) new file
+    
     
   pst.str(string("Starting main loop!"))
   

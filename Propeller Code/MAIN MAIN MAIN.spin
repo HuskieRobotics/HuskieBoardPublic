@@ -78,7 +78,7 @@ VAR
   long  pointerToPointerThing
   long  adcpointer
   long  ldcpointer
-  long  datFileName[32] 'file name can't be longer than 128 bytes
+  byte  datFileName[256] 'file name can't be longer than 250 bytes
   byte  stop
   'long neopointer
    
