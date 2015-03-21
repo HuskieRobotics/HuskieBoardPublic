@@ -1,4 +1,5 @@
-{Runs our new demo box at the Arkansas regionsal}
+{Runs our new demo box at the Arkansas regionsal
+Gota maek sur to spel all wirds rong yep yep yep!}
 
 
 CON
@@ -163,7 +164,7 @@ PUB SerialConnection  | cmd, channel, x
     repeat until ser.rx == $FF ' wait until $FF byte is sent. It represents start of loop.
                                 'Used to keep in sync since checksums are not implemented
     cmd := ser.rx
-    if cmd == "A" '''''''''''''''''''''''''''''''''''''''''''''button was pressed
+    if cmd == "A" 'button was pressed
       buttonPressed_ := true
     if cmd == "V" 'next 6 bytes, will show battery voltage as string
       repeat x from 0 to 4 'get battery voltage bytes
@@ -181,7 +182,8 @@ PUB SerialConnection  | cmd, channel, x
 PUB Neopixels
   'neo.fill(0,64,neo.color(255,255,255))
   doge
-  repeat       
+  repeat
+     cooleoleo      
      gradient
      bounce  
      stripes
@@ -209,7 +211,7 @@ PRI shade  | c_,count
     waitcnt(cnt+clkfreq/2)
     if buttonPressed
       return
-PRI police | count        ,i
+PRI police | count,i
   i := true
   repeat count from 0 to 20
     if i
@@ -238,6 +240,8 @@ PRI dumb | count  ,i ,b1 ,c_ ,b2
         neo.fill(i,i+4,HUSKIEORANGE)
       b1 := !b1
       i+=4
+      if buttonPressed
+        return
     waitcnt(cnt+clkfreq/2)
     b2 := !b2
 PRI gradient | r,g_,b_,freq , count
@@ -293,6 +297,21 @@ PRI stripes | offset, x, i, count
     if offset > 64
       offset := 0
     waitcnt(cnt+clkfreq/(potentiometer/160))
+PRI cooleoleo | count   , i
+  neo.fill(0,64,DOGEPURPLE)
+  repeat count from 0 to 5
+    repeat  i from 0 to 60
+      neo.fill(0,64,DOGEPURPLE)
+      neo.fill(i,i+4,BLUE)
+      if buttonPressed
+        return
+      waitcnt(cnt+clkfreq/50)
+    repeat i from 60 to 0
+      neo.fill(0,64,BLUE)
+      neo.fill(i,i+4,DOGEPURPLE)
+      if buttonPressed
+        return
+      waitcnt(cnt+clkfreq/50)
     
 PRI limit(i) : val
   if i < 0
@@ -340,6 +359,7 @@ PRI rainbow | x, i , count
         if testCh(x)  
           neo.set(x,colors[ch-x])
       channels[i] := ch+1
+      'gotta make sure to go fast!
       if channels[i]-1 > Neo_Length
         channels[i] := 0
     waitcnt(cnt+clkfreq/(potentiometer/160))
