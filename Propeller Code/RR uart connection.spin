@@ -226,7 +226,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
       if rx_serial_fast.rx == checksum
         long[timepointer]:=  timetmp
       else
-        outa[15] := true
+        outa[15] := true    
 
       
       

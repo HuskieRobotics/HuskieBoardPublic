@@ -19,7 +19,7 @@ CON
         ADC_CS     = 23
         ADC_DI     = 22
         ADC_DO     = 21
-        ADC_CLK    = 20  
+        ADC_CLK    = 20
 
         GPIO0      = 4
         GPIO1      = 5
@@ -78,7 +78,7 @@ VAR
   long  pointerToPointerThing
   long  adcpointer
   long  ldcpointer
-  long  timepointer
+  long timepointer
   byte  datFileName[256] 'file name can't be longer than 250 bytes
   byte  stop
   'long neopointer
