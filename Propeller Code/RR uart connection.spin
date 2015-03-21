@@ -29,6 +29,7 @@ VAR
   long  stopSDPointer
   long  neopointer
   long  LED_RED,LED_YELLOW,LED_GREEN
+  long  timepointer
   
 OBJ 
   rx_serial_fast : "rxSerialHSLP_11"
@@ -41,7 +42,7 @@ PUB dontRunThisMethodDirectly 'this runs and tells the terminal that it is the w
 pst.start(115200)
 repeat
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
-PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_RED_,LED_YELLOW_,LED_GREEN_)
+PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_RED_,LED_YELLOW_,LED_GREEN_,timepointer_)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
@@ -52,6 +53,7 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   LED_RED := LED_RED_
   LED_YELLOW := LED_YELLOW_
   LED_GREEN := LED_GREEN_
+  timepointer := timepointer_
   stopSDPointer := stopSDPointer_
 ''sets the global file name to the given pointer
   sdfilename := savefilename
@@ -61,7 +63,7 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   buffer := false
   'neo.init(neopixelPin,64, @neopointer) 
   cognew(main,@stack)
-PRI main | x, in, errors, y, lines , checktmp
+PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
   dira[LED_RED] := true'set red LED to output
   dira[LED_YELLOW] := true 'set yellow LED to output
@@ -202,6 +204,32 @@ PRI main | x, in, errors, y, lines , checktmp
       pst.dec(lines)
       
       lcd.init(lcdpin,lcdbaud,lines)
+    'sets time
+    elseif cmd == 5
+      checksum:=0
+      timetmp := 0
+      intmp := rx_serial_fast.rx
+      checksum+= intmp
+      timetmp:=timetmp+intmp
+      
+      intmp := rx_serial_fast.rx
+      checksum+= intmp
+      timetmp:=timetmp*256+intmp
+      
+      intmp := rx_serial_fast.rx
+      checksum+= intmp
+      timetmp:=timetmp*256+intmp
+      
+      intmp := rx_serial_fast.rx
+      checksum+= intmp
+      timetmp:=timetmp*256+intmp
+      if rx_serial_fast.rx == checksum
+        long[timepointer]:=  timetmp
+      else
+        outa[15] := true
+
+      
+      
         
     
   

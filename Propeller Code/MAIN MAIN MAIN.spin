@@ -19,7 +19,7 @@ CON
         ADC_CS     = 23
         ADC_DI     = 22
         ADC_DO     = 21
-        ADC_CLK    = 20
+        ADC_CLK    = 20  
 
         GPIO0      = 4
         GPIO1      = 5
@@ -78,6 +78,7 @@ VAR
   long  pointerToPointerThing
   long  adcpointer
   long  ldcpointer
+  long  timepointer
   byte  datFileName[256] 'file name can't be longer than 250 bytes
   byte  stop
   'long neopointer
@@ -95,14 +96,14 @@ PUB main
   adc.start2pin(ADC_DI,ADC_DO,ADC_CLK,ADC_CS,$00FF)
   adcpointer := adc.pointer
   'starts the string logger            
-  RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN)
+  RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN,@timepointer)
   'starts the sd card
                    
   'DIRA[25] :=  1
   'DIRA[0]  :=  1
   'OUTA[25] :=  0
   'OUTA[0]  :=  0
-  sd.init(27,25,0,1,@pointerToPointerThing,@datFileName,adcpointer, @stop)
+  sd.init(27,25,0,1,@pointerToPointerThing,@datFileName,adcpointer, @stop,@timepointer)
           'SD_DO,SD_SCLK,SD_DI,SD_CS
 
 

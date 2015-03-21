@@ -17,13 +17,14 @@ VAR
   long index
   byte DO, CLK, DI, CS
   long datfilename , lastfilename
+  long timepointer,lasttimeval
    
 OBJ
   sd : "fsrw"     
   pst : "Parallax Serial Terminal"
   
   
-PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,timepointer_) | insert_card
   DO := d0
   CLK := clk1
   DI := di1
@@ -31,6 +32,8 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | 
   adcpointer := adcpointer_
   datfilename := savefilename
   stopPointer := stopPointer_
+  timepointer := timepointer_
+  lasttimeval := timepointer_
   pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
@@ -88,6 +91,13 @@ PRI mainLoop | x ,channel
       sd.pflush
       dira[LED_YELLOW]:=true'set yellow LED to on, signifying one line was written        
        'set the last pointer
+    if long[timepointer] <> lasttimeval
+      lasttimeval := long[timepointer]
+      pst.str(string("Set time to: "))
+      pst.dec(long[timepointer])
+      pst.char(13)
+      sd.setdatedirect(long[timepointer])
+    
   'sd.pclose   
 PUB end ''stops program
   sd.pclose
