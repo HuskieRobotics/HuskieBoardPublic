@@ -19,8 +19,8 @@ CON
         LCD_Baud   = 19_200
 
         ADC_CS     = 23
-        ADC_DI     = 22
-        ADC_DO     = 21
+        ADC_DO     = 22
+        ADC_DI     = 21
         ADC_CLK    = 20
 
         GPIO0      = 4
