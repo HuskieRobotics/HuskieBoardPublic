@@ -206,11 +206,11 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
       lcd.init(lcdpin,lcdbaud,lines)
     'sets time
     elseif cmd == 5
-      checksum:=0
-      timetmp := 0
+      checksum:=cmd
+      
       intmp := rx_serial_fast.rx
       checksum+= intmp
-      timetmp:=timetmp+intmp
+      timetmp:=intmp
       
       intmp := rx_serial_fast.rx
       checksum+= intmp
@@ -223,11 +223,18 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
       intmp := rx_serial_fast.rx
       checksum+= intmp
       timetmp:=timetmp*256+intmp
-      if rx_serial_fast.rx == checksum
-        long[timepointer]:=  timetmp
+      checktmp := rx_serial_fast.rx                               
+      if checktmp == checksum
+        long[timepointer]:=  timetmp  
+        pst.str(string("Time set to: "))
+        pst.hex(timetmp,8)
       else
-        outa[15] := true    
-
+        pst.str(string("Error setting time!",13,"Expected_got checksum: ",13))
+        pst.hex(checksum,8)
+        pst.char("_")
+        pst.hex(checktmp,8)
+        outa[LED_RED] := true    
+      pst.char(13)
       
       
         

@@ -17,7 +17,7 @@ VAR
   long index
   byte DO, CLK, DI, CS
   long datfilename , lastfilename
-  long timepointer,lasttimeval
+  long timepointer
    
 OBJ
   sd : "fsrw"     
@@ -32,8 +32,7 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,tim
   adcpointer := adcpointer_
   datfilename := savefilename
   stopPointer := stopPointer_
-  timepointer := timepointer_
-  lasttimeval := timepointer_
+  timepointer := timepointer_     
   pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
@@ -54,6 +53,13 @@ PRI start  | loc
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
     pst.str(string("Waiting for packet or file name",13))
 
+  
+  'setting current date:      
+  sd.setdatedirect(long[timepointer])
+  'don't worry if the date is uninitialized, since fsrw takes care of timestamps of 0.
+  'date must be set BEFORE the file is opened, it will not update during the run
+
+  
   'Don't forget that we are using FAT32, which means that our file name is 8.3 long (8 name, 3 extension chars)
   'Longer file names will be compressed. Also, FAT32 doesn't support lower-case letters in the filename, so those
   'are also automatically converted to caps. 
@@ -91,12 +97,6 @@ PRI mainLoop | x ,channel
       sd.pflush
       dira[LED_YELLOW]:=true'set yellow LED to on, signifying one line was written        
        'set the last pointer
-    if long[timepointer] <> lasttimeval
-      lasttimeval := long[timepointer]
-      pst.str(string("Set time to: "))
-      pst.dec(long[timepointer])
-      pst.char(13)
-      sd.setdatedirect(long[timepointer])
     
   'sd.pclose   
 PUB end ''stops program
