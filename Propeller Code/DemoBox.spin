@@ -192,11 +192,9 @@ PUB Neopixels
      dumb
 
 PRI potentiometer
-  return 500
-  'return adc.in(JOYSTICK_CHANNEL)
+  return adc.in(JOYSTICK_CHANNEL)
 PRI slider
-  return BRIGHTNESS
-  'return adc.in(SLIDER_CHANNEL)
+  return adc.in(SLIDER_CHANNEL)
 PRI buttonPressed
   if buttonPressed_
     buttonPressed_ := false
