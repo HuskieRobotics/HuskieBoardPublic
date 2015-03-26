@@ -9,6 +9,12 @@ CON
         _xinfreq = 5_000_000
 
 
+        WRITE_DATA = 1
+        SET_SD_FILE_NAME = 3
+        SET_LCD_DISP = 4
+        SET_LCD_SIZE = 9
+        SET_TIME = 5
+        
         rxSerialMode = 0'don't invert signal
 VAR
   long  stack[512]
@@ -82,7 +88,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
   ' command number 1 : Recieve and write data
-    if cmd == 1
+    if cmd == WRITE_DATA
     
       pst.str(string("cmd == 1",13))
    
@@ -134,7 +140,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
         'longfill(@dataPt,0,64)
         
     'command number 3 : Set SD save file name
-    elseif cmd == 3
+    elseif cmd == SET_SD_FILE_NAME
     
       pst.str(string("cmd == 3",13))
     ' length of string
@@ -169,7 +175,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
           pst.str(string(", Expected: "))
           pst.hex(checktmp,8)  
     'sets lcd display
-    elseif cmd == 4
+    elseif cmd == SET_LCD_DISP
       byte[stopSDPointer]:=$FF
 
       rx_serial_fast.stop
@@ -193,7 +199,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
       else
         pst.str(string("LCD: Error: Given length was > 32."))
     'sets lcd size
-    elseif cmd == 9
+    elseif cmd == SET_LCD_SIZE
       pst.str(string("cmd == 9",13))
 
       lcd.finalize
@@ -205,7 +211,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
       
       lcd.init(lcdpin,lcdbaud,lines)
     'sets time
-    elseif cmd == 5
+    elseif cmd == SET_TIME
       checksum:=cmd
       
       intmp := rx_serial_fast.rx
@@ -238,5 +244,5 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
       
       
         
-    
+
   

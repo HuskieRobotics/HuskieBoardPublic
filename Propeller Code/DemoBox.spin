@@ -112,7 +112,7 @@ PUB init
   brightness:=100
   setcolors
   cognew(Neopixels, @neostack)
-
+  
   buttonPressed_:=false    
   battV[6]:=0                
   neoCurrent[6]:=0
@@ -144,7 +144,7 @@ PUB LCD_Main
     lcd.str(string("-----TEAM  3061-----"))'set top line   }
     waitcnt(cnt+clkfreq/2)
 {
------TEAM  3061-----
+-----TEAM  3061-----           00000000000000000000000000..0
   HUSKIE ROBOTICS!
 Battery V: xx.xxx
 LED Current: xx.xxx 
@@ -162,7 +162,7 @@ PUB SerialConnection  | cmd, channel, x
     repeat until ser.rx == $FF ' wait until $FF byte is sent. It represents start of loop.
                                 'Used to keep in sync since checksums are not implemented
     cmd := ser.rx
-    if cmd == "A" 'button was pressed
+    if cmd == "A" 'button was pressed                                                                                     094187884es;lk39
       buttonPressed_ := true
     if cmd == "V" 'next 6 bytes, will show battery voltage as string
       repeat x from 0 to 4 'get battery voltage bytes
@@ -181,7 +181,7 @@ PUB Neopixels
   'neo.fill(0,64,neo.color(255,255,255))
   doge
   repeat
-     cooleoleo      
+     cool      
      gradient
      bounce  
      stripes
@@ -189,7 +189,7 @@ PUB Neopixels
      random  
      center
      police
-     dumb
+     huskiealt
 
 PRI potentiometer
   return adc.in(JOYSTICK_CHANNEL)
@@ -224,11 +224,7 @@ PRI police | count,i
     waitcnt(cnt+clkfreq/(potentiometer/(500/5)))
       if buttonPressed
         return
-PRI doge | count
-  repeat count from 1 to 5
-    neo.fill(0,64,DOGEPURPLE)
-    waitcnt(cnt+clkfreq/(potentiometer/250))
-PRI dumb | count  ,i ,b1 ,c_ ,b2 
+PRI huskiealt | count  ,i ,b1 ,c_ ,b2 
   b1 := false
   b2 := false
   
@@ -303,7 +299,7 @@ PRI stripes | offset, x, i, count
     if offset > 64
       offset := 0
     waitcnt(cnt+clkfreq/(potentiometer/160))
-PRI cooleoleo | count   , i
+PRI cool | count   , i
   neo.fill(0,64,DOGEPURPLE)
   repeat count from 0 to 5
     repeat  i from 0 to 60
