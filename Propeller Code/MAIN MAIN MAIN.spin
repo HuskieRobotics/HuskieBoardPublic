@@ -99,18 +99,57 @@ PUB main
   RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN,@FAT32Time)
   'starts the sd card
                    
-  'DIRA[25] :=  1
-  'DIRA[0]  :=  1
-  'OUTA[25] :=  0
-  'OUTA[0]  :=  0
   sd.init(27,25,0,1,@pointerToPointerThing,@datFileName,adcpointer, @stop,@FAT32Time)
           'SD_DO,SD_SCLK,SD_DI,SD_CS
 
+  dipSwitchLEDs
+CON 'constants for the dipSwitchLED code.
+  DIP1 = RRIO_CS
+  DIP2 = RRIO_CLK
+  DIP3 = RRIO_MISO
+  DIP4 = RRIO_MOSI
+                         'remember to invert pins since on is logic low.
+                         'also remember that ! will also invert the first 28 bits, so can't be used.
+                         
+  MODE_DoNothing = %1111
+  MODE_Forward   = %1001
+  MODE_TurnLeft  = %1110
+  MODE_TurnRight = %0111
+  MODE_3Tote     = %0000
 
-  'update yellow and green LEDs to be inverse of I2C inputs
-  {DIRA[LED_YELLOW]:= output
-  DIRA[LED_GREEN]:= output    
+PUB dipSwitchLEDs | mode
+  'run LEDs to show which mode is selected
+  DIRA[LED_YELLOW] := output
+  DIRA[LED_GREEN]  := output
+  DIRA[LED_RED]    := output
+  
+  DIRA[DIP1 .. DIP4]  := input   'set all DIP pins to input
+  
   repeat
-    OUTA[LED_YELLOW] := not INA[RRIO_SDA]
-    OUTA[LED_GREEN] := not INA[RRIO_SCL]          '}    
+    mode := INA[DIP1 .. DIP4] 'get all DIP pin values
+
+    if     (mode == MODE_DoNothing)                       
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := off 
+    elseif (mode == MODE_Forward)                                 
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := on
+      OUTA[LED_GREEN]  := off 
+    elseif (mode == MODE_TurnLeft)                                 
+      OUTA[LED_RED]    := on
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := off 
+    elseif (mode == MODE_TurnRight)                                 
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := on 
+    elseif (mode == MODE_3Tote)                                 
+      OUTA[LED_RED]    := on
+      OUTA[LED_YELLOW] := on
+      OUTA[LED_GREEN]  := on 
+    else'otherwise turn off status LEDs                              
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := off                           
                                                         
