@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -400,49 +400,7 @@
 <gate name="P8X32A-D40" symbol="P8X32A" x="5.08" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="P8X32A-D40">
-<connects>
-<connect gate="P" pin="VDD@1" pad="12"/>
-<connect gate="P" pin="VDD@2" pad="32"/>
-<connect gate="P" pin="VSS@1" pad="9"/>
-<connect gate="P" pin="VSS@2" pad="29"/>
-<connect gate="P8X32A-D40" pin="BOE/" pad="10"/>
-<connect gate="P8X32A-D40" pin="P0" pad="1"/>
-<connect gate="P8X32A-D40" pin="P1" pad="2"/>
-<connect gate="P8X32A-D40" pin="P10" pad="15"/>
-<connect gate="P8X32A-D40" pin="P11" pad="16"/>
-<connect gate="P8X32A-D40" pin="P12" pad="17"/>
-<connect gate="P8X32A-D40" pin="P13" pad="18"/>
-<connect gate="P8X32A-D40" pin="P14" pad="19"/>
-<connect gate="P8X32A-D40" pin="P15" pad="20"/>
-<connect gate="P8X32A-D40" pin="P16" pad="21"/>
-<connect gate="P8X32A-D40" pin="P17" pad="22"/>
-<connect gate="P8X32A-D40" pin="P18" pad="23"/>
-<connect gate="P8X32A-D40" pin="P19" pad="24"/>
-<connect gate="P8X32A-D40" pin="P2" pad="3"/>
-<connect gate="P8X32A-D40" pin="P20" pad="25"/>
-<connect gate="P8X32A-D40" pin="P21" pad="26"/>
-<connect gate="P8X32A-D40" pin="P22" pad="27"/>
-<connect gate="P8X32A-D40" pin="P23" pad="28"/>
-<connect gate="P8X32A-D40" pin="P24" pad="33"/>
-<connect gate="P8X32A-D40" pin="P25" pad="34"/>
-<connect gate="P8X32A-D40" pin="P26" pad="35"/>
-<connect gate="P8X32A-D40" pin="P27" pad="36"/>
-<connect gate="P8X32A-D40" pin="P28" pad="37"/>
-<connect gate="P8X32A-D40" pin="P29" pad="38"/>
-<connect gate="P8X32A-D40" pin="P3" pad="4"/>
-<connect gate="P8X32A-D40" pin="P30" pad="39"/>
-<connect gate="P8X32A-D40" pin="P31" pad="40"/>
-<connect gate="P8X32A-D40" pin="P4" pad="5"/>
-<connect gate="P8X32A-D40" pin="P5" pad="6"/>
-<connect gate="P8X32A-D40" pin="P6" pad="7"/>
-<connect gate="P8X32A-D40" pin="P7" pad="8"/>
-<connect gate="P8X32A-D40" pin="P8" pad="13"/>
-<connect gate="P8X32A-D40" pin="P9" pad="14"/>
-<connect gate="P8X32A-D40" pin="RES/" pad="11"/>
-<connect gate="P8X32A-D40" pin="XI" pad="30"/>
-<connect gate="P8X32A-D40" pin="XO" pad="31"/>
-</connects>
+<device name="" package="P8X32A-Q44">
 <technologies>
 <technology name=""/>
 </technologies>
