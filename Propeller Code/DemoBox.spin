@@ -11,9 +11,10 @@ CON
         PP_TX      = 30  'trasmit to propplug
         EEPROM_SDA = 29
         EEPROM_SCL = 28
-
-        JOYSTICK_CHANNEL = 7
-        SLIDER_CHANNEL = 6
+                              
+        JOYSTICK_X_CHANNEL = 2
+        JOYSTICK_Y_CHANNEL = 1
+        SLIDER_CHANNEL     = 0
 
         LCD_Pin    = 15
         LCD_Baud   = 19_200
