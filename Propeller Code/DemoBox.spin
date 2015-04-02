@@ -129,8 +129,8 @@ PUB LCD_Main
   lcd.cursor(0)
   lcd.home
   lcd.str(string("-----TEAM  3061-----"))'set top line
-  lcd.str(string(lcd#LCD_LINE1,"  HUSKIE ROBOTICS!"))
-  lcd.str(string(lcd#LCD_LINE2,"Batttery V: "))
+  lcd.str(string(lcd#LCD_LINE1,"  HUSKIE ROBOTICS!"))  
+  lcd.str(string(lcd#LCD_LINE2,"Battery V: "))    
   'lcd.str(string(lcd#LCD_LINE3,"LED Current: "))
   waitcnt(cnt+clkfreq/1000)
   lcd.putc(217)
@@ -154,7 +154,7 @@ LED Current: xx.xxx
 PRI LCD_Write_Vals                     
   lcd.gotoxy(11,2)         
   lcd.str(@battV)                       
-  'lcd.gotoxy(13,3)         
+  lcd.gotoxy(13,3)         
   'lcd.str(@neoCurrent)      
   lcd.home
   waitcnt(cnt+clkfreq/10)
@@ -180,9 +180,8 @@ PUB SerialConnection  | cmd, channel, x
 
 PUB Neopixels
   'neo.fill(0,64,neo.color(255,255,255))
-  doge
   repeat
-     cool      
+     'cool      
      gradient
      bounce  
      stripes
@@ -193,9 +192,9 @@ PUB Neopixels
      huskiealt
 
 PRI potentiometer
-  return adc.in(JOYSTICK_CHANNEL)
-PRI slider
-  return adc.in(SLIDER_CHANNEL)
+  return adc.in(JOYSTICK_X_CHANNEL)
+PRI slider 'must return 0-255, adc.in returns 0-1023, so dividing by 4.
+  return adc.in(SLIDER_CHANNEL) /4
 PRI buttonPressed
   if buttonPressed_
     buttonPressed_ := false
@@ -222,7 +221,7 @@ PRI police | count,i
       neo.fill(0,32,neo.scale_rgb(BLUE,slider))
       neo.fill(33,64,neo.scale_rgb(RED,slider))
     i := !i
-    waitcnt(cnt+clkfreq/(potentiometer/(500/5)))
+    waitcnt(cnt+clkfreq/(potentiometer/(200)))
       if buttonPressed
         return
 PRI huskiealt | count  ,i ,b1 ,c_ ,b2 
@@ -249,7 +248,7 @@ PRI gradient | r,g_,b_,freq , count
     b_ := 0
     repeat g_ from 0 to 255
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer/50)*10 
+      freq := (potentiometer) 
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
         return
@@ -408,7 +407,4 @@ PRI setColors '| x , r, g_, b_, in
   colors2[9] := neo.colorx(0,4,255,BRIGHTNESS)
   colors2[10]:= neo.colorx(98,0,255,BRIGHTNESS)
   colors2[11]:= neo.colorx(255,0,221,BRIGHTNESS)
-  
-DAT
-name    byte  "doge such cool very wow much amaze many awesome",0        
-        
+   
