@@ -89,10 +89,10 @@ VAR
 OBJ
   lcd           : "serial_lcd"
   adc           : "ADC driver"
-  neo           : "Neopixel Driver"   
-  rand          : "RealRandom"
+  neo           : "Neopixel Driver"    
   ser           : "FullDuplexSerial"
   pst           : "Parallax Serial Terminal"
+  str           : "String"
 PUB init
   A := 220
   Af := 221
@@ -131,7 +131,7 @@ PUB LCD_Main
   lcd.str(string("-----TEAM  3061-----"))'set top line
   lcd.str(string(lcd#LCD_LINE1,"  HUSKIE ROBOTICS!"))  
   lcd.str(string(lcd#LCD_LINE2,"Battery V: "))    
-  'lcd.str(string(lcd#LCD_LINE3,"LED Current: "))
+  lcd.str(string(lcd#LCD_LINE3,"Joystick Y axis: "))
   waitcnt(cnt+clkfreq/1000)
   lcd.putc(217)
   repeat                                                               
@@ -154,8 +154,9 @@ LED Current: xx.xxx
 PRI LCD_Write_Vals                     
   lcd.gotoxy(11,2)         
   lcd.str(@battV)                       
-  lcd.gotoxy(13,3)         
-  'lcd.str(@neoCurrent)      
+  lcd.gotoxy(17,3)         
+  'lcd.str(@neoCurrent)
+  lcd.str(str.integerToDecimal(yAxis,3)+1 )    
   lcd.home
   waitcnt(cnt+clkfreq/10)
 PUB SerialConnection  | cmd, channel, x
@@ -181,20 +182,21 @@ PUB SerialConnection  | cmd, channel, x
 PUB Neopixels
   'neo.fill(0,64,neo.color(255,255,255))
   repeat
-     'cool      
+     cool      
      gradient
-     bounce  
+     bounce  'haven't figured out the brightness for this one yet.
      stripes
-     rainbow
-     random  
+     rainbow   
      center
-     police
+     'police
      huskiealt
 
-PRI potentiometer
-  return adc.in(JOYSTICK_X_CHANNEL)
-PRI slider 'must return 0-255, adc.in returns 0-1023, so dividing by 4.
-  return adc.in(SLIDER_CHANNEL) /4
+PRI potentiometer 'speed of display:returns 1-1024, 35 is nominal
+  return adc.in(JOYSTICK_X_CHANNEL)+1
+PRI slider 'must return 0-255, adc.in returns 0-1023, and is not scaled easily
+  return adc.in(SLIDER_CHANNEL)' /4
+PRI yAxis
+  return adc.in(JOYSTICK_Y_CHANNEL)
 PRI buttonPressed
   if buttonPressed_
     buttonPressed_ := false
@@ -224,21 +226,24 @@ PRI police | count,i
     waitcnt(cnt+clkfreq/(potentiometer/(200)))
       if buttonPressed
         return
-PRI huskiealt | count  ,i ,b1 ,c_ ,b2 
+PRI huskiealt | count  ,i ,b1 ,c_ ,b2 ,orangeShaded,blueShaded
   b1 := false
   b2 := false
   
   repeat count from 0 to 10
+    repeat i from 0 to 64                               
+    orangeShaded := neo.scale_rgb(HUSKIEORANGE,slider)
+    blueShaded := neo.scale_rgb(HUSKIEBLUE,slider)
     repeat i from 0 to 64
       if b1
-        neo.fill(i,i+4,neo.scale_rgb(HUSKIEBLUE,slider))
+        neo.fill(i,i+4,blueShaded)
       else
-        neo.fill(i,i+4,neo.scale_rgb(HUSKIEORANGE,slider))
+        neo.fill(i,i+4,orangeShaded)
       b1 := !b1
       i+=4
       if buttonPressed
         return
-    waitcnt(cnt+clkfreq/(potentiometer/250))
+    waitcnt(cnt+clkfreq/((potentiometer/16)+1))
     b2 := !b2
 PRI gradient | r,g_,b_,freq , count
   freq := (potentiometer/50)*10
@@ -248,37 +253,37 @@ PRI gradient | r,g_,b_,freq , count
     b_ := 0
     repeat g_ from 0 to 255
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer) 
+      freq := (potentiometer*5)  
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
         return
     repeat r from 255 to 0
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer/50)*10 
+      freq := (potentiometer*5) 
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
         return
     repeat b_ from 0 to 255
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer/50)*10 
+      freq := (potentiometer*5) 
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
         return
     repeat g_ from 255 to 0
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer/50)*10 
+      freq := (potentiometer*5) 
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
        return
     repeat r from 0 to 255
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer/50)*10 
+      freq := (potentiometer*5)
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
         return
     repeat b_ from 255 to 0
       neo.fill(0,64,neo.colorx(r,g_,b_,slider))
-      freq := (potentiometer/50)*10 
+      freq := (potentiometer*5)
       waitcnt(cnt+clkfreq/freq)
       if buttonPressed
         return
@@ -287,9 +292,9 @@ PRI stripes | offset, x, i, count
   repeat count from 0 to 100
     repeat x from 0+offset to 64+offset
       repeat i from 0 to 3
-        neo.set(limit(x+i),neo.scale_rgb(HUSKIEORANGE,slider))
+        neo.set(limit(x+i),neo.scale_rgb(HUSKIEORANGE,slider*2))
       repeat i from 4 to 7
-        neo.set(limit(x+i),neo.scale_rgb(HUSKIEBLUE,slider))
+        neo.set(limit(x+i),neo.scale_rgb(HUSKIEBLUE,slider*2))
       'neo.fill(limit(x),limit(x+3),ORANGE)
       if buttonPressed
         return
@@ -298,8 +303,8 @@ PRI stripes | offset, x, i, count
     offset++
     if offset > 64
       offset := 0
-    waitcnt(cnt+clkfreq/(potentiometer/160))
-PRI cool | count   , i
+    waitcnt(cnt+clkfreq/(potentiometer))
+PRI cool | count   , i ,blueShaded, dogePurpleShaded
   neo.fill(0,64,DOGEPURPLE)
   repeat count from 0 to 5
     repeat  i from 0 to 60
@@ -307,13 +312,13 @@ PRI cool | count   , i
       neo.fill(i,i+4,neo.scale_rgb(BLUE,slider))
       if buttonPressed
         return
-      waitcnt(cnt+clkfreq/50)
+      waitcnt(cnt+clkfreq/(2*potentiometer))
     repeat i from 60 to 0
       neo.fill(0,64,neo.scale_rgb(BLUE,slider))
       neo.fill(i,i+4,neo.scale_rgb(DOGEPURPLE,slider))
       if buttonPressed
         return
-      waitcnt(cnt+clkfreq/(potentiometer/10))
+      waitcnt(cnt+clkfreq/(2*potentiometer))   
     
 PRI limit(i) : val
   if i < 0
@@ -327,26 +332,26 @@ PRI center | c_, x
   c_ := 0
   repeat 15
     repeat x from 0 to 32
-      neo.set(x,colors[c_])
-      neo.set(Neo_Length-x, colors[c_])
+      neo.fill(0,x,neo.scale_rgb(colors[c_],slider))                     
+      neo.fill(Neo_Length-x,Neo_Length, neo.scale_rgb(colors[c_],slider)) 
       if buttonPressed
         return
-      waitcnt(cnt+clkfreq/(potentiometer/50))
+      waitcnt(cnt+clkfreq/(potentiometer*3/2))
     c_++
     if c_ == 6
       c_ := 0
 PRI bounce | c_,x , count
   c_ := 0
-  repeat count from 0 to 20
+  repeat count from 0 to 12
     repeat x from 0 to Neo_Length
-      neo.set(x,colors[c_])
+      neo.set(x,neo.scale_rgb(colors[c_],slider))
       if c_<2
-        neo.set(Neo_Length-x, colors[c_+4]) 
+        neo.set(Neo_Length-x, neo.scale_rgb(colors[c_+4],slider)) 
       else
-        neo.set(Neo_Length-x, colors[c_-2])
+        neo.set(Neo_Length-x, neo.scale_rgb(colors[c_-2],slider))
       if buttonPressed
         return
-      waitcnt(cnt+clkfreq/(potentiometer/50))
+      waitcnt(cnt+clkfreq/(potentiometer))
     c_++
     if c_ == 6
       c_ := 0
@@ -359,21 +364,15 @@ PRI rainbow | x, i , count
       ch := channels[i]
       repeat x from ch to ch-11
         if testCh(x)  
-          neo.set(x,colors[ch-x])
+          neo.set(x,neo.scale_rgb(colors[ch-x],slider))
       channels[i] := ch+1
       'gotta make sure to go fast!
       if channels[i]-1 > Neo_Length
         channels[i] := 0
-    waitcnt(cnt+clkfreq/(potentiometer/160))
+    waitcnt(cnt+clkfreq/potentiometer)
     if buttonPressed
       return
-PRI random | x, count 
-  repeat count from 0 to 10
-    repeat x from 0 to 64
-      neo.set(x,neo.colorx(rand.random*255,rand.random*255,rand.random*255,BRIGHTNESS))
-    waitcnt(cnt+clkfreq/(potentiometer/50))
-    if buttonPressed
-      return
+
 PRI testCh(channel)
   return (ch =< 64 and ch => 0)
 PRI setColors '| x , r, g_, b_, in

@@ -239,7 +239,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
         pst.hex(checksum,8)
         pst.char("_")
         pst.hex(checktmp,8)
-        outa[LED_RED] := true    
+        outa[LED_YELLOW] := true    
       pst.char(13)
       
       
