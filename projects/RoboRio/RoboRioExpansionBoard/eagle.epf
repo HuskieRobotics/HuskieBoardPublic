@@ -8,7 +8,6 @@ Desktop="Desktop"
 [Globals]
 AutoSaveProject=1
 UsedLibrary="drilegend.lbr"
-UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/usbminipropplug.lbr"
 
 [Win_1]
 Type="Control Panel"
@@ -17,5 +16,5 @@ State=2
 Number=0
 
 [Desktop]
-Screen="1600 900"
+Screen="2688 1366"
 Window="Win_1"
