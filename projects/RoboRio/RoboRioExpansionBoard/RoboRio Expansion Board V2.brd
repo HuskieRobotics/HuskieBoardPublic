@@ -2197,87 +2197,87 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="ADC0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-49.53" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-49.53" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-49.53" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-49.53" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-49.53" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-49.53" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-62.23" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-62.23" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-62.23" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-62.23" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-62.23" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-62.23" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-74.93" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-74.93" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-74.93" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-74.93" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-74.93" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-74.93" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-87.63" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-87.63" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-87.63" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-87.63" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-87.63" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-87.63" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC4" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-100.33" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-100.33" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-100.33" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-100.33" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-100.33" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-100.33" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC5" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-113.03" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-113.03" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-113.03" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-113.03" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-113.03" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-113.03" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC6" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-125.73" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-125.73" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-125.73" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-125.73" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-125.73" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-125.73" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ADC7" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-138.43" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-138.43" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-138.43" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-138.43" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-138.43" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-138.43" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="AI0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-55.88" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-55.88" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-55.88" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-55.88" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-55.88" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-55.88" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="AI1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-67.31" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-67.31" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-67.31" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-67.31" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-67.31" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-67.31" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="AI2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-78.74" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-78.74" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-78.74" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-78.74" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-78.74" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-78.74" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="AI3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-90.17" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-90.17" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-90.17" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-90.17" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-90.17" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-90.17" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="AO0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-20.32" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-20.32" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-20.32" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-20.32" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-20.32" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-20.32" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="AO1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-33.02" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-33.02" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-33.02" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-33.02" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-33.02" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-33.02" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C1" library="capacitor-wima" package="C5B2.5" value=".1uF" x="-132.08" y="160.02"/>
@@ -2306,156 +2306,156 @@ design rules under a new name.</description>
 <element name="D6" library="led" package="LED5MM" value="" x="-114.3" y="160.02"/>
 <element name="D7" library="led" package="LED5MM" value="" x="-124.46" y="160.02"/>
 <element name="F1" library="fuse" package="TR5" value="1A" x="-27.94" y="161.29">
-<attribute name="OC_FARNELL" value="unknown" x="-27.94" y="161.29" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-27.94" y="161.29" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-27.94" y="161.29" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-27.94" y="161.29" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-27.94" y="161.29" size="1.778" layer="27" display="off"/>
 </element>
 <element name="F2" library="fuse" package="TR5" value="1A" x="-36.83" y="161.29">
-<attribute name="OC_FARNELL" value="unknown" x="-36.83" y="161.29" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-36.83" y="161.29" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-36.83" y="161.29" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-36.83" y="161.29" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-36.83" y="161.29" size="1.778" layer="27" display="off"/>
 </element>
 <element name="GPIO0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-158.75" y="182.88">
-<attribute name="OC_FARNELL" value="unknown" x="-158.75" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-158.75" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-158.75" y="182.88" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-158.75" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-158.75" y="182.88" size="1.778" layer="27" display="off"/>
 </element>
 <element name="GPIO1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-172.72" y="182.88">
-<attribute name="OC_FARNELL" value="unknown" x="-172.72" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-172.72" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-172.72" y="182.88" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-172.72" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-172.72" y="182.88" size="1.778" layer="27" display="off"/>
 </element>
 <element name="GPIO2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-22.86" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-22.86" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-22.86" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-22.86" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-22.86" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-22.86" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="GPIO3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-36.83" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-36.83" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-36.83" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-36.83" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-36.83" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-36.83" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOCLK" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-50.8" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-50.8" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-50.8" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-50.8" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-50.8" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-50.8" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOCS" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-163.83" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-163.83" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-163.83" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-163.83" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-163.83" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-163.83" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOMISO" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-115.57" y="182.88">
-<attribute name="OC_FARNELL" value="unknown" x="-115.57" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-115.57" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-115.57" y="182.88" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-115.57" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-115.57" y="182.88" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOMOSI" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-130.81" y="182.88">
-<attribute name="OC_FARNELL" value="unknown" x="-130.81" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-130.81" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-130.81" y="182.88" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-130.81" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-130.81" y="182.88" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IORX" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-151.13" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-151.13" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-151.13" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-151.13" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-151.13" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-151.13" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOSCL" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-36.83" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-36.83" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-36.83" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-36.83" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-36.83" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-36.83" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOSDA" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-144.78" y="182.88">
-<attribute name="OC_FARNELL" value="unknown" x="-144.78" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-144.78" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-144.78" y="182.88" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-144.78" y="182.88" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-144.78" y="182.88" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOTX" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-176.53" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-176.53" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-176.53" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-176.53" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-176.53" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-176.53" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="J1" library="RoboRioConnector" package="RRINT-FEMALE" value="RRINTERFACE-FEMALE" x="-41.91" y="151.13"/>
 <element name="J2" library="MicroSdSocket" package="MICRO_SD_PUSH-PUSH" value="MICROSD" x="-97.79" y="92.71"/>
 <element name="LCD" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-44.45" y="194.31">
-<attribute name="OC_FARNELL" value="unknown" x="-44.45" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-44.45" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-44.45" y="194.31" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-44.45" y="194.31" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-44.45" y="194.31" size="1.778" layer="27" display="off"/>
 </element>
 <element name="P1" library="PropPlug" package="PROP_PLUG" value="PROP_PLUG" x="-176.53" y="88.9"/>
 <element name="PWM0" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-64.77" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-64.77" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-64.77" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-64.77" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-64.77" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-64.77" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM1" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-78.74" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-78.74" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-78.74" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-78.74" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-78.74" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-78.74" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM2" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-92.71" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-92.71" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-92.71" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-92.71" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-92.71" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-92.71" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM3" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-106.68" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-106.68" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-106.68" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-106.68" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-106.68" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-106.68" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM4" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-120.65" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-120.65" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-120.65" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-120.65" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-120.65" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-120.65" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM5" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-134.62" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-134.62" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-134.62" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-134.62" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-134.62" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-134.62" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM6" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-148.59" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-148.59" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-148.59" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-148.59" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-148.59" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-148.59" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM7" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-162.56" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-162.56" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-162.56" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-162.56" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-162.56" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-162.56" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM8" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-176.53" y="186.69">
-<attribute name="OC_FARNELL" value="unknown" x="-176.53" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-176.53" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-176.53" y="186.69" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-176.53" y="186.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-176.53" y="186.69" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PWM9" library="con-lstb-modified" package="MA03-1" value="MA03-1" x="-22.86" y="190.5">
-<attribute name="OC_FARNELL" value="unknown" x="-22.86" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-22.86" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-22.86" y="190.5" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-22.86" y="190.5" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-22.86" y="190.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R1" library="resistor" package="0204/7" value="10k" x="-157.48" y="170.18"/>
@@ -2486,9 +2486,9 @@ design rules under a new name.</description>
 <element name="R8" library="resistor" package="0204/7" value="100" x="-68.58" y="177.8"/>
 <element name="R9" library="resistor" package="0204/7" value="100" x="-78.74" y="177.8"/>
 <element name="RN1" library="resistor-sil" package="SIL9" value="10k" x="-116.84" y="171.45">
-<attribute name="OC_FARNELL" value="unknown" x="-116.84" y="171.45" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-116.84" y="171.45" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-116.84" y="171.45" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-116.84" y="171.45" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-116.84" y="171.45" size="1.778" layer="27" display="off"/>
 </element>
 <element name="S1" library="RESETBUTTON3000" package="RESETBUTTON300000MILLION" value="BUTTON" x="-45.72" y="162.56"/>
@@ -2502,16 +2502,16 @@ design rules under a new name.</description>
 <element name="U$4" library="parallax_propeller" package="P8X32A-Q44" value="P8X32A-Q44" x="-129.54" y="86.36"/>
 <element name="U1" library="parallax_propeller (1)" package="P8X32A-D40" value="P8X32A-D40" x="-78.74" y="109.22"/>
 <element name="U2" library="microchip" package="SO-08" value="24LC256SN" x="-165.1" y="83.82">
-<attribute name="OC_FARNELL" value="9757996" x="-165.1" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="MICROCHIP" x="-165.1" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="24LC256-I/SN" x="-165.1" y="83.82" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="9757996" x="-165.1" y="83.82" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="27C9144" x="-165.1" y="83.82" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U3" library="adafruit" package="DIL16" value="MCP3008" x="-147.32" y="85.09"/>
 <element name="U4" library="microchip" package="TO92" value="MC1525TO" x="-142.24" y="170.18">
-<attribute name="OC_FARNELL" value="unknown" x="-142.24" y="170.18" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-142.24" y="170.18" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-142.24" y="170.18" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="-142.24" y="170.18" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-142.24" y="170.18" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
