@@ -11,10 +11,10 @@ UsedLibrary="drilegend.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="0 0 1919 1016"
+Loc="0 0 1365 705"
 State=1
 Number=0
 
 [Desktop]
-Screen="2688 1366"
+Screen="1366 768"
 Window="Win_1"
