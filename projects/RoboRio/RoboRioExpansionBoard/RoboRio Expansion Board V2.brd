@@ -2502,6 +2502,14 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="unknown" x="-142.24" y="170.18" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q1" library="special" package="QS" value="" x="-208.28" y="-5.08"/>
+<element name="R28" library="resistor" package="R0402" value="10k" x="-212.09" y="-10.16"/>
+<element name="R29" library="resistor" package="R0402" value="10k" x="-212.09" y="-15.24"/>
+<element name="R30" library="resistor" package="R0402" value="10k" x="-212.09" y="-20.32"/>
+<element name="R31" library="resistor" package="R0402" value="10k" x="-212.09" y="-25.4"/>
+<element name="R32" library="resistor" package="R0402" value="10k" x="-212.09" y="-30.48"/>
+<element name="R33" library="resistor" package="R0402" value="10k" x="-212.09" y="-35.56"/>
+<element name="R34" library="resistor" package="R0402" value="10k" x="-212.09" y="-40.64"/>
+<element name="R35" library="resistor" package="R0402" value="10k" x="-212.09" y="-45.72"/>
 </elements>
 <signals>
 <signal name="VDD">
@@ -2719,21 +2727,29 @@ design rules under a new name.</description>
 <signal name="IO24">
 <contactref element="J2" pad="P$9"/>
 <contactref element="U$4" pad="31"/>
+<contactref element="R28" pad="1"/>
+<wire x1="-123.8525" y1="88.7725" x2="-212.74" y2="-10.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.75" y1="95.81" x2="-123.8525" y2="88.7725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO25">
 <contactref element="J2" pad="P$1"/>
 <contactref element="U$4" pad="32"/>
+<contactref element="R29" pad="1"/>
+<wire x1="-123.8525" y1="89.5725" x2="-212.74" y2="-15.24" width="0" layer="19" extent="1-1"/>
 <wire x1="-92.69" y1="98.44" x2="-123.8525" y2="89.5725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO26">
 <contactref element="J2" pad="P$10"/>
 <contactref element="U$4" pad="33"/>
+<contactref element="R30" pad="1"/>
+<wire x1="-123.8525" y1="90.3725" x2="-212.74" y2="-20.32" width="0" layer="19" extent="1-1"/>
 <wire x1="-90.75" y1="86.83" x2="-123.8525" y2="90.3725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO27">
 <contactref element="J2" pad="P$2"/>
 <contactref element="U$4" pad="34"/>
+<contactref element="R31" pad="1"/>
+<wire x1="-125.5525" y1="92.0725" x2="-212.74" y2="-25.4" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.79" y1="98.44" x2="-125.5525" y2="92.0725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
@@ -3103,21 +3119,29 @@ design rules under a new name.</description>
 <signal name="IO0">
 <contactref element="J2" pad="P$8"/>
 <contactref element="U$4" pad="41"/>
+<contactref element="R35" pad="1"/>
 <wire x1="-100.39" y1="98.44" x2="-131.1525" y2="92.0725" width="0" layer="19" extent="1-1"/>
+<wire x1="-212.74" y1="-45.72" x2="-131.1525" y2="92.0725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO1">
 <contactref element="J2" pad="P$7"/>
 <contactref element="U$4" pad="42"/>
+<contactref element="R34" pad="1"/>
+<wire x1="-131.9525" y1="92.0725" x2="-212.74" y2="-40.64" width="0" layer="19" extent="1-1"/>
 <wire x1="-99.29" y1="98.44" x2="-131.9525" y2="92.0725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO2">
 <contactref element="J2" pad="P$5"/>
 <contactref element="U$4" pad="43"/>
+<contactref element="R33" pad="1"/>
+<wire x1="-132.7525" y1="92.0725" x2="-212.74" y2="-35.56" width="0" layer="19" extent="1-1"/>
 <wire x1="-97.09" y1="98.44" x2="-132.7525" y2="92.0725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO3">
 <contactref element="J2" pad="P$3"/>
 <contactref element="U$4" pad="44"/>
+<contactref element="R32" pad="1"/>
+<wire x1="-133.5525" y1="92.0725" x2="-212.74" y2="-30.48" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.89" y1="98.44" x2="-133.5525" y2="92.0725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
