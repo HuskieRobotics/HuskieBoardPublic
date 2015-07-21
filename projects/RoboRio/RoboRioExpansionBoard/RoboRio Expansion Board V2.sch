@@ -9937,6 +9937,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="71.12" y1="0" x2="71.12" y2="17.78" width="0.762" layer="92"/>
 <wire x1="71.12" y1="17.78" x2="58.42" y2="17.78" width="0.762" layer="92"/>
 <wire x1="58.42" y1="17.78" x2="58.42" y2="45.72" width="0.762" layer="92"/>
+<wire x1="-35.56" y1="17.78" x2="-35.56" y2="101.6" width="0.762" layer="92"/>
+<wire x1="-35.56" y1="101.6" x2="-55.88" y2="121.92" width="0.762" layer="92"/>
+<wire x1="-55.88" y1="121.92" x2="-132.08" y2="121.92" width="0.762" layer="92"/>
+<wire x1="-132.08" y1="121.92" x2="-144.78" y2="134.62" width="0.762" layer="92"/>
+<wire x1="-144.78" y1="134.62" x2="-144.78" y2="170.18" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="IO[0..31],AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,IO0,I2C_SCL,I2C_SDA">
@@ -9954,11 +9959,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-248.92" y1="45.72" x2="-248.92" y2="-5.08" width="0.762" layer="92"/>
 <wire x1="-289.56" y1="-5.08" x2="-289.56" y2="96.52" width="0.762" layer="92"/>
 <wire x1="-248.92" y1="-5.08" x2="-289.56" y2="-5.08" width="0.762" layer="92"/>
-</segment>
-</bus>
-<bus name="B$1">
-<segment>
-<wire x1="-144.78" y1="170.18" x2="-144.78" y2="149.86" width="0.762" layer="92"/>
 </segment>
 </bus>
 </busses>
