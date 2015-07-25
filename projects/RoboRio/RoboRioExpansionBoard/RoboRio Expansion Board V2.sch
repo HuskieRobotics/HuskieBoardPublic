@@ -9511,7 +9511,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U1" library="parallax_propeller (1)" deviceset="P8X32A-D40" device=""/>
 <part name="U2" library="microchip" deviceset="24*" device="SN" technology="LC256" value="24LC256SN"/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0402" value="10k"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="P1" library="PropPlug" deviceset="PROP_PLUG" device=""/>
 <part name="J1" library="RoboRioConnector" deviceset="RRINTERFACE-FEMALE" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
@@ -9527,9 +9527,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="PWM8" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="PWM9" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="U3" library="adafruit" deviceset="MCP3008" device=""/>
-<part name="R2" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
-<part name="R5" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
-<part name="R6" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R5" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
 <part name="LCD" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
 <part name="D2" library="led" deviceset="LED" device="5MM"/>
@@ -9632,8 +9632,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+16" library="supply1" deviceset="+5V" device=""/>
-<part name="R3" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
 <part name="GPIO0" library="con-lstb-modified" deviceset="MA03-1" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="DGND" device=""/>
@@ -9682,15 +9682,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="AGND3" library="supply1" deviceset="AGND" device=""/>
 <part name="D6" library="led" deviceset="LED" device="5MM"/>
 <part name="D7" library="led" deviceset="LED" device="5MM"/>
-<part name="R23" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
-<part name="R24" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
+<part name="R23" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R24" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
 <part name="C17" library="capacitor-wima" deviceset="C" device="5/2.5" value=".1uF"/>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
 <part name="U$3" library="PropPlug" deviceset="PROP_PLUG" device=""/>
-<part name="R25" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
-<part name="R26" library="resistor" deviceset="R-US_" device="R0402" value="150"/>
+<part name="R25" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
+<part name="R26" library="resistor" deviceset="R-US_" device="R1206" value="150"/>
 <part name="AGND4" library="supply1" deviceset="AGND" device=""/>
-<part name="R27" library="resistor" deviceset="R-US_" device="R0402" value="33k"/>
+<part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
 <part name="C18" library="capacitor-wima" deviceset="C" device="5/2.5" value="1uF"/>
 <part name="AGND5" library="supply1" deviceset="AGND" device=""/>
 <part name="T1" library="transistor" deviceset="BC849" device=""/>
