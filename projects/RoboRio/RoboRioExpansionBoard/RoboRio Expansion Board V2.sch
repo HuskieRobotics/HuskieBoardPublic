@@ -10100,7 +10100,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-152.4" y1="27.94" x2="-154.94" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-154.94" y1="27.94" x2="-154.94" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<junction x="-154.94" y="33.02"/>
 </segment>
 <segment>
 <pinref part="GPIO0" gate="G$1" pin="2"/>
