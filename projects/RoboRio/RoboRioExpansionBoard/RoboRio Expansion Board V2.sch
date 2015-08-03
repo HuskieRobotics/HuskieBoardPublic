@@ -10577,7 +10577,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="Q1" library="special" deviceset="XTAL/S" device=""/>
 <part name="RN2" library="resistor-sil" deviceset="G08R" device=""/>
-<part name="R28" library="resistor" deviceset="R-US_" device="R0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -10585,6 +10584,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="-160.02" y="15.24" size="1.778" layer="91">\</text>
 <text x="73.66" y="-58.42" size="1.778" layer="91">Note to self: Dont fix package, a new ADC will be used</text>
 <text x="38.1" y="200.66" size="1.778" layer="91">Add the USB mini B female connector here!</text>
+<text x="-33.02" y="-73.66" size="1.778" layer="91">Note to self: Dont fix package, a new ADC will be used</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="109.22" y="152.4"/>
@@ -10776,7 +10776,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="Q1" gate="G$1" x="58.42" y="10.16"/>
 <instance part="RN2" gate="G$1" x="-124.46" y="162.56" rot="R270"/>
 <instance part="U1" gate="P" x="48.26" y="132.08"/>
-<instance part="R28" gate="G$1" x="-121.92" y="284.48"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">

@@ -2409,7 +2409,6 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-200.66" y="-26.67" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-200.66" y="-26.67" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R28" library="resistor" package="R0603" value="" x="-212" y="-32"/>
 </elements>
 <signals>
 <signal name="SPECIAL28">
