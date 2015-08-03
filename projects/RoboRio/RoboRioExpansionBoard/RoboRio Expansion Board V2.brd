@@ -1714,49 +1714,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </package>
 </packages>
 </library>
-<library name="usbminipropplug">
-<packages>
-<package name="BAD">
-<smd name="P$1" x="-19.05" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="-10.16" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$3" x="-3.81" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$4" x="1.27" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$5" x="-8.89" y="-6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$6" x="-27.94" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$7" x="-15.24" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$8" x="-2.54" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$9" x="10.16" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$10" x="-34.29" y="50.8" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$11" x="46.99" y="71.12" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$12" x="109.22" y="16.51" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$13" x="25.4" y="-2.54" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$14" x="-86.36" y="25.4" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$15" x="-38.1" y="46.99" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$16" x="-17.78" y="46.99" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$17" x="93.98" y="44.45" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$18" x="25.4" y="19.05" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$19" x="-63.5" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$20" x="-90.17" y="38.1" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$21" x="-88.9" y="59.69" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$22" x="-68.58" y="66.04" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$23" x="-38.1" y="55.88" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$24" x="13.97" y="39.37" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$25" x="26.67" y="66.04" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$26" x="-19.05" y="57.15" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$27" x="-41.91" y="30.48" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$28" x="-78.74" y="11.43" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$29" x="-43.18" y="43.18" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$30" x="-15.24" y="34.29" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$31" x="50.8" y="41.91" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$32" x="15.24" y="62.23" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$33" x="-54.61" y="36.83" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$34" x="-86.36" y="57.15" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$35" x="-43.18" y="71.12" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$36" x="-27.94" y="39.37" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$37" x="46.99" y="17.78" dx="1.27" dy="0.635" layer="1"/>
-</package>
-</packages>
-</library>
 <library name="parallax_propeller">
 <packages>
 <package name="P8X32A-Q44">
@@ -2513,7 +2470,6 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="-149.86" y="170.18" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U$1" library="FT232R" package="SSOP-28" value="FT232RFTR232R" x="-114.3" y="83.82"/>
-<element name="U$2" library="usbminipropplug" package="BAD" value="LOLLOLOLO" x="-123.19" y="7.62"/>
 <element name="U$3" library="PropPlug" package="PROP_PLUG" value="PROP_PLUG" x="-20.32" y="166.37"/>
 <element name="U$4" library="parallax_propeller" package="P8X32A-Q44" value="P8X32A-Q44" x="-129.54" y="86.36"/>
 <element name="U1" library="parallax_propeller (1)" package="P8X32A-D40" value="P8X32A-D40" x="-78.74" y="109.22"/>
@@ -3299,11 +3255,11 @@ design rules under a new name.</description>
 <contactref element="AI2" pad="1"/>
 <contactref element="AI3" pad="1"/>
 <contactref element="AO0" pad="1"/>
-<contactref element="D6" pad="A"/>
-<contactref element="D7" pad="A"/>
 <contactref element="R27" pad="1"/>
 <contactref element="U$3" pad="VSS"/>
 <contactref element="T1" pad="2"/>
+<contactref element="D6" pad="A"/>
+<contactref element="D7" pad="A"/>
 <wire x1="-35.56" y1="194.31" x2="-22.86" y2="194.31" width="0" layer="19" extent="1-1"/>
 <wire x1="-58.42" y1="194.31" x2="-35.56" y2="194.31" width="0" layer="19" extent="1-1"/>
 <wire x1="-69.85" y1="194.31" x2="-58.42" y2="194.31" width="0" layer="19" extent="1-1"/>

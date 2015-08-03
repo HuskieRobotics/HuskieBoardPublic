@@ -10083,83 +10083,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="usbminipropplug">
-<packages>
-<package name="BAD">
-<smd name="P$1" x="-19.05" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="-10.16" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$3" x="-3.81" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$4" x="1.27" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$5" x="-8.89" y="-6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$6" x="-27.94" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$7" x="-15.24" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$8" x="-2.54" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$9" x="10.16" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$10" x="-34.29" y="50.8" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$11" x="46.99" y="71.12" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$12" x="109.22" y="16.51" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$13" x="25.4" y="-2.54" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$14" x="-86.36" y="25.4" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$15" x="-38.1" y="46.99" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$16" x="-17.78" y="46.99" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$17" x="93.98" y="44.45" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$18" x="25.4" y="19.05" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$19" x="-63.5" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$20" x="-90.17" y="38.1" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$21" x="-88.9" y="59.69" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$22" x="-68.58" y="66.04" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$23" x="-38.1" y="55.88" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$24" x="13.97" y="39.37" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$25" x="26.67" y="66.04" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$26" x="-19.05" y="57.15" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$27" x="-41.91" y="30.48" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$28" x="-78.74" y="11.43" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$29" x="-43.18" y="43.18" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$30" x="-15.24" y="34.29" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$31" x="50.8" y="41.91" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$32" x="15.24" y="62.23" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$33" x="-54.61" y="36.83" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$34" x="-86.36" y="57.15" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$35" x="-43.18" y="71.12" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$36" x="-27.94" y="39.37" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$37" x="46.99" y="17.78" dx="1.27" dy="0.635" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="USBMINIPLACEHOLDER">
-<pin name="5V" x="-10.16" y="0" length="middle" rot="R90"/>
-<pin name="DM" x="-5.08" y="0" length="middle" rot="R90"/>
-<pin name="DP" x="0" y="0" length="middle" rot="R90"/>
-<pin name="NC" x="5.08" y="0" length="middle" rot="R90"/>
-<pin name="VSS" x="10.16" y="0" length="middle" rot="R90"/>
-<wire x1="-12.7" y1="0" x2="12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="12.7" y1="0" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-12.7" x2="-12.7" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-12.7" x2="-12.7" y2="0" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LOLLOLOLO">
-<gates>
-<gate name="G$1" symbol="USBMINIPLACEHOLDER" x="-2.54" y="12.7"/>
-</gates>
-<devices>
-<device name="" package="BAD">
-<connects>
-<connect gate="G$1" pin="5V" pad="P$1 P$2 P$3 P$4 P$5 P$6 P$7 P$8 P$9 P$10 P$11"/>
-<connect gate="G$1" pin="DM" pad="P$12 P$13 P$14 P$15 P$16 P$17"/>
-<connect gate="G$1" pin="DP" pad="P$18 P$19 P$20 P$21 P$22 P$23 P$24 P$25 P$26"/>
-<connect gate="G$1" pin="NC" pad="P$27 P$28 P$29 P$30 P$31 P$32 P$33"/>
-<connect gate="G$1" pin="VSS" pad="P$34 P$35 P$36 P$37"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="transistor">
 <description>&lt;b&gt;Transistors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -10802,7 +10725,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="TP3V3" library="testpad" deviceset="TPS" device="PAD1-13"/>
 <part name="U$1" library="FT232R" deviceset="FT232R" device="FTR232R"/>
-<part name="U$2" library="usbminipropplug" deviceset="LOLLOLOLO" device=""/>
 <part name="AGND3" library="supply1" deviceset="AGND" device=""/>
 <part name="D6" library="led" deviceset="LED" device="5MM"/>
 <part name="D7" library="led" deviceset="LED" device="5MM"/>
@@ -11001,8 +10923,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="AGND2" gate="VR1" x="-113.03" y="-10.16"/>
 <instance part="TP3V3" gate="G$1" x="157.48" y="-45.72"/>
 <instance part="U$1" gate="G$1" x="134.62" y="208.28"/>
-<instance part="U$2" gate="G$1" x="71.12" y="198.12" rot="R270"/>
-<instance part="AGND3" gate="VR1" x="78.74" y="180.34"/>
+<instance part="AGND3" gate="VR1" x="78.74" y="218.44"/>
 <instance part="D6" gate="G$1" x="91.44" y="226.06" rot="R90"/>
 <instance part="D7" gate="G$1" x="91.44" y="215.9" rot="R90"/>
 <instance part="R23" gate="G$1" x="104.14" y="226.06"/>
@@ -12689,27 +12610,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="-113.03" y="1.27"/>
 </segment>
 <segment>
-<wire x1="78.74" y1="182.88" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="AGND3" gate="VR1" pin="AGND"/>
-<wire x1="78.74" y1="187.96" x2="78.74" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="208.28" x2="78.74" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="187.96" x2="76.2" y2="187.96" width="0.1524" layer="91"/>
-<junction x="78.74" y="187.96"/>
-<wire x1="119.38" y1="205.74" x2="86.36" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="205.74" x2="83.82" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="208.28" x2="78.74" y2="208.28" width="0.1524" layer="91"/>
-<junction x="78.74" y="208.28"/>
-<wire x1="78.74" y1="208.28" x2="76.2" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="220.98" x2="86.36" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="D6" gate="G$1" pin="A"/>
-<wire x1="86.36" y1="220.98" x2="86.36" y2="223.52" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="223.52" x2="88.9" y2="226.06" width="0.1524" layer="91"/>
-<pinref part="D7" gate="G$1" pin="A"/>
-<wire x1="86.36" y1="220.98" x2="86.36" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="218.44" x2="88.9" y2="215.9" width="0.1524" layer="91"/>
-<junction x="86.36" y="220.98"/>
-</segment>
-<segment>
 <pinref part="AGND4" gate="VR1" pin="AGND"/>
 <wire x1="127" y1="177.8" x2="127" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="127" y1="182.88" x2="127" y2="185.42" width="0.1524" layer="91"/>
@@ -12740,19 +12640,26 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="AGND7" gate="VR1" pin="AGND"/>
 <wire x1="193.04" y1="175.26" x2="193.04" y2="177.8" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<wire x1="78.74" y1="220.98" x2="86.36" y2="220.98" width="0.1524" layer="91"/>
+<pinref part="D6" gate="G$1" pin="A"/>
+<wire x1="86.36" y1="220.98" x2="86.36" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="223.52" x2="88.9" y2="226.06" width="0.1524" layer="91"/>
+<pinref part="D7" gate="G$1" pin="A"/>
+<wire x1="86.36" y1="220.98" x2="86.36" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="218.44" x2="88.9" y2="215.9" width="0.1524" layer="91"/>
+<junction x="86.36" y="220.98"/>
+<pinref part="AGND3" gate="VR1" pin="AGND"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <wire x1="119.38" y1="195.58" x2="86.36" y2="195.58" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="195.58" x2="83.82" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="198.12" x2="76.2" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <wire x1="119.38" y1="200.66" x2="86.36" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="200.66" x2="83.82" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="203.2" x2="76.2" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -12847,6 +12754,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="53.34" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
 <junction x="68.58" y="10.16"/>
 <junction x="50.8" y="12.7"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<wire x1="119.38" y1="205.74" x2="86.36" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
