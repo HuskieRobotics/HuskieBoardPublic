@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2707,6 +2707,7 @@ design rules under a new name.</description>
 <contactref element="ADC7" pad="2"/>
 <contactref element="F2" pad="1"/>
 <contactref element="R4" pad="1"/>
+<contactref element="CN2" pad="VBUS"/>
 <wire x1="-22.86" y1="190.5" x2="-20.32" y2="194.31" width="0" layer="19" extent="1-1"/>
 <wire x1="-33.02" y1="194.31" x2="-22.86" y2="190.5" width="0" layer="19" extent="1-1"/>
 <wire x1="-44.45" y1="194.31" x2="-33.02" y2="194.31" width="0" layer="19" extent="1-1"/>
@@ -2733,6 +2734,7 @@ design rules under a new name.</description>
 <wire x1="-176.53" y1="186.69" x2="-162.56" y2="186.69" width="0" layer="19" extent="1-1"/>
 <wire x1="-28.79" y1="177.8" x2="-22.86" y2="190.5" width="0" layer="19" extent="1-1"/>
 <wire x1="-39.37" y1="161.29" x2="-28.79" y2="177.8" width="0" layer="19" extent="1-1"/>
+<wire x1="-233.6" y1="-40.936" x2="-176.53" y2="186.69" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AI3">
 <contactref element="J1" pad="9"/>
@@ -3152,9 +3154,6 @@ design rules under a new name.</description>
 <contactref element="Q1" pad="2"/>
 <contactref element="U1" pad="28"/>
 <wire x1="-123.8525" y1="86.3725" x2="-205.74" y2="-5.08" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="VBUS">
-<contactref element="CN2" pad="VBUS"/>
 </signal>
 <signal name="N$2">
 <contactref element="CN2" pad="D+"/>
