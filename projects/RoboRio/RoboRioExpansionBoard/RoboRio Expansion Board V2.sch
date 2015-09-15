@@ -12448,20 +12448,6 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="73.66" y1="215.9" x2="76.2" y2="215.9" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<wire x1="119.38" y1="218.44" x2="81.28" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="218.44" x2="78.74" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="CN2" gate="G$1" pin="D-"/>
-<wire x1="78.74" y1="220.98" x2="73.66" y2="220.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<wire x1="119.38" y1="223.52" x2="73.66" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="CN2" gate="G$1" pin="D+"/>
-</segment>
-</net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="R23" gate="G$1" pin="2"/>
@@ -12552,6 +12538,22 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="53.34" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
 <junction x="68.58" y="10.16"/>
 <junction x="50.8" y="12.7"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<wire x1="119.38" y1="218.44" x2="91.44" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="218.44" x2="86.36" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="CN2" gate="G$1" pin="D+"/>
+<wire x1="86.36" y1="223.52" x2="73.66" y2="223.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<wire x1="119.38" y1="223.52" x2="88.9" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="223.52" x2="86.36" y2="220.98" width="0.1524" layer="91"/>
+<pinref part="CN2" gate="G$1" pin="D-"/>
+<wire x1="86.36" y1="220.98" x2="73.66" y2="220.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
