@@ -1,6 +1,6 @@
 {AUTHOR: Lucas Rezac}
 {TITLE: LOG STRING}
-{REVISON: 1}
+{REVISON: 2}
 {REVISED BY: Brandon John, Lucas Rezac}
 {PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART
 and log data recieved between the two to a CSV file format on an onboard SD Card.}
@@ -9,21 +9,35 @@ CON
         _xinfreq = 5_000_000
 
 
-        WRITE_DATA = 1
-        SET_SD_FILE_NAME = 3
-        SET_LCD_DISP = 4
+        SET_LCD_DISP = 8   ' whoever had this set to 4, NO! BAD! 
         SET_LCD_SIZE = 9
-        SET_TIME = 5
         
         rxSerialMode = 0'don't invert signal
+
+        
+        { COMMAND LIST }
+        GIVE_DATA        = $00 ' Standard, gives basic data on robot. No response expected. 
+        WRITE_DATA       = $01 ' Sends a custom string for logging. Appended to current line that is being logged. 
+        SET_LOG_HEADER   = $02 ' Set log header 
+        SET_SD_FILE_NAME = $03 ' Set SD log title 
+        CLOSE_LOG        = $04 ' Close log file, prepare for next log file 
+        SET_TIME         = $05 ' Set current time 
+       '$06 - $07 reserved
+        SET_LCD_DISP     = $08 ' Set LCD string display
+        SET_LCD_SIZE     = $09 ' Sets the LCD size
+       '$0A - $0F reserved
+        REQUEST_ALL      = $10 ' Request current values for all inputs
+        REQUEST_ANALOG   = $11 ' Request current analog inputs
+       '$12 - $FF reserved
+
 VAR
   long  stack[512]
   long  stackSerial[512]
   long  globaldatapointer                                
   long  dataPt    
   long  baud
-  long  lcdbaud
-  byte  lcdpin                 'pointer to location of the 'toLog' buffer
+  long  lcdbaud                 'LCD baudrate
+  byte  lcdpin                  'pointer to location of the 'toLog' buffer
   long  cmd, length
   byte  data1[256], data2[256]  'toLog buffer
   long  sdfilename              'pointer to the location of the filename to write to the sd
@@ -44,10 +58,11 @@ OBJ
   util : "Util"
   neo : "Neopixel Test 2"
   
-PUB dontRunThisMethodDirectly 'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
+PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
-repeat
+repeat x from 0 to 10
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
+quit
 PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_RED_,LED_YELLOW_,LED_GREEN_,timepointer_)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
@@ -69,7 +84,7 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   buffer := false
   'neo.init(neopixelPin,64, @neopointer) 
   cognew(main,@stack)
-PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
+PRI main | x, in, errors, y, timetmp , intmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
   dira[LED_RED] := true'set red LED to output
   dira[LED_YELLOW] := true 'set yellow LED to output
@@ -87,9 +102,79 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
     pst.str(string("Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
-  ' command number 1 : Recieve and write data
-    if cmd == WRITE_DATA
+  '  command number 0 : Send basic data
+    if cmd == GIVE_DATA
+                         
+      give_data
+      
+    'command number 1 : Recieve and write data
+    elseif cmd == WRITE_DATA
     
+      write_data
+
+    'command number 2 : Set log header
+    elseif cmd == SET_LOG_HEADER
+    
+      set_log_header
+    
+    'command number 3 : Set SD save file name
+    elseif cmd == SET_SD_FILE_NAME
+    
+      set_sd_file_name
+
+    'command number 4 : close log file, prepare for next log file
+    elseif cmd == CLOSE_LOG
+
+      close_log
+    
+    'command number 5 : sets time
+    elseif cmd == SET_TIME
+
+      set_time
+      
+    elseif cmd == 7 or cmd == 8
+
+      pst.str(string("Error: attempted to call command #"))
+      pst.dec(cmd)
+      pst.str(string(", which is reserved."))
+    
+    'command number 8 : sets lcd display
+    elseif cmd == SET_LCD_DISP
+    
+      set_lcd_disp             
+      
+    'command number 9  : sets lcd size
+    elseif cmd == SET_LCD_SIZE
+
+      set_lcd_size
+
+    elseif cmd >= $0A and cmd <= $05
+
+      pst.str(string("Error: attempted to call command #"))
+      pst.dec(cmd)
+      pst.str(string(", which is reserved."))
+
+    'command number 16 : request all inputs
+    elseif cmd == REQUEST_ALL
+
+      request_all
+
+    'command number 17 : request analogue inputs
+    elseif cmd == REQUEST_ANALOG
+
+      request_analog
+    
+    elseif cmd >= $12 and cmd <= $FF
+
+      pst.str(string("Error: attempted to call command #"))
+      pst.dec(cmd)
+      pst.str(string(", which is reserved."))
+    
+      
+      
+        
+PRI write_data | x, checktmp     ' COMMAND 01
+
       pst.str(string("cmd == 1",13))
    
       length := rx_serial_fast.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
@@ -105,7 +190,7 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
         
         'pst.str(string("SD: Length:" ))
         'pst.dec(length)
-        checksum := cmd+length
+        checksum := WRITE_DATA+length         'originally cmd+length
         'rx_serial_fast.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
@@ -138,10 +223,13 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
           pst.char(13)
           outa[LED_RED]:=true
         'longfill(@dataPt,0,64)
-        
-    'command number 3 : Set SD save file name
-    elseif cmd == SET_SD_FILE_NAME
-    
+
+PRI set_log_header                   'COMMAND 02
+      pst.str(string("Error: set_log_header function isn't finished yet!"))
+      return
+      
+PRI set_sd_file_name | x, checktmp    'COMMAND 03
+
       pst.str(string("cmd == 3",13))
     ' length of string
       length := rx_serial_fast.rx
@@ -173,46 +261,15 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
           pst.str(string("Checksum: "))
           pst.hex(checksum,8)
           pst.str(string(", Expected: "))
-          pst.hex(checktmp,8)  
-    'sets lcd display
-    elseif cmd == SET_LCD_DISP
-      byte[stopSDPointer]:=$FF
+          pst.hex(checktmp,8)
 
-      rx_serial_fast.stop
-    elseif cmd == 8
-    
-      pst.str(string("cmd == 8",13))
-      'moves cursor to 0,0
-      lcd.home
+PRI close_log                   'COMMAND 04
+      pst.str(string("Error: close_log function isn't finished yet!"))
+      return
 
-      length := rx_serial_fast.rx
+PRI set_time | intmp, checktmp, timetmp   'COMMAND 05
 
-      if length <= 32
-    '   gets all the string data                                                                                                                      
-        repeat x from 0 to length
-          lcdstr[x] := rx_serial_fast.rx
-        
-        lcd.str(long[lcdstr])
-        pst.str(string("LCD: Set display string to :"))
-        pst.str(long[lcdstr])
-        pst.char(13)
-      else
-        pst.str(string("LCD: Error: Given length was > 32."))
-    'sets lcd size
-    elseif cmd == SET_LCD_SIZE
-      pst.str(string("cmd == 9",13))
-
-      lcd.finalize
-
-      lines := rx_serial_fast.rx
-
-      pst.str(string("LCD: # of lines set to: "))
-      pst.dec(lines)
-      
-      lcd.init(lcdpin,lcdbaud,lines)
-    'sets time
-    elseif cmd == SET_TIME
-      checksum:=cmd
+      checksum:=SET_TIME  'originally checksum:=cmd
       
       intmp := rx_serial_fast.rx
       checksum+= intmp
@@ -242,7 +299,43 @@ PRI main | x, in, errors, y, lines , checktmp , timetmp , intmp
         outa[LED_YELLOW] := true    
       pst.char(13)
       
-      
-        
+PRI set_lcd_disp | x          'COMMAND 08
 
-  
+      pst.str(string("cmd == 8",13))
+      'moves cursor to 0,0
+      lcd.home
+
+      length := rx_serial_fast.rx
+
+      if length <= 32
+    '   gets all the string data                                                                                                                      
+        repeat x from 0 to length
+          lcdstr[x] := rx_serial_fast.rx
+        
+        lcd.str(long[lcdstr])
+        pst.str(string("LCD: Set display string to :"))
+        pst.str(long[lcdstr])
+        pst.char(13)
+      else
+        pst.str(string("LCD: Error: Given length was > 32."))
+
+PRI set_lcd_size | lines        'COMMAND 09
+
+      pst.str(string("cmd == 9",13))
+
+      lcd.finalize
+
+      lines := rx_serial_fast.rx
+
+      pst.str(string("LCD: # of lines set to: "))
+      pst.dec(lines)
+      
+      lcd.init(lcdpin,lcdbaud,lines)
+
+PRI request_all
+    pst.str(string("Error: request_all function isn't finished yet!"))
+    return
+
+PRI request_analog
+    pst.str(string("Error: request_analog function isn't finished yet!"))
+    return
