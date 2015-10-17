@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -199,7 +199,7 @@
 <pad name="34" x="48.641" y="73.9648" drill="1.016" shape="octagon"/>
 <text x="7.493" y="68.5038" size="1.27" layer="21" ratio="10">1</text>
 <text x="6.731" y="75.6158" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="38.481" y="68.5038" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="34.671" y="68.5038" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="47.625" y="75.6158" size="1.27" layer="21" ratio="10">34</text>
 <rectangle x1="10.287" y1="71.1708" x2="10.795" y2="71.6788" layer="51"/>
 <rectangle x1="7.747" y1="71.1708" x2="8.255" y2="71.6788" layer="51"/>
@@ -235,8 +235,64 @@
 <rectangle x1="43.307" y1="73.7108" x2="43.815" y2="74.2188" layer="51"/>
 <rectangle x1="45.847" y1="73.7108" x2="46.355" y2="74.2188" layer="51"/>
 <rectangle x1="48.387" y1="73.7108" x2="48.895" y2="74.2188" layer="51"/>
-<hole x="3.429" y="3.5052" drill="3.175"/>
-<hole x="53.1368" y="3.5052" drill="3.175"/>
+<hole x="3.5052" y="3.429" drill="3.175"/>
+<hole x="53.1368" y="3.429" drill="3.175"/>
+<polygon width="0.127" layer="39">
+<vertex x="0" y="0"/>
+<vertex x="9.0678" y="0"/>
+<vertex x="9.0678" y="5.0546" curve="90"/>
+<vertex x="5.08" y="9.0424"/>
+<vertex x="0" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="40">
+<vertex x="56.642" y="0"/>
+<vertex x="47.5742" y="0"/>
+<vertex x="47.5742" y="5.0546" curve="-90"/>
+<vertex x="51.562" y="9.0424"/>
+<vertex x="56.642" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="39">
+<vertex x="56.642" y="0"/>
+<vertex x="47.5742" y="0"/>
+<vertex x="47.5742" y="5.0546" curve="-90"/>
+<vertex x="51.562" y="9.0424"/>
+<vertex x="56.642" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="56.642" y="0"/>
+<vertex x="47.5742" y="0"/>
+<vertex x="47.5742" y="5.0546" curve="-90"/>
+<vertex x="51.562" y="9.0424"/>
+<vertex x="56.642" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="42">
+<vertex x="56.642" y="0"/>
+<vertex x="47.5742" y="0"/>
+<vertex x="47.5742" y="5.0546" curve="-90"/>
+<vertex x="51.562" y="9.0424"/>
+<vertex x="56.642" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="42">
+<vertex x="0" y="0"/>
+<vertex x="9.0678" y="0"/>
+<vertex x="9.0678" y="5.0546" curve="90"/>
+<vertex x="5.08" y="9.0424"/>
+<vertex x="0" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="0" y="0"/>
+<vertex x="9.0678" y="0"/>
+<vertex x="9.0678" y="5.0546" curve="90"/>
+<vertex x="5.08" y="9.0424"/>
+<vertex x="0" y="9.0424"/>
+</polygon>
+<polygon width="0.127" layer="40">
+<vertex x="0" y="0"/>
+<vertex x="9.0678" y="0"/>
+<vertex x="9.0678" y="5.0546" curve="90"/>
+<vertex x="5.08" y="9.0424"/>
+<vertex x="0" y="9.0424"/>
+</polygon>
 </package>
 <package name="RREXT-MALE">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
