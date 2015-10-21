@@ -205,7 +205,7 @@ PRI write_data | x, checktmp     ' COMMAND 01
         checktmp := rx_serial_fast.rx  'get the checksum          
         
         if checksum == checktmp 'is the checksum correct?
-          long[globaldatapointer] := dataPt
+          long[globaldatapointer] := dataPt   'set the data to write to the sd to the new data
           pst.str(string("SD: Line written: "))     
           pst.str(long[globaldatapointer])
           pst.char(13)
@@ -264,9 +264,11 @@ PRI set_sd_file_name | x, checktmp    'COMMAND 03
           pst.hex(checktmp,8)
 
 PRI close_log                   'COMMAND 04
-      pst.str(string("Error: close_log function isn't finished yet!"))
-      return
-
+      'pst.str(string("Error: close_log function isn't finished yet!"))
+      'return
+    long[globaldatapointer] := string("stop") 'the sd card logger will recognize new data, see that it is a string "stop",
+                                               ' and call it's "reinit" function. That will wipe the filename, and setfilename
+                                               'function will have to be called again.
 PRI set_time | intmp, checktmp, timetmp   'COMMAND 05
 
       checksum:=SET_TIME  'originally checksum:=cmd

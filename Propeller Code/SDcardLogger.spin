@@ -18,6 +18,7 @@ VAR
   byte DO, CLK, DI, CS
   long datfilename , lastfilename
   long timepointer
+  byte currCogID
    
 OBJ
   sd : "fsrw"     
@@ -32,13 +33,23 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,tim
   adcpointer := adcpointer_
   datfilename := savefilename
   stopPointer := stopPointer_
-  timepointer := timepointer_     
+  timepointer := timepointer_
+  stop := false  
   pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
   pst.str(string("SD card works!",13))
 ''creates new cog
-  return cognew(start,@stack)
+  currCogID := cognew(start,@stack)
+  return currCogID
+PUB reinit
+  pst.str(string("Resetting SD card logger!"))
+  stop
+  long[datfilename] := 0
+  cogstop(currCogID)  'does this end the current function if the current function is in the cog it's stopping?
+  longfill(@stack,0,512) 'clears the stack. Just because.
+  currCogID := cognew(start,@stack)
+  return currCogID
 PRI start  | loc
   dira[LED_YELLOW]:=true'set yellow LED to output
 ''sets the stop boolean to false (otherwise program will exit immediately)
@@ -81,9 +92,12 @@ PRI mainLoop | x ,channel
  'repeats until this object's stop function is called
 
   
-  repeat 'while !stop       
+  repeat while !stop       
     pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
+      if(long[pointer] == string("stop")) 'can i do this? Or is string testing done a different way?
+        reinit
+        return
       lastpointer := long[pointer]
       sd.pputs(long[pointer]) ''writes data
       repeat channel from 0 to 7
