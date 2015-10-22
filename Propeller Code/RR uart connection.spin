@@ -1,44 +1,45 @@
-{AUTHOR: Lucas Rezac}
-{TITLE: LOG STRING}
-{REVISON: 2}
-{REVISED BY: Brandon John, Lucas Rezac}
-{PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART
-and log data recieved between the two to a CSV file format on an onboard SD Card.}
-CON
-        _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
-        _xinfreq = 5_000_000
-
-
-        SET_LCD_DISP = 8   ' whoever had this set to 4, NO! BAD! 
-        SET_LCD_SIZE = 9
-        
-        rxSerialMode = 0'don't invert signal
-
-        
-        { COMMAND LIST }
-        GIVE_DATA        = $00 ' Standard, gives basic data on robot. No response expected. 
-        WRITE_DATA       = $01 ' Sends a custom string for logging. Appended to current line that is being logged. 
-        SET_LOG_HEADER   = $02 ' Set log header 
-        SET_SD_FILE_NAME = $03 ' Set SD log title 
-        CLOSE_LOG        = $04 ' Close log file, prepare for next log file 
-        SET_TIME         = $05 ' Set current time 
-       '$06 - $07 reserved
-        SET_LCD_DISP     = $08 ' Set LCD string display
-        SET_LCD_SIZE     = $09 ' Sets the LCD size
-       '$0A - $0F reserved
-        REQUEST_ALL      = $10 ' Request current values for all inputs
-        REQUEST_ANALOG   = $11 ' Request current analog inputs
-       '$12 - $FF reserved
-
-VAR
-  long  stack[512]
-  long  stackSerial[512]
-  long  globaldatapointer                                
-  long  dataPt    
-  long  baud
-  long  lcdbaud                 'LCD baudrate
-  byte  lcdpin                  'pointer to location of the 'toLog' buffer
-  long  cmd, length
+{AUTHOR: Lucas Rezac}                                                                                                                       
+{TITLE: LOG STRING}                                                                                                                         
+{REVISON: 2}                                                                                                                                
+{REVISED BY: Brandon John, Lucas Rezac}                                                                                                     
+{PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART                                
+and log data recieved between the two to a CSV file format on an onboard SD Card.}                                                          
+CON                                                                                                                                         
+        _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz           
+        _xinfreq = 5_000_000                                                                                                                
+                                                                                                                                            
+                                                                                                                                            
+        SET_LCD_DISP = 8   ' whoever had this set to 4, NO! BAD!                                                                            
+        SET_LCD_SIZE = 9                                                                                                                    
+                                                                                                                                            
+        rxSerialMode = 0'don't invert signal                                                                                                
+                                                                                                                                            
+                                                                                                                                            
+        { COMMAND LIST }                                                                                                                    
+        GIVE_DATA        = $00 ' Standard, gives basic data on robot. No response expected.                                                 
+        WRITE_DATA       = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
+        SET_LOG_HEADER   = $02 ' Set log header                                                                                             
+        SET_SD_FILE_NAME = $03 ' Set SD log title                                                                                           
+        CLOSE_LOG        = $04 ' Close log file, prepare for next log file                                                                  
+        SET_TIME         = $05 ' Set current time                                                                                           
+       '$06 - $07 reserved                                                                                                                  
+        SET_LCD_DISP     = $08 ' Set LCD string display                                                                                     
+        SET_LCD_SIZE     = $09 ' Sets the LCD size                                                                                          
+       '$0A - $0F reserved                                                                                                                  
+        REQUEST_ALL      = $10 ' Request current values for all inputs                                                                      
+        REQUEST_ANALOG   = $11 ' Request current analog inputs                                                                              
+        SET_PIN          = $12 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it              
+       '$13 - $FF reserved                                                                                                                  
+                                                                                                                                            
+VAR                                                                                                                                         
+  long  stack[512]                                                                                                                          
+  long  stackSerial[512]                                                                                                                    
+  long  globaldatapointer                                                                                                                   
+  long  dataPt                                                                                                                              
+  long  baud                                                                                                                                
+  long  lcdbaud                 'LCD baudrate                                                                                               
+  byte  lcdpin                  'pointer to location of the 'toLog' buffer                                                                  
+  long  cmd, length                                                                                                                         
   byte  data1[256], data2[256]  'toLog buffer
   long  sdfilename              'pointer to the location of the filename to write to the sd
   byte  filedata[256]
@@ -163,8 +164,13 @@ PRI main | x, in, errors, y, timetmp , intmp
     elseif cmd == REQUEST_ANALOG
 
       request_analog
+
+    'command number 18 : sets a pin to a value
+    elseif cmd == SET_PIN
+
+      set_pin
     
-    elseif cmd >= $12 and cmd <= $FF
+    elseif cmd >= $13 and cmd <= $FF
 
       pst.str(string("Error: attempted to call command #"))
       pst.dec(cmd)
@@ -334,10 +340,23 @@ PRI set_lcd_size | lines        'COMMAND 09
       
       lcd.init(lcdpin,lcdbaud,lines)
 
-PRI request_all
+PRI request_all                 'COMMAND 10
     pst.str(string("Error: request_all function isn't finished yet!"))
     return
 
-PRI request_analog
+PRI request_analog              'COMMAND 11
     pst.str(string("Error: request_analog function isn't finished yet!"))
     return
+PRI set_pin | data, pin, value, checksum                    'COMMAND 12
+
+    data := rx_serial_fast.rx
+    value := data >> 3
+    pin := data & %111
+    checksum := rx_serial_fast.rx
+
+    if checksum == $10
+       'now what.
+
+    else
+      pst.str(string("Error: in function set_pin: checksum is wrong!"))
+      return
