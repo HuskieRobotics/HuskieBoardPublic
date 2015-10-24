@@ -30,17 +30,17 @@ UsedLibrary="drilegend.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="493 147 1294 744"
-State=2
+Loc="-8 -8 1911 1008"
+State=1
 Number=0
 
 [Win_2]
 Type="Schematic Editor"
-Loc="0 0 1919 1016"
+Loc="-8 -8 1911 1008"
 State=1
-Number=3
+Number=1
 File="RoboRio Expansion Board V2.sch"
-View="-1437.68 -1429.02 1586.62 1009.86"
+View="-275.098 -122.124 131.934 206.12"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
@@ -79,7 +79,7 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: -1437.68 -1429.02 1586.62 1009.86"
+Views=" 1: -275.098 -122.124 131.934 206.12"
 Sheet="1"
 
 [Desktop]
