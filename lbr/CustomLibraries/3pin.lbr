@@ -82,13 +82,13 @@
 </packages>
 <symbols>
 <symbol name="3PINCONNECTOR">
-<wire x1="0" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
-<pin name="GND" x="2.54" y="2.54" length="middle" rot="R180"/>
-<pin name="V+" x="2.54" y="0" length="middle" rot="R180"/>
-<pin name="DATA" x="2.54" y="-2.54" length="middle" rot="R180"/>
+<wire x1="2.54" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<pin name="GND" x="5.08" y="2.54" length="middle" rot="R180"/>
+<pin name="V+" x="5.08" y="0" length="middle" rot="R180"/>
+<pin name="DATA" x="5.08" y="-2.54" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
