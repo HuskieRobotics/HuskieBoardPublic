@@ -6885,16 +6885,16 @@ Source: AVX .. aphvc.pdf</description>
 </packages>
 <symbols>
 <symbol name="PROPELLER_PLUG">
-<pin name="VSS" x="-22.86" y="-2.54" length="middle"/>
-<pin name="RES" x="-22.86" y="-5.08" length="middle"/>
-<pin name="&lt;TX" x="-22.86" y="-7.62" length="middle"/>
-<pin name="&gt;RX" x="-22.86" y="-10.16" length="middle"/>
-<wire x1="-20.32" y1="0" x2="-20.32" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-20.32" y1="-12.7" x2="0" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="0" y1="-12.7" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-20.32" y2="0" width="0.254" layer="94"/>
-<text x="-20.32" y="2.54" size="1.778" layer="95">PropPLUG</text>
-<text x="-20.32" y="-17.78" size="1.778" layer="96">$C1</text>
+<pin name="VSS" x="-2.54" y="-2.54" length="middle"/>
+<pin name="RES" x="-2.54" y="-5.08" length="middle"/>
+<pin name="&lt;TX" x="-2.54" y="-7.62" length="middle"/>
+<pin name="&gt;RX" x="-2.54" y="-10.16" length="middle"/>
+<wire x1="0" y1="0" x2="0" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="0" y1="-12.7" x2="20.32" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-12.7" x2="20.32" y2="0" width="0.254" layer="94"/>
+<wire x1="20.32" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<text x="0" y="0.508" size="1.778" layer="95">&gt;Name</text>
+<text x="0" y="-15.24" size="1.778" layer="96">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10959,7 +10959,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="R23" gate="G$1" x="88.9" y="243.84"/>
 <instance part="C17" gate="G$1" x="167.64" y="261.62" rot="R180"/>
 <instance part="SUPPLY6" gate="G$1" x="167.64" y="254"/>
-<instance part="CN1" gate="G$1" x="238.76" y="243.84"/>
+<instance part="CN1" gate="G$1" x="215.9" y="243.84"/>
 <instance part="R25" gate="G$1" x="172.72" y="243.84"/>
 <instance part="R26" gate="G$1" x="170.18" y="236.22"/>
 <instance part="AGND4" gate="VR1" x="127" y="198.12"/>
@@ -11104,7 +11104,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="CN1" gate="G$1" pin="&gt;RX"/>
 <wire x1="177.8" y1="243.84" x2="177.8" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="233.68" x2="208.28" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="233.68" x2="215.9" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="233.68" x2="213.36" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="233.68" x2="208.28" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="147.32" x2="154.94" y2="147.32" width="0.1524" layer="91"/>
 <junction x="208.28" y="233.68"/>
@@ -11121,7 +11121,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="R26" gate="G$1" pin="2"/>
 <pinref part="CN1" gate="G$1" pin="&lt;TX"/>
 <wire x1="175.26" y1="236.22" x2="203.2" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="236.22" x2="215.9" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="236.22" x2="213.36" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="236.22" x2="203.2" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="149.86" x2="154.94" y2="149.86" width="0.1524" layer="91"/>
 <junction x="203.2" y="236.22"/>
@@ -11305,7 +11305,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="193.04" y1="215.9" x2="193.04" y2="238.76" width="0.1524" layer="91"/>
 <pinref part="CN1" gate="G$1" pin="RES"/>
 <wire x1="193.04" y1="238.76" x2="198.12" y2="238.76" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="238.76" x2="215.9" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="238.76" x2="213.36" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="238.76" x2="198.12" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="152.4" x2="154.94" y2="152.4" width="0.1524" layer="91"/>
 <junction x="198.12" y="238.76"/>
@@ -12514,7 +12514,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <segment>
 <pinref part="CN1" gate="G$1" pin="VSS"/>
 <pinref part="AGND6" gate="VR1" pin="AGND"/>
-<wire x1="210.82" y1="241.3" x2="215.9" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="241.3" x2="213.36" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="T1" gate="G$1" pin="E"/>
