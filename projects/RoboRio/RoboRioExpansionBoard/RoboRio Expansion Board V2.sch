@@ -10707,7 +10707,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <part name="SUPPLY16" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY33" library="supply2" deviceset="DGND" device=""/>
 <part name="C2" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="C4" library="resistor" deviceset="C-EU" device="C0603K" value="10uF"/>
+<part name="C4" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="SUPPLY35" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY36" library="supply2" deviceset="DGND" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
@@ -10774,7 +10774,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
 <part name="J2" library="MicroSdSocket" deviceset="MICROSD" device=""/>
 <part name="C8" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="C7" library="resistor" deviceset="C-EU" device="C0603K" value="10uF"/>
+<part name="C7" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="TP3V3" library="testpad" deviceset="TPS" device="PAD1-13"/>
