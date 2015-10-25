@@ -11323,6 +11323,8 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="12.7" y1="73.66" x2="12.7" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U1" gate="P8X32A-Q44" pin="RES/"/>
 <wire x1="12.7" y1="10.16" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
+<label x="55.88" y="73.66" size="1.778" layer="95"/>
+<label x="12.7" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO5" class="0">
