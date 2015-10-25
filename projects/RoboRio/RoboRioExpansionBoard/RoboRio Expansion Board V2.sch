@@ -11535,9 +11535,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <net name="IO20" class="0">
 <segment>
 <label x="6.858" y="-46.482" size="1.778" layer="95" rot="R180"/>
-<wire x1="73.66" y1="-81.28" x2="31.4198" y2="-81.28" width="0.1524" layer="91"/>
-<wire x1="31.4198" y1="-81.28" x2="31.4198" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="31.4198" y1="-48.26" x2="0" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="-81.28" x2="28.8798" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="28.8798" y1="-81.28" x2="28.8798" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="28.8798" y1="-48.26" x2="0" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G$1" pin="SCLK"/>
 </segment>
 <segment>
@@ -11548,9 +11548,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </net>
 <net name="IO21" class="0">
 <segment>
-<wire x1="34.29" y1="-76.2" x2="34.29" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="0" y1="-43.18" x2="34.29" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="34.29" y1="-76.2" x2="73.66" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-76.2" x2="33.02" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="0" y1="-43.18" x2="33.02" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-76.2" x2="73.66" y2="-76.2" width="0.1524" layer="91"/>
 <label x="6.604" y="-41.402" size="1.778" layer="95" rot="R180"/>
 <pinref part="U5" gate="G$1" pin="DOUT"/>
 </segment>
@@ -11577,9 +11577,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <net name="IO23" class="0">
 <segment>
 <label x="2.413" y="-32.893" size="1.778" layer="95"/>
-<wire x1="0" y1="-33.02" x2="39.37" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="39.37" y1="-33.02" x2="39.37" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="39.37" y1="-66.04" x2="73.66" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="0" y1="-33.02" x2="40.64" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-33.02" x2="40.64" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-66.04" x2="73.66" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G$1" pin="CS"/>
 </segment>
 <segment>
