@@ -10790,11 +10790,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
 <part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="T1" library="transistor" deviceset="BC849" device=""/>
-<part name="AGND6" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND7" library="supply1" deviceset="AGND" device=""/>
 <part name="U1" library="parallax_propeller" deviceset="P8X32A-Q44" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
-<part name="Q1" library="special" deviceset="XTAL/S" device=""/>
+<part name="Q1" library="special" deviceset="XTAL/S" device="" value="5.0 MHz"/>
 <part name="R28" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R29" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R30" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -10830,6 +10828,8 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <part name="SUPPLY4" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY19" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY20" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10965,8 +10965,6 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="R27" gate="G$1" x="170.18" y="203.2" rot="R90"/>
 <instance part="C18" gate="G$1" x="170.18" y="218.44"/>
 <instance part="T1" gate="G$1" x="190.5" y="210.82"/>
-<instance part="AGND6" gate="VR1" x="208.28" y="241.3" rot="R270"/>
-<instance part="AGND7" gate="VR1" x="193.04" y="200.66"/>
 <instance part="U1" gate="P8X32A-Q44" x="33.02" y="35.56"/>
 <instance part="SUPPLY15" gate="G$1" x="2.54" y="7.62"/>
 <instance part="Q1" gate="G$1" x="58.42" y="10.16"/>
@@ -11006,6 +11004,8 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="SUPPLY4" gate="G$1" x="170.18" y="193.04"/>
 <instance part="SUPPLY8" gate="G$1" x="78.74" y="213.36"/>
 <instance part="SUPPLY11" gate="G$1" x="78.74" y="241.3"/>
+<instance part="SUPPLY19" gate="G$1" x="193.04" y="200.66"/>
+<instance part="SUPPLY20" gate="G$1" x="208.28" y="241.3" rot="R270"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -11776,6 +11776,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="U$12" gate="G$1" pin="V+"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <wire x1="-271.78" y1="83.82" x2="-271.78" y2="86.36" width="0.1524" layer="91"/>
+<junction x="-271.78" y="83.82"/>
 </segment>
 </net>
 <net name="AI3" class="0">
@@ -12100,6 +12101,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="-269.24" y1="-20.32" x2="-269.24" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="-269.24" y="-20.32"/>
 <pinref part="U$12" gate="G$1" pin="DATA"/>
+<junction x="-269.24" y="83.82"/>
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
@@ -12288,6 +12290,16 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="248.92" x2="78.74" y2="243.84" width="0.1524" layer="91"/>
 <junction x="78.74" y="243.84"/>
+</segment>
+<segment>
+<pinref part="T1" gate="G$1" pin="E"/>
+<wire x1="193.04" y1="203.2" x2="193.04" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="SUPPLY19" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="CN1" gate="G$1" pin="VSS"/>
+<wire x1="210.82" y1="241.3" x2="213.36" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="SUPPLY20" gate="G$1" pin="DGND"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -12521,16 +12533,6 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="U3" gate="G$1" pin="TEST"/>
 </segment>
 <segment>
-<pinref part="CN1" gate="G$1" pin="VSS"/>
-<pinref part="AGND6" gate="VR1" pin="AGND"/>
-<wire x1="210.82" y1="241.3" x2="213.36" y2="241.3" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="T1" gate="G$1" pin="E"/>
-<pinref part="AGND7" gate="VR1" pin="AGND"/>
-<wire x1="193.04" y1="203.2" x2="193.04" y2="205.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="ADC7" gate="G$1" pin="1"/>
 <pinref part="AGND10" gate="VR1" pin="AGND"/>
 </segment>
@@ -12608,14 +12610,11 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="U1" gate="P8X32A-Q44" pin="XO"/>
 <pinref part="Q1" gate="G$1" pin="1"/>
 <wire x1="50.8" y1="10.16" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
-<junction x="50.8" y="10.16"/>
-<junction x="53.34" y="10.16"/>
 </segment>
 </net>
 <net name="N$37" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="2"/>
-<junction x="63.5" y="10.16"/>
 <wire x1="63.5" y1="10.16" x2="68.58" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="10.16" x2="68.58" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="12.7" x2="63.5" y2="12.7" width="0.1524" layer="91"/>
@@ -12624,15 +12623,12 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="53.34" y1="15.24" x2="53.34" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="U1" gate="P8X32A-Q44" pin="XI"/>
 <wire x1="53.34" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
-<junction x="68.58" y="10.16"/>
-<junction x="50.8" y="12.7"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="CN2" gate="G$1" pin="D-"/>
 <pinref part="U3" gate="G$1" pin="USBDM"/>
-<wire x1="73.66" y1="220.98" x2="119.38" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="220.98" x2="119.38" y2="220.98" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -12680,6 +12676,20 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,116.84,165.1,U2,VCC,+3V3,,,"/>
+<approved hash="104,1,116.84,142.24,U2,GND,DGND,,,"/>
+<approved hash="104,1,40.64,137.16,U1P,VDD,+3V3,,,"/>
+<approved hash="104,1,40.64,134.62,U1P,VDD,+3V3,,,"/>
+<approved hash="104,1,40.64,132.08,U1P,VDD,+3V3,,,"/>
+<approved hash="104,1,40.64,129.54,U1P,VDD,+3V3,,,"/>
+<approved hash="104,1,58.42,137.16,U1P,VSS,DGND,,,"/>
+<approved hash="104,1,58.42,134.62,U1P,VSS,DGND,,,"/>
+<approved hash="104,1,58.42,132.08,U1P,VSS,DGND,,,"/>
+<approved hash="104,1,58.42,129.54,U1P,VSS,DGND,,,"/>
+<approved hash="104,1,73.66,226.06,CN2,VBUS,+5V,,,"/>
+<approved hash="104,1,73.66,215.9,CN2,GND,DGND,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
