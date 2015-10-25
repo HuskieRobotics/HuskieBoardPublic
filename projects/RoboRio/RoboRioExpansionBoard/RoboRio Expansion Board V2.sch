@@ -10863,7 +10863,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="P+10" gate="1" x="-115.57" y="92.71" rot="MR0"/>
 <instance part="C6" gate="G$1" x="106.68" y="177.8" rot="R180"/>
 <instance part="+3V5" gate="G$1" x="-193.04" y="162.56"/>
-<instance part="+3V14" gate="G$1" x="-88.9254" y="165.1" rot="R270"/>
+<instance part="+3V14" gate="G$1" x="-109.22" y="162.56" rot="R270"/>
 <instance part="C3" gate="G$1" x="-17.78" y="-95.25"/>
 <instance part="U4" gate="G$1" x="5.08" y="-93.98"/>
 <instance part="SUPPLY1" gate="G$1" x="-17.78" y="-106.68"/>
@@ -10971,14 +10971,14 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="SUPPLY15" gate="G$1" x="2.54" y="7.62"/>
 <instance part="Q1" gate="G$1" x="58.42" y="10.16"/>
 <instance part="U1" gate="P" x="48.26" y="132.08"/>
-<instance part="R28" gate="G$1" x="-127" y="167.64" rot="R180"/>
-<instance part="R29" gate="G$1" x="-127" y="160.02" rot="R180"/>
+<instance part="R28" gate="G$1" x="-127" y="139.7" rot="R180"/>
+<instance part="R29" gate="G$1" x="-127" y="154.94" rot="R180"/>
 <instance part="R30" gate="G$1" x="-127" y="142.24" rot="R180"/>
 <instance part="R31" gate="G$1" x="-127" y="144.78" rot="R180"/>
 <instance part="R32" gate="G$1" x="-127" y="147.32" rot="R180"/>
 <instance part="R33" gate="G$1" x="-127" y="149.86" rot="R180"/>
 <instance part="R34" gate="G$1" x="-127" y="152.4" rot="R180"/>
-<instance part="R35" gate="G$1" x="-127" y="154.94" rot="R180"/>
+<instance part="R35" gate="G$1" x="-127" y="137.16" rot="R180"/>
 <instance part="U5" gate="G$1" x="88.9" y="-76.2"/>
 <instance part="CN2" gate="G$1" x="63.5" y="220.98"/>
 <instance part="P+1" gate="1" x="73.66" y="233.68"/>
@@ -11183,13 +11183,12 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </segment>
 <segment>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
-<wire x1="-91.4654" y1="165.1" x2="-114.3" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="165.1" x2="-116.84" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="R28" gate="G$1" pin="1"/>
-<wire x1="-121.92" y1="167.64" x2="-121.92" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="139.7" x2="-121.92" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="R31" gate="G$1" pin="1"/>
-<wire x1="-121.92" y1="160.02" x2="-121.92" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="154.94" x2="-121.92" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="154.94" x2="-121.92" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="137.16" x2="-121.92" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="142.24" x2="-121.92" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="152.4" x2="-121.92" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="149.86" x2="-121.92" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="147.32" x2="-121.92" y2="144.78" width="0.1524" layer="91"/>
@@ -11200,14 +11199,17 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="R34" gate="G$1" pin="1"/>
 <junction x="-121.92" y="152.4"/>
 <pinref part="R35" gate="G$1" pin="1"/>
-<junction x="-121.92" y="154.94"/>
+<junction x="-121.92" y="137.16"/>
 <pinref part="R29" gate="G$1" pin="1"/>
-<junction x="-121.92" y="160.02"/>
-<wire x1="-116.84" y1="167.64" x2="-121.92" y2="167.64" width="0.1524" layer="91"/>
+<junction x="-121.92" y="154.94"/>
+<wire x1="-111.76" y1="162.56" x2="-114.3" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="162.56" x2="-121.92" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="154.94" x2="-121.92" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="R30" gate="G$1" pin="1"/>
 <wire x1="-121.92" y1="144.78" x2="-121.92" y2="142.24" width="0.1524" layer="91"/>
 <junction x="-121.92" y="144.78"/>
-<junction x="-121.92" y="167.64"/>
+<junction x="-121.92" y="139.7"/>
+<junction x="-121.92" y="142.24"/>
 </segment>
 <segment>
 <wire x1="-17.78" y1="-93.98" x2="-17.78" y2="-92.71" width="0.1524" layer="91"/>
@@ -11586,12 +11588,10 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </net>
 <net name="IO24" class="0">
 <segment>
-<wire x1="-137.16" y1="139.7" x2="-157.48" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="139.7" x2="-157.48" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="J2" gate="J$1" pin="SWITCH"/>
-<wire x1="-137.16" y1="167.64" x2="-137.16" y2="139.7" width="0.1524" layer="91"/>
 <label x="-154.94" y="139.7" size="1.778" layer="95"/>
 <label x="-144.78" y="139.7" size="1.778" layer="95"/>
-<wire x1="-137.16" y1="167.64" x2="-132.08" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="R28" gate="G$1" pin="2"/>
 </segment>
 <segment>
@@ -11603,11 +11603,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <net name="IO25" class="0">
 <segment>
 <pinref part="J2" gate="J$1" pin="D2_X"/>
-<wire x1="-139.7" y1="154.94" x2="-157.48" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="154.94" x2="-157.48" y2="154.94" width="0.1524" layer="91"/>
 <label x="-154.94" y="154.94" size="1.778" layer="95"/>
-<wire x1="-139.7" y1="160.02" x2="-139.7" y2="154.94" width="0.1524" layer="91"/>
 <label x="-144.78" y="154.94" size="1.778" layer="95"/>
-<wire x1="-139.7" y1="160.02" x2="-132.08" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="R29" gate="G$1" pin="2"/>
 </segment>
 <segment>
@@ -11620,9 +11618,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <segment>
 <pinref part="J2" gate="J$1" pin="DETECT"/>
 <label x="-154.94" y="137.16" size="1.778" layer="95"/>
-<wire x1="-157.48" y1="137.16" x2="-134.62" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="-134.62" y1="137.16" x2="-134.62" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="-134.62" y1="154.94" x2="-132.08" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="137.16" x2="-132.08" y2="137.16" width="0.1524" layer="91"/>
 <label x="-144.78" y="137.16" size="1.778" layer="95"/>
 <pinref part="R35" gate="G$1" pin="2"/>
 </segment>
