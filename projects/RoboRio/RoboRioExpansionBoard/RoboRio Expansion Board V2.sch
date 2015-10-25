@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
@@ -10807,14 +10807,6 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <part name="U3" library="FT232R" deviceset="FT232R" device="FTR232R"/>
 <part name="C9" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
-<part name="AGND10" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND11" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND12" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND13" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND14" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND15" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND16" library="supply1" deviceset="AGND" device=""/>
-<part name="AGND17" library="supply1" deviceset="AGND" device=""/>
 <part name="U$1" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="U$2" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="U$5" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
@@ -10830,6 +10822,14 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY19" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY20" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY21" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY22" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY23" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY24" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY25" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY26" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY27" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10847,8 +10847,8 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="R2" gate="G$1" x="12.7" y="101.6" rot="R180"/>
 <instance part="R5" gate="G$1" x="12.7" y="111.76" rot="R180"/>
 <instance part="R6" gate="G$1" x="12.7" y="121.92"/>
-<instance part="LCD" gate="G$1" x="100.33" y="-25.4" rot="R180"/>
-<instance part="P+9" gate="1" x="87.63" y="-15.24"/>
+<instance part="LCD" gate="G$1" x="99.06" y="-22.86" rot="R180"/>
+<instance part="P+9" gate="1" x="88.9" y="-12.7"/>
 <instance part="D2" gate="G$1" x="25.4" y="111.76" rot="R90"/>
 <instance part="D1" gate="G$1" x="25.4" y="101.6" rot="R90"/>
 <instance part="D3" gate="G$1" x="25.4" y="121.92" rot="R90"/>
@@ -10876,7 +10876,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="SUPPLY9" gate="G$1" x="-264.16" y="86.36" rot="R180"/>
 <instance part="SUPPLY10" gate="G$1" x="-193.04" y="127"/>
 <instance part="SUPPLY12" gate="G$1" x="160.02" y="124.46" rot="R90"/>
-<instance part="SUPPLY13" gate="G$1" x="85.09" y="-35.56"/>
+<instance part="SUPPLY13" gate="G$1" x="83.82" y="-33.02"/>
 <instance part="SUPPLY18" gate="G$1" x="-175.26" y="33.02"/>
 <instance part="ADC0" gate="G$1" x="213.36" y="-149.86" rot="R180"/>
 <instance part="SUPPLY16" gate="G$1" x="33.02" y="99.06"/>
@@ -10983,14 +10983,6 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="U3" gate="G$1" x="134.62" y="231.14"/>
 <instance part="C9" gate="G$1" x="78.74" y="251.46" rot="R180"/>
 <instance part="P+4" gate="1" x="81.28" y="259.08" rot="R270"/>
-<instance part="AGND10" gate="VR1" x="261.62" y="-63.5" rot="R270"/>
-<instance part="AGND11" gate="VR1" x="261.62" y="-88.9" rot="R270"/>
-<instance part="AGND12" gate="VR1" x="261.62" y="-116.84" rot="R270"/>
-<instance part="AGND13" gate="VR1" x="261.62" y="-144.78" rot="R270"/>
-<instance part="AGND14" gate="VR1" x="261.62" y="-172.72" rot="R270"/>
-<instance part="AGND15" gate="VR1" x="203.2" y="-147.32" rot="R270"/>
-<instance part="AGND16" gate="VR1" x="203.2" y="-116.84" rot="R270"/>
-<instance part="AGND17" gate="VR1" x="203.2" y="-88.9" rot="R270"/>
 <instance part="U$1" gate="G$1" x="-271.78" y="78.74" rot="R90"/>
 <instance part="U$2" gate="G$1" x="-271.78" y="66.04" rot="R90"/>
 <instance part="U$5" gate="G$1" x="-271.78" y="50.8" rot="R90"/>
@@ -11006,6 +10998,14 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <instance part="SUPPLY11" gate="G$1" x="78.74" y="241.3"/>
 <instance part="SUPPLY19" gate="G$1" x="193.04" y="200.66"/>
 <instance part="SUPPLY20" gate="G$1" x="208.28" y="241.3" rot="R270"/>
+<instance part="SUPPLY21" gate="G$1" x="261.62" y="-63.5" rot="R270"/>
+<instance part="SUPPLY22" gate="G$1" x="261.62" y="-88.9" rot="R270"/>
+<instance part="SUPPLY23" gate="G$1" x="261.62" y="-116.84" rot="R270"/>
+<instance part="SUPPLY24" gate="G$1" x="261.62" y="-144.78" rot="R270"/>
+<instance part="SUPPLY25" gate="G$1" x="261.62" y="-172.72" rot="R270"/>
+<instance part="SUPPLY26" gate="G$1" x="203.2" y="-147.32" rot="R270"/>
+<instance part="SUPPLY27" gate="G$1" x="203.2" y="-116.84" rot="R270"/>
+<instance part="SUPPLY28" gate="G$1" x="203.2" y="-88.9" rot="R270"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -11467,7 +11467,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </net>
 <net name="IO15" class="0">
 <segment>
-<wire x1="0" y1="-27.94" x2="92.71" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="0" y1="-25.4" x2="91.44" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="LCD" gate="G$1" pin="3"/>
 <label x="2.794" y="-27.94" size="1.778" layer="95"/>
 </segment>
@@ -11647,9 +11647,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <net name="+5V" class="0">
 <segment>
 <pinref part="LCD" gate="G$1" pin="2"/>
-<wire x1="87.63" y1="-17.78" x2="87.63" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="87.63" y1="-25.4" x2="92.71" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
+<wire x1="88.9" y1="-15.24" x2="88.9" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-22.86" x2="91.44" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-115.57" y1="90.17" x2="-115.57" y2="81.28" width="0.1524" layer="91"/>
@@ -12133,9 +12133,9 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </segment>
 <segment>
 <pinref part="LCD" gate="G$1" pin="1"/>
-<wire x1="92.71" y1="-22.86" x2="85.09" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="85.09" y1="-22.86" x2="85.09" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="SUPPLY13" gate="G$1" pin="DGND"/>
+<wire x1="83.82" y1="-30.48" x2="83.82" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-20.32" x2="91.44" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="8-DGND"/>
@@ -12302,6 +12302,38 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="CN1" gate="G$1" pin="VSS"/>
 <wire x1="210.82" y1="241.3" x2="213.36" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="SUPPLY20" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC7" gate="G$1" pin="1"/>
+<pinref part="SUPPLY21" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC6" gate="G$1" pin="1"/>
+<pinref part="SUPPLY22" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC5" gate="G$1" pin="1"/>
+<pinref part="SUPPLY23" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC4" gate="G$1" pin="1"/>
+<pinref part="SUPPLY24" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC3" gate="G$1" pin="1"/>
+<pinref part="SUPPLY25" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC0" gate="G$1" pin="1"/>
+<pinref part="SUPPLY26" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY27" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="ADC2" gate="G$1" pin="1"/>
+<pinref part="SUPPLY28" gate="G$1" pin="DGND"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -12533,38 +12565,6 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <pinref part="U3" gate="G$1" pin="GND1"/>
 <pinref part="U3" gate="G$1" pin="GND2"/>
 <pinref part="U3" gate="G$1" pin="TEST"/>
-</segment>
-<segment>
-<pinref part="ADC7" gate="G$1" pin="1"/>
-<pinref part="AGND10" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC6" gate="G$1" pin="1"/>
-<pinref part="AGND11" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC5" gate="G$1" pin="1"/>
-<pinref part="AGND12" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC4" gate="G$1" pin="1"/>
-<pinref part="AGND13" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC3" gate="G$1" pin="1"/>
-<pinref part="AGND14" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC0" gate="G$1" pin="1"/>
-<pinref part="AGND15" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC1" gate="G$1" pin="1"/>
-<pinref part="AGND16" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="ADC2" gate="G$1" pin="1"/>
-<pinref part="AGND17" gate="VR1" pin="AGND"/>
 </segment>
 </net>
 <net name="N$3" class="0">
