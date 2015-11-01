@@ -11142,6 +11142,74 @@ Source: RS Component / Phycomp</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="dp_devices">
+<description>Dangerous Prototypes Standard PCB sizes
+http://dangerousprototypes.com</description>
+<packages>
+<package name="SOT-23-5">
+<wire x1="1.422" y1="0.81" x2="1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.81" x2="-1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="51"/>
+<wire x1="-0.522" y1="0.81" x2="0.522" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-0.428" y1="-0.81" x2="-0.522" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="0.522" y1="-0.81" x2="0.428" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="-1.328" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="1.328" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.328" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="-1.328" y2="0.81" width="0.1524" layer="21"/>
+<smd name="1" x="-0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="2" x="0" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="3" x="0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="4" x="0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="5" x="-0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<text x="-1.5875" y="2.2225" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<text x="-1.905" y="-3.429" size="1.27" layer="27" font="vector" ratio="10">&gt;VALUE</text>
+<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
+<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
+<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MIC5205">
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.4064" layer="94"/>
+<text x="-7.62" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-7.62" y="8.255" size="1.778" layer="95">&gt;NAME</text>
+<pin name="OUT" x="12.7" y="5.08" length="middle" rot="R180"/>
+<pin name="BYP" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<pin name="IN" x="-12.7" y="5.08" length="middle"/>
+<pin name="GND" x="-12.7" y="0" length="middle"/>
+<pin name="EN" x="-12.7" y="-5.08" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VREG_5PINS" prefix="VREG" uservalue="yes">
+<description>5 pins voltage regulator</description>
+<gates>
+<gate name="G$1" symbol="MIC5205" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-SOT-23-5" package="SOT-23-5">
+<connects>
+<connect gate="G$1" pin="BYP" pad="4"/>
+<connect gate="G$1" pin="EN" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="OUT" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11306,11 +11374,22 @@ Source: RS Component / Phycomp</description>
 <part name="U$36" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="U$37" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="100-500"/>
+<part name="U6" library="dp_devices" deviceset="VREG_5PINS" device="-SOT-23-5" value="RT9193-33GB"/>
+<part name="C10" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
+<part name="P+10" library="supply1" deviceset="+5V" device=""/>
+<part name="C11" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
+<part name="C12" library="resistor" deviceset="C-EU" device="C0603K" value=".01uF"/>
+<part name="C13" library="resistor" deviceset="C-EU" device="C0603K" value=".01uF"/>
+<part name="SUPPLY29" library="supply2" deviceset="DGND" device=""/>
+<part name="SUPPLY31" library="supply2" deviceset="DGND" device=""/>
+<part name="P+12" library="supply1" deviceset="+5V" device=""/>
+<part name="SUPPLY32" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="68.58" y="-55.88" size="1.778" layer="91">EOC is not needed</text>
+<text x="-121.92" y="-58.42" size="1.778" layer="91">Together, these make a ~22nF cap</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="109.22" y="152.4"/>
@@ -11358,7 +11437,7 @@ Source: RS Component / Phycomp</description>
 <instance part="P+14" gate="1" x="256.54" y="-72.39" rot="R180"/>
 <instance part="D5" gate="G$1" x="-185.42" y="2.54" rot="R90"/>
 <instance part="SUPPLY39" gate="G$1" x="-177.8" y="-5.08"/>
-<instance part="+3V7" gate="G$1" x="-154.94" y="-7.62"/>
+<instance part="+3V7" gate="G$1" x="-119.38" y="-30.48"/>
 <instance part="P+16" gate="1" x="-200.66" y="12.7"/>
 <instance part="+3V3" gate="G$1" x="116.84" y="60.96" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="116.84" y="58.42" rot="R270"/>
@@ -11473,6 +11552,16 @@ Source: RS Component / Phycomp</description>
 <instance part="U$36" gate="G$1" x="241.3" y="60.96" rot="R180"/>
 <instance part="U$37" gate="G$1" x="96.52" y="-27.94" rot="R180"/>
 <instance part="R2" gate="G$1" x="-193.04" y="2.54" rot="R180"/>
+<instance part="U6" gate="G$1" x="-142.24" y="-43.18"/>
+<instance part="C10" gate="G$1" x="-175.26" y="-38.1"/>
+<instance part="P+10" gate="1" x="-175.26" y="-33.02"/>
+<instance part="C11" gate="G$1" x="-114.3" y="-40.64"/>
+<instance part="C12" gate="G$1" x="-129.54" y="-50.8"/>
+<instance part="C13" gate="G$1" x="-129.54" y="-58.42"/>
+<instance part="SUPPLY29" gate="G$1" x="-114.3" y="-48.26"/>
+<instance part="SUPPLY31" gate="G$1" x="-175.26" y="-45.72"/>
+<instance part="P+12" gate="1" x="-162.56" y="-48.26"/>
+<instance part="SUPPLY32" gate="G$1" x="-129.54" y="-66.04"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -11695,6 +11784,13 @@ Source: RS Component / Phycomp</description>
 <segment>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
+<pinref part="U6" gate="G$1" pin="OUT"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="-114.3" y1="-38.1" x2="-119.38" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="-38.1" x2="-129.54" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="-38.1" x2="-119.38" y2="-33.02" width="0.1524" layer="91"/>
+<junction x="-119.38" y="-38.1"/>
+<junction x="-119.38" y="-33.02"/>
 </segment>
 <segment>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
@@ -12205,6 +12301,21 @@ Source: RS Component / Phycomp</description>
 <wire x1="-200.66" y1="10.16" x2="-200.66" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-200.66" y1="5.08" x2="-198.12" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="EN"/>
+<wire x1="-154.94" y1="-48.26" x2="-157.48" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="-48.26" x2="-160.02" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-160.02" y1="-50.8" x2="-162.56" y2="-50.8" width="0.1524" layer="91"/>
+<pinref part="P+12" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
+<pinref part="U6" gate="G$1" pin="IN"/>
+<wire x1="-154.94" y1="-38.1" x2="-157.48" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="-35.56" x2="-175.26" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-175.26" y="-35.56"/>
 </segment>
 </net>
 <net name="AI3" class="0">
@@ -12816,6 +12927,21 @@ Source: RS Component / Phycomp</description>
 <pinref part="SUPPLY47" gate="G$1" pin="DGND"/>
 <pinref part="U$36" gate="G$1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
+<pinref part="SUPPLY29" gate="G$1" pin="DGND"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="SUPPLY31" gate="G$1" pin="DGND"/>
+<pinref part="U6" gate="G$1" pin="GND"/>
+<wire x1="-175.26" y1="-43.18" x2="-154.94" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="-175.26" y="-43.18"/>
+</segment>
+<segment>
+<pinref part="C13" gate="G$1" pin="2"/>
+<pinref part="SUPPLY32" gate="G$1" pin="DGND"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -13084,6 +13210,18 @@ Source: RS Component / Phycomp</description>
 <segment>
 <pinref part="D5" gate="G$1" pin="A"/>
 <pinref part="R2" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="C12" gate="G$1" pin="2"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="BYP"/>
+<pinref part="C12" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
