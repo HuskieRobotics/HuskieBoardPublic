@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11298,8 +11298,8 @@ http://dangerousprototypes.com</description>
 <part name="D7" library="led" deviceset="LED" device="CHIPLED_0603" value="BLUE"/>
 <part name="C17" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
-<part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
-<part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
+<part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
+<part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value="0.01uF"/>
 <part name="T1" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
 <part name="U1" library="parallax_propeller" deviceset="P8X32A-Q44" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
@@ -13255,10 +13255,6 @@ a ~22nF cap</text>
 <wire x1="106.68" y1="182.88" x2="71.12" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="182.88" x2="66.04" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="177.8" x2="66.04" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="111.76" x2="48.26" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="114.3" x2="50.8" y2="114.3" width="0.1524" layer="91"/>
@@ -13287,6 +13283,11 @@ a ~22nF cap</text>
 <pinref part="U1" gate="P" pin="VDD@1"/>
 <wire x1="55.88" y1="111.76" x2="55.88" y2="114.3" width="0.1524" layer="91"/>
 <junction x="22.86" y="114.3"/>
+<wire x1="55.88" y1="114.3" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="114.3" x2="71.12" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="124.46" x2="71.12" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="152.4" x2="66.04" y2="157.48" width="0.1524" layer="91"/>
+<junction x="66.04" y="157.48"/>
 </segment>
 </net>
 </nets>
