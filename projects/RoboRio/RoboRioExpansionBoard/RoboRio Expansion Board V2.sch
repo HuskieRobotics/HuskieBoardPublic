@@ -13991,7 +13991,7 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="SUPPLY38" library="supply2" deviceset="DGND" device=""/>
 <part name="D4" library="diode" deviceset="DIODE-" device="DO-214AC" value="SSA34-E3/61T"/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
-<part name="IC1" library="ftdichip" deviceset="FT232R" device="L"/>
+<part name="U3" library="ftdichip" deviceset="FT232R" device="L"/>
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 <part name="D8" library="diode" deviceset="DIODE-" device="DO-214AC" value="SSA34-E3/61T"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
@@ -14194,7 +14194,7 @@ not needed.</text>
 <instance part="SUPPLY38" gate="G$1" x="55.88" y="129.54"/>
 <instance part="D4" gate="G$1" x="-172.72" y="22.86"/>
 <instance part="P+3" gate="1" x="-157.48" y="22.86" rot="R270"/>
-<instance part="IC1" gate="1" x="124.46" y="233.68"/>
+<instance part="U3" gate="1" x="124.46" y="233.68"/>
 <instance part="SUPPLY40" gate="G$1" x="144.78" y="205.74"/>
 <instance part="D8" gate="G$1" x="78.74" y="269.24"/>
 <instance part="P+4" gate="1" x="83.82" y="276.86" rot="R270"/>
@@ -15484,7 +15484,7 @@ not needed.</text>
 <pinref part="SUPPLY38" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="GND@A"/>
+<pinref part="U3" gate="1" pin="GND@A"/>
 <pinref part="SUPPLY20" gate="G$1" pin="DGND"/>
 <wire x1="106.68" y1="215.9" x2="111.76" y2="215.9" width="0.1524" layer="91"/>
 </segment>
@@ -15493,14 +15493,14 @@ not needed.</text>
 <pinref part="SUPPLY52" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="GND@1"/>
-<pinref part="IC1" gate="1" pin="GND@2"/>
+<pinref part="U3" gate="1" pin="GND@1"/>
+<pinref part="U3" gate="1" pin="GND@2"/>
 <wire x1="139.7" y1="208.28" x2="139.7" y2="210.82" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="GND"/>
+<pinref part="U3" gate="1" pin="GND"/>
 <wire x1="139.7" y1="213.36" x2="139.7" y2="210.82" width="0.1524" layer="91"/>
 <junction x="139.7" y="210.82"/>
 <junction x="139.7" y="213.36"/>
-<pinref part="IC1" gate="1" pin="TEST"/>
+<pinref part="U3" gate="1" pin="TEST"/>
 <wire x1="139.7" y1="213.36" x2="139.7" y2="218.44" width="0.1524" layer="91"/>
 <junction x="139.7" y="208.28"/>
 <pinref part="SUPPLY40" gate="G$1" pin="DGND"/>
@@ -15661,7 +15661,7 @@ not needed.</text>
 <segment>
 <wire x1="165.1" y1="254" x2="139.7" y2="254" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="B" pin="1"/>
-<pinref part="IC1" gate="1" pin="RXD"/>
+<pinref part="U3" gate="1" pin="RXD"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -15669,7 +15669,7 @@ not needed.</text>
 <wire x1="154.94" y1="256.54" x2="160.02" y2="261.62" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="261.62" x2="165.1" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="C" pin="1"/>
-<pinref part="IC1" gate="1" pin="TXD"/>
+<pinref part="U3" gate="1" pin="TXD"/>
 <wire x1="154.94" y1="256.54" x2="139.7" y2="256.54" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15708,21 +15708,21 @@ not needed.</text>
 <segment>
 <pinref part="CN2" gate="G$1" pin="D-"/>
 <wire x1="73.66" y1="220.98" x2="111.76" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="USBDM"/>
+<pinref part="U3" gate="1" pin="USBDM"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="CN2" gate="G$1" pin="D+"/>
 <wire x1="73.66" y1="223.52" x2="111.76" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="USBDP"/>
+<pinref part="U3" gate="1" pin="USBDP"/>
 </segment>
 </net>
 <net name="N$19" class="0">
 <segment>
 <pinref part="C18" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="246.38" x2="139.7" y2="246.38" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="!DTR"/>
+<pinref part="U3" gate="1" pin="!DTR"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -15750,7 +15750,7 @@ not needed.</text>
 <wire x1="76.2" y1="256.54" x2="111.76" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="233.68" x2="76.2" y2="233.68" width="0.1524" layer="91"/>
 <junction x="76.2" y="233.68"/>
-<pinref part="IC1" gate="1" pin="VCC"/>
+<pinref part="U3" gate="1" pin="VCC"/>
 <pinref part="D8" gate="G$1" pin="A"/>
 <wire x1="76.2" y1="269.24" x2="76.2" y2="256.54" width="0.1524" layer="91"/>
 <junction x="76.2" y="256.54"/>
@@ -15940,9 +15940,9 @@ not needed.</text>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
 <wire x1="91.44" y1="251.46" x2="91.44" y2="254" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="VCCIO"/>
+<pinref part="U3" gate="1" pin="VCCIO"/>
 <wire x1="91.44" y1="254" x2="106.68" y2="254" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="3V3OUT"/>
+<pinref part="U3" gate="1" pin="3V3OUT"/>
 <wire x1="106.68" y1="254" x2="111.76" y2="254" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="228.6" x2="106.68" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="228.6" x2="106.68" y2="254" width="0.1524" layer="91"/>
@@ -15951,21 +15951,21 @@ not needed.</text>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="IC1" gate="1" pin="CBUS0"/>
+<pinref part="U3" gate="1" pin="CBUS0"/>
 <pinref part="D7" gate="G$1" pin="A"/>
 <wire x1="165.1" y1="233.68" x2="139.7" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
-<pinref part="IC1" gate="1" pin="CBUS1"/>
+<pinref part="U3" gate="1" pin="CBUS1"/>
 <pinref part="D6" gate="G$1" pin="A"/>
 <wire x1="157.48" y1="231.14" x2="139.7" y2="231.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CBUS2" class="0">
 <segment>
-<pinref part="IC1" gate="1" pin="CBUS2"/>
+<pinref part="U3" gate="1" pin="CBUS2"/>
 <wire x1="139.7" y1="228.6" x2="149.86" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="228.6" x2="149.86" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="193.04" x2="48.26" y2="193.04" width="0.1524" layer="91"/>
