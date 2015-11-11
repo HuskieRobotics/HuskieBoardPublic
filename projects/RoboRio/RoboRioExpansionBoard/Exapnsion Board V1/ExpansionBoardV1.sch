@@ -10222,6 +10222,42 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="24LC256">
+<packages>
+<package name="24LC256">
+<pad name="P$1" x="-3.81" y="1.27" drill="0.8" shape="square"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-7.62" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="2.54" width="0.127" layer="21"/>
+<wire x1="7.62" y1="2.54" x2="-2.54" y2="2.54" width="0.127" layer="21"/>
+<pad name="P$2" x="-3.81" y="-1.27" drill="0.8" shape="square"/>
+<pad name="P$3" x="-3.81" y="-3.81" drill="0.8" shape="square"/>
+<pad name="P$4" x="-3.81" y="-6.35" drill="0.8" shape="square"/>
+<wire x1="-2.54" y1="-7.62" x2="7.62" y2="-7.62" width="0.127" layer="21"/>
+<pad name="P$5" x="8.89" y="1.27" drill="0.8" shape="square"/>
+<pad name="P$6" x="8.89" y="-1.27" drill="0.8" shape="square"/>
+<pad name="P$7" x="8.89" y="-3.81" drill="0.8" shape="square"/>
+<pad name="P$8" x="8.89" y="-6.35" drill="0.8" shape="square"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="0" width="0.127" layer="21"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="-2.54" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+</symbols>
+<devicesets>
+<deviceset name="24LC256(MICROCHIP)">
+<gates>
+</gates>
+<devices>
+<device name="" package="24LC256">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10282,7 +10318,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V16" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="DGND" device=""/>
-<part name="SUPPLY8" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY9" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY12" library="supply2" deviceset="DGND" device=""/>
@@ -10404,6 +10439,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
 <part name="AGND2" library="supply1" deviceset="AGND" device=""/>
 <part name="TP3V3" library="testpad" deviceset="TPS" device="PAD1-13"/>
+<part name="U$1" library="24LC256" deviceset="24LC256(MICROCHIP)" device=""/>
+<part name="U$2" library="24LC256" deviceset="24LC256(MICROCHIP)" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10416,7 +10453,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="U2" gate="G$1" x="-10.16" y="134.62"/>
 <instance part="+3V2" gate="G$1" x="0" y="165.1" rot="R270"/>
 <instance part="R1" gate="G$1" x="10.16" y="144.78" rot="R180"/>
-<instance part="P1" gate="G$1" x="71.12" y="139.7"/>
+<instance part="P1" gate="G$1" x="147.32" y="139.7"/>
 <instance part="J1" gate="G$1" x="-287.02" y="43.18"/>
 <instance part="+3V4" gate="G$1" x="-66.04" y="114.3"/>
 <instance part="U1" gate="P" x="-53.34" y="101.6"/>
@@ -10462,7 +10499,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="SUPPLY3" gate="G$1" x="-53.34" y="-111.76"/>
 <instance part="+3V16" gate="G$1" x="-106.68" y="-83.82"/>
 <instance part="SUPPLY7" gate="G$1" x="-45.72" y="73.66"/>
-<instance part="SUPPLY8" gate="G$1" x="40.64" y="139.7"/>
 <instance part="SUPPLY9" gate="G$1" x="-353.06" y="106.68" rot="R180"/>
 <instance part="SUPPLY10" gate="G$1" x="-165.1" y="40.64"/>
 <instance part="SUPPLY12" gate="G$1" x="40.64" y="106.68" rot="R90"/>
@@ -10692,22 +10728,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </net>
 <net name="SPECIAL30" class="0">
 <segment>
-<pinref part="P1" gate="G$1" pin="&gt;RX"/>
-<wire x1="35.56" y1="129.54" x2="48.26" y2="129.54" width="0.1524" layer="91"/>
-<label x="30.48" y="129.54" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U1" gate="P8X32A-D40" pin="P30"/>
 <wire x1="-25.4" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
 <label x="-27.94" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPECIAL31" class="0">
-<segment>
-<pinref part="P1" gate="G$1" pin="&lt;TX"/>
-<wire x1="35.56" y1="132.08" x2="48.26" y2="132.08" width="0.1524" layer="91"/>
-<label x="30.48" y="132.08" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U1" gate="P8X32A-D40" pin="P31"/>
 <wire x1="-25.4" y1="50.8" x2="-30.48" y2="50.8" width="0.1524" layer="91"/>
@@ -10856,11 +10882,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-66.04" y1="58.42" x2="-66.04" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="5.08" x2="-63.5" y2="5.08" width="0.1524" layer="91"/>
 <label x="-35.56" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="P1" gate="G$1" pin="RES"/>
-<wire x1="35.56" y1="134.62" x2="48.26" y2="134.62" width="0.1524" layer="91"/>
-<label x="30.48" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="7.62" y1="116.84" x2="7.62" y2="106.68" width="0.1524" layer="91"/>
@@ -11663,11 +11684,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-162.56" y1="66.04" x2="-165.1" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-165.1" y1="66.04" x2="-165.1" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-165.1" y="60.96"/>
-</segment>
-<segment>
-<pinref part="P1" gate="G$1" pin="VSS"/>
-<wire x1="40.64" y1="142.24" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="SUPPLY8" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="LCD" gate="G$1" pin="1"/>

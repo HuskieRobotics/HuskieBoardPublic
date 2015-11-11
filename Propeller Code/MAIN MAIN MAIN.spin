@@ -13,21 +13,21 @@ CON
         EEPROM_SCL = 28
         
 
-        LCD_Pin    = 15
-        LCD_Baud   = 19_200
+        LCD_Pin    = 15       'pin the LCD is connected to
+        LCD_Baud   = 19_200   'how fast the lcd can recieve information
 
         ADC_CS     = 23
-        ADC_DI     = 22
-        ADC_DO     = 21
-        ADC_CLK    = 20
+        ADC_DO     = 22  'ADC data out
+        ADC_DI     = 21  'ADC data in
+        ADC_CLK    = 20  'ACD clock rate
 
         GPIO0      = 4
         GPIO1      = 5
         GPIO2      = 6
         GPIO3      = 7
-
+                          'RX = recieve TX = send
         RRIO_TX    = 19   'so RX on propeller
-        RRIO_RX    = 8
+        RRIO_RX    = 8    'so TX on propeller
                               
         PROP_RRIO_TX = RRIO_RX     'TX from propeller to roborio
         PROP_RRIO_RX = RRIO_TX     'RX to propeller from roborio
@@ -38,7 +38,7 @@ CON
         RRIO_MOSI  = 12
         RRIO_SCL   = 13
         RRIO_SDA   = 14
-        {  'What they were supposed to be connected to, but are not...         
+        {  'What they were supposed to be connected to, but are not, because I'm surrounded by fools  
         SD_D2      = 25
         SD_D3      = 27
         SD_CMD     = 3
@@ -75,11 +75,13 @@ CON
         on         = true
         off        = false
 VAR
-  long  pointerToPointerThing
-  long  adcpointer
-  long  ldcpointer
-  long  datFileName[32] 'file name can't be longer than 128 bytes
+  long  sdpointer 'SD data pointer - this contains all data to write to the card
+  long  adcpointer'ADC data pointer - this tells the ADC what to do
+  long  lcdpointer'LCD data pointer - this will tell the LCD what to display, assuming we ever actually implement the LCD
+  long  FAT32Time
+  byte  datFileName[256] 'file name can't be longer than 250 bytes because reasons
   byte  stop
+  byte  robotData[8] 'main transmission data
   'long neopointer
    
 OBJ
@@ -95,21 +97,60 @@ PUB main
   adc.start2pin(ADC_DI,ADC_DO,ADC_CLK,ADC_CS,$00FF)
   adcpointer := adc.pointer
   'starts the string logger            
-  RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@pointerToPointerThing,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN)
+  RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@sdpointer,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN,@FAT32Time,@robotData)
   'starts the sd card
                    
-  'DIRA[25] :=  1
-  'DIRA[0]  :=  1
-  'OUTA[25] :=  0
-  'OUTA[0]  :=  0
-  sd.init(27,25,0,1,@pointerToPointerThing,@datFileName,adcpointer, @stop)
+  sd.init(27,25,0,1,@sdpointer,@datFileName,adcpointer, @stop,@FAT32Time)
           'SD_DO,SD_SCLK,SD_DI,SD_CS
 
+  dipSwitchLEDs
+CON 'constants for the dipSwitchLED code.
+  DIP1 = RRIO_CS
+  DIP2 = RRIO_CLK
+  DIP3 = RRIO_MISO
+  DIP4 = RRIO_MOSI
+                         'remember to invert pins since on is logic low.
+                         'also remember that ! will also invert the first 28 bits, so can't be used.
+                         
+  MODE_DoNothing = %1111
+  MODE_Forward   = %1001
+  MODE_TurnLeft  = %1110
+  MODE_TurnRight = %0111
+  MODE_3Tote     = %0000
 
-  'update yellow and green LEDs to be inverse of I2C inputs
-  {DIRA[LED_YELLOW]:= output
-  DIRA[LED_GREEN]:= output    
+PUB dipSwitchLEDs | mode 'this code may or may not be completely redundant
+  'run LEDs to show which mode is selected
+  DIRA[LED_YELLOW] := output
+  DIRA[LED_GREEN]  := output
+  DIRA[LED_RED]    := output
+  
+  DIRA[DIP1 .. DIP4]  := input   'set all DIP pins to input
+  
   repeat
-    OUTA[LED_YELLOW] := not INA[RRIO_SDA]
-    OUTA[LED_GREEN] := not INA[RRIO_SCL]          '}    
+    mode := INA[DIP1 .. DIP4] 'get all DIP pin values
+
+    if     (mode == MODE_DoNothing)                       
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := off 
+    elseif (mode == MODE_Forward)                                 
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := on
+      OUTA[LED_GREEN]  := off 
+    elseif (mode == MODE_TurnLeft)                                 
+      OUTA[LED_RED]    := on
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := off 
+    elseif (mode == MODE_TurnRight)                                 
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := on 
+    elseif (mode == MODE_3Tote)                                 
+      OUTA[LED_RED]    := on
+      OUTA[LED_YELLOW] := on
+      OUTA[LED_GREEN]  := on 
+    else'otherwise turn off status LEDs                              
+      OUTA[LED_RED]    := off
+      OUTA[LED_YELLOW] := off
+      OUTA[LED_GREEN]  := off                           
                                                         

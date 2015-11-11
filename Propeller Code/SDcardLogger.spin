@@ -17,13 +17,15 @@ VAR
   long index
   byte DO, CLK, DI, CS
   long datfilename , lastfilename
+  long timepointer
+  byte currCogID
    
 OBJ
   sd : "fsrw"     
   pst : "Parallax Serial Terminal"
   
   
-PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | insert_card
+PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,timepointer_) | insert_card
   DO := d0
   CLK := clk1
   DI := di1
@@ -31,12 +33,23 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_) | 
   adcpointer := adcpointer_
   datfilename := savefilename
   stopPointer := stopPointer_
+  timepointer := timepointer_
+  stop := false  
   pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
   pst.str(string("SD card works!",13))
 ''creates new cog
-  return cognew(start,@stack)
+  currCogID := cognew(start,@stack)
+  return currCogID
+PUB reinit
+  pst.str(string("Resetting SD card logger!"))
+  stop
+  long[datfilename] := 0
+  cogstop(currCogID)  'does this end the current function if the current function is in the cog it's stopping?
+  longfill(@stack,0,512) 'clears the stack. Just because.
+  currCogID := cognew(start,@stack)
+  return currCogID
 PRI start  | loc
   dira[LED_YELLOW]:=true'set yellow LED to output
 ''sets the stop boolean to false (otherwise program will exit immediately)
@@ -50,14 +63,26 @@ PRI start  | loc
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
     pst.str(string("Waiting for packet or file name",13))
+
+  
+  'setting current date:      
+  sd.setdatedirect(long[timepointer])
+  'don't worry if the date is uninitialized, since fsrw takes care of timestamps of 0.
+  'date must be set BEFORE the file is opened, it will not update during the run
+
+  
+  'Don't forget that we are using FAT32, which means that our file name is 8.3 long (8 name, 3 extension chars)
+  'Longer file names will be compressed. Also, FAT32 doesn't support lower-case letters in the filename, so those
+  'are also automatically converted to caps. 
   if long[datfilename] == 0 'has the filename still not been set?
-    sd.popen(@testb,"w")    'just append to match.csv
+    sd.popen(@testb,"a")    'just append to match.csv
     sd.pputs(String(13,10,"-=-=-=-=-=-=-=-=-=-=BEGIN NEW MATCH=-=-=-=-=-=-=-=-=-=-",13,10)) 'show that it is a new match
   else
-    repeat loc from datfilename to datfilename+strsize(datfilename)
+    repeat loc from datfilename to datfilename+strsize(datfilename)      'don't allow illegal characters!
       if not lookup(byte[loc]:"\","/",":","?","*","<",">","|",34) == 0   'double quote is 34
         byte[loc]:="_"
-    sd.popen(datfilename,"w")       'open a (probably) new file
+    sd.popen(datfilename,"a")       'append to the file, not worrying if it already exists.
+    
     
   pst.str(string("Starting main loop!"))
   
@@ -67,9 +92,12 @@ PRI mainLoop | x ,channel
  'repeats until this object's stop function is called
 
   
-  repeat 'while !stop       
+  repeat while !stop       
     pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
+      if(long[pointer] == string("stop")) 'can i do this? Or is string testing done a different way?
+        reinit
+        return
       lastpointer := long[pointer]
       sd.pputs(long[pointer]) ''writes data
       repeat channel from 0 to 7
@@ -83,6 +111,7 @@ PRI mainLoop | x ,channel
       sd.pflush
       dira[LED_YELLOW]:=true'set yellow LED to on, signifying one line was written        
        'set the last pointer
+    
   'sd.pclose   
 PUB end ''stops program
   sd.pclose
