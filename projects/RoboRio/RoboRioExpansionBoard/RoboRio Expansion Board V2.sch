@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -8651,90 +8651,70 @@ In this library the device names are the same as the pin names of the symbols, t
 </library>
 <library name="MicroSdSocket">
 <packages>
-<package name="MICRO_SD_PUSH-PUSH">
-<description>Molex 5031821853</description>
-<smd name="P$1" x="5.1" y="5.73" dx="1.24" dy="0.8" layer="1" rot="R270"/>
-<smd name="P$2" x="4" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$3" x="2.9" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$4" x="1.8" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$5" x="0.7" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$6" x="-0.4" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$7" x="-1.5" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$8" x="-2.6" y="5.73" dx="0.8" dy="1.24" layer="1"/>
-<smd name="P$14" x="-2.54" y="-7.03" dx="1.5" dy="1.15" layer="1"/>
-<smd name="P$15" x="5.24" y="-7.03" dx="1.5" dy="1.15" layer="1"/>
-<smd name="P$12" x="-6.95" y="5.1" dx="0.95" dy="2.5" layer="1"/>
-<smd name="P$13" x="-6.84" y="-6.23" dx="1.15" dy="2.2" layer="1"/>
-<smd name="P$11" x="7.43" y="5.25" dx="1.15" dy="2.2" layer="1"/>
-<smd name="P$9" x="7.04" y="3.1" dx="1.16" dy="1.25" layer="1"/>
-<smd name="P$10" x="7.04" y="-5.88" dx="1.16" dy="1.2" layer="1"/>
-<text x="-7.4" y="-9.9" size="1.27" layer="25">&gt;NAME</text>
-<text x="-7.4" y="-11.9" size="1.27" layer="27">&gt;VALUES</text>
-<rectangle x1="-3.35" y1="-3.3" x2="5.85" y2="0.1" layer="39"/>
-<wire x1="-6.72" y1="7.6" x2="-5.14" y2="7.6" width="0.127" layer="21"/>
-<wire x1="-5.14" y1="7.6" x2="5.86" y2="7.6" width="0.127" layer="21"/>
-<wire x1="5.86" y1="7.6" x2="7.42" y2="7.6" width="0.127" layer="21"/>
-<wire x1="-6.72" y1="-7.35" x2="7.42" y2="-7.35" width="0.127" layer="21"/>
-<wire x1="-6.72" y1="-7.35" x2="-6.72" y2="7.6" width="0.127" layer="21"/>
-<wire x1="-5.14" y1="7.6" x2="-5.14" y2="10" width="0.127" layer="21"/>
-<wire x1="-5.14" y1="10" x2="5.86" y2="10" width="0.127" layer="21"/>
-<wire x1="5.86" y1="10" x2="5.86" y2="7.6" width="0.127" layer="21"/>
-<rectangle x1="7.374" y1="-4.801" x2="7.774" y2="-2.401" layer="39"/>
-<wire x1="7.4" y1="7.6" x2="7.421" y2="7.6" width="0.127" layer="21"/>
-<wire x1="7.421" y1="7.6" x2="7.421" y2="7.289" width="0.127" layer="21"/>
-<wire x1="7.421" y1="7.289" x2="7.419" y2="7.292" width="0.127" layer="21"/>
-<wire x1="7.419" y1="7.292" x2="7.444" y2="-2.293" width="0.127" layer="21"/>
-<wire x1="7.419" y1="-7.349" x2="7.424" y2="-4.899" width="0.127" layer="21"/>
+<package name="MICRO_SD_HINGED_TYPE">
+<smd name="P8" x="-3.81491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P7" x="-2.71491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P6" x="-1.61491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P5" x="-0.51491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P4" x="0.58508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P3" x="1.68508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P2" x="2.78508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P1" x="3.88508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<text x="-6" y="-8" size="1.27" layer="25">&gt;NAME</text>
+<smd name="G4" x="-6.19491875" y="-2.53" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G1" x="7.55508125" y="-2.53" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G3" x="-6.19491875" y="4.77" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G2" x="7.55508125" y="4.77" dx="2" dy="1.45" layer="1" rot="R90"/>
+<wire x1="-6.42" y1="-6.58" x2="7.18" y2="-6.58" width="0.01" layer="21"/>
+<wire x1="-6.42" y1="7.92" x2="-6.42" y2="-6.58" width="0.01" layer="21"/>
+<wire x1="7.18" y1="-6.58" x2="7.18" y2="7.92" width="0.01" layer="21"/>
+<wire x1="7.18" y1="7.92" x2="-6.42" y2="7.92" width="0.01" layer="21"/>
+<wire x1="-6.92" y1="-3.53" x2="-6.92" y2="-3.54" width="0.01" layer="21"/>
+<text x="1" y="-8" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
-<symbol name="MICROSD">
-<pin name="D2_X" x="17.78" y="10.16" length="middle" rot="R180"/>
-<pin name="CD/D3_CS" x="17.78" y="7.62" length="middle" rot="R180"/>
-<pin name="CMD_DI" x="17.78" y="5.08" length="middle" rot="R180"/>
-<pin name="VDD" x="-15.24" y="10.16" length="middle"/>
-<pin name="CLK_SCLK" x="17.78" y="2.54" length="middle" rot="R180"/>
-<pin name="VSS" x="-15.24" y="7.62" length="middle"/>
-<pin name="D0_DO" x="17.78" y="0" length="middle" rot="R180"/>
-<pin name="D1_X" x="17.78" y="-2.54" length="middle" rot="R180"/>
-<pin name="SKT1" x="-15.24" y="2.54" length="middle"/>
-<pin name="SKT2" x="-15.24" y="0" length="middle"/>
-<pin name="SKT3" x="-15.24" y="-2.54" length="middle"/>
-<pin name="SKT4" x="-15.24" y="-5.08" length="middle"/>
-<pin name="SKT5" x="-15.24" y="-7.62" length="middle"/>
-<pin name="SWITCH" x="17.78" y="-5.08" length="middle" rot="R180"/>
-<pin name="DETECT" x="17.78" y="-7.62" length="middle" rot="R180"/>
-<wire x1="12.7" y1="-10.16" x2="12.7" y2="12.7" width="0.254" layer="94"/>
-<wire x1="12.7" y1="12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="12.7" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
-<text x="-10.16" y="12.7" size="1.778" layer="94">&gt;NAME</text>
-<text x="-10.16" y="-12.7" size="1.778" layer="94">&gt;VALUE</text>
+<symbol name="MICROSD-HINGED">
+<pin name="D2" x="15.24" y="10.16" length="middle" rot="R180"/>
+<pin name="CD/D3" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="CMD" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="VDD" x="-17.78" y="10.16" length="middle"/>
+<pin name="CLK" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="VSS" x="-17.78" y="7.62" length="middle"/>
+<pin name="D0" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="D1" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="GND1" x="-17.78" y="2.54" length="middle"/>
+<pin name="GND2" x="-17.78" y="0" length="middle"/>
+<pin name="GND3" x="-17.78" y="-2.54" length="middle"/>
+<pin name="GND4" x="-17.78" y="-5.08" length="middle"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="12.7" x2="-12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<text x="-12.7" y="12.7" size="1.778" layer="94">&gt;NAME</text>
+<text x="-12.7" y="-10.16" size="1.778" layer="94">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MICROSD">
+<deviceset name="MICROSD-HINGED">
 <gates>
-<gate name="J$1" symbol="MICROSD" x="48.26" y="-12.7"/>
+<gate name="G$1" symbol="MICROSD-HINGED" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="MICRO_SD_PUSH-PUSH">
+<device name="" package="MICRO_SD_HINGED_TYPE">
 <connects>
-<connect gate="J$1" pin="CD/D3_CS" pad="P$2"/>
-<connect gate="J$1" pin="CLK_SCLK" pad="P$5"/>
-<connect gate="J$1" pin="CMD_DI" pad="P$3"/>
-<connect gate="J$1" pin="D0_DO" pad="P$7"/>
-<connect gate="J$1" pin="D1_X" pad="P$8"/>
-<connect gate="J$1" pin="D2_X" pad="P$1"/>
-<connect gate="J$1" pin="DETECT" pad="P$10"/>
-<connect gate="J$1" pin="SKT1" pad="P$11"/>
-<connect gate="J$1" pin="SKT2" pad="P$12"/>
-<connect gate="J$1" pin="SKT3" pad="P$13"/>
-<connect gate="J$1" pin="SKT4" pad="P$14"/>
-<connect gate="J$1" pin="SKT5" pad="P$15"/>
-<connect gate="J$1" pin="SWITCH" pad="P$9"/>
-<connect gate="J$1" pin="VDD" pad="P$4"/>
-<connect gate="J$1" pin="VSS" pad="P$6"/>
+<connect gate="G$1" pin="CD/D3" pad="P2"/>
+<connect gate="G$1" pin="CLK" pad="P5"/>
+<connect gate="G$1" pin="CMD" pad="P3"/>
+<connect gate="G$1" pin="D0" pad="P7"/>
+<connect gate="G$1" pin="D1" pad="P8"/>
+<connect gate="G$1" pin="D2" pad="P1"/>
+<connect gate="G$1" pin="GND1" pad="G1"/>
+<connect gate="G$1" pin="GND2" pad="G2"/>
+<connect gate="G$1" pin="GND3" pad="G3"/>
+<connect gate="G$1" pin="GND4" pad="G4"/>
+<connect gate="G$1" pin="VDD" pad="P4"/>
+<connect gate="G$1" pin="VSS" pad="P6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12133,7 +12113,6 @@ Please send any comments to: &lt;a href="mailto:messi@users.sourceforge.net"&gt;
 <part name="+3V21" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY50" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
-<part name="J2" library="MicroSdSocket" deviceset="MICROSD" device=""/>
 <part name="C8" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="C7" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="D6" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
@@ -12146,14 +12125,12 @@ Please send any comments to: &lt;a href="mailto:messi@users.sourceforge.net"&gt;
 <part name="U1" library="parallax_propeller" deviceset="P8X32A-Q44" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="Q1" library="special" deviceset="XTAL/S" device="" value="5.0 MHz"/>
-<part name="R28" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R29" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R30" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R31" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R32" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R33" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R34" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="R35" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="CN2" library="adafruit" deviceset="USB" device="MINIB"/>
 <part name="C9" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="PWM0" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
@@ -12265,6 +12242,7 @@ Please send any comments to: &lt;a href="mailto:messi@users.sourceforge.net"&gt;
 <part name="R16" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
+<part name="U$2" library="MicroSdSocket" deviceset="MICROSD-HINGED" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12334,7 +12312,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="+3V21" gate="G$1" x="198.12" y="-10.16" rot="R90"/>
 <instance part="SUPPLY50" gate="G$1" x="198.12" y="-12.7" rot="R270"/>
 <instance part="SUPPLY14" gate="G$1" x="119.38" y="124.46"/>
-<instance part="J2" gate="J$1" x="-101.6" y="127"/>
 <instance part="C8" gate="G$1" x="-2.54" y="71.12"/>
 <instance part="C7" gate="G$1" x="-10.16" y="71.12"/>
 <instance part="D6" gate="G$1" x="124.46" y="193.04"/>
@@ -12348,10 +12325,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY15" gate="G$1" x="-30.48" y="-27.94"/>
 <instance part="Q1" gate="G$1" x="25.4" y="-25.4"/>
 <instance part="U1" gate="P" x="17.78" y="68.58" rot="R270"/>
-<instance part="R28" gate="G$1" x="-53.34" y="121.92" smashed="yes" rot="R180">
-<attribute name="NAME" x="-34.29" y="122.9614" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-41.91" y="122.682" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="R29" gate="G$1" x="-53.34" y="137.16" smashed="yes" rot="R180">
 <attribute name="NAME" x="-34.29" y="138.2014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-41.91" y="137.922" size="1.778" layer="96" rot="R180"/>
@@ -12375,10 +12348,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="R34" gate="G$1" x="-53.34" y="134.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="-34.29" y="135.6614" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-41.91" y="135.382" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="R35" gate="G$1" x="-53.34" y="119.38" smashed="yes" rot="R180">
-<attribute name="NAME" x="-34.29" y="120.4214" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-41.91" y="120.142" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="CN2" gate="G$1" x="30.48" y="185.42"/>
 <instance part="C9" gate="G$1" x="53.34" y="193.04" rot="R180"/>
@@ -12498,6 +12467,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="R16" gate="G$1" x="-162.56" y="210.82" rot="R90"/>
 <instance part="+3V6" gate="G$1" x="83.82" y="142.24"/>
 <instance part="+3V7" gate="G$1" x="22.86" y="88.9"/>
+<instance part="U$2" gate="G$1" x="-99.06" y="127"/>
 </instances>
 <busses>
 <bus name="SPECIAL[28..31],!RESET">
@@ -12608,8 +12578,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="-119.38" y1="137.16" x2="-119.38" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="VDD"/>
 <wire x1="-119.38" y1="137.16" x2="-116.84" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
@@ -12660,11 +12630,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="U$36" gate="G$1" pin="V+"/>
 </segment>
 <segment>
-<pinref part="R28" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="121.92" x2="-48.26" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R31" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="137.16" x2="-48.26" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="119.38" x2="-48.26" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="124.46" x2="-48.26" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="134.62" x2="-48.26" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="132.08" x2="-48.26" y2="129.54" width="0.1524" layer="91"/>
@@ -12675,15 +12641,12 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <junction x="-48.26" y="132.08"/>
 <pinref part="R34" gate="G$1" pin="1"/>
 <junction x="-48.26" y="134.62"/>
-<pinref part="R35" gate="G$1" pin="1"/>
-<junction x="-48.26" y="119.38"/>
 <pinref part="R29" gate="G$1" pin="1"/>
 <junction x="-48.26" y="137.16"/>
-<wire x1="-48.26" y1="137.16" x2="-48.26" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="137.16" x2="-48.26" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R30" gate="G$1" pin="1"/>
 <wire x1="-48.26" y1="127" x2="-48.26" y2="124.46" width="0.1524" layer="91"/>
 <junction x="-48.26" y="127"/>
-<junction x="-48.26" y="121.92"/>
 <junction x="-48.26" y="124.46"/>
 <wire x1="-48.26" y1="137.16" x2="-48.26" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
@@ -13018,13 +12981,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="IO24" class="0">
 <segment>
-<wire x1="-58.42" y1="121.92" x2="-83.82" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="SWITCH"/>
-<label x="-81.28" y="121.92" size="1.778" layer="95"/>
-<label x="-71.12" y="121.92" size="1.778" layer="95"/>
-<pinref part="R28" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P24"/>
 <wire x1="25.4" y1="2.54" x2="17.78" y2="2.54" width="0.1524" layer="91"/>
 <label x="17.78" y="2.54" size="1.778" layer="95"/>
@@ -13032,11 +12988,11 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="IO25" class="0">
 <segment>
-<pinref part="J2" gate="J$1" pin="D2_X"/>
 <wire x1="-58.42" y1="137.16" x2="-83.82" y2="137.16" width="0.1524" layer="91"/>
 <label x="-81.28" y="137.16" size="1.778" layer="95"/>
 <label x="-71.12" y="137.16" size="1.778" layer="95"/>
 <pinref part="R29" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="D2"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P25"/>
@@ -13045,13 +13001,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </segment>
 </net>
 <net name="IO26" class="0">
-<segment>
-<pinref part="J2" gate="J$1" pin="DETECT"/>
-<label x="-81.28" y="119.38" size="1.778" layer="95"/>
-<wire x1="-83.82" y1="119.38" x2="-58.42" y2="119.38" width="0.1524" layer="91"/>
-<label x="-71.12" y="119.38" size="1.778" layer="95"/>
-<pinref part="R35" gate="G$1" pin="2"/>
-</segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P26"/>
 <wire x1="25.4" y1="7.62" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
@@ -13062,9 +13011,9 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <wire x1="-83.82" y1="134.62" x2="-58.42" y2="134.62" width="0.1524" layer="91"/>
 <label x="-81.28" y="134.62" size="1.778" layer="95"/>
-<pinref part="J2" gate="J$1" pin="CD/D3_CS"/>
 <label x="-71.12" y="134.62" size="1.778" layer="95"/>
 <pinref part="R34" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="CD/D3"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P27"/>
@@ -13451,28 +13400,24 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
 <wire x1="-119.38" y1="129.54" x2="-119.38" y2="127" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="SKT1"/>
 <wire x1="-119.38" y1="127" x2="-119.38" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="124.46" x2="-119.38" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="121.92" x2="-119.38" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="119.38" x2="-119.38" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="121.92" x2="-119.38" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="-116.84" y1="129.54" x2="-119.38" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="SKT2"/>
 <wire x1="-116.84" y1="127" x2="-119.38" y2="127" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="SKT3"/>
 <wire x1="-116.84" y1="124.46" x2="-119.38" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="SKT4"/>
 <wire x1="-116.84" y1="121.92" x2="-119.38" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="SKT5"/>
-<wire x1="-116.84" y1="119.38" x2="-119.38" y2="119.38" width="0.1524" layer="91"/>
-<junction x="-119.38" y="119.38"/>
 <junction x="-119.38" y="121.92"/>
 <junction x="-119.38" y="124.46"/>
 <junction x="-119.38" y="127"/>
-<pinref part="J2" gate="J$1" pin="VSS"/>
 <wire x1="-116.84" y1="134.62" x2="-119.38" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="134.62" x2="-119.38" y2="129.54" width="0.1524" layer="91"/>
 <junction x="-119.38" y="129.54"/>
+<pinref part="U$2" gate="G$1" pin="VSS"/>
+<pinref part="U$2" gate="G$1" pin="GND1"/>
+<pinref part="U$2" gate="G$1" pin="GND2"/>
+<pinref part="U$2" gate="G$1" pin="GND3"/>
+<pinref part="U$2" gate="G$1" pin="GND4"/>
 </segment>
 <segment>
 <pinref part="SUPPLY13" gate="G$1" pin="DGND"/>
@@ -13831,10 +13776,10 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <net name="IO0" class="0">
 <segment>
 <wire x1="-83.82" y1="124.46" x2="-58.42" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="D1_X"/>
 <label x="-81.28" y="124.46" size="1.778" layer="95"/>
 <label x="-71.12" y="124.46" size="1.778" layer="95"/>
 <pinref part="R30" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="D1"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P0"/>
@@ -13844,11 +13789,11 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="IO1" class="0">
 <segment>
-<pinref part="J2" gate="J$1" pin="D0_DO"/>
 <wire x1="-83.82" y1="127" x2="-58.42" y2="127" width="0.1524" layer="91"/>
 <label x="-81.28" y="127" size="1.778" layer="95"/>
 <label x="-71.12" y="127" size="1.778" layer="95"/>
 <pinref part="R31" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="D0"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P1"/>
@@ -13858,11 +13803,11 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="IO2" class="0">
 <segment>
-<pinref part="J2" gate="J$1" pin="CLK_SCLK"/>
 <wire x1="-83.82" y1="129.54" x2="-58.42" y2="129.54" width="0.1524" layer="91"/>
 <label x="-81.28" y="129.54" size="1.778" layer="95"/>
 <label x="-71.12" y="129.54" size="1.778" layer="95"/>
 <pinref part="R32" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="CLK"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P2"/>
@@ -13874,9 +13819,9 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <wire x1="-58.42" y1="132.08" x2="-83.82" y2="132.08" width="0.1524" layer="91"/>
 <label x="-81.28" y="132.08" size="1.778" layer="95"/>
-<pinref part="J2" gate="J$1" pin="CMD_DI"/>
 <label x="-71.12" y="132.08" size="1.778" layer="95"/>
 <pinref part="R33" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="CMD"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P3"/>
