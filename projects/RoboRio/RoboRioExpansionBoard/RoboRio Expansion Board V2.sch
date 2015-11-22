@@ -13020,7 +13020,7 @@ SMT crystal</description>
 <part name="MOSI" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="MISO" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="LCD" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="100-500"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="U3" library="ftdichip" deviceset="FT232R" device="L"/>
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
@@ -13092,29 +13092,29 @@ SMT crystal</description>
 <part name="+3V23" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
 <part name="U$3" library="crystalsmt" deviceset="HC\49USCRYSTAL" device=""/>
-<part name="C14" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C14" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY34" library="supply2" deviceset="DGND" device=""/>
-<part name="C15" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R21" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C15" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R21" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY37" library="supply2" deviceset="DGND" device=""/>
-<part name="C16" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R22" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C16" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R22" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY38" library="supply2" deviceset="DGND" device=""/>
-<part name="C19" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R23" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C19" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R23" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY63" library="supply2" deviceset="DGND" device=""/>
-<part name="C21" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R24" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C21" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R24" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY64" library="supply2" deviceset="DGND" device=""/>
-<part name="C22" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R25" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C22" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R25" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY65" library="supply2" deviceset="DGND" device=""/>
-<part name="C23" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R26" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C23" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R26" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY66" library="supply2" deviceset="DGND" device=""/>
-<part name="C24" library="resistor" deviceset="C-EU" device="C0603K" value="&lt;&gt;"/>
-<part name="R28" library="resistor" deviceset="R-US_" device="R0603" value="&lt;&gt;"/>
+<part name="C24" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="R28" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY67" library="supply2" deviceset="DGND" device=""/>
 <part name="TP_GND" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="SUPPLY68" library="supply2" deviceset="DGND" device=""/>
@@ -13402,8 +13402,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="58.42" y1="88.9" x2="58.42" y2="114.3" width="0.762" layer="92"/>
 <wire x1="63.5" y1="88.9" x2="172.72" y2="88.9" width="0.762" layer="92"/>
 <wire x1="172.72" y1="88.9" x2="172.72" y2="215.9" width="0.762" layer="92"/>
-<wire x1="63.5" y1="88.9" x2="63.5" y2="55.88" width="0.762" layer="92"/>
-<wire x1="63.5" y1="55.88" x2="25.4" y2="30.48" width="0.762" layer="92"/>
+<wire x1="63.5" y1="88.9" x2="63.5" y2="30.48" width="0.762" layer="92"/>
+<wire x1="63.5" y1="30.48" x2="25.4" y2="30.48" width="0.762" layer="92"/>
 <wire x1="25.4" y1="30.48" x2="25.4" y2="12.7" width="0.762" layer="92"/>
 </segment>
 </bus>
@@ -13414,11 +13414,10 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="114.3" y1="-35.56" x2="38.1" y2="-35.56" width="0.762" layer="92"/>
 <wire x1="38.1" y1="-35.56" x2="-33.02" y2="-35.56" width="0.762" layer="92"/>
 <wire x1="-33.02" y1="-35.56" x2="-33.02" y2="20.32" width="0.762" layer="92"/>
-<wire x1="-33.02" y1="20.32" x2="-71.12" y2="50.8" width="0.762" layer="92"/>
-<wire x1="-71.12" y1="50.8" x2="-71.12" y2="127" width="0.762" layer="92"/>
-<wire x1="-33.02" y1="-35.56" x2="-119.38" y2="-35.56" width="0.762" layer="92"/>
-<wire x1="-119.38" y1="-35.56" x2="-121.92" y2="-33.02" width="0.762" layer="92"/>
-<wire x1="-121.92" y1="-33.02" x2="-121.92" y2="68.58" width="0.762" layer="92"/>
+<wire x1="-33.02" y1="20.32" x2="-71.12" y2="20.32" width="0.762" layer="92"/>
+<wire x1="-71.12" y1="20.32" x2="-71.12" y2="127" width="0.762" layer="92"/>
+<wire x1="-33.02" y1="-35.56" x2="-121.92" y2="-35.56" width="0.762" layer="92"/>
+<wire x1="-121.92" y1="-35.56" x2="-121.92" y2="68.58" width="0.762" layer="92"/>
 <wire x1="-33.02" y1="-35.56" x2="-33.02" y2="-86.36" width="0.762" layer="92"/>
 <wire x1="114.3" y1="-35.56" x2="175.26" y2="-35.56" width="0.762" layer="92"/>
 <wire x1="175.26" y1="-35.56" x2="228.6" y2="-35.56" width="0.762" layer="92"/>
