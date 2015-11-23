@@ -380,8 +380,8 @@ UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/zilog.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="671 177 2270 1014"
-State=2
+Loc="0 22 1599 859"
+State=0
 Number=0
 
 [Desktop]
