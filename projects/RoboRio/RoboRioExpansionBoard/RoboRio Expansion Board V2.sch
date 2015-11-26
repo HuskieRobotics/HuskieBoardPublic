@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -13371,14 +13371,14 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="C15" gate="G$1" x="106.68" y="-154.94" rot="R180"/>
 <instance part="R21" gate="G$1" x="111.76" y="-144.78" rot="R180"/>
 <instance part="SUPPLY37" gate="G$1" x="106.68" y="-160.02"/>
-<instance part="C16" gate="G$1" x="127" y="-152.4" rot="R180"/>
+<instance part="C16" gate="G$1" x="127" y="-149.86" rot="R180"/>
 <instance part="R22" gate="G$1" x="132.08" y="-142.24" rot="R180"/>
-<instance part="SUPPLY38" gate="G$1" x="127" y="-157.48"/>
+<instance part="SUPPLY38" gate="G$1" x="127" y="-154.94"/>
 <instance part="C19" gate="G$1" x="177.8" y="-134.62" rot="R180"/>
 <instance part="R23" gate="G$1" x="177.8" y="-124.46" rot="R270"/>
 <instance part="SUPPLY63" gate="G$1" x="177.8" y="-142.24"/>
 <instance part="C21" gate="G$1" x="205.74" y="-187.96" rot="R180"/>
-<instance part="R24" gate="G$1" x="220.98" y="-177.8" rot="R180"/>
+<instance part="R24" gate="G$1" x="223.52" y="-177.8" rot="R180"/>
 <instance part="SUPPLY64" gate="G$1" x="205.74" y="-193.04"/>
 <instance part="C22" gate="G$1" x="210.82" y="-160.02" rot="R180"/>
 <instance part="R25" gate="G$1" x="215.9" y="-149.86" rot="R180"/>
@@ -13482,8 +13482,9 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="SPECIAL30" class="0">
 <segment>
-<wire x1="144.78" y1="208.28" x2="172.72" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="208.28" x2="172.72" y2="208.28" width="0.1524" layer="91"/>
 <label x="160.02" y="208.28" size="1.778" layer="95"/>
+<pinref part="U3" gate="1" pin="RXD"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P30"/>
@@ -13493,8 +13494,9 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="SPECIAL31" class="0">
 <segment>
-<wire x1="144.78" y1="215.9" x2="172.72" y2="215.9" width="0.1524" layer="91"/>
-<label x="160.02" y="215.9" size="1.778" layer="95"/>
+<wire x1="109.22" y1="210.82" x2="172.72" y2="210.82" width="0.1524" layer="91"/>
+<label x="160.02" y="213.36" size="1.778" layer="95"/>
+<pinref part="U3" gate="1" pin="TXD"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P8X32A-Q44" pin="P31"/>
@@ -13580,12 +13582,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="U$39" gate="G$1" pin="VA"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="48.26" y1="-134.62" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-134.62" x2="40.64" y2="-132.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="VOUT"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="58.42" y1="256.54" x2="63.5" y2="256.54" width="0.1524" layer="91"/>
@@ -13630,6 +13626,18 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R19" gate="G$1" pin="2"/>
 <pinref part="+3V23" gate="G$1" pin="+3V3"/>
 <wire x1="167.64" y1="-45.72" x2="167.64" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="40.64" y1="-96.52" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
+<pinref part="U$38" gate="G$1" pin="VA"/>
+<wire x1="40.64" y1="-101.6" x2="48.26" y2="-101.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<pinref part="U$39" gate="G$1" pin="VA"/>
+<wire x1="40.64" y1="-132.08" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-134.62" x2="48.26" y2="-134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -14726,6 +14734,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="SW1" gate="A" pin="1"/>
 <wire x1="154.94" y1="-73.66" x2="154.94" y2="-71.12" width="0.1524" layer="91"/>
 <junction x="154.94" y="-73.66"/>
+<junction x="157.48" y="-73.66"/>
+<junction x="160.02" y="-73.66"/>
 </segment>
 <segment>
 <pinref part="C14" gate="G$1" pin="1"/>
@@ -14873,20 +14883,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="116.84" y1="-157.48" x2="157.48" y2="-157.48" width="0.1524" layer="91"/>
 <pinref part="U$18" gate="G$1" pin="DATA"/>
 <pinref part="R21" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<wire x1="144.78" y1="208.28" x2="109.22" y2="208.28" width="0.1524" layer="91"/>
-<pinref part="U3" gate="1" pin="RXD"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<wire x1="124.46" y1="210.82" x2="129.54" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="215.9" x2="144.78" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="U3" gate="1" pin="TXD"/>
-<wire x1="124.46" y1="210.82" x2="109.22" y2="210.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -15096,6 +15092,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="-254" y1="-38.1" x2="-218.44" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="-218.44" y1="-38.1" x2="-218.44" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="-254" y="-38.1"/>
+<junction x="-134.62" y="218.44"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -15150,14 +15147,6 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="U$38" gate="G$1" pin="#CS"/>
 <wire x1="48.26" y1="-109.22" x2="7.62" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="-109.22" x2="7.62" y2="-66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="VA" class="0">
-<segment>
-<pinref part="U$38" gate="G$1" pin="VA"/>
-<pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="48.26" y1="-101.6" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-101.6" x2="40.64" y2="-96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -15268,7 +15257,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <net name="N$16" class="0">
 <segment>
 <pinref part="C16" gate="G$1" pin="2"/>
-<wire x1="127" y1="-147.32" x2="127" y2="-142.24" width="0.1524" layer="91"/>
+<wire x1="127" y1="-144.78" x2="127" y2="-142.24" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="2"/>
 <wire x1="127" y1="-142.24" x2="127" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="127" y1="-137.16" x2="76.2" y2="-137.16" width="0.1524" layer="91"/>
@@ -15300,12 +15289,11 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <pinref part="C21" gate="G$1" pin="2"/>
 <wire x1="205.74" y1="-182.88" x2="205.74" y2="-177.8" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="-177.8" x2="215.9" y2="-177.8" width="0.1524" layer="91"/>
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="-109.22" x2="203.2" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="-109.22" x2="203.2" y2="-177.8" width="0.1524" layer="91"/>
 <pinref part="U$38" gate="G$1" pin="AIN4"/>
-<wire x1="215.9" y1="-177.8" x2="205.74" y2="-177.8" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="-177.8" x2="205.74" y2="-177.8" width="0.1524" layer="91"/>
 <junction x="205.74" y="-177.8"/>
 <wire x1="205.74" y1="-177.8" x2="203.2" y2="-177.8" width="0.1524" layer="91"/>
 </segment>
@@ -15313,7 +15301,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <net name="N$33" class="0">
 <segment>
 <pinref part="R24" gate="G$1" pin="1"/>
-<wire x1="251.46" y1="-177.8" x2="226.06" y2="-177.8" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="-177.8" x2="228.6" y2="-177.8" width="0.1524" layer="91"/>
 <pinref part="U$23" gate="G$1" pin="DATA"/>
 </segment>
 </net>
@@ -15366,31 +15354,46 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,116.84,165.1,U2,VCC,+3V3_PROP,,,"/>
-<approved hash="104,1,116.84,142.24,U2,GND,DGND,,,"/>
-<approved hash="104,1,55.88,111.76,U1P,VDD,+3V3_PROP,,,"/>
-<approved hash="104,1,53.34,111.76,U1P,VDD,+3V3_PROP,,,"/>
-<approved hash="104,1,50.8,111.76,U1P,VDD,+3V3_PROP,,,"/>
-<approved hash="104,1,48.26,111.76,U1P,VDD,+3V3_PROP,,,"/>
-<approved hash="104,1,55.88,93.98,U1P,VSS,DGND,,,"/>
-<approved hash="104,1,53.34,93.98,U1P,VSS,DGND,,,"/>
-<approved hash="104,1,50.8,93.98,U1P,VSS,DGND,,,"/>
-<approved hash="104,1,48.26,93.98,U1P,VSS,DGND,,,"/>
-<approved hash="104,1,73.66,226.06,CN2,VBUS,5VUSB,,,"/>
-<approved hash="104,1,73.66,215.9,CN2,GND,DGND,,,"/>
-<approved hash="104,1,111.76,256.54,IC1,VCC,5VUSB,,,"/>
-<approved hash="202,1,111.76,243.84,IC1,OSCI,,,,"/>
-<approved hash="104,1,139.7,213.36,IC1,GND,DGND,,,"/>
-<approved hash="202,1,139.7,248.92,IC1,!CTS,,,,"/>
-<approved hash="202,1,139.7,243.84,IC1,!DSR,,,,"/>
-<approved hash="202,1,139.7,241.3,IC1,!DCD,,,,"/>
-<approved hash="202,1,139.7,238.76,IC1,!RI,,,,"/>
-<approved hash="104,1,111.76,254,IC1,VCCIO,N$3,,,"/>
-<approved hash="202,1,111.76,248.92,IC1,!RESET,,,,"/>
-<approved hash="104,1,111.76,215.9,IC1,GND,DGND,,,"/>
-<approved hash="104,1,139.7,210.82,IC1,GND,DGND,,,"/>
-<approved hash="104,1,139.7,208.28,IC1,GND,DGND,,,"/>
-<approved hash="113,1,65.405,222.271,CN2,,,,,"/>
+<approved hash="102,1,48.26,-101.6,VA,+3V3,,,,"/>
+<approved hash="102,1,48.26,-104.14,GND,DGND,,,,"/>
+<approved hash="102,1,48.26,-134.62,VA,+3V3,,,,"/>
+<approved hash="102,1,48.26,-137.16,GND,DGND,,,,"/>
+<approved hash="104,1,86.36,119.38,U2,VCC,+3V3,,,"/>
+<approved hash="104,1,86.36,96.52,U2,GND,DGND,,,"/>
+<approved hash="104,1,43.18,180.34,CN2,VBUS,5VUSB,,,"/>
+<approved hash="104,1,43.18,170.18,CN2,GND,DGND,,,"/>
+<approved hash="104,1,81.28,210.82,U3,VCC,5VUSB,,,"/>
+<approved hash="104,1,109.22,167.64,U3,GND,DGND,,,"/>
+<approved hash="104,1,81.28,208.28,U3,VCCIO,N$3,,,"/>
+<approved hash="104,1,81.28,170.18,U3,GND,DGND,,,"/>
+<approved hash="104,1,109.22,165.1,U3,GND,DGND,,,"/>
+<approved hash="104,1,109.22,162.56,U3,GND,DGND,,,"/>
+<approved hash="104,1,-81.28,180.34,U4,VIN,5VRR,,,"/>
+<approved hash="104,1,-81.28,175.26,U4,VSS,DGND,,,"/>
+<approved hash="104,1,45.72,243.84,IC1,GND,DGND,,,"/>
+<approved hash="208,1,-116.84,132.08,+3V3,sup,,,,"/>
+<approved hash="208,1,246.38,-25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,132.08,-10.16,+3V3,sup,,,,"/>
+<approved hash="208,1,132.08,7.62,+3V3,sup,,,,"/>
+<approved hash="208,1,132.08,25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,132.08,-25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,193.04,25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,193.04,7.62,+3V3,sup,,,,"/>
+<approved hash="208,1,193.04,-10.16,+3V3,sup,,,,"/>
+<approved hash="208,1,246.38,-10.16,+3V3,sup,,,,"/>
+<approved hash="208,1,246.38,7.62,+3V3,sup,,,,"/>
+<approved hash="208,1,200.66,-58.42,+3V3,sup,,,,"/>
+<approved hash="208,1,193.04,-25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,-45.72,134.62,+3V3,sup,,,,"/>
+<approved hash="208,1,58.42,256.54,+3V3,out,,,,"/>
+<approved hash="208,1,86.36,266.7,+3V3,sup,,,,"/>
+<approved hash="208,1,86.36,129.54,+3V3,sup,,,,"/>
+<approved hash="208,1,154.94,22.86,+3V3,sup,,,,"/>
+<approved hash="208,1,157.48,2.54,+3V3,sup,,,,"/>
+<approved hash="208,1,160.02,-12.7,+3V3,sup,,,,"/>
+<approved hash="208,1,167.64,-43.18,+3V3,sup,,,,"/>
+<approved hash="208,1,40.64,-132.08,+3V3,sup,,,,"/>
+<approved hash="208,1,48.26,-134.62,+3V3,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
