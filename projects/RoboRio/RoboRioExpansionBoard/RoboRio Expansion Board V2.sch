@@ -10133,6 +10133,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <pin name="OUT" x="17.78" y="2.54" length="middle" rot="R180"/>
 <pin name="IN2" x="17.78" y="-2.54" length="middle" rot="R180"/>
 <pin name="GND" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<text x="-12.7" y="12.7" size="1.778" layer="95" align="top-left">&gt;NAME</text>
+<text x="-12.7" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -12957,7 +12959,7 @@ SMT crystal</description>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
 <part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
 <part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="T1" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
+<part name="Q1" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
 <part name="U1" library="parallax_propeller" deviceset="P8X32A-Q44" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="R29" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -13198,7 +13200,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY6" gate="G$1" x="60.96" y="193.04"/>
 <instance part="R27" gate="G$1" x="147.32" y="185.42" rot="R90"/>
 <instance part="C18" gate="G$1" x="134.62" y="198.12"/>
-<instance part="T1" gate="G$1" x="154.94" y="193.04"/>
+<instance part="Q1" gate="G$1" x="154.94" y="193.04"/>
 <instance part="U1" gate="P8X32A-Q44" x="0" y="0"/>
 <instance part="SUPPLY15" gate="G$1" x="-30.48" y="-27.94"/>
 <instance part="U1" gate="P" x="20.32" y="58.42" rot="R270"/>
@@ -13642,7 +13644,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="!RESET" class="0">
 <segment>
-<pinref part="T1" gate="G$1" pin="C"/>
+<pinref part="Q1" gate="G$1" pin="C"/>
 <wire x1="157.48" y1="198.12" x2="172.72" y2="198.12" width="0.1524" layer="91"/>
 <label x="165.1" y="198.12" size="1.778" layer="95"/>
 </segment>
@@ -14494,7 +14496,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <junction x="134.62" y="165.1"/>
 </segment>
 <segment>
-<pinref part="T1" gate="G$1" pin="E"/>
+<pinref part="Q1" gate="G$1" pin="E"/>
 <pinref part="SUPPLY19" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
@@ -14891,7 +14893,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R27" gate="G$1" pin="2"/>
 <wire x1="147.32" y1="193.04" x2="147.32" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="C18" gate="G$1" pin="2"/>
-<pinref part="T1" gate="G$1" pin="B"/>
+<pinref part="Q1" gate="G$1" pin="B"/>
 <wire x1="152.4" y1="193.04" x2="147.32" y2="193.04" width="0.1524" layer="91"/>
 <junction x="147.32" y="193.04"/>
 </segment>
