@@ -8691,8 +8691,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="10.16" y1="12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
 <wire x1="-12.7" y1="12.7" x2="-12.7" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-12.7" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
-<text x="-12.7" y="12.7" size="1.778" layer="94">&gt;NAME</text>
-<text x="-12.7" y="-10.16" size="1.778" layer="94">&gt;VALUE</text>
+<text x="-12.7" y="15.24" size="1.778" layer="95" align="top-left">&gt;NAME</text>
+<text x="-12.7" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10057,28 +10057,28 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </packages>
 <symbols>
 <symbol name="ADC">
-<pin name="#CS" x="-30.48" y="15.24" length="middle"/>
-<pin name="SCLK" x="-30.48" y="12.7" length="middle"/>
-<pin name="DO" x="-30.48" y="10.16" length="middle"/>
-<pin name="DI" x="-30.48" y="7.62" length="middle"/>
-<pin name="VA" x="-30.48" y="22.86" length="middle" direction="sup"/>
-<pin name="GND" x="-30.48" y="20.32" length="middle" direction="sup"/>
-<pin name="AIN1" x="-2.54" y="22.86" length="middle" direction="in" rot="R180"/>
-<pin name="AIN2" x="-2.54" y="20.32" length="middle" direction="in" rot="R180"/>
-<pin name="AIN3" x="-2.54" y="17.78" length="middle" direction="in" rot="R180"/>
-<pin name="AIN4" x="-2.54" y="15.24" length="middle" direction="in" rot="R180"/>
-<wire x1="-27.94" y1="27.94" x2="-5.08" y2="27.94" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="27.94" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-27.94" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-27.94" y1="2.54" x2="-27.94" y2="27.94" width="0.254" layer="94"/>
-<text x="-25.4" y="30.48" size="1.4224" layer="95" align="top-left">&gt;NAME</text>
-<text x="-25.4" y="0" size="1.4224" layer="95">&gt;VALUE</text>
+<pin name="#CS" x="-15.24" y="0" length="middle"/>
+<pin name="SCLK" x="-15.24" y="-2.54" length="middle"/>
+<pin name="DO" x="-15.24" y="-5.08" length="middle"/>
+<pin name="DI" x="-15.24" y="-7.62" length="middle"/>
+<pin name="VA" x="-15.24" y="7.62" length="middle" direction="sup"/>
+<pin name="GND" x="-15.24" y="5.08" length="middle" direction="sup"/>
+<pin name="AIN1" x="12.7" y="7.62" length="middle" direction="in" rot="R180"/>
+<pin name="AIN2" x="12.7" y="5.08" length="middle" direction="in" rot="R180"/>
+<pin name="AIN3" x="12.7" y="2.54" length="middle" direction="in" rot="R180"/>
+<pin name="AIN4" x="12.7" y="0" length="middle" direction="in" rot="R180"/>
+<wire x1="-12.7" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="12.7" size="1.4224" layer="95" align="top-left">&gt;NAME</text>
+<text x="-10.16" y="-12.7" size="1.4224" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
 <deviceset name="ADC124S01">
 <gates>
-<gate name="G$1" symbol="ADC" x="17.78" y="-15.24"/>
+<gate name="G$1" symbol="ADC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="ADC124S021VSSOP">
@@ -12923,7 +12923,7 @@ SMT crystal</description>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
-<part name="D5" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
+<part name="D4" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
 <part name="SUPPLY39" library="supply2" deviceset="DGND" device=""/>
 <part name="P+16" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
@@ -12953,8 +12953,8 @@ SMT crystal</description>
 <part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
 <part name="C8" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="C7" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
-<part name="D6" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
-<part name="D7" library="led" deviceset="LED" device="CHIPLED_0603" value="BLUE"/>
+<part name="D5" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
+<part name="D6" library="led" deviceset="LED" device="CHIPLED_0603" value="BLUE"/>
 <part name="C17" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
 <part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
@@ -13023,12 +13023,12 @@ SMT crystal</description>
 <part name="U3" library="ftdichip" deviceset="FT232R" device="L"/>
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
-<part name="T2" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
+<part name="Q2" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
 <part name="SUPPLY51" library="supply2" deviceset="DGND" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="U$38" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
-<part name="U$39" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
+<part name="U8" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
+<part name="U9" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
@@ -13037,7 +13037,7 @@ SMT crystal</description>
 <part name="SUPPLY52" library="supply2" deviceset="DGND" device=""/>
 <part name="R11" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
 <part name="R12" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
-<part name="U$1" library="tps2115apwr" deviceset="TPS2115APWR" device=""/>
+<part name="U6" library="tps2115apwr" deviceset="TPS2115APWR" device=""/>
 <part name="SUPPLY35" library="supply2" deviceset="DGND" device=""/>
 <part name="R13" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="R14" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
@@ -13058,7 +13058,7 @@ SMT crystal</description>
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="U4" library="m-pad-2.1" deviceset="TC54" device="-CB"/>
-<part name="IC1" library="burr-brown" deviceset="REG1117" device="">
+<part name="U7" library="burr-brown" deviceset="REG1117" device="">
 <attribute name="MPN" value="AP1117"/>
 </part>
 <part name="SUPPLY29" library="supply2" deviceset="DGND" device=""/>
@@ -13070,7 +13070,7 @@ SMT crystal</description>
 <part name="SUPPLY57" library="supply2" deviceset="DGND" device=""/>
 <part name="C13" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="SUPPLY61" library="supply2" deviceset="DGND" device=""/>
-<part name="T3" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
+<part name="Q3" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
 <part name="SUPPLY62" library="supply2" deviceset="DGND" device=""/>
 <part name="R8" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R15" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -13160,7 +13160,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="P+11" gate="1" x="241.3" y="-146.05"/>
 <instance part="P+13" gate="1" x="236.22" y="-118.11"/>
 <instance part="P+14" gate="1" x="238.76" y="-93.98"/>
-<instance part="D5" gate="G$1" x="-220.98" y="190.5" rot="R90"/>
+<instance part="D4" gate="G$1" x="-220.98" y="190.5" rot="R90"/>
 <instance part="SUPPLY39" gate="G$1" x="-210.82" y="187.96"/>
 <instance part="P+16" gate="1" x="-238.76" y="193.04"/>
 <instance part="+3V3" gate="G$1" x="129.54" y="25.4" rot="R90"/>
@@ -13194,8 +13194,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY14" gate="G$1" x="121.92" y="114.3"/>
 <instance part="C8" gate="G$1" x="0" y="60.96"/>
 <instance part="C7" gate="G$1" x="-7.62" y="60.96"/>
-<instance part="D6" gate="G$1" x="127" y="182.88"/>
-<instance part="D7" gate="G$1" x="134.62" y="185.42"/>
+<instance part="D5" gate="G$1" x="127" y="182.88"/>
+<instance part="D6" gate="G$1" x="134.62" y="185.42"/>
 <instance part="C17" gate="G$1" x="60.96" y="200.66" rot="R180"/>
 <instance part="SUPPLY6" gate="G$1" x="60.96" y="193.04"/>
 <instance part="R27" gate="G$1" x="147.32" y="185.42" rot="R90"/>
@@ -13205,28 +13205,28 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY15" gate="G$1" x="-30.48" y="-27.94"/>
 <instance part="U1" gate="P" x="20.32" y="58.42" rot="R270"/>
 <instance part="R29" gate="G$1" x="-50.8" y="127" smashed="yes" rot="R180">
-<attribute name="NAME" x="-31.75" y="128.0414" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.37" y="127.762" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-32.258" y="127" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="127" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="R30" gate="G$1" x="-50.8" y="114.3" smashed="yes" rot="R180">
-<attribute name="NAME" x="-31.75" y="115.3414" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.37" y="115.062" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-32.258" y="114.3" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="114.3" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="R31" gate="G$1" x="-50.8" y="116.84" smashed="yes" rot="R180">
-<attribute name="NAME" x="-31.75" y="117.8814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.37" y="117.602" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-32.258" y="116.84" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="116.84" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="R32" gate="G$1" x="-50.8" y="119.38" smashed="yes" rot="R180">
-<attribute name="NAME" x="-31.75" y="120.4214" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.37" y="120.142" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-32.258" y="119.38" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="119.38" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="R33" gate="G$1" x="-50.8" y="121.92" smashed="yes" rot="R180">
-<attribute name="NAME" x="-31.75" y="122.9614" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.37" y="122.682" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-32.258" y="121.92" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="121.92" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="R34" gate="G$1" x="-50.8" y="124.46" smashed="yes" rot="R180">
-<attribute name="NAME" x="-31.75" y="125.5014" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-39.37" y="125.222" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-32.258" y="124.46" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="124.46" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="CN2" gate="G$1" x="33.02" y="175.26"/>
 <instance part="C9" gate="G$1" x="55.88" y="182.88" rot="R180"/>
@@ -13285,12 +13285,12 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="P+4" gate="1" x="25.4" y="269.24" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="22.86" y="269.24" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="T2" gate="G$1" x="-165.1" y="154.94" rot="MR0"/>
+<instance part="Q2" gate="G$1" x="-165.1" y="154.94" rot="MR0"/>
 <instance part="SUPPLY51" gate="G$1" x="-167.64" y="147.32"/>
 <instance part="R3" gate="G$1" x="17.78" y="195.58" rot="R90"/>
 <instance part="R7" gate="G$1" x="-53.34" y="195.58" rot="R90"/>
-<instance part="U$38" gate="G$1" x="78.74" y="-124.46"/>
-<instance part="U$39" gate="G$1" x="78.74" y="-157.48"/>
+<instance part="U8" gate="G$1" x="63.5" y="-109.22"/>
+<instance part="U9" gate="G$1" x="63.5" y="-142.24"/>
 <instance part="+3V1" gate="G$1" x="40.64" y="-129.54" smashed="yes">
 <attribute name="VALUE" x="38.1" y="-129.54" size="1.778" layer="96"/>
 </instance>
@@ -13303,7 +13303,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY52" gate="G$1" x="40.64" y="-154.94"/>
 <instance part="R11" gate="G$1" x="127" y="170.18" rot="R90"/>
 <instance part="R12" gate="G$1" x="134.62" y="170.18" rot="R90"/>
-<instance part="U$1" gate="G$1" x="-114.3" y="254"/>
+<instance part="U6" gate="G$1" x="-114.3" y="254"/>
 <instance part="SUPPLY35" gate="G$1" x="-93.98" y="241.3"/>
 <instance part="R13" gate="G$1" x="-144.78" y="236.22" rot="R90"/>
 <instance part="R14" gate="G$1" x="-137.16" y="236.22" rot="R90"/>
@@ -13324,7 +13324,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY1" gate="G$1" x="-73.66" y="231.14"/>
 <instance part="R5" gate="G$1" x="-58.42" y="154.94" rot="R180"/>
 <instance part="U4" gate="G$1" x="-93.98" y="177.8" rot="MR0"/>
-<instance part="IC1" gate="G$1" x="45.72" y="256.54" smashed="yes">
+<instance part="U7" gate="G$1" x="45.72" y="256.54" smashed="yes">
 <attribute name="NAME" x="38.1" y="262.255" size="1.778" layer="95" ratio="10"/>
 <attribute name="VALUE" x="48.26" y="246.38" size="1.778" layer="96" ratio="10"/>
 </instance>
@@ -13337,7 +13337,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <instance part="SUPPLY57" gate="G$1" x="-78.74" y="162.56"/>
 <instance part="C13" gate="G$1" x="-68.58" y="172.72"/>
 <instance part="SUPPLY61" gate="G$1" x="-68.58" y="162.56"/>
-<instance part="T3" gate="G$1" x="-147.32" y="177.8" rot="MR0"/>
+<instance part="Q3" gate="G$1" x="-147.32" y="177.8" rot="MR0"/>
 <instance part="SUPPLY62" gate="G$1" x="-149.86" y="170.18"/>
 <instance part="R8" gate="G$1" x="-134.62" y="198.12" rot="R90"/>
 <instance part="R15" gate="G$1" x="-149.86" y="200.66" rot="R90"/>
@@ -13584,7 +13584,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="VOUT"/>
+<pinref part="U7" gate="G$1" pin="VOUT"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="58.42" y1="256.54" x2="63.5" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="256.54" x2="86.36" y2="256.54" width="0.1524" layer="91"/>
@@ -13632,12 +13632,12 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="40.64" y1="-96.52" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="U$38" gate="G$1" pin="VA"/>
+<pinref part="U8" gate="G$1" pin="VA"/>
 <wire x1="40.64" y1="-101.6" x2="48.26" y2="-101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="U$39" gate="G$1" pin="VA"/>
+<pinref part="U9" gate="G$1" pin="VA"/>
 <wire x1="40.64" y1="-132.08" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-134.62" x2="48.26" y2="-134.62" width="0.1524" layer="91"/>
 </segment>
@@ -13890,8 +13890,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="-2.54" y1="-149.86" x2="-2.54" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-116.84" x2="-2.54" y2="-83.82" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-83.82" x2="-33.02" y2="-83.82" width="0.1524" layer="91"/>
-<pinref part="U$39" gate="G$1" pin="DI"/>
-<pinref part="U$38" gate="G$1" pin="DI"/>
+<pinref part="U9" gate="G$1" pin="DI"/>
+<pinref part="U8" gate="G$1" pin="DI"/>
 <wire x1="48.26" y1="-116.84" x2="-2.54" y2="-116.84" width="0.1524" layer="91"/>
 <junction x="-2.54" y="-116.84"/>
 </segment>
@@ -13908,8 +13908,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="-33.02" y1="-78.74" x2="0" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="0" y1="-147.32" x2="48.26" y2="-147.32" width="0.1524" layer="91"/>
 <label x="-30.48" y="-78.74" size="1.778" layer="95"/>
-<pinref part="U$39" gate="G$1" pin="DO"/>
-<pinref part="U$38" gate="G$1" pin="DO"/>
+<pinref part="U9" gate="G$1" pin="DO"/>
+<pinref part="U8" gate="G$1" pin="DO"/>
 <wire x1="48.26" y1="-114.3" x2="0" y2="-114.3" width="0.1524" layer="91"/>
 <junction x="0" y="-114.3"/>
 </segment>
@@ -13925,9 +13925,9 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="2.54" y1="-73.66" x2="2.54" y2="-111.76" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="-111.76" x2="2.54" y2="-144.78" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="-73.66" x2="-33.02" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="U$39" gate="G$1" pin="SCLK"/>
+<pinref part="U9" gate="G$1" pin="SCLK"/>
 <wire x1="2.54" y1="-144.78" x2="48.26" y2="-144.78" width="0.1524" layer="91"/>
-<pinref part="U$38" gate="G$1" pin="SCLK"/>
+<pinref part="U8" gate="G$1" pin="SCLK"/>
 <wire x1="48.26" y1="-111.76" x2="2.54" y2="-111.76" width="0.1524" layer="91"/>
 <junction x="2.54" y="-111.76"/>
 </segment>
@@ -13942,7 +13942,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <label x="-30.607" y="-68.453" size="1.778" layer="95"/>
 <wire x1="-33.02" y1="-68.58" x2="5.08" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="-68.58" x2="5.08" y2="-142.24" width="0.1524" layer="91"/>
-<pinref part="U$39" gate="G$1" pin="#CS"/>
+<pinref part="U9" gate="G$1" pin="#CS"/>
 <wire x1="5.08" y1="-142.24" x2="48.26" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -14048,7 +14048,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R2" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="OUT"/>
+<pinref part="U6" gate="G$1" pin="OUT"/>
 <wire x1="-96.52" y1="256.54" x2="-73.66" y2="256.54" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-73.66" y1="256.54" x2="-38.1" y2="256.54" width="0.1524" layer="91"/>
@@ -14064,7 +14064,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="-73.66" y1="243.84" x2="-73.66" y2="256.54" width="0.1524" layer="91"/>
 <junction x="-73.66" y="256.54"/>
-<pinref part="IC1" gate="G$1" pin="VIN"/>
+<pinref part="U7" gate="G$1" pin="VIN"/>
 <wire x1="-17.78" y1="256.54" x2="25.4" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="256.54" x2="25.4" y2="256.54" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
@@ -14441,7 +14441,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <label x="99.06" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="D5" gate="G$1" pin="C"/>
+<pinref part="D4" gate="G$1" pin="C"/>
 <pinref part="SUPPLY39" gate="G$1" pin="DGND"/>
 <wire x1="-210.82" y1="190.5" x2="-215.9" y2="190.5" width="0.1524" layer="91"/>
 </segment>
@@ -14625,16 +14625,16 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY51" gate="G$1" pin="DGND"/>
-<pinref part="T2" gate="G$1" pin="E"/>
+<pinref part="Q2" gate="G$1" pin="E"/>
 </segment>
 <segment>
-<pinref part="U$39" gate="G$1" pin="GND"/>
+<pinref part="U9" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY52" gate="G$1" pin="DGND"/>
 <wire x1="40.64" y1="-152.4" x2="40.64" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-137.16" x2="48.26" y2="-137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$38" gate="G$1" pin="GND"/>
+<pinref part="U8" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY2" gate="G$1" pin="DGND"/>
 <wire x1="48.26" y1="-104.14" x2="40.64" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-104.14" x2="40.64" y2="-119.38" width="0.1524" layer="91"/>
@@ -14642,7 +14642,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <segment>
 <pinref part="SUPPLY35" gate="G$1" pin="DGND"/>
 <wire x1="-93.98" y1="243.84" x2="-93.98" y2="246.38" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="U6" gate="G$1" pin="GND"/>
 <wire x1="-93.98" y1="246.38" x2="-96.52" y2="246.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -14656,7 +14656,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="SUPPLY53" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="D1"/>
+<pinref part="U6" gate="G$1" pin="D1"/>
 <wire x1="-132.08" y1="251.46" x2="-152.4" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="-152.4" y1="251.46" x2="-152.4" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="SUPPLY54" gate="G$1" pin="DGND"/>
@@ -14693,7 +14693,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY29" gate="G$1" pin="DGND"/>
-<pinref part="IC1" gate="G$1" pin="GND"/>
+<pinref part="U7" gate="G$1" pin="GND"/>
 <wire x1="45.72" y1="241.3" x2="45.72" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -14719,7 +14719,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY62" gate="G$1" pin="DGND"/>
-<pinref part="T3" gate="G$1" pin="E"/>
+<pinref part="Q3" gate="G$1" pin="E"/>
 </segment>
 <segment>
 <pinref part="SUPPLY3" gate="G$1" pin="DGND"/>
@@ -14860,7 +14860,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="76.2" y1="-106.68" x2="208.28" y2="-106.68" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="-106.68" x2="208.28" y2="-149.86" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="-149.86" x2="210.82" y2="-149.86" width="0.1524" layer="91"/>
-<pinref part="U$38" gate="G$1" pin="AIN3"/>
+<pinref part="U8" gate="G$1" pin="AIN3"/>
 <pinref part="C22" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="-154.94" x2="210.82" y2="-149.86" width="0.1524" layer="91"/>
 <pinref part="R25" gate="G$1" pin="2"/>
@@ -14941,14 +14941,14 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="N$18" class="0">
 <segment>
-<pinref part="D7" gate="G$1" pin="C"/>
+<pinref part="D6" gate="G$1" pin="C"/>
 <wire x1="134.62" y1="175.26" x2="134.62" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="D6" gate="G$1" pin="C"/>
+<pinref part="D5" gate="G$1" pin="C"/>
 <wire x1="127" y1="175.26" x2="127" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="2"/>
 </segment>
@@ -14971,7 +14971,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <label x="-93.98" y="261.62" size="1.778" layer="95"/>
 <wire x1="33.02" y1="210.82" x2="17.78" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="210.82" x2="17.78" y2="200.66" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="IN1"/>
+<pinref part="U6" gate="G$1" pin="IN1"/>
 <wire x1="-96.52" y1="261.62" x2="-63.5" y2="261.62" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="261.62" x2="17.78" y2="261.62" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="261.62" x2="17.78" y2="210.82" width="0.1524" layer="91"/>
@@ -14992,7 +14992,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="D5" gate="G$1" pin="A"/>
+<pinref part="D4" gate="G$1" pin="A"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -15067,7 +15067,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="-180.34" y1="-12.7" x2="-213.36" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="-213.36" y="-12.7"/>
 <label x="-93.98" y="251.46" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="IN2"/>
+<pinref part="U6" gate="G$1" pin="IN2"/>
 <wire x1="-96.52" y1="251.46" x2="-83.82" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="251.46" x2="-53.34" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -15113,14 +15113,14 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <net name="N$27" class="0">
 <segment>
 <pinref part="U3" gate="1" pin="CBUS0"/>
-<pinref part="D7" gate="G$1" pin="A"/>
+<pinref part="D6" gate="G$1" pin="A"/>
 <wire x1="134.62" y1="187.96" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
 <pinref part="U3" gate="1" pin="CBUS1"/>
-<pinref part="D6" gate="G$1" pin="A"/>
+<pinref part="D5" gate="G$1" pin="A"/>
 <wire x1="127" y1="185.42" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15146,14 +15146,14 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="N$31" class="0">
 <segment>
-<pinref part="U$38" gate="G$1" pin="#CS"/>
+<pinref part="U8" gate="G$1" pin="#CS"/>
 <wire x1="48.26" y1="-109.22" x2="7.62" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="-109.22" x2="7.62" y2="-66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="ILIM"/>
+<pinref part="U6" gate="G$1" pin="ILIM"/>
 <pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="-132.08" y1="246.38" x2="-137.16" y2="246.38" width="0.1524" layer="91"/>
 <wire x1="-137.16" y1="246.38" x2="-144.78" y2="246.38" width="0.1524" layer="91"/>
@@ -15165,19 +15165,19 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="T2" gate="G$1" pin="B"/>
+<pinref part="Q2" gate="G$1" pin="B"/>
 <wire x1="-63.5" y1="154.94" x2="-162.56" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="T2" gate="G$1" pin="C"/>
+<pinref part="Q2" gate="G$1" pin="C"/>
 <wire x1="-167.64" y1="160.02" x2="-167.64" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D0"/>
+<pinref part="U6" gate="G$1" pin="D0"/>
 <wire x1="-167.64" y1="187.96" x2="-167.64" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="-167.64" y1="256.54" x2="-132.08" y2="256.54" width="0.1524" layer="91"/>
-<pinref part="T3" gate="G$1" pin="C"/>
+<pinref part="Q3" gate="G$1" pin="C"/>
 <wire x1="-149.86" y1="182.88" x2="-149.86" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="-149.86" y1="187.96" x2="-160.02" y2="187.96" width="0.1524" layer="91"/>
 <junction x="-167.64" y="187.96"/>
@@ -15193,7 +15193,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <net name="RR_PWR_OK" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="VOUT"/>
-<pinref part="T3" gate="G$1" pin="B"/>
+<pinref part="Q3" gate="G$1" pin="B"/>
 <wire x1="-106.68" y1="177.8" x2="-134.62" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="-134.62" y1="177.8" x2="-144.78" y2="177.8" width="0.1524" layer="91"/>
@@ -15237,7 +15237,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="U$39" gate="G$1" pin="AIN4"/>
+<pinref part="U9" gate="G$1" pin="AIN4"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <junction x="81.28" y="-152.4"/>
@@ -15250,7 +15250,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="C15" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="-149.86" x2="106.68" y2="-144.78" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-<pinref part="U$39" gate="G$1" pin="AIN3"/>
+<pinref part="U9" gate="G$1" pin="AIN3"/>
 <wire x1="106.68" y1="-144.78" x2="106.68" y2="-139.7" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="-139.7" x2="76.2" y2="-139.7" width="0.1524" layer="91"/>
 <junction x="106.68" y="-144.78"/>
@@ -15264,7 +15264,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <wire x1="127" y1="-142.24" x2="127" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="127" y1="-137.16" x2="76.2" y2="-137.16" width="0.1524" layer="91"/>
 <junction x="127" y="-142.24"/>
-<pinref part="U$39" gate="G$1" pin="AIN2"/>
+<pinref part="U9" gate="G$1" pin="AIN2"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -15280,7 +15280,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R23" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="-129.54" x2="177.8" y2="-129.54" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="-129.54" x2="101.6" y2="-134.62" width="0.1524" layer="91"/>
-<pinref part="U$39" gate="G$1" pin="AIN1"/>
+<pinref part="U9" gate="G$1" pin="AIN1"/>
 <wire x1="101.6" y1="-134.62" x2="76.2" y2="-134.62" width="0.1524" layer="91"/>
 <junction x="177.8" y="-129.54"/>
 <pinref part="R35" gate="G$1" pin="1"/>
@@ -15294,7 +15294,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="-109.22" x2="203.2" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="-109.22" x2="203.2" y2="-177.8" width="0.1524" layer="91"/>
-<pinref part="U$38" gate="G$1" pin="AIN4"/>
+<pinref part="U8" gate="G$1" pin="AIN4"/>
 <wire x1="218.44" y1="-177.8" x2="205.74" y2="-177.8" width="0.1524" layer="91"/>
 <junction x="205.74" y="-177.8"/>
 <wire x1="205.74" y1="-177.8" x2="203.2" y2="-177.8" width="0.1524" layer="91"/>
@@ -15321,7 +15321,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R26" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="-104.14" x2="213.36" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="-104.14" x2="213.36" y2="-121.92" width="0.1524" layer="91"/>
-<pinref part="U$38" gate="G$1" pin="AIN2"/>
+<pinref part="U8" gate="G$1" pin="AIN2"/>
 <wire x1="215.9" y1="-121.92" x2="213.36" y2="-121.92" width="0.1524" layer="91"/>
 <junction x="215.9" y="-121.92"/>
 </segment>
@@ -15340,7 +15340,7 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <pinref part="R28" gate="G$1" pin="2"/>
 <wire x1="215.9" y1="-99.06" x2="215.9" y2="-101.6" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="-101.6" x2="76.2" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="U$38" gate="G$1" pin="AIN1"/>
+<pinref part="U8" gate="G$1" pin="AIN1"/>
 <wire x1="220.98" y1="-99.06" x2="215.9" y2="-99.06" width="0.1524" layer="91"/>
 <junction x="220.98" y="-99.06"/>
 </segment>
