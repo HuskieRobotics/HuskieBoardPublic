@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -8724,179 +8724,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
-<library name="parallax_propeller">
-<packages>
-<package name="P8X32A-Q44">
-<wire x1="-4.9213" y1="4.9213" x2="-4.9212" y2="4.9213" width="0.4064" layer="21"/>
-<smd name="1" x="-5.7125" y="4.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="2" x="-5.7125" y="3.2125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="3" x="-5.7125" y="2.4125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="4" x="-5.7125" y="1.6125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="5" x="-5.7125" y="0.8125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="6" x="-5.7125" y="0.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="7" x="-5.7125" y="-0.7875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="8" x="-5.7125" y="-1.5875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="9" x="-5.7125" y="-2.3875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="10" x="-5.7125" y="-3.1875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="11" x="-5.7125" y="-3.9875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="33" x="5.6875" y="4.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="32" x="5.6875" y="3.2125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="31" x="5.6875" y="2.4125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="30" x="5.6875" y="1.6125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="29" x="5.6875" y="0.8125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="28" x="5.6875" y="0.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="27" x="5.6875" y="-0.7875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="26" x="5.6875" y="-1.5875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="25" x="5.6875" y="-2.3875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="24" x="5.6875" y="-3.1875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="23" x="5.6875" y="-3.9875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
-<smd name="44" x="-4.0125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="43" x="-3.2125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="42" x="-2.4125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="41" x="-1.6125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="40" x="-0.8125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="39" x="-0.0125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="38" x="0.7875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="37" x="1.5875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="36" x="2.3875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="35" x="3.1875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="34" x="3.9875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
-<smd name="12" x="-4.0125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="13" x="-3.2125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="14" x="-2.4125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="15" x="-1.6125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="16" x="-0.8125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="17" x="-0.0125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="18" x="0.7875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="19" x="1.5875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="20" x="2.3875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="21" x="3.1875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<smd name="22" x="3.9875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
-<text x="-3.8125" y="2.2125" size="0.6096" layer="25">&gt;NAME</text>
-<text x="-3.8125" y="1.0625" size="0.6096" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="P8X32A">
-<wire x1="-10.16" y1="22.86" x2="-10.16" y2="-27.94" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-27.94" x2="12.7" y2="-27.94" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-27.94" x2="12.7" y2="22.86" width="0.254" layer="94"/>
-<wire x1="12.7" y1="22.86" x2="-10.16" y2="22.86" width="0.254" layer="94"/>
-<text x="-10.16" y="25.4" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="P0" x="-15.24" y="20.32" length="middle"/>
-<pin name="P1" x="-15.24" y="17.78" length="middle"/>
-<pin name="P2" x="-15.24" y="15.24" length="middle"/>
-<pin name="P3" x="-15.24" y="12.7" length="middle"/>
-<pin name="P4" x="-15.24" y="10.16" length="middle"/>
-<pin name="P5" x="-15.24" y="7.62" length="middle"/>
-<pin name="P6" x="-15.24" y="5.08" length="middle"/>
-<pin name="P7" x="-15.24" y="2.54" length="middle"/>
-<pin name="P8" x="-15.24" y="0" length="middle"/>
-<pin name="P9" x="-15.24" y="-2.54" length="middle"/>
-<pin name="P10" x="-15.24" y="-5.08" length="middle"/>
-<pin name="P11" x="-15.24" y="-7.62" length="middle"/>
-<pin name="P12" x="-15.24" y="-10.16" length="middle"/>
-<pin name="P13" x="-15.24" y="-12.7" length="middle"/>
-<pin name="P14" x="-15.24" y="-15.24" length="middle"/>
-<pin name="P15" x="-15.24" y="-17.78" length="middle"/>
-<pin name="P16" x="17.78" y="-17.78" length="middle" rot="R180"/>
-<pin name="P17" x="17.78" y="-15.24" length="middle" rot="R180"/>
-<pin name="P18" x="17.78" y="-12.7" length="middle" rot="R180"/>
-<pin name="P19" x="17.78" y="-10.16" length="middle" rot="R180"/>
-<pin name="P20" x="17.78" y="-7.62" length="middle" rot="R180"/>
-<pin name="P21" x="17.78" y="-5.08" length="middle" rot="R180"/>
-<pin name="P22" x="17.78" y="-2.54" length="middle" rot="R180"/>
-<pin name="P23" x="17.78" y="0" length="middle" rot="R180"/>
-<pin name="P24" x="17.78" y="2.54" length="middle" rot="R180"/>
-<pin name="P25" x="17.78" y="5.08" length="middle" rot="R180"/>
-<pin name="P26" x="17.78" y="7.62" length="middle" rot="R180"/>
-<pin name="P27" x="17.78" y="10.16" length="middle" rot="R180"/>
-<pin name="P28" x="17.78" y="12.7" length="middle" rot="R180"/>
-<pin name="P29" x="17.78" y="15.24" length="middle" rot="R180"/>
-<pin name="P30" x="17.78" y="17.78" length="middle" rot="R180"/>
-<pin name="P31" x="17.78" y="20.32" length="middle" rot="R180"/>
-<pin name="BOE/" x="-15.24" y="-22.86" length="middle" direction="in"/>
-<pin name="RES/" x="-15.24" y="-25.4" length="middle"/>
-<pin name="XI" x="17.78" y="-22.86" length="middle" direction="in" rot="R180"/>
-<pin name="XO" x="17.78" y="-25.4" length="middle" direction="out" rot="R180"/>
-</symbol>
-<symbol name="4VDD4VSS">
-<text x="0" y="5.08" size="1.778" layer="95" rot="R270">&gt;name</text>
-<text x="-7.62" y="-5.08" size="1.778" layer="95">VDD</text>
-<text x="5.08" y="-5.08" size="1.778" layer="95">VSS</text>
-<pin name="VDD@1" x="-7.62" y="5.08" visible="pad" length="middle" direction="pwr"/>
-<pin name="VDD@2" x="-7.62" y="2.54" visible="pad" length="middle" direction="pwr"/>
-<pin name="VDD@3" x="-7.62" y="0" visible="pad" length="middle" direction="pwr"/>
-<pin name="VDD@4" x="-7.62" y="-2.54" visible="pad" length="middle" direction="pwr"/>
-<pin name="VSS@1" x="10.16" y="5.08" visible="pad" length="middle" direction="pwr" rot="R180"/>
-<pin name="VSS@2" x="10.16" y="2.54" visible="pad" length="middle" direction="pwr" rot="R180"/>
-<pin name="VSS@3" x="10.16" y="0" visible="pad" length="middle" direction="pwr" rot="R180"/>
-<pin name="VSS@4" x="10.16" y="-2.54" visible="pad" length="middle" direction="pwr" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="P8X32A-Q44">
-<gates>
-<gate name="P8X32A-Q44" symbol="P8X32A" x="5.08" y="2.54"/>
-<gate name="P" symbol="4VDD4VSS" x="-27.94" y="7.62" addlevel="request"/>
-</gates>
-<devices>
-<device name="" package="P8X32A-Q44">
-<connects>
-<connect gate="P" pin="VDD@1" pad="8"/>
-<connect gate="P" pin="VDD@2" pad="18"/>
-<connect gate="P" pin="VDD@3" pad="30"/>
-<connect gate="P" pin="VDD@4" pad="40"/>
-<connect gate="P" pin="VSS@1" pad="5"/>
-<connect gate="P" pin="VSS@2" pad="17"/>
-<connect gate="P" pin="VSS@3" pad="27"/>
-<connect gate="P" pin="VSS@4" pad="39"/>
-<connect gate="P8X32A-Q44" pin="BOE/" pad="6"/>
-<connect gate="P8X32A-Q44" pin="P0" pad="41"/>
-<connect gate="P8X32A-Q44" pin="P1" pad="42"/>
-<connect gate="P8X32A-Q44" pin="P10" pad="11"/>
-<connect gate="P8X32A-Q44" pin="P11" pad="12"/>
-<connect gate="P8X32A-Q44" pin="P12" pad="13"/>
-<connect gate="P8X32A-Q44" pin="P13" pad="14"/>
-<connect gate="P8X32A-Q44" pin="P14" pad="15"/>
-<connect gate="P8X32A-Q44" pin="P15" pad="16"/>
-<connect gate="P8X32A-Q44" pin="P16" pad="19"/>
-<connect gate="P8X32A-Q44" pin="P17" pad="20"/>
-<connect gate="P8X32A-Q44" pin="P18" pad="21"/>
-<connect gate="P8X32A-Q44" pin="P19" pad="22"/>
-<connect gate="P8X32A-Q44" pin="P2" pad="43"/>
-<connect gate="P8X32A-Q44" pin="P20" pad="23"/>
-<connect gate="P8X32A-Q44" pin="P21" pad="24"/>
-<connect gate="P8X32A-Q44" pin="P22" pad="25"/>
-<connect gate="P8X32A-Q44" pin="P23" pad="26"/>
-<connect gate="P8X32A-Q44" pin="P24" pad="31"/>
-<connect gate="P8X32A-Q44" pin="P25" pad="32"/>
-<connect gate="P8X32A-Q44" pin="P26" pad="33"/>
-<connect gate="P8X32A-Q44" pin="P27" pad="34"/>
-<connect gate="P8X32A-Q44" pin="P28" pad="35"/>
-<connect gate="P8X32A-Q44" pin="P29" pad="36"/>
-<connect gate="P8X32A-Q44" pin="P3" pad="44"/>
-<connect gate="P8X32A-Q44" pin="P30" pad="37"/>
-<connect gate="P8X32A-Q44" pin="P31" pad="38"/>
-<connect gate="P8X32A-Q44" pin="P4" pad="1"/>
-<connect gate="P8X32A-Q44" pin="P5" pad="2"/>
-<connect gate="P8X32A-Q44" pin="P6" pad="3"/>
-<connect gate="P8X32A-Q44" pin="P7" pad="4"/>
-<connect gate="P8X32A-Q44" pin="P8" pad="9"/>
-<connect gate="P8X32A-Q44" pin="P9" pad="10"/>
-<connect gate="P8X32A-Q44" pin="RES/" pad="7"/>
-<connect gate="P8X32A-Q44" pin="XI" pad="28"/>
-<connect gate="P8X32A-Q44" pin="XO" pad="29"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="adafruit">
 <packages>
 <package name="USB-MINIB">
@@ -12885,6 +12712,173 @@ SMT crystal</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="parallax_propeller">
+<packages>
+<package name="P8X32A-Q44">
+<wire x1="-4.9213" y1="4.9213" x2="-4.9212" y2="4.9213" width="0.4064" layer="21"/>
+<smd name="1" x="-5.7125" y="4.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="2" x="-5.7125" y="3.2125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="3" x="-5.7125" y="2.4125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="4" x="-5.7125" y="1.6125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="5" x="-5.7125" y="0.8125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="6" x="-5.7125" y="0.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="7" x="-5.7125" y="-0.7875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="8" x="-5.7125" y="-1.5875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="9" x="-5.7125" y="-2.3875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="10" x="-5.7125" y="-3.1875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="11" x="-5.7125" y="-3.9875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="33" x="5.6875" y="4.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="32" x="5.6875" y="3.2125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="31" x="5.6875" y="2.4125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="30" x="5.6875" y="1.6125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="29" x="5.6875" y="0.8125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="28" x="5.6875" y="0.0125" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="27" x="5.6875" y="-0.7875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="26" x="5.6875" y="-1.5875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="25" x="5.6875" y="-2.3875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="24" x="5.6875" y="-3.1875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="23" x="5.6875" y="-3.9875" dx="0.4" dy="1.9" layer="1" rot="R90"/>
+<smd name="44" x="-4.0125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="43" x="-3.2125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="42" x="-2.4125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="41" x="-1.6125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="40" x="-0.8125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="39" x="-0.0125" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="38" x="0.7875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="37" x="1.5875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="36" x="2.3875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="35" x="3.1875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="34" x="3.9875" y="5.7125" dx="0.4" dy="1.9" layer="1" rot="R180"/>
+<smd name="12" x="-4.0125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="13" x="-3.2125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="14" x="-2.4125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="15" x="-1.6125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="16" x="-0.8125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="17" x="-0.0125" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="18" x="0.7875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="19" x="1.5875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="20" x="2.3875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="21" x="3.1875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<smd name="22" x="3.9875" y="-5.6875" dx="0.4" dy="1.9" layer="1"/>
+<text x="-3.8125" y="2.2125" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-3.8125" y="1.0625" size="0.6096" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="P8X32A-Q44_W/POWER">
+<wire x1="-10.16" y1="35.56" x2="-10.16" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-27.94" x2="12.7" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-27.94" x2="12.7" y2="35.56" width="0.254" layer="94"/>
+<wire x1="12.7" y1="35.56" x2="-10.16" y2="35.56" width="0.254" layer="94"/>
+<text x="-10.16" y="38.1" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="P0" x="-15.24" y="20.32" length="middle"/>
+<pin name="P1" x="-15.24" y="17.78" length="middle"/>
+<pin name="P2" x="-15.24" y="15.24" length="middle"/>
+<pin name="P3" x="-15.24" y="12.7" length="middle"/>
+<pin name="P4" x="-15.24" y="10.16" length="middle"/>
+<pin name="P5" x="-15.24" y="7.62" length="middle"/>
+<pin name="P6" x="-15.24" y="5.08" length="middle"/>
+<pin name="P7" x="-15.24" y="2.54" length="middle"/>
+<pin name="P8" x="-15.24" y="0" length="middle"/>
+<pin name="P9" x="-15.24" y="-2.54" length="middle"/>
+<pin name="P10" x="-15.24" y="-5.08" length="middle"/>
+<pin name="P11" x="-15.24" y="-7.62" length="middle"/>
+<pin name="P12" x="-15.24" y="-10.16" length="middle"/>
+<pin name="P13" x="-15.24" y="-12.7" length="middle"/>
+<pin name="P14" x="-15.24" y="-15.24" length="middle"/>
+<pin name="P15" x="-15.24" y="-17.78" length="middle"/>
+<pin name="P16" x="17.78" y="-17.78" length="middle" rot="R180"/>
+<pin name="P17" x="17.78" y="-15.24" length="middle" rot="R180"/>
+<pin name="P18" x="17.78" y="-12.7" length="middle" rot="R180"/>
+<pin name="P19" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<pin name="P20" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<pin name="P21" x="17.78" y="-5.08" length="middle" rot="R180"/>
+<pin name="P22" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="P23" x="17.78" y="0" length="middle" rot="R180"/>
+<pin name="P24" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="P25" x="17.78" y="5.08" length="middle" rot="R180"/>
+<pin name="P26" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="P27" x="17.78" y="10.16" length="middle" rot="R180"/>
+<pin name="P28" x="17.78" y="12.7" length="middle" rot="R180"/>
+<pin name="P29" x="17.78" y="15.24" length="middle" rot="R180"/>
+<pin name="P30" x="17.78" y="17.78" length="middle" rot="R180"/>
+<pin name="P31" x="17.78" y="20.32" length="middle" rot="R180"/>
+<pin name="BOE/" x="-15.24" y="-22.86" length="middle" direction="in"/>
+<pin name="RES/" x="-15.24" y="-25.4" length="middle"/>
+<pin name="XI" x="17.78" y="-22.86" length="middle" direction="in" rot="R180"/>
+<pin name="XO" x="17.78" y="-25.4" length="middle" direction="out" rot="R180"/>
+<pin name="VDD@1" x="-15.24" y="33.02" length="middle" direction="pwr"/>
+<pin name="VDD@2" x="-15.24" y="30.48" length="middle" direction="pwr"/>
+<pin name="VDD@3" x="-15.24" y="27.94" length="middle" direction="pwr"/>
+<pin name="VDD@4" x="-15.24" y="25.4" length="middle" direction="pwr"/>
+<pin name="VSS@1" x="17.78" y="33.02" length="middle" direction="pwr" rot="R180"/>
+<pin name="VSS@2" x="17.78" y="30.48" length="middle" direction="pwr" rot="R180"/>
+<pin name="VSS@3" x="17.78" y="27.94" length="middle" direction="pwr" rot="R180"/>
+<pin name="VSS@4" x="17.78" y="25.4" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="P8X32A-Q44_P">
+<gates>
+<gate name="P8X32A-Q44" symbol="P8X32A-Q44_W/POWER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="P8X32A-Q44">
+<connects>
+<connect gate="P8X32A-Q44" pin="BOE/" pad="6"/>
+<connect gate="P8X32A-Q44" pin="P0" pad="41"/>
+<connect gate="P8X32A-Q44" pin="P1" pad="42"/>
+<connect gate="P8X32A-Q44" pin="P10" pad="11"/>
+<connect gate="P8X32A-Q44" pin="P11" pad="12"/>
+<connect gate="P8X32A-Q44" pin="P12" pad="13"/>
+<connect gate="P8X32A-Q44" pin="P13" pad="14"/>
+<connect gate="P8X32A-Q44" pin="P14" pad="15"/>
+<connect gate="P8X32A-Q44" pin="P15" pad="16"/>
+<connect gate="P8X32A-Q44" pin="P16" pad="19"/>
+<connect gate="P8X32A-Q44" pin="P17" pad="20"/>
+<connect gate="P8X32A-Q44" pin="P18" pad="21"/>
+<connect gate="P8X32A-Q44" pin="P19" pad="22"/>
+<connect gate="P8X32A-Q44" pin="P2" pad="43"/>
+<connect gate="P8X32A-Q44" pin="P20" pad="23"/>
+<connect gate="P8X32A-Q44" pin="P21" pad="24"/>
+<connect gate="P8X32A-Q44" pin="P22" pad="25"/>
+<connect gate="P8X32A-Q44" pin="P23" pad="26"/>
+<connect gate="P8X32A-Q44" pin="P24" pad="31"/>
+<connect gate="P8X32A-Q44" pin="P25" pad="32"/>
+<connect gate="P8X32A-Q44" pin="P26" pad="33"/>
+<connect gate="P8X32A-Q44" pin="P27" pad="34"/>
+<connect gate="P8X32A-Q44" pin="P28" pad="35"/>
+<connect gate="P8X32A-Q44" pin="P29" pad="36"/>
+<connect gate="P8X32A-Q44" pin="P3" pad="44"/>
+<connect gate="P8X32A-Q44" pin="P30" pad="37"/>
+<connect gate="P8X32A-Q44" pin="P31" pad="38"/>
+<connect gate="P8X32A-Q44" pin="P4" pad="1"/>
+<connect gate="P8X32A-Q44" pin="P5" pad="2"/>
+<connect gate="P8X32A-Q44" pin="P6" pad="3"/>
+<connect gate="P8X32A-Q44" pin="P7" pad="4"/>
+<connect gate="P8X32A-Q44" pin="P8" pad="9"/>
+<connect gate="P8X32A-Q44" pin="P9" pad="10"/>
+<connect gate="P8X32A-Q44" pin="RES/" pad="7"/>
+<connect gate="P8X32A-Q44" pin="VDD@1" pad="8"/>
+<connect gate="P8X32A-Q44" pin="VDD@2" pad="18"/>
+<connect gate="P8X32A-Q44" pin="VDD@3" pad="30"/>
+<connect gate="P8X32A-Q44" pin="VDD@4" pad="40"/>
+<connect gate="P8X32A-Q44" pin="VSS@1" pad="5"/>
+<connect gate="P8X32A-Q44" pin="VSS@2" pad="17"/>
+<connect gate="P8X32A-Q44" pin="VSS@3" pad="27"/>
+<connect gate="P8X32A-Q44" pin="VSS@4" pad="39"/>
+<connect gate="P8X32A-Q44" pin="XI" pad="28"/>
+<connect gate="P8X32A-Q44" pin="XO" pad="29"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12960,7 +12954,6 @@ SMT crystal</description>
 <part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
 <part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="Q1" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
-<part name="U1" library="parallax_propeller" deviceset="P8X32A-Q44" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="R29" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R30" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -13120,6 +13113,7 @@ SMT crystal</description>
 <part name="R35" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY25" library="supply2" deviceset="DGND" device=""/>
+<part name="U$1" library="parallax_propeller" deviceset="P8X32A-Q44_P" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13147,12 +13141,12 @@ IO31: Serial Rx from host.</text>
 <instance part="D1" gate="G$1" x="-45.72" y="76.2" rot="R90"/>
 <instance part="D3" gate="G$1" x="-45.72" y="96.52" rot="R90"/>
 <instance part="S1" gate="G$1" x="116.84" y="78.74"/>
-<instance part="C1" gate="G$1" x="7.62" y="60.96"/>
+<instance part="C1" gate="G$1" x="12.7" y="50.8"/>
 <instance part="C6" gate="G$1" x="121.92" y="119.38" rot="R180"/>
 <instance part="+3V5" gate="G$1" x="-116.84" y="134.62"/>
 <instance part="+3V14" gate="G$1" x="-45.72" y="137.16"/>
 <instance part="SUPPLY2" gate="G$1" x="40.64" y="-121.92"/>
-<instance part="SUPPLY7" gate="G$1" x="-12.7" y="45.72"/>
+<instance part="SUPPLY7" gate="G$1" x="27.94" y="40.64"/>
 <instance part="SUPPLY9" gate="G$1" x="-297.18" y="50.8" rot="R180"/>
 <instance part="SUPPLY10" gate="G$1" x="-116.84" y="99.06"/>
 <instance part="SUPPLY12" gate="G$1" x="129.54" y="78.74" rot="R90"/>
@@ -13199,8 +13193,8 @@ IO31: Serial Rx from host.</text>
 <instance part="+3V21" gate="G$1" x="243.84" y="-10.16" rot="R90"/>
 <instance part="SUPPLY50" gate="G$1" x="243.84" y="-12.7" rot="R270"/>
 <instance part="SUPPLY14" gate="G$1" x="121.92" y="114.3"/>
-<instance part="C8" gate="G$1" x="0" y="60.96"/>
-<instance part="C7" gate="G$1" x="-7.62" y="60.96"/>
+<instance part="C8" gate="G$1" x="2.54" y="50.8"/>
+<instance part="C7" gate="G$1" x="-7.62" y="50.8"/>
 <instance part="D5" gate="G$1" x="127" y="182.88"/>
 <instance part="D6" gate="G$1" x="134.62" y="185.42"/>
 <instance part="C17" gate="G$1" x="60.96" y="200.66" rot="R180"/>
@@ -13208,9 +13202,7 @@ IO31: Serial Rx from host.</text>
 <instance part="R27" gate="G$1" x="147.32" y="185.42" rot="R90"/>
 <instance part="C18" gate="G$1" x="134.62" y="198.12"/>
 <instance part="Q1" gate="G$1" x="154.94" y="193.04"/>
-<instance part="U1" gate="P8X32A-Q44" x="0" y="0"/>
 <instance part="SUPPLY15" gate="G$1" x="-30.48" y="-27.94"/>
-<instance part="U1" gate="P" x="20.32" y="58.42" rot="R270"/>
 <instance part="R29" gate="G$1" x="-50.8" y="127" smashed="yes" rot="R180">
 <attribute name="NAME" x="-32.258" y="127" size="1.778" layer="95" rot="R180" align="center-left"/>
 <attribute name="VALUE" x="-39.37" y="127" size="1.778" layer="96" rot="R180" align="center-left"/>
@@ -13350,7 +13342,7 @@ IO31: Serial Rx from host.</text>
 <instance part="R15" gate="G$1" x="-149.86" y="200.66" rot="R90"/>
 <instance part="R16" gate="G$1" x="-160.02" y="200.66" rot="R90"/>
 <instance part="+3V6" gate="G$1" x="86.36" y="132.08"/>
-<instance part="+3V7" gate="G$1" x="25.4" y="78.74"/>
+<instance part="+3V7" gate="G$1" x="27.94" y="63.5"/>
 <instance part="J2" gate="G$1" x="-96.52" y="116.84"/>
 <instance part="TP_5V-RR" gate="G$1" x="-218.44" y="-33.02"/>
 <instance part="TP_5V-USB" gate="G$1" x="33.02" y="223.52"/>
@@ -13405,6 +13397,7 @@ IO31: Serial Rx from host.</text>
 <attribute name="VALUE" x="177.8" y="-114.3" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="SUPPLY25" gate="G$1" x="185.42" y="-142.24"/>
+<instance part="U$1" gate="P8X32A-Q44" x="0" y="0"/>
 </instances>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
@@ -13595,6 +13588,38 @@ IO31: Serial Rx from host.</text>
 <wire x1="40.64" y1="-132.08" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-134.62" x2="48.26" y2="-134.62" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="53.34" x2="12.7" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="2.54" y1="53.34" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="55.88" x2="12.7" y2="55.88" width="0.1524" layer="91"/>
+<junction x="2.54" y="55.88"/>
+<wire x1="-7.62" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="-7.62" y1="53.34" x2="-7.62" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="55.88" x2="-17.78" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="55.88" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VDD@4"/>
+<wire x1="-15.24" y1="25.4" x2="-17.78" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="25.4" x2="-17.78" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VDD@3"/>
+<wire x1="-15.24" y1="27.94" x2="-17.78" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="27.94" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VDD@2"/>
+<wire x1="-15.24" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="30.48" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VDD@1"/>
+<wire x1="-17.78" y1="33.02" x2="-15.24" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-7.62" y="55.88"/>
+<junction x="-17.78" y="27.94"/>
+<junction x="-17.78" y="30.48"/>
+<junction x="-17.78" y="33.02"/>
+<junction x="12.7" y="55.88"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
+<wire x1="12.7" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="55.88" x2="27.94" y2="60.96" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="!RESET" class="0">
 <segment>
@@ -13609,12 +13634,12 @@ IO31: Serial Rx from host.</text>
 <wire x1="96.52" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="63.5" y1="38.1" x2="-25.4" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="38.1" x2="-25.4" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="RES/"/>
+<wire x1="63.5" y1="81.28" x2="-25.4" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="81.28" x2="-25.4" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="-25.4" x2="-15.24" y2="-25.4" width="0.1524" layer="91"/>
-<label x="53.34" y="38.1" size="1.778" layer="95"/>
+<label x="50.8" y="81.28" size="1.778" layer="95"/>
 <label x="-20.32" y="-25.4" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="RES/"/>
 </segment>
 </net>
 <net name="IO5" class="0">
@@ -13624,9 +13649,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="U$27" gate="G$1" pin="DATA"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P5"/>
 <wire x1="-15.24" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
 <label x="-20.32" y="7.62" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P5"/>
 </segment>
 </net>
 <net name="IO6" class="0">
@@ -13636,9 +13661,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="U$26" gate="G$1" pin="DATA"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P6"/>
 <wire x1="-15.24" y1="5.08" x2="-33.02" y2="5.08" width="0.1524" layer="91"/>
 <label x="-20.32" y="5.08" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P6"/>
 </segment>
 </net>
 <net name="IO7" class="0">
@@ -13648,9 +13673,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="U$29" gate="G$1" pin="DATA"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P7"/>
 <wire x1="-15.24" y1="2.54" x2="-33.02" y2="2.54" width="0.1524" layer="91"/>
 <label x="-20.32" y="2.54" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P7"/>
 </segment>
 </net>
 <net name="IO8" class="0">
@@ -13665,9 +13690,9 @@ IO31: Serial Rx from host.</text>
 <label x="-279.4" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P8"/>
 <wire x1="-15.24" y1="0" x2="-33.02" y2="0" width="0.1524" layer="91"/>
 <label x="-20.32" y="0" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P8"/>
 </segment>
 </net>
 <net name="IO9" class="0">
@@ -13686,9 +13711,9 @@ IO31: Serial Rx from host.</text>
 <junction x="154.94" y="10.16"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P9"/>
 <wire x1="-15.24" y1="-2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-20.32" y="-2.54" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P9"/>
 </segment>
 </net>
 <net name="IO10" class="0">
@@ -13707,9 +13732,9 @@ IO31: Serial Rx from host.</text>
 <junction x="157.48" y="-7.62"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P10"/>
 <wire x1="-15.24" y1="-5.08" x2="-33.02" y2="-5.08" width="0.1524" layer="91"/>
 <label x="-20.32" y="-5.08" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P10"/>
 </segment>
 </net>
 <net name="IO11" class="0">
@@ -13728,9 +13753,9 @@ IO31: Serial Rx from host.</text>
 <label x="-279.4" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P11"/>
 <wire x1="-15.24" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
 <label x="-20.32" y="-7.62" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P11"/>
 </segment>
 </net>
 <net name="IO12" class="0">
@@ -13749,9 +13774,9 @@ IO31: Serial Rx from host.</text>
 <label x="-279.4" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P12"/>
 <wire x1="-15.24" y1="-10.16" x2="-33.02" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-20.32" y="-10.16" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P12"/>
 </segment>
 </net>
 <net name="IO13" class="0">
@@ -13766,9 +13791,9 @@ IO31: Serial Rx from host.</text>
 <label x="-279.4" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P13"/>
 <wire x1="-15.24" y1="-12.7" x2="-33.02" y2="-12.7" width="0.1524" layer="91"/>
 <label x="-20.32" y="-12.7" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P13"/>
 </segment>
 </net>
 <net name="IO15" class="0">
@@ -13779,9 +13804,9 @@ IO31: Serial Rx from host.</text>
 <label x="45.72" y="-58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P15"/>
 <wire x1="-15.24" y1="-17.78" x2="-33.02" y2="-17.78" width="0.1524" layer="91"/>
 <label x="-20.32" y="-17.78" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P15"/>
 </segment>
 </net>
 <net name="IO16" class="0">
@@ -13791,9 +13816,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P16"/>
 <wire x1="25.4" y1="-17.78" x2="17.78" y2="-17.78" width="0.1524" layer="91"/>
 <label x="17.78" y="-17.78" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P16"/>
 </segment>
 </net>
 <net name="IO17" class="0">
@@ -13803,9 +13828,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P17"/>
 <wire x1="25.4" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
 <label x="17.78" y="-15.24" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P17"/>
 </segment>
 </net>
 <net name="IO18" class="0">
@@ -13815,9 +13840,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="R10" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P18"/>
 <wire x1="25.4" y1="-12.7" x2="17.78" y2="-12.7" width="0.1524" layer="91"/>
 <label x="17.78" y="-12.7" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P18"/>
 </segment>
 </net>
 <net name="IO19" class="0">
@@ -13827,9 +13852,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="RR_TX" gate="G$1" pin="DATA"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P19"/>
 <wire x1="25.4" y1="-10.16" x2="17.78" y2="-10.16" width="0.1524" layer="91"/>
 <label x="17.78" y="-10.16" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P19"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="14-UART_TX"/>
@@ -13850,9 +13875,9 @@ IO31: Serial Rx from host.</text>
 <junction x="-2.54" y="-116.84"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P20"/>
 <wire x1="25.4" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
 <label x="17.78" y="-7.62" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P20"/>
 </segment>
 </net>
 <net name="IO21" class="0">
@@ -13868,9 +13893,9 @@ IO31: Serial Rx from host.</text>
 <junction x="0" y="-114.3"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P21"/>
 <wire x1="25.4" y1="-5.08" x2="17.78" y2="-5.08" width="0.1524" layer="91"/>
 <label x="17.78" y="-5.08" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P21"/>
 </segment>
 </net>
 <net name="IO22" class="0">
@@ -13886,9 +13911,9 @@ IO31: Serial Rx from host.</text>
 <junction x="2.54" y="-111.76"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P22"/>
 <wire x1="25.4" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
 <label x="17.78" y="-2.54" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P22"/>
 </segment>
 </net>
 <net name="IO23" class="0">
@@ -13900,16 +13925,16 @@ IO31: Serial Rx from host.</text>
 <wire x1="5.08" y1="-142.24" x2="48.26" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P23"/>
 <wire x1="25.4" y1="0" x2="17.78" y2="0" width="0.1524" layer="91"/>
 <label x="17.78" y="0" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P23"/>
 </segment>
 </net>
 <net name="IO24" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P24"/>
 <wire x1="25.4" y1="2.54" x2="17.78" y2="2.54" width="0.1524" layer="91"/>
 <label x="17.78" y="2.54" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P24"/>
 </segment>
 <segment>
 <wire x1="-33.02" y1="-63.5" x2="7.62" y2="-63.5" width="0.1524" layer="91"/>
@@ -13928,16 +13953,16 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="D2"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P25"/>
 <wire x1="25.4" y1="5.08" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
 <label x="17.78" y="5.08" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P25"/>
 </segment>
 </net>
 <net name="IO26" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P26"/>
 <wire x1="25.4" y1="7.62" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
 <label x="17.78" y="7.62" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P26"/>
 </segment>
 </net>
 <net name="IO27" class="0">
@@ -13949,9 +13974,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="CD/D3"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P27"/>
 <wire x1="25.4" y1="10.16" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
 <label x="17.78" y="10.16" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P27"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -14122,9 +14147,9 @@ IO31: Serial Rx from host.</text>
 <label x="-279.4" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P14"/>
 <wire x1="-15.24" y1="-15.24" x2="-33.02" y2="-15.24" width="0.1524" layer="91"/>
 <label x="-20.32" y="-15.24" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P14"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -14274,27 +14299,32 @@ IO31: Serial Rx from host.</text>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY7" gate="G$1" pin="DGND"/>
 <pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="-7.62" y1="55.88" x2="-7.62" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="45.72" x2="-7.62" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="0" y1="48.26" x2="0" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="48.26" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="48.26" x2="-7.62" y2="48.26" width="0.1524" layer="91"/>
-<junction x="7.62" y="48.26"/>
-<wire x1="-7.62" y1="48.26" x2="0" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="0" y1="48.26" x2="7.62" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="48.26" x2="17.78" y2="48.26" width="0.1524" layer="91"/>
-<junction x="0" y="48.26"/>
-<junction x="-7.62" y="48.26"/>
-<pinref part="U1" gate="P" pin="VSS@3"/>
-<pinref part="U1" gate="P" pin="VSS@4"/>
-<wire x1="17.78" y1="48.26" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
-<junction x="17.78" y="48.26"/>
-<pinref part="U1" gate="P" pin="VSS@1"/>
-<pinref part="U1" gate="P" pin="VSS@2"/>
-<wire x1="25.4" y1="48.26" x2="22.86" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="48.26" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
-<junction x="20.32" y="48.26"/>
-<junction x="22.86" y="48.26"/>
+<wire x1="2.54" y1="43.18" x2="2.54" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="43.18" x2="12.7" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="43.18" x2="2.54" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
+<junction x="2.54" y="43.18"/>
+<junction x="12.7" y="43.18"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VSS@4"/>
+<wire x1="17.78" y1="25.4" x2="20.32" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="25.4" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VSS@1"/>
+<wire x1="17.78" y1="33.02" x2="20.32" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VSS@2"/>
+<wire x1="17.78" y1="30.48" x2="20.32" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="30.48" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="VSS@3"/>
+<wire x1="17.78" y1="27.94" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="30.48" x2="20.32" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="33.02" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
+<junction x="20.32" y="27.94"/>
+<junction x="20.32" y="30.48"/>
+<junction x="20.32" y="33.02"/>
+<junction x="20.32" y="43.18"/>
 </segment>
 <segment>
 <wire x1="-297.18" y1="48.26" x2="-302.26" y2="48.26" width="0.1524" layer="91"/>
@@ -14419,10 +14449,10 @@ IO31: Serial Rx from host.</text>
 <wire x1="60.96" y1="195.58" x2="60.96" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="BOE/"/>
 <pinref part="SUPPLY15" gate="G$1" pin="DGND"/>
 <wire x1="-15.24" y1="-22.86" x2="-30.48" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="-22.86" x2="-30.48" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="BOE/"/>
 </segment>
 <segment>
 <wire x1="-40.64" y1="96.52" x2="-40.64" y2="86.36" width="0.1524" layer="91"/>
@@ -14767,9 +14797,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="D1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P0"/>
 <wire x1="-15.24" y1="20.32" x2="-33.02" y2="20.32" width="0.1524" layer="91"/>
 <label x="-20.32" y="20.32" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P0"/>
 </segment>
 </net>
 <net name="IO1" class="0">
@@ -14781,9 +14811,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="D0"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P1"/>
 <wire x1="-15.24" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
 <label x="-20.32" y="17.78" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P1"/>
 </segment>
 </net>
 <net name="IO2" class="0">
@@ -14795,9 +14825,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="CLK"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P2"/>
 <wire x1="-15.24" y1="15.24" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
 <label x="-20.32" y="15.24" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P2"/>
 </segment>
 </net>
 <net name="IO3" class="0">
@@ -14809,10 +14839,10 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="CMD"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P3"/>
 <wire x1="-15.24" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
 <label x="-20.32" y="12.7" size="1.778" layer="95"/>
 <label x="-20.32" y="12.7" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P3"/>
 </segment>
 </net>
 <net name="N$30" class="0">
@@ -14834,9 +14864,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="U$28" gate="G$1" pin="DATA"/>
 </segment>
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P4"/>
 <wire x1="-15.24" y1="10.16" x2="-33.02" y2="10.16" width="0.1524" layer="91"/>
 <label x="-20.32" y="10.16" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P4"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -14860,9 +14890,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="N$32" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="XO"/>
 <wire x1="17.78" y1="-25.4" x2="20.32" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="Y1" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="XO"/>
 </segment>
 </net>
 <net name="N$37" class="0">
@@ -14871,9 +14901,9 @@ IO31: Serial Rx from host.</text>
 <wire x1="33.02" y1="-25.4" x2="33.02" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="-20.32" x2="20.32" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="-20.32" x2="20.32" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="XI"/>
 <wire x1="20.32" y1="-22.86" x2="17.78" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="Y1" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="XI"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -15153,39 +15183,6 @@ IO31: Serial Rx from host.</text>
 <label x="-127" y="177.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$24" class="0">
-<segment>
-<junction x="25.4" y="68.58"/>
-<pinref part="U1" gate="P" pin="VDD@4"/>
-<wire x1="17.78" y1="66.04" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="63.5" x2="7.62" y2="68.58" width="0.1524" layer="91"/>
-<junction x="7.62" y="68.58"/>
-<wire x1="7.62" y1="68.58" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
-<junction x="17.78" y="68.58"/>
-<wire x1="17.78" y1="68.58" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U1" gate="P" pin="VDD@3"/>
-<wire x1="20.32" y1="66.04" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
-<junction x="20.32" y="68.58"/>
-<wire x1="20.32" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
-<junction x="22.86" y="68.58"/>
-<pinref part="U1" gate="P" pin="VDD@2"/>
-<wire x1="22.86" y1="66.04" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="68.58" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U1" gate="P" pin="VDD@1"/>
-<wire x1="25.4" y1="66.04" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="68.58" x2="25.4" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="68.58" x2="0" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="0" y1="63.5" x2="0" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="0" y1="68.58" x2="7.62" y2="68.58" width="0.1524" layer="91"/>
-<junction x="0" y="68.58"/>
-<wire x1="-7.62" y1="68.58" x2="0" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="-7.62" y1="63.5" x2="-7.62" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="+3V7" gate="G$1" pin="+3V3"/>
-</segment>
-</net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="U9" gate="G$1" pin="AIN4"/>
@@ -15305,9 +15302,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO31_RX" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P31"/>
 <wire x1="40.64" y1="20.32" x2="17.78" y2="20.32" width="0.1524" layer="91"/>
 <label x="17.78" y="20.32" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P31"/>
 </segment>
 <segment>
 <pinref part="U3" gate="1" pin="TXD"/>
@@ -15317,9 +15314,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO30_TX" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P30"/>
 <wire x1="40.64" y1="17.78" x2="17.78" y2="17.78" width="0.1524" layer="91"/>
 <label x="17.78" y="17.78" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P30"/>
 </segment>
 <segment>
 <pinref part="U3" gate="1" pin="RXD"/>
@@ -15329,9 +15326,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO29_SDA" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P29"/>
 <wire x1="40.64" y1="15.24" x2="17.78" y2="15.24" width="0.1524" layer="91"/>
 <label x="17.78" y="15.24" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P29"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA"/>
@@ -15344,9 +15341,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO28_SCL" class="0">
 <segment>
-<pinref part="U1" gate="P8X32A-Q44" pin="P28"/>
 <wire x1="40.64" y1="12.7" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
 <label x="17.78" y="12.7" size="1.778" layer="95"/>
+<pinref part="U$1" gate="P8X32A-Q44" pin="P28"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SCL"/>
