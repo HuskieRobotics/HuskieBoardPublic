@@ -12972,16 +12972,16 @@ SMT crystal</description>
 <part name="R34" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="J3" library="adafruit" deviceset="USB" device="MINIB" value="51387-0578"/>
 <part name="C9" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="PWM0" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM1" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM2" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM3" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM4" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM5" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM6" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM7" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM8" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="PWM9" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J25" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM0"/>
+<part name="J26" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM1"/>
+<part name="J27" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM2"/>
+<part name="J28" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM3"/>
+<part name="J29" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM4"/>
+<part name="J30" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM5"/>
+<part name="J31" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM6"/>
+<part name="J32" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM7"/>
+<part name="J33" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM8"/>
+<part name="J34" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM9"/>
 <part name="SUPPLY4" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
@@ -12994,12 +12994,12 @@ SMT crystal</description>
 <part name="SUPPLY27" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY20" library="supply2" deviceset="DGND" device=""/>
-<part name="AI0" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="AI1" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="AI2" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="AI3" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="AO0" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="AO1" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J35" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AI0"/>
+<part name="J36" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AI1"/>
+<part name="J37" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AI2"/>
+<part name="J38" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AI3"/>
+<part name="J39" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AO0"/>
+<part name="J40" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AO1"/>
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
 <part name="J17" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
 <part name="J18" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
@@ -13156,7 +13156,7 @@ IO31: Serial Rx from host.</text>
 <instance part="+3V14" gate="G$1" x="-45.72" y="137.16"/>
 <instance part="SUPPLY2" gate="G$1" x="40.64" y="-121.92"/>
 <instance part="SUPPLY7" gate="G$1" x="27.94" y="40.64"/>
-<instance part="SUPPLY9" gate="G$1" x="-297.18" y="50.8" rot="R180"/>
+<instance part="SUPPLY9" gate="G$1" x="-302.26" y="-81.28"/>
 <instance part="SUPPLY10" gate="G$1" x="-116.84" y="99.06"/>
 <instance part="SUPPLY12" gate="G$1" x="129.54" y="78.74" rot="R90"/>
 <instance part="SUPPLY13" gate="G$1" x="50.8" y="-66.04"/>
@@ -13234,16 +13234,16 @@ IO31: Serial Rx from host.</text>
 </instance>
 <instance part="J3" gate="G$1" x="33.02" y="175.26"/>
 <instance part="C9" gate="G$1" x="55.88" y="182.88" rot="R180"/>
-<instance part="PWM0" gate="J$1" x="-304.8" y="43.18" rot="R90"/>
-<instance part="PWM1" gate="J$1" x="-304.8" y="30.48" rot="R90"/>
-<instance part="PWM2" gate="J$1" x="-304.8" y="15.24" rot="R90"/>
-<instance part="PWM3" gate="J$1" x="-304.8" y="2.54" rot="R90"/>
-<instance part="PWM4" gate="J$1" x="-304.8" y="-10.16" rot="R90"/>
-<instance part="PWM5" gate="J$1" x="-304.8" y="-22.86" rot="R90"/>
-<instance part="PWM6" gate="J$1" x="-304.8" y="-35.56" rot="R90"/>
-<instance part="PWM7" gate="J$1" x="-304.8" y="-48.26" rot="R90"/>
-<instance part="PWM8" gate="J$1" x="-304.8" y="-60.96" rot="R90"/>
-<instance part="PWM9" gate="J$1" x="-304.8" y="-73.66" rot="R90"/>
+<instance part="J25" gate="J$1" x="-292.1" y="71.12" rot="R180"/>
+<instance part="J26" gate="J$1" x="-292.1" y="55.88" rot="R180"/>
+<instance part="J27" gate="J$1" x="-292.1" y="40.64" rot="R180"/>
+<instance part="J28" gate="J$1" x="-292.1" y="25.4" rot="R180"/>
+<instance part="J29" gate="J$1" x="-292.1" y="10.16" rot="R180"/>
+<instance part="J30" gate="J$1" x="-292.1" y="-5.08" rot="R180"/>
+<instance part="J31" gate="J$1" x="-292.1" y="-20.32" rot="R180"/>
+<instance part="J32" gate="J$1" x="-292.1" y="-35.56" rot="R180"/>
+<instance part="J33" gate="J$1" x="-292.1" y="-50.8" rot="R180"/>
+<instance part="J34" gate="J$1" x="-292.1" y="-66.04" rot="R180"/>
 <instance part="SUPPLY4" gate="G$1" x="147.32" y="177.8"/>
 <instance part="SUPPLY8" gate="G$1" x="55.88" y="167.64"/>
 <instance part="SUPPLY11" gate="G$1" x="134.62" y="160.02"/>
@@ -13256,13 +13256,13 @@ IO31: Serial Rx from host.</text>
 <instance part="SUPPLY27" gate="G$1" x="154.94" y="-162.56" rot="R270"/>
 <instance part="SUPPLY28" gate="G$1" x="154.94" y="-147.32" rot="R270"/>
 <instance part="SUPPLY20" gate="G$1" x="76.2" y="167.64"/>
-<instance part="AI0" gate="J$1" x="-132.08" y="43.18" rot="R180"/>
-<instance part="AI1" gate="J$1" x="-132.08" y="30.48" rot="R180"/>
-<instance part="AI2" gate="J$1" x="-132.08" y="17.78" rot="R180"/>
-<instance part="AI3" gate="J$1" x="-132.08" y="5.08" rot="R180"/>
-<instance part="AO0" gate="J$1" x="-132.08" y="-7.62" rot="R180"/>
-<instance part="AO1" gate="J$1" x="-132.08" y="-20.32" rot="R180"/>
-<instance part="SUPPLY30" gate="G$1" x="-139.7" y="-27.94"/>
+<instance part="J35" gate="J$1" x="-132.08" y="50.8" rot="R180"/>
+<instance part="J36" gate="J$1" x="-132.08" y="35.56" rot="R180"/>
+<instance part="J37" gate="J$1" x="-132.08" y="20.32" rot="R180"/>
+<instance part="J38" gate="J$1" x="-132.08" y="5.08" rot="R180"/>
+<instance part="J39" gate="J$1" x="-132.08" y="-10.16" rot="R180"/>
+<instance part="J40" gate="J$1" x="-132.08" y="-25.4" rot="R180"/>
+<instance part="SUPPLY30" gate="G$1" x="-139.7" y="-45.72"/>
 <instance part="J17" gate="J$1" x="162.56" y="-144.78" rot="R180"/>
 <instance part="J18" gate="J$1" x="162.56" y="-160.02" rot="R180"/>
 <instance part="J19" gate="J$1" x="162.56" y="-175.26" rot="R180"/>
@@ -13410,7 +13410,7 @@ IO31: Serial Rx from host.</text>
 <bus name="IO[0..31],UART_TX,UART_RX,I2C_SCL,I2C_SDA">
 <segment>
 <wire x1="-121.92" y1="68.58" x2="-281.94" y2="68.58" width="0.762" layer="92"/>
-<wire x1="-281.94" y1="68.58" x2="-281.94" y2="45.72" width="0.762" layer="92"/>
+<wire x1="-281.94" y1="68.58" x2="-281.94" y2="15.24" width="0.762" layer="92"/>
 <wire x1="83.82" y1="-35.56" x2="38.1" y2="-35.56" width="0.762" layer="92"/>
 <wire x1="38.1" y1="-35.56" x2="-33.02" y2="-35.56" width="0.762" layer="92"/>
 <wire x1="-33.02" y1="-35.56" x2="-33.02" y2="20.32" width="0.762" layer="92"/>
@@ -13431,18 +13431,15 @@ IO31: Serial Rx from host.</text>
 </bus>
 <bus name="IO[0..31],AI[0..3],AO[0..1],DIO[0..3],DIO[8..13],UART_TX,UART_RX,IO0,I2C_SCL,I2C_SDA">
 <segment>
-<wire x1="-281.94" y1="45.72" x2="-281.94" y2="15.24" width="0.762" layer="92"/>
-</segment>
-<segment>
-<wire x1="-200.66" y1="48.26" x2="-200.66" y2="19.05" width="0.762" layer="92"/>
-<wire x1="-200.66" y1="48.26" x2="-154.94" y2="48.26" width="0.762" layer="92"/>
-<wire x1="-154.94" y1="48.26" x2="-154.94" y2="-17.78" width="0.762" layer="92"/>
+<wire x1="-200.66" y1="55.88" x2="-200.66" y2="21.59" width="0.762" layer="92"/>
+<wire x1="-200.66" y1="55.88" x2="-154.94" y2="55.88" width="0.762" layer="92"/>
+<wire x1="-154.94" y1="55.88" x2="-154.94" y2="-22.86" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="PWM[0..9]">
 <segment>
 <wire x1="-281.94" y1="10.16" x2="-281.94" y2="-76.2" width="0.762" layer="92"/>
-<wire x1="-322.58" y1="-76.2" x2="-322.58" y2="60.96" width="0.762" layer="92"/>
+<wire x1="-322.58" y1="-76.2" x2="-322.58" y2="73.66" width="0.762" layer="92"/>
 <wire x1="-281.94" y1="-76.2" x2="-322.58" y2="-76.2" width="0.762" layer="92"/>
 </segment>
 </bus>
@@ -14078,7 +14075,7 @@ IO31: Serial Rx from host.</text>
 <label x="-210.82" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AI3" gate="J$1" pin="DATA"/>
+<pinref part="J38" gate="J$1" pin="DATA"/>
 <wire x1="-154.94" y1="7.62" x2="-137.16" y2="7.62" width="0.1524" layer="91"/>
 <label x="-152.4" y="7.62" size="1.778" layer="95"/>
 </segment>
@@ -14090,9 +14087,9 @@ IO31: Serial Rx from host.</text>
 <label x="-210.82" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AI2" gate="J$1" pin="DATA"/>
-<wire x1="-154.94" y1="20.32" x2="-137.16" y2="20.32" width="0.1524" layer="91"/>
-<label x="-152.4" y="20.32" size="1.778" layer="95"/>
+<pinref part="J37" gate="J$1" pin="DATA"/>
+<wire x1="-154.94" y1="22.86" x2="-137.16" y2="22.86" width="0.1524" layer="91"/>
+<label x="-152.4" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AI1" class="0">
@@ -14102,9 +14099,9 @@ IO31: Serial Rx from host.</text>
 <label x="-210.82" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AI1" gate="J$1" pin="DATA"/>
-<wire x1="-154.94" y1="33.02" x2="-137.16" y2="33.02" width="0.1524" layer="91"/>
-<label x="-152.4" y="33.02" size="1.778" layer="95"/>
+<pinref part="J36" gate="J$1" pin="DATA"/>
+<wire x1="-154.94" y1="38.1" x2="-137.16" y2="38.1" width="0.1524" layer="91"/>
+<label x="-152.4" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AI0" class="0">
@@ -14114,9 +14111,9 @@ IO31: Serial Rx from host.</text>
 <label x="-210.82" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AI0" gate="J$1" pin="DATA"/>
-<wire x1="-154.94" y1="45.72" x2="-137.16" y2="45.72" width="0.1524" layer="91"/>
-<label x="-152.4" y="45.72" size="1.778" layer="95"/>
+<pinref part="J35" gate="J$1" pin="DATA"/>
+<wire x1="-154.94" y1="53.34" x2="-137.16" y2="53.34" width="0.1524" layer="91"/>
+<label x="-152.4" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AO1" class="0">
@@ -14126,9 +14123,9 @@ IO31: Serial Rx from host.</text>
 <label x="-210.82" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AO1" gate="J$1" pin="DATA"/>
-<wire x1="-154.94" y1="-17.78" x2="-137.16" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-152.4" y="-17.78" size="1.778" layer="95"/>
+<pinref part="J40" gate="J$1" pin="DATA"/>
+<wire x1="-154.94" y1="-22.86" x2="-137.16" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-152.4" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AO0" class="0">
@@ -14138,9 +14135,9 @@ IO31: Serial Rx from host.</text>
 <label x="-210.82" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AO0" gate="J$1" pin="DATA"/>
-<wire x1="-154.94" y1="-5.08" x2="-137.16" y2="-5.08" width="0.1524" layer="91"/>
-<label x="-152.4" y="-5.08" size="1.778" layer="95"/>
+<pinref part="J39" gate="J$1" pin="DATA"/>
+<wire x1="-154.94" y1="-7.62" x2="-137.16" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-152.4" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO14" class="0">
@@ -14183,9 +14180,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM0" class="0">
 <segment>
-<wire x1="-322.58" y1="48.26" x2="-307.34" y2="48.26" width="0.1524" layer="91"/>
-<label x="-317.5" y="50.8" size="1.778" layer="95"/>
-<pinref part="PWM0" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="73.66" x2="-297.18" y2="73.66" width="0.1524" layer="91"/>
+<label x="-320.04" y="73.66" size="1.778" layer="95"/>
+<pinref part="J25" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="11*-DIO0-PWM0"/>
@@ -14195,9 +14192,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM1" class="0">
 <segment>
-<wire x1="-322.58" y1="35.56" x2="-307.34" y2="35.56" width="0.1524" layer="91"/>
-<label x="-317.5" y="38.1" size="1.778" layer="95"/>
-<pinref part="PWM1" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="58.42" x2="-297.18" y2="58.42" width="0.1524" layer="91"/>
+<label x="-320.04" y="58.42" size="1.778" layer="95"/>
+<pinref part="J26" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="13*-DIO1-PWM1"/>
@@ -14207,9 +14204,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM2" class="0">
 <segment>
-<wire x1="-322.58" y1="20.32" x2="-307.34" y2="20.32" width="0.1524" layer="91"/>
-<label x="-317.5" y="22.86" size="1.778" layer="95"/>
-<pinref part="PWM2" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="43.18" x2="-297.18" y2="43.18" width="0.1524" layer="91"/>
+<label x="-320.04" y="43.18" size="1.778" layer="95"/>
+<pinref part="J27" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="15*-DIO2-PWM2"/>
@@ -14219,9 +14216,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM3" class="0">
 <segment>
-<wire x1="-322.58" y1="7.62" x2="-307.34" y2="7.62" width="0.1524" layer="91"/>
-<label x="-317.5" y="10.16" size="1.778" layer="95"/>
-<pinref part="PWM3" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="27.94" x2="-297.18" y2="27.94" width="0.1524" layer="91"/>
+<label x="-320.04" y="27.94" size="1.778" layer="95"/>
+<pinref part="J28" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="17*-DIO3-PWM3"/>
@@ -14231,9 +14228,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM8" class="0">
 <segment>
-<wire x1="-322.58" y1="-55.88" x2="-307.34" y2="-55.88" width="0.1524" layer="91"/>
-<label x="-317.5" y="-53.34" size="1.778" layer="95"/>
-<pinref part="PWM8" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="-48.26" x2="-297.18" y2="-48.26" width="0.1524" layer="91"/>
+<label x="-320.04" y="-48.26" size="1.778" layer="95"/>
+<pinref part="J33" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="22*-DIO12-PWM8"/>
@@ -14244,9 +14241,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM9" class="0">
 <segment>
-<wire x1="-322.58" y1="-68.58" x2="-307.34" y2="-68.58" width="0.1524" layer="91"/>
-<label x="-317.5" y="-66.04" size="1.778" layer="95"/>
-<pinref part="PWM9" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="-63.5" x2="-297.18" y2="-63.5" width="0.1524" layer="91"/>
+<label x="-320.04" y="-63.5" size="1.778" layer="95"/>
+<pinref part="J34" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="26*-DIO13-PWM9"/>
@@ -14256,9 +14253,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM7" class="0">
 <segment>
-<wire x1="-322.58" y1="-43.18" x2="-307.34" y2="-43.18" width="0.1524" layer="91"/>
-<label x="-317.5" y="-40.64" size="1.778" layer="95"/>
-<pinref part="PWM7" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="-33.02" x2="-297.18" y2="-33.02" width="0.1524" layer="91"/>
+<label x="-320.04" y="-33.02" size="1.778" layer="95"/>
+<pinref part="J32" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="18*-DIO11-PWM7"/>
@@ -14268,9 +14265,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM6" class="0">
 <segment>
-<wire x1="-322.58" y1="-30.48" x2="-307.34" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-317.5" y="-27.94" size="1.778" layer="95"/>
-<pinref part="PWM6" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="-17.78" x2="-297.18" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-320.04" y="-17.78" size="1.778" layer="95"/>
+<pinref part="J31" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="31*-DIO10-PWM6"/>
@@ -14280,9 +14277,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM5" class="0">
 <segment>
-<wire x1="-322.58" y1="-17.78" x2="-307.34" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-317.5" y="-15.24" size="1.778" layer="95"/>
-<pinref part="PWM5" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="-2.54" x2="-297.18" y2="-2.54" width="0.1524" layer="91"/>
+<label x="-320.04" y="-2.54" size="1.778" layer="95"/>
+<pinref part="J30" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="29*-DIO9-PWM5"/>
@@ -14292,9 +14289,9 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="PWM4" class="0">
 <segment>
-<wire x1="-322.58" y1="-5.08" x2="-307.34" y2="-5.08" width="0.1524" layer="91"/>
-<label x="-317.5" y="-2.54" size="1.778" layer="95"/>
-<pinref part="PWM4" gate="J$1" pin="GND"/>
+<wire x1="-322.58" y1="12.7" x2="-297.18" y2="12.7" width="0.1524" layer="91"/>
+<label x="-320.04" y="12.7" size="1.778" layer="95"/>
+<pinref part="J29" gate="J$1" pin="DATA"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="27*-DIO8-PWM4"/>
@@ -14333,38 +14330,6 @@ IO31: Serial Rx from host.</text>
 <junction x="20.32" y="30.48"/>
 <junction x="20.32" y="33.02"/>
 <junction x="20.32" y="43.18"/>
-</segment>
-<segment>
-<wire x1="-297.18" y1="48.26" x2="-302.26" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="SUPPLY9" gate="G$1" pin="DGND"/>
-<pinref part="PWM0" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="48.26" x2="-302.26" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="PWM1" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="35.56" x2="-302.26" y2="20.32" width="0.1524" layer="91"/>
-<junction x="-302.26" y="35.56"/>
-<pinref part="PWM2" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="20.32" x2="-302.26" y2="7.62" width="0.1524" layer="91"/>
-<junction x="-302.26" y="20.32"/>
-<pinref part="PWM3" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="7.62" x2="-302.26" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-302.26" y="7.62"/>
-<pinref part="PWM4" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="-5.08" x2="-302.26" y2="-17.78" width="0.1524" layer="91"/>
-<junction x="-302.26" y="-5.08"/>
-<pinref part="PWM5" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="-17.78" x2="-302.26" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-302.26" y="-17.78"/>
-<pinref part="PWM6" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="-30.48" x2="-302.26" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-302.26" y="-30.48"/>
-<pinref part="PWM7" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="-43.18" x2="-302.26" y2="-55.88" width="0.1524" layer="91"/>
-<junction x="-302.26" y="-43.18"/>
-<pinref part="PWM8" gate="J$1" pin="DATA"/>
-<wire x1="-302.26" y1="-55.88" x2="-302.26" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-302.26" y="-55.88"/>
-<pinref part="PWM9" gate="J$1" pin="DATA"/>
-<junction x="-302.26" y="48.26"/>
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
@@ -14498,29 +14463,29 @@ IO31: Serial Rx from host.</text>
 <pinref part="SUPPLY19" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<wire x1="-139.7" y1="-25.4" x2="-139.7" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="AI0" gate="J$1" pin="GND"/>
-<wire x1="-139.7" y1="-22.86" x2="-139.7" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="-10.16" x2="-139.7" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="2.54" x2="-139.7" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="15.24" x2="-139.7" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="27.94" x2="-139.7" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="40.64" x2="-137.16" y2="40.64" width="0.1524" layer="91"/>
-<junction x="-139.7" y="27.94"/>
-<junction x="-139.7" y="15.24"/>
+<wire x1="-139.7" y1="-43.18" x2="-139.7" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="J35" gate="J$1" pin="GND"/>
+<wire x1="-139.7" y1="-27.94" x2="-139.7" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="-12.7" x2="-139.7" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="2.54" x2="-139.7" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="17.78" x2="-139.7" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="33.02" x2="-139.7" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="48.26" x2="-137.16" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-139.7" y="33.02"/>
+<junction x="-139.7" y="17.78"/>
 <junction x="-139.7" y="2.54"/>
-<junction x="-139.7" y="-10.16"/>
-<pinref part="AO0" gate="J$1" pin="GND"/>
-<wire x1="-139.7" y1="-10.16" x2="-137.16" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="AI3" gate="J$1" pin="GND"/>
+<junction x="-139.7" y="-12.7"/>
+<pinref part="J39" gate="J$1" pin="GND"/>
+<wire x1="-139.7" y1="-12.7" x2="-137.16" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="J38" gate="J$1" pin="GND"/>
 <wire x1="-139.7" y1="2.54" x2="-137.16" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="AI2" gate="J$1" pin="GND"/>
-<wire x1="-139.7" y1="15.24" x2="-137.16" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="AI1" gate="J$1" pin="GND"/>
-<wire x1="-139.7" y1="27.94" x2="-137.16" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="AO1" gate="J$1" pin="GND"/>
-<wire x1="-139.7" y1="-22.86" x2="-137.16" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-139.7" y="-22.86"/>
+<pinref part="J37" gate="J$1" pin="GND"/>
+<wire x1="-139.7" y1="17.78" x2="-137.16" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="J36" gate="J$1" pin="GND"/>
+<wire x1="-139.7" y1="33.02" x2="-137.16" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="J40" gate="J$1" pin="GND"/>
+<wire x1="-139.7" y1="-27.94" x2="-137.16" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="-139.7" y="-27.94"/>
 <pinref part="SUPPLY30" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
@@ -14798,6 +14763,49 @@ IO31: Serial Rx from host.</text>
 <pinref part="R35" gate="G$1" pin="2"/>
 <pinref part="SUPPLY25" gate="G$1" pin="DGND"/>
 </segment>
+<segment>
+<pinref part="SUPPLY9" gate="G$1" pin="DGND"/>
+<pinref part="J34" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="-78.74" x2="-302.26" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="-68.58" x2="-297.18" y2="-68.58" width="0.1524" layer="91"/>
+<pinref part="J33" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="-68.58" x2="-302.26" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="-53.34" x2="-297.18" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="J32" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="-53.34" x2="-302.26" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="-38.1" x2="-297.18" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="J31" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="-38.1" x2="-302.26" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="-22.86" x2="-297.18" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="J30" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="-22.86" x2="-302.26" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="-7.62" x2="-297.18" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="J29" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="-7.62" x2="-302.26" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="7.62" x2="-297.18" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="J28" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="7.62" x2="-302.26" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="22.86" x2="-297.18" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="J27" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="22.86" x2="-302.26" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="38.1" x2="-297.18" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="J26" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="38.1" x2="-302.26" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="53.34" x2="-297.18" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="J25" gate="J$1" pin="GND"/>
+<wire x1="-302.26" y1="53.34" x2="-302.26" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-302.26" y1="68.58" x2="-297.18" y2="68.58" width="0.1524" layer="91"/>
+<junction x="-302.26" y="-68.58"/>
+<junction x="-302.26" y="-53.34"/>
+<junction x="-302.26" y="-38.1"/>
+<junction x="-302.26" y="-22.86"/>
+<junction x="-302.26" y="-7.62"/>
+<junction x="-302.26" y="7.62"/>
+<junction x="-302.26" y="22.86"/>
+<junction x="-302.26" y="38.1"/>
+<junction x="-302.26" y="53.34"/>
+<junction x="-302.26" y="68.58"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -15006,66 +15014,37 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="5VRR" class="0">
 <segment>
-<pinref part="PWM0" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="48.26" x2="-304.8" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="PWM1" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="35.56" x2="-304.8" y2="20.32" width="0.1524" layer="91"/>
-<junction x="-304.8" y="35.56"/>
-<pinref part="PWM2" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="20.32" x2="-304.8" y2="7.62" width="0.1524" layer="91"/>
-<junction x="-304.8" y="20.32"/>
-<pinref part="PWM3" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="7.62" x2="-304.8" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-304.8" y="7.62"/>
-<pinref part="PWM4" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="-5.08" x2="-304.8" y2="-17.78" width="0.1524" layer="91"/>
-<junction x="-304.8" y="-5.08"/>
-<pinref part="PWM5" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="-17.78" x2="-304.8" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-304.8" y="-17.78"/>
-<pinref part="PWM6" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="-30.48" x2="-304.8" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-304.8" y="-30.48"/>
-<pinref part="PWM7" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="-43.18" x2="-304.8" y2="-55.88" width="0.1524" layer="91"/>
-<junction x="-304.8" y="-43.18"/>
-<pinref part="PWM8" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="-55.88" x2="-304.8" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-304.8" y="-55.88"/>
-<pinref part="PWM9" gate="J$1" pin="V+"/>
-<wire x1="-304.8" y1="-68.58" x2="-304.8" y2="-86.36" width="0.1524" layer="91"/>
-<wire x1="-304.8" y1="-86.36" x2="-254" y2="-86.36" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="-86.36" x2="-254" y2="-86.36" width="0.1524" layer="91"/>
 <wire x1="-254" y1="-86.36" x2="-254" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="P1-5V"/>
-<wire x1="-254" y1="-38.1" x2="-254" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-254" y1="-20.32" x2="-213.36" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="-304.8" y="-68.58"/>
-<wire x1="-213.36" y1="-12.7" x2="-213.36" y2="-20.32" width="0.1524" layer="91"/>
-<pinref part="AI0" gate="J$1" pin="V+"/>
-<wire x1="-144.78" y1="43.18" x2="-144.78" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="30.48" x2="-144.78" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="17.78" x2="-144.78" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="5.08" x2="-144.78" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="-7.62" x2="-144.78" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="43.18" x2="-137.16" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="AI1" gate="J$1" pin="V+"/>
-<wire x1="-137.16" y1="30.48" x2="-144.78" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="AI2" gate="J$1" pin="V+"/>
-<wire x1="-137.16" y1="17.78" x2="-144.78" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="AI3" gate="J$1" pin="V+"/>
+<wire x1="-254" y1="-38.1" x2="-254" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-254" y1="-25.4" x2="-213.36" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-213.36" y1="-12.7" x2="-213.36" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="J35" gate="J$1" pin="V+"/>
+<wire x1="-144.78" y1="50.8" x2="-144.78" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="35.56" x2="-144.78" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="20.32" x2="-144.78" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="5.08" x2="-144.78" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="-10.16" x2="-144.78" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="50.8" x2="-137.16" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="J36" gate="J$1" pin="V+"/>
+<wire x1="-137.16" y1="35.56" x2="-144.78" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="J37" gate="J$1" pin="V+"/>
+<wire x1="-137.16" y1="20.32" x2="-144.78" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="J38" gate="J$1" pin="V+"/>
 <wire x1="-137.16" y1="5.08" x2="-144.78" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="AO0" gate="J$1" pin="V+"/>
-<wire x1="-137.16" y1="-7.62" x2="-144.78" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-144.78" y="30.48"/>
-<junction x="-144.78" y="17.78"/>
+<pinref part="J39" gate="J$1" pin="V+"/>
+<wire x1="-137.16" y1="-10.16" x2="-144.78" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-144.78" y="35.56"/>
+<junction x="-144.78" y="20.32"/>
 <junction x="-144.78" y="5.08"/>
-<junction x="-144.78" y="-7.62"/>
-<pinref part="AO1" gate="J$1" pin="V+"/>
-<wire x1="-144.78" y1="-20.32" x2="-137.16" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-213.36" y1="-20.32" x2="-144.78" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="-144.78" y="-20.32"/>
-<junction x="-213.36" y="-20.32"/>
-<label x="-154.94" y="-22.86" size="1.778" layer="95"/>
+<junction x="-144.78" y="-10.16"/>
+<pinref part="J40" gate="J$1" pin="V+"/>
+<wire x1="-144.78" y1="-25.4" x2="-137.16" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="-213.36" y1="-25.4" x2="-144.78" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="-144.78" y="-25.4"/>
+<junction x="-213.36" y="-25.4"/>
+<label x="-165.1" y="-25.4" size="1.778" layer="95"/>
 <label x="-287.02" y="-86.36" size="1.778" layer="95"/>
 <wire x1="-53.34" y1="218.44" x2="-68.58" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="218.44" x2="-134.62" y2="218.44" width="0.1524" layer="91"/>
@@ -15103,6 +15082,45 @@ IO31: Serial Rx from host.</text>
 <wire x1="-218.44" y1="-38.1" x2="-218.44" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="-254" y="-38.1"/>
 <junction x="-134.62" y="218.44"/>
+<wire x1="-309.88" y1="-86.36" x2="-309.88" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="J25" gate="J$1" pin="V+"/>
+<wire x1="-309.88" y1="-66.04" x2="-309.88" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="-50.8" x2="-309.88" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="-35.56" x2="-309.88" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="-20.32" x2="-309.88" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="-5.08" x2="-309.88" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="10.16" x2="-309.88" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="25.4" x2="-309.88" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="40.64" x2="-309.88" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="55.88" x2="-309.88" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-309.88" y1="71.12" x2="-297.18" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="J26" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="55.88" x2="-309.88" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="J27" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="40.64" x2="-309.88" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="J28" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="25.4" x2="-309.88" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="J29" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="10.16" x2="-309.88" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="J30" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="-5.08" x2="-309.88" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="J31" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="-20.32" x2="-309.88" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="J32" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="-35.56" x2="-309.88" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="J34" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="-66.04" x2="-309.88" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="J33" gate="J$1" pin="V+"/>
+<wire x1="-297.18" y1="-50.8" x2="-309.88" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="-309.88" y="-66.04"/>
+<junction x="-309.88" y="-50.8"/>
+<junction x="-309.88" y="-35.56"/>
+<junction x="-309.88" y="-20.32"/>
+<junction x="-309.88" y="-5.08"/>
+<junction x="-309.88" y="10.16"/>
+<junction x="-309.88" y="25.4"/>
+<junction x="-309.88" y="40.64"/>
+<junction x="-309.88" y="55.88"/>
 </segment>
 </net>
 <net name="N$3" class="0">
