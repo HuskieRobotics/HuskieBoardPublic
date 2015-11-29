@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -9110,8 +9110,8 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
-<pin name="GND" x="5.08" y="2.54" length="middle" rot="R180"/>
-<pin name="V+" x="5.08" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="5.08" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="V+" x="5.08" y="0" length="middle" direction="pwr" rot="R180"/>
 <pin name="DATA" x="5.08" y="-2.54" length="middle" rot="R180"/>
 <text x="-2.54" y="6.35" size="1.778" layer="95" align="center-left">&gt;NAME</text>
 <wire x1="-0.762" y1="-2.54" x2="0.762" y2="-2.54" width="0.6096" layer="94"/>
@@ -15380,6 +15380,68 @@ IO31: Serial Rx from host.</text>
 <approved hash="102,1,48.26,-137.16,GND,DGND,,,,"/>
 <approved hash="104,1,86.36,119.38,U2,VCC,+3V3,,,"/>
 <approved hash="104,1,86.36,96.52,U2,GND,DGND,,,"/>
+<approved hash="104,1,43.18,180.34,J3,VBUS,5VUSB,,,"/>
+<approved hash="104,1,43.18,170.18,J3,GND,DGND,,,"/>
+<approved hash="104,1,-307.34,48.26,PWM0,GND,PWM0,,,"/>
+<approved hash="104,1,-304.8,48.26,PWM0,V+,5VRR,,,"/>
+<approved hash="104,1,-307.34,35.56,PWM1,GND,PWM1,,,"/>
+<approved hash="104,1,-304.8,35.56,PWM1,V+,5VRR,,,"/>
+<approved hash="104,1,-307.34,20.32,PWM2,GND,PWM2,,,"/>
+<approved hash="104,1,-304.8,20.32,PWM2,V+,5VRR,,,"/>
+<approved hash="104,1,-307.34,7.62,PWM3,GND,PWM3,,,"/>
+<approved hash="104,1,-304.8,7.62,PWM3,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,40.64,AI0,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,43.18,AI0,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,27.94,AI1,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,30.48,AI1,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,15.24,AI2,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,17.78,AI2,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,2.54,AI3,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,5.08,AI3,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,-10.16,AO0,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,-7.62,AO0,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,-22.86,AO1,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,-20.32,AO1,V+,5VRR,,,"/>
+<approved hash="104,1,157.48,-147.32,J17,GND,DGND,,,"/>
+<approved hash="104,1,157.48,-144.78,J17,V+,+5V,,,"/>
+<approved hash="104,1,157.48,-162.56,J18,GND,DGND,,,"/>
+<approved hash="104,1,157.48,-160.02,J18,V+,+5V,,,"/>
+<approved hash="104,1,157.48,-177.8,J19,GND,DGND,,,"/>
+<approved hash="104,1,157.48,-175.26,J19,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-104.14,J20,GND,DGND,,,"/>
+<approved hash="104,1,251.46,-101.6,J20,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-127,J21,GND,DGND,,,"/>
+<approved hash="104,1,251.46,-124.46,J21,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-154.94,J22,GND,DGND,,,"/>
+<approved hash="104,1,251.46,-152.4,J22,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-182.88,J23,GND,DGND,,,"/>
+<approved hash="104,1,251.46,-180.34,J23,V+,+5V,,,"/>
+<approved hash="104,1,248.92,-10.16,J14,GND,DGND,,,"/>
+<approved hash="104,1,248.92,-7.62,J14,V+,+3V3,,,"/>
+<approved hash="104,1,101.6,-10.16,J6,GND,DGND,,,"/>
+<approved hash="104,1,101.6,-7.62,J6,V+,+3V3,,,"/>
+<approved hash="104,1,101.6,7.62,J5,GND,DGND,,,"/>
+<approved hash="104,1,101.6,10.16,J5,V+,+3V3,,,"/>
+<approved hash="104,1,101.6,25.4,J4,GND,DGND,,,"/>
+<approved hash="104,1,101.6,27.94,J4,V+,+3V3,,,"/>
+<approved hash="104,1,101.6,-27.94,J7,GND,DGND,,,"/>
+<approved hash="104,1,101.6,-25.4,J7,V+,+3V3,,,"/>
+<approved hash="104,1,248.92,-27.94,J15,GND,DGND,,,"/>
+<approved hash="104,1,248.92,-25.4,J15,V+,+3V3,,,"/>
+<approved hash="104,1,193.04,33.02,J8,GND,DGND,,,"/>
+<approved hash="104,1,193.04,35.56,J8,V+,+3V3,,,"/>
+<approved hash="104,1,193.04,15.24,J9,GND,DGND,,,"/>
+<approved hash="104,1,193.04,17.78,J9,V+,+3V3,,,"/>
+<approved hash="104,1,248.92,7.62,J13,GND,DGND,,,"/>
+<approved hash="104,1,248.92,10.16,J13,V+,+3V3,,,"/>
+<approved hash="104,1,248.92,25.4,J12,GND,DGND,,,"/>
+<approved hash="104,1,248.92,27.94,J12,V+,+3V3,,,"/>
+<approved hash="104,1,193.04,-22.86,J11,GND,DGND,,,"/>
+<approved hash="104,1,193.04,-20.32,J11,V+,+3V3,,,"/>
+<approved hash="104,1,193.04,-2.54,J10,GND,DGND,,,"/>
+<approved hash="104,1,193.04,0,J10,V+,+3V3,,,"/>
+<approved hash="104,1,58.42,-63.5,J16,GND,DGND,,,"/>
+<approved hash="104,1,58.42,-60.96,J16,V+,+5V,,,"/>
 <approved hash="104,1,81.28,210.82,U3,VCC,5VUSB,,,"/>
 <approved hash="104,1,109.22,167.64,U3,GND,DGND,,,"/>
 <approved hash="104,1,81.28,208.28,U3,VCCIO,N$3,,,"/>
@@ -15389,31 +15451,34 @@ IO31: Serial Rx from host.</text>
 <approved hash="104,1,-81.28,180.34,U4,VIN,5VRR,,,"/>
 <approved hash="104,1,-81.28,175.26,U4,VSS,DGND,,,"/>
 <approved hash="104,1,45.72,243.84,U7,GND,DGND,,,"/>
+<approved hash="104,1,-218.44,-53.34,J24,GND,DGND,,,"/>
+<approved hash="104,1,-218.44,-50.8,J24,V+,DGND,,,"/>
 <approved hash="208,1,-116.84,132.08,+3V3,sup,,,,"/>
-<approved hash="208,1,246.38,-25.4,+3V3,sup,,,,"/>
-<approved hash="208,1,132.08,-10.16,+3V3,sup,,,,"/>
-<approved hash="208,1,132.08,7.62,+3V3,sup,,,,"/>
-<approved hash="208,1,132.08,25.4,+3V3,sup,,,,"/>
-<approved hash="208,1,132.08,-25.4,+3V3,sup,,,,"/>
-<approved hash="208,1,193.04,25.4,+3V3,sup,,,,"/>
-<approved hash="208,1,193.04,7.62,+3V3,sup,,,,"/>
-<approved hash="208,1,193.04,-10.16,+3V3,sup,,,,"/>
-<approved hash="208,1,246.38,-10.16,+3V3,sup,,,,"/>
-<approved hash="208,1,246.38,7.62,+3V3,sup,,,,"/>
-<approved hash="208,1,200.66,-58.42,+3V3,sup,,,,"/>
-<approved hash="208,1,193.04,-25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,241.3,-7.62,+3V3,sup,,,,"/>
+<approved hash="208,1,91.44,-7.62,+3V3,sup,,,,"/>
+<approved hash="208,1,91.44,10.16,+3V3,sup,,,,"/>
+<approved hash="208,1,91.44,27.94,+3V3,sup,,,,"/>
+<approved hash="208,1,91.44,-25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,241.3,-25.4,+3V3,sup,,,,"/>
+<approved hash="208,1,182.88,35.56,+3V3,sup,,,,"/>
+<approved hash="208,1,182.88,17.78,+3V3,sup,,,,"/>
+<approved hash="208,1,241.3,10.16,+3V3,sup,,,,"/>
+<approved hash="208,1,241.3,27.94,+3V3,sup,,,,"/>
+<approved hash="208,1,182.88,-20.32,+3V3,sup,,,,"/>
+<approved hash="208,1,182.88,0,+3V3,sup,,,,"/>
 <approved hash="208,1,-45.72,134.62,+3V3,sup,,,,"/>
 <approved hash="208,1,58.42,256.54,+3V3,out,,,,"/>
 <approved hash="208,1,86.36,266.7,+3V3,sup,,,,"/>
 <approved hash="208,1,86.36,129.54,+3V3,sup,,,,"/>
-<approved hash="208,1,154.94,22.86,+3V3,sup,,,,"/>
-<approved hash="208,1,157.48,2.54,+3V3,sup,,,,"/>
-<approved hash="208,1,160.02,-12.7,+3V3,sup,,,,"/>
-<approved hash="208,1,167.64,-43.18,+3V3,sup,,,,"/>
+<approved hash="208,1,154.94,50.8,+3V3,sup,,,,"/>
+<approved hash="208,1,160.02,30.48,+3V3,sup,,,,"/>
+<approved hash="208,1,162.56,12.7,+3V3,sup,,,,"/>
+<approved hash="208,1,165.1,-7.62,+3V3,sup,,,,"/>
 <approved hash="208,1,40.64,-96.52,+3V3,sup,,,,"/>
 <approved hash="208,1,48.26,-101.6,+3V3,sup,,,,"/>
 <approved hash="208,1,40.64,-132.08,+3V3,sup,,,,"/>
 <approved hash="208,1,48.26,-134.62,+3V3,sup,,,,"/>
+<approved hash="208,1,27.94,60.96,+3V3,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
