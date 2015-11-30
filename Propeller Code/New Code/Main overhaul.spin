@@ -1,3 +1,8 @@
+
+
+
+
+
 {
 Author: Bennett Johnson
 Revision #: *
@@ -87,6 +92,7 @@ pri init
         uart.init(robo_rx, robo_tx, 460_800, )
         
         {SD DRIVER}
-        sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
+        sd.init(20
+        7, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
 
   
