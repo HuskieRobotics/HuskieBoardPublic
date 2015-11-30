@@ -3,6 +3,8 @@ Author: Bennett Johnson
 Revision #: *
 Revised by: *
 }
+
+
 con
         _clkmode    = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq    = 5_000_000
@@ -52,5 +54,18 @@ con
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use
         
 var
+    long datfilename
 obj
-pub
+pub main
+        longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty second byte
+        init                            'Initialize all drives
+pub init
+        {ADC DRIVER}
+        adc.start2pin(adc_di, adc_do, adc_clk, adc_cs, $00FF)   'Start ADC Driver
+        adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
+        
+        {UART CONNECTION DRIVER}
+        uart.init
+        
+        {SD DRIVER}
+        sd.init()
