@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -9874,70 +9874,6 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </deviceset>
 </devicesets>
 </library>
-<library name="adc124s021cimm">
-<packages>
-<package name="ADC124S021VSSOP">
-<smd name="P$1" x="-16.51" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="-16.51" y="5.08" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$3" x="-16.51" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$4" x="-16.51" y="2.54" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$5" x="-16.51" y="1.27" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$6" x="-16.51" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$7" x="-16.51" y="-1.27" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$8" x="-16.51" y="-2.54" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$9" x="-16.51" y="-5.08" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$10" x="-16.51" y="-3.81" dx="1.27" dy="0.635" layer="1"/>
-<text x="-17.78" y="-5.08" size="1.27" layer="1" rot="R90">BAD BAD BAD</text>
-<text x="-13.97" y="-5.08" size="1.27" layer="1" rot="R90">BAD BAD BAD</text>
-</package>
-</packages>
-<symbols>
-<symbol name="ADC">
-<pin name="#CS" x="-15.24" y="0" length="middle"/>
-<pin name="SCLK" x="-15.24" y="-2.54" length="middle"/>
-<pin name="DO" x="-15.24" y="-5.08" length="middle"/>
-<pin name="DI" x="-15.24" y="-7.62" length="middle"/>
-<pin name="VA" x="-15.24" y="7.62" length="middle" direction="sup"/>
-<pin name="GND" x="-15.24" y="5.08" length="middle" direction="sup"/>
-<pin name="AIN1" x="12.7" y="7.62" length="middle" direction="in" rot="R180"/>
-<pin name="AIN2" x="12.7" y="5.08" length="middle" direction="in" rot="R180"/>
-<pin name="AIN3" x="12.7" y="2.54" length="middle" direction="in" rot="R180"/>
-<pin name="AIN4" x="12.7" y="0" length="middle" direction="in" rot="R180"/>
-<wire x1="-12.7" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
-<text x="-10.16" y="12.7" size="1.4224" layer="95" align="top-left">&gt;NAME</text>
-<text x="-10.16" y="-12.7" size="1.4224" layer="95">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="ADC124S01">
-<gates>
-<gate name="G$1" symbol="ADC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="ADC124S021VSSOP">
-<connects>
-<connect gate="G$1" pin="#CS" pad="P$1"/>
-<connect gate="G$1" pin="AIN1" pad="P$2"/>
-<connect gate="G$1" pin="AIN2" pad="P$3"/>
-<connect gate="G$1" pin="AIN3" pad="P$4"/>
-<connect gate="G$1" pin="AIN4" pad="P$5"/>
-<connect gate="G$1" pin="DI" pad="P$6"/>
-<connect gate="G$1" pin="DO" pad="P$7"/>
-<connect gate="G$1" pin="GND" pad="P$8"/>
-<connect gate="G$1" pin="SCLK" pad="P$9"/>
-<connect gate="G$1" pin="VA" pad="P$10"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="tps2115apwr">
 <packages>
 <package name="TSSOP-8">
@@ -13029,8 +12965,6 @@ SMT crystal</description>
 <part name="SUPPLY51" library="supply2" deviceset="DGND" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="U8" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
-<part name="U9" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
@@ -13293,8 +13227,6 @@ IO31: Serial Rx from host.</text>
 <instance part="SUPPLY51" gate="G$1" x="-167.64" y="147.32"/>
 <instance part="R3" gate="G$1" x="17.78" y="195.58" rot="R90"/>
 <instance part="R7" gate="G$1" x="-53.34" y="195.58" rot="R90"/>
-<instance part="U8" gate="G$1" x="63.5" y="-109.22"/>
-<instance part="U9" gate="G$1" x="63.5" y="-142.24"/>
 <instance part="+3V1" gate="G$1" x="40.64" y="-129.54" smashed="yes">
 <attribute name="VALUE" x="38.1" y="-129.54" size="1.778" layer="96"/>
 </instance>
@@ -13582,12 +13514,10 @@ IO31: Serial Rx from host.</text>
 <segment>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="40.64" y1="-96.52" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="VA"/>
 <wire x1="40.64" y1="-101.6" x2="48.26" y2="-101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="U9" gate="G$1" pin="VA"/>
 <wire x1="40.64" y1="-132.08" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-134.62" x2="48.26" y2="-134.62" width="0.1524" layer="91"/>
 </segment>
@@ -13874,8 +13804,6 @@ IO31: Serial Rx from host.</text>
 <wire x1="-2.54" y1="-149.86" x2="-2.54" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-116.84" x2="-2.54" y2="-83.82" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-83.82" x2="-33.02" y2="-83.82" width="0.1524" layer="91"/>
-<pinref part="U9" gate="G$1" pin="DI"/>
-<pinref part="U8" gate="G$1" pin="DI"/>
 <wire x1="48.26" y1="-116.84" x2="-2.54" y2="-116.84" width="0.1524" layer="91"/>
 <junction x="-2.54" y="-116.84"/>
 </segment>
@@ -13892,8 +13820,6 @@ IO31: Serial Rx from host.</text>
 <wire x1="-33.02" y1="-78.74" x2="0" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="0" y1="-147.32" x2="48.26" y2="-147.32" width="0.1524" layer="91"/>
 <label x="-30.48" y="-78.74" size="1.778" layer="95"/>
-<pinref part="U9" gate="G$1" pin="DO"/>
-<pinref part="U8" gate="G$1" pin="DO"/>
 <wire x1="48.26" y1="-114.3" x2="0" y2="-114.3" width="0.1524" layer="91"/>
 <junction x="0" y="-114.3"/>
 </segment>
@@ -13909,9 +13835,7 @@ IO31: Serial Rx from host.</text>
 <wire x1="2.54" y1="-73.66" x2="2.54" y2="-111.76" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="-111.76" x2="2.54" y2="-144.78" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="-73.66" x2="-33.02" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="U9" gate="G$1" pin="SCLK"/>
 <wire x1="2.54" y1="-144.78" x2="48.26" y2="-144.78" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="SCLK"/>
 <wire x1="48.26" y1="-111.76" x2="2.54" y2="-111.76" width="0.1524" layer="91"/>
 <junction x="2.54" y="-111.76"/>
 </segment>
@@ -13926,7 +13850,6 @@ IO31: Serial Rx from host.</text>
 <label x="-30.48" y="-68.58" size="1.778" layer="95"/>
 <wire x1="-33.02" y1="-68.58" x2="5.08" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="-68.58" x2="5.08" y2="-142.24" width="0.1524" layer="91"/>
-<pinref part="U9" gate="G$1" pin="#CS"/>
 <wire x1="5.08" y1="-142.24" x2="48.26" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -13943,7 +13866,6 @@ IO31: Serial Rx from host.</text>
 </segment>
 <segment>
 <wire x1="-33.02" y1="-63.5" x2="7.62" y2="-63.5" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="#CS"/>
 <wire x1="48.26" y1="-109.22" x2="7.62" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="-109.22" x2="7.62" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-30.48" y="-63.5" size="1.778" layer="95"/>
@@ -14603,13 +14525,11 @@ IO31: Serial Rx from host.</text>
 <pinref part="Q2" gate="G$1" pin="E"/>
 </segment>
 <segment>
-<pinref part="U9" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY52" gate="G$1" pin="DGND"/>
 <wire x1="40.64" y1="-152.4" x2="40.64" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-137.16" x2="48.26" y2="-137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U8" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY2" gate="G$1" pin="DGND"/>
 <wire x1="48.26" y1="-104.14" x2="40.64" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-104.14" x2="40.64" y2="-119.38" width="0.1524" layer="91"/>
@@ -14878,7 +14798,6 @@ IO31: Serial Rx from host.</text>
 <wire x1="76.2" y1="-106.68" x2="208.28" y2="-106.68" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="-106.68" x2="208.28" y2="-149.86" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="-149.86" x2="210.82" y2="-149.86" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="AIN3"/>
 <pinref part="C22" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="-154.94" x2="210.82" y2="-149.86" width="0.1524" layer="91"/>
 <pinref part="R25" gate="G$1" pin="2"/>
@@ -15223,7 +15142,6 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="U9" gate="G$1" pin="AIN4"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <junction x="81.28" y="-152.4"/>
@@ -15236,7 +15154,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="C15" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="-149.86" x2="106.68" y2="-144.78" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-<pinref part="U9" gate="G$1" pin="AIN3"/>
 <wire x1="106.68" y1="-144.78" x2="106.68" y2="-139.7" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="-139.7" x2="76.2" y2="-139.7" width="0.1524" layer="91"/>
 <junction x="106.68" y="-144.78"/>
@@ -15250,7 +15167,6 @@ IO31: Serial Rx from host.</text>
 <wire x1="127" y1="-142.24" x2="127" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="127" y1="-137.16" x2="76.2" y2="-137.16" width="0.1524" layer="91"/>
 <junction x="127" y="-142.24"/>
-<pinref part="U9" gate="G$1" pin="AIN2"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -15266,7 +15182,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="R23" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="-129.54" x2="177.8" y2="-129.54" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="-129.54" x2="101.6" y2="-134.62" width="0.1524" layer="91"/>
-<pinref part="U9" gate="G$1" pin="AIN1"/>
 <wire x1="101.6" y1="-134.62" x2="76.2" y2="-134.62" width="0.1524" layer="91"/>
 <junction x="177.8" y="-129.54"/>
 <pinref part="R35" gate="G$1" pin="1"/>
@@ -15280,7 +15195,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="-109.22" x2="203.2" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="-109.22" x2="203.2" y2="-177.8" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="AIN4"/>
 <wire x1="218.44" y1="-177.8" x2="205.74" y2="-177.8" width="0.1524" layer="91"/>
 <junction x="205.74" y="-177.8"/>
 <wire x1="205.74" y1="-177.8" x2="203.2" y2="-177.8" width="0.1524" layer="91"/>
@@ -15307,7 +15221,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="R26" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="-104.14" x2="213.36" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="-104.14" x2="213.36" y2="-121.92" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="AIN2"/>
 <wire x1="215.9" y1="-121.92" x2="213.36" y2="-121.92" width="0.1524" layer="91"/>
 <junction x="215.9" y="-121.92"/>
 </segment>
@@ -15326,7 +15239,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="R28" gate="G$1" pin="2"/>
 <wire x1="215.9" y1="-99.06" x2="215.9" y2="-101.6" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="-101.6" x2="76.2" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="AIN1"/>
 <wire x1="220.98" y1="-99.06" x2="215.9" y2="-99.06" width="0.1524" layer="91"/>
 <junction x="220.98" y="-99.06"/>
 </segment>
