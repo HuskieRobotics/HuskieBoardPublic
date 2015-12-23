@@ -1,3 +1,4 @@
+*.lck
 *.s##
 *.s#1
 *.s#2
@@ -28,6 +29,4 @@
 *.l#8
 *.l#9
 projects/RoboRio/RoboRioExpansionBoard/eagle.epf
-*.epf
-
 *.epf
