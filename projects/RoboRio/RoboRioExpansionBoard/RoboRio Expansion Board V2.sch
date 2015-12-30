@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -12639,7 +12639,7 @@ SMT crystal</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="HC\49USCRYSTAL">
+<deviceset name="HC\49USCRYSTAL" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="XTAL" x="0" y="0"/>
 </gates>
@@ -12903,9 +12903,9 @@ SMT crystal</description>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="J1" library="RoboRioConnector" deviceset="RRINTERFACE-FEMALE" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
-<part name="D2" library="led" deviceset="LED" device="CHIPLED_0603" value="YELLOW"/>
+<part name="D2" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
 <part name="D1" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
-<part name="D3" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
+<part name="D3" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
 <part name="S1" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
 <part name="C1" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="C6" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
@@ -12961,8 +12961,8 @@ SMT crystal</description>
 <part name="D6" library="led" deviceset="LED" device="CHIPLED_0603" value="BLUE"/>
 <part name="C17" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
-<part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="33k"/>
-<part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
+<part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
+<part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="Q1" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="R29" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -12985,7 +12985,6 @@ SMT crystal</description>
 <part name="J34" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM9"/>
 <part name="SUPPLY4" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="DGND" device=""/>
-<part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY19" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY21" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY22" library="supply2" deviceset="DGND" device=""/>
@@ -13019,7 +13018,7 @@ SMT crystal</description>
 <part name="J9" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_CLK"/>
 <part name="J13" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="I2C_SDA"/>
 <part name="J12" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="I2C_SCL"/>
-<part name="J11" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J11" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_MOSI"/>
 <part name="J10" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_MISO"/>
 <part name="J16" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="LCD"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
@@ -13032,12 +13031,12 @@ SMT crystal</description>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
-<part name="R9" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
-<part name="R10" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
+<part name="R9" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
+<part name="R10" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY52" library="supply2" deviceset="DGND" device=""/>
-<part name="R11" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
-<part name="R12" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
+<part name="R11" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
+<part name="R12" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="U5" library="tps2115apwr" deviceset="TPS2115APWR" device=""/>
 <part name="SUPPLY35" library="supply2" deviceset="DGND" device=""/>
 <part name="R13" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
@@ -13091,7 +13090,7 @@ SMT crystal</description>
 <part name="+3V22" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V23" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="DGND" device=""/>
-<part name="Y1" library="crystalsmt" deviceset="HC\49USCRYSTAL" device=""/>
+<part name="Y1" library="crystalsmt" deviceset="HC\49USCRYSTAL" device="" value="5MHz"/>
 <part name="C14" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
 <part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY34" library="supply2" deviceset="DGND" device=""/>
@@ -13124,6 +13123,8 @@ SMT crystal</description>
 <part name="U1" library="parallax_propeller" deviceset="P8X32A-Q44_P" device=""/>
 <part name="U7" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
 <part name="U8" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
+<part name="R36" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
+<part name="D7" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
 </parts>
 <sheets>
 <sheet>
@@ -13141,15 +13142,16 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 <text x="124.46" y="220.98" size="1.778" layer="97" align="top-left">RX and TX are from propellers perspective:
 IO30: Serial Tx to host.
 IO31: Serial Rx from host.</text>
+<text x="-27.94" y="-27.94" size="1.778" layer="97">Internal Pullup</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="78.74" y="106.68"/>
 <instance part="R1" gate="G$1" x="104.14" y="116.84" rot="R90"/>
 <instance part="J1" gate="G$1" x="-236.22" y="12.7"/>
 <instance part="P+9" gate="1" x="55.88" y="-48.26"/>
-<instance part="D2" gate="G$1" x="-45.72" y="86.36" rot="R90"/>
-<instance part="D1" gate="G$1" x="-45.72" y="76.2" rot="R90"/>
-<instance part="D3" gate="G$1" x="-45.72" y="96.52" rot="R90"/>
+<instance part="D2" gate="G$1" x="-45.72" y="73.66" rot="R90"/>
+<instance part="D1" gate="G$1" x="-45.72" y="63.5" rot="R90"/>
+<instance part="D3" gate="G$1" x="-45.72" y="83.82" rot="R90"/>
 <instance part="S1" gate="G$1" x="116.84" y="78.74"/>
 <instance part="C1" gate="G$1" x="12.7" y="50.8"/>
 <instance part="C6" gate="G$1" x="121.92" y="119.38" rot="R180"/>
@@ -13162,7 +13164,7 @@ IO31: Serial Rx from host.</text>
 <instance part="SUPPLY12" gate="G$1" x="129.54" y="78.74" rot="R90"/>
 <instance part="SUPPLY13" gate="G$1" x="50.8" y="-66.04"/>
 <instance part="SUPPLY18" gate="G$1" x="-208.28" y="-2.54"/>
-<instance part="SUPPLY16" gate="G$1" x="-38.1" y="73.66"/>
+<instance part="SUPPLY16" gate="G$1" x="-38.1" y="60.96"/>
 <instance part="SUPPLY33" gate="G$1" x="86.36" y="93.98"/>
 <instance part="P+2" gate="1" x="147.32" y="-168.91"/>
 <instance part="P+5" gate="1" x="147.32" y="-153.67"/>
@@ -13201,13 +13203,13 @@ IO31: Serial Rx from host.</text>
 <instance part="SUPPLY14" gate="G$1" x="121.92" y="114.3"/>
 <instance part="C8" gate="G$1" x="2.54" y="50.8"/>
 <instance part="C7" gate="G$1" x="-7.62" y="50.8"/>
-<instance part="D5" gate="G$1" x="127" y="182.88"/>
-<instance part="D6" gate="G$1" x="134.62" y="185.42"/>
+<instance part="D5" gate="G$1" x="127" y="180.34" rot="R180"/>
+<instance part="D6" gate="G$1" x="137.16" y="182.88" rot="R180"/>
 <instance part="C17" gate="G$1" x="60.96" y="200.66" rot="R180"/>
 <instance part="SUPPLY6" gate="G$1" x="60.96" y="193.04"/>
-<instance part="R27" gate="G$1" x="147.32" y="185.42" rot="R90"/>
-<instance part="C18" gate="G$1" x="134.62" y="198.12"/>
-<instance part="Q1" gate="G$1" x="154.94" y="193.04"/>
+<instance part="R27" gate="G$1" x="149.86" y="185.42" rot="R90"/>
+<instance part="C18" gate="G$1" x="139.7" y="198.12"/>
+<instance part="Q1" gate="G$1" x="157.48" y="193.04"/>
 <instance part="SUPPLY15" gate="G$1" x="-30.48" y="-27.94"/>
 <instance part="R29" gate="G$1" x="-50.8" y="127" smashed="yes" rot="R180">
 <attribute name="NAME" x="-32.258" y="127" size="1.778" layer="95" rot="R180" align="center-left"/>
@@ -13245,10 +13247,9 @@ IO31: Serial Rx from host.</text>
 <instance part="J32" gate="J$1" x="-292.1" y="-35.56" rot="R180"/>
 <instance part="J33" gate="J$1" x="-292.1" y="-50.8" rot="R180"/>
 <instance part="J34" gate="J$1" x="-292.1" y="-66.04" rot="R180"/>
-<instance part="SUPPLY4" gate="G$1" x="147.32" y="177.8"/>
+<instance part="SUPPLY4" gate="G$1" x="149.86" y="177.8"/>
 <instance part="SUPPLY8" gate="G$1" x="55.88" y="167.64"/>
-<instance part="SUPPLY11" gate="G$1" x="134.62" y="160.02"/>
-<instance part="SUPPLY19" gate="G$1" x="157.48" y="185.42"/>
+<instance part="SUPPLY19" gate="G$1" x="160.02" y="185.42"/>
 <instance part="SUPPLY21" gate="G$1" x="246.38" y="-104.14" rot="R270"/>
 <instance part="SUPPLY22" gate="G$1" x="243.84" y="-127" rot="R270"/>
 <instance part="SUPPLY23" gate="G$1" x="248.92" y="-154.94" rot="R270"/>
@@ -13300,12 +13301,12 @@ IO31: Serial Rx from host.</text>
 <instance part="+3V2" gate="G$1" x="40.64" y="-93.98" smashed="yes">
 <attribute name="VALUE" x="38.1" y="-93.98" size="1.778" layer="96"/>
 </instance>
-<instance part="R4" gate="G$1" x="-58.42" y="86.36"/>
-<instance part="R9" gate="G$1" x="-58.42" y="96.52"/>
-<instance part="R10" gate="G$1" x="-58.42" y="76.2"/>
+<instance part="R4" gate="G$1" x="-58.42" y="73.66"/>
+<instance part="R9" gate="G$1" x="-58.42" y="83.82"/>
+<instance part="R10" gate="G$1" x="-58.42" y="63.5"/>
 <instance part="SUPPLY52" gate="G$1" x="40.64" y="-154.94"/>
 <instance part="R11" gate="G$1" x="127" y="170.18" rot="R90"/>
-<instance part="R12" gate="G$1" x="134.62" y="170.18" rot="R90"/>
+<instance part="R12" gate="G$1" x="137.16" y="170.18" rot="R90"/>
 <instance part="U5" gate="G$1" x="-114.3" y="254"/>
 <instance part="SUPPLY35" gate="G$1" x="-93.98" y="241.3"/>
 <instance part="R13" gate="G$1" x="-144.78" y="236.22" rot="R90"/>
@@ -13395,6 +13396,8 @@ IO31: Serial Rx from host.</text>
 <instance part="U1" gate="P8X32A-Q44" x="0" y="0"/>
 <instance part="U7" gate="G$1" x="63.5" y="-109.22"/>
 <instance part="U8" gate="G$1" x="63.5" y="-142.24"/>
+<instance part="R36" gate="G$1" x="-58.42" y="93.98"/>
+<instance part="D7" gate="G$1" x="-45.72" y="93.98" rot="R90"/>
 </instances>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
@@ -13616,7 +13619,7 @@ IO31: Serial Rx from host.</text>
 <net name="!RESET" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="C"/>
-<wire x1="157.48" y1="198.12" x2="172.72" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="198.12" x2="172.72" y2="198.12" width="0.1524" layer="91"/>
 <label x="165.1" y="198.12" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -13805,8 +13808,8 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO16" class="0">
 <segment>
-<wire x1="-71.12" y1="96.52" x2="-63.5" y2="96.52" width="0.1524" layer="91"/>
-<label x="-68.58" y="96.52" size="1.778" layer="95"/>
+<wire x1="-71.12" y1="83.82" x2="-63.5" y2="83.82" width="0.1524" layer="91"/>
+<label x="-68.58" y="83.82" size="1.778" layer="95"/>
 <pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -13817,8 +13820,8 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO17" class="0">
 <segment>
-<wire x1="-71.12" y1="86.36" x2="-63.5" y2="86.36" width="0.1524" layer="91"/>
-<label x="-68.58" y="86.36" size="1.778" layer="95"/>
+<wire x1="-71.12" y1="73.66" x2="-63.5" y2="73.66" width="0.1524" layer="91"/>
+<label x="-68.58" y="73.66" size="1.778" layer="95"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -13829,8 +13832,8 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="IO18" class="0">
 <segment>
-<wire x1="-71.12" y1="76.2" x2="-63.5" y2="76.2" width="0.1524" layer="91"/>
-<label x="-68.58" y="76.2" size="1.778" layer="95"/>
+<wire x1="-71.12" y1="63.5" x2="-63.5" y2="63.5" width="0.1524" layer="91"/>
+<label x="-68.58" y="63.5" size="1.778" layer="95"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -13957,6 +13960,11 @@ IO31: Serial Rx from host.</text>
 <wire x1="25.4" y1="7.62" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
 <label x="17.78" y="7.62" size="1.778" layer="95"/>
 <pinref part="U1" gate="P8X32A-Q44" pin="P26"/>
+</segment>
+<segment>
+<pinref part="R36" gate="G$1" pin="1"/>
+<wire x1="-71.12" y1="93.98" x2="-63.5" y2="93.98" width="0.1524" layer="91"/>
+<label x="-68.58" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO27" class="0">
@@ -14148,21 +14156,21 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="N$12" class="0">
 <segment>
-<wire x1="-48.26" y1="96.52" x2="-53.34" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="83.82" x2="-53.34" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="D3" gate="G$1" pin="A"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<wire x1="-48.26" y1="76.2" x2="-53.34" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="63.5" x2="-53.34" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
-<wire x1="-48.26" y1="86.36" x2="-53.34" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="73.66" x2="-53.34" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 </segment>
@@ -14417,15 +14425,18 @@ IO31: Serial Rx from host.</text>
 <pinref part="U1" gate="P8X32A-Q44" pin="BOE/"/>
 </segment>
 <segment>
-<wire x1="-40.64" y1="96.52" x2="-40.64" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="83.82" x2="-40.64" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$1" pin="C"/>
 <pinref part="D1" gate="G$1" pin="C"/>
-<junction x="-40.64" y="76.2"/>
+<junction x="-40.64" y="63.5"/>
 <pinref part="D3" gate="G$1" pin="C"/>
 <pinref part="SUPPLY16" gate="G$1" pin="DGND"/>
-<wire x1="-40.64" y1="86.36" x2="-40.64" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="76.2" x2="-38.1" y2="76.2" width="0.1524" layer="91"/>
-<junction x="-40.64" y="86.36"/>
+<wire x1="-40.64" y1="73.66" x2="-40.64" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="63.5" x2="-38.1" y2="63.5" width="0.1524" layer="91"/>
+<junction x="-40.64" y="73.66"/>
+<pinref part="D7" gate="G$1" pin="C"/>
+<wire x1="-40.64" y1="93.98" x2="-40.64" y2="83.82" width="0.1524" layer="91"/>
+<junction x="-40.64" y="83.82"/>
 </segment>
 <segment>
 <pinref part="R27" gate="G$1" pin="1"/>
@@ -14438,14 +14449,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="180.34" x2="55.88" y2="170.18" width="0.1524" layer="91"/>
 <junction x="55.88" y="170.18"/>
-</segment>
-<segment>
-<wire x1="134.62" y1="162.56" x2="134.62" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="SUPPLY11" gate="G$1" pin="DGND"/>
-<wire x1="127" y1="165.1" x2="134.62" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="R12" gate="G$1" pin="1"/>
-<junction x="134.62" y="165.1"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="G$1" pin="E"/>
@@ -14781,7 +14784,6 @@ IO31: Serial Rx from host.</text>
 <junction x="-302.26" y="22.86"/>
 <junction x="-302.26" y="38.1"/>
 <junction x="-302.26" y="53.34"/>
-<junction x="-302.26" y="68.58"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -14884,13 +14886,13 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="N$26" class="0">
 <segment>
-<wire x1="134.62" y1="193.04" x2="147.32" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="193.04" x2="149.86" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="R27" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="193.04" x2="147.32" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="193.04" x2="149.86" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="C18" gate="G$1" pin="2"/>
 <pinref part="Q1" gate="G$1" pin="B"/>
-<wire x1="152.4" y1="193.04" x2="147.32" y2="193.04" width="0.1524" layer="91"/>
-<junction x="147.32" y="193.04"/>
+<wire x1="154.94" y1="193.04" x2="149.86" y2="193.04" width="0.1524" layer="91"/>
+<junction x="149.86" y="193.04"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -14928,22 +14930,8 @@ IO31: Serial Rx from host.</text>
 <net name="N$19" class="0">
 <segment>
 <pinref part="C18" gate="G$1" pin="1"/>
-<wire x1="134.62" y1="200.66" x2="109.22" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="200.66" x2="109.22" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="U3" gate="1" pin="!DTR"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="D6" gate="G$1" pin="C"/>
-<wire x1="134.62" y1="175.26" x2="134.62" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="R12" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="D5" gate="G$1" pin="C"/>
-<wire x1="127" y1="175.26" x2="127" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="5VUSB" class="0">
@@ -14975,6 +14963,15 @@ IO31: Serial Rx from host.</text>
 <pinref part="TP_5V-USB" gate="G$1" pin="TP"/>
 <wire x1="33.02" y1="210.82" x2="33.02" y2="220.98" width="0.1524" layer="91"/>
 <junction x="33.02" y="210.82"/>
+<wire x1="127" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<junction x="137.16" y="165.1"/>
+<wire x1="137.16" y1="165.1" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="149.86" x2="66.04" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="187.96" x2="55.88" y2="187.96" width="0.1524" layer="91"/>
+<junction x="55.88" y="187.96"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="2"/>
@@ -15111,20 +15108,6 @@ IO31: Serial Rx from host.</text>
 <wire x1="81.28" y1="182.88" x2="76.2" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="182.88" x2="76.2" y2="208.28" width="0.1524" layer="91"/>
 <junction x="76.2" y="208.28"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="U3" gate="1" pin="CBUS0"/>
-<pinref part="D6" gate="G$1" pin="A"/>
-<wire x1="134.62" y1="187.96" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="U3" gate="1" pin="CBUS1"/>
-<pinref part="D5" gate="G$1" pin="A"/>
-<wire x1="127" y1="185.42" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PWREN_L" class="0">
@@ -15393,38 +15376,89 @@ IO31: Serial Rx from host.</text>
 <pinref part="U8" gate="G$1" pin="GND"/>
 </segment>
 </net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="D7" gate="G$1" pin="A"/>
+<pinref part="R36" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="93.98" x2="-53.34" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U3" gate="1" pin="CBUS0"/>
+<pinref part="D6" gate="G$1" pin="C"/>
+<wire x1="109.22" y1="187.96" x2="137.16" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="D5" gate="G$1" pin="C"/>
+<pinref part="U3" gate="1" pin="CBUS1"/>
+<wire x1="127" y1="185.42" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="D5" gate="G$1" pin="A"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="127" y1="177.8" x2="127" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="D6" gate="G$1" pin="A"/>
+<wire x1="137.16" y1="175.26" x2="137.16" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="102,1,48.26,-101.6,VA,+3V3,,,,"/>
-<approved hash="102,1,48.26,-104.14,GND,DGND,,,,"/>
-<approved hash="102,1,48.26,-134.62,VA,+3V3,,,,"/>
-<approved hash="102,1,48.26,-137.16,GND,DGND,,,,"/>
+<approved hash="102,1,40.64,-119.38,DGND,GND,,,,"/>
+<approved hash="102,1,40.64,-132.08,+3V3,VA,,,,"/>
+<approved hash="102,1,40.64,-96.52,+3V3,VA,,,,"/>
+<approved hash="102,1,40.64,-152.4,DGND,GND,,,,"/>
+<approved hash="201,1,40.64,-96.52,+3V3,+3V3\, VA,,,,"/>
+<approved hash="201,1,40.64,-132.08,+3V3,+3V3\, VA,,,,"/>
+<approved hash="201,1,40.64,-152.4,DGND,GND\, DGND,,,,"/>
+<approved hash="201,1,40.64,-119.38,DGND,GND\, DGND,,,,"/>
 <approved hash="104,1,86.36,119.38,U2,VCC,+3V3,,,"/>
 <approved hash="104,1,86.36,96.52,U2,GND,DGND,,,"/>
 <approved hash="104,1,43.18,180.34,J3,VBUS,5VUSB,,,"/>
 <approved hash="104,1,43.18,170.18,J3,GND,DGND,,,"/>
-<approved hash="104,1,-307.34,48.26,PWM0,GND,PWM0,,,"/>
-<approved hash="104,1,-304.8,48.26,PWM0,V+,5VRR,,,"/>
-<approved hash="104,1,-307.34,35.56,PWM1,GND,PWM1,,,"/>
-<approved hash="104,1,-304.8,35.56,PWM1,V+,5VRR,,,"/>
-<approved hash="104,1,-307.34,20.32,PWM2,GND,PWM2,,,"/>
-<approved hash="104,1,-304.8,20.32,PWM2,V+,5VRR,,,"/>
-<approved hash="104,1,-307.34,7.62,PWM3,GND,PWM3,,,"/>
-<approved hash="104,1,-304.8,7.62,PWM3,V+,5VRR,,,"/>
-<approved hash="104,1,-137.16,40.64,AI0,GND,DGND,,,"/>
-<approved hash="104,1,-137.16,43.18,AI0,V+,5VRR,,,"/>
-<approved hash="104,1,-137.16,27.94,AI1,GND,DGND,,,"/>
-<approved hash="104,1,-137.16,30.48,AI1,V+,5VRR,,,"/>
-<approved hash="104,1,-137.16,15.24,AI2,GND,DGND,,,"/>
-<approved hash="104,1,-137.16,17.78,AI2,V+,5VRR,,,"/>
-<approved hash="104,1,-137.16,2.54,AI3,GND,DGND,,,"/>
-<approved hash="104,1,-137.16,5.08,AI3,V+,5VRR,,,"/>
-<approved hash="104,1,-137.16,-10.16,AO0,GND,DGND,,,"/>
-<approved hash="104,1,-137.16,-7.62,AO0,V+,5VRR,,,"/>
-<approved hash="104,1,-137.16,-22.86,AO1,GND,DGND,,,"/>
-<approved hash="104,1,-137.16,-20.32,AO1,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,68.58,J25,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,71.12,J25,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,53.34,J26,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,55.88,J26,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,38.1,J27,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,40.64,J27,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,22.86,J28,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,25.4,J28,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,7.62,J29,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,10.16,J29,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,-7.62,J30,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,-5.08,J30,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,-22.86,J31,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,-20.32,J31,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,-38.1,J32,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,-35.56,J32,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,-53.34,J33,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,-50.8,J33,V+,5VRR,,,"/>
+<approved hash="104,1,-297.18,-68.58,J34,GND,DGND,,,"/>
+<approved hash="104,1,-297.18,-66.04,J34,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,48.26,J35,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,50.8,J35,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,33.02,J36,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,35.56,J36,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,17.78,J37,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,20.32,J37,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,2.54,J38,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,5.08,J38,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,-12.7,J39,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,-10.16,J39,V+,5VRR,,,"/>
+<approved hash="104,1,-137.16,-27.94,J40,GND,DGND,,,"/>
+<approved hash="104,1,-137.16,-25.4,J40,V+,5VRR,,,"/>
 <approved hash="104,1,157.48,-147.32,J17,GND,DGND,,,"/>
 <approved hash="104,1,157.48,-144.78,J17,V+,+5V,,,"/>
 <approved hash="104,1,157.48,-162.56,J18,GND,DGND,,,"/>
@@ -15466,16 +15500,30 @@ IO31: Serial Rx from host.</text>
 <approved hash="104,1,58.42,-63.5,J16,GND,DGND,,,"/>
 <approved hash="104,1,58.42,-60.96,J16,V+,+5V,,,"/>
 <approved hash="104,1,81.28,210.82,U3,VCC,5VUSB,,,"/>
+<approved hash="202,1,81.28,198.12,U3,OSCI,,,,"/>
 <approved hash="104,1,109.22,167.64,U3,GND,DGND,,,"/>
+<approved hash="202,1,109.22,203.2,U3,!CTS,,,,"/>
+<approved hash="202,1,109.22,198.12,U3,!DSR,,,,"/>
+<approved hash="202,1,109.22,195.58,U3,!DCD,,,,"/>
+<approved hash="202,1,109.22,193.04,U3,!RI,,,,"/>
 <approved hash="104,1,81.28,208.28,U3,VCCIO,N$3,,,"/>
+<approved hash="202,1,81.28,203.2,U3,!RESET,,,,"/>
 <approved hash="104,1,81.28,170.18,U3,GND,DGND,,,"/>
 <approved hash="104,1,109.22,165.1,U3,GND,DGND,,,"/>
 <approved hash="104,1,109.22,162.56,U3,GND,DGND,,,"/>
 <approved hash="104,1,-81.28,180.34,U4,VIN,5VRR,,,"/>
 <approved hash="104,1,-81.28,175.26,U4,VSS,DGND,,,"/>
-<approved hash="104,1,45.72,243.84,U7,GND,DGND,,,"/>
+<approved hash="104,1,45.72,243.84,U6,GND,DGND,,,"/>
 <approved hash="104,1,-218.44,-53.34,J24,GND,DGND,,,"/>
 <approved hash="104,1,-218.44,-50.8,J24,V+,DGND,,,"/>
+<approved hash="104,1,-15.24,33.02,U1,VDD,+3V3,,,"/>
+<approved hash="104,1,-15.24,30.48,U1,VDD,+3V3,,,"/>
+<approved hash="104,1,-15.24,27.94,U1,VDD,+3V3,,,"/>
+<approved hash="104,1,-15.24,25.4,U1,VDD,+3V3,,,"/>
+<approved hash="104,1,17.78,33.02,U1,VSS,DGND,,,"/>
+<approved hash="104,1,17.78,30.48,U1,VSS,DGND,,,"/>
+<approved hash="104,1,17.78,27.94,U1,VSS,DGND,,,"/>
+<approved hash="104,1,17.78,25.4,U1,VSS,DGND,,,"/>
 <approved hash="208,1,-116.84,132.08,+3V3,sup,,,,"/>
 <approved hash="208,1,241.3,-7.62,+3V3,sup,,,,"/>
 <approved hash="208,1,91.44,-7.62,+3V3,sup,,,,"/>
@@ -15497,10 +15545,6 @@ IO31: Serial Rx from host.</text>
 <approved hash="208,1,160.02,30.48,+3V3,sup,,,,"/>
 <approved hash="208,1,162.56,12.7,+3V3,sup,,,,"/>
 <approved hash="208,1,165.1,-7.62,+3V3,sup,,,,"/>
-<approved hash="208,1,40.64,-96.52,+3V3,sup,,,,"/>
-<approved hash="208,1,48.26,-101.6,+3V3,sup,,,,"/>
-<approved hash="208,1,40.64,-132.08,+3V3,sup,,,,"/>
-<approved hash="208,1,48.26,-134.62,+3V3,sup,,,,"/>
 <approved hash="208,1,27.94,60.96,+3V3,sup,,,,"/>
 </errors>
 </schematic>
