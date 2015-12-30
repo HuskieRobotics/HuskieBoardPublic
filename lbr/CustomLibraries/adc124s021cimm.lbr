@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -22,25 +22,25 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -58,16 +58,17 @@
 <library>
 <packages>
 <package name="ADC124S021VSSOP">
-<smd name="P$1" x="-0.5" y="-0.35" dx="0.7" dy="0.27" layer="1" rot="R270"/>
-<smd name="P$2" x="0" y="-0.35" dx="0.7" dy="0.27" layer="1" rot="R270"/>
-<smd name="P$3" x="-1" y="-0.35" dx="0.7" dy="0.27" layer="1" rot="R270"/>
-<smd name="P$4" x="0.5" y="-0.35" dx="0.7" dy="0.27" layer="1" rot="R270"/>
-<smd name="P$5" x="1" y="-0.35" dx="0.7" dy="0.27" layer="1" rot="R270"/>
-<smd name="P$6" x="0.5" y="-2.05" dx="0.7" dy="0.27" layer="1" rot="R90"/>
-<smd name="P$7" x="0" y="-2.05" dx="0.7" dy="0.27" layer="1" rot="R90"/>
-<smd name="P$8" x="1" y="-2.05" dx="0.7" dy="0.27" layer="1" rot="R90"/>
-<smd name="P$9" x="-0.5" y="-2.05" dx="0.7" dy="0.27" layer="1" rot="R90"/>
-<smd name="P$10" x="-1" y="-2.05" dx="0.7" dy="0.27" layer="1" rot="R90"/>
+<smd name="P$1" x="-1" y="-2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$2" x="-0.5" y="-2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$3" x="0" y="-2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$4" x="0.5" y="-2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$5" x="1" y="-2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$10" x="-1" y="2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$9" x="-0.5" y="2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$8" x="0" y="2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$7" x="0.5" y="2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<smd name="P$6" x="1" y="2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
+<circle x="-1" y="-0.75" radius="0.1" width="0.254" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -93,9 +94,10 @@
 <devicesets>
 <deviceset name="ADC124S01">
 <gates>
+<gate name="G$1" symbol="ADC" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="ADC124S021VSSOP">
 <technologies>
 <technology name=""/>
 </technologies>
