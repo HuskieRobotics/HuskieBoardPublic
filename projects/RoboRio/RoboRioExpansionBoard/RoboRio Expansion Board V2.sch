@@ -12834,7 +12834,7 @@ SMT crystal</description>
 <smd name="P$6" x="1" y="2.2" dx="1.45" dy="0.3" layer="1" rot="R270"/>
 <circle x="-1" y="-0.75" radius="0.1" width="0.254" layer="21"/>
 <text x="-1.9" y="-3" size="1.016" layer="25" rot="R90">&gt;NAME</text>
-<text x="3" y="-3" size="1.016" layer="27" rot="R90">&gt;VALUES</text>
+<text x="3" y="-3" size="1.016" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
