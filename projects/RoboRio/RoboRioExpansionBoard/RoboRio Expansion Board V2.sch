@@ -8652,25 +8652,25 @@ In this library the device names are the same as the pin names of the symbols, t
 <library name="MicroSdSocket">
 <packages>
 <package name="MICRO_SD_HINGED_TYPE">
-<smd name="P8" x="-3.81491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P7" x="-2.71491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P6" x="-1.61491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P5" x="-0.51491875" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P4" x="0.58508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P3" x="1.68508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P2" x="2.78508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P1" x="3.88508125" y="0.07" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<text x="-6" y="-8" size="1.27" layer="25">&gt;NAME</text>
-<smd name="G4" x="-6.19491875" y="-2.53" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G1" x="7.55508125" y="-2.53" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G3" x="-6.19491875" y="4.77" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G2" x="7.55508125" y="4.77" dx="2" dy="1.45" layer="1" rot="R90"/>
-<wire x1="-6.42" y1="-6.58" x2="7.18" y2="-6.58" width="0.01" layer="21"/>
-<wire x1="-6.42" y1="7.92" x2="-6.42" y2="-6.58" width="0.01" layer="21"/>
-<wire x1="7.18" y1="-6.58" x2="7.18" y2="7.92" width="0.01" layer="21"/>
-<wire x1="7.18" y1="7.92" x2="-6.42" y2="7.92" width="0.01" layer="21"/>
-<wire x1="-6.92" y1="-3.53" x2="-6.92" y2="-3.54" width="0.01" layer="21"/>
-<text x="1" y="-8" size="1.27" layer="27">&gt;VALUE</text>
+<smd name="P8" x="-4.5" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P7" x="-3.4" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P6" x="-2.3" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P5" x="-1.2" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P4" x="-0.1" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P3" x="1" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P2" x="2.1" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P1" x="3.2" y="0" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<text x="-6.68508125" y="-8.07" size="1.27" layer="25">&gt;NAME</text>
+<smd name="G4" x="-6.88" y="-2.6" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G1" x="6.87" y="-2.6" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G3" x="-6.88" y="4.7" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G2" x="6.87" y="4.7" dx="2" dy="1.45" layer="1" rot="R90"/>
+<wire x1="-7.10508125" y1="-6.65" x2="6.49491875" y2="-6.65" width="0.01" layer="21"/>
+<wire x1="-7.10508125" y1="7.85" x2="-7.10508125" y2="-6.65" width="0.01" layer="21"/>
+<wire x1="6.49491875" y1="-6.65" x2="6.49491875" y2="7.85" width="0.01" layer="21"/>
+<wire x1="6.49491875" y1="7.85" x2="-7.10508125" y2="7.85" width="0.01" layer="21"/>
+<wire x1="-7.60508125" y1="-3.6" x2="-7.60508125" y2="-3.61" width="0.01" layer="21"/>
+<text x="0.31491875" y="-8.07" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
