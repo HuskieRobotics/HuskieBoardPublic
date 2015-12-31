@@ -9915,14 +9915,17 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <smd name="P$2" x="-0.7" y="-0.85" dx="0.45" dy="1.5" layer="1" rot="R90"/>
 <smd name="P$3" x="-0.7" y="-1.5" dx="0.45" dy="1.5" layer="1" rot="R90"/>
 <smd name="P$4" x="-0.7" y="-2.15" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$5" x="5.1" y="-0.2" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$6" x="5.1" y="-0.85" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$7" x="5.1" y="-1.5" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$8" x="5.1" y="-2.15" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$8" x="5.1" y="-0.2" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$7" x="5.1" y="-0.85" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$6" x="5.1" y="-1.5" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$5" x="5.1" y="-2.15" dx="0.45" dy="1.5" layer="1" rot="R90"/>
 <wire x1="0" y1="0.5" x2="4.4" y2="0.5" width="0.127" layer="20"/>
 <wire x1="4.4" y1="0.5" x2="4.4" y2="-2.9" width="0.127" layer="20"/>
 <wire x1="4.4" y1="-2.9" x2="0" y2="-2.9" width="0.127" layer="20"/>
 <wire x1="0" y1="0.5" x2="0" y2="-2.9" width="0.127" layer="20"/>
+<text x="-1.016" y="0.762" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-4.572" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="0.762" y="-0.254" radius="0.254" width="0.127" layer="20"/>
 </package>
 </packages>
 <symbols>
@@ -9944,21 +9947,21 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TPS2115APWR">
+<deviceset name="TPS2115APWR" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="TPS2115APWR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="TSSOP-8">
 <connects>
-<connect gate="G$1" pin="D0" pad="P$1"/>
-<connect gate="G$1" pin="D1" pad="P$2"/>
-<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="D0" pad="P$2"/>
+<connect gate="G$1" pin="D1" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="P$5"/>
 <connect gate="G$1" pin="ILIM" pad="P$4"/>
-<connect gate="G$1" pin="IN1" pad="P$5"/>
+<connect gate="G$1" pin="IN1" pad="P$8"/>
 <connect gate="G$1" pin="IN2" pad="P$6"/>
 <connect gate="G$1" pin="OUT" pad="P$7"/>
-<connect gate="G$1" pin="STAT" pad="P$8"/>
+<connect gate="G$1" pin="STAT" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13028,18 +13031,18 @@ SMT crystal</description>
 <part name="J39" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AO0"/>
 <part name="J40" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AO1"/>
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
-<part name="J17" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J18" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J19" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J20" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J21" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J22" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J23" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J17" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC1"/>
+<part name="J18" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC2"/>
+<part name="J19" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC3"/>
+<part name="J20" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC4"/>
+<part name="J21" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC5"/>
+<part name="J22" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC6"/>
+<part name="J23" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC7"/>
 <part name="J14" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="UART_TX"/>
-<part name="J6" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J5" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J4" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J7" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J6" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO2"/>
+<part name="J5" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO1"/>
+<part name="J4" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO0"/>
+<part name="J7" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO3"/>
 <part name="J15" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="UART_RX"/>
 <part name="J8" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_CS"/>
 <part name="J9" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_CLK"/>
