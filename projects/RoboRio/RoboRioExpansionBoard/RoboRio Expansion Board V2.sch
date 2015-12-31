@@ -8572,48 +8572,6 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="RESETBUTTON3000">
-<packages>
-<package name="RESETBUTTON300000MILLION">
-<description>This is an advanced reset button hand crafted by the most weathered engineers.</description>
-<pad name="P4" x="-3.25" y="-2.45" drill="0.8" shape="square"/>
-<pad name="P3" x="-3.25" y="2.05" drill="0.8" shape="square"/>
-<pad name="P1" x="3.25" y="2.05" drill="0.8" shape="square"/>
-<pad name="P2" x="3.25" y="-2.45" drill="0.8" shape="square"/>
-<wire x1="-4.064" y1="2.794" x2="4.064" y2="2.794" width="0.127" layer="21"/>
-<wire x1="4.064" y1="2.794" x2="4.064" y2="-3.202" width="0.127" layer="21"/>
-<wire x1="4.064" y1="-3.202" x2="-4.064" y2="-3.202" width="0.127" layer="21"/>
-<wire x1="-4.064" y1="-3.202" x2="-4.064" y2="2.794" width="0.127" layer="21"/>
-<text x="-2.54" y="-5.08" size="1.27" layer="25">&gt;NAME</text>
-</package>
-</packages>
-<symbols>
-<symbol name="RESETBUTTON">
-<pin name="P$1" x="-10.16" y="0" length="middle"/>
-<pin name="P$2" x="10.16" y="0" length="middle" rot="R180"/>
-<wire x1="-5.08" y1="0" x2="2.54" y2="5.08" width="0.254" layer="94"/>
-<text x="-10.16" y="-5.08" size="1.778" layer="94">&gt;NAME</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BUTTON">
-<gates>
-<gate name="G$1" symbol="RESETBUTTON" x="7.62" y="-5.08"/>
-</gates>
-<devices>
-<device name="" package="RESETBUTTON300000MILLION">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P1 P2"/>
-<connect gate="G$1" pin="P$2" pad="P3 P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="supply2">
 <description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
 GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
@@ -12926,6 +12884,57 @@ SMT crystal</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="resetbutton9001">
+<packages>
+<package name="RESETBUTTON9001">
+<smd name="1" x="-3.9" y="2.2" dx="1.55" dy="1.3" layer="1"/>
+<smd name="3" x="-3.9" y="-2.3" dx="1.55" dy="1.3" layer="1"/>
+<smd name="2" x="4.05" y="2.2" dx="1.55" dy="1.3" layer="1"/>
+<smd name="4" x="4.05" y="-2.3" dx="1.55" dy="1.3" layer="1"/>
+<text x="-2.8" y="4" size="1.27" layer="25">&gt;NAME</text>
+<wire x1="-3.03" y1="3.07" x2="3.17" y2="3.07" width="0.127" layer="48"/>
+<wire x1="3.17" y1="3.07" x2="3.17" y2="-3.13" width="0.127" layer="48"/>
+<wire x1="3.17" y1="-3.13" x2="-3.03" y2="-3.13" width="0.127" layer="48"/>
+<wire x1="-3.03" y1="3.07" x2="-3.03" y2="-3.13" width="0.127" layer="48"/>
+<circle x="0" y="0" radius="1.79605" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="RESETBUTTON9001">
+<wire x1="-7.62" y1="27.94" x2="-7.62" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="12.7" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<pin name="P1" x="-20.32" y="27.94" length="middle"/>
+<pin name="P4" x="5.08" y="7.62" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="27.94" x2="-15.24" y2="27.94" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="27.94" x2="0" y2="27.94" width="0.254" layer="94"/>
+<pin name="P2" x="5.08" y="27.94" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="-15.24" y2="7.62" width="0.254" layer="94"/>
+<pin name="P3" x="-20.32" y="7.62" length="middle"/>
+<wire x1="-7.62" y1="20.32" x2="-2.54" y2="12.7" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RESETBUTTON9001">
+<gates>
+<gate name="G$1" symbol="RESETBUTTON9001" x="7.62" y="-17.78"/>
+</gates>
+<devices>
+<device name="DEFAULT" package="RESETBUTTON9001">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+<connect gate="G$1" pin="P2" pad="2"/>
+<connect gate="G$1" pin="P3" pad="3"/>
+<connect gate="G$1" pin="P4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12943,7 +12952,6 @@ SMT crystal</description>
 <part name="D2" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
 <part name="D1" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
 <part name="D3" library="led" deviceset="LED" device="CHIPLED_0603" value="GREEN"/>
-<part name="S1" library="RESETBUTTON3000" deviceset="BUTTON" device=""/>
 <part name="C1" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="C6" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
@@ -13165,6 +13173,7 @@ SMT crystal</description>
 <part name="+3V28" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V29" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V30" library="supply1" deviceset="+3V3" device=""/>
+<part name="U$1" library="resetbutton9001" deviceset="RESETBUTTON9001" device="DEFAULT"/>
 </parts>
 <sheets>
 <sheet>
@@ -13194,7 +13203,6 @@ IO31: Serial Rx from host.</text>
 <instance part="D2" gate="G$1" x="-45.72" y="73.66" rot="R90"/>
 <instance part="D1" gate="G$1" x="-45.72" y="63.5" rot="R90"/>
 <instance part="D3" gate="G$1" x="-45.72" y="83.82" rot="R90"/>
-<instance part="S1" gate="G$1" x="116.84" y="78.74"/>
 <instance part="C1" gate="G$1" x="12.7" y="50.8"/>
 <instance part="C6" gate="G$1" x="121.92" y="119.38" rot="R180"/>
 <instance part="+3V5" gate="G$1" x="-116.84" y="134.62"/>
@@ -13203,7 +13211,7 @@ IO31: Serial Rx from host.</text>
 <instance part="SUPPLY7" gate="G$1" x="27.94" y="40.64"/>
 <instance part="SUPPLY9" gate="G$1" x="-302.26" y="-81.28"/>
 <instance part="SUPPLY10" gate="G$1" x="-116.84" y="99.06"/>
-<instance part="SUPPLY12" gate="G$1" x="129.54" y="78.74" rot="R90"/>
+<instance part="SUPPLY12" gate="G$1" x="127" y="43.18"/>
 <instance part="SUPPLY13" gate="G$1" x="50.8" y="-66.04"/>
 <instance part="SUPPLY18" gate="G$1" x="-208.28" y="-2.54"/>
 <instance part="SUPPLY16" gate="G$1" x="-38.1" y="60.96"/>
@@ -13443,6 +13451,7 @@ IO31: Serial Rx from host.</text>
 <instance part="+3V28" gate="G$1" x="147.32" y="-167.64"/>
 <instance part="+3V29" gate="G$1" x="147.32" y="-152.4"/>
 <instance part="+3V30" gate="G$1" x="147.32" y="-137.16"/>
+<instance part="U$1" gate="G$1" x="134.62" y="73.66" rot="R90"/>
 </instances>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
@@ -13716,8 +13725,13 @@ IO31: Serial Rx from host.</text>
 <segment>
 <wire x1="96.52" y1="88.9" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
 <label x="106.68" y="83.82" size="1.778" layer="95" rot="R180"/>
-<pinref part="S1" gate="G$1" pin="P$1"/>
-<wire x1="96.52" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="78.74" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P2"/>
+<pinref part="U$1" gate="G$1" pin="P1"/>
+<wire x1="106.68" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="53.34" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
+<junction x="101.6" y="78.74"/>
 </segment>
 <segment>
 <wire x1="63.5" y1="81.28" x2="-25.4" y2="81.28" width="0.1524" layer="91"/>
@@ -14465,7 +14479,13 @@ IO31: Serial Rx from host.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="G$1" pin="DGND"/>
-<pinref part="S1" gate="G$1" pin="P$2"/>
+<wire x1="127" y1="45.72" x2="127" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P4"/>
+<wire x1="127" y1="78.74" x2="132.08" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="78.74" x2="132.08" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P3"/>
+<wire x1="132.08" y1="53.34" x2="127" y2="53.34" width="0.1524" layer="91"/>
+<junction x="127" y="53.34"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="1"/>
