@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -8982,6 +8982,28 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-2.81" y="10.67" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <text x="-3.31" y="-1.73" size="1.27" layer="27" font="vector">&gt;VALUE</text>
 </package>
+<package name="USB-MINIB-0513870578">
+<rectangle x1="-1.9" y1="-3.1" x2="2" y2="3.1" layer="41"/>
+<smd name="D+" x="2.9" y="0" dx="1.6" dy="0.5" layer="1"/>
+<smd name="D-" x="2.9" y="0.8" dx="1.6" dy="0.5" layer="1"/>
+<smd name="VBUS" x="2.9" y="1.6" dx="1.6" dy="0.5" layer="1"/>
+<smd name="ID" x="2.9" y="-0.8" dx="1.6" dy="0.5" layer="1"/>
+<smd name="GND" x="2.9" y="-1.6" dx="1.6" dy="0.5" layer="1"/>
+<wire x1="-1.9" y1="5" x2="-1.9" y2="3.85" width="0" layer="20"/>
+<wire x1="-1.9" y1="3.85" x2="-1.9" y2="-3.85" width="0" layer="20"/>
+<wire x1="-1.9" y1="-3.85" x2="-1.9" y2="-5" width="0" layer="20"/>
+<wire x1="-1.9" y1="3.85" x2="-3.3" y2="3.85" width="0" layer="20"/>
+<wire x1="-3.3" y1="3.85" x2="-3.3" y2="-3.85" width="0" layer="20"/>
+<wire x1="-3.3" y1="-3.85" x2="-1.9" y2="-3.85" width="0" layer="20"/>
+<wire x1="-1.9" y1="-3.85" x2="3.4" y2="-3.85" width="0" layer="20"/>
+<wire x1="3.4" y1="-3.85" x2="3.4" y2="3.85" width="0" layer="20"/>
+<wire x1="3.4" y1="3.85" x2="-1.9" y2="3.85" width="0" layer="20"/>
+<text x="-2" y="-1.6" size="0.254" layer="48" rot="R90">Board Edge</text>
+<hole x="0" y="3.65" drill="1.4"/>
+<hole x="2.9" y="3.65" drill="1.4"/>
+<hole x="0" y="-3.65" drill="1.4"/>
+<hole x="2.9" y="-3.65" drill="1.4"/>
+</package>
 </packages>
 <symbols>
 <symbol name="USB">
@@ -9056,6 +9078,18 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 </technologies>
 </device>
 <device name="MOLEX" package="USB-MINIB-THM-MOLEX">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+"/>
+<connect gate="G$1" pin="D-" pad="D-"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="ID" pad="ID"/>
+<connect gate="G$1" pin="VBUS" pad="VBUS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="USB-MINIB-0513870578">
 <connects>
 <connect gate="G$1" pin="D+" pad="D+"/>
 <connect gate="G$1" pin="D-" pad="D-"/>
@@ -12964,7 +12998,7 @@ SMT crystal</description>
 <part name="R32" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R33" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R34" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="J3" library="adafruit" deviceset="USB" device="MINIB" value="51387-0578"/>
+<part name="J3" library="adafruit" deviceset="USB" device="" value="51387-0578"/>
 <part name="C9" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="J25" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM0"/>
 <part name="J26" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM1"/>
@@ -15492,19 +15526,19 @@ IO31: Serial Rx from host.</text>
 <approved hash="104,1,-137.16,-27.94,J40,GND,DGND,,,"/>
 <approved hash="104,1,-137.16,-25.4,J40,V+,5VRR,,,"/>
 <approved hash="104,1,157.48,-147.32,J17,GND,DGND,,,"/>
-<approved hash="104,1,157.48,-144.78,J17,V+,+5V,,,"/>
+<approved hash="104,1,157.48,-144.78,J17,V+,+3V3,,,"/>
 <approved hash="104,1,157.48,-162.56,J18,GND,DGND,,,"/>
-<approved hash="104,1,157.48,-160.02,J18,V+,+5V,,,"/>
+<approved hash="104,1,157.48,-160.02,J18,V+,+3V3,,,"/>
 <approved hash="104,1,157.48,-177.8,J19,GND,DGND,,,"/>
-<approved hash="104,1,157.48,-175.26,J19,V+,+5V,,,"/>
+<approved hash="104,1,157.48,-175.26,J19,V+,+3V3,,,"/>
 <approved hash="104,1,251.46,-104.14,J20,GND,DGND,,,"/>
-<approved hash="104,1,251.46,-101.6,J20,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-101.6,J20,V+,+3V3,,,"/>
 <approved hash="104,1,251.46,-127,J21,GND,DGND,,,"/>
-<approved hash="104,1,251.46,-124.46,J21,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-124.46,J21,V+,+3V3,,,"/>
 <approved hash="104,1,251.46,-154.94,J22,GND,DGND,,,"/>
-<approved hash="104,1,251.46,-152.4,J22,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-152.4,J22,V+,+3V3,,,"/>
 <approved hash="104,1,251.46,-182.88,J23,GND,DGND,,,"/>
-<approved hash="104,1,251.46,-180.34,J23,V+,+5V,,,"/>
+<approved hash="104,1,251.46,-180.34,J23,V+,+3V3,,,"/>
 <approved hash="104,1,248.92,-10.16,J14,GND,DGND,,,"/>
 <approved hash="104,1,248.92,-7.62,J14,V+,+3V3,,,"/>
 <approved hash="104,1,101.6,-10.16,J6,GND,DGND,,,"/>
@@ -15578,6 +15612,13 @@ IO31: Serial Rx from host.</text>
 <approved hash="208,1,162.56,12.7,+3V3,sup,,,,"/>
 <approved hash="208,1,165.1,-7.62,+3V3,sup,,,,"/>
 <approved hash="208,1,27.94,60.96,+3V3,sup,,,,"/>
+<approved hash="208,1,238.76,-96.52,+3V3,sup,,,,"/>
+<approved hash="208,1,236.22,-119.38,+3V3,sup,,,,"/>
+<approved hash="208,1,241.3,-147.32,+3V3,sup,,,,"/>
+<approved hash="208,1,236.22,-175.26,+3V3,sup,,,,"/>
+<approved hash="208,1,147.32,-170.18,+3V3,sup,,,,"/>
+<approved hash="208,1,147.32,-154.94,+3V3,sup,,,,"/>
+<approved hash="208,1,147.32,-139.7,+3V3,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
