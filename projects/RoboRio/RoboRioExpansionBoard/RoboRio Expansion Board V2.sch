@@ -9911,21 +9911,21 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <library name="tps2115apwr">
 <packages>
 <package name="TSSOP-8">
-<smd name="P$1" x="-0.7" y="-0.2" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$2" x="-0.7" y="-0.85" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$3" x="-0.7" y="-1.5" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$4" x="-0.7" y="-2.15" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$8" x="5.1" y="-0.2" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$7" x="5.1" y="-0.85" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$6" x="5.1" y="-1.5" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$5" x="5.1" y="-2.15" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<wire x1="0" y1="0.5" x2="4.4" y2="0.5" width="0.127" layer="20"/>
-<wire x1="4.4" y1="0.5" x2="4.4" y2="-2.9" width="0.127" layer="20"/>
-<wire x1="4.4" y1="-2.9" x2="0" y2="-2.9" width="0.127" layer="20"/>
-<wire x1="0" y1="0.5" x2="0" y2="-2.9" width="0.127" layer="20"/>
-<text x="-1.016" y="0.762" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-4.572" size="1.27" layer="27">&gt;VALUE</text>
-<circle x="0.762" y="-0.254" radius="0.254" width="0.127" layer="20"/>
+<smd name="P$1" x="-2.9" y="1" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$2" x="-2.9" y="0.35" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$3" x="-2.9" y="-0.3" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$4" x="-2.9" y="-0.95" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$8" x="2.9" y="1" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$7" x="2.9" y="0.35" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$6" x="2.9" y="-0.3" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$5" x="2.9" y="-0.95" dx="0.45" dy="1.5" layer="1" rot="R90"/>
+<wire x1="-2.2" y1="1.7" x2="2.2" y2="1.7" width="0.127" layer="20"/>
+<wire x1="2.2" y1="1.7" x2="2.2" y2="-1.7" width="0.127" layer="20"/>
+<wire x1="2.2" y1="-1.7" x2="-2.2" y2="-1.7" width="0.127" layer="20"/>
+<wire x1="-2.2" y1="1.7" x2="-2.2" y2="-1.7" width="0.127" layer="20"/>
+<text x="-3.216" y="1.962" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.216" y="-3.372" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-1.438" y="0.946" radius="0.254" width="0.127" layer="20"/>
 </package>
 </packages>
 <symbols>
@@ -13067,7 +13067,7 @@ SMT crystal</description>
 <part name="SUPPLY52" library="supply2" deviceset="DGND" device=""/>
 <part name="R11" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="R12" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
-<part name="U5" library="tps2115apwr" deviceset="TPS2115APWR" device=""/>
+<part name="U5" library="tps2115apwr" deviceset="TPS2115APWR" device="" value="TPS2115APWR"/>
 <part name="SUPPLY35" library="supply2" deviceset="DGND" device=""/>
 <part name="R13" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="R14" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
