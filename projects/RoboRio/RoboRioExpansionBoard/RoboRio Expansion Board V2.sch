@@ -13050,7 +13050,7 @@ SMT crystal</description>
 <part name="C10" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
-<part name="U4" library="m-pad-2.1" deviceset="TC54" device="-CB"/>
+<part name="U4" library="m-pad-2.1" deviceset="TC54" device="-CB" value="TC54VN43"/>
 <part name="U6" library="burr-brown" deviceset="REG1117" device="">
 <attribute name="MPN" value="AP1117"/>
 </part>
@@ -13146,6 +13146,8 @@ Else VOUT = auto selects USB power since 5VRR is off.</text>
 IO30: Serial Tx to host.
 IO31: Serial Rx from host.</text>
 <text x="-27.94" y="-27.94" size="1.778" layer="97">Internal Pullup</text>
+<text x="-106.68" y="187.96" size="1.778" layer="97">Vth = 4.3V nominal</text>
+<text x="-106.68" y="185.42" size="1.778" layer="97">(4.21 to 4.39)</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="78.74" y="106.68"/>
