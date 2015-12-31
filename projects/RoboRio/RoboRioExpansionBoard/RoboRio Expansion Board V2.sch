@@ -13028,18 +13028,18 @@ SMT crystal</description>
 <part name="J39" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AO0"/>
 <part name="J40" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="AO1"/>
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
-<part name="J17" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J18" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J19" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J20" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J21" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J22" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J23" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J17" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC1"/>
+<part name="J18" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC2"/>
+<part name="J19" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC3"/>
+<part name="J20" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC4"/>
+<part name="J21" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC5"/>
+<part name="J22" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC6"/>
+<part name="J23" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="ADC7"/>
 <part name="J14" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="UART_TX"/>
-<part name="J6" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J5" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J4" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
-<part name="J7" library="3pin" deviceset="3PINDEVICE" device="DEFAULT"/>
+<part name="J6" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO2"/>
+<part name="J5" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO1"/>
+<part name="J4" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO0"/>
+<part name="J7" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="GPIO3"/>
 <part name="J15" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="UART_RX"/>
 <part name="J8" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_CS"/>
 <part name="J9" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="SPI_CLK"/>
