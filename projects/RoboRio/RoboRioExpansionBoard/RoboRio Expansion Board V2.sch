@@ -13236,8 +13236,8 @@ IO31: Serial Rx from host.</text>
 <instance part="SUPPLY14" gate="G$1" x="121.92" y="114.3"/>
 <instance part="C8" gate="G$1" x="2.54" y="50.8"/>
 <instance part="C7" gate="G$1" x="-7.62" y="50.8"/>
-<instance part="D5" gate="G$1" x="127" y="180.34" rot="R180"/>
-<instance part="D6" gate="G$1" x="137.16" y="182.88" rot="R180"/>
+<instance part="D5" gate="G$1" x="127" y="167.64" rot="R180"/>
+<instance part="D6" gate="G$1" x="137.16" y="167.64" rot="R180"/>
 <instance part="C17" gate="G$1" x="60.96" y="200.66" rot="R180"/>
 <instance part="SUPPLY6" gate="G$1" x="60.96" y="193.04"/>
 <instance part="R27" gate="G$1" x="149.86" y="185.42" rot="R90"/>
@@ -13338,8 +13338,8 @@ IO31: Serial Rx from host.</text>
 <instance part="R9" gate="G$1" x="-43.18" y="83.82"/>
 <instance part="R10" gate="G$1" x="-43.18" y="63.5"/>
 <instance part="SUPPLY52" gate="G$1" x="40.64" y="-154.94"/>
-<instance part="R11" gate="G$1" x="127" y="170.18" rot="R90"/>
-<instance part="R12" gate="G$1" x="137.16" y="170.18" rot="R90"/>
+<instance part="R11" gate="G$1" x="127" y="180.34" rot="R90"/>
+<instance part="R12" gate="G$1" x="137.16" y="182.88" rot="R90"/>
 <instance part="U5" gate="G$1" x="-114.3" y="254"/>
 <instance part="SUPPLY35" gate="G$1" x="-93.98" y="241.3"/>
 <instance part="R13" gate="G$1" x="-144.78" y="236.22" rot="R90"/>
@@ -14981,15 +14981,15 @@ IO31: Serial Rx from host.</text>
 <pinref part="TP_5V-USB" gate="G$1" pin="TP"/>
 <wire x1="33.02" y1="210.82" x2="33.02" y2="220.98" width="0.1524" layer="91"/>
 <junction x="33.02" y="210.82"/>
-<wire x1="127" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="R12" gate="G$1" pin="1"/>
-<junction x="137.16" y="165.1"/>
-<wire x1="137.16" y1="165.1" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="149.86" x2="66.04" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="187.96" x2="55.88" y2="187.96" width="0.1524" layer="91"/>
 <junction x="55.88" y="187.96"/>
+<pinref part="D5" gate="G$1" pin="A"/>
+<wire x1="127" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="D6" gate="G$1" pin="A"/>
+<wire x1="137.16" y1="165.1" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
+<junction x="137.16" y="165.1"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="2"/>
@@ -15409,34 +15409,6 @@ IO31: Serial Rx from host.</text>
 <junction x="40.64" y="-139.7"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U3" gate="1" pin="CBUS0"/>
-<pinref part="D6" gate="G$1" pin="C"/>
-<wire x1="109.22" y1="187.96" x2="137.16" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="D5" gate="G$1" pin="C"/>
-<pinref part="U3" gate="1" pin="CBUS1"/>
-<wire x1="127" y1="185.42" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="D5" gate="G$1" pin="A"/>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="127" y1="177.8" x2="127" y2="175.26" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="R12" gate="G$1" pin="2"/>
-<pinref part="D6" gate="G$1" pin="A"/>
-<wire x1="137.16" y1="175.26" x2="137.16" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="D7" gate="G$1" pin="C"/>
@@ -15463,6 +15435,34 @@ IO31: Serial Rx from host.</text>
 <pinref part="R9" gate="G$1" pin="1"/>
 <pinref part="D3" gate="G$1" pin="C"/>
 <wire x1="-48.26" y1="83.82" x2="-55.88" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="U3" gate="1" pin="CBUS1"/>
+<wire x1="127" y1="185.42" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="U3" gate="1" pin="CBUS0"/>
+<wire x1="137.16" y1="187.96" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="D5" gate="G$1" pin="C"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="127" y1="175.26" x2="127" y2="172.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="1"/>
+<pinref part="D6" gate="G$1" pin="C"/>
+<wire x1="137.16" y1="172.72" x2="137.16" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
