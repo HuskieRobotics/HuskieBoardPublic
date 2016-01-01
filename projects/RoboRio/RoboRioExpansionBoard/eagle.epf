@@ -32,6 +32,7 @@ UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibrari
 UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/oli.lbr"
 UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/parallax_propeller.lbr"
 UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/resetbutton.lbr"
+UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/resetbutton9001.lbr"
 UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/tps2115apwr.lbr"
 UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/CustomLibraries/usbminipropplug.lbr"
 UsedLibrary="drilegend.lbr"
@@ -380,8 +381,8 @@ UsedLibrary="C:/Users/intern/Documents/GitHub/roborioExpansion/lbr/zilog.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="-8 -8 1591 829"
-State=3
+Loc="800 0 1583 821"
+State=2
 Number=0
 
 [Desktop]
