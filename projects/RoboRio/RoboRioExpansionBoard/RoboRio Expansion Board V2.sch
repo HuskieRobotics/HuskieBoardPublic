@@ -13920,9 +13920,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="D3" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<wire x1="25.4" y1="-17.78" x2="17.78" y2="-17.78" width="0.1524" layer="91"/>
-<label x="17.78" y="-17.78" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P16"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P17"/>
+<wire x1="25.4" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
+<label x="17.78" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO17" class="0">
@@ -13932,9 +13932,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="D2" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<wire x1="25.4" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
-<label x="17.78" y="-15.24" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P17"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P16"/>
+<wire x1="25.4" y1="-17.78" x2="17.78" y2="-17.78" width="0.1524" layer="91"/>
+<label x="17.78" y="-17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO18" class="0">
@@ -13979,9 +13979,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="U8" gate="G$1" pin="DI"/>
 </segment>
 <segment>
-<wire x1="25.4" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
-<label x="17.78" y="-7.62" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P20"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P22"/>
+<wire x1="25.4" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
+<label x="17.78" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO21" class="0">
@@ -14015,9 +14015,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="U8" gate="G$1" pin="SCLK"/>
 </segment>
 <segment>
-<wire x1="25.4" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
-<label x="17.78" y="-2.54" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P22"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P20"/>
+<wire x1="25.4" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
+<label x="17.78" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO23" class="0">
@@ -14875,9 +14875,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="D0"/>
 </segment>
 <segment>
-<wire x1="-15.24" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
-<label x="-20.32" y="17.78" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P1"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P3"/>
+<wire x1="-33.02" y1="12.7" x2="-15.24" y2="12.7" width="0.1524" layer="91"/>
+<label x="-20.32" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO2" class="0">
@@ -14903,10 +14903,9 @@ IO31: Serial Rx from host.</text>
 <pinref part="J2" gate="G$1" pin="CMD"/>
 </segment>
 <segment>
-<wire x1="-15.24" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
-<label x="-20.32" y="12.7" size="1.778" layer="95"/>
-<label x="-20.32" y="12.7" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P3"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P1"/>
+<wire x1="-33.02" y1="17.78" x2="-15.24" y2="17.78" width="0.1524" layer="91"/>
+<label x="-20.32" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$30" class="0">
