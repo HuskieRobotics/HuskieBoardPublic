@@ -13703,6 +13703,25 @@ IO31: Serial Rx from host.</text>
 <pinref part="J17" gate="J$1" pin="V+"/>
 <pinref part="+3V30" gate="G$1" pin="+3V3"/>
 </segment>
+<segment>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="40.64" y1="-96.52" x2="40.64" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-99.06" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-101.6" x2="48.26" y2="-101.6" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="VA"/>
+<wire x1="40.64" y1="-99.06" x2="27.94" y2="-99.06" width="0.1524" layer="91"/>
+<pinref part="C25" gate="G$1" pin="1"/>
+<junction x="40.64" y="-99.06"/>
+</segment>
+<segment>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="40.64" y1="-132.08" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-134.62" x2="48.26" y2="-134.62" width="0.1524" layer="91"/>
+<pinref part="U8" gate="G$1" pin="VA"/>
+<pinref part="C27" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="-132.08" x2="30.48" y2="-132.08" width="0.1524" layer="91"/>
+<junction x="40.64" y="-132.08"/>
+</segment>
 </net>
 <net name="!RESET" class="0">
 <segment>
@@ -13921,7 +13940,6 @@ IO31: Serial Rx from host.</text>
 <net name="IO18" class="0">
 <segment>
 <wire x1="-71.12" y1="63.5" x2="-63.5" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="63.5" x2="-66.04" y2="63.5" width="0.1524" layer="91"/>
 <label x="-68.58" y="63.5" size="1.778" layer="95"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 </segment>
@@ -14804,6 +14822,26 @@ IO31: Serial Rx from host.</text>
 <junction x="-302.26" y="38.1"/>
 <junction x="-302.26" y="53.34"/>
 </segment>
+<segment>
+<pinref part="SUPPLY2" gate="G$1" pin="DGND"/>
+<wire x1="48.26" y1="-104.14" x2="40.64" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-104.14" x2="40.64" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="GND"/>
+<pinref part="C25" gate="G$1" pin="2"/>
+<wire x1="40.64" y1="-106.68" x2="40.64" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="-106.68" x2="40.64" y2="-106.68" width="0.1524" layer="91"/>
+<junction x="40.64" y="-106.68"/>
+</segment>
+<segment>
+<pinref part="SUPPLY52" gate="G$1" pin="DGND"/>
+<wire x1="40.64" y1="-152.4" x2="40.64" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-139.7" x2="40.64" y2="-137.16" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-137.16" x2="48.26" y2="-137.16" width="0.1524" layer="91"/>
+<pinref part="U8" gate="G$1" pin="GND"/>
+<pinref part="C27" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="-139.7" x2="40.64" y2="-139.7" width="0.1524" layer="91"/>
+<junction x="40.64" y="-139.7"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -15367,49 +15405,6 @@ IO31: Serial Rx from host.</text>
 <wire x1="58.42" y1="114.3" x2="66.04" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VA" class="0">
-<segment>
-<pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="40.64" y1="-96.52" x2="40.64" y2="-99.06" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-99.06" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-101.6" x2="48.26" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="U7" gate="G$1" pin="VA"/>
-<wire x1="40.64" y1="-99.06" x2="27.94" y2="-99.06" width="0.1524" layer="91"/>
-<pinref part="C25" gate="G$1" pin="1"/>
-<junction x="40.64" y="-99.06"/>
-</segment>
-<segment>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="40.64" y1="-132.08" x2="40.64" y2="-134.62" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-134.62" x2="48.26" y2="-134.62" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="VA"/>
-<pinref part="C27" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="-132.08" x2="30.48" y2="-132.08" width="0.1524" layer="91"/>
-<junction x="40.64" y="-132.08"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="SUPPLY2" gate="G$1" pin="DGND"/>
-<wire x1="48.26" y1="-104.14" x2="40.64" y2="-104.14" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-104.14" x2="40.64" y2="-106.68" width="0.1524" layer="91"/>
-<pinref part="U7" gate="G$1" pin="GND"/>
-<pinref part="C25" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="-106.68" x2="40.64" y2="-119.38" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-106.68" x2="40.64" y2="-106.68" width="0.1524" layer="91"/>
-<junction x="40.64" y="-106.68"/>
-</segment>
-<segment>
-<pinref part="SUPPLY52" gate="G$1" pin="DGND"/>
-<wire x1="40.64" y1="-152.4" x2="40.64" y2="-139.7" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-139.7" x2="40.64" y2="-137.16" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-137.16" x2="48.26" y2="-137.16" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="GND"/>
-<pinref part="C27" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="-139.7" x2="40.64" y2="-139.7" width="0.1524" layer="91"/>
-<junction x="40.64" y="-139.7"/>
-</segment>
-</net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="D7" gate="G$1" pin="C"/>
@@ -15470,14 +15465,12 @@ IO31: Serial Rx from host.</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="102,1,40.64,-119.38,DGND,GND,,,,"/>
 <approved hash="102,1,40.64,-132.08,+3V3,VA,,,,"/>
 <approved hash="102,1,40.64,-96.52,+3V3,VA,,,,"/>
-<approved hash="102,1,40.64,-152.4,DGND,GND,,,,"/>
+<approved hash="102,1,48.26,-104.14,GND,DGND,,,,"/>
+<approved hash="102,1,48.26,-137.16,GND,DGND,,,,"/>
 <approved hash="201,1,40.64,-96.52,+3V3,+3V3\, VA,,,,"/>
 <approved hash="201,1,40.64,-132.08,+3V3,+3V3\, VA,,,,"/>
-<approved hash="201,1,40.64,-152.4,DGND,GND\, DGND,,,,"/>
-<approved hash="201,1,40.64,-119.38,DGND,GND\, DGND,,,,"/>
 <approved hash="104,1,86.36,119.38,U2,VCC,+3V3,,,"/>
 <approved hash="104,1,86.36,96.52,U2,GND,DGND,,,"/>
 <approved hash="104,1,43.18,180.34,J3,VBUS,5VUSB,,,"/>
@@ -15569,8 +15562,6 @@ IO31: Serial Rx from host.</text>
 <approved hash="104,1,-81.28,180.34,U4,VIN,5VRR,,,"/>
 <approved hash="104,1,-81.28,175.26,U4,VSS,DGND,,,"/>
 <approved hash="104,1,45.72,243.84,U6,GND,DGND,,,"/>
-<approved hash="104,1,-218.44,-53.34,J24,GND,DGND,,,"/>
-<approved hash="104,1,-218.44,-50.8,J24,V+,DGND,,,"/>
 <approved hash="104,1,-15.24,33.02,U1,VDD,+3V3,,,"/>
 <approved hash="104,1,-15.24,30.48,U1,VDD,+3V3,,,"/>
 <approved hash="104,1,-15.24,27.94,U1,VDD,+3V3,,,"/>
