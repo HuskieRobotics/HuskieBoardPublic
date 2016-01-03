@@ -8947,15 +8947,15 @@ In this library the device names are the same as the pin names of the symbols, t
 <smd name="VBUS" x="2.9" y="1.6" dx="1.6" dy="0.5" layer="1"/>
 <smd name="ID" x="2.9" y="-0.8" dx="1.6" dy="0.5" layer="1"/>
 <smd name="GND" x="2.9" y="-1.6" dx="1.6" dy="0.5" layer="1"/>
-<wire x1="-1.9" y1="5" x2="-1.9" y2="3.85" width="0" layer="20"/>
-<wire x1="-1.9" y1="3.85" x2="-1.9" y2="-3.85" width="0" layer="20"/>
-<wire x1="-1.9" y1="-3.85" x2="-1.9" y2="-5" width="0" layer="20"/>
-<wire x1="-1.9" y1="3.85" x2="-3.3" y2="3.85" width="0" layer="20"/>
-<wire x1="-3.3" y1="3.85" x2="-3.3" y2="-3.85" width="0" layer="20"/>
-<wire x1="-3.3" y1="-3.85" x2="-1.9" y2="-3.85" width="0" layer="20"/>
-<wire x1="-1.9" y1="-3.85" x2="3.4" y2="-3.85" width="0" layer="20"/>
-<wire x1="3.4" y1="-3.85" x2="3.4" y2="3.85" width="0" layer="20"/>
-<wire x1="3.4" y1="3.85" x2="-1.9" y2="3.85" width="0" layer="20"/>
+<wire x1="-1.9" y1="5" x2="-1.9" y2="3.85" width="0" layer="21"/>
+<wire x1="-1.9" y1="3.85" x2="-1.9" y2="-3.85" width="0" layer="21"/>
+<wire x1="-1.9" y1="-3.85" x2="-1.9" y2="-5" width="0" layer="21"/>
+<wire x1="-1.9" y1="3.85" x2="-3.3" y2="3.85" width="0" layer="21"/>
+<wire x1="-3.3" y1="3.85" x2="-3.3" y2="-3.85" width="0" layer="21"/>
+<wire x1="-3.3" y1="-3.85" x2="-1.9" y2="-3.85" width="0" layer="21"/>
+<wire x1="-1.9" y1="-3.85" x2="3.4" y2="-3.85" width="0" layer="21"/>
+<wire x1="3.4" y1="-3.85" x2="3.4" y2="3.85" width="0" layer="21"/>
+<wire x1="3.4" y1="3.85" x2="-1.9" y2="3.85" width="0" layer="21"/>
 <text x="-2" y="-1.6" size="0.254" layer="48" rot="R90">Board Edge</text>
 <hole x="0" y="3.65" drill="1.4"/>
 <hole x="2.9" y="3.65" drill="1.4"/>
@@ -9877,13 +9877,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <smd name="P$7" x="2.9" y="0.35" dx="0.45" dy="1.5" layer="1" rot="R90"/>
 <smd name="P$6" x="2.9" y="-0.3" dx="0.45" dy="1.5" layer="1" rot="R90"/>
 <smd name="P$5" x="2.9" y="-0.95" dx="0.45" dy="1.5" layer="1" rot="R90"/>
-<wire x1="-2.2" y1="1.7" x2="2.2" y2="1.7" width="0.127" layer="20"/>
-<wire x1="2.2" y1="1.7" x2="2.2" y2="-1.7" width="0.127" layer="20"/>
-<wire x1="2.2" y1="-1.7" x2="-2.2" y2="-1.7" width="0.127" layer="20"/>
-<wire x1="-2.2" y1="1.7" x2="-2.2" y2="-1.7" width="0.127" layer="20"/>
+<wire x1="-2.2" y1="1.7" x2="2.2" y2="1.7" width="0.127" layer="21"/>
+<wire x1="2.2" y1="1.7" x2="2.2" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="2.2" y1="-1.7" x2="-2.2" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="1.7" x2="-2.2" y2="-1.7" width="0.127" layer="21"/>
 <text x="-3.216" y="1.962" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.216" y="-3.372" size="1.27" layer="27">&gt;VALUE</text>
-<circle x="-1.438" y="0.946" radius="0.254" width="0.127" layer="20"/>
+<circle x="-1.438" y="0.946" radius="0.254" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
