@@ -14002,24 +14002,6 @@ IO31: Serial Rx from host.</text>
 <pinref part="U1" gate="P8X32A-Q44" pin="P21"/>
 </segment>
 <segment>
-<wire x1="-33.02" y1="-73.66" x2="2.54" y2="-73.66" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="-73.66" x2="2.54" y2="-111.76" width="0.1524" layer="91"/>
-<pinref part="U7" gate="G$1" pin="SCLK"/>
-<wire x1="2.54" y1="-111.76" x2="2.54" y2="-144.78" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="-144.78" x2="48.26" y2="-144.78" width="0.1524" layer="91"/>
-<pinref part="U8" gate="G$1" pin="SCLK"/>
-<wire x1="2.54" y1="-111.76" x2="48.26" y2="-111.76" width="0.1524" layer="91"/>
-<junction x="2.54" y="-111.76"/>
-<label x="-30.48" y="-73.66" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IO22" class="0">
-<segment>
-<wire x1="25.4" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
-<label x="17.78" y="-2.54" size="1.778" layer="95"/>
-<pinref part="U1" gate="P8X32A-Q44" pin="P22"/>
-</segment>
-<segment>
 <wire x1="-33.02" y1="-78.74" x2="0" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="0" y1="-78.74" x2="0" y2="-114.3" width="0.1524" layer="91"/>
 <pinref part="U8" gate="G$1" pin="DO"/>
@@ -14029,6 +14011,24 @@ IO31: Serial Rx from host.</text>
 <pinref part="U7" gate="G$1" pin="DO"/>
 <wire x1="0" y1="-147.32" x2="48.26" y2="-147.32" width="0.1524" layer="91"/>
 <label x="-30.48" y="-78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="IO22" class="0">
+<segment>
+<wire x1="25.4" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
+<label x="17.78" y="-2.54" size="1.778" layer="95"/>
+<pinref part="U1" gate="P8X32A-Q44" pin="P22"/>
+</segment>
+<segment>
+<wire x1="-33.02" y1="-73.66" x2="2.54" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-73.66" x2="2.54" y2="-111.76" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="SCLK"/>
+<wire x1="2.54" y1="-111.76" x2="2.54" y2="-144.78" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-144.78" x2="48.26" y2="-144.78" width="0.1524" layer="91"/>
+<pinref part="U8" gate="G$1" pin="SCLK"/>
+<wire x1="2.54" y1="-111.76" x2="48.26" y2="-111.76" width="0.1524" layer="91"/>
+<junction x="2.54" y="-111.76"/>
+<label x="-30.48" y="-73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO23" class="0">

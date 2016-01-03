@@ -20,8 +20,8 @@ Propeller IO Pin,Connection
 18,LCD
 19,ADC 2 #CS
 20,ADC 1 #CS
-21,ADC SCLK
-22,ADC DO
+21,ADC DO
+22,ADC SCLK
 23,ADC DI
 24,LED 0 (Green)
 25,LED 1 (Green)
