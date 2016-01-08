@@ -12984,14 +12984,14 @@ SMT crystal</description>
 <part name="+3V21" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY50" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
-<part name="C8" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="C7" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
+<part name="C8" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
+<part name="C7" library="resistor" deviceset="C-EU" device="C0805K" value=".1uF"/>
 <part name="D5" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
 <part name="D6" library="led" deviceset="LED" device="CHIPLED_0603" value="BLUE"/>
 <part name="C17" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="SUPPLY6" library="supply2" deviceset="DGND" device=""/>
 <part name="R27" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
-<part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
+<part name="C18" library="resistor" deviceset="C-EU" device="C0603K" value=".01uF"/>
 <part name="Q1" library="NPN transistor" deviceset="NPN-SOT416" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="DGND" device=""/>
 <part name="R29" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -13164,6 +13164,10 @@ SMT crystal</description>
 <part name="+3V30" library="supply1" deviceset="+3V3" device=""/>
 <part name="S1" library="resetbutton9001" deviceset="RESETBUTTON9001" device="DEFAULT"/>
 <part name="+3V31" library="supply1" deviceset="+3V3" device=""/>
+<part name="C28" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
+<part name="C29" library="resistor" deviceset="C-EU" device="C0603K" value="4.7uF"/>
+<part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
+<part name="C30" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -13190,6 +13194,7 @@ IO31: Serial Rx from host.</text>
 <text x="-83.82" y="73.66" size="2.54" layer="97">LED1</text>
 <text x="-83.82" y="83.82" size="2.54" layer="97">LED2</text>
 <text x="-83.82" y="93.98" size="2.54" layer="97">LED3</text>
+<text x="-20.32" y="58.42" size="1.778" layer="97">One capacitor per propeller power pin</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="78.74" y="106.68"/>
@@ -13243,8 +13248,8 @@ IO31: Serial Rx from host.</text>
 <instance part="C7" gate="G$1" x="-7.62" y="50.8"/>
 <instance part="D5" gate="G$1" x="127" y="167.64" rot="R180"/>
 <instance part="D6" gate="G$1" x="137.16" y="167.64" rot="R180"/>
-<instance part="C17" gate="G$1" x="60.96" y="200.66" rot="R180"/>
-<instance part="SUPPLY6" gate="G$1" x="60.96" y="193.04"/>
+<instance part="C17" gate="G$1" x="71.12" y="200.66" rot="R180"/>
+<instance part="SUPPLY6" gate="G$1" x="71.12" y="193.04"/>
 <instance part="R27" gate="G$1" x="149.86" y="185.42" rot="R90"/>
 <instance part="C18" gate="G$1" x="139.7" y="198.12"/>
 <instance part="Q1" gate="G$1" x="157.48" y="193.04"/>
@@ -13446,6 +13451,10 @@ IO31: Serial Rx from host.</text>
 <instance part="+3V30" gate="G$1" x="147.32" y="-137.16"/>
 <instance part="S1" gate="G$1" x="137.16" y="86.36" rot="R90"/>
 <instance part="+3V31" gate="G$1" x="-238.76" y="193.04"/>
+<instance part="C28" gate="G$1" x="53.34" y="205.74" rot="R180"/>
+<instance part="C29" gate="G$1" x="63.5" y="205.74" rot="R180"/>
+<instance part="SUPPLY11" gate="G$1" x="53.34" y="198.12"/>
+<instance part="C30" gate="G$1" x="22.86" y="50.8"/>
 </instances>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
@@ -13664,8 +13673,12 @@ IO31: Serial Rx from host.</text>
 <junction x="-17.78" y="33.02"/>
 <junction x="12.7" y="55.88"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
-<wire x1="12.7" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="55.88" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="55.88" x2="27.94" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="C30" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="53.34" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
+<junction x="22.86" y="55.88"/>
 </segment>
 <segment>
 <wire x1="238.76" y1="-101.6" x2="251.46" y2="-101.6" width="0.1524" layer="91"/>
@@ -14354,7 +14367,8 @@ IO31: Serial Rx from host.</text>
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="2.54" y1="43.18" x2="2.54" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="43.18" x2="12.7" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="43.18" x2="2.54" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="43.18" x2="12.7" y2="43.18" width="0.1524" layer="91"/>
@@ -14376,6 +14390,9 @@ IO31: Serial Rx from host.</text>
 <junction x="20.32" y="30.48"/>
 <junction x="20.32" y="33.02"/>
 <junction x="20.32" y="43.18"/>
+<pinref part="C30" gate="G$1" pin="2"/>
+<wire x1="22.86" y1="45.72" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
+<junction x="22.86" y="43.18"/>
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
@@ -14470,7 +14487,7 @@ IO31: Serial Rx from host.</text>
 <segment>
 <pinref part="C17" gate="G$1" pin="1"/>
 <pinref part="SUPPLY6" gate="G$1" pin="DGND"/>
-<wire x1="60.96" y1="195.58" x2="60.96" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="195.58" x2="71.12" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY15" gate="G$1" pin="DGND"/>
@@ -14846,6 +14863,14 @@ IO31: Serial Rx from host.</text>
 <wire x1="30.48" y1="-139.7" x2="40.64" y2="-139.7" width="0.1524" layer="91"/>
 <junction x="40.64" y="-139.7"/>
 </segment>
+<segment>
+<pinref part="C28" gate="G$1" pin="1"/>
+<pinref part="SUPPLY11" gate="G$1" pin="DGND"/>
+<wire x1="53.34" y1="200.66" x2="53.34" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="C29" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="203.2" x2="63.5" y2="203.2" width="0.1524" layer="91"/>
+<junction x="53.34" y="203.2"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -15004,7 +15029,9 @@ IO31: Serial Rx from host.</text>
 <wire x1="45.72" y1="180.34" x2="45.72" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="187.96" x2="45.72" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="210.82" x2="81.28" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="210.82" x2="53.34" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="210.82" x2="63.5" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="210.82" x2="81.28" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="187.96" x2="45.72" y2="187.96" width="0.1524" layer="91"/>
 <junction x="45.72" y="187.96"/>
 <pinref part="U3" gate="1" pin="VCC"/>
@@ -15035,6 +15062,10 @@ IO31: Serial Rx from host.</text>
 <pinref part="D6" gate="G$1" pin="A"/>
 <wire x1="137.16" y1="165.1" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <junction x="137.16" y="165.1"/>
+<pinref part="C28" gate="G$1" pin="2"/>
+<junction x="53.34" y="210.82"/>
+<pinref part="C29" gate="G$1" pin="2"/>
+<junction x="63.5" y="210.82"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="2"/>
@@ -15163,9 +15194,9 @@ IO31: Serial Rx from host.</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
-<wire x1="60.96" y1="205.74" x2="60.96" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="205.74" x2="71.12" y2="208.28" width="0.1524" layer="91"/>
 <pinref part="U3" gate="1" pin="VCCIO"/>
-<wire x1="60.96" y1="208.28" x2="76.2" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="208.28" x2="76.2" y2="208.28" width="0.1524" layer="91"/>
 <pinref part="U3" gate="1" pin="3V3OUT"/>
 <wire x1="76.2" y1="208.28" x2="81.28" y2="208.28" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="182.88" x2="76.2" y2="182.88" width="0.1524" layer="91"/>
