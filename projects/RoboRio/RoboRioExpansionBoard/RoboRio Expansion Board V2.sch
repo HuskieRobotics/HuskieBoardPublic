@@ -12584,7 +12584,7 @@ This USB2.0 Full Speed  IC offers a compact bridge to full handshake UART interf
 <part name="J2" library="MicroSdSocket" deviceset="MICROSD-HINGED" device=""/>
 <part name="TP_5V-RR" library="testpad" deviceset="TP" device="PAD1-17"/>
 <part name="TP_5V-USB" library="testpad" deviceset="TP" device="PAD1-17"/>
-<part name="SW1" library="crystalsmt" deviceset="SW_DIP-4" device=""/>
+<part name="SW1" library="crystalsmt" deviceset="SW_DIP-4" device="" value="450-1781-ND"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
 <part name="R17" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -12772,7 +12772,7 @@ IO31: Serial Rx from host.</text>
 <instance part="J33" gate="J$1" x="-292.1" y="-50.8" rot="R180"/>
 <instance part="J34" gate="J$1" x="-292.1" y="-66.04" rot="R180"/>
 <instance part="SUPPLY4" gate="G$1" x="149.86" y="175.26"/>
-<instance part="SUPPLY8" gate="G$1" x="43.18" y="165.1"/>
+<instance part="SUPPLY8" gate="G$1" x="43.18" y="162.56"/>
 <instance part="SUPPLY19" gate="G$1" x="160.02" y="182.88"/>
 <instance part="SUPPLY21" gate="G$1" x="246.38" y="-104.14" rot="R270"/>
 <instance part="SUPPLY22" gate="G$1" x="243.84" y="-127" rot="R270"/>
@@ -12937,8 +12937,8 @@ IO31: Serial Rx from host.</text>
 <attribute name="VALUE" x="-142.24" y="170.18" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="C32" gate="G$1" x="25.4" y="182.88" rot="R180"/>
-<instance part="C33" gate="G$1" x="35.56" y="172.72" rot="R180"/>
-<instance part="C34" gate="G$1" x="20.32" y="170.18" rot="R180"/>
+<instance part="C33" gate="G$1" x="35.56" y="167.64" rot="R180"/>
+<instance part="C34" gate="G$1" x="20.32" y="167.64" rot="R180"/>
 <instance part="R37" gate="G$1" x="73.66" y="182.88" rot="R90"/>
 <instance part="R38" gate="G$1" x="68.58" y="195.58" rot="R90"/>
 <instance part="C7" gate="G$1" x="-7.62" y="50.8"/>
@@ -14007,25 +14007,24 @@ IO31: Serial Rx from host.</text>
 </segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="GND"/>
-<wire x1="12.7" y1="170.18" x2="17.78" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="170.18" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="167.64" x2="20.32" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="170.18" x2="15.24" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="170.18" x2="15.24" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="165.1" x2="20.32" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="G$1" pin="DGND"/>
 <pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="167.64" x2="43.18" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="180.34" x2="43.18" y2="167.64" width="0.1524" layer="91"/>
-<junction x="43.18" y="167.64"/>
+<wire x1="25.4" y1="165.1" x2="43.18" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="180.34" x2="43.18" y2="165.1" width="0.1524" layer="91"/>
+<junction x="43.18" y="165.1"/>
 <pinref part="C32" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="180.34" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
-<junction x="25.4" y="167.64"/>
+<wire x1="25.4" y1="180.34" x2="25.4" y2="165.1" width="0.1524" layer="91"/>
+<junction x="25.4" y="165.1"/>
 <pinref part="C34" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="167.64" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="165.1" x2="25.4" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C33" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="167.64" x2="35.56" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="167.64" x2="43.18" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="167.64" x2="35.56" y2="170.18" width="0.1524" layer="91"/>
-<junction x="35.56" y="167.64"/>
-<junction x="20.32" y="167.64"/>
+<wire x1="25.4" y1="165.1" x2="35.56" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="165.1" x2="43.18" y2="165.1" width="0.1524" layer="91"/>
+<junction x="35.56" y="165.1"/>
+<junction x="20.32" y="165.1"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="G$1" pin="E"/>
@@ -14495,21 +14494,23 @@ IO31: Serial Rx from host.</text>
 <segment>
 <pinref part="J3" gate="G$1" pin="D-"/>
 <wire x1="12.7" y1="175.26" x2="20.32" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="172.72" x2="20.32" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="175.26" x2="68.58" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="C34" gate="G$1" pin="2"/>
-<junction x="20.32" y="175.26"/>
 <pinref part="R38" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="190.5" x2="68.58" y2="175.26" width="0.1524" layer="91"/>
+<junction x="20.32" y="175.26"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="J3" gate="G$1" pin="D+"/>
 <wire x1="12.7" y1="177.8" x2="35.56" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="172.72" x2="35.56" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="177.8" x2="73.66" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="C33" gate="G$1" pin="2"/>
-<junction x="35.56" y="177.8"/>
 <pinref part="R37" gate="G$1" pin="1"/>
+<junction x="35.56" y="177.8"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -15034,8 +15035,8 @@ IO31: Serial Rx from host.</text>
 <approved hash="102,1,48.26,-137.16,GND,DGND,,,,"/>
 <approved hash="104,1,86.36,119.38,U2,VCC,+3V3,,,"/>
 <approved hash="104,1,86.36,96.52,U2,GND,DGND,,,"/>
-<approved hash="104,1,35.56,180.34,J3,VBUS,5VUSB,,,"/>
-<approved hash="104,1,35.56,170.18,J3,GND,DGND,,,"/>
+<approved hash="104,1,12.7,180.34,J3,VBUS,N$28,,,"/>
+<approved hash="104,1,12.7,170.18,J3,GND,DGND,,,"/>
 <approved hash="104,1,-297.18,68.58,J25,GND,DGND,,,"/>
 <approved hash="104,1,-297.18,71.12,J25,V+,5VRR,,,"/>
 <approved hash="104,1,-297.18,53.34,J26,GND,DGND,,,"/>
