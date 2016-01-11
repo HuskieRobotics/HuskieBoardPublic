@@ -69,7 +69,9 @@ var
 
 
 obj
-
+        uart    : "RR uart connection"
+        sd      : "SDcardLogger"
+        adc     : "ADC driver"
 
 pub main
         longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty second byte
