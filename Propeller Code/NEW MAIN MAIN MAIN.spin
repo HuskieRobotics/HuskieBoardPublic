@@ -72,6 +72,7 @@ obj
         uart    : "RR uart connection"
         sd      : "SDcardLogger"
         adc     : "ADC driver"
+        adc2    : "jm_adc124s021"
 
 pub main
         longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty second byte
@@ -82,6 +83,9 @@ pri init
         {ADC DRIVER}
         adc.start2pin(adc_di, adc_do, adc_clk, adc_cs, $00FF)   'Start ADC Driver
         adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
+
+        {NEW ADC DRIVER}
+        adc2.start(adc_cs,adc_clk,adc_di,adc_do)
         
         {UART CONNECTION DRIVER}
         uart.init(robo_rx, robo_tx, 460_800, )
