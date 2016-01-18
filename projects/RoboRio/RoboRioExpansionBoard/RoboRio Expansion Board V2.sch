@@ -8976,6 +8976,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <hole x="2.9" y="3.65" drill="1.4"/>
 <hole x="0" y="-3.65" drill="1.4"/>
 <hole x="2.9" y="-3.65" drill="1.4"/>
+<text x="-1.27" y="5.08" size="1.27" layer="25">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
