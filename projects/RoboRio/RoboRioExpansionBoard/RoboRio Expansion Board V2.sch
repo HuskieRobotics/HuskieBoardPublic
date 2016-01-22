@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8972,11 +8972,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="3.4" y1="-3.85" x2="3.4" y2="3.85" width="0" layer="21"/>
 <wire x1="3.4" y1="3.85" x2="-1.9" y2="3.85" width="0" layer="21"/>
 <text x="-2" y="-1.6" size="0.254" layer="48" rot="R90">Board Edge</text>
-<hole x="0" y="3.65" drill="1.4"/>
-<hole x="2.9" y="3.65" drill="1.4"/>
-<hole x="0" y="-3.65" drill="1.4"/>
-<hole x="2.9" y="-3.65" drill="1.4"/>
 <text x="-1.27" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<pad name="P$1" x="2.9" y="3.65" drill="1.3" shape="square"/>
+<pad name="P$2" x="0" y="3.65" drill="1.3" shape="square"/>
+<pad name="P$3" x="2.9" y="-3.65" drill="1.3" shape="square"/>
+<pad name="P$4" x="0" y="-3.65" drill="1.3" shape="square"/>
 </package>
 </packages>
 <symbols>
@@ -9014,6 +9014,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pin name="VBUS" x="10.16" y="5.08" visible="pin" length="short" direction="pwr" rot="R180"/>
 <pin name="GND" x="10.16" y="-5.08" visible="pin" length="short" direction="pwr" rot="R180"/>
 <pin name="ID" x="10.16" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="SHIELD" x="-15.24" y="-5.08" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -9033,6 +9034,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="ID" pad="ID"/>
+<connect gate="G$1" pin="SHIELD" pad="GND1 GND2 GND3 GND4"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
@@ -9045,6 +9047,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="ID" pad="ID"/>
+<connect gate="G$1" pin="SHIELD" pad="GND1 GND2 GND3 GND4"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
@@ -9057,6 +9060,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="ID" pad="ID"/>
+<connect gate="G$1" pin="SHIELD" pad="GND1 GND4"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
@@ -9069,6 +9073,7 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="ID" pad="ID"/>
+<connect gate="G$1" pin="SHIELD" pad="P$1 P$2 P$3 P$4"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
@@ -13357,6 +13362,7 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 <part name="R6" library="resistor" deviceset="R-US_" device="R0603" value="27"/>
 <part name="C13" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="FERRITE BEAD!!!"/>
+<part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13579,7 +13585,7 @@ IO31: Serial Rx from host.</text>
 <instance part="+3V7" gate="G$1" x="27.94" y="63.5"/>
 <instance part="J2" gate="G$1" x="-96.52" y="116.84"/>
 <instance part="TP_5V-RR" gate="G$1" x="-218.44" y="-33.02"/>
-<instance part="TP_5V-USB" gate="G$1" x="35.56" y="223.52"/>
+<instance part="TP_5V-USB" gate="G$1" x="43.18" y="223.52"/>
 <instance part="SW1" gate="A" x="160.02" y="-25.4" rot="R270"/>
 <instance part="R1" gate="G$1" x="154.94" y="43.18" rot="R90"/>
 <instance part="+3V13" gate="G$1" x="154.94" y="53.34"/>
@@ -13650,6 +13656,7 @@ IO31: Serial Rx from host.</text>
 <instance part="R6" gate="G$1" x="68.58" y="195.58" rot="R90"/>
 <instance part="C13" gate="G$1" x="-7.62" y="50.8"/>
 <instance part="L1" gate="G$1" x="35.56" y="187.96" rot="R90"/>
+<instance part="SUPPLY11" gate="G$1" x="-15.24" y="167.64"/>
 </instances>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
@@ -15066,6 +15073,11 @@ IO31: Serial Rx from host.</text>
 <wire x1="30.48" y1="-139.7" x2="40.64" y2="-139.7" width="0.1524" layer="91"/>
 <junction x="40.64" y="-139.7"/>
 </segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="SHIELD"/>
+<pinref part="SUPPLY11" gate="G$1" pin="DGND"/>
+<wire x1="-15.24" y1="170.18" x2="-12.7" y2="170.18" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -15228,14 +15240,14 @@ IO31: Serial Rx from host.</text>
 </net>
 <net name="5VUSB" class="0">
 <segment>
-<wire x1="43.18" y1="187.96" x2="35.56" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="187.96" x2="43.18" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="210.82" x2="81.28" y2="210.82" width="0.1524" layer="91"/>
-<junction x="35.56" y="210.82"/>
+<wire x1="43.18" y1="210.82" x2="81.28" y2="210.82" width="0.1524" layer="91"/>
+<junction x="43.18" y="210.82"/>
 <pinref part="R22" gate="G$1" pin="2"/>
-<junction x="35.56" y="210.82"/>
+<junction x="43.18" y="210.82"/>
 <label x="-93.98" y="261.62" size="1.778" layer="95"/>
-<wire x1="35.56" y1="210.82" x2="17.78" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="210.82" x2="17.78" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="210.82" x2="17.78" y2="208.28" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="IN1"/>
 <wire x1="-96.52" y1="261.62" x2="-63.5" y2="261.62" width="0.1524" layer="91"/>
@@ -15246,8 +15258,8 @@ IO31: Serial Rx from host.</text>
 <wire x1="-63.5" y1="243.84" x2="-63.5" y2="261.62" width="0.1524" layer="91"/>
 <junction x="-63.5" y="261.62"/>
 <pinref part="TP_5V-USB" gate="G$1" pin="TP"/>
-<wire x1="35.56" y1="210.82" x2="35.56" y2="220.98" width="0.1524" layer="91"/>
-<junction x="35.56" y="210.82"/>
+<wire x1="43.18" y1="210.82" x2="43.18" y2="220.98" width="0.1524" layer="91"/>
+<junction x="43.18" y="210.82"/>
 <wire x1="137.16" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="149.86" x2="53.34" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="187.96" x2="43.18" y2="187.96" width="0.1524" layer="91"/>
