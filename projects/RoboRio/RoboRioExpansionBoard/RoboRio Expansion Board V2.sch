@@ -13117,6 +13117,37 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="fiducial">
+<packages>
+<package name="FIDUCIAL_40MIL_DIAMOND">
+<rectangle x1="-0.508" y1="-0.508" x2="0.508" y2="0.508" layer="1" rot="R45"/>
+<rectangle x1="-1.524" y1="-1.524" x2="1.524" y2="1.524" layer="29" rot="R45"/>
+<rectangle x1="-1.524" y1="-1.524" x2="1.524" y2="1.524" layer="41" rot="R45"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FIDUCIAL_DIAMOND">
+<wire x1="0" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FIDUCIAL_DIAMOND">
+<gates>
+<gate name="G$1" symbol="FIDUCIAL_DIAMOND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FIDUCIAL_40MIL_DIAMOND">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -13363,6 +13394,8 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 <part name="C13" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="FERRITE BEAD!!!"/>
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
+<part name="U$1" library="fiducial" deviceset="FIDUCIAL_DIAMOND" device=""/>
+<part name="U$2" library="fiducial" deviceset="FIDUCIAL_DIAMOND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13657,6 +13690,8 @@ IO31: Serial Rx from host.</text>
 <instance part="C13" gate="G$1" x="-7.62" y="50.8"/>
 <instance part="L1" gate="G$1" x="35.56" y="187.96" rot="R90"/>
 <instance part="SUPPLY11" gate="G$1" x="-15.24" y="167.64"/>
+<instance part="U$1" gate="G$1" x="-292.1" y="195.58"/>
+<instance part="U$2" gate="G$1" x="-271.78" y="195.58"/>
 </instances>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
