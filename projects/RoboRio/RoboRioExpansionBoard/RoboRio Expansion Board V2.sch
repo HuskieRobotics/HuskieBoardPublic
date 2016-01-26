@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6890,10 +6890,10 @@ Source: AVX .. aphvc.pdf</description>
 <pad name="30" x="43.561" y="73.9648" drill="1.016" shape="octagon"/>
 <pad name="32" x="46.101" y="73.9648" drill="1.016" shape="octagon"/>
 <pad name="34" x="48.641" y="73.9648" drill="1.016" shape="octagon"/>
-<text x="7.493" y="68.5038" size="1.27" layer="21" ratio="10">1</text>
+<text x="6.223" y="71.4248" size="1.27" layer="21" font="vector" ratio="12" align="center-right">1</text>
 <text x="6.731" y="75.6158" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="34.671" y="68.5038" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="47.625" y="75.6158" size="1.27" layer="21" ratio="10">34</text>
+<text x="50.165" y="73.9648" size="1.27" layer="21" font="vector" ratio="12" align="center-left">34</text>
 <rectangle x1="10.287" y1="71.1708" x2="10.795" y2="71.6788" layer="51"/>
 <rectangle x1="7.747" y1="71.1708" x2="8.255" y2="71.6788" layer="51"/>
 <rectangle x1="12.827" y1="71.1708" x2="13.335" y2="71.6788" layer="51"/>
@@ -6986,6 +6986,8 @@ Source: AVX .. aphvc.pdf</description>
 <vertex x="5.08" y="9.0424"/>
 <vertex x="0" y="9.0424"/>
 </polygon>
+<text x="6.223" y="73.9648" size="1.27" layer="21" font="vector" ratio="12" align="center-right">2</text>
+<text x="50.165" y="71.4248" size="1.27" layer="21" font="vector" ratio="12" align="center-left">33</text>
 </package>
 </packages>
 <symbols>
@@ -11848,11 +11850,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pad name="6" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
 <pad name="5" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
 <text x="-4.064" y="-4.191" size="1.524" layer="51" ratio="10">1</text>
-<text x="-5.08" y="2.54" size="1.524" layer="51" ratio="10">ON</text>
 <text x="-1.778" y="-4.191" size="1.524" layer="51" ratio="10">2</text>
 <text x="0.762" y="-4.191" size="1.524" layer="51" ratio="10">3</text>
 <text x="3.302" y="-4.191" size="1.524" layer="51" ratio="10">4</text>
-<text x="1.27" y="2.54" size="1.524" layer="51" ratio="10">EDG</text>
 <text x="-5.842" y="-6.604" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-5.842" y="5.334" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <rectangle x1="3.302" y1="-0.381" x2="4.318" y2="0" layer="21"/>
