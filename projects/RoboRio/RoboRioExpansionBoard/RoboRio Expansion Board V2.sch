@@ -15860,17 +15860,6 @@ IO31: Serial Rx from host.</text>
 <approved hash="104,1,193.04,0,J10,V+,+3V3,,,"/>
 <approved hash="104,1,58.42,-63.5,J16,GND,DGND,,,"/>
 <approved hash="104,1,58.42,-60.96,J16,V+,+5V,,,"/>
-<approved hash="104,1,-81.28,180.34,U4,VIN,5VRR,,,"/>
-<approved hash="104,1,-81.28,175.26,U4,VSS,DGND,,,"/>
-<approved hash="104,1,45.72,243.84,U6,GND,DGND,,,"/>
-<approved hash="104,1,-15.24,33.02,U1,VDD,+3V3,,,"/>
-<approved hash="104,1,-15.24,30.48,U1,VDD,+3V3,,,"/>
-<approved hash="104,1,-15.24,27.94,U1,VDD,+3V3,,,"/>
-<approved hash="104,1,-15.24,25.4,U1,VDD,+3V3,,,"/>
-<approved hash="104,1,17.78,33.02,U1,VSS,DGND,,,"/>
-<approved hash="104,1,17.78,30.48,U1,VSS,DGND,,,"/>
-<approved hash="104,1,17.78,27.94,U1,VSS,DGND,,,"/>
-<approved hash="104,1,17.78,25.4,U1,VSS,DGND,,,"/>
 <approved hash="208,1,-116.84,132.08,+3V3,sup,,,,"/>
 <approved hash="208,1,241.3,-7.62,+3V3,sup,,,,"/>
 <approved hash="208,1,91.44,-7.62,+3V3,sup,,,,"/>
