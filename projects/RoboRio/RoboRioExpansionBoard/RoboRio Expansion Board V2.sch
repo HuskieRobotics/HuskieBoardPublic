@@ -13425,8 +13425,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="SUPPLY1" library="supply2" deviceset="DGND" device=""/>
 <part name="R24" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="U7" library="m-pad-2.1" deviceset="TC54" device="-CB" value="TC54VN43"/>
-<part name="U4" library="burr-brown" deviceset="REG1117" device="">
-<attribute name="MPN" value="AP1117"/>
+<part name="U4" library="burr-brown" deviceset="REG1117" device="" value="AP1117E33G-13">
+<attribute name="MPN" value="AP1117E33G-13"/>
 </part>
 <part name="SUPPLY29" library="supply2" deviceset="DGND" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
@@ -13447,7 +13447,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="J2" library="MicroSdSocket" deviceset="MICROSD-HINGED" device=""/>
 <part name="TP_5V-RR" library="testpad" deviceset="TP" device="PAD1-17"/>
 <part name="TP_5V-USB" library="testpad" deviceset="TP" device="PAD1-17"/>
-<part name="SW1" library="crystalsmt" deviceset="SW_DIP-4" device="" value="450-1781-ND"/>
+<part name="SW2" library="crystalsmt" deviceset="SW_DIP-4" device="" value="450-1781-ND"/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -13486,8 +13486,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY25" library="supply2" deviceset="DGND" device=""/>
 <part name="U6" library="parallax_propeller" deviceset="P8X32A-Q44_P" device=""/>
-<part name="U9" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
-<part name="U8" library="adc124s021cimm" deviceset="ADC124S01" device=""/>
+<part name="U9" library="adc124s021cimm" deviceset="ADC124S01" device="" value="ADC124S021"/>
+<part name="U8" library="adc124s021cimm" deviceset="ADC124S01" device="" value="ADC124S021"/>
 <part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="D4" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
 <part name="C31" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
@@ -13500,10 +13500,10 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="+3V28" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V29" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V30" library="supply1" deviceset="+3V3" device=""/>
-<part name="S1" library="resetbutton9001" deviceset="RESETBUTTON9001" device="DEFAULT"/>
+<part name="SW1" library="resetbutton9001" deviceset="RESETBUTTON9001" device="DEFAULT"/>
 <part name="+3V31" library="supply1" deviceset="+3V3" device=""/>
 <part name="C20" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="U1" library="SparkFun-DigitalIC" deviceset="FT231X" device="S" value="FTS31XS-U"/>
+<part name="U1" library="SparkFun-DigitalIC" deviceset="FT231X" device="S" value="FT231XS-R"/>
 <part name="C14" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="C5" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
@@ -13512,11 +13512,11 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="27"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0603" value="27"/>
 <part name="C13" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
-<part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="FERRITE BEAD!!!"/>
+<part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="MPZ1608S221ATA00"/>
 <part name="SUPPLY11" library="supply2" deviceset="DGND" device=""/>
 <part name="U$1" library="fiducial" deviceset="FIDUCIAL_DIAMOND" device=""/>
 <part name="U$2" library="fiducial" deviceset="FIDUCIAL_DIAMOND" device=""/>
-<part name="U2" library="74xx-little-us" deviceset="74*1G126" device="DCK" technology="LVC"/>
+<part name="U2" library="74xx-little-us" deviceset="74*1G126" device="DCK" technology="LVC" value="74LVC1G126SE-7"/>
 <part name="+3V32" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY40" library="supply2" deviceset="DGND" device=""/>
 </parts>
@@ -13570,7 +13570,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="SUPPLY18" gate="G$1" x="-208.28" y="-2.54"/>
 <instance part="SUPPLY16" gate="G$1" x="-38.1" y="60.96"/>
 <instance part="SUPPLY33" gate="G$1" x="86.36" y="93.98"/>
-<instance part="D7" gate="G$1" x="-220.98" y="190.5" rot="R90"/>
+<instance part="D7" gate="G$1" x="-218.44" y="190.5" rot="R90"/>
 <instance part="SUPPLY39" gate="G$1" x="-210.82" y="187.96"/>
 <instance part="+3V3" gate="G$1" x="88.9" y="27.94" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="99.06" y="22.86"/>
@@ -13722,8 +13722,9 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="R24" gate="G$1" x="-58.42" y="154.94" rot="R180"/>
 <instance part="U7" gate="G$1" x="-93.98" y="177.8" rot="MR0"/>
 <instance part="U4" gate="G$1" x="45.72" y="256.54" smashed="yes">
-<attribute name="NAME" x="38.1" y="262.255" size="1.778" layer="95" ratio="10"/>
-<attribute name="VALUE" x="48.26" y="246.38" size="1.778" layer="96" ratio="10"/>
+<attribute name="NAME" x="38.1" y="267.335" size="1.778" layer="95" ratio="10"/>
+<attribute name="VALUE" x="38.1" y="264.16" size="1.778" layer="96" ratio="10"/>
+<attribute name="MPN" x="45.72" y="256.54" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="SUPPLY29" gate="G$1" x="45.72" y="238.76"/>
 <instance part="+3V4" gate="G$1" x="86.36" y="269.24"/>
@@ -13744,7 +13745,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="J2" gate="G$1" x="-96.52" y="116.84"/>
 <instance part="TP_5V-RR" gate="G$1" x="-218.44" y="-33.02"/>
 <instance part="TP_5V-USB" gate="G$1" x="43.18" y="223.52"/>
-<instance part="SW1" gate="A" x="160.02" y="-25.4" rot="R270"/>
+<instance part="SW2" gate="A" x="160.02" y="-25.4" rot="R270"/>
 <instance part="R1" gate="G$1" x="154.94" y="43.18" rot="R90"/>
 <instance part="+3V13" gate="G$1" x="154.94" y="53.34"/>
 <instance part="R2" gate="G$1" x="160.02" y="25.4" rot="R90"/>
@@ -13799,7 +13800,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="+3V28" gate="G$1" x="147.32" y="-167.64"/>
 <instance part="+3V29" gate="G$1" x="147.32" y="-152.4"/>
 <instance part="+3V30" gate="G$1" x="147.32" y="-137.16"/>
-<instance part="S1" gate="G$1" x="137.16" y="86.36" rot="R90"/>
+<instance part="SW1" gate="G$1" x="137.16" y="86.36" rot="R90"/>
 <instance part="+3V31" gate="G$1" x="-238.76" y="193.04"/>
 <instance part="C20" gate="G$1" x="22.86" y="50.8"/>
 <instance part="U1" gate="U$1" x="93.98" y="195.58"/>
@@ -13813,11 +13814,17 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="R7" gate="G$1" x="73.66" y="182.88" rot="R90"/>
 <instance part="R6" gate="G$1" x="68.58" y="195.58" rot="R90"/>
 <instance part="C13" gate="G$1" x="-7.62" y="50.8"/>
-<instance part="L1" gate="G$1" x="35.56" y="187.96" rot="R90"/>
+<instance part="L1" gate="G$1" x="35.56" y="187.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="30.48" y="190.5" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="43.18" y="193.04" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="SUPPLY11" gate="G$1" x="-15.24" y="167.64"/>
 <instance part="U$1" gate="G$1" x="-292.1" y="195.58"/>
 <instance part="U$2" gate="G$1" x="-271.78" y="195.58"/>
-<instance part="U2" gate="A" x="129.54" y="220.98"/>
+<instance part="U2" gate="A" x="129.54" y="220.98" smashed="yes">
+<attribute name="NAME" x="132.08" y="224.155" size="1.778" layer="95"/>
+<attribute name="VALUE" x="132.08" y="215.9" size="1.778" layer="96"/>
+</instance>
 <instance part="+3V32" gate="G$1" x="129.54" y="241.3"/>
 <instance part="U2" gate="P" x="114.3" y="233.68" rot="R270"/>
 <instance part="SUPPLY40" gate="G$1" x="104.14" y="231.14"/>
@@ -14131,7 +14138,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <segment>
 <wire x1="96.52" y1="88.9" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
 <label x="106.68" y="83.82" size="1.778" layer="95" rot="R180"/>
-<pinref part="S1" gate="G$1" pin="1"/>
+<pinref part="SW1" gate="G$1" pin="1"/>
 <wire x1="96.52" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -14167,7 +14174,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <wire x1="165.1" y1="-17.78" x2="193.04" y2="-17.78" width="0.1524" layer="91"/>
 <label x="177.8" y="-17.78" size="1.778" layer="95"/>
 <pinref part="J11" gate="J$1" pin="DATA"/>
-<pinref part="SW1" gate="A" pin="5"/>
+<pinref part="SW2" gate="A" pin="5"/>
 <wire x1="165.1" y1="-17.78" x2="162.56" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <junction x="165.1" y="-17.78"/>
@@ -14188,7 +14195,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <wire x1="162.56" y1="2.54" x2="193.04" y2="2.54" width="0.1524" layer="91"/>
 <label x="177.8" y="2.54" size="1.778" layer="95"/>
 <pinref part="J10" gate="J$1" pin="DATA"/>
-<pinref part="SW1" gate="A" pin="6"/>
+<pinref part="SW2" gate="A" pin="6"/>
 <wire x1="162.56" y1="2.54" x2="160.02" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="2.54" x2="160.02" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -14216,7 +14223,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="J9" gate="J$1" pin="DATA"/>
 <wire x1="193.04" y1="20.32" x2="160.02" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="SW1" gate="A" pin="7"/>
+<pinref part="SW2" gate="A" pin="7"/>
 <wire x1="160.02" y1="20.32" x2="157.48" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="20.32" x2="157.48" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="160.02" y="20.32"/>
@@ -14233,7 +14240,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="J8" gate="J$1" pin="DATA"/>
 <wire x1="193.04" y1="38.1" x2="154.94" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="SW1" gate="A" pin="8"/>
+<pinref part="SW2" gate="A" pin="8"/>
 <wire x1="154.94" y1="38.1" x2="154.94" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="154.94" y="38.1"/>
 </segment>
@@ -14853,7 +14860,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <segment>
 <pinref part="D7" gate="G$1" pin="C"/>
 <pinref part="SUPPLY39" gate="G$1" pin="DGND"/>
-<wire x1="-210.82" y1="190.5" x2="-215.9" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="-210.82" y1="190.5" x2="-213.36" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C12" gate="G$1" pin="1"/>
@@ -14861,7 +14868,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="G$1" pin="DGND"/>
-<pinref part="S1" gate="G$1" pin="2"/>
+<pinref part="SW1" gate="G$1" pin="2"/>
 <wire x1="132.08" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -15133,15 +15140,15 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="SUPPLY3" gate="G$1" pin="DGND"/>
 <wire x1="154.94" y1="-55.88" x2="154.94" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="-53.34" x2="157.48" y2="-53.34" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="A" pin="4"/>
+<pinref part="SW2" gate="A" pin="4"/>
 <wire x1="157.48" y1="-53.34" x2="160.02" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="-53.34" x2="162.56" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="-53.34" x2="162.56" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="A" pin="3"/>
+<pinref part="SW2" gate="A" pin="3"/>
 <wire x1="160.02" y1="-53.34" x2="160.02" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="A" pin="2"/>
+<pinref part="SW2" gate="A" pin="2"/>
 <wire x1="157.48" y1="-53.34" x2="157.48" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="A" pin="1"/>
+<pinref part="SW2" gate="A" pin="1"/>
 <wire x1="154.94" y1="-53.34" x2="154.94" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="154.94" y="-53.34"/>
 <junction x="157.48" y="-53.34"/>
@@ -15462,6 +15469,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <segment>
 <pinref part="D7" gate="G$1" pin="A"/>
 <pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="-220.98" y1="190.5" x2="-223.52" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5VRR" class="0">
@@ -15867,18 +15875,20 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <wire x1="-48.26" y1="83.82" x2="-55.88" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="TX_LED#" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="127" y1="182.88" x2="106.68" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="CBUS2"/>
+<label x="116.84" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="RX_LED#" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="137.16" y1="185.42" x2="106.68" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="CBUS1"/>
+<label x="116.84" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$18" class="0">
