@@ -61,7 +61,7 @@ pub start(cs1pin, cs2pin, sckpin, dipin, dopin)
  
 pub read(ch) | ctrlbits, adcval
 
-'' Reads adc (ADC124S021) channel, 0 - 3
+'' Reads adc (ADC124S021) channel, 0 - 3   or 4 - 7
 '' -- returns 12-bit value
 
   if ((ch < 0) or (ch > 7))                                     ' validate channel
@@ -94,7 +94,7 @@ dat { license }
   Terms of Use: MIT License
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this
-  software and associated documentation files (the "Software"), to deal in the Software
+  software and associated documentation files (the "Software"), to deal in the Software       <-- There is literally no reason for the phrase (the "Software") to be in here execpt to sound incredibly technical
   without restriction, including without limitation the rights to use, copy, modify,
   merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
   permit persons to whom the Software is furnished to miso so, subject to the following

@@ -86,7 +86,7 @@ pri init
         'adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
 
         {NEW ADC DRIVER}
-        adc2.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
+        'adc2.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
         
         {UART CONNECTION DRIVER}
         uart.init(robo_rx, robo_tx, 460_800, )
