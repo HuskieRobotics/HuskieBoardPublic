@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -93,25 +93,25 @@
 <wire x1="7.419" y1="-7.349" x2="7.424" y2="-4.899" width="0.127" layer="21"/>
 </package>
 <package name="MICRO_SD_HINGED_TYPE">
-<smd name="P8" x="-4.4" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P7" x="-3.3" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P6" x="-2.2" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P5" x="-1.1" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P4" x="0" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P3" x="1.1" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P2" x="2.2" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P1" x="3.3" y="-1.5" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<text x="-6.68508125" y="-8.07" size="1.27" layer="25">&gt;NAME</text>
-<smd name="G4" x="-6.78" y="-4.1" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G1" x="6.97" y="-4.1" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G3" x="-6.78" y="3.2" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G2" x="6.97" y="3.2" dx="2" dy="1.45" layer="1" rot="R90"/>
-<wire x1="-7.5" y1="-6.65" x2="7.69491875" y2="-6.65" width="0.01" layer="21"/>
-<wire x1="-7.5" y1="7.8" x2="-7.5" y2="-6.65" width="0.01" layer="21"/>
-<wire x1="7.69491875" y1="-6.65" x2="7.7" y2="7.8" width="0.01" layer="21"/>
-<wire x1="7.7" y1="7.8" x2="-7.5" y2="7.8" width="0.01" layer="21"/>
-<wire x1="-7.60508125" y1="-3.6" x2="-7.60508125" y2="-3.61" width="0.01" layer="21"/>
-<text x="0.31491875" y="-8.07" size="1.27" layer="27">&gt;VALUE</text>
+<smd name="P8" x="-4.385" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P7" x="-3.285" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P6" x="-2.185" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P5" x="-1.085" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P4" x="0.015" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P3" x="1.115" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P2" x="2.215" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P1" x="3.315" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<text x="-6.67008125" y="-8.245" size="1.27" layer="25">&gt;NAME</text>
+<smd name="G4" x="-6.765" y="-4.3" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G1" x="6.985" y="-4.3" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G3" x="-6.765" y="4.025" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G2" x="6.985" y="4.025" dx="2" dy="1.45" layer="1" rot="R90"/>
+<wire x1="-7.485" y1="-6.825" x2="7.70991875" y2="-6.825" width="0.01" layer="21"/>
+<wire x1="-7.485" y1="7.625" x2="-7.485" y2="-6.825" width="0.01" layer="21"/>
+<wire x1="7.70991875" y1="-6.825" x2="7.715" y2="7.625" width="0.01" layer="21"/>
+<wire x1="7.715" y1="7.625" x2="-7.485" y2="7.625" width="0.01" layer="21"/>
+<wire x1="-7.59008125" y1="-3.775" x2="-7.59008125" y2="-3.785" width="0.01" layer="21"/>
+<text x="0.32991875" y="-8.245" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
