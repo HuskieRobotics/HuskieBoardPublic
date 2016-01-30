@@ -15951,8 +15951,8 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <approved hash="102,1,48.26,-104.14,GND,DGND,,,,"/>
 <approved hash="102,1,48.26,-134.62,VA,+3V3,,,,"/>
 <approved hash="102,1,48.26,-137.16,GND,DGND,,,,"/>
-<approved hash="104,1,86.36,119.38,U2,VCC,+3V3,,,"/>
-<approved hash="104,1,86.36,96.52,U2,GND,DGND,,,"/>
+<approved hash="104,1,86.36,119.38,U3,VCC,+3V3,,,"/>
+<approved hash="104,1,86.36,96.52,U3,GND,DGND,,,"/>
 <approved hash="104,1,12.7,180.34,J3,VBUS,N$28,,,"/>
 <approved hash="104,1,12.7,170.18,J3,GND,DGND,,,"/>
 <approved hash="104,1,-297.18,68.58,J25,GND,DGND,,,"/>
@@ -16027,7 +16027,20 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <approved hash="104,1,193.04,0,J10,V+,+3V3,,,"/>
 <approved hash="104,1,58.42,-63.5,J16,GND,DGND,,,"/>
 <approved hash="104,1,58.42,-60.96,J16,V+,+5V,,,"/>
-<approved hash="208,1,-116.84,132.08,+3V3,sup,,,,"/>
+<approved hash="104,1,-81.28,180.34,U7,VIN,5VRR,,,"/>
+<approved hash="104,1,-81.28,175.26,U7,VSS,DGND,,,"/>
+<approved hash="104,1,45.72,243.84,U4,GND,DGND,,,"/>
+<approved hash="104,1,-15.24,33.02,U6,VDD,+3V3,,,"/>
+<approved hash="104,1,-15.24,30.48,U6,VDD,+3V3,,,"/>
+<approved hash="104,1,-15.24,27.94,U6,VDD,+3V3,,,"/>
+<approved hash="104,1,-15.24,25.4,U6,VDD,+3V3,,,"/>
+<approved hash="104,1,17.78,33.02,U6,VSS,DGND,,,"/>
+<approved hash="104,1,17.78,30.48,U6,VSS,DGND,,,"/>
+<approved hash="104,1,17.78,27.94,U6,VSS,DGND,,,"/>
+<approved hash="104,1,17.78,25.4,U6,VSS,DGND,,,"/>
+<approved hash="104,1,106.68,233.68,U2P,GND,DGND,,,"/>
+<approved hash="104,1,121.92,233.68,U2P,VCC,+3V3,,,"/>
+<approved hash="208,1,-121.92,132.08,+3V3,sup,,,,"/>
 <approved hash="208,1,241.3,-7.62,+3V3,sup,,,,"/>
 <approved hash="208,1,91.44,-7.62,+3V3,sup,,,,"/>
 <approved hash="208,1,91.44,10.16,+3V3,sup,,,,"/>
@@ -16061,6 +16074,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <approved hash="208,1,40.64,-132.08,+3V3,sup,,,,"/>
 <approved hash="208,1,48.26,-134.62,+3V3,sup,,,,"/>
 <approved hash="208,1,-238.76,190.5,+3V3,sup,,,,"/>
+<approved hash="208,1,129.54,238.76,+3V3,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
