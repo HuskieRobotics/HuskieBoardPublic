@@ -248,7 +248,7 @@ R16</text>
 <wire x1="33.401" y1="51.562" x2="33.274" y2="51.435" width="0.127" layer="121"/>
 <wire x1="33.274" y1="51.435" x2="31.115" y2="51.435" width="0.127" layer="121"/>
 <text x="26.924" y="21.336" size="1.27" layer="16" font="vector" rot="MR90">FRC3061-MXP2</text>
-<text x="17.272" y="38.481" size="1.016" layer="16" font="vector" rot="MR270">C 2016 HUSKIE ROBOTICS</text>
+<text x="17.272" y="38.481" size="1.016" layer="16" font="vector" ratio="12" rot="MR270">C 2016 HUSKIE ROBOTICS</text>
 <circle x="16.8148" y="18.8976" radius="0.81319375" width="0.2032" layer="16"/>
 </plain>
 <libraries>
