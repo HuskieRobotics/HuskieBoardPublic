@@ -22,7 +22,7 @@ CON
         SET_LCD_DISP     = $08 ' Set LCD string display                                                                                     
         SET_LCD_SIZE     = $09 ' Sets the LCD size                                                                                          
        '$0A - $0F reserved                                                                                                                  
-        REQUEST_ALL      = $10 ' Request current values for all inputs                                                                      
+        REQUEST_ALL_DIGITAL_IN      = $10 ' Request current values for all inputs                                                                      
         REQUEST_ANALOG   = $11 ' Request current analog inputs                                                                              
         SET_PIN          = $12 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it              
        '$13 - $FF reserved                                                                                                                  
@@ -50,7 +50,7 @@ VAR
   long robotData
   
 OBJ 
-  rx_serial_fast : "rxSerialHSLP_11"
+  rx_serial_fast : ""
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
@@ -99,7 +99,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   'RECIEVING CODE
   repeat
     pst.str(string("  Outer loop",13))
-    cmd := rx_serial_fast.rxtime(100)    'get the command  
+    cmd := rx_serial_fast.rxtime(100)    'get the command (The first byte of whats is being sent)
     pst.dec(cmd)
     pst.str(string("Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
@@ -157,9 +157,9 @@ PRI main | x, in, errors, y, timetmp , intmp
       pst.str(string(", which is reserved."))
 
     'command number 16 : request all inputs
-    elseif cmd == REQUEST_ALL
+    elseif cmd == REQUEST_ALL_DIGITAL_IN
 
-      request_all_func
+      request_all_digitalin_func
 
     'command number 17 : request analogue inputs
     elseif cmd == REQUEST_ANALOG
@@ -360,7 +360,14 @@ PRI set_lcd_size_func | lines        'COMMAND 09
       
       lcd.init(lcdpin,lcdbaud,lines)
 
-PRI request_all_func                 'COMMAND 10
+PRI request_all_digitalin_func | pin, values, checksum, send           'COMMAND 10
+    checksum := rx_serial_fast.rx
+    if checksum == $10
+      values := INA
+      checksum := INA + $10
+      send = values + checksum
+      'Send the send variable to the roborio throught the tx pin
+  
     pst.str(string("Error: request_all_func function isn't finished yet!"))
     return
 
@@ -374,7 +381,7 @@ PRI set_pin_func | data, pin, value, checksum                    'COMMAND 12
     pin := data & %111
     checksum := rx_serial_fast.rx
 
-    if checksum == $10
+    if checksum == 
        'now what.
 
     else
