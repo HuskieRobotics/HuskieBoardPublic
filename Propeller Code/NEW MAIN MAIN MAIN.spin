@@ -88,7 +88,7 @@ pri init
         adc2.start(adc_cs,adc_clk,adc_di,adc_do)
         
         {UART CONNECTION DRIVER}
-        uart.init(robo_rx, robo_tx, 460_800, )
+        uart.init(robo_rx, robo_tx, 460800, )
         
         {SD DRIVER}
         sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}

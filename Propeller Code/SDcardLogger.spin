@@ -44,7 +44,7 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,tim
   return currCogID
 PUB reinit
   pst.str(string("Resetting SD card logger!"))
-  stop
+  'stop
   long[datfilename] := 0
   cogstop(currCogID)  'does this end the current function if the current function is in the cog it's stopping?
   longfill(@stack,0,512) 'clears the stack. Just because.

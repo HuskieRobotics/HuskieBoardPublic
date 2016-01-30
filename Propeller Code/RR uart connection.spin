@@ -1,7 +1,7 @@
 {AUTHOR: Lucas Rezac}                                                                                                                       
 {TITLE: LOG STRING}                                                                                                                         
 {REVISON: 2}                                                                                                                                
-{REVISED BY: Brandon John, Lucas Rezac}                                                                                                     
+{REVISED BY: Brandon John, Lucas Rezac, Calvin Field}                                                                                                     
 {PURPOSE v1: This object is used to monitor the communication between the RoboRIO and the propeller via UART                                
 and log data recieved between the two to a CSV file format on an onboard SD Card.}                                                          
 CON                                                                                                                                         
@@ -9,22 +9,25 @@ CON
         _xinfreq = 5_000_000                                                                                                              
                                                                                                                                             
         rxSerialMode = 0'don't invert signal                                                                                                
-                                                                                                                                            
+
+        rxPin = 19
+        txPin = 8                                                                                                                                    
                                                                                                                                             
         { COMMAND LIST }                                                                                                                    
-        GIVE_DATA        = $00 ' Standard, gives basic data on robot. No response expected.                                                 
-        WRITE_DATA       = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
-        SET_LOG_HEADER   = $02 ' Set log header                                                                                             
-        SET_SD_FILE_NAME = $03 ' Set SD log title                                                                                           
-        CLOSE_LOG        = $04 ' Close log file, prepare for next log file                                                                  
-        SET_TIME         = $05 ' Set current time                                                                                           
+        GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
+        WRITE_DATA              = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
+        SET_LOG_HEADER          = $02 ' Set log header                                                                                             
+        SET_SD_FILE_NAME        = $03 ' Set SD log title                                                                                           
+        CLOSE_LOG               = $04 ' Close log file, prepare for next log file                                                                  
+        SET_TIME                = $05 ' Set current time                                                                                           
        '$06 - $07 reserved                                                                                                                  
-        SET_LCD_DISP     = $08 ' Set LCD string display                                                                                     
-        SET_LCD_SIZE     = $09 ' Sets the LCD size                                                                                          
+        SET_LCD_DISP            = $08 ' Set LCD string display                                                                                     
+        SET_LCD_SIZE            = $09 ' Sets the LCD size                                                                                          
        '$0A - $0F reserved                                                                                                                  
-        REQUEST_ALL_DIGITAL_IN      = $10 ' Request current values for all inputs                                                                      
-        REQUEST_ANALOG   = $11 ' Request current analog inputs                                                                              
-        SET_PIN          = $12 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it              
+        REQUEST_ALL_DIGITAL_IN  = $10 ' Request current values for all inputs                                                                      
+        REQUEST_SINGLE_ANALOG   = $11 ' Request current analog input of a single pin
+        REQUEST_ALL_ANALOG      = $12 ' Requests current analog input vals of all ADC pins                                                                                 
+        SET_PIN                 = $13 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it              
        '$13 - $FF reserved                                                                                                                  
                                                                                                                                             
 VAR                                                                                                                                         
@@ -50,14 +53,14 @@ VAR
   long robotData
   
 OBJ 
-  rx_serial_fast : ""
+  ser : "FASTSERIAL-080927"
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
   neo : "Neopixel Test 2"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
-pst.start(115200)
+pst.start(460800)
 repeat x from 0 to 10
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
 return
@@ -91,7 +94,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
-  rx_serial_fast.start(rx,rxSerialMode,baud) 'start the rxSerialHSLP_11 cog
+  ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
   lcd.cls 'clears LCD screen
   lcd.cursor(0) 'move cursor to beginning,  just in case
@@ -99,7 +102,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   'RECIEVING CODE
   repeat
     pst.str(string("  Outer loop",13))
-    cmd := rx_serial_fast.rxtime(100)    'get the command (The first byte of whats is being sent)
+    cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
     pst.dec(cmd)
     pst.str(string("Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
@@ -162,9 +165,12 @@ PRI main | x, in, errors, y, timetmp , intmp
       request_all_digitalin_func
 
     'command number 17 : request analogue inputs
-    elseif cmd == REQUEST_ANALOG
+    elseif cmd == REQUEST_SINGLE_ANALOG
 
-      request_analog_func
+      request_single_analog_func
+
+    elseif cmd == REQUEST_ALL_ANALOG
+      request_all_analog_func
 
     'command number 18 : sets a pin to a value
     elseif cmd == SET_PIN
@@ -183,15 +189,15 @@ PRI main | x, in, errors, y, timetmp , intmp
       
       
 PRI give_data_func | x, checktmp
-    byte[robotData+0] := rx_serial_fast.rx      'LED Brightness  
-    byte[robotData+1] := rx_serial_fast.rx      'Battery Voltage
-    byte[robotData+2] := rx_serial_fast.rx      'State (enabled/disabled)
-    byte[robotData+3] := rx_serial_fast.rx      'Time Left
-    byte[robotData+4] := rx_serial_fast.rx      'User byte 1
-    byte[robotData+5] := rx_serial_fast.rx      'User byte 2
-    byte[robotData+6] := rx_serial_fast.rx      'User byte 3
-    byte[robotData+7] := rx_serial_fast.rx      'User byte 4
-    checksum := rx_serial_fast.rx
+    byte[robotData+0] := ser.rx      'LED Brightness  
+    byte[robotData+1] := ser.rx      'Battery Voltage
+    byte[robotData+2] := ser.rx      'State (enabled/disabled)
+    byte[robotData+3] := ser.rx      'Time Left
+    byte[robotData+4] := ser.rx      'User byte 1
+    byte[robotData+5] := ser.rx      'User byte 2
+    byte[robotData+6] := ser.rx      'User byte 3
+    byte[robotData+7] := ser.rx      'User byte 4
+    checksum := ser.rx
 
     checktmp := byte[robotData+0]
     repeat x from 1 to 5
@@ -203,7 +209,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
       
       pst.str(string("cmd == 1",13))
    
-      length := rx_serial_fast.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
+      length := ser.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
       
       ' invalid packet if length is greater than 250
       if length =< 250
@@ -217,18 +223,18 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         'pst.str(string("SD: Length:" ))
         'pst.dec(length)
         checksum := WRITE_DATA+length         'originally cmd+length
-        'rx_serial_fast.rx
+        'ser.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,
       ' depending on the buffer value                                                                                                                                  
         repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
-          byte[dataPt+x] := rx_serial_fast.rx  'get next byte to log, store in buffer
+          byte[dataPt+x] := ser.rx  'get next byte to log, store in buffer
         ' updates the checksum value
           checksum+=byte[dataPt+x]
         byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the 0
-        checktmp := rx_serial_fast.rx  'get the checksum          
+        checktmp := ser.rx  'get the checksum          
         
         if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt   'set the data to write to the sd to the new data
@@ -258,7 +264,7 @@ PRI set_sd_file_name_func | x, checktmp    'COMMAND 03
 
       pst.str(string("cmd == 3",13))
     ' length of string
-      length := rx_serial_fast.rx
+      length := ser.rx
       checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
       if length < 250
@@ -267,13 +273,13 @@ PRI set_sd_file_name_func | x, checktmp    'COMMAND 03
       ' depending on the buffer value                                                                                                                          
         repeat x from 0 to length-4
         
-          filedata[x] := rx_serial_fast.rx
+          filedata[x] := ser.rx
         ' 
         ' updates the checksum value
           checksum+=filedata[x]                          
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
-        checktmp := rx_serial_fast.rx  
+        checktmp := ser.rx  
         'checksum //= 256 'mod 256 to calculate checksum
         if checksum == checktmp
           bytemove(sdfilename,@filedata, length-3)
@@ -299,22 +305,22 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
       checksum:=SET_TIME  'originally checksum:=cmd
       
-      intmp := rx_serial_fast.rx
+      intmp := ser.rx
       checksum+= intmp
       timetmp:=intmp
       
-      intmp := rx_serial_fast.rx
+      intmp := ser.rx
       checksum+= intmp
       timetmp:=timetmp*256+intmp
       
-      intmp := rx_serial_fast.rx
+      intmp := ser.rx
       checksum+= intmp
       timetmp:=timetmp*256+intmp
       
-      intmp := rx_serial_fast.rx
+      intmp := ser.rx
       checksum+= intmp
       timetmp:=timetmp*256+intmp
-      checktmp := rx_serial_fast.rx                               
+      checktmp := ser.rx                               
       if checktmp == checksum
         long[timepointer]:=  timetmp  
         pst.str(string("Time set to: "))
@@ -333,12 +339,12 @@ PRI set_lcd_disp_func | x          'COMMAND 08
       'moves cursor to 0,0
       lcd.home
 
-      length := rx_serial_fast.rx
+      length := ser.rx
 
       if length <= 32
     '   gets all the string data                                                                                                                      
         repeat x from 0 to length
-          lcdstr[x] := rx_serial_fast.rx
+          lcdstr[x] := ser.rx
         
         lcd.str(long[lcdstr])
         pst.str(string("LCD: Set display string to :"))
@@ -353,37 +359,41 @@ PRI set_lcd_size_func | lines        'COMMAND 09
 
       lcd.finalize
 
-      lines := rx_serial_fast.rx
-
+      lines := ser.rx
+                                                                   
       pst.str(string("LCD: # of lines set to: "))
       pst.dec(lines)
       
       lcd.init(lcdpin,lcdbaud,lines)
 
-PRI request_all_digitalin_func | pin, values, checksum, send           'COMMAND 10
-    checksum := rx_serial_fast.rx
-    if checksum == $10
-      values := INA
-      checksum := INA + $10
-      send = values + checksum
+PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send          'COMMAND 10
+    original_checksum := ser.rx
+    if original_checksum == $10
+      values := INA 'Get all the digital input vals of the pins as a 4-byte long
+      newChecksum := INA + $10
+      send := values + newChecksum
       'Send the send variable to the roborio throught the tx pin
-  
-    pst.str(string("Error: request_all_func function isn't finished yet!"))
-    return
+      ser.tx(send)
 
-PRI request_analog_func              'COMMAND 11
+PRI request_single_analog_func              'COMMAND 11
     pst.str(string("Error: request_analog_func function isn't finished yet!"))
     return
-PRI set_pin_func | data, pin, value, checksum                    'COMMAND 12
 
-    data := rx_serial_fast.rx
+PRI request_all_analog_func                'Command 12
+  'Not finished
+  
+PRI set_pin_func | data, pin, value, original_checksum                    'COMMAND 12
+
+    data := ser.rx
     value := data >> 3
     pin := data & %111
-    checksum := rx_serial_fast.rx
+    original_checksum := ser.rx
 
-    if checksum == 
-       'now what.
+    if original_checksum == $13
+       outa[pin] := value 'Set the specified pin as an output with the the value passed in
+
+       ser.tx($1313) 'Dont know if this is correct
 
     else
-      pst.str(string("Error: in function set_pin_func: checksum is wrong!"))
+      pst.str(string("Error: in function set_pin_func: Bad checksum!"))
       return
