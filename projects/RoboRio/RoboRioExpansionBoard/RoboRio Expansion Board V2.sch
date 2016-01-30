@@ -8627,14 +8627,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <library name="MicroSdSocket">
 <packages>
 <package name="MICRO_SD_HINGED_TYPE">
-<smd name="P8" x="-4.385" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P7" x="-3.285" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P6" x="-2.185" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P5" x="-1.085" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P4" x="0.015" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P3" x="1.115" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P2" x="2.215" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
-<smd name="P1" x="3.315" y="-0.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P8" x="-4.385" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P7" x="-3.285" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P6" x="-2.185" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P5" x="-1.085" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P4" x="0.015" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P3" x="1.115" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P2" x="2.215" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="P1" x="3.315" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
 <text x="-6.67008125" y="-8.245" size="1.27" layer="25">&gt;NAME</text>
 <smd name="G4" x="-6.765" y="-4.3" dx="2" dy="1.45" layer="1" rot="R90"/>
 <smd name="G1" x="6.985" y="-4.3" dx="2" dy="1.45" layer="1" rot="R90"/>
@@ -13341,7 +13341,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R13" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R12" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="J3" library="adafruit" deviceset="USB" device="" value="51387-0578"/>
-<part name="C4" library="resistor" deviceset="C-EU" device="C0603K" value="4.7uF"/>
+<part name="C4" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="J25" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM0"/>
 <part name="J26" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM1"/>
 <part name="J27" library="3pin" deviceset="3PINDEVICE" device="DEFAULT" value="PWM2"/>
@@ -13479,7 +13479,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C28" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
 <part name="R36" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY66" library="supply2" deviceset="DGND" device=""/>
-<part name="C27C" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
+<part name="C27" library="resistor" deviceset="C-EU" device="C0603K" value="0.1uF"/>
 <part name="R35" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="SUPPLY67" library="supply2" deviceset="DGND" device=""/>
 <part name="R31" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
@@ -13491,7 +13491,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R20" library="resistor" deviceset="R-US_" device="R0603" value="270"/>
 <part name="D4" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
 <part name="C31" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
-<part name="C10C" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
+<part name="C10" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="C32" library="resistor" deviceset="C-EU" device="C0603K" value=".1uF"/>
 <part name="+3V24" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V25" library="supply1" deviceset="+3V3" device=""/>
@@ -13551,7 +13551,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 </plain>
 <instances>
 <instance part="U3" gate="G$1" x="78.74" y="106.68"/>
-<instance part="R21" gate="G$1" x="104.14" y="116.84" rot="R90"/>
+<instance part="R21" gate="G$1" x="109.22" y="116.84" rot="R90"/>
 <instance part="J1" gate="G$1" x="-236.22" y="12.7"/>
 <instance part="P+9" gate="1" x="55.88" y="-48.26"/>
 <instance part="D2" gate="G$1" x="-60.96" y="73.66" rot="R90"/>
@@ -13559,12 +13559,12 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="D3" gate="G$1" x="-60.96" y="83.82" rot="R90"/>
 <instance part="C11" gate="G$1" x="12.7" y="50.8"/>
 <instance part="C12" gate="G$1" x="121.92" y="119.38" rot="R180"/>
-<instance part="+3V5" gate="G$1" x="-116.84" y="134.62"/>
+<instance part="+3V5" gate="G$1" x="-121.92" y="134.62"/>
 <instance part="+3V14" gate="G$1" x="-45.72" y="137.16"/>
 <instance part="SUPPLY2" gate="G$1" x="40.64" y="-121.92"/>
 <instance part="SUPPLY7" gate="G$1" x="27.94" y="40.64"/>
 <instance part="SUPPLY9" gate="G$1" x="-302.26" y="-81.28"/>
-<instance part="SUPPLY10" gate="G$1" x="-116.84" y="99.06"/>
+<instance part="SUPPLY10" gate="G$1" x="-121.92" y="99.06"/>
 <instance part="SUPPLY12" gate="G$1" x="132.08" y="76.2"/>
 <instance part="SUPPLY13" gate="G$1" x="50.8" y="-66.04"/>
 <instance part="SUPPLY18" gate="G$1" x="-208.28" y="-2.54"/>
@@ -13606,29 +13606,29 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="C1" gate="G$1" x="139.7" y="195.58"/>
 <instance part="Q1" gate="G$1" x="157.48" y="190.5"/>
 <instance part="SUPPLY15" gate="G$1" x="-30.48" y="-27.94"/>
-<instance part="R11" gate="G$1" x="-50.8" y="127" smashed="yes" rot="R180">
-<attribute name="NAME" x="-32.258" y="127" size="1.778" layer="95" rot="R180" align="center-left"/>
-<attribute name="VALUE" x="-39.37" y="127" size="1.778" layer="96" rot="R180" align="center-left"/>
-</instance>
-<instance part="R16" gate="G$1" x="-50.8" y="114.3" smashed="yes" rot="R180">
+<instance part="R11" gate="G$1" x="-50.8" y="114.3" smashed="yes" rot="R180">
 <attribute name="NAME" x="-32.258" y="114.3" size="1.778" layer="95" rot="R180" align="center-left"/>
 <attribute name="VALUE" x="-39.37" y="114.3" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
-<instance part="R15" gate="G$1" x="-50.8" y="116.84" smashed="yes" rot="R180">
-<attribute name="NAME" x="-32.258" y="116.84" size="1.778" layer="95" rot="R180" align="center-left"/>
-<attribute name="VALUE" x="-39.37" y="116.84" size="1.778" layer="96" rot="R180" align="center-left"/>
+<instance part="R16" gate="G$1" x="-50.8" y="127" smashed="yes" rot="R180">
+<attribute name="NAME" x="-32.258" y="127" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="127" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
-<instance part="R14" gate="G$1" x="-50.8" y="119.38" smashed="yes" rot="R180">
-<attribute name="NAME" x="-32.258" y="119.38" size="1.778" layer="95" rot="R180" align="center-left"/>
-<attribute name="VALUE" x="-39.37" y="119.38" size="1.778" layer="96" rot="R180" align="center-left"/>
+<instance part="R15" gate="G$1" x="-50.8" y="124.46" smashed="yes" rot="R180">
+<attribute name="NAME" x="-32.258" y="124.46" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="124.46" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
-<instance part="R13" gate="G$1" x="-50.8" y="121.92" smashed="yes" rot="R180">
+<instance part="R14" gate="G$1" x="-50.8" y="121.92" smashed="yes" rot="R180">
 <attribute name="NAME" x="-32.258" y="121.92" size="1.778" layer="95" rot="R180" align="center-left"/>
 <attribute name="VALUE" x="-39.37" y="121.92" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
-<instance part="R12" gate="G$1" x="-50.8" y="124.46" smashed="yes" rot="R180">
-<attribute name="NAME" x="-32.258" y="124.46" size="1.778" layer="95" rot="R180" align="center-left"/>
-<attribute name="VALUE" x="-39.37" y="124.46" size="1.778" layer="96" rot="R180" align="center-left"/>
+<instance part="R13" gate="G$1" x="-50.8" y="119.38" smashed="yes" rot="R180">
+<attribute name="NAME" x="-32.258" y="119.38" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="119.38" size="1.778" layer="96" rot="R180" align="center-left"/>
+</instance>
+<instance part="R12" gate="G$1" x="-50.8" y="116.84" smashed="yes" rot="R180">
+<attribute name="NAME" x="-32.258" y="116.84" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="-39.37" y="116.84" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 <instance part="J3" gate="G$1" x="2.54" y="175.26"/>
 <instance part="C4" gate="G$1" x="43.18" y="182.88" rot="R180"/>
@@ -13742,7 +13742,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="R26" gate="G$1" x="-160.02" y="200.66" rot="R90"/>
 <instance part="+3V6" gate="G$1" x="86.36" y="132.08"/>
 <instance part="+3V7" gate="G$1" x="27.94" y="63.5"/>
-<instance part="J2" gate="G$1" x="-96.52" y="116.84"/>
+<instance part="J2" gate="G$1" x="-101.6" y="116.84"/>
 <instance part="TP_5V-RR" gate="G$1" x="-218.44" y="-33.02"/>
 <instance part="TP_5V-USB" gate="G$1" x="43.18" y="223.52"/>
 <instance part="SW2" gate="A" x="160.02" y="-25.4" rot="R270"/>
@@ -13777,7 +13777,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="C28" gate="G$1" x="215.9" y="-132.08" rot="R180"/>
 <instance part="R36" gate="G$1" x="220.98" y="-121.92" rot="R180"/>
 <instance part="SUPPLY66" gate="G$1" x="215.9" y="-137.16"/>
-<instance part="C27C" gate="G$1" x="220.98" y="-109.22" rot="R180"/>
+<instance part="C27" gate="G$1" x="220.98" y="-109.22" rot="R180"/>
 <instance part="R35" gate="G$1" x="226.06" y="-99.06" rot="R180"/>
 <instance part="SUPPLY67" gate="G$1" x="220.98" y="-114.3"/>
 <instance part="R31" gate="G$1" x="185.42" y="-134.62" rot="R270"/>
@@ -13791,7 +13791,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <instance part="R20" gate="G$1" x="-43.18" y="93.98"/>
 <instance part="D4" gate="G$1" x="-60.96" y="93.98" rot="R90"/>
 <instance part="C31" gate="G$1" x="27.94" y="-101.6"/>
-<instance part="C10C" gate="G$1" x="-129.54" y="127"/>
+<instance part="C10" gate="G$1" x="-134.62" y="127"/>
 <instance part="C32" gate="G$1" x="30.48" y="-134.62"/>
 <instance part="+3V24" gate="G$1" x="238.76" y="-93.98"/>
 <instance part="+3V25" gate="G$1" x="236.22" y="-116.84"/>
@@ -13832,8 +13832,8 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <busses>
 <bus name="IO28_SCL,IO29_SDA,IO30_TX,IO31_RX,!RESET">
 <segment>
-<wire x1="63.5" y1="88.9" x2="58.42" y2="88.9" width="0.762" layer="92"/>
-<wire x1="58.42" y1="88.9" x2="58.42" y2="114.3" width="0.762" layer="92"/>
+<wire x1="63.5" y1="88.9" x2="50.8" y2="88.9" width="0.762" layer="92"/>
+<wire x1="50.8" y1="88.9" x2="50.8" y2="114.3" width="0.762" layer="92"/>
 <wire x1="63.5" y1="88.9" x2="172.72" y2="88.9" width="0.762" layer="92"/>
 <wire x1="172.72" y1="88.9" x2="172.72" y2="210.82" width="0.762" layer="92"/>
 <wire x1="63.5" y1="88.9" x2="63.5" y2="30.48" width="0.762" layer="92"/>
@@ -13882,13 +13882,13 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
-<wire x1="-116.84" y1="127" x2="-116.84" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="129.54" x2="-116.84" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="127" x2="-114.3" y2="127" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="127" x2="-121.92" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="129.54" x2="-121.92" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="127" x2="-119.38" y2="127" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="VDD"/>
-<pinref part="C10C" gate="G$1" pin="1"/>
-<wire x1="-129.54" y1="129.54" x2="-116.84" y2="129.54" width="0.1524" layer="91"/>
-<junction x="-116.84" y="129.54"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="-134.62" y1="129.54" x2="-121.92" y2="129.54" width="0.1524" layer="91"/>
+<junction x="-121.92" y="129.54"/>
 </segment>
 <segment>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
@@ -13952,24 +13952,24 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="-45.72" y1="114.3" x2="-45.72" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="124.46" x2="-45.72" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="121.92" x2="-45.72" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="119.38" x2="-45.72" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="127" x2="-45.72" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="116.84" x2="-45.72" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="119.38" x2="-45.72" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="121.92" x2="-45.72" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R14" gate="G$1" pin="1"/>
-<junction x="-45.72" y="119.38"/>
-<pinref part="R13" gate="G$1" pin="1"/>
 <junction x="-45.72" y="121.92"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<junction x="-45.72" y="119.38"/>
 <pinref part="R12" gate="G$1" pin="1"/>
-<junction x="-45.72" y="124.46"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<junction x="-45.72" y="127"/>
-<wire x1="-45.72" y1="127" x2="-45.72" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="R16" gate="G$1" pin="1"/>
-<wire x1="-45.72" y1="116.84" x2="-45.72" y2="114.3" width="0.1524" layer="91"/>
 <junction x="-45.72" y="116.84"/>
+<pinref part="R11" gate="G$1" pin="1"/>
 <junction x="-45.72" y="114.3"/>
-<wire x1="-45.72" y1="127" x2="-45.72" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="114.3" x2="-45.72" y2="127" width="0.1524" layer="91"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="-45.72" y1="124.46" x2="-45.72" y2="127" width="0.1524" layer="91"/>
+<junction x="-45.72" y="124.46"/>
+<junction x="-45.72" y="127"/>
+<wire x1="-45.72" y1="114.3" x2="-45.72" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
@@ -13991,14 +13991,14 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <wire x1="86.36" y1="129.54" x2="86.36" y2="127" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="127" x2="86.36" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="121.92" x2="104.14" y2="127" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="127" x2="86.36" y2="127" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="121.92" x2="109.22" y2="127" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="127" x2="86.36" y2="127" width="0.1524" layer="91"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 <pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="124.46" x2="121.92" y2="127" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="127" x2="104.14" y2="127" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="127" x2="109.22" y2="127" width="0.1524" layer="91"/>
 <junction x="86.36" y="127"/>
-<junction x="104.14" y="127"/>
+<junction x="109.22" y="127"/>
 </segment>
 <segment>
 <pinref part="+3V13" gate="G$1" pin="+3V3"/>
@@ -14157,11 +14157,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U6" gate="P8X32A-Q44" pin="P5"/>
 </segment>
 <segment>
-<wire x1="-81.28" y1="116.84" x2="-55.88" y2="116.84" width="0.1524" layer="91"/>
-<label x="-78.74" y="116.84" size="1.778" layer="95"/>
-<label x="-68.58" y="116.84" size="1.778" layer="95"/>
+<label x="-78.74" y="124.46" size="1.778" layer="95"/>
+<label x="-68.58" y="124.46" size="1.778" layer="95"/>
 <pinref part="R15" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="D0"/>
+<wire x1="-86.36" y1="124.46" x2="-55.88" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="CD/D3"/>
 </segment>
 </net>
 <net name="IO6" class="0">
@@ -14783,29 +14783,29 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="DGND"/>
-<wire x1="-116.84" y1="119.38" x2="-116.84" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="116.84" x2="-116.84" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="114.3" x2="-116.84" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="111.76" x2="-116.84" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="119.38" x2="-116.84" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="116.84" x2="-116.84" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="114.3" x2="-116.84" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="111.76" x2="-116.84" y2="111.76" width="0.1524" layer="91"/>
-<junction x="-116.84" y="111.76"/>
-<junction x="-116.84" y="114.3"/>
-<junction x="-116.84" y="116.84"/>
-<wire x1="-114.3" y1="124.46" x2="-116.84" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="124.46" x2="-116.84" y2="121.92" width="0.1524" layer="91"/>
-<junction x="-116.84" y="119.38"/>
+<wire x1="-121.92" y1="119.38" x2="-121.92" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="116.84" x2="-121.92" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="114.3" x2="-121.92" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="111.76" x2="-121.92" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="119.38" x2="-121.92" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="116.84" x2="-121.92" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="114.3" x2="-121.92" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="111.76" x2="-121.92" y2="111.76" width="0.1524" layer="91"/>
+<junction x="-121.92" y="111.76"/>
+<junction x="-121.92" y="114.3"/>
+<junction x="-121.92" y="116.84"/>
+<wire x1="-119.38" y1="124.46" x2="-121.92" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="124.46" x2="-121.92" y2="121.92" width="0.1524" layer="91"/>
+<junction x="-121.92" y="119.38"/>
 <pinref part="J2" gate="G$1" pin="VSS"/>
 <pinref part="J2" gate="G$1" pin="GND1"/>
 <pinref part="J2" gate="G$1" pin="GND2"/>
 <pinref part="J2" gate="G$1" pin="GND3"/>
 <pinref part="J2" gate="G$1" pin="GND4"/>
-<pinref part="C10C" gate="G$1" pin="2"/>
-<wire x1="-116.84" y1="121.92" x2="-116.84" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="121.92" x2="-129.54" y2="121.92" width="0.1524" layer="91"/>
-<junction x="-116.84" y="121.92"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="-121.92" y1="121.92" x2="-121.92" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="121.92" x2="-134.62" y2="121.92" width="0.1524" layer="91"/>
+<junction x="-121.92" y="121.92"/>
 </segment>
 <segment>
 <pinref part="SUPPLY13" gate="G$1" pin="DGND"/>
@@ -15184,7 +15184,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="SUPPLY66" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="C27C" gate="G$1" pin="1"/>
+<pinref part="C27" gate="G$1" pin="1"/>
 <pinref part="SUPPLY67" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
@@ -15280,11 +15280,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U6" gate="P8X32A-Q44" pin="P0"/>
 </segment>
 <segment>
-<wire x1="-55.88" y1="127" x2="-81.28" y2="127" width="0.1524" layer="91"/>
-<label x="-78.74" y="127" size="1.778" layer="95"/>
-<label x="-68.58" y="127" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="114.3" x2="-86.36" y2="114.3" width="0.1524" layer="91"/>
+<label x="-78.74" y="114.3" size="1.778" layer="95"/>
+<label x="-68.58" y="114.3" size="1.778" layer="95"/>
 <pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="D2"/>
+<pinref part="J2" gate="G$1" pin="D1"/>
 </segment>
 </net>
 <net name="IO1" class="0">
@@ -15294,11 +15294,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U6" gate="P8X32A-Q44" pin="P1"/>
 </segment>
 <segment>
-<wire x1="-81.28" y1="124.46" x2="-55.88" y2="124.46" width="0.1524" layer="91"/>
-<label x="-78.74" y="124.46" size="1.778" layer="95"/>
-<label x="-68.58" y="124.46" size="1.778" layer="95"/>
+<label x="-78.74" y="116.84" size="1.778" layer="95"/>
+<label x="-68.58" y="116.84" size="1.778" layer="95"/>
 <pinref part="R12" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="CD/D3"/>
+<wire x1="-86.36" y1="116.84" x2="-55.88" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="D0"/>
 </segment>
 </net>
 <net name="IO2" class="0">
@@ -15308,11 +15308,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U6" gate="P8X32A-Q44" pin="P2"/>
 </segment>
 <segment>
-<wire x1="-55.88" y1="121.92" x2="-81.28" y2="121.92" width="0.1524" layer="91"/>
-<label x="-78.74" y="121.92" size="1.778" layer="95"/>
-<label x="-68.58" y="121.92" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="119.38" x2="-86.36" y2="119.38" width="0.1524" layer="91"/>
+<label x="-78.74" y="119.38" size="1.778" layer="95"/>
+<label x="-68.58" y="119.38" size="1.778" layer="95"/>
 <pinref part="R13" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="CMD"/>
+<pinref part="J2" gate="G$1" pin="CLK"/>
 </segment>
 </net>
 <net name="IO3" class="0">
@@ -15323,11 +15323,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U6" gate="P8X32A-Q44" pin="P3"/>
 </segment>
 <segment>
-<wire x1="-81.28" y1="119.38" x2="-55.88" y2="119.38" width="0.1524" layer="91"/>
-<label x="-78.74" y="119.38" size="1.778" layer="95"/>
-<label x="-68.58" y="119.38" size="1.778" layer="95"/>
+<label x="-78.74" y="121.92" size="1.778" layer="95"/>
+<label x="-68.58" y="121.92" size="1.778" layer="95"/>
 <pinref part="R14" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="CLK"/>
+<wire x1="-86.36" y1="121.92" x2="-55.88" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="CMD"/>
 </segment>
 </net>
 <net name="N$30" class="0">
@@ -15349,11 +15349,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U6" gate="P8X32A-Q44" pin="P4"/>
 </segment>
 <segment>
-<wire x1="-81.28" y1="114.3" x2="-55.88" y2="114.3" width="0.1524" layer="91"/>
-<label x="-78.74" y="114.3" size="1.778" layer="95"/>
-<label x="-68.58" y="114.3" size="1.778" layer="95"/>
+<label x="-78.74" y="127" size="1.778" layer="95"/>
+<label x="-68.58" y="127" size="1.778" layer="95"/>
 <pinref part="R16" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="D1"/>
+<wire x1="-86.36" y1="127" x2="-55.88" y2="127" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="D2"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -15778,7 +15778,7 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 </net>
 <net name="N$41" class="0">
 <segment>
-<pinref part="C27C" gate="G$1" pin="2"/>
+<pinref part="C27" gate="G$1" pin="2"/>
 <wire x1="220.98" y1="-104.14" x2="220.98" y2="-99.06" width="0.1524" layer="91"/>
 <pinref part="R35" gate="G$1" pin="2"/>
 <wire x1="215.9" y1="-99.06" x2="215.9" y2="-101.6" width="0.1524" layer="91"/>
@@ -15831,9 +15831,10 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <pinref part="U3" gate="G$1" pin="SDA"/>
 <wire x1="93.98" y1="88.9" x2="93.98" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="106.68" x2="104.14" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="106.68" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="106.68" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="106.68" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
 <junction x="93.98" y="106.68"/>
+<label x="96.52" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO28_SCL" class="0">
@@ -15844,7 +15845,8 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="SCL"/>
-<wire x1="58.42" y1="114.3" x2="66.04" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="114.3" x2="66.04" y2="114.3" width="0.1524" layer="91"/>
+<label x="50.8" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$12" class="0">
