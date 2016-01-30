@@ -15616,11 +15616,11 @@ Avoids exceeding Parallax input current through protection diodes.</text>
 <wire x1="-53.34" y1="193.04" x2="-22.86" y2="193.04" width="0.1524" layer="91"/>
 <junction x="-22.86" y="193.04"/>
 <wire x1="-22.86" y1="193.04" x2="-22.86" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U1" gate="U$1" pin="!RI"/>
-<wire x1="106.68" y1="190.5" x2="114.3" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="190.5" x2="114.3" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="CBUS3"/>
 <wire x1="114.3" y1="180.34" x2="106.68" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="180.34" x2="114.3" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="CBUS0"/>
+<wire x1="114.3" y1="187.96" x2="106.68" y2="187.96" width="0.1524" layer="91"/>
 <junction x="114.3" y="180.34"/>
 </segment>
 </net>
