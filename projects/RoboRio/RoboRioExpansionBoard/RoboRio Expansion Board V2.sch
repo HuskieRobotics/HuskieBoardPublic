@@ -288,19 +288,19 @@ package type P</description>
 <package name="TSSOP8">
 <description>&lt;b&gt;Thin Shrink Small Outline Package&lt;/b&gt;&lt;p&gt;
 package type ST</description>
-<wire x1="1.4" y1="-2.15" x2="1.4" y2="2.15" width="0.2032" layer="21"/>
-<wire x1="1.4" y1="2.15" x2="-1.4" y2="2.15" width="0.2032" layer="21"/>
-<wire x1="-1.4" y1="2.15" x2="-1.4" y2="-2.15" width="0.2032" layer="21"/>
-<wire x1="-1.4" y1="-2.15" x2="1.4" y2="-2.15" width="0.2032" layer="21"/>
-<circle x="-0.65" y="-1.625" radius="0.325" width="0" layer="21"/>
-<smd name="1" x="-0.975" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="2" x="-0.325" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="3" x="0.325" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="4" x="0.975" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="5" x="0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="6" x="0.325" y="2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="7" x="-0.325" y="2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="8" x="-0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
+<wire x1="1.4" y1="-1.95" x2="1.4" y2="1.95" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="1.95" x2="-1.4" y2="1.95" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="1.95" x2="-1.4" y2="-1.95" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="-1.95" x2="1.4" y2="-1.95" width="0.2032" layer="21"/>
+<circle x="-0.8" y="-1.325" radius="0.325" width="0" layer="21"/>
+<smd name="1" x="-0.975" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="2" x="-0.325" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="3" x="0.325" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="4" x="0.975" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="5" x="0.975" y="2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="6" x="0.325" y="2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="7" x="-0.325" y="2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="8" x="-0.975" y="2.925" dx="0.45" dy="1.45" layer="1"/>
 <text x="-1.625" y="-2.925" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="2.925" y="-3.25" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="-1.1" y1="-3.2" x2="-0.85" y2="-2.2" layer="51"/>
@@ -13278,7 +13278,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </class>
 </classes>
 <parts>
-<part name="U3" library="microchip" deviceset="24*" device="ST" technology="LC128" value="24LC256ST"/>
+<part name="U3" library="microchip" deviceset="24*" device="ST" technology="AA64" value="24LC256ST"/>
 <part name="R21" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="J1" library="RoboRioConnector" deviceset="RRINTERFACE-FEMALE" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>

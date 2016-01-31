@@ -3535,19 +3535,19 @@ Based on the following sources :
 <package name="TSSOP8">
 <description>&lt;b&gt;Thin Shrink Small Outline Package&lt;/b&gt;&lt;p&gt;
 package type ST</description>
-<wire x1="1.4" y1="-2.15" x2="1.4" y2="2.15" width="0.2032" layer="21"/>
-<wire x1="1.4" y1="2.15" x2="-1.4" y2="2.15" width="0.2032" layer="21"/>
-<wire x1="-1.4" y1="2.15" x2="-1.4" y2="-2.15" width="0.2032" layer="21"/>
-<wire x1="-1.4" y1="-2.15" x2="1.4" y2="-2.15" width="0.2032" layer="21"/>
-<circle x="-0.65" y="-1.625" radius="0.325" width="0" layer="21"/>
-<smd name="1" x="-0.975" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="2" x="-0.325" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="3" x="0.325" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="4" x="0.975" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="5" x="0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="6" x="0.325" y="2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="7" x="-0.325" y="2.925" dx="0.35" dy="1.2" layer="1"/>
-<smd name="8" x="-0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
+<wire x1="1.4" y1="-1.95" x2="1.4" y2="1.95" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="1.95" x2="-1.4" y2="1.95" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="1.95" x2="-1.4" y2="-1.95" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="-1.95" x2="1.4" y2="-1.95" width="0.2032" layer="21"/>
+<circle x="-0.8" y="-1.325" radius="0.325" width="0" layer="21"/>
+<smd name="1" x="-0.975" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="2" x="-0.325" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="3" x="0.325" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="4" x="0.975" y="-2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="5" x="0.975" y="2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="6" x="0.325" y="2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="7" x="-0.325" y="2.925" dx="0.45" dy="1.45" layer="1"/>
+<smd name="8" x="-0.975" y="2.925" dx="0.45" dy="1.45" layer="1"/>
 <text x="-1.625" y="-2.925" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="2.925" y="-3.25" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="-1.1" y1="-3.2" x2="-0.85" y2="-2.2" layer="51"/>
@@ -5929,10 +5929,10 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="19.0475" y="44.2425" size="0.6096" layer="27"/>
 </element>
 <element name="U3" library="microchip" package="TSSOP8" value="24LC256ST" x="32.258" y="54.356" smashed="yes" rot="R90">
-<attribute name="OC_FARNELL" value="1296573" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="MICROCHIP" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="OC_NEWARK" value="62K0578" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="24LC128-I/ST" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_FARNELL" value="1818513" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="27M1300" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="25AA640A-I/ST" x="32.258" y="54.356" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="33.401" y="56.9474" size="1.016" layer="25" font="vector" ratio="14" rot="R180"/>
 <attribute name="VALUE" x="35.508" y="57.281" size="1.27" layer="27" rot="R180"/>
 </element>
