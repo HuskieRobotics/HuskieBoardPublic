@@ -111,8 +111,9 @@ PRI main | x, in, errors, y, timetmp , intmp
   repeat
     pst.str(string("  Outer loop",13))
     cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
+    pst.str(string("Command: "))
     pst.dec(cmd)
-    pst.str(string("Datapointer: "))
+    pst.str(string("; Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
   '  command number 0 : Send basic data
@@ -387,6 +388,7 @@ PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, se
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
       return
 
+
 PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, send, new_checksum           'COMMAND 11
     pin := ser.rx
     sent_checksum := ser.rx
@@ -415,8 +417,8 @@ PRI request_all_analog_func | sent_checksum, new_checksum, values, send         
       return    
   
   
-  
 PRI set_pin_func | data, pin, value, original_checksum                    'COMMAND 13
+
 
     data := ser.rx
     value := data >> 3
@@ -425,9 +427,8 @@ PRI set_pin_func | data, pin, value, original_checksum                    'COMMA
 
     if original_checksum == $13
        outa[pin] := value 'Set the specified pin as an output with the the value passed in
-
        ser.tx($1313) 'Send the confirmation that the pin was set back to the RoboRio
-
+       
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
       return

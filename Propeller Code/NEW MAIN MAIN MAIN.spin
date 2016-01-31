@@ -1,7 +1,7 @@
 {
 Author: Bennett Johnson
-Revision #: *
-Revised by: *
+Revision #1: Added line for new ADC driver
+Revised by: Lucas Rezac
 
 Packet Types
 $00ff: does something
@@ -22,7 +22,8 @@ con
         eeprom_sda  = 29        'EEPROM data line  -- Transfers data based on clock line
         eeprom_scl  = 28        'EEPROM clock line -- Keeps time to ensure packet viability
        
-        adc_CS      = 23        'To be Defined
+        adc_CS1     = 23        'To be Defined
+        adc_CS2     = 23        'To be Defined
         adc_D0      = 22        'To be Defined
         adc_D1      = 21        'To be Defined
         adc_CLK     = 20        'To be Defined
@@ -35,19 +36,19 @@ con
         robo_tx     = 19        'RoboRIO Transmit Pin
         robo_rx     = 8         'RoboRIO Recieve Pin
         
-        robo_cs     = 9         'To be Defined
-        robo_clk    = 10        'To be Defined
+        robo_cs     = 9         'RoboRIO CS Pin
+        robo_clk    = 10        'RoboRIO Clock Pin
         robo_miso   = 11        'To be Defined
         robo_mosi   = 12        'To be Defined
         robo_sda    = 13        'To be Defined
         robo_scl    = 14        'To be Defined
         
-        sd_d0       = 1         'To be Defined
-        sd_d1       = 0         'To be Defined
-        sd_d2       = 0         'To be Defined
-        sd_d3       = 27        'To be Defined
-        sd_cmd      = 3         'To be Defined
-        sd_clk      = 2         'To be Defined
+        sd_d0       = 1         'SD Card Data 0
+        sd_d1       = 0         'SD Card Data 1
+        sd_d2       = 0         'SD Card Data 2
+        sd_d3       = 27        'SD Card Data 3
+        sd_cmd      = 3         'SD Card CMD
+        sd_clk      = 2         'SD Card clock pin
         sd_detect   = 26        'To be Defined
         sd_switch   = 24        'To be Defined
         
@@ -75,17 +76,17 @@ obj
         adc2    : "jm_adc124s021"
 
 pub main
-        longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty second byte
+        longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty-second byte
         init                            'Initialize all drives
 
 
 pri init
-        {ADC DRIVER}
-        adc.start2pin(adc_di, adc_do, adc_clk, adc_cs, $00FF)   'Start ADC Driver
-        adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
+        {OLD ADC DRIVER}
+        'adc.start2pin(adc_di, adc_do, adc_clk, adc_cs, $00FF)   'Start ADC Driver
+        'adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
 
         {NEW ADC DRIVER}
-        adc2.start(adc_cs,adc_clk,adc_di,adc_do)
+        'adc2.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
         
         {UART CONNECTION DRIVER}
         uart.init(robo_rx, robo_tx, 460800, )

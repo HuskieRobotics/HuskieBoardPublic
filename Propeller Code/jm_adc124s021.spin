@@ -31,22 +31,26 @@ con { fixed io pins }
 
 var
 
-  long  cs                                                      ' active-low chip select
+  long  cs0
+  long  cs1                                                      ' active-low chip select
   long  sck                                                     ' active-low clock
   long  mosi                                                    ' prop -> adc.di
   long  miso                                                    ' prop <- adc.do
 
 
-pub start(cspin, sckpin, dipin, dopin)
+pub start(cs1pin, cs2pin, sckpin, dipin, dopin)
 
 '' Configure IO pins used by ADC
 '' -- pins define connections to ADC124S021
 
-  longmove(@cs, @cspin, 4)                                      ' copy pins
+  longmove(@cs0, @cs1pin, 5)   '<= this function is utter CRAP. I hate this language. It's ridiculous.                                 ' copy pins
 
-  outa[cs] := 1                                                 ' output high to disable
-  dira[cs] := 1
+  outa[cs0] := 1                                                 ' output high to disable
+  dira[cs0] := 1
 
+  outa[cs1] := 1
+  dira[cs1] := 1
+  
   outa[sck] := 1                                                ' output high
   dira[sck] := 1 
 
@@ -57,21 +61,28 @@ pub start(cspin, sckpin, dipin, dopin)
  
 pub read(ch) | ctrlbits, adcval
 
-'' Reads adc (ADC124S021) channel, 0 - 3
+'' Reads adc (ADC124S021) channel, 0 - 3   or 4 - 7
 '' -- returns 12-bit value
 
-  if ((ch < 0) or (ch > 3))                                     ' validate channel
+  if ((ch < 0) or (ch > 7))                                     ' validate channel
     return -1
+
 
   ctrlbits := ((ch << 3) << 24) | ((ch << 3) << 8)              ' config for two reads
 
-  outa[cs] := 0                                                 ' select device
+
+  if ((ch >= 0) and (ch <= 3))
+    outa[cs0] := 0
+  if ((ch >= 4) and (ch <= 7))
+    outa[cs1] := 0                                                  ' select device
   repeat 32                                                     ' two complete reads
     outa[sck] := 0                                              ' clock low
     outa[mosi] := (ctrlbits <-= 1)                              ' output control bits  
     adcval := (adcval << 1) | ina[miso]                         ' get result bit
     outa[sck] := 1                                              ' clock high
-  outa[cs] := 1                                                 ' deselect device
+
+  outa[cs0] := 1                                                ' deselect both devices
+  outa[cs1] := 1                                                ' deselect device
 
   return adcval & $0FFF                                         ' return 2nd read
 
@@ -83,7 +94,7 @@ dat { license }
   Terms of Use: MIT License
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this
-  software and associated documentation files (the "Software"), to deal in the Software
+  software and associated documentation files (the "Software"), to deal in the Software       <-- There is literally no reason for the phrase (the "Software") to be in here execpt to sound incredibly technical
   without restriction, including without limitation the rights to use, copy, modify,
   merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
   permit persons to whom the Software is furnished to miso so, subject to the following
