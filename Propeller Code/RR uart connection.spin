@@ -10,8 +10,14 @@ CON
                                                                                                                                             
         rxSerialMode = 0'don't invert signal                                                                                                
 
+        'Most of these pins will change because of the new board design
         rxPin = 19
-        txPin = 8                                                                                                                                    
+        txPin = 8
+
+        ADC_CS_PIN     = 23
+        ADC_DO_PIN     = 22
+        ADC_DI_PIN     = 21
+        ADC_CLK_PIN    = 20                                                                                                                                    
                                                                                                                                             
         { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
@@ -54,6 +60,7 @@ VAR
   
 OBJ 
   ser : "FASTSERIAL-080927"
+  adc : "ADC driver"
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
@@ -94,6 +101,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
+  adc.start(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN)'$00FF) 'Start the ADC driver object to get analog values
   ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
   lcd.cls 'clears LCD screen
@@ -368,21 +376,47 @@ PRI set_lcd_size_func | lines        'COMMAND 09
 
 PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send          'COMMAND 10
     original_checksum := ser.rx
-    if original_checksum == $10
+    if original_checksum == $12
       values := INA 'Get all the digital input vals of the pins as a 4-byte long
-      newChecksum := INA + $10
+      newChecksum := $10+INA
       send := values + newChecksum
+      'send := $11 + send - Dont know if this is needed or not
       'Send the send variable to the roborio throught the tx pin
-      ser.tx(send)
+      ser.tx(send) 'This might be sending only one byte at a time
+    else
+      pst.str(string("Error: in function set_pin_func: Bad checksum!"))
+      return
 
-PRI request_single_analog_func              'COMMAND 11
-    pst.str(string("Error: request_analog_func function isn't finished yet!"))
-    return
+PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, send, new_checksum           'COMMAND 11
+    pin := ser.rx
+    sent_checksum := ser.rx
+    original_checksum := cmd + pin
+    if original_checksum == sent_checksum
+      value := adc.in(pin)
+      new_checksum := $11 + value
+      send := value + new_checksum
+      'send := $11 + send - Dont know if this is needed or not
+      ser.tx(send) 'This might be sending only one byte at a time
+    else
+      pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
+      return    
 
-PRI request_all_analog_func                'Command 12
-  'Not finished
+PRI request_all_analog_func | sent_checksum, new_checksum, values, send              'Command 12
+    'Not finished
+    sent_checksum := ser.rx
+    if sent_checksum == $12
+      values := adc.average(0,7)  'Get all the analog values
+      new_checksum := $12 + values
+      send := values + new_checksum
+      'send := $12 + send - Dont know if this is needed or not
+      ser.tx(send) 'This might be sending only one byte at a time
+    else
+      pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
+      return    
   
-PRI set_pin_func | data, pin, value, original_checksum                    'COMMAND 12
+  
+  
+PRI set_pin_func | data, pin, value, original_checksum                    'COMMAND 13
 
     data := ser.rx
     value := data >> 3
@@ -392,7 +426,7 @@ PRI set_pin_func | data, pin, value, original_checksum                    'COMMA
     if original_checksum == $13
        outa[pin] := value 'Set the specified pin as an output with the the value passed in
 
-       ser.tx($1313) 'Dont know if this is correct
+       ser.tx($1313) 'Send the confirmation that the pin was set back to the RoboRio
 
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
