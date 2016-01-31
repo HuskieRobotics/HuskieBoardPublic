@@ -14,8 +14,8 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
@@ -170,9 +170,9 @@
 <wire x1="3.556" y1="19.05" x2="1.778" y2="19.05" width="0.254" layer="25"/>
 <text x="3.302" y="24.003" size="1.27" layer="25" font="vector" ratio="12" rot="SR270" align="top-center">GPIO</text>
 <text x="12.192" y="40.64" size="1.27" layer="25" font="vector" ratio="12" align="center-left">CS</text>
-<text x="45.72" y="58.42" size="1.016" layer="21" font="vector" ratio="14">5v</text>
+<text x="45.9739" y="58.123784375" size="1.016" layer="21" font="vector" ratio="14">5v</text>
 <text x="47.939884375" y="58.58936875" size="1.016" layer="21" font="vector" ratio="14">USB</text>
-<text x="42.018534375" y="57.46798125" size="1.016" layer="21" font="vector" ratio="14">RR</text>
+<text x="43.922771875" y="58.5893625" size="1.016" layer="21" font="vector" ratio="14">RR</text>
 <text x="30.607" y="68.58" size="1.016" layer="21" font="vector" ratio="14">RESET</text>
 <text x="11.684" y="48.26" size="1.016" layer="25" font="vector" ratio="14" align="center-left">MOSI</text>
 <text x="11.684" y="45.72" size="1.016" layer="25" font="vector" ratio="18" align="center-left">MISO</text>
@@ -5730,7 +5730,7 @@ design rules under a new name.</description>
 <element name="J18" library="3pin" package="3PINPACKAGE" value="ADC2" x="49.53" y="33.02" smashed="yes" rot="R180"/>
 <element name="J19" library="3pin" package="3PINPACKAGE" value="ADC3" x="49.53" y="30.48" smashed="yes" rot="R180"/>
 <element name="J2" library="MicroSdSocket" package="MICRO_SD_HINGED_TYPE" value="MICROSD-HINGED" x="6.985" y="60.7314" smashed="yes" rot="R270">
-<attribute name="NAME" x="6.62451875" y="68.5872" size="1.016" layer="25" font="vector" ratio="14"/>
+<attribute name="NAME" x="3.937428125" y="68.79878125" size="1.016" layer="25" font="vector" ratio="14"/>
 <attribute name="VALUE" x="-1.085" y="60.41648125" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="J20" library="3pin" package="3PINPACKAGE" value="ADC4" x="49.53" y="27.94" smashed="yes" rot="R180"/>
@@ -8050,6 +8050,11 @@ design rules under a new name.</description>
 <vertex x="15.494" y="17.653"/>
 </polygon>
 </signal>
+<signal name="N$31">
+<wire x1="26.468909375" y1="7.57463125" x2="26.46890625" y2="8.75949375" width="0.2032" layer="16"/>
+<wire x1="26.46890625" y1="8.75949375" x2="30.21390625" y2="8.75949375" width="0.2032" layer="16"/>
+<wire x1="30.21390625" y1="8.75949375" x2="30.213909375" y2="7.532315625" width="0.2032" layer="16"/>
+</signal>
 </signals>
 <errors>
 <approved hash="18,29,4b845d1332fc655e"/>
@@ -8302,29 +8307,31 @@ design rules under a new name.</description>
 <approved hash="18,29,2d1fa99f5589d109"/>
 <approved hash="3,16,d0be2eb53c10c21b"/>
 <approved hash="3,16,a5418b5930cb1ed3"/>
+<approved hash="8,16,86b841f8417e863e"/>
+<approved hash="8,16,3907cbc7cb873947"/>
 <approved hash="5,1,920195ac452b09e1"/>
 <approved hash="5,1,17fd15a445230c1d"/>
 <approved hash="5,1,1d5415a4452306b4"/>
+<approved hash="5,1,4a14d9c72b434dd9"/>
 <approved hash="5,1,bc4fd57d27c5b70c"/>
 <approved hash="5,1,89f3da4528fd8db0"/>
-<approved hash="5,1,4a14d9c72b434dd9"/>
 <approved hash="5,1,57982bdfd943a25d"/>
-<approved hash="5,1,1af149452cfd89b2"/>
-<approved hash="5,1,c49ab8dfdd43a65f"/>
 <approved hash="5,1,2f4d467d23c5b30e"/>
 <approved hash="5,1,d9164ac72f4349db"/>
+<approved hash="5,1,c49ab8dfdd43a65f"/>
+<approved hash="5,1,1af149452cfd89b2"/>
 <approved hash="5,1,758509dfdd43a640"/>
-<approved hash="5,1,9e52f77d23c5b311"/>
 <approved hash="5,1,abeef8452cfd89ad"/>
 <approved hash="5,1,6809fbc72f4349c4"/>
-<approved hash="5,1,0950607d2fc5bf13"/>
+<approved hash="5,1,9e52f77d23c5b311"/>
 <approved hash="5,1,e2879edfd143aa42"/>
-<approved hash="5,1,3cec6f4520fd85af"/>
+<approved hash="5,1,0950607d2fc5bf13"/>
 <approved hash="5,1,ff0b6cc7234345c6"/>
+<approved hash="5,1,3cec6f4520fd85af"/>
 <approved hash="5,1,0b581b42a9864e24"/>
 <approved hash="5,1,ef8e1a5ea883abcb"/>
-<approved hash="5,1,e4dcf4c2ad864a20"/>
 <approved hash="5,1,000af5deac83afcf"/>
+<approved hash="5,1,e4dcf4c2ad864a20"/>
 <approved hash="5,1,b1a3a042ad864bdf"/>
 <approved hash="5,1,5575a15eac83ae30"/>
 </errors>
