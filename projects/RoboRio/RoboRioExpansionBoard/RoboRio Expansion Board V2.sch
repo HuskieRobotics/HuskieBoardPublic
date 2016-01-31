@@ -8636,14 +8636,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <smd name="P2" x="2.215" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
 <smd name="P1" x="3.315" y="-1.675" dx="0.8" dy="1.5" layer="1" rot="R180"/>
 <text x="-6.67008125" y="-8.245" size="1.27" layer="25">&gt;NAME</text>
-<smd name="G4" x="-6.765" y="-4.3" dx="2" dy="1.45" layer="1" rot="R90"/>
-<smd name="G1" x="6.985" y="-4.3" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G4" x="-6.765" y="-4.275" dx="2" dy="1.45" layer="1" rot="R90"/>
+<smd name="G1" x="6.985" y="-4.275" dx="2" dy="1.45" layer="1" rot="R90"/>
 <smd name="G3" x="-6.765" y="4.025" dx="2" dy="1.45" layer="1" rot="R90"/>
 <smd name="G2" x="6.985" y="4.025" dx="2" dy="1.45" layer="1" rot="R90"/>
-<wire x1="-7.485" y1="-6.825" x2="7.70991875" y2="-6.825" width="0.01" layer="21"/>
-<wire x1="-7.485" y1="7.625" x2="-7.485" y2="-6.825" width="0.01" layer="21"/>
-<wire x1="7.70991875" y1="-6.825" x2="7.715" y2="7.625" width="0.01" layer="21"/>
-<wire x1="7.715" y1="7.625" x2="-7.485" y2="7.625" width="0.01" layer="21"/>
+<wire x1="-7.485" y1="-6.825" x2="7.715" y2="-6.825" width="0.01" layer="21"/>
+<wire x1="-7.485" y1="7.675" x2="-7.485" y2="-6.825" width="0.01" layer="21"/>
+<wire x1="7.715" y1="-6.825" x2="7.715" y2="7.675" width="0.01" layer="21"/>
+<wire x1="7.715" y1="7.675" x2="-7.485" y2="7.675" width="0.01" layer="21"/>
 <wire x1="-7.59008125" y1="-3.775" x2="-7.59008125" y2="-3.785" width="0.01" layer="21"/>
 <text x="0.32991875" y="-8.245" size="1.27" layer="27">&gt;VALUE</text>
 </package>
