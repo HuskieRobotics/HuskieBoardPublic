@@ -11,8 +11,8 @@ CON
         rxSerialMode = 0'don't invert signal                                                                                                
 
         'Most of these pins will change because of the new board design
-        rxPin = 19
-        txPin = 8
+        rxPin = 19 'Expansion board receive pin
+        txPin = 8 'Expansion board transmit pin
 
         ADC_CS_PIN     = 23
         ADC_DO_PIN     = 22
@@ -67,7 +67,7 @@ OBJ
   neo : "Neopixel Test 2"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
-pst.start(460800)
+pst.start(230400)
 repeat x from 0 to 10
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
 return
@@ -110,12 +110,19 @@ PRI main | x, in, errors, y, timetmp , intmp
   'RECIEVING CODE
   repeat
     pst.str(string("  Outer loop",13))
-    cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
+    'cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
+    cmd := ser.rx
     pst.str(string("Command: "))
-    pst.dec(cmd)
+    pst.hex(cmd, 2)
+    pst.str(string(" Looking for: "))
+    pst.hex(REQUEST_ALL_DIGITAL_IN, 2)
     pst.str(string("; Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
+
+    'if cmd == REQUEST_ALL_DIGITAL_IN
+     ' pst.str(string(" Sending all digital input vals "))
+      
   '  command number 0 : Send basic data
     if cmd == GIVE_DATA
                          
@@ -145,13 +152,7 @@ PRI main | x, in, errors, y, timetmp , intmp
     elseif cmd == SET_TIME
 
       set_time_func
-      
-    elseif cmd == 7 or cmd == 8
 
-      pst.str(string("Error: attempted to call command #"))
-      pst.dec(cmd)
-      pst.str(string(", which is reserved."))
-    
     'command number 8 : sets lcd display
     elseif cmd == SET_LCD_DISP
     
@@ -162,38 +163,26 @@ PRI main | x, in, errors, y, timetmp , intmp
 
       set_lcd_size_func
 
-    elseif cmd >= $0A and cmd <= $05
-
-      pst.str(string("Error: attempted to call command #"))
-      pst.dec(cmd)
-      pst.str(string(", which is reserved."))
-
-    'command number 16 : request all inputs
+    'command number 0x10 : request all inputs
     elseif cmd == REQUEST_ALL_DIGITAL_IN
-
+      pst.str(string(" Sending all digital input vals "))
       request_all_digitalin_func
 
-    'command number 17 : request analogue inputs
+    'command number 0x11 : request analogue inputs
     elseif cmd == REQUEST_SINGLE_ANALOG
-
       request_single_analog_func
 
+     'command number 0x12 : request analogue inputs
     elseif cmd == REQUEST_ALL_ANALOG
       request_all_analog_func
 
-    'command number 18 : sets a pin to a value
+    'command number 0x13 : sets a pin to a value
     elseif cmd == SET_PIN
-
       set_pin_func
-    
-    elseif cmd >= $13 and cmd <= $FF
-
-      pst.str(string("Error: attempted to call command #"))
-      pst.dec(cmd)
-      pst.str(string(", which is reserved."))
 
     else
-      pst.str(string("Error: invalid command number",13))
+      pst.str(string("Error: invalid command number",14))
+      pst.hex(cmd,8)
     
       
       
@@ -377,15 +366,16 @@ PRI set_lcd_size_func | lines        'COMMAND 09
 
 PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send          'COMMAND 10
     original_checksum := ser.rx
-    if original_checksum == $12
+    if original_checksum == $10
       values := INA 'Get all the digital input vals of the pins as a 4-byte long
-      newChecksum := $10+INA
+      newChecksum := $10+values
       send := values + newChecksum
-      'send := $11 + send - Dont know if this is needed or not
+      'send := $11 + send '- Dont know if this is needed or not
       'Send the send variable to the roborio throught the tx pin
       ser.tx(send) 'This might be sending only one byte at a time
     else
-      pst.str(string("Error: in function set_pin_func: Bad checksum!"))
+      pst.str(string("Error: in function set_pin_func: Bad checksum: "))
+      pst.hex(original_checksum,2)
       return
 
 
@@ -403,11 +393,16 @@ PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, 
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
 
-PRI request_all_analog_func | sent_checksum, new_checksum, values, send              'Command 12
-    'Not finished
+PRI request_all_analog_func | sent_checksum, new_checksum, values, send, count       'Command 12
     sent_checksum := ser.rx
     if sent_checksum == $12
-      values := adc.average(0,7)  'Get all the analog values
+    
+      count := 0
+      repeat count 'Go through all the adc pins and get their values
+        repeat while count > 0
+        values += adc.in(count)
+        count++
+        
       new_checksum := $12 + values
       send := values + new_checksum
       'send := $12 + send - Dont know if this is needed or not
@@ -417,9 +412,7 @@ PRI request_all_analog_func | sent_checksum, new_checksum, values, send         
       return    
   
   
-PRI set_pin_func | data, pin, value, original_checksum                    'COMMAND 13
-
-
+PRI set_pin_func | data, pin, value, original_checksum          'COMMAND 13
     data := ser.rx
     value := data >> 3
     pin := data & %111
@@ -427,7 +420,7 @@ PRI set_pin_func | data, pin, value, original_checksum                    'COMMA
 
     if original_checksum == $13
        outa[pin] := value 'Set the specified pin as an output with the the value passed in
-       ser.tx($1313) 'Send the confirmation that the pin was set back to the RoboRio
+       ser.tx($1313) 'Send the confirmation back to the RoboRio
        
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))

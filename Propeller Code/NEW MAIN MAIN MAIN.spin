@@ -3,7 +3,7 @@ Author: Bennett Johnson
 Revision #1: Added line for new ADC driver
 Revised by: Lucas Rezac
 
-Packet Types
+Packet Types                                     
 $00ff: does something
 
 }
@@ -89,7 +89,7 @@ pri init
         'adc2.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
         
         {UART CONNECTION DRIVER}
-        uart.init(robo_rx, robo_tx, 460800, )
+        uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, led_red, led_ylw, led_grn, fat32time, robodata)
         
         {SD DRIVER}
         sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
