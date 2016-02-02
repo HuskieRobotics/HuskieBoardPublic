@@ -1,3 +1,6 @@
+Fab Drawing          | Fab.pdf
+Assy Drawing         | Assy.pdf
+
 Top Copper           | RoboRIO Expansion Board V2.GTL
 Bottom Copper        | RoboRIO Expansion Board V2.GBL
 Top Silkscreen       | RoboRIO Expansion Board V2.GTO
