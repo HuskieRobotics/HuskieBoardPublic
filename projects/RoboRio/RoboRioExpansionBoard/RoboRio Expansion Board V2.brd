@@ -91,16 +91,16 @@
 <layer number="129" name="Mask" color="7" fill="1" visible="no" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
-<layer number="144" name="DrillLegend" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="145" name="DrillLegend_01-16" color="2" fill="9" visible="yes" active="yes"/>
-<layer number="146" name="DrillLegend_01-20" color="3" fill="9" visible="yes" active="yes"/>
+<layer number="144" name="DrillLegend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="145" name="DrillLegend_01-16" color="2" fill="9" visible="no" active="yes"/>
+<layer number="146" name="DrillLegend_01-20" color="3" fill="9" visible="no" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
 <layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
 <layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
-<layer number="175" name="fab_dwg" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="175" name="fab_dwg" color="7" fill="1" visible="no" active="yes"/>
 <layer number="176" name="assy_dwg" color="15" fill="1" visible="no" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
 <layer number="200" name="200bmp" color="15" fill="10" visible="no" active="yes"/>
@@ -2965,7 +2965,8 @@ R16</text>
          UL flammability rating of 94V-0.  
          Date code and manufacturers UL symbol/type shall be permanently 
          marked or etched on the board. 
-1.4    Finish: ENIG.
+1.4    2 oz finished copper weight, nominal (1oz plating over 1oz).
+1.5    Finish: ENIG.
   
 2.      Solder Mask 
 2.1.   Solder mask both sides, with blue color. 
