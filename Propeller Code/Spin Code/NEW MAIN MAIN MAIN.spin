@@ -94,4 +94,4 @@ pri init
         {SD DRIVER}
         sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
 
-        
+                                  

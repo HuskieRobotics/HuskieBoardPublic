@@ -119,6 +119,7 @@ AddOutputFilter chunkFilter
 			<Item Name="CheckChecksum.vi" Type="VI" URL="../CheckChecksum.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
+			<Item Name="GetAllAnalogInputVals.vi" Type="VI" URL="../GetAllAnalogInputVals.vi"/>
 			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../Robot Global Data.vi"/>
 			<Item Name="SendAndReceiveTest.vi" Type="VI" URL="../../SendAndReceiveTest.vi"/>

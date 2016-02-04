@@ -126,6 +126,9 @@ PUB rxtime(ms) : rxbyte | t
 PUB tx(txbyte)
   repeat while txhold
   txhold := txbyte|$8000_0000
+PUB txcount(txbyte,count)
+
+  tx(txbyte)
 
 pub str(stringptr)
   repeat while txhold

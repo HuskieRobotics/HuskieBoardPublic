@@ -114,8 +114,6 @@ PRI main | x, in, errors, y, timetmp , intmp
     cmd := ser.rx
     pst.str(string("Command: "))
     pst.hex(cmd, 2)
-    pst.str(string(" Looking for: "))
-    pst.hex(REQUEST_ALL_DIGITAL_IN, 2)
     pst.str(string("; Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
@@ -364,15 +362,18 @@ PRI set_lcd_size_func | lines        'COMMAND 09
       
       lcd.init(lcdpin,lcdbaud,lines)
 
-PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send          'COMMAND 10
+PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send, count          'COMMAND 10
     original_checksum := ser.rx
     if original_checksum == $10
       values := INA 'Get all the digital input vals of the pins as a 4-byte long
       newChecksum := $10+values
       send := values + newChecksum
-      'send := $11 + send '- Dont know if this is needed or not
+      'send := $10 + send '- Dont know if this is needed or not
       'Send the send variable to the roborio throught the tx pin
-      ser.tx(send) 'This might be sending only one byte at a time
+
+      count := STRSIZE(@send)
+      repeat count
+        ser.tx(send)
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum: "))
       pst.hex(original_checksum,2)
@@ -393,35 +394,39 @@ PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, 
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
 
-PRI request_all_analog_func | sent_checksum, new_checksum, values, send, count       'Command 12
+PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, count       'Command 12
     sent_checksum := ser.rx
     if sent_checksum == $12
-    
+
+    ' 'Have to go through all adc pins and add them to values
+    ' 'Look at software spec sheet command 12 for more info
       count := 0
-      repeat count 'Go through all the adc pins and get their values
-        repeat while count > 0
-        values += adc.in(count)
+      repeat 8
+        value := adc.in(count)
         count++
-        
-      new_checksum := $12 + values
-      send := values + new_checksum
-      'send := $12 + send - Dont know if this is needed or not
-      ser.tx(send) 'This might be sending only one byte at a time
+           
+      
+      repeat (STRSIZE(@send))
+        ser.tx(send) 
     else
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
   
   
-PRI set_pin_func | data, pin, value, original_checksum          'COMMAND 13
+PRI set_pin_func | data, pin, value, original_checksum, count, transmit        'COMMAND 13    
     data := ser.rx
     value := data >> 3
     pin := data & %111
     original_checksum := ser.rx
 
-    if original_checksum == $13
+    if original_checksum == ($13 + data)
        outa[pin] := value 'Set the specified pin as an output with the the value passed in
-       ser.tx($1313) 'Send the confirmation back to the RoboRio
+
+       repeat count  
+         ser.tx($13) 'Send the confirmation back to the RoboRio
        
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
       return
+
+
