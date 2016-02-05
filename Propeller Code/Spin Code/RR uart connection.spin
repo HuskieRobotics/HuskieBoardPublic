@@ -403,22 +403,27 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
       adc.unitTestStart
       byte[@tempdata+0] := adc.in(0)>>4
       byte[@tempdata+1] := (adc.in(0)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+1] := byte[1] | adc.in(1)>>8 'Fill in the first half of the byte
+      
+      pst.str(string("Expecting: 11110000  "))
+      pst.str(string("Got: "))              'This is for testing purposes
+      pst.bin(byte[@tempdata+0], 8)         'Print out the 1st byte in binary to check that we are shifting the right way
+      
+      byte[@tempdata+1] := byte[@tempdata+1] | adc.in(1)>>8 'Fill in the first half of the byte
       byte[@tempdata+2] := adc.in(1) & $ff
       
       byte[@tempdata+3] := adc.in(2)>>4
       byte[@tempdata+4] := (adc.in(2)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+4] := byte[1] | adc.in(3)>>8 'Fill in the first half of the byte
+      byte[@tempdata+4] := byte[@tempdata+1] | adc.in(3)>>8 'Fill in the first half of the byte
       byte[@tempdata+5] := adc.in(3) & $ff
 
       byte[@tempdata+6] := adc.in(4)>>4
       byte[@tempdata+7] := (adc.in(4)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+7] := byte[1] | adc.in(5)>>8 'Fill in the first half of the byte
+      byte[@tempdata+7] := byte[@tempdata+1] | adc.in(5)>>8 'Fill in the first half of the byte
       byte[@tempdata+8] := adc.in(5) & $ff
 
       byte[@tempdata+9] := adc.in(6)>>4
       byte[@tempdata+10] := (adc.in(6)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+10] := byte[1] | adc.in(7)>>8 'Fill in the first half of the byte
+      byte[@tempdata+10] := byte[@tempdata+1] | adc.in(7)>>8 'Fill in the first half of the byte
       byte[@tempdata+11] := adc.in(7) & $ff
 
                                        
