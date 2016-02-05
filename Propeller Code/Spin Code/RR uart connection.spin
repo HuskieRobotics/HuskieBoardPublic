@@ -394,20 +394,44 @@ PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, 
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
 
-PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, count       'Command 12
+PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, count, firstByte, newFullByte      'Command 12
     sent_checksum := ser.rx
     if sent_checksum == $12
 
     ' 'Have to go through all adc pins and add them to values
     ' 'Look at software spec sheet command 12 for more info
-      count := 0
-      repeat 8
-        value := adc.in(count)
-        count++
-           
+      adc.unitTestStart
+      byte[@tempdata+0] := adc.in(0)>>4
+      byte[@tempdata+1] := (adc.in(0)& $00f)<<4 'Fill in the second half of the byte
+      byte[@tempdata+1] := byte[1] | adc.in(1)>>8 'Fill in the first half of the byte
+      byte[@tempdata+2] := adc.in(1) & $ff
       
-      repeat (STRSIZE(@send))
-        ser.tx(send) 
+      byte[@tempdata+3] := adc.in(2)>>4
+      byte[@tempdata+4] := (adc.in(2)& $00f)<<4 'Fill in the second half of the byte
+      byte[@tempdata+4] := byte[1] | adc.in(3)>>8 'Fill in the first half of the byte
+      byte[@tempdata+5] := adc.in(3) & $ff
+
+      byte[@tempdata+6] := adc.in(4)>>4
+      byte[@tempdata+7] := (adc.in(4)& $00f)<<4 'Fill in the second half of the byte
+      byte[@tempdata+7] := byte[1] | adc.in(5)>>8 'Fill in the first half of the byte
+      byte[@tempdata+8] := adc.in(5) & $ff
+
+      byte[@tempdata+9] := adc.in(6)>>4
+      byte[@tempdata+10] := (adc.in(6)& $00f)<<4 'Fill in the second half of the byte
+      byte[@tempdata+10] := byte[1] | adc.in(7)>>8 'Fill in the first half of the byte
+      byte[@tempdata+11] := adc.in(7) & $ff
+
+                                       
+      
+
+      ser.tx($12)     
+      count := 0
+      new_checksum := $12
+      repeat 12
+        new_checksum := new_checksum+byte[count+@tempdata]
+        ser.tx(byte[count+@tempdata])
+        count++
+      ser.tx(new_checksum) 
     else
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
@@ -430,3 +454,5 @@ PRI set_pin_func | data, pin, value, original_checksum, count, transmit        '
       return
 
 
+dat
+  tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
