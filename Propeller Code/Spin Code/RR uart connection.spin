@@ -101,7 +101,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
-  adc.start(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN)'$00FF) 'Start the ADC driver object to get analog values
+  adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the ADC driver object to get analog values
   ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
   lcd.cls 'clears LCD screen
@@ -400,34 +400,27 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
 
     ' 'Have to go through all adc pins and add them to values
     ' 'Look at software spec sheet command 12 for more info
-      adc.unitTestStart
-      byte[@tempdata+0] := adc.in(0)>>4
+      'Could put this in a loop
+      'adc.unitTestStart 'Use this for testing 
+      byte[@tempdata+0] := adc.in(0)>>4          
       byte[@tempdata+1] := (adc.in(0)& $00f)<<4 'Fill in the second half of the byte
-      
-      pst.str(string("Expecting: 11110000  "))
-      pst.str(string("Got: "))              'This is for testing purposes
-      pst.bin(byte[@tempdata+0], 8)         'Print out the 1st byte in binary to check that we are shifting the right way
-      
       byte[@tempdata+1] := byte[@tempdata+1] | adc.in(1)>>8 'Fill in the first half of the byte
       byte[@tempdata+2] := adc.in(1) & $ff
       
       byte[@tempdata+3] := adc.in(2)>>4
       byte[@tempdata+4] := (adc.in(2)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+4] := byte[@tempdata+1] | adc.in(3)>>8 'Fill in the first half of the byte
+      byte[@tempdata+4] := byte[@tempdata+4] | adc.in(3)>>8 'Fill in the first half of the byte
       byte[@tempdata+5] := adc.in(3) & $ff
 
       byte[@tempdata+6] := adc.in(4)>>4
       byte[@tempdata+7] := (adc.in(4)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+7] := byte[@tempdata+1] | adc.in(5)>>8 'Fill in the first half of the byte
+      byte[@tempdata+7] := byte[@tempdata+7] | adc.in(5)>>8 'Fill in the first half of the byte
       byte[@tempdata+8] := adc.in(5) & $ff
 
       byte[@tempdata+9] := adc.in(6)>>4
       byte[@tempdata+10] := (adc.in(6)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+10] := byte[@tempdata+1] | adc.in(7)>>8 'Fill in the first half of the byte
+      byte[@tempdata+10] := byte[@tempdata+10] | adc.in(7)>>8 'Fill in the first half of the byte
       byte[@tempdata+11] := adc.in(7) & $ff
-
-                                       
-      
 
       ser.tx($12)     
       count := 0
@@ -435,21 +428,23 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
       repeat 12
         new_checksum := new_checksum+byte[count+@tempdata]
         ser.tx(byte[count+@tempdata])
-        count++
+        count++                                          
       ser.tx(new_checksum) 
     else
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
   
   
-PRI set_pin_func | data, pin, value, original_checksum, count, transmit        'COMMAND 13    
+PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transmit        'COMMAND 13    
     data := ser.rx
-    value := data >> 3
-    pin := data & %111
+    dir_val := (data >> 6) & %1
+    out_val := data >> 7
+    pin := data & %11111
     original_checksum := ser.rx
 
     if original_checksum == ($13 + data)
-       outa[pin] := value 'Set the specified pin as an output with the the value passed in
+       dira[pin] := dir_val
+       outa[pin] := out_val'Set the specified pin as an output with the the value passed in
 
        repeat count  
          ser.tx($13) 'Send the confirmation back to the RoboRio
