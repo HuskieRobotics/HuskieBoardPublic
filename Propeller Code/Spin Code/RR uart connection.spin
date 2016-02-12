@@ -72,7 +72,9 @@ OBJ
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
-  neo : "Neopixel Test 2"
+  'neo : "Neopixel Test 2"
+  neo : "Neopixel_demo"
+  neoDriver : "Neopixel Driver"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(230400)
@@ -111,6 +113,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   ''starts the serial object
   'adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the (old) ADC driver object to get analog values
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_D1,adc_D0)  'New adc driver
+  neoDriver.start(4, 64)
   ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
   lcd.cls 'clears LCD screen
@@ -346,11 +349,16 @@ PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLeng
       pst.str(string(" Length of message:"))
       pst.dec(messageLength)
       pst.char(13)
-      pst.dec(true)
       
       if messageLength <= 250
-    '   gets all the string data                                                                                                                      
-        repeat while count < messageLength
+    '   gets all the string data
+
+    '    Test loop 
+         repeat while (count < messageLength)
+          neoDriver.set_all(%110011011111010101110001)
+                                                                                                                              
+        repeat while count < messageLength  'This loop is not working for some reason!!!!!!!
+          neoDriver.set_all(%110011011111010101110001) 'Testing stuff
           byte[@generalBuffer+count] := ser.rx
           actualChecksum += byte[@generalBuffer+count]
           pst.str(string(" loop count:"))
