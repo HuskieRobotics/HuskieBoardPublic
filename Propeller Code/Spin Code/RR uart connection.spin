@@ -58,6 +58,7 @@ VAR
   byte  buffer
   byte  rx, tx
   byte  checksum
+  byte len2, count2
   long  stopSDPointer
   long  neopointer
   long  LED_RED,LED_YELLOW,LED_GREEN
@@ -309,7 +310,7 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
       checksum:=SET_TIME  'originally checksum:=cmd
       
-      intmp := ser.rx
+      intmp := ser.rx                                                   
       checksum+= intmp
       timetmp:=intmp
       
@@ -337,17 +338,27 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
         outa[LED_YELLOW] := true    
       pst.char(13)
       
-PRI set_lcd_disp_func | x, actualChecksum, expectedChecksum          'COMMAND 08)
-
-      length := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
-      actualChecksum := ($8<<8) + length
-      pst.hex(actualChecksum, 2)
-      if length <= 250
+PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength         'COMMAND 08)
+    
+      messageLength := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
+      actualChecksum := ($8<<8) + messageLength
+      count := 0
+      pst.str(string(" Length of message:"))
+      pst.dec(messageLength)
+      pst.char(13)
+      pst.dec(true)
+      
+      if messageLength <= 250
     '   gets all the string data                                                                                                                      
-        repeat x from 0 to length
-          byte[@generalBuffer+x] := ser.rx
-          actualChecksum += byte[@generalBuffer+x]
-
+        repeat while count < messageLength
+          byte[@generalBuffer+count] := ser.rx
+          actualChecksum += byte[@generalBuffer+count]
+          pst.str(string(" loop count:"))
+          pst.dec(count)
+          pst.char(13)  
+          count++
+        count := 0
+        
         actualChecksum &= $FF
         pst.str(string(" Actual Checksum:"))
         pst.hex(actualChecksum, 2)
@@ -366,9 +377,9 @@ PRI set_lcd_disp_func | x, actualChecksum, expectedChecksum          'COMMAND 08
           ser.tx($08)
           ser.tx($08)
         else
-          pst.str(string("Error in set_lcd_disp_func: Bad Checksum"))
+          pst.str(string(" Error in set_lcd_disp_func: Bad Checksum"))
       else
-        pst.str(string("LCD: Error: Given length was > 32."))
+        pst.str(string(" LCD: Error: Given length was > 32."))
 
 PRI set_lcd_size_func | lines        'COMMAND 09
 
