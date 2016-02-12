@@ -114,12 +114,14 @@ AddOutputFilter chunkFilter
 			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 		</Item>
 		<Item Name="Team Code" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
+			<Item Name="GetAllAnalogInputVals.vi" Type="VI" URL="../GetAllAnalogInputVals.vi"/>
 			<Item Name="CheckChecksum.vi" Type="VI" URL="../CheckChecksum.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
-			<Item Name="GetAllAnalogInputVals.vi" Type="VI" URL="../GetAllAnalogInputVals.vi"/>
+			<Item Name="GetDigitalInputVals.vi" Type="VI" URL="../GetDigitalInputVals.vi"/>
 			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../Robot Global Data.vi"/>
 			<Item Name="SendAndReceiveTest.vi" Type="VI" URL="../../SendAndReceiveTest.vi"/>
@@ -129,6 +131,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
+			<Item Name="DisplayLCD.vi" Type="VI" URL="../DisplayLCD.vi"/>
 		</Item>
 		<Item Name="MainTester.vi" Type="VI" URL="../MainTester.vi"/>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
@@ -552,7 +555,6 @@ AddOutputFilter chunkFilter
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="GetDigitalInputVals.vi" Type="VI" URL="../GetDigitalInputVals.vi"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>

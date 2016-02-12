@@ -58,6 +58,14 @@ pub start(cs1pin, cs2pin, sckpin, dipin, dopin)
 
   dira[mosi] := 1                                               ' output (to adc)
 
+pub setArray | count
+    count := 0
+    repeat 8
+      long[@ins+count] := read(count)
+      count++    
+
+pub readArray(ch)
+    return long[@ins+ch]
  
 pub read(ch) | ctrlbits, adcval
 
@@ -86,8 +94,9 @@ pub read(ch) | ctrlbits, adcval
 
   return adcval & $0FFF                                         ' return 2nd read
 
-
-dat { license }
+dat
+  ins long 0,0,0,0,0,0,0,0
+{ license }
 
 {{
 

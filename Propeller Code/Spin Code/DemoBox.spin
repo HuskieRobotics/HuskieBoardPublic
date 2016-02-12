@@ -1,5 +1,5 @@
-{Runs our new demo box at the Arkansas regionsal
-Gota maek sur to spel all wirds rong yep yep yep!}
+{Runs our new demo box at the Arkansas regionsal}
+
 
 
 CON

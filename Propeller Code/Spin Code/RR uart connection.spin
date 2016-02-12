@@ -17,7 +17,13 @@ CON
         ADC_CS_PIN     = 23
         ADC_DO_PIN     = 22
         ADC_DI_PIN     = 21
-        ADC_CLK_PIN    = 20                                                                                                                                    
+        ADC_CLK_PIN    = 20
+
+        adc_CS1     = 23       
+        adc_CS2     = 23       
+        adc_D0      = 22        
+        adc_D1      = 21        
+        adc_CLK     = 20                                                                                                                                 
                                                                                                                                             
         { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
@@ -48,7 +54,7 @@ VAR
   byte  data1[256], data2[256]  'toLog buffer
   long  sdfilename              'pointer to the location of the filename to write to the sd
   byte  filedata[256]
-  byte  lcdstr[32]
+  byte  generalBuffer[251]
   byte  buffer
   byte  rx, tx
   byte  checksum
@@ -60,7 +66,8 @@ VAR
   
 OBJ 
   ser : "FASTSERIAL-080927"
-  adc : "ADC driver"
+  adc : "jm_adc124s021"   'This is the adc driver for the new MXP board design
+  oldADC : "ADC driver"   'This adc driver will only work on the old MXP board
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
@@ -101,7 +108,8 @@ PRI main | x, in, errors, y, timetmp , intmp
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
-  adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the ADC driver object to get analog values
+  'adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the (old) ADC driver object to get analog values
+  adc.start(adc_CS1,adc_CS2,adc_CLK,adc_D1,adc_D0)  'New adc driver
   ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
   lcd.cls 'clears LCD screen
@@ -329,23 +337,36 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
         outa[LED_YELLOW] := true    
       pst.char(13)
       
-PRI set_lcd_disp_func | x          'COMMAND 08
+PRI set_lcd_disp_func | x, actualChecksum, expectedChecksum          'COMMAND 08)
 
-      pst.str(string("cmd == 8",13))
-      'moves cursor to 0,0
-      lcd.home
-
-      length := ser.rx
-
-      if length <= 32
+      length := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
+      actualChecksum := ($8<<8) + length
+      pst.hex(actualChecksum, 2)
+      if length <= 250
     '   gets all the string data                                                                                                                      
         repeat x from 0 to length
-          lcdstr[x] := ser.rx
-        
-        lcd.str(long[lcdstr])
-        pst.str(string("LCD: Set display string to :"))
-        pst.str(long[lcdstr])
-        pst.char(13)
+          byte[@generalBuffer+x] := ser.rx
+          actualChecksum += byte[@generalBuffer+x]
+
+        actualChecksum &= $FF
+        pst.str(string(" Actual Checksum:"))
+        pst.hex(actualChecksum, 2)
+          
+        expectedChecksum := ser.rx 'Get the checksum sent by from the roboRio
+        pst.str(string(" Expected checksum:"))
+        pst.hex(expectedChecksum, 2)
+
+        if actualChecksum == expectedChecksum
+          lcd.str(@generalBuffer)
+          pst.str(string("LCD: Set display string to :"))
+          pst.str(@generalBuffer)
+          pst.char(13)
+
+          'Send confirmation back to the roboRio
+          ser.tx($08)
+          ser.tx($08)
+        else
+          pst.str(string("Error in set_lcd_disp_func: Bad Checksum"))
       else
         pst.str(string("LCD: Error: Given length was > 32."))
 
@@ -366,14 +387,17 @@ PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, se
     original_checksum := ser.rx
     if original_checksum == $10
       values := INA 'Get all the digital input vals of the pins as a 4-byte long
-      newChecksum := $10+values
-      send := values + newChecksum
-      'send := $10 + send '- Dont know if this is needed or not
-      'Send the send variable to the roborio throught the tx pin
-
-      count := STRSIZE(@send)
-      repeat count
-        ser.tx(send)
+      'values := %11110000111100001111000011110000   'For testing correct transmission and checksum
+      
+      'Send all the digital pin vals along with the command byte and checksum
+      ser.tx($10)
+      ser.tx(values&$FF)
+      ser.tx((values&$FF00)>>8)
+      ser.tx((values&$FF0000)>>16)
+      ser.tx((values&$FF000000)>>24)
+      newChecksum := ($10+(values&$FF)+((values&$FF00)>>8)+((values&$FF0000)>>16)+((values&$FF000000)>>24))&$FF
+      ser.tx(newChecksum)
+      
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum: "))
       pst.hex(original_checksum,2)
@@ -385,11 +409,12 @@ PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, 
     sent_checksum := ser.rx
     original_checksum := cmd + pin
     if original_checksum == sent_checksum
-      value := adc.in(pin)
-      new_checksum := $11 + value
-      send := value + new_checksum
-      'send := $11 + send - Dont know if this is needed or not
-      ser.tx(send) 'This might be sending only one byte at a time
+      value := adc.read(pin)  'Get the value of a single analog pin (size of 12bits)
+      new_checksum := ($11 +(value&$FF) + (value>>8))&$FF
+      ser.tx($11)
+      ser.tx(value&$FF)
+      ser.tx(value>>8)
+      ser.tx(new_checksum)          
     else
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
@@ -398,33 +423,36 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
     sent_checksum := ser.rx
     if sent_checksum == $12
 
-    ' 'Have to go through all adc pins and add them to values
+    ' 'Go through all adc pins and add them to values
     ' 'Look at software spec sheet command 12 for more info
       'Could put this in a loop
-      'adc.unitTestStart 'Use this for testing 
-      byte[@tempdata+0] := adc.in(0)>>4          
-      byte[@tempdata+1] := (adc.in(0)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+1] := byte[@tempdata+1] | adc.in(1)>>8 'Fill in the first half of the byte
-      byte[@tempdata+2] := adc.in(1) & $ff
+      'adc.unitTestStart 'Use this for testing the old adc driver
+      adc.setArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
+       
+      byte[@tempdata+0] := adc.readArray(0)>>4           
+      byte[@tempdata+1] := (adc.readArray(0)& $00f)<<4             'Fill in the second half of the byte first
+      byte[@tempdata+1] := byte[@tempdata+1] | adc.readArray(1)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+2] := adc.readArray(1) & $ff
       
-      byte[@tempdata+3] := adc.in(2)>>4
-      byte[@tempdata+4] := (adc.in(2)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+4] := byte[@tempdata+4] | adc.in(3)>>8 'Fill in the first half of the byte
-      byte[@tempdata+5] := adc.in(3) & $ff
+      byte[@tempdata+3] := adc.readArray(2)>>4
+      byte[@tempdata+4] := (adc.readArray(2)& $00f)<<4             'Fill in the second half of the byte first 
+      byte[@tempdata+4] := byte[@tempdata+4] | adc.readArray(3)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+5] := adc.readArray(3) & $ff
 
-      byte[@tempdata+6] := adc.in(4)>>4
-      byte[@tempdata+7] := (adc.in(4)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+7] := byte[@tempdata+7] | adc.in(5)>>8 'Fill in the first half of the byte
-      byte[@tempdata+8] := adc.in(5) & $ff
+      byte[@tempdata+6] := adc.readArray(4)>>4
+      byte[@tempdata+7] := (adc.readArray(4)& $00f)<<4             'Fill in the second half of the byte first 
+      byte[@tempdata+7] := byte[@tempdata+7] | adc.readArray(5)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+8] := adc.readArray(5) & $ff
 
-      byte[@tempdata+9] := adc.in(6)>>4
-      byte[@tempdata+10] := (adc.in(6)& $00f)<<4 'Fill in the second half of the byte
-      byte[@tempdata+10] := byte[@tempdata+10] | adc.in(7)>>8 'Fill in the first half of the byte
-      byte[@tempdata+11] := adc.in(7) & $ff
+      byte[@tempdata+9] := adc.readArray(6)>>4
+      byte[@tempdata+10] := (adc.readArray(6)& $00f)<<4              'Fill in the second half of the byte first 
+      byte[@tempdata+10] := byte[@tempdata+10] | adc.readArray(7)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+11] := adc.readArray(7) & $ff
 
-      ser.tx($12)     
-      count := 0
-      new_checksum := $12
+      ser.tx($12)
+      new_checksum := $12 'Initialize the checksum as the command byte so the final checksum is calculated correctly
+      
+      'Send the 12 bytes in the array that was filled above
       repeat 12
         new_checksum := new_checksum+byte[count+@tempdata]
         ser.tx(byte[count+@tempdata])
@@ -445,9 +473,8 @@ PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transm
     if original_checksum == ($13 + data)
        dira[pin] := dir_val
        outa[pin] := out_val'Set the specified pin as an output with the the value passed in
-
-       repeat count  
-         ser.tx($13) 'Send the confirmation back to the RoboRio
+       ser.tx($13) 'Send the confirmation back to the RoboRio
+       ser.tx($13) 'Send the confirmation back to the RoboRio
        
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
@@ -455,4 +482,4 @@ PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transm
 
 
 dat
-  tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
