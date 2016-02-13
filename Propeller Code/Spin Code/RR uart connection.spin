@@ -349,7 +349,7 @@ PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLeng
 
 
       messageLength := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
-      actualChecksum := $8 + clear + messageLength
+      actualChecksum := $8 + clear + messageLength  'Start the checksum calculation
       count := 0
       pst.str(string(" Length of message: "))
       pst.dec(messageLength)
