@@ -115,7 +115,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_D1,adc_D0)  'New adc driver
   neoDriver.start(4, 64)
   ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
-  lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
+  lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
   lcd.cursor(0) 'move cursor to beginning,  just in case
   
@@ -165,7 +165,6 @@ PRI main | x, in, errors, y, timetmp , intmp
 
     'command number 8 : sets lcd display
     elseif cmd == SET_LCD_DISP
-    
       set_lcd_disp_func             
       
     'command number 9  : sets lcd size
@@ -341,31 +340,31 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
         outa[LED_YELLOW] := true    
       pst.char(13)
       
-PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength         'COMMAND 08)
-    
+PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength, clear         'COMMAND 08
+
+      bytefill(@generalBuffer, 0, 251) 'fill the generalBuffer byte array with 0s or else it will show whats leftover from the last display
+
+      lcd.clrln(0)
+      lcd.home
+
+
       messageLength := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
-      actualChecksum := ($8<<8) + messageLength
+      actualChecksum := $8 + clear + messageLength
       count := 0
-      pst.str(string(" Length of message:"))
+      pst.str(string(" Length of message: "))
       pst.dec(messageLength)
       pst.char(13)
       
-      if messageLength <= 250
-    '   gets all the string data
-
-    '    Test loop 
-         repeat while (count < messageLength)
-          neoDriver.set_all(%110011011111010101110001)
-                                                                                                                              
-        repeat while count < messageLength  'This loop is not working for some reason!!!!!!!
-          neoDriver.set_all(%110011011111010101110001) 'Testing stuff
+      if messageLength =< 250
+    '   gets all the string data     
+                                                                                                                               
+        repeat while (count < messageLength)  
           byte[@generalBuffer+count] := ser.rx
           actualChecksum += byte[@generalBuffer+count]
           pst.str(string(" loop count:"))
           pst.dec(count)
           pst.char(13)  
-          count++
-        count := 0
+          count++ 
         
         actualChecksum &= $FF
         pst.str(string(" Actual Checksum:"))
@@ -377,7 +376,8 @@ PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLeng
 
         if actualChecksum == expectedChecksum
           lcd.str(@generalBuffer)
-          pst.str(string("LCD: Set display string to :"))
+          pst.char(13)
+          pst.str(string("LCD Set display string to: "))
           pst.str(@generalBuffer)
           pst.char(13)
 
@@ -387,7 +387,7 @@ PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLeng
         else
           pst.str(string(" Error in set_lcd_disp_func: Bad Checksum"))
       else
-        pst.str(string(" LCD: Error: Given length was > 32."))
+        pst.str(string(" LCD: Error: Given length was > 32.")) 
 
 PRI set_lcd_size_func | lines        'COMMAND 09
 

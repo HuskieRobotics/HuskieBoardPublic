@@ -40,7 +40,7 @@ PUB main  | strng   ,note
   lcd.putc(lcd#LCD_BL_ON)
   lcd.cursor(0)
   lcd.cls
-  lcd.str(string("Hello? Is anybody   there?"))
+  lcd.str(string("Hello? Is anybody there?"))
   util.wait(5)
   lcd.cls
   lcd.str(string("I don't hate you."))      
