@@ -1,13 +1,15 @@
-Fab Drawing          | Fab.pdf
-Assy Drawing         | Assy.pdf
+Fab Drawing                    | Fab.pdf
+Assy Drawing                   | Assy.pdf
+Fab Array Drawing, no holes    | Fab_1x3A.pdf
+Fab Array Drawing, with holes  | Fab_1x3B.pdf
 
-Top Copper           | RoboRIO Expansion Board V2.GTL
-Bottom Copper        | RoboRIO Expansion Board V2.GBL
-Top Silkscreen       | RoboRIO Expansion Board V2.GTO
-Top Paste            | RoboRIO Expansion Board V2.GTP
-Top Soldermask       | RoboRIO Expansion Board V2.GTS
-Bottom Soldermask    | RoboRIO Expansion Board V2.GBS
-Drill File           | RoboRIO Expansion Board V2.TXT
-Mill Layer           | RoboRIO Expansion Board V2.GML
+Top Copper                     | RoboRIO Expansion Board V2.GTL
+Bottom Copper                  | RoboRIO Expansion Board V2.GBL
+Top Silkscreen                 | RoboRIO Expansion Board V2.GTO
+Top Paste                      | RoboRIO Expansion Board V2.GTP
+Top Soldermask                 | RoboRIO Expansion Board V2.GTS
+Bottom Soldermask              | RoboRIO Expansion Board V2.GBS
+Drill File                     | RoboRIO Expansion Board V2.TXT
+Mill Layer                     | RoboRIO Expansion Board V2.GML
 
-centroid file        | RoboRIO Expansion Board V2_centroid.csv
+centroid file                  | RoboRIO Expansion Board V2_centroid.csv
