@@ -344,8 +344,12 @@ PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLeng
 
       bytefill(@generalBuffer, 0, 251) 'fill the generalBuffer byte array with 0s or else it will show whats leftover from the last display
 
+      'Clear the screen (cannot use the cls method becuase of the 5ms implemented in it)
       lcd.clrln(0)
-      lcd.home
+      lcd.clrln(1)
+      lcd.clrln(2)
+      lcd.clrln(3)
+      lcd.home 
 
 
       messageLength := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
