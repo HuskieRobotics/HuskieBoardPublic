@@ -10,6 +10,7 @@ VAR
    
 OBJ
   pst : "Parallax Serial Terminal"
+  sd : "fsrw"
   
 PUB main | pin
   pst.start(115_200)
@@ -34,9 +35,20 @@ PRI outputPinAndWait(pin)
   dira[pin] := 0
 
 PRI inputPin
+  'TODO: figure out how to even test if all the pins can receive input
   dira := 0
-  
-  pst.bin(ina,32)
+
+PRI writeReadToSD | read_data
+  sd.popen(@test_file, "w")
+  sd.pputs("Testing")
+  sd.pclose
+  sd.popen(@test_file, "r")
+  read_data := sd.pread(7, 7)
+  sd.pclose
+  pst.str(string("Expecting: Testing"))
+  pst.str(string("Got: ")+read_data)
+
 DAT
-name    byte  "string_data",0        
+name    byte  "string_data",0
+test_file byte "Test.txt",0      
         
