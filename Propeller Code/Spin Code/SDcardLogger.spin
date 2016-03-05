@@ -96,7 +96,7 @@ PRI mainLoop | x ,channel
   repeat while !stop       
     'pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
-      if(long[pointer] == string("stop")) 'can i do this? Or is string testing done a different way?
+      if(long[pointer] == string("stop")) 'can i do this? Or is string testing done a different way? THIS WILL NOT WORK!!!!!
         reinit
         return
       lastpointer := long[pointer]

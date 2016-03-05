@@ -164,11 +164,15 @@ pub mount_explicit(DO, CLK, DI, CS) : r | start, sectorspercluster, reserved, ro
 '   Mount a volume.  The address passed in is passed along to the block
 '   layer; see the currently used block layer for documentation.  If the
 '   volume mounts, a 0 is returned, else abort is called.
-}}
+}}              
    if (pdate == 0)
       pdate := constant(((2015-1980) << 25) + (1 << 21) + (1 << 16) + (1 << 11))
-   unmount
-   sdspi.start_explicit(DO, CLK, DI, CS)
+   unmount 
+DIRA[25]~~
+OUTA[25]~~
+   sdspi.start_explicit(DO, CLK, DI, CS)  
+DIRA[24]~~
+OUTA[24]~~
    lastread := -1
    dirty := 0
    sdspi.readblock(0, @buf)
