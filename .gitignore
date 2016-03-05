@@ -1,3 +1,4 @@
+*.lck
 *.s##
 *.s#1
 *.s#2
@@ -29,5 +30,3 @@
 *.l#9
 projects/RoboRio/RoboRioExpansionBoard/eagle.epf
 *.epf
-Propeller Code/tttt.spin
-Propeller Code/Spin Code/dskfjs.spin
