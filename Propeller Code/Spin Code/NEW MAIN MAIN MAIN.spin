@@ -16,8 +16,8 @@ con
         lcd_pin     = 18        'LCD communication pin
         lcd_baud    = 19_200    'LCD communication baudrate
         
-        prop_rx     = 31        'Prop-Plug communication recieve pin
-        prop_tx     = 30        'Prop-Plug communication transmit pin
+        'prop_rx     = 31 'This might be interfering with stuff       'Prop-Plug communication recieve pin
+        'prop_tx     = 30 'This might be interfering with stuff      'Prop-Plug communication transmit pin
         
         eeprom_sda  = 29        'EEPROM data line  -- Transfers data based on clock line
         eeprom_scl  = 28        'EEPROM clock line -- Keeps time to ensure packet viability
@@ -92,11 +92,11 @@ pri init
 
         {NEW ADC DRIVER}
         'adc2.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
-        
+
         {UART CONNECTION DRIVER}
-        uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, led_red, led_ylw, led_grn, fat32time, robodata)
+        uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, led_0, led_1, led_2, fat32time, robodata)
         
         {SD DRIVER}
-        sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
+        'sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
 
                                   

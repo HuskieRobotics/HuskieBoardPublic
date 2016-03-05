@@ -11,19 +11,19 @@ CON
         rxSerialMode = 0'don't invert signal                                                                                                
 
         'Most of these pins will change because of the new board design
-        rxPin = 19 'Expansion board receive pin
-        txPin = 8 'Expansion board transmit pin
+        rxPin = 10 'Expansion board receive pin
+        txPin = 11 'Expansion board transmit pin
 
-        ADC_CS_PIN     = 23
-        ADC_DO_PIN     = 22
-        ADC_DI_PIN     = 21
-        ADC_CLK_PIN    = 20
+        ADC_CS_PIN     = 20
+        ADC_DO_PIN     = 21
+        ADC_DI_PIN     = 23
+        ADC_CLK_PIN    = 22
 
-        adc_CS1     = 23       
-        adc_CS2     = 23       
-        adc_D0      = 22        
-        adc_D1      = 21        
-        adc_CLK     = 20                                                                                                                                 
+        adc_CS1     = 20       
+        adc_CS2     = 19       
+        adc_D0      = 21        
+        adc_D1      = 23        
+        adc_CLK     = 22                                                                                                                                 
                                                                                                                                             
         { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
@@ -61,7 +61,7 @@ VAR
   byte len2, count2
   long  stopSDPointer
   long  neopointer
-  long  LED_RED,LED_YELLOW,LED_GREEN
+  long  LED_GREEN1, LED_GREEN2, LED_GREEN3
   long  timepointer
   long robotData
   
@@ -81,7 +81,7 @@ pst.start(230400)
 repeat x from 0 to 10
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
 return
-PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_RED_,LED_YELLOW_,LED_GREEN_,timepointer_,maintransmission)
+PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_0,LED_1,LED_2,timepointer_,maintransmission)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
@@ -89,9 +89,9 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   baud := baudrate
   lcdbaud := lcdbaud_
   lcdpin := lcdpin_  
-  LED_RED := LED_RED_
-  LED_YELLOW := LED_YELLOW_
-  LED_GREEN := LED_GREEN_
+  LED_GREEN1 := LED_0
+  LED_GREEN2 := LED_1
+  LED_GREEN3 := LED_2
   timepointer := timepointer_
   stopSDPointer := stopSDPointer_
   robotData := maintransmission
@@ -101,14 +101,18 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   'lcd.cls
   'for use in the double buffering system
   buffer := false
-  'neo.init(neopixelPin,64, @neopointer) 
+  'neo.init(neopixelPin,64, @neopointer)   
   cognew(main,@stack)
 PRI main | x, in, errors, y, timetmp , intmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  dira[LED_RED] := true'set red LED to output
-  dira[LED_YELLOW] := true 'set yellow LED to output
+  dira[LED_GREEN1] := true'set red LED to output
+  dira[LED_GREEN2] := true 'set yellow LED to output
   util.wait(1)    'wait for debugging purposes
-  pst.start(115_200)'open debug terminal                  
+  pst.start(115200)'open debug terminal
+
+  repeat
+    pst.str(string("Working")) 'For testing purposes
+                    
   pst.str(string("Program start!",13))
   ''starts the serial object
   'adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the (old) ADC driver object to get analog values
@@ -123,7 +127,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   repeat
     pst.str(string("  Outer loop",13))
     'cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
-    cmd := ser.rx
+    cmd := $10'ser.rx
     pst.str(string("Command: "))
     pst.hex(cmd, 2)
     pst.str(string("; Datapointer: "))
@@ -249,7 +253,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           pst.str(long[globaldatapointer])
           pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time
-          outa[LED_GREEN]:=true'mark that first LED has been set
+          outa[LED_GREEN1]:=true'mark that first LED has been set
           
         else 'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("SD: Error: Bad checksum!",13))
@@ -260,7 +264,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           pst.str(string(13,"Data: "))
           pst.str(@dataPt)
           pst.char(13)
-          outa[LED_RED]:=true
+          outa[LED_GREEN1]:=true
         'longfill(@dataPt,0,64)
 
 PRI set_log_header_func                   'COMMAND 02
@@ -337,7 +341,7 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
         pst.hex(checksum,8)
         pst.char("_")
         pst.hex(checktmp,8)
-        outa[LED_YELLOW] := true    
+        outa[LED_GREEN2] := true    
       pst.char(13)
       
 PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength, clear         'COMMAND 08
@@ -408,6 +412,7 @@ PRI set_lcd_size_func | lines        'COMMAND 09
 
 PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send, count          'COMMAND 10
     original_checksum := ser.rx
+    pst.str(string("Sending them all"))
     if original_checksum == $10
       values := INA 'Get all the digital input vals of the pins as a 4-byte long
       'values := %11110000111100001111000011110000   'For testing correct transmission and checksum
