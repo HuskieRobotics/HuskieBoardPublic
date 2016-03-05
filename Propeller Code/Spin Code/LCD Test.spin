@@ -30,21 +30,30 @@ PUB temp
   G := 230
   Gf := 231
   
-  init(15,19_200,4, @batVolt)
+  init(18,19_200,4, @batVolt)
 PUB init(pin_,baud_,numLines_,batteryVoltagePtr)
-  lcd.init(pin_,baud_,numLines_)
+  ''lcd.init(pin_,baud_,numLines_)
   batVolt := batteryVoltagePtr
   main
-PUB main  | strng   ,note
-  lcd.init(15,19_200,4)
+PUB main  | strng   ,note, char
+  lcd.init(18,19_200,4)
   lcd.putc(lcd#LCD_BL_ON)
   lcd.cursor(0)
   lcd.cls
-  lcd.str(string("Hello? Is anybody there?"))
-  util.wait(5)
+  lcd.str(string("Hello? Is anybody   there?"))
+  waitcnt(cnt+clkfreq)
   lcd.cls
   lcd.str(string("I don't hate you."))      
-  
+
+  char:= 97
+
+repeat
+  lcd.gotoxy(0,2)
+  lcd.putc(char)
+  char:=char+1
+  waitcnt(cnt+clkfreq/4)
+  if char==123
+    char:=97
   'GDGDCDCAfB
   {
   lcd.putc(217)
@@ -95,7 +104,7 @@ PUB main  | strng   ,note
   lcd.putc(B)
   lcd.putc(G)
   lcd.putc(G)
-  lcd.putc(D)    }
+  lcd.putc(D)  '  }
 
   
  

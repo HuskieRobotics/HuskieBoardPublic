@@ -13,7 +13,7 @@ con
         _clkmode    = xtal1 + pll16x                                           'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq    = 5_000_000
         
-        lcd_pin     = 15        'LCD communication pin
+        lcd_pin     = 18        'LCD communication pin
         lcd_baud    = 19_200    'LCD communication baudrate
         
         prop_rx     = 31        'Prop-Plug communication recieve pin
@@ -22,39 +22,44 @@ con
         eeprom_sda  = 29        'EEPROM data line  -- Transfers data based on clock line
         eeprom_scl  = 28        'EEPROM clock line -- Keeps time to ensure packet viability
        
-        adc_CS1     = 23        'To be Defined
-        adc_CS2     = 23        'To be Defined
-        adc_D0      = 22        'To be Defined
-        adc_D1      = 21        'To be Defined
-        adc_CLK     = 20        'To be Defined
+        adc_CS1     = 20        'To be Defined
+        adc_CS2     = 19        'To be Defined
+        adc_D0      = 21        'To be Defined
+        adc_D1      = 23        'To be Defined
+        adc_CLK     = 22        'To be Defined
         
-        gpio_0      = 4         'General Purpose Input Output Pin 0
-        gpio_1      = 5         'General Purpose Input Output Pin 1
-        gpio_2      = 6         'General Purpose Input Output Pin 2
-        gpio_3      = 7         'General Purpose Input Output Pin 3
+        gpio_0      = 14        'General Purpose Input Output Pin 0
+        gpio_1      = 15        'General Purpose Input Output Pin 1
+        gpio_2      = 16        'General Purpose Input Output Pin 2
+        gpio_3      = 17        'General Purpose Input Output Pin 3
         
-        robo_tx     = 19        'RoboRIO Transmit Pin
-        robo_rx     = 8         'RoboRIO Recieve Pin
+        robo_tx     = 11        'RoboRIO Transmit Pin
+        robo_rx     = 10        'RoboRIO Recieve Pin
         
         robo_cs     = 9         'RoboRIO CS Pin
-        robo_clk    = 10        'RoboRIO Clock Pin
-        robo_miso   = 11        'To be Defined
-        robo_mosi   = 12        'To be Defined
-        robo_sda    = 13        'To be Defined
-        robo_scl    = 14        'To be Defined
+        robo_clk    = 8         'RoboRIO Clock Pin
+        robo_miso   = 7         'RoboRIO MISO
+        robo_mosi   = 6         'RoboRIO MOSI
+
+        switch_1    = robo_cs
+        switch_2    = robo_clk
+        switch_3    = robo_miso
+        switch_4    = robo_mosi
         
-        sd_d0       = 1         'SD Card Data 0
-        sd_d1       = 0         'SD Card Data 1
+        robo_sda    = 13        'RoboRIO SDA
+        robo_scl    = 12        'RoboRIO SCL
+        
+        sd_d0       = 5         'SD Card Data 0
+        sd_d1       = 4         'SD Card Data 1
         sd_d2       = 0         'SD Card Data 2
-        sd_d3       = 27        'SD Card Data 3
-        sd_cmd      = 3         'SD Card CMD
-        sd_clk      = 2         'SD Card clock pin
-        sd_detect   = 26        'To be Defined
-        sd_switch   = 24        'To be Defined
-        
-        led_grn     = 18        'Onboard Green LED pin
-        led_ylw     = 17        'Onboard Yellow LED pin
-        led_red     = 16        'Onboard Red LED pin
+        sd_d3       = 1         'SD Card Data 3
+        sd_cmd      = 2         'SD Card CMD
+        sd_clk      = 3         'SD Card clock pin
+
+        led_0       = 24        'Onboard Green LED pin 0
+        led_1       = 25        'Onboard Green LED pin 1
+        led_2       = 26        'Onboard Green LED pin 2
+        led_3       = 27        'Onboard Green LED pin 3
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use
                                 
