@@ -32,6 +32,9 @@ con
         gpio_1      = 15        'General Purpose Input Output Pin 1
         gpio_2      = 16        'General Purpose Input Output Pin 2
         gpio_3      = 17        'General Purpose Input Output Pin 3
+
+        robo_i2c_scl =12
+        robo_i2c_sda =13
         
         robo_tx     = 11        'RoboRIO Transmit Pin
         robo_rx     = 10        'RoboRIO Recieve Pin
@@ -49,13 +52,18 @@ con
         robo_sda    = 13        'RoboRIO SDA
         robo_scl    = 12        'RoboRIO SCL
         
-        sd_d0       = 5         'SD Card Data 0
-        sd_d1       = 4         'SD Card Data 1
-        sd_d2       = 0         'SD Card Data 2
-        sd_d3       = 1         'SD Card Data 3
-        sd_cmd      = 2         'SD Card CMD
-        sd_clk      = 3         'SD Card clock pin
-
+        sd_d0       = 1         'SD Card DO
+        sd_d1       = 0         'SD Card Data 1
+        sd_d2       = 4         'SD Card Data 2      
+        sd_d3       = 5         'SD Card CS
+        sd_cmd      = 3         'SD Card CMD
+        sd_clk      = 2         'SD Card Clock pin
+                           
+        sd_SPI_DO   = sd_d0
+        sd_SPI_CLK  = sd_clk
+        sd_SPI_DI   = sd_cmd
+        sd_SPI_CS   = sd_d3
+        
         led_0       = 24        'Onboard Green LED pin 0
         led_1       = 25        'Onboard Green LED pin 1
         led_2       = 26        'Onboard Green LED pin 2
