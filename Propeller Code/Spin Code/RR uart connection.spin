@@ -23,7 +23,9 @@ CON
         adc_CS2     = 19       
         adc_D0      = 21        
         adc_D1      = 23        
-        adc_CLK     = 22                                                                                                                                 
+        adc_CLK     = 22
+
+        NEOPIXEL_PIN = 14                                                                                                                                
                                                                                                                                             
         { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
@@ -39,7 +41,8 @@ CON
         REQUEST_ALL_DIGITAL_IN  = $10 ' Request current values for all inputs                                                                      
         REQUEST_SINGLE_ANALOG   = $11 ' Request current analog input of a single pin
         REQUEST_ALL_ANALOG      = $12 ' Requests current analog input vals of all ADC pins                                                                                 
-        SET_PIN                 = $13 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it              
+        SET_PIN                 = $13 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it
+        SET_LED_MODE            = $14 ' Sets the LED mode for the neopixels              
        '$13 - $FF reserved                                                                                                                  
                                                                                                                                             
 VAR                                                                                                                                         
@@ -74,6 +77,7 @@ OBJ
   util : "Util"
   'neo : "Neopixel Test 2"
   neo : "Neopixel_demo"
+  leds : "LED Main"
   neoDriver : "Neopixel Driver"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
@@ -117,7 +121,8 @@ PRI main | x, in, errors, y, timetmp , intmp
   ''starts the serial object
   'adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the (old) ADC driver object to get analog values
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_D1,adc_D0)  'New adc driver
-  neoDriver.start(4, 64)
+  neoDriver.start(NEOPIXEL_PIN, 60)
+  leds.start(0, NEOPIXEL_PIN, 60)
   ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
@@ -191,6 +196,9 @@ PRI main | x, in, errors, y, timetmp , intmp
     'command number 0x13 : sets a pin to a value
     elseif cmd == SET_PIN
       set_pin_func
+
+    else if cmd == SET_LED_MODE
+      set_led_mode_func
 
     else
       pst.str(string("Error: invalid command number",14))
@@ -506,6 +514,20 @@ PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transm
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
       return
+
+PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND 14
+
+  mode := ser.rx
+
+  original_checksum := ser.rx
+  calc_checksum := $14 + mode
+
+  if calc_checksum == original_checksum
+    leds.change_mode(mode)
+
+    ser.tx($14)
+    ser.tx($14)
+  
 
 
 dat
