@@ -92,13 +92,11 @@ PRI green_orange_split_func | green, orange, half, red  'MODE: 5
     half := num_leds/2
     repeat half from (num_leds/2) to num_leds
       neo.set(half, orange)
-      'neo.set(half, red)
 
     waitcnt(cnt + clkfreq) 'Wait a second then switch sides
 
     half := 0
     repeat half from 0 to (num_leds/2)-1
-      'neo.set(half, red)
       neo.set(half, orange)
 
     half := num_leds/2
