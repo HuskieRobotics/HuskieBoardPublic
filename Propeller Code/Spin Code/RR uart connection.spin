@@ -11,8 +11,8 @@ CON
         rxSerialMode = 0'don't invert signal                                                                                                
 
         'Most of these pins will change because of the new board design
-        rxPin = 31 'Expansion board receive pin
-        txPin = 30 'Expansion board transmit pin
+        rxPin = 10 'Expansion board receive pin
+        txPin = 11 'Expansion board transmit pin
 
         ADC_CS_PIN     = 20
         ADC_DO_PIN     = 21
@@ -132,7 +132,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   repeat
     pst.str(string("  Outer loop",13))
     'cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
-    cmd := $10'ser.rx
+    cmd := ser.rx
     pst.str(string("Command: "))
     pst.hex(cmd, 2)
     pst.str(string("; Datapointer: "))
