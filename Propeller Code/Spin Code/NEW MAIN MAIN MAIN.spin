@@ -36,8 +36,8 @@ con
         robo_i2c_scl =12
         robo_i2c_sda =13
         
-        robo_tx     = 11        'RoboRIO Transmit Pin
-        robo_rx     = 10        'RoboRIO Recieve Pin
+        robo_tx     = 30'11        'RoboRIO Transmit Pin
+        robo_rx     = 31'10        'RoboRIO Recieve Pin
         
         robo_cs     = 9         'RoboRIO CS Pin
         robo_clk    = 8         'RoboRIO Clock Pin
