@@ -11,8 +11,8 @@ CON
         rxSerialMode = 0'don't invert signal                                                                                                
 
         'Most of these pins will change because of the new board design
-        rxPin = 10 'Expansion board receive pin
-        txPin = 11 'Expansion board transmit pin
+        rxPin = 31 'Expansion board receive pin
+        txPin = 30 'Expansion board transmit pin
 
         ADC_CS_PIN     = 20
         ADC_DO_PIN     = 21
@@ -197,7 +197,7 @@ PRI main | x, in, errors, y, timetmp , intmp
     elseif cmd == SET_PIN
       set_pin_func
 
-    else if cmd == SET_LED_MODE
+    elseif cmd == SET_LED_MODE
       set_led_mode_func
 
     else
