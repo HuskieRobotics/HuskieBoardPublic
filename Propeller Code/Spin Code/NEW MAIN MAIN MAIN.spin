@@ -70,6 +70,7 @@ con
         led_3       = 27        'Onboard Green LED pin 3
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use
+            
                                 
         
 var
@@ -84,8 +85,7 @@ var
 
 obj
         uart    : "RR uart connection"
-        sd      : "SDcardLogger"
-        adc     : "ADC driver"
+        sd      : "SDcardLogger" 
         adc2    : "jm_adc124s021"
 
 pub main
@@ -94,15 +94,13 @@ pub main
 
 
 pri init
-        {OLD ADC DRIVER}
-        'adc.start2pin(adc_di, adc_do, adc_clk, adc_cs, $00FF)   'Start ADC Driver
         'adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
 
         {NEW ADC DRIVER}
         'adc2.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)
 
         {UART CONNECTION DRIVER}
-        uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, led_0, led_1, led_2, fat32time, robodata)
+        uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, fat32time, robodata)
         
         {SD DRIVER}
         'sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}

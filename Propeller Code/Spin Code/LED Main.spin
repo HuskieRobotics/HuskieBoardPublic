@@ -24,8 +24,6 @@ OBJ
 PUB start(startMode, pin, led_num)
   mode := startMode
 
-  pst.start(115200)
-
   num_leds := led_num
   neo.start(pin, led_num)
 

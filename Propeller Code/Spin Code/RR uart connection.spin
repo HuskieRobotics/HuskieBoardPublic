@@ -1,4 +1,4 @@
-{AUTHOR: Lucas Rezac}                                                                                                                       
+ {AUTHOR: Lucas Rezac}                                                                                                                       
 {TITLE: LOG STRING}                                                                                                                         
 {REVISON: 2}                                                                                                                                
 {REVISED BY: Brandon John, Lucas Rezac, Calvin Field}                                                                                                     
@@ -10,22 +10,65 @@ CON
                                                                                                                                             
         rxSerialMode = 0'don't invert signal                                                                                                
 
-        'Most of these pins will change because of the new board design
-        rxPin = 10 'Expansion board receive pin
-        txPin = 11 'Expansion board transmit pin
+        
+        
+        lcd_pin     = 18        'LCD communication pin
+        lcd_baud    = 19_200    'LCD communication baudrate
+        
+        prop_rx     = 31 'This might be interfering with stuff       'Prop-Plug communication recieve pin
+        prop_tx     = 30 'This might be interfering with stuff      'Prop-Plug communication transmit pin
+        
+        eeprom_sda  = 29        'EEPROM data line  -- Transfers data based on clock line
+        eeprom_scl  = 28        'EEPROM clock line -- Keeps time to ensure packet viability
+       
+        adc_CS1     = 20        
+        adc_CS2     = 19        
+        adc_DO      = 21        
+        adc_DI      = 23       
+        adc_CLK     = 22       
+        
+        gpio_0      = 14        'General Purpose Input Output Pin 0
+        gpio_1      = 15        'General Purpose Input Output Pin 1
+        gpio_2      = 16        'General Purpose Input Output Pin 2
+        gpio_3      = 17        'General Purpose Input Output Pin 3
 
-        ADC_CS_PIN     = 20
-        ADC_DO_PIN     = 21
-        ADC_DI_PIN     = 23
-        ADC_CLK_PIN    = 22
+        robo_i2c_scl =12
+        robo_i2c_sda =13
+        
+        robo_tx     = 11        'RoboRIO Transmit Pin
+        robo_rx     = 10        'RoboRIO Recieve Pin
+        
+        robo_cs     = 9         'RoboRIO CS Pin
+        robo_clk    = 8         'RoboRIO Clock Pin
+        robo_miso   = 7         'RoboRIO MISO
+        robo_mosi   = 6         'RoboRIO MOSI
 
-        adc_CS1     = 20       
-        adc_CS2     = 19       
-        adc_D0      = 21        
-        adc_D1      = 23        
-        adc_CLK     = 22
-
-        NEOPIXEL_PIN = 14                                                                                                                                
+        switch_1    = robo_cs
+        switch_2    = robo_clk
+        switch_3    = robo_miso
+        switch_4    = robo_mosi
+        
+        robo_sda    = 13        'RoboRIO SDA
+        robo_scl    = 12        'RoboRIO SCL
+        
+        sd_d0       = 1         'SD Card DO
+        sd_d1       = 0         'SD Card Data 1
+        sd_d2       = 4         'SD Card Data 2      
+        sd_d3       = 5         'SD Card CS
+        sd_cmd      = 3         'SD Card CMD
+        sd_clk      = 2         'SD Card Clock pin
+                           
+        sd_SPI_DO   = sd_d0
+        sd_SPI_CLK  = sd_clk
+        sd_SPI_DI   = sd_cmd
+        sd_SPI_CS   = sd_d3
+        
+        led_0       = 24        'Onboard Green LED pin 0
+        led_1       = 25        'Onboard Green LED pin 1
+        led_2       = 26        'Onboard Green LED pin 2
+        led_3       = 27        'Onboard Green LED pin 3
+        
+        neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use       
                                                                                                                                             
         { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
@@ -64,38 +107,34 @@ VAR
   byte len2, count2
   long  stopSDPointer
   long  neopointer
-  long  LED_GREEN1, LED_GREEN2, LED_GREEN3
   long  timepointer
   long robotData
   
 OBJ 
   ser : "FASTSERIAL-080927"
-  adc : "jm_adc124s021"   'This is the adc driver for the new MXP board design
-  oldADC : "ADC driver"   'This adc driver will only work on the old MXP board
+  adc : "jm_adc124s021"   'This is the adc driver for the new MXP board design       
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
   'neo : "Neopixel Test 2"
-  neo : "Neopixel_demo"
+ ' neo : "Neopixel_demo"
   leds : "LED Main"
-  neoDriver : "Neopixel Driver"
+  'neoDriver : "Neopixel Driver"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(230400)
 repeat x from 0 to 10
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
 return
-PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,LED_0,LED_1,LED_2,timepointer_,maintransmission)
+PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,timepointer_,maintransmission)
 ''sets the global data pointer to the given pointer
   globaldatapointer := dataPointer
   rx := rx_
   tx := tx_         
   baud := baudrate
   lcdbaud := lcdbaud_
-  lcdpin := lcdpin_  
-  LED_GREEN1 := LED_0
-  LED_GREEN2 := LED_1
-  LED_GREEN3 := LED_2
+  lcdpin := lcdpin_
+  
   timepointer := timepointer_
   stopSDPointer := stopSDPointer_
   robotData := maintransmission
@@ -109,8 +148,8 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   cognew(main,@stack)
 PRI main | x, in, errors, y, timetmp , intmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  dira[LED_GREEN1] := true'set red LED to output
-  dira[LED_GREEN2] := true 'set yellow LED to output
+  dira[LED_1] := true'set red LED to output
+  dira[LED_2] := true 'set yellow LED to output
   util.wait(1)    'wait for debugging purposes
   pst.start(115200)'open debug terminal
 
@@ -118,12 +157,12 @@ PRI main | x, in, errors, y, timetmp , intmp
    ' pst.str(string("Working")) 'For testing purposes
                     
   pst.str(string("Program start!",13))
+
+  OUTA[LED_1] := true
   ''starts the serial object
-  'adc.start2pin(ADC_DI_PIN,ADC_DO_PIN,ADC_CLK_PIN,ADC_CS_PIN,$00FF) 'Start the (old) ADC driver object to get analog values
-  adc.start(adc_CS1,adc_CS2,adc_CLK,adc_D1,adc_D0)  'New adc driver
-  neoDriver.start(NEOPIXEL_PIN, 60)
-  leds.start(0, NEOPIXEL_PIN, 60)
-  ser.start(rxPin, txPin, 0, baud) 'start the FASTSERIAL-080927 cog
+  adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
+  leds.start(0, neopixel, 60)
+  ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
   lcd.cursor(0) 'move cursor to beginning,  just in case
@@ -260,7 +299,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           pst.str(long[globaldatapointer])
           pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time
-          outa[LED_GREEN1]:=true'mark that first LED has been set
+          outa[LED_1]:=true'mark that first LED has been set
           
         else 'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("SD: Error: Bad checksum!",13))
@@ -271,7 +310,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           pst.str(string(13,"Data: "))
           pst.str(@dataPt)
           pst.char(13)
-          outa[LED_GREEN1]:=true
+          outa[LED_1]:=true
         'longfill(@dataPt,0,64)
 
 PRI set_log_header_func                   'COMMAND 02
@@ -348,7 +387,7 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
         pst.hex(checksum,8)
         pst.char("_")
         pst.hex(checktmp,8)
-        outa[LED_GREEN2] := true    
+        outa[LED_2] := true    
       pst.char(13)
       
 PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength, clear         'COMMAND 08
