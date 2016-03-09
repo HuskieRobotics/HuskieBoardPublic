@@ -122,7 +122,7 @@ OBJ
   'neoDriver : "Neopixel Driver"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
-pst.start(230400)
+pst.start(115200)
 repeat x from 0 to 10
   pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
 return

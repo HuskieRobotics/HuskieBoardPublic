@@ -12,12 +12,12 @@ CON
         EEPROM_SDA = 29
         EEPROM_SCL = 28
                               
-        JOYSTICK_X_CHANNEL = 2
-        JOYSTICK_Y_CHANNEL = 1
-        SLIDER_CHANNEL     = 0
+        JOYSTICK_X_CHANNEL = 7
+        JOYSTICK_Y_CHANNEL = 6
+        SLIDER_CHANNEL     = 5
 
         LCD_Pin    = 18
-        LCD_Baud   = 19_200                                           
+        LCD_Baud   = 19_200                                             
 
         adc_CS1     = 20        
         adc_CS2     = 19        
@@ -141,7 +141,7 @@ PUB LCD_Main
   lcd.str(string("-----TEAM  3061-----"))'set top line
   lcd.str(string(lcd#LCD_LINE1,"  HUSKIE ROBOTICS!"))  
   lcd.str(string(lcd#LCD_LINE2,"Battery V: "))    
-  lcd.str(string(lcd#LCD_LINE3,"Joystick Y axis: "))
+  lcd.str(string(lcd#LCD_LINE3,"Joystick Y axis:    "))
   waitcnt(cnt+clkfreq/1000)
   lcd.putc(217)
   repeat                                                               
@@ -166,7 +166,8 @@ PRI LCD_Write_Vals
   lcd.str(@battV)                       
   lcd.gotoxy(17,3)         
   'lcd.str(@neoCurrent)
-  lcd.str(str.integerToDecimal(yAxis,3)+1 )    
+  lcd.str(str.integerToDecimal(yAxis,4)+1 )
+  'lcd.str(str.integerToHexadecimal(yAxis, 3))    
   lcd.home
   waitcnt(cnt+clkfreq/10)
 PUB SerialConnection  | cmd, channel, x
@@ -202,11 +203,11 @@ PUB Neopixels
      huskiealt
 
 PRI potentiometer 'speed of display:returns 1-1024, 35 is nominal
-  return adc.in(JOYSTICK_X_CHANNEL)+1
+  return adc.read(JOYSTICK_X_CHANNEL)+1
 PRI slider 'must return 0-255, adc.in returns 0-1023, and is not scaled easily
-  return adc.in(SLIDER_CHANNEL)' /4
+  return adc.read(SLIDER_CHANNEL)' /4
 PRI yAxis
-  return adc.in(JOYSTICK_Y_CHANNEL)
+  return adc.read(JOYSTICK_Y_CHANNEL)
 PRI buttonPressed
   if buttonPressed_
     buttonPressed_ := false
