@@ -15,7 +15,7 @@ CON
 VAR
   byte mode
   byte num_leds
-  long  stack[512]
+  long  stack[100]
 
 OBJ
   neo : "Neopixel Driver"

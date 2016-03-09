@@ -35,8 +35,8 @@ CON
         robo_i2c_scl =12
         robo_i2c_sda =13
         
-        robo_tx     = 11        'RoboRIO Transmit Pin
-        robo_rx     = 10        'RoboRIO Recieve Pin
+        robo_tx     = 10        'RoboRIO Transmit Pin
+        robo_rx     = 11        'RoboRIO Recieve Pin
         
         robo_cs     = 9         'RoboRIO CS Pin
         robo_clk    = 8         'RoboRIO Clock Pin
@@ -157,8 +157,8 @@ PRI main | x, in, errors, y, timetmp , intmp
    ' pst.str(string("Working")) 'For testing purposes
                     
   pst.str(string("Program start!",13))
+  'waitcnt(cnt + clkfreq / 2)
 
-  OUTA[LED_1] := true
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
   leds.start(0, neopixel, 60)
@@ -171,7 +171,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   repeat
     pst.str(string("  Outer loop",13))
     'cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
-    cmd := ser.rx
+    cmd := ser.rxtime(100) 
     pst.str(string("Command: "))
     pst.hex(cmd, 2)
     pst.str(string("; Datapointer: "))
@@ -559,7 +559,7 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
   mode := ser.rx
 
   original_checksum := ser.rx
-  calc_checksum := $14 + mode
+  calc_checksum := ( $14 + mode )& $FF
 
   if calc_checksum == original_checksum
     leds.change_mode(mode)
