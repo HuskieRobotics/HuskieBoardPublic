@@ -2,29 +2,30 @@ CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
         
-        LCD_Pin    = 15
+        LCD_Pin    = 18
         LCD_Baud   = 19_200
-
-        ADC_CS     = 23
-        ADC_DO     = 22
-        ADC_DI     = 21
-        ADC_CLK    = 20
+                         
+        adc_CS1     = 20        
+        adc_CS2     = 19        
+        adc_DO      = 21        
+        adc_DI      = 23       
+        adc_CLK     = 22       
         
 OBJ
   lcd      : "Serial_LCD"
   str      : "String"
-  adc      : "ADC driver"
+  adc      : "jm_adc124s021"
 PUB public_method_name | adcInput
   lcd.init(LCD_PIN,LCD_BAUD,4)
   lcd.backlight(true)   
   lcd.cls
                                                    
-  adc.start2pin(ADC_DI,ADC_DO,ADC_CLK,ADC_CS,$00FF) 'can only use one of these start methods!
-  'adc.start(ADC_DI,ADC_CLK,ADC_CS,$00FF) 'must short together pins 21&22
+  adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)                            
 
   repeat
     lcd.gotoxy(0,0)
     repeat adcInput from 0 to 7
-      lcd.str(str.integerToHexadecimal(adc.in(adcInput),4))  
+      lcd.str(str.integerToHexadecimal(adc.read(adcInput),4))  
       lcd.putc(" ")
-    lcd.str(str.integerToHexadecimal(cnt,8))
+    waitcnt(clkfreq/100+cnt)
+    'lcd.str(str.integerToHexadecimal(cnt,8))

@@ -13,7 +13,7 @@ PUB main
   neo_main.start(5, 14, 60)
                                             
   repeat
-  {
+  
     neo_main.change_mode(0)
     waitcnt(cnt + clkfreq / 2)
     neo_main.change_mode(1)    
@@ -26,4 +26,4 @@ PUB main
     waitcnt(cnt + clkfreq / 2)
     neo_main.change_mode(5)
     waitcnt(cnt + clkfreq / 2)
-    }  
+      

@@ -16,56 +16,65 @@ CON
         JOYSTICK_Y_CHANNEL = 1
         SLIDER_CHANNEL     = 0
 
-        LCD_Pin    = 15
-        LCD_Baud   = 19_200
+        LCD_Pin    = 18
+        LCD_Baud   = 19_200                                           
 
-        ADC_CS     = 23
-        ADC_DO     = 22
-        ADC_DI     = 21
-        ADC_CLK    = 20
+        adc_CS1     = 20        
+        adc_CS2     = 19        
+        adc_DO      = 21        
+        adc_DI      = 23       
+        adc_CLK     = 22       
+                                         
+        GPIO0      = 14        'General Purpose Input Output Pin 0
+        GPIO1      = 15        'General Purpose Input Output Pin 1
+        GPIO2      = 16        'General Purpose Input Output Pin 2
+        GPIO3      = 17        'General Purpose Input Output Pin 3
 
-        GPIO0      = 4
-        GPIO1      = 5
-        GPIO2      = 6
-        GPIO3      = 7
-
-        RRIO_TX    = 19   'so RX on propeller
-        RRIO_RX    = 8
-                              
-        PROP_RRIO_TX = RRIO_RX     'TX from propeller to roborio
-        PROP_RRIO_RX = RRIO_TX     'RX to propeller from roborio
+        RRIO_SCL    = 12
+        RRIO_SDA    = 13
         
-        RRIO_CS    = 9
-        RRIO_CLK   = 10
-        RRIO_MISO  = 11
-        RRIO_MOSI  = 12
-        RRIO_SCL   = 13
-        RRIO_SDA   = 14
+        RRIO_TX     = 11        'RoboRIO Transmit Pin
+        RRIO_RX     = 10        'RoboRIO Recieve Pin
         
-        SD_D2      = 0
-        SD_D3      = 27
-        SD_CMD     = 3
-        SD_CLK     = 2
-        SD_D0      = 1
-        SD_D1      = 0
-        SD_SWTICH  = 24
-        SD_DETECT  = 26
-              
-        SD_CS      = SD_D3
-        SD_DI      = SD_CMD
-        SD_SCLK    = SD_CLK
-        SD_DO      = SD_D0
-                       
-        LED_GREEN  = 18
-        LED_YELLOW = 17
-        LED_RED    = 16
+        RRIO_CS     = 9         'RoboRIO CS Pin
+        RRIO_CLK    = 8         'RoboRIO Clock Pin
+        RRIO_MISO   = 7         'RoboRIO MISO
+        RRIO_MOSI   = 6         'RoboRIO MOSI
 
-        Neo_Pin    = GPIO0
-        Neo_Length = 60
+        switch_1    = RRIO_CS
+        switch_2    = RRIO_CLK
+        switch_3    = RRIO_MISO
+        switch_4    = RRIO_MOSI
+        
+        robo_sda    = 13        'RoboRIO SDA
+        robo_scl    = 12        'RoboRIO SCL
+        
+        sd_d0       = 1         'SD Card DO
+        sd_d1       = 0         'SD Card Data 1
+        sd_d2       = 4         'SD Card Data 2      
+        sd_d3       = 5         'SD Card CS
+        sd_cmd      = 3         'SD Card CMD
+        sd_clk      = 2         'SD Card Clock pin
+                           
+        sd_SPI_DO   = sd_d0
+        sd_SPI_CLK  = sd_clk
+        sd_SPI_DI   = sd_cmd
+        sd_SPI_CS   = sd_d3
+        
+        led_0       = 24        'Onboard Green LED pin 0
+        led_1       = 25        'Onboard Green LED pin 1
+        led_2       = 26        'Onboard Green LED pin 2
+        led_3       = 27        'Onboard Green LED pin 3
+        
+        Neo_Pin     = GPIO0    'Point Neopixel to GPIO Pin 0 -- For ease of use  
+        Neo_Length  = 60
         NUMCHANNELS = 5
 
         batt_loc   = $A8 + 11
         led_loc    = $BC + 13
+                               
+        PROP_RRIO_TX = RRIO_RX     'TX from propeller to roborio
+        PROP_RRIO_RX = RRIO_TX     'RX to propeller from roborio
 VAR
   'stack space            
   long neostack[1000]
@@ -88,7 +97,7 @@ VAR
   byte A, Af, B, C, Cf, D, Df, E, F, Ff, G, Gf 
 OBJ
   lcd           : "serial_lcd"
-  adc           : "ADC driver"
+  adc           : "jm_adc124s021"
   neo           : "Neopixel Driver"    
   ser           : "FullDuplexSerial"
   pst           : "Parallax Serial Terminal"
@@ -108,7 +117,8 @@ PUB init
   Gf := 231
   pst.start(115_200)
   lcd.init(LCD_Pin,LCD_Baud,4)
-  adc.start2pin(ADC_DI, ADC_DO, ADC_CLK, ADC_CS,$00FF)
+  adc.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
+  
   neo.start(Neo_Pin,Neo_Length)
   brightness:=100
   setcolors

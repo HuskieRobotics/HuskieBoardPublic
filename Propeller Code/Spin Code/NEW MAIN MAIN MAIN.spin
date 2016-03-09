@@ -22,11 +22,11 @@ con
         eeprom_sda  = 29        'EEPROM data line  -- Transfers data based on clock line
         eeprom_scl  = 28        'EEPROM clock line -- Keeps time to ensure packet viability
        
-        adc_CS1     = 20        'To be Defined
-        adc_CS2     = 19        'To be Defined
-        adc_D0      = 21        'To be Defined
-        adc_D1      = 23        'To be Defined
-        adc_CLK     = 22        'To be Defined
+        adc_CS1     = 20        
+        adc_CS2     = 19        
+        adc_DO      = 21        
+        adc_DI      = 23       
+        adc_CLK     = 22       
         
         gpio_0      = 14        'General Purpose Input Output Pin 0
         gpio_1      = 15        'General Purpose Input Output Pin 1
@@ -99,7 +99,7 @@ pri init
         'adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
 
         {NEW ADC DRIVER}
-        'adc2.start(adc_cs1,adc_cs2,adc_clk,adc_di,adc_do)
+        'adc2.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)
 
         {UART CONNECTION DRIVER}
         uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, led_0, led_1, led_2, fat32time, robodata)
