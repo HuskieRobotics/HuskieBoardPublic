@@ -161,7 +161,7 @@ PRI main | x, in, errors, y, timetmp , intmp
 
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
-  leds.start(0, neopixel, 60)
+  leds.start(0, neopixel, 119)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
