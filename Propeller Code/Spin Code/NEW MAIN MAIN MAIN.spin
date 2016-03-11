@@ -103,6 +103,10 @@ pri init
         uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, fat32time, robodata)
         
         {SD DRIVER}
-        'sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
+        sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
 
-                                  
+
+        DIRA[led_0 .. led_3] := $F
+        
+        repeat 'LED stuff
+          OUTA[led_0 .. led_3] := INA[robo_MOSI .. robo_MISO]                          

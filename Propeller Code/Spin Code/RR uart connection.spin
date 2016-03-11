@@ -148,8 +148,8 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   cognew(main,@stack)
 PRI main | x, in, errors, y, timetmp , intmp
   'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  dira[LED_1] := true'set red LED to output
-  dira[LED_2] := true 'set yellow LED to output
+  'dira[LED_1] := true'set red LED to output
+  'dira[LED_2] := true 'set yellow LED to output
   util.wait(1)    'wait for debugging purposes
   pst.start(115200)'open debug terminal
 
@@ -299,7 +299,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           pst.str(long[globaldatapointer])
           pst.char(13)
           buffer := !buffer 'switch to use the other buffer next time
-          outa[LED_1]:=true'mark that first LED has been set
+          'outa[LED_1]:=true'mark that first LED has been set
           
         else 'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("SD: Error: Bad checksum!",13))
@@ -310,7 +310,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           pst.str(string(13,"Data: "))
           pst.str(@dataPt)
           pst.char(13)
-          outa[LED_1]:=true
+          'outa[LED_1]:=true
         'longfill(@dataPt,0,64)
 
 PRI set_log_header_func                   'COMMAND 02
@@ -344,8 +344,8 @@ PRI set_sd_file_name_func | x, checktmp    'COMMAND 03
           pst.str(string("SD: Set file name to :"))
           pst.str(sdfilename)
           pst.char(13)
-        else 'if some error occured, turns an LED on pin 15 : ON
-          outa[15]:=true
+        else 
+          'outa[15]:=true  'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("Error setting filename!!!",13,7))
           pst.str(string("Checksum: "))
           pst.hex(checksum,8)
@@ -387,7 +387,7 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
         pst.hex(checksum,8)
         pst.char("_")
         pst.hex(checktmp,8)
-        outa[LED_2] := true    
+        'outa[LED_2] := true    
       pst.char(13)
       
 PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength, clear         'COMMAND 08
