@@ -10,7 +10,7 @@ OBJ
 
   
 PUB main
-  neo_main.start(5, 14, 60)
+  neo_main.start(5, 14, 118)
                                             
   repeat
   

@@ -161,7 +161,7 @@ PRI main | x, in, errors, y, timetmp , intmp
 
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
-  leds.start(0, neopixel, 119)
+  leds.start(5, neopixel, 119)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
@@ -236,12 +236,13 @@ PRI main | x, in, errors, y, timetmp , intmp
     elseif cmd == SET_PIN
       set_pin_func
 
-    elseif cmd == SET_LED_MODE
-      set_led_mode_func
+    'elseif cmd == SET_LED_MODE
+      'set_led_mode_func
 
     else
       pst.str(string("Error: invalid command number",14))
       pst.hex(cmd,8)
+
     
       
       
@@ -566,8 +567,6 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
 
     ser.tx($14)
     ser.tx($14)
-  
-
 
 dat
   tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
