@@ -167,12 +167,8 @@ pub mount_explicit(DO, CLK, DI, CS) : r | start, sectorspercluster, reserved, ro
 }}              
    if (pdate == 0)
       pdate := constant(((2015-1980) << 25) + (1 << 21) + (1 << 16) + (1 << 11))
-   unmount 
-DIRA[25]~~
-OUTA[25]~~
-   sdspi.start_explicit(DO, CLK, DI, CS)  
-DIRA[24]~~
-OUTA[24]~~
+   unmount                                                                               
+   sdspi.start_explicit(DO, CLK, DI, CS)
    lastread := -1
    dirty := 0
    sdspi.readblock(0, @buf)

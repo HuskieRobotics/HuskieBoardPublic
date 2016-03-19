@@ -52,7 +52,7 @@ PUB reinit
   currCogID := cognew(start,@stack)
   return currCogID
 PRI start  | loc
-  dira[LED_YELLOW]:=true'set yellow LED to output
+  'dira[LED_YELLOW]:=true'set yellow LED to output
 ''sets the stop boolean to false (otherwise program will exit immediately)
   stop := false
                                 ''calls the insert card function                   
@@ -110,7 +110,7 @@ PRI mainLoop | x ,channel
       pst.str(long[pointer])
       pst.char(13)
       sd.pflush
-      dira[LED_YELLOW]:=true'set yellow LED to on, signifying one line was written        
+      'dira[LED_YELLOW]:=true'set yellow LED to on, signifying one line was written        
        'set the last pointer
     
   'sd.pclose   

@@ -109,4 +109,4 @@ pri init
         DIRA[led_0 .. led_3] := $F
         
         repeat 'LED stuff
-          OUTA[led_0 .. led_3] := INA[robo_MOSI .. robo_MISO]                          
+          OUTA[led_0 .. led_3] := !INA[robo_MOSI .. robo_CS]                          
