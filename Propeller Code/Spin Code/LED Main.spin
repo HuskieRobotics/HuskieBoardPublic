@@ -81,9 +81,8 @@ PRI set_all_blue_func | blue                            'MODE: 4
   neo.set_all(blue)
 
 PRI blue_orange_split_func | green2, blue, half, orange  'MODE: 5
-   
-  'green2 := neo.colorx(0,255,0,255)
-  orange := neo.colorx(230,92,0,255)
+
+  orange := neo.colorx(255,50,0,255)
   blue := neo.colorx(0,0,255, 255)
    
   half := 0
