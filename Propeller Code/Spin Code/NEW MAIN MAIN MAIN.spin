@@ -85,7 +85,7 @@ var
 
 obj
         uart    : "RR uart connection"
-        sd      : "SDcardLogger" 
+        'sd      : "SDcardLogger" 
         adc2    : "jm_adc124s021"
         leds    : "LED Main"
 
@@ -107,7 +107,7 @@ pri init
         uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, fat32time, robodata)
         
         {SD DRIVER}
-        sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
+        'sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
 
         
         DIRA[led_0 .. led_3] := $F

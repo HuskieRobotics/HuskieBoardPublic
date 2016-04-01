@@ -116,10 +116,8 @@ OBJ
   pst : "Parallax Serial Terminal"
   lcd : "Serial_Lcd"                
   util : "Util"
-  'neo : "Neopixel Test 2"
- ' neo : "Neopixel_demo"
   leds : "LED Main"
-  'neoDriver : "Neopixel Driver"
+  sd   : "fsrw"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
@@ -152,6 +150,8 @@ PRI main | x, in, errors, y, timetmp , intmp
   'dira[LED_2] := true 'set yellow LED to output
   util.wait(1)    'wait for debugging purposes
   pst.start(115200)'open debug terminal
+  pst.str(string("Start"))
+  sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS)
 
   'repeat
    ' pst.str(string("Working")) 'For testing purposes
@@ -170,6 +170,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   'RECIEVING CODE
   repeat
     pst.str(string("  Outer loop",13))
+    pst.char(13)
     'cmd := ser.rxtime(100)    'get the command (The first byte of whats is being sent)
     cmd := ser.rxtime(100) 
     pst.str(string("Command: "))
@@ -264,6 +265,9 @@ PRI give_data_func | x, checktmp
 
     
 PRI write_data_func | x, checktmp     ' COMMAND 01
+
+      pst.str(string("Write Data"))
+      pst.char(13)
       
       pst.str(string("cmd == 1",13))
    
@@ -296,6 +300,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         
         if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt   'set the data to write to the sd to the new data
+          sd.pputs(@dataPt)
           pst.str(string("SD: Line written: "))     
           pst.str(long[globaldatapointer])
           pst.char(13)
@@ -342,6 +347,7 @@ PRI set_sd_file_name_func | x, checktmp    'COMMAND 03
         if checksum == checktmp
           bytemove(sdfilename,@filedata, length-3)
           byte[sdfilename+length-3] := 0 'set the end of the string
+          sd.popen(sdfilename, "a")
           pst.str(string("SD: Set file name to :"))
           pst.str(sdfilename)
           pst.char(13)
@@ -359,6 +365,7 @@ PRI close_log_func                   'COMMAND 04
     long[globaldatapointer] := string("stop") 'the sd card logger will recognize new data, see that it is a string "stop",
                                                ' and call it's "reinit" function. That will wipe the filename, and setfilename
                                                'function will have to be called again.
+    sd.pclose
 PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
       checksum:=SET_TIME  'originally checksum:=cmd

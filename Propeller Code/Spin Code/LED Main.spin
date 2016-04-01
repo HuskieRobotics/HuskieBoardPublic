@@ -20,7 +20,6 @@ VAR
 
 OBJ
   neo : "Neopixel Driver"
-  pst : "Parallax Serial Terminal"
 
 PUB start(startMode, pin, led_num) | white
   mode := startMode
@@ -31,11 +30,10 @@ PUB start(startMode, pin, led_num) | white
 
   cognew(main,@stack)
 
-PRI main
-  pst.start(115200)      
+PRI main      
 
   repeat 'Main loop      
-    pst.str(string("Loop")) 
+
     if mode == ALL_OFF           'MODE: 0
       led_off_func
       
