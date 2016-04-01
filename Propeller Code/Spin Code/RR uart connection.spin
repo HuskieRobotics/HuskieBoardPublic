@@ -161,7 +161,7 @@ PRI main | x, in, errors, y, timetmp , intmp
 
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
-  leds.start(5, neopixel, 119)
+  'leds.start(5, neopixel, 119)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
@@ -563,7 +563,7 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
   calc_checksum := ( $14 + mode )& $FF
 
   if calc_checksum == original_checksum
-    leds.change_mode(mode)
+    'leds.change_mode(mode)
 
     ser.tx($14)
     ser.tx($14)

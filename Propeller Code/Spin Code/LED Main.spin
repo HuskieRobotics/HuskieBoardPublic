@@ -93,6 +93,7 @@ PRI blue_orange_split_func | green2, blue, half, orange  'MODE: 5
   repeat half from (num_leds/2) to num_leds
     neo.set(half, orange)
  
-
+ ' repeat
+ '   waitcnt(cnt-1)
   
   
