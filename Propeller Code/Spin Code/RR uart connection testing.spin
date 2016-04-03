@@ -117,6 +117,7 @@ OBJ
   lcd : "Serial_Lcd"                
   util : "Util"
   leds : "LED Main"
+  sd   : "fsrw"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
@@ -149,7 +150,8 @@ PRI main | x, in, errors, y, timetmp , intmp, count
   'dira[LED_2] := true 'set yellow LED to output
   util.wait(1)    'wait for debugging purposes
   pst.start(115200)'open debug terminal
-  pst.str(string("Start"))
+  pst.str(string("Waiting for sd card"))
+  sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) 'Sets up the sd card
 
   'repeat
    ' pst.str(string("Working")) 'For testing purposes
@@ -170,8 +172,9 @@ PRI main | x, in, errors, y, timetmp , intmp, count
   repeat
     pst.str(string("  Outer loop",13))
     pst.char(13)
-   'get the command (The first byte of whats is being sent)
-    cmd := ser.rxtime(100)
+   
+    cmd := ser.rxtime(100) 'get the command (The first byte of whats is being sent)      
+                            
      
     pst.str(string("Command: "))
     pst.hex(cmd, 2)
@@ -179,8 +182,6 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
 
-    'if cmd == REQUEST_ALL_DIGITAL_IN
-     ' pst.str(string(" Sending all digital input vals "))
       
   '  command number 0 : Send basic data
     if cmd == GIVE_DATA
@@ -300,6 +301,9 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         
         if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt   'set the data to write to the sd to the new data
+          
+          sd.pputs(@dataPt)
+          sd.pflush
 
           pst.str(string("SD: Line written: "))     
           pst.str(long[globaldatapointer])
@@ -321,10 +325,10 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
 
 PRI set_log_header_func                   'COMMAND 02
       pst.str(string("Error: set_log_header_func function isn't finished yet!"))
-      return
+      return   
       
 PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
-
+                  
       pst.str(string("cmd == 3",13))
     ' length of string
       length := ser.rx 
@@ -336,20 +340,25 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
       ' depending on the buffer value                                                                                                                          
         repeat x from 0 to length-4
         
-          filedata[x] := ser.rx
+          'filedata[x] := ser.rx
+          byte[@filename+x] := ser.rx
         ' 
         ' updates the checksum value
-          checksum+=filedata[x]                          
+          checksum+=byte[@filename+x]
+                                   
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
         checktmp := ser.rx  
         'checksum //= 256 'mod 256 to calculate checksum
         if checksum == checktmp
-          bytemove(sdfilename,@filedata, length-3)
-          byte[sdfilename+length-3] := 0 'set the end of the string
+          'bytemove(sdfilename,@filedata, length-3)
+          'byte[sdfilename+length-3] := 0 'set the end of the string
+          
+          pst.str(@filename)
+          sd.popen(@filename, "a")
           
           pst.str(string("SD: Set file name to :"))
-          pst.str(sdfilename)
+          pst.str(filedata)
           pst.char(13)
         else 
           'outa[15]:=true  'if some error occured, turns an LED on pin 15 : ON
@@ -365,6 +374,7 @@ PRI close_log_func                   'COMMAND 04
     long[globaldatapointer] := string("stop") 'the sd card logger will recognize new data, see that it is a string "stop",
                                                ' and call it's "reinit" function. That will wipe the filename, and setfilename
                                                'function will have to be called again.
+    sd.pclose
     
 PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
@@ -574,6 +584,7 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
 
     ser.tx($14)
     ser.tx($14)
-
+                                                                       
 dat
   tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
+  filename byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 'Will contain the name of the file (cannot be longer than this many zeros minus 1)

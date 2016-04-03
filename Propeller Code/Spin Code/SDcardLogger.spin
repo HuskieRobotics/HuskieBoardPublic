@@ -23,7 +23,7 @@ VAR
 OBJ
   sd : "fsrw"     
   pst : "Parallax Serial Terminal"
-  
+  stringutils : "String"
   
 PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,timepointer_) | insert_card
   DO := d0
@@ -96,7 +96,7 @@ PRI mainLoop | x ,channel
   repeat while !stop       
     'pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
-      if(long[pointer] == string("stop")) 'can i do this? Or is string testing done a different way? THIS WILL NOT WORK!!!!!
+      if(stringutils.stringCompareCS(@pointer, string("stop"))==0) 'edit: used string util method instead of ==.'can i do this? Or is string testing done a different way? THIS WILL NOT WORK!!!!!
         reinit
         return
       lastpointer := long[pointer]
