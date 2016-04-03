@@ -1,5 +1,6 @@
 {AUTHOR: Calvin Field}
-{PURPOSE: Will control the LED's on the robot. The mode/patterns will be changed through the UART connection}
+{PURPOSE: Will control the LED's on the robot. The mode/patterns will be changed through the UART connection
+        Is in separate cog as to not interfere with other board functions}
 
 CON                                                                                                                                         
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz           
@@ -10,13 +11,12 @@ CON
         ALL_RED       = 2
         ALL_GREEN     = 3
         ALL_BLUE      = 4
-        GREEN
-        BLUE_ORANGE  = 5
+        BLUE_ORANGE   = 5
 
 VAR
   byte mode
   byte num_leds
-  long  stack[200]
+  long  stack[150]
 
 OBJ
   neo : "Neopixel Driver"
@@ -59,22 +59,22 @@ PUB change_mode(newMode)
 PUB get_mode
   return mode
 
-PRI led_off_func                                        'MODE: 0
+PRI led_off_func                                         'MODE: 0
   neo.off
   
-PRI set_all_white_func | white                          'MODE: 1
+PRI set_all_white_func | white                           'MODE: 1
   white := neo.colorx(255,255,255, 100)
   neo.set_all(white)
 
-PRI set_all_red_func | red                              'MODE: 2
+PRI set_all_red_func | red                               'MODE: 2
   red := neo.colorx(255,0,0, 100)
   neo.set_all(red)
 
-PRI set_all_green_func | green1, blue                          'MODE: 3
+PRI set_all_green_func | green1, blue                    'MODE: 3
   green1 := neo.colorx(0,255,0,100)
   neo.set_all(green)
 
-PRI set_all_blue_func | blue                            'MODE: 4
+PRI set_all_blue_func | blue                             'MODE: 4
   blue := neo.colorx(0,0,255,100)
   neo.set_all(blue)
 
@@ -90,8 +90,4 @@ PRI blue_orange_split_func | green2, blue, half, orange  'MODE: 5
   half := num_leds/2
   repeat half from (num_leds/2) to num_leds
     neo.set(half, orange)
- 
- ' repeat
- '   waitcnt(cnt-1)
-  
   
