@@ -117,7 +117,8 @@ OBJ
   lcd : "Serial_Lcd"                
   util : "Util"
   leds : "LED Main"
-  sd   : "fsrw"
+  'sd   : "fsrw"
+  sd   : "SD Controller"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
@@ -291,7 +292,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
       ' it to either data1 or data2,
       ' depending on the buffer value                                                                                                                                  
         repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
-          byte[dataPt+x] := ser.rx  'get next byte to log, store in buffer
+          byte[@dataPt+x] := ser.rx  'get next byte to log, store in buffer
         ' updates the checksum value
           checksum+=byte[dataPt+x]
         byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
@@ -302,9 +303,8 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         if checksum == checktmp 'is the checksum correct?
           long[globaldatapointer] := dataPt   'set the data to write to the sd to the new data
           
-          sd.pputs(@dataPt)
-          sd.pflush
-
+          sd.write(dataPt)
+          
           pst.str(string("SD: Line written: "))     
           pst.str(long[globaldatapointer])
           pst.char(13)
@@ -587,4 +587,4 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
                                                                        
 dat
   tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
-  filename byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 'Will contain the name of the file (cannot be longer than this many zeros minus 1)
+  filename      byte 0,0,0,0,0,0,".txt",0  'The file will be a text file (max length of name is 6 chars, check FAT32 limitations)          

@@ -49,6 +49,7 @@ PUB main | x
 
     if function == WRITE_DATA
       sd.pputs(data_to_write) 'Write the data to the open file
+      sd.pflush
 
       repeat x from 0 to 256        'Reset what is to be written
         byte[@data_to_write+x] := 0
@@ -61,14 +62,14 @@ PUB main | x
 
       function := 0 'Reset the function
 
-PRI openFile(name)
+PUB openFile(name)
   filename := name
   function := 1
 
-PRI write(data)
+PUB write(data)
   data_to_write := data
   function := 2
 
-PRI closeFile
+PUB closeFile
   function := 3
     

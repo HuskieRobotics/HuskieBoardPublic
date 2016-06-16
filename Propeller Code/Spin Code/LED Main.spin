@@ -72,7 +72,7 @@ PRI set_all_red_func | red                               'MODE: 2
 
 PRI set_all_green_func | green1, blue                    'MODE: 3
   green1 := neo.colorx(0,255,0,100)
-  neo.set_all(green)
+  neo.set_all(green1)
 
 PRI set_all_blue_func | blue                             'MODE: 4
   blue := neo.colorx(0,0,255,100)
