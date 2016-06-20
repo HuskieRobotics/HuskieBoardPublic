@@ -284,7 +284,7 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         
         'pst.str(string("SD: Length:" ))
         'pst.dec(length)
-        checksum := WRITE_DATA+length         'originally cmd+length
+        checksum := WRITE_DATA +length         'originally cmd+length
         'ser.rx
       ' gets all the string data and stores
       ' it to either data1 or data2,

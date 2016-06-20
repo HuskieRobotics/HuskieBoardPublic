@@ -1,4 +1,5 @@
 {AUTHOR: Calvin Field}
+{Tests the functionality of SD Controller}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
@@ -17,25 +18,16 @@ CON
         sd_SPI_DI   = sd_cmd
         sd_SPI_CS   = sd_d3    
 OBJ
-  sd : "SD Controller"
-  pst : "Parallax Serial Terminal"
-
+  sd      : "SD Controller"
+  util    : "Util"
 PUB main
-  pst.start(115200)
-
+  
   sd.start(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS)
-  pst.str(string("Started logger"))
-  pst.char(13)
+  util.wait(1)
   sd.openFile(@file1)
-  pst.str(string("Opened file"))
-  pst.char(13)
-  sd.write(@data1)
-  pst.str(string("Wrote Data"))
-  pst.char(13)
+  sd.writeData(@data1)
   sd.closeFile
-  pst.str(string("Closed file"))
-  pst.char(13)
 DAT
-  file1    byte  "TESTER1.txt",0
-  data1    byte  "Boi, it works, maybe.",0
+  file1    byte  "TESTER.txt",0            
+  data1    byte  "Hi there!",13,0
               

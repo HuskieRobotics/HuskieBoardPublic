@@ -1,26 +1,19 @@
 {AUTHOR: Calvin Field}
-{PURPOSE: Will control sd card functions on a different cog
-          Must be on a different cog becuase all other code is suspended if an sd card is not mounted}
-
+{This is basically a passthrough object for the fsrw object
+This is needed because the mounting of the sd card needs to be on a separate cog}
 
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
 
-        OPEN_FILE  = 1
-        WRITE_DATA = 2
-        CLOSE_FILE = 3
 
 VAR
   byte sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS
-  byte function
-  long stack[300]
-  byte filename[13]
-  byte data_to_write[256]
-   
+  long stack[100]
+  
 OBJ
   sd      : "fsrw"
-  
+  pst     : "Parallax Serial Terminal" 
 PUB start(sd_do, sd_clk, sd_di, sd_cs)
 
   'All the pins for the sd card
@@ -29,47 +22,19 @@ PUB start(sd_do, sd_clk, sd_di, sd_cs)
   sd_SPI_DI  := sd_di
   sd_SPI_CS  := sd_cs
 
-  cognew(main, @stack)
-  
-PUB main | x
+  pst.start(115200)
+
+  cognew(mounter, @stack)
+
+PRI mounter
   sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) 'waits for the sd card to be mounted and sets up the pins
-
+  pst.str(string("Mounted!"))
+PUB openFile(filePt)
+  sd.popen(filePt, "a")
   
-  repeat
-    x := 0 
+PUB writeData(datPt)
+  sd.pputs(datPt)
+  sd.pflush
   
-    if function == OPEN_FILE
-      sd.popen(filename, "a") 'Open the file
-      
-      repeat x from 0 to 13         'Reset the file name
-        byte[@filename+x] := 0
-        
-      function := 0 'Reset the fucntion
-      
-
-    if function == WRITE_DATA
-      sd.pputs(data_to_write) 'Write the data to the open file
-      sd.pflush
-
-      repeat x from 0 to 256        'Reset what is to be written
-        byte[@data_to_write+x] := 0
-
-      function := 0 'Reset the function
-    
-
-    if function == CLOSE_FILE
-      sd.pclose   'Close the currently opened file
-
-      function := 0 'Reset the function
-
-PUB openFile(name)
-  filename := name
-  function := 1
-
-PUB write(data)
-  data_to_write := data
-  function := 2
-
 PUB closeFile
-  function := 3
-    
+  sd.pclose                           
