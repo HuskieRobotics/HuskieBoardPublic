@@ -84,8 +84,8 @@ var
 
 
 obj
-        'uart    : "RR uart connection"
-        uart    : "RR uart connection testing"
+        uart    : "RR uart connection"
+        'uart    : "RR uart connection testing"
         sd      : "SDcardLogger" 
         adc2    : "jm_adc124s021"
         leds    : "LED Main"
@@ -99,7 +99,7 @@ pri init
         'adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
 
         {NeoPixel Driver}
-        leds.start(5, 14, 111)                            
+        'leds.start(5, 14, 111)                            
 
         {UART CONNECTION DRIVER}
         uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, fat32time, robodata)

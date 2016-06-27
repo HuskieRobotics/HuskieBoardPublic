@@ -97,8 +97,9 @@ VAR
   long  lcdbaud                 'LCD baudrate                                                                                               
   byte  lcdpin                  'pointer to location of the 'toLog' buffer                                                                  
   long  cmd, length                                                                                                                         
-  byte  data1[256], data2[256]  'toLog buffer
-  long  sdfilename              'pointer to the location of the filename to write to the sd
+  byte  writeData[256]'toLog buffer
+  'long  sdfilename              'pointer to the location of the filename to write to the sd
+  byte sdfilename[256]
   byte  filedata[256]
   byte  generalBuffer[251]
   byte  buffer
@@ -117,6 +118,7 @@ OBJ
   lcd : "Serial_Lcd"                
   util : "Util"
   leds : "LED Main"
+  sd   : "SD Controller"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
@@ -159,11 +161,13 @@ PRI main | x, in, errors, y, timetmp , intmp, count
 
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
-  'leds.start(5, neopixel, 119)
+  leds.start(5, neopixel, 119)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
   lcd.cls 'clears LCD screen
   lcd.cursor(0) 'move cursor to beginning,  just in case
+
+  sd.start(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) 'Start the logger, this automatically mounts the sd card
   
   'RECIEVING CODE
   count := 0
@@ -172,6 +176,10 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     pst.char(13)
    'get the command (The first byte of whats is being sent)
     cmd := ser.rxtime(100)
+
+    ''pst.str(string("File Name:"))
+    ''pst.str(@sdfilename)
+    ''pst.char(13)
      
     pst.str(string("Command: "))
     pst.hex(cmd, 2)
@@ -237,8 +245,8 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     elseif cmd == SET_PIN
       set_pin_func
 
-    'elseif cmd == SET_LED_MODE
-      'set_led_mode_func
+    elseif cmd == SET_LED_MODE
+      set_led_mode_func
 
     else
       pst.str(string("Error: invalid command number",14))
@@ -266,47 +274,30 @@ PRI give_data_func | x, checktmp
     
 PRI write_data_func | x, checktmp     ' COMMAND 01
 
-      pst.str(string("Write Data"))
-      pst.char(13)
-      
-      pst.str(string("cmd == 1",13))
-   
-      length := ser.rx   ' length of string to log to the file, inclueds cmd, len, and checksum bytes
-      
-      ' invalid packet if length is greater than 250
-      if length =< 250
-
-       ' switches to the data buffer that wasn't used last
-        if buffer
-          dataPt := @data1
-        else
-          dataPt := @data2        
-        
-        'pst.str(string("SD: Length:" ))
-        'pst.dec(length)
-        checksum := WRITE_DATA +length         'originally cmd+length
-        'ser.rx
-      ' gets all the string data and stores
-      ' it to either data1 or data2,
-      ' depending on the buffer value                                                                                                                                  
-        repeat x from 0 to length-4 'get all data bytes, but don't get cmd, len, or checksum
-          byte[dataPt+x] := ser.rx  'get next byte to log, store in buffer
+      length := ser.rx 
+      checksum := cmd+length  'set base of checksum
+    ' tests if the length is less than 250
+      if length < 250                                                                                                                         
+        repeat x from 0 to length-1
+          byte[@writeData+x] := ser.rx
+        ' 
         ' updates the checksum value
-          checksum+=byte[dataPt+x]
-        byte[dataPt+length-3]:= 0 'set end to 0 so that the string doesn't also write data from previous time  
-      ' checks the sum against the given length
-      ' if it is bad, then doesn't save the 0
-        checktmp := ser.rx  'get the checksum          
-        
+          checksum+= byte[@writeData+x]
+          
+        pst.str(string("Recieved Data: "))
+        pst.str(@writeData)
+        pst.char(13)
+
+        checktmp := ser.rx
+         
         if checksum == checktmp 'is the checksum correct?
-          long[globaldatapointer] := dataPt   'set the data to write to the sd to the new data
+
+          sd.writeData(@writeData)
 
           pst.str(string("SD: Line written: "))     
-          pst.str(long[globaldatapointer])
+          pst.str(@writeData)
           pst.char(13)
-          buffer := !buffer 'switch to use the other buffer next time
-          'outa[LED_1]:=true'mark that first LED has been set
-          
+        
         else 'if some error occured, turns an LED on pin 15 : ON
           pst.str(string("SD: Error: Bad checksum!",13))
           pst.str(string("Checksum should be "))
@@ -319,6 +310,9 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
           'outa[LED_1]:=true
         'longfill(@dataPt,0,64)
 
+        'Clear the data buffer
+        bytefill(@writeData, 0, 256)
+
 PRI set_log_header_func                   'COMMAND 02
       pst.str(string("Error: set_log_header_func function isn't finished yet!"))
       return
@@ -330,26 +324,29 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
       length := ser.rx 
       checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
-      if length < 250
-      ' gets all the string data and stores
-      ' it to either data1 or data2,
-      ' depending on the buffer value                                                                                                                          
-        repeat x from 0 to length-4
-        
-          filedata[x] := ser.rx
+      if length < 250                                                                                                                         
+        repeat x from 0 to length-1
+          byte[@sdfilename+x] := ser.rx
         ' 
         ' updates the checksum value
-          checksum+=filedata[x]                          
+          checksum+= byte[@sdfilename+x]
+          
+        pst.str(string("Received name:"))
+        pst.str(@sdfilename)
+        pst.char(13)
+        
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
         checktmp := ser.rx  
         'checksum //= 256 'mod 256 to calculate checksum
         if checksum == checktmp
-          bytemove(sdfilename,@filedata, length-3)
-          byte[sdfilename+length-3] := 0 'set the end of the string
+          'bytemove(sdfilename,@filedata, length-3)
+          byte[@sdfilename+length] := 0 'set the end of the string
+
+          sd.openFile(@sdfilename)
           
           pst.str(string("SD: Set file name to :"))
-          pst.str(sdfilename)
+          pst.str(@sdfilename)
           pst.char(13)
         else 
           'outa[15]:=true  'if some error occured, turns an LED on pin 15 : ON
@@ -358,14 +355,18 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
           pst.hex(checksum,8)
           pst.str(string(", Expected: "))
           pst.hex(checktmp,8)
+          
+        'Clear the filename buffer
+        bytefill(@sdfilename, 0, 256) 
 
 PRI close_log_func                   'COMMAND 04
       'pst.str(string("Error: close_log_func function isn't finished yet!"))
       'return
-    long[globaldatapointer] := string("stop") 'the sd card logger will recognize new data, see that it is a string "stop",
+    'long[globaldatapointer] := string("stop") 'the sd card logger will recognize new data, see that it is a string "stop",
                                                ' and call it's "reinit" function. That will wipe the filename, and setfilename
                                                'function will have to be called again.
-    
+       sd.closeFile
+                                               
 PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
       checksum:=SET_TIME  'originally checksum:=cmd
@@ -570,7 +571,7 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
   calc_checksum := ( $14 + mode )& $FF
 
   if calc_checksum == original_checksum
-    'leds.change_mode(mode)
+    leds.change_mode(mode)
 
     ser.tx($14)
     ser.tx($14)

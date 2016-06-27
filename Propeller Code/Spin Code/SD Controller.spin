@@ -13,7 +13,7 @@ VAR
   
 OBJ
   sd      : "fsrw"
-  pst     : "Parallax Serial Terminal" 
+
 PUB start(sd_do, sd_clk, sd_di, sd_cs)
 
   'All the pins for the sd card
@@ -22,13 +22,10 @@ PUB start(sd_do, sd_clk, sd_di, sd_cs)
   sd_SPI_DI  := sd_di
   sd_SPI_CS  := sd_cs
 
-  pst.start(115200)
-
   cognew(mounter, @stack)
 
 PRI mounter
   sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) 'waits for the sd card to be mounted and sets up the pins
-  pst.str(string("Mounted!"))
 PUB openFile(filePt)
   sd.popen(filePt, "a")
   

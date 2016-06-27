@@ -118,7 +118,7 @@ OBJ
   util : "Util"
   leds : "LED Main"
   'sd   : "fsrw"
-  sd   : "SD Controller"
+  'sd   : "SD Controller"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
@@ -152,7 +152,6 @@ PRI main | x, in, errors, y, timetmp , intmp, count
   util.wait(1)    'wait for debugging purposes
   pst.start(115200)'open debug terminal
   pst.str(string("Waiting for sd card"))
-  sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) 'Sets up the sd card
 
   'repeat
    ' pst.str(string("Working")) 'For testing purposes
