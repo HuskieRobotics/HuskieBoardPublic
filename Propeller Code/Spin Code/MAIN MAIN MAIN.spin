@@ -1,3 +1,5 @@
+{!!!DEPRECATED!!!!!}
+{!!USE NEW MAIN MAIN MAIN!!}
 {AUTHOR: Lucas Rezac}
 {REVISION: 1}
 {REVISED BY: Brandon John, Bennett Johnson}                                                          

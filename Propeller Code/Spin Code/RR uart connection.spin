@@ -101,7 +101,7 @@ VAR
   'long  sdfilename              'pointer to the location of the filename to write to the sd
   byte sdfilename[256]
   byte  filedata[256]
-  byte  generalBuffer[251]
+  byte  generalBuffer[251] 
   byte  buffer
   byte  rx, tx
   byte  checksum
@@ -167,7 +167,10 @@ PRI main | x, in, errors, y, timetmp , intmp, count
   lcd.cls 'clears LCD screen
   lcd.cursor(0) 'move cursor to beginning,  just in case
 
+  pst.str(string("Mounting SD card...",13))
   sd.start(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) 'Start the logger, this automatically mounts the sd card
+  pst.str(string("SD card mounted successfully!",13))
+  
   
   'RECIEVING CODE
   count := 0
@@ -180,81 +183,109 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     ''pst.str(string("File Name:"))
     ''pst.str(@sdfilename)
     ''pst.char(13)
-     
-    pst.str(string("Command: "))
-    pst.hex(cmd, 2)
-    pst.str(string("; Datapointer: "))
+             
+    {pst.str(string("Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
-    pst.char(13)
+    pst.char(13)   }
 
-    'if cmd == REQUEST_ALL_DIGITAL_IN
-     ' pst.str(string(" Sending all digital input vals "))
-      
+    
   '  command number 0 : Send basic data
     if cmd == GIVE_DATA
-                         
+      printcmd             
       give_data_func
       
     'command number 1 : Recieve and write data
     elseif cmd == WRITE_DATA
-    
+      printcmd
       write_data_func
 
     'command number 2 : Set log header
     elseif cmd == SET_LOG_HEADER
-    
+      printcmd
       set_log_header_func
     
     'command number 3 : Set SD save file name
     elseif cmd == SET_SD_FILE_NAME
-    
+      printcmd
       set_sd_file_name_func
 
     'command number 4 : close log file, prepare for next log file
     elseif cmd == CLOSE_LOG
-
+      printcmd
       close_log_func
     
     'command number 5 : sets time
     elseif cmd == SET_TIME
-
+      printcmd
       set_time_func
 
     'command number 8 : sets lcd display
     elseif cmd == SET_LCD_DISP
+      printcmd
       set_lcd_disp_func             
       
     'command number 9  : sets lcd size
     elseif cmd == SET_LCD_SIZE
-
+      printcmd
       set_lcd_size_func
 
     'command number 0x10 : request all inputs
     elseif cmd == REQUEST_ALL_DIGITAL_IN
+      printcmd
       request_all_digitalin_func
 
     'command number 0x11 : request analogue inputs
     elseif cmd == REQUEST_SINGLE_ANALOG
+      printcmd
       request_single_analog_func
 
      'command number 0x12 : request analogue inputs
     elseif cmd == REQUEST_ALL_ANALOG
+      printcmd
       request_all_analog_func
 
     'command number 0x13 : sets a pin to a value
     elseif cmd == SET_PIN
+      printcmd
       set_pin_func
 
     elseif cmd == SET_LED_MODE
+      printcmd
       set_led_mode_func
-
+      
     else
       pst.str(string("Error: invalid command number",14))
       pst.hex(cmd,8)
-
-    
-      
-      
+PRI printcmd
+    pst.str(string("cmd == "))
+    pst.hex(cmd,8)
+    pst.char(13)
+PRI recieve_string(strptr,errorMsg,maxlength) | x,checktmp
+    length := ser.rx
+    checksum := cmd+length
+    if maxlength and length < maxlength
+      repeat x from 0 to length-1
+        byte[@strptr+x] := ser.rx
+        checksum += byte[@strptr+x]
+       
+      checktmp := ser.rx
+       
+      if checksum == checktmp
+        return true
+      else
+        pst.str(@errorMsg)
+        pst.str(string(13,"Bad checksum!",13))
+        pst.str(string("Checksum should be "))
+        pst.dec(checksum)
+        pst.str(string(", found: "))
+        pst.dec(checktmp)       
+        pst.str(string(13,"Data: "))
+        pst.str(@writeData)
+        pst.char(13)
+        return false
+    else
+      pst.str(string("Error: length recieved was longer than given max length",13))
+      return false
 PRI give_data_func | x, checktmp
     byte[robotData+0] := ser.rx      'LED Brightness  
     byte[robotData+1] := ser.rx      'Battery Voltage
@@ -274,7 +305,7 @@ PRI give_data_func | x, checktmp
     
 PRI write_data_func | x, checktmp     ' COMMAND 01
 
-      length := ser.rx 
+      {length := ser.rx 
       checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
       if length < 250                                                                                                                         
@@ -291,42 +322,33 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         checktmp := ser.rx
          
         if checksum == checktmp 'is the checksum correct?
-
+       }
+       if recieve_string(writeData,string("Error writing data to SD!"),256)
           sd.writeData(@writeData)
-
           pst.str(string("SD: Line written: "))     
           pst.str(@writeData)
           pst.char(13)
-        
-        else 'if some error occured, turns an LED on pin 15 : ON
-          pst.str(string("SD: Error: Bad checksum!",13))
-          pst.str(string("Checksum should be "))
-          pst.dec(checksum)
-          pst.str(string(", found: "))
-          pst.dec(checktmp)       
-          pst.str(string(13,"Data: "))
-          pst.str(@dataPt)
-          pst.char(13)
-          'outa[LED_1]:=true
-        'longfill(@dataPt,0,64)
-
-        'Clear the data buffer
-        bytefill(@writeData, 0, 256)
-
-PRI set_log_header_func                   'COMMAND 02
-      pst.str(string("Error: set_log_header_func function isn't finished yet!"))
-      return
       
-PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
+        'Clear the data buffer
+      bytefill(@writeData, 0, 256)
 
-      pst.str(string("cmd == 3",13))
+PRI set_log_header_func               'COMMAND 02                    
+    bytefill(@filedata, 0, 256)
+    if recieve_string(filedata,string("Error setting SD log header!"),256)
+      pst.str(string("New log header recieved: "))
+      pst.str(@filedata)
+      pst.char(13)
+      sd.setHeader(@filedata)
+      bytefill(@filedata, 0, 256)    
+PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
+                                    
     ' length of string
-      length := ser.rx 
+      {length := ser.rx 
       checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
       if length < 250                                                                                                                         
         repeat x from 0 to length-1
-          byte[@sdfilename+x] := ser.rx
+          byte[@sdfilename+x]sd := ser.rx
         ' 
         ' updates the checksum value
           checksum+= byte[@sdfilename+x]
@@ -339,8 +361,11 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
       ' if it is bad, then doesn't save the packet
         checktmp := ser.rx  
         'checksum //= 256 'mod 256 to calculate checksum
+
         if checksum == checktmp
-          'bytemove(sdfilename,@filedata, length-3)
+
+        }  'bytemove(sdfilename,@filedata, length-3)
+        if recieve_string(sdfilename,string("Error setting SD file name!"),250)
           byte[@sdfilename+length] := 0 'set the end of the string
 
           sd.openFile(@sdfilename)
@@ -348,13 +373,7 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
           pst.str(string("SD: Set file name to :"))
           pst.str(@sdfilename)
           pst.char(13)
-        else 
-          'outa[15]:=true  'if some error occured, turns an LED on pin 15 : ON
-          pst.str(string("Error setting filename!!!",13,7))
-          pst.str(string("Checksum: "))
-          pst.hex(checksum,8)
-          pst.str(string(", Expected: "))
-          pst.hex(checktmp,8)
+        
           
         'Clear the filename buffer
         bytefill(@sdfilename, 0, 256) 
@@ -366,6 +385,7 @@ PRI close_log_func                   'COMMAND 04
                                                ' and call it's "reinit" function. That will wipe the filename, and setfilename
                                                'function will have to be called again.
        sd.closeFile
+       pst.str(string("SD card file was closed."))
                                                
 PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
@@ -453,8 +473,7 @@ PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLeng
         pst.str(string(" LCD: Error: Given length was > 32.")) 
 
 PRI set_lcd_size_func | lines        'COMMAND 09
-
-      pst.str(string("cmd == 9",13))
+                                         
 
       lcd.finalize
 
