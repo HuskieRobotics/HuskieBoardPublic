@@ -79,7 +79,9 @@ PRI start  | loc
     if not lookup(byte[loc]:"\","/",":","?","*","<",">","|",34) == 0   'double quote is 34
       byte[loc]:="_"
   sd.popen(datfilename,"a")       'append to the file, not worrying if it already exists.
- 
+  'this writes a line break to the file, for a new match
+  sd.pputc(13)
+  sd.pputc(10)
     
   'pst.str(string("Starting main loop!"))
   
