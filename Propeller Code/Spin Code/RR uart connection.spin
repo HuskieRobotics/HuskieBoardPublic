@@ -305,7 +305,7 @@ PRI give_data_func | x, checktmp
     
 PRI write_data_func | x, checktmp     ' COMMAND 01
 
-      {length := ser.rx 
+      length := ser.rx 
       checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
       if length < 250                                                                                                                         
@@ -322,12 +322,17 @@ PRI write_data_func | x, checktmp     ' COMMAND 01
         checktmp := ser.rx
          
         if checksum == checktmp 'is the checksum correct?
-       }
+          sd.writeData(@writeData)
+          pst.str(string("SD: Line written: "))     
+          pst.str(@writeData)
+          pst.char(13)
+       {
        if recieve_string(writeData,string("Error writing data to SD!"),256)
           sd.writeData(@writeData)
           pst.str(string("SD: Line written: "))     
           pst.str(@writeData)
           pst.char(13)
+          }
       
         'Clear the data buffer
       bytefill(@writeData, 0, 256)
@@ -343,12 +348,12 @@ PRI set_log_header_func               'COMMAND 02
 PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
                                     
     ' length of string
-      {length := ser.rx 
+      length := ser.rx 
       checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
       if length < 250                                                                                                                         
         repeat x from 0 to length-1
-          byte[@sdfilename+x]sd := ser.rx
+          byte[@sdfilename+x] := ser.rx
         ' 
         ' updates the checksum value
           checksum+= byte[@sdfilename+x]
@@ -363,17 +368,21 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
         'checksum //= 256 'mod 256 to calculate checksum
 
         if checksum == checktmp
-
-        }  'bytemove(sdfilename,@filedata, length-3)
-        if recieve_string(sdfilename,string("Error setting SD file name!"),250)
           byte[@sdfilename+length] := 0 'set the end of the string
-
           sd.openFile(@sdfilename)
-          
           pst.str(string("SD: Set file name to :"))
           pst.str(@sdfilename)
           pst.char(13)
-        
+
+          'bytemove(sdfilename,@filedata, length-3)
+          {
+        if recieve_string(sdfilename,string("Error setting SD file name!"),250)
+          byte[@sdfilename+length] := 0 'set the end of the string
+          sd.openFile(@sdfilename)
+          pst.str(string("SD: Set file name to :"))
+          pst.str(@sdfilename)
+          pst.char(13)
+           }
           
         'Clear the filename buffer
         bytefill(@sdfilename, 0, 256) 
