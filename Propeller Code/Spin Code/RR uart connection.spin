@@ -74,7 +74,7 @@ CON
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
         WRITE_DATA              = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
         SET_LOG_HEADER          = $02 ' Set log header                                                                                             
-        SET_SD_FILE_NAME        = $03 ' Set SD log title                                                                                           
+        SET_SD_FILE_NAME        = $03 ' Set SD log filename/opens file                                                                                           
         CLOSE_LOG               = $04 ' Close log file, prepare for next log file                                                                  
         SET_TIME                = $05 ' Set current time                                                                                           
        '$06 - $07 reserved                                                                                                                  
