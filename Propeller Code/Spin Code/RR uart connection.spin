@@ -85,7 +85,8 @@ CON
         REQUEST_SINGLE_ANALOG   = $11 ' Request current analog input of a single pin
         REQUEST_ALL_ANALOG      = $12 ' Requests current analog input vals of all ADC pins                                                                                 
         SET_PIN                 = $13 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it
-        SET_LED_MODE            = $14 ' Sets the LED mode for the neopixels              
+        SET_LED_MODE            = $14 ' Sets the LED mode for the neopixels
+        SET_LED_RBG             = $15 ' Sets the LEDs to a custom RGB value           
        '$13 - $FF reserved                                                                                                                  
                                                                                                                                             
 VAR                                                                                                                                         
@@ -599,7 +600,23 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
   calc_checksum := ( $14 + mode )& $FF
 
   if calc_checksum == original_checksum
+    leds.start_modes
     leds.change_mode(mode)
+
+    ser.tx($14)
+    ser.tx($14)
+
+PRI set_led_rgb | r,g,b, original_checksum, calc_checksum               'COMMAND 15
+  r := ser.rx
+  g := ser.rx
+  b := ser.rx
+
+  original_checksum := ser.rx
+  calc_checksum := ($15 + r + g + b) & $FF
+
+  if calc_checksum == original_checksum
+    leds.stop_modes
+    leds.set_all(r,g,b)
 
     ser.tx($14)
     ser.tx($14)

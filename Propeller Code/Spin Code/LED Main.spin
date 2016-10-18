@@ -15,6 +15,9 @@ CON
 
 VAR
   byte mode
+  byte stop_mode
+  byte r,g,b  'These are the rgb values to manually change the colors
+  byte level  'This is the intensity of the custom rgb vals
   byte num_leds
   long  stack[150]
 
@@ -30,27 +33,34 @@ PUB start(startMode, pin, led_num) | white
 
   cognew(main,@stack)
 
-PRI main      
-
+PRI main | custom     
+  stop_mode := 1
+  r := 255
+  g := 255
+  b := 255
+  level := 100
   repeat 'Main loop      
-
-    if mode == ALL_OFF           'MODE: 0
-      led_off_func
+    if stop_mode == 1
+      if mode == ALL_OFF           'MODE: 0
+        led_off_func
       
-    elseif mode == ALL_WHITE     'MODE: 1
-      set_all_white_func
+      elseif mode == ALL_WHITE     'MODE: 1
+        set_all_white_func
 
-    elseif mode == ALL_RED       'MDDE: 2
-      set_all_red_func
+      elseif mode == ALL_RED       'MDDE: 2
+        set_all_red_func
 
-    elseif mode == ALL_GREEN     'MODE: 3
-      set_all_green_func
+      elseif mode == ALL_GREEN     'MODE: 3
+        set_all_green_func
 
-    elseif mode == ALL_BLUE      'MDOE: 4
-      set_all_blue_func
+      elseif mode == ALL_BLUE      'MDOE: 4
+        set_all_blue_func
 
-    elseif mode == BLUE_ORANGE  'MODE: 5
-      blue_orange_split_func
+      elseif mode == BLUE_ORANGE   'MODE: 5
+        blue_orange_split_func
+    else
+      custom := neo.colorx(r,g,b, level)
+      neo.set_all(custom)
     
 
 PUB change_mode(newMode)
@@ -58,6 +68,17 @@ PUB change_mode(newMode)
 
 PUB get_mode
   return mode
+PUB stop_modes
+  stop_mode := 0
+PUB start_modes
+  stop_mode := 1
+PUB set_all(newR,newG,newB) 'Will only display this custom set RGB value if modes are stopped
+  r := newR
+  g := newG
+  b := newB
+PUB set_intensity(newI)
+  level := newI
+  
 
 PRI led_off_func                                         'MODE: 0
   neo.off
@@ -90,4 +111,5 @@ PRI blue_orange_split_func | green2, blue, half, orange  'MODE: 5
   half := num_leds/2
   repeat half from (num_leds/2) to num_leds
     neo.set(half, orange)
+
   
