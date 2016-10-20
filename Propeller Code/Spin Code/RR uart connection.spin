@@ -86,8 +86,9 @@ CON
         REQUEST_ALL_ANALOG      = $12 ' Requests current analog input vals of all ADC pins                                                                                 
         SET_PIN                 = $13 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it
         SET_LED_MODE            = $14 ' Sets the LED mode for the neopixels
-        SET_LED_RBG             = $15 ' Sets the LEDs to a custom RGB value           
-       '$13 - $FF reserved                                                                                                                  
+        SET_LED_RBG             = $15 ' Sets the LEDs to a custom RGB value
+        SET_LED_INTENSITY       = $16 ' Sets the LEDs brightness intensity (0-100)    
+       '$17 - $FF reserved                                                                                                                  
                                                                                                                                             
 VAR                                                                                                                                         
   long  stack[512]                                                                                                                          
@@ -253,6 +254,12 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     elseif cmd == SET_LED_MODE
       printcmd
       set_led_mode_func
+
+    elseif cmd == SET_LED_RGB
+      printcmd
+      set_led_rgb_func
+
+    elseif cmd == SET_LED_INTENSITY
       
     else
       pst.str(string("Error: invalid command number",14))
@@ -602,11 +609,12 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
   if calc_checksum == original_checksum
     leds.start_modes
     leds.change_mode(mode)
+  else
+    pst.str(string("Error: in function set_led_mode_func: Bad checksum!"))
+    return
 
-    ser.tx($14)
-    ser.tx($14)
 
-PRI set_led_rgb | r,g,b, original_checksum, calc_checksum               'COMMAND 15
+PRI set_led_rgb_func | r,g,b, original_checksum, calc_checksum               'COMMAND 15
   r := ser.rx
   g := ser.rx
   b := ser.rx
@@ -617,9 +625,24 @@ PRI set_led_rgb | r,g,b, original_checksum, calc_checksum               'COMMAND
   if calc_checksum == original_checksum
     leds.stop_modes
     leds.set_all(r,g,b)
+  else
+    pst.str(string("Error: in function set_led_rgb_func: Bad checksum!"))
+    return
 
-    ser.tx($14)
-    ser.tx($14)
+
+PRI set_led_intensity_func | intensity, original_checksum, calc_checksum     'COMMAND 16
+  intensity := ser.rx
+
+  original_checksum := ser.rx
+  calc_checksum := ($15 + intensity) & $FF
+
+  if calc_checksum == original_checksum
+    leds.stop_modes
+    leds.set_intensity(intensity)
+  else
+    pst.str(string("Error: in function set_led_intensity_func: Bad checksum!"))
+    return
+  
 
 dat
   tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
