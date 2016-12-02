@@ -86,7 +86,7 @@ var
 obj
         uart    : "RR uart connection"
         'uart    : "RR uart connection testing"
-        d      : "SDcardLogger" 
+        sd      : "SDcardLogger" 
         adc2    : "jm_adc124s021"
         leds    : "LED Main"
 

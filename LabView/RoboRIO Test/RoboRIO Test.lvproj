@@ -553,6 +553,7 @@ AddOutputFilter chunkFilter
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="GetAllAnalogInputVals.vi" Type="VI" URL="../../MXP Main Log Loop Stuff/GetAllAnalogInputVals.vi"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -567,6 +568,8 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="packet types.ctl" Type="VI" URL="../../Old code/packet types.ctl"/>
 			<Item Name="Send Packet.vi" Type="VI" URL="../Send Packet.vi"/>
+			<Item Name="StringToBitArray.vi" Type="VI" URL="../../MXP Main Log Loop Stuff/StringToBitArray.vi"/>
+			<Item Name="SumStringOfBytes.vi" Type="VI" URL="../../MXP Main Log Loop Stuff/SumStringOfBytes.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
