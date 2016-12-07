@@ -91,7 +91,7 @@ PRI main | x, in, errors, y, timetmp , intmp
   pst.start(115_200)'open debug terminal                  
   pst.str(string("Program start!",13))
   ''starts the serial object
-  rx_serial_fast.start(rx,0,baud) 'start the rxSerialHSLP_11 cog
+  rx_serial_fast.start(rx,rxSerialMode,baud) 'start the rxSerialHSLP_11 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines
   lcd.cls 'clears LCD screen
   lcd.cursor(0) 'move cursor to beginning,  just in case
@@ -99,10 +99,9 @@ PRI main | x, in, errors, y, timetmp , intmp
   'RECIEVING CODE
   repeat
     pst.str(string("  Outer loop",13))
-    cmd := rx_serial_fast.rxtime(100)    'get the command
-    pst.str(string("Command: "))
+    cmd := rx_serial_fast.rxtime(100)    'get the command  
     pst.dec(cmd)
-    pst.str(string("; Datapointer: "))
+    pst.str(string("Datapointer: "))
     pst.hex(long[globaldatapointer], 8)
     pst.char(13)
   '  command number 0 : Send basic data
@@ -368,15 +367,15 @@ PRI request_all_func                 'COMMAND 10
 PRI request_analog_func              'COMMAND 11
     pst.str(string("Error: request_analog_func function isn't finished yet!"))
     return
-PRI set_pin_func | data, pin, value, checksum2                    'COMMAND 12
+PRI set_pin_func | data, pin, value, checksum                    'COMMAND 12
 
     data := rx_serial_fast.rx
     value := data >> 3
     pin := data & %111
-    checksum2 := rx_serial_fast.rx
+    checksum := rx_serial_fast.rx
 
-    if checksum2 == $10
-      value
+    if checksum == $10
+       'now what.
 
     else
       pst.str(string("Error: in function set_pin_func: checksum is wrong!"))

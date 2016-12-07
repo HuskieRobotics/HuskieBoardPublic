@@ -94,8 +94,8 @@ PUB main
   longfill(@datFileName,0,32)        
 
   'starts analogue to digital converter
-  'adc.start2pin(ADC_DI,ADC_DO,ADC_CLK,ADC_CS,$00FF)
-  'adcpointer := adc.pointer
+  adc.start2pin(ADC_DI,ADC_DO,ADC_CLK,ADC_CS,$00FF)
+  adcpointer := adc.pointer
   'starts the string logger            
   RR_UART.init(PROP_RRIO_RX,PROP_RRIO_TX,460_800,@sdpointer,@datFileName,LCD_Pin,LCD_Baud, @stop,NEOPIXEL,LED_RED,LED_YELLOW,LED_GREEN,@FAT32Time,@robotData)
   'starts the sd card
@@ -103,7 +103,7 @@ PUB main
   sd.init(27,25,0,1,@sdpointer,@datFileName,adcpointer, @stop,@FAT32Time)
           'SD_DO,SD_SCLK,SD_DI,SD_CS
 
- ' dipSwitchLEDs
+  dipSwitchLEDs
 CON 'constants for the dipSwitchLED code.
   DIP1 = RRIO_CS
   DIP2 = RRIO_CLK
