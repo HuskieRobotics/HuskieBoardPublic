@@ -1,10 +1,23 @@
+
+
+
+
+
 {
 Author: Bennett Johnson
 Revision #: *
 Revised by: *
+
+Name: Main
+
+Packet Types
+$00ff: does something
+
 }
+
+
 con
-        _clkmode    = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
+        _clkmode    = xtal1 + pll16x                                           'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq    = 5_000_000
         
         lcd_pin     = 15        'LCD communication pin
@@ -50,7 +63,36 @@ con
         led_red     = 16        'Onboard Red LED pin
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use
+                                
         
 var
+    byte datfilename[256]   'SD File name long -- only 255 bytes long
+    byte stop               'Stop byte
+    byte robodata[8]        'Data Transmitted by robot
+    long sdpointer          'Pointer to SD Driver
+    long adcpointer         'Pointer to ADC Driver
+    long lcdpointer         'Pointer to LCD Driver
+    long fat32time          'Time for data file
+
+
 obj
-pub
+
+
+pub main
+        longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty second byte
+        init                            'Initialize all drives
+
+
+pri init
+        {ADC DRIVER}
+        adc.start2pin(adc_di, adc_do, adc_clk, adc_cs, $00FF)   'Start ADC Driver
+        adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
+        
+        {UART CONNECTION DRIVER}
+        uart.init(robo_rx, robo_tx, 460_800, )
+        
+        {SD DRIVER}
+        sd.init(20
+        7, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
+
+  
