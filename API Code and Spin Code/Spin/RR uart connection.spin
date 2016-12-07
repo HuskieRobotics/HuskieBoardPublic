@@ -163,6 +163,7 @@ PRI main | x, in, errors, y, timetmp , intmp, count
 
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
+  'adc.start(adc_CS2,adc_CS1,adc_CLK,adc_DI,adc_DO)'This is for testing
   leds.start(5, neopixel, 119)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcdpin,lcdbaud,4) 'default lcd size is 4 lines 
@@ -558,36 +559,43 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
       'Could put this in a loop
       'adc.unitTestStart 'Use this for testing the old adc driver
       adc.setArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
-       
-      byte[@tempdata+0] := adc.readArray(0)>>4           
-      byte[@tempdata+1] := (adc.readArray(0)& $00f)<<4             'Fill in the second half of the byte first
-      byte[@tempdata+1] := byte[@tempdata+1] | adc.readArray(1)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+2] := adc.readArray(1) & $ff
       
-      byte[@tempdata+3] := adc.readArray(2)>>4
-      byte[@tempdata+4] := (adc.readArray(2)& $00f)<<4             'Fill in the second half of the byte first 
-      byte[@tempdata+4] := byte[@tempdata+4] | adc.readArray(3)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+5] := adc.readArray(3) & $ff
+      byte[@tempdata+0] := adc.read(0)>>4           
+      byte[@tempdata+1] := (adc.read(0)& $00f)<<4             'Fill in the second half of the byte first
+      byte[@tempdata+1] := byte[@tempdata+1] | adc.read(1)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+2] := adc.read(1) & $ff
+                                   
+      byte[@tempdata+3] := adc.read(2)>>4
+      byte[@tempdata+4] := (adc.read(2)& $00f)<<4             'Fill in the second half of the byte first 
+      byte[@tempdata+4] := byte[@tempdata+4] | adc.read(3)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+5] := adc.read(3) & $ff
 
-      byte[@tempdata+6] := adc.readArray(4)>>4
-      byte[@tempdata+7] := (adc.readArray(4)& $00f)<<4             'Fill in the second half of the byte first 
-      byte[@tempdata+7] := byte[@tempdata+7] | adc.readArray(5)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+8] := adc.readArray(5) & $ff
+      byte[@tempdata+6] := adc.read(4)>>4
+      byte[@tempdata+7] := (adc.read(4)& $00f)<<4             'Fill in the second half of the byte first 
+      byte[@tempdata+7] := byte[@tempdata+7] | adc.read(5)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+8] := adc.read(5) & $ff
 
-      byte[@tempdata+9] := adc.readArray(6)>>4
-      byte[@tempdata+10] := (adc.readArray(6)& $00f)<<4              'Fill in the second half of the byte first 
-      byte[@tempdata+10] := byte[@tempdata+10] | adc.readArray(7)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+11] := adc.readArray(7) & $ff
+      byte[@tempdata+9] := adc.read(6)>>4
+      byte[@tempdata+10] := (adc.read(6)& $00f)<<4              'Fill in the second half of the byte first 
+      byte[@tempdata+10] := byte[@tempdata+10] | adc.read(7)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+11] := adc.read(7) & $ff
 
       ser.tx($12)
       new_checksum := $12 'Initialize the checksum as the command byte so the final checksum is calculated correctly
       
       'Send the 12 bytes in the array that was filled above
+      pst.str(string("Sending Raw ADC Vals"))
+      pst.char(13)
+      count := 0
       repeat 12
-        new_checksum := new_checksum+byte[count+@tempdata]
-        ser.tx(byte[count+@tempdata])
-        count++                                          
-      ser.tx(new_checksum) 
+        new_checksum := new_checksum+byte[@tempdata+count]       
+        ser.tx(byte[@tempdata+count])
+
+        count++
+                                         
+      ser.tx(new_checksum)
+
+
     else
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
