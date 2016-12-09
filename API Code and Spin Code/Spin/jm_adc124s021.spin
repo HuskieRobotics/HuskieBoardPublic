@@ -61,11 +61,11 @@ pub start(cs1pin, cs2pin, sckpin, dipin, dopin)
 pub setArray | count
     count := 0
     repeat 8
-      long[@ins+count] := read(count)
+      long[@ins+count*4] := read(count)
       count++    
 
 pub readArray(ch)
-    return long[@ins+ch]
+    return long[@ins+ch*4]
  
 pub read(ch) | ctrlbits, adcval
 

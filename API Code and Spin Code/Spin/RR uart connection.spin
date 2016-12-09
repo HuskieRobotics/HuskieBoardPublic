@@ -557,8 +557,7 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
     ' 'Go through all adc pins and add them to values
     ' 'Look at software spec sheet command 12 for more info
       'Could put this in a loop
-      'adc.unitTestStart 'Use this for testing the old adc driver
-      adc.setArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
+      'adc.setArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
       
       byte[@tempdata+0] := adc.read(0)>>4           
       byte[@tempdata+1] := (adc.read(0)& $00f)<<4             'Fill in the second half of the byte first
