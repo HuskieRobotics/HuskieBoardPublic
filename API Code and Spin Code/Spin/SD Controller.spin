@@ -37,7 +37,6 @@ PUB openFile(filePt)
     abort
   fileOpen := true
   sd.popen(filePt, "a")
-  sd.pputs(@header)
   
 PUB writeData(datPt)
   sd.pputs(datPt)
