@@ -55,28 +55,32 @@ CON
   num_data_bytes = 100
 
 VAR
-  byte writeData[100] 'Logs 100bytes of data to the SD card
-  byte readData[100] 'Where the read data will be stored from the SD card
+  byte dataBuffer[101] 'Buffer for data to send to the SD card
 
 OBJ
-  adc : "jm_adc124s021"
-  pst : "Parallax Serial Terminal"
-  lcd : "Serial_Lcd"                
-  util : "Util"
-  sd   : "SD Controller"
+  adc   : "jm_adc124s021"
+  pst   : "Parallax Serial Terminal"
+  lcd   : "Serial_Lcd"                
+  util  : "Util"
+  sd    : "SD Controller"
+  main  : "main"
   
 PUB init
-  pst.start(115200)
-  adc.start(adc_1, adc_2, adc_clk, adc_di, adc_do)
-  sd.start(sd_do, sd_clk, sd_di, sd_d3) 'Start the logger, this automatically mounts the sd card
-  main
+  if byte[@testAlreadyPassed] == 0  ' Test program has not yet passed, so run the tester
+    pst.start(115200)
+    adc.start(adc_1, adc_2, adc_clk, adc_di, adc_do)
+    sd.start(sd_do, sd_clk, sd_di, sd_d3) 'Start the logger, this automatically mounts the sd card
+    tester
+  else     ' Run the normal script
+    main.main
 
-PRI main
+PRI tester   : pass
 '''If any of these tests fail, the whole board fails!'''
-
+    pass := $FF
+    
     'Test SD card
-    SD_Test
-
+    pass &= SD_Test
+    
     'Test ADC voltages
     ADC_Test
 
@@ -86,26 +90,35 @@ PRI main
     'Test the dip switches and the built in LEDs 
     DIP_Test
 
-PRI SD_Test | x
+    ' TODO: If passed everything, save to EEPROM, indicate on lights 
+PRI SD_Test : pass | x
   '''Write 100 bytes of data, and verify,
   ''' and then write the same 100 bytes inverted, and read that back with verify.
+  ''' Return $FF for success, $00 for failure
 
+  pass := $FFFFFFFF
+  bytefill(@dataBuffer, 0, 101)
   sd.openFile(@sdFileName)
   
   'Fill byte array with vals from 0 to 99
   repeat x from 0 to 99
-    byte[@writeData+x] := x
+    byte[@dataBuffer+x] := x+32 'Start writing with the " " character
 
-  sd.writeData(@writeData) 'Write the data to the SD card
+  sd.writeData(@dataBuffer) 'Write the data to the SD card
   sd.closeFile
 
+  bytefill(@dataBuffer, 0, 101)
+  
   'Read from the file and verify what was written
-  sd.openFile(@sdFileName)
+  sd.readFile(@sdFileName)
 
   'Read data to the readData buffer
-  sd.readData(readData, num_data_bytes)
+  sd.readData(@dataBuffer, num_data_bytes)
 
-  '''THIS FUNC IS NOT FINISHED!'''
+  repeat x from 0 to 99
+    pass &= !( byte[@dataBuffer+x] ^ (x+32) )
+  
+  '''THIS FUNC IS NOT TESTED!'''
 
   
 
@@ -116,4 +129,8 @@ PRI GPIO_Test
 PRI DIP_Test
 
 DAT
-sdFileName    byte "TestLog.txt",0 'Name of test SD file
+sdFileName              byte "TestLog.txt",0 'Name of test SD file
+testAlreadyPassed       byte 0  ' Stored in EEPROM
+                                ' When the value is 0 on boot, it will run the test program.
+                                ' When not 0, it will run the main script.
+                                ' The test program will set it to a non 0 value once it passes.
