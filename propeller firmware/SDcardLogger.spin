@@ -35,10 +35,10 @@ PUB init(d0, clk1, di1, cs1,datpointer,savefilename,adcpointer_,stopPointer_,tim
   stopPointer := stopPointer_
   timepointer := timepointer_
   stop := false  
-  'pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
+  pst.startrxtx(-1,4,0,115_200) 'transmit on GPIO0
 ''sets this programs pointer to the given data pointer
   pointer := datpointer
-  'pst.str(string("SD card works!",13))
+  pst.str(string("SD card works!",13))
 ''creates new cog
   currCogID := cognew(start,@stack)
   return currCogID
@@ -57,13 +57,13 @@ PRI start  | loc
   stop := false
                                 ''calls the insert card function                   
   repeat while \sd.mount_explicit(DO,CLK,DI,CS) < 0 ''wait until card is inseted, using the abort catch
-    'pst.str(string("Waiting for mount_explicit to return true!",13))
-  'pst.str(string("Mounted SD!",13))         
+    pst.str(string("Waiting for mount_explicit to return true!",13))
+  pst.str(string("Mounted SD!",13))         
 ''sets the last pointer
   lastpointer := 0
 
   repeat while long[datfilename] == 0 and long[pointer] == 0 'don't continue until we know the name of the file, or we are starting to have data to log
-    'pst.str(string("Waiting for packet or file name",13))
+    pst.str(string("Waiting for packet or file name",13))
 
   
   'setting current date:      
@@ -81,7 +81,7 @@ PRI start  | loc
   sd.popen(datfilename,"a")       'append to the file, not worrying if it already exists.
  
     
-  'pst.str(string("Starting main loop!"))
+  pst.str(string("Starting main loop!"))
   
   mainLoop
   
@@ -90,7 +90,7 @@ PRI mainLoop | x ,channel
 
   
   repeat while !stop       
-    'pst.str(string("Pointer testing...........................",13))
+    pst.str(string("Pointer testing...........................",13))
     if long[pointer] <> lastpointer  'is there new data to write?
       if(stringutils.stringCompareCS(@pointer, string("stop"))==0) 'edit: used string util method instead of ==.'can i do this? Or is string testing done a different way? THIS WILL NOT WORK!!!!!
         reinit
@@ -102,7 +102,7 @@ PRI mainLoop | x ,channel
         sdDec(word[adcpointer+channel])'word[pointer+channel] )
         
       sd.pputs(string(13,10))
-      'pst.str(string("Wrote data :"))
+      pst.str(string("Wrote data :"))
       pst.str(long[pointer])
       pst.char(13)
       sd.pflush
@@ -113,7 +113,7 @@ PRI mainLoop | x ,channel
 PUB end ''stops program
   sd.pclose
   stop := true
-  'pst.str(string("Stopped!"))
+  pst.str(string("Stopped!"))
 PUB setFileName(filename)  ''sets the file name. Defaults to test.txt.
   datFileName := filename
 
