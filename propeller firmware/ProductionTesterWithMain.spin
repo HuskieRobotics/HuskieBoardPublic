@@ -38,7 +38,7 @@ CON
   adc_2 =        19
   adc_1 =        20
   adc_do =       21
-  adc_clk =     22
+  adc_clk =      22
   adc_di =       23
 
   led_0 =        24
@@ -56,7 +56,9 @@ CON
 
 VAR
   byte dataBuffer[101] 'Buffer for data to send to the SD card
-
+  byte runLED_DIPSwitch
+  long dipSwitchStack[30]
+  
 OBJ
   adc   : "jm_adc124s021"
   pst   : "Parallax Serial Terminal"
@@ -77,20 +79,34 @@ PUB init
 PRI tester   : pass
 '''If any of these tests fail, the whole board fails!'''
     pass := $FF
+    'runLED_DIP_SwitchPassThrough 'Does not give a result within this list, it only returns 
+
+    'Wait until 12 GPIO pins pass - we assume that these are the most likely to pass, and also guaruntee that we are fully seated in the fixture.
+    repeat while !GPIO_Test
+    'repeat while !GPIO_Test_Pair(gpio_1, gpio_3)
+    runLED_DIP_SwitchPassThrough  
+
     
     'Test SD card
     pass &= SD_Test
     
     'Test ADC voltages
-    ADC_Test
+    pass &= ADC_Test
 
-    'Test all GPIO pins
-    GPIO_Test
+    ' TODO: If passed everything, save to EEPROM, indicate on lights
 
-    'Test the dip switches and the built in LEDs 
-    DIP_Test
+PRI runLED_DIP_SwitchPassThrough
+  runLED_DIPSwitch := true
+  cognew(LED_DIP_Switch_Pass_Through, @dipSwitchStack)
+  
+PRI stopLED_DIP_SwitchPassThrough
+  runLED_DIPSwitch := false
 
-    ' TODO: If passed everything, save to EEPROM, indicate on lights 
+PRI LED_DIP_Switch_Pass_Through
+  DIRA[led_0 .. led_3] := $F
+  repeat while runLED_DIPSwitch
+    OUTA[led_0 .. led_3] := !INA[dipSwitch_4 .. dipSwitch_1]
+  
 PRI SD_Test : pass | x
   '''Write 100 bytes of data, and verify,
   ''' and then write the same 100 bytes inverted, and read that back with verify.
@@ -124,9 +140,36 @@ PRI SD_Test : pass | x
 
 PRI ADC_Test
 
-PRI GPIO_Test
+PRI GPIO_Test  : pass
+  'Test each pair of pins
+                                        
+  pass := GPIO_Test_Pair(gpio_0, gpio_2)
+  pass &= GPIO_Test_Pair(gpio_1, gpio_3)
+  pass &= GPIO_Test_Pair(uart_rx, scl)
+  pass &= GPIO_Test_Pair(uart_tx, sda)
 
-PRI DIP_Test
+PRI GPIO_Test_Pair(pin1, pin2) : pass | i
+  OUTA[ uart_rx .. gpio_3] := 0
+  DIRA[ uart_rx .. gpio_3] := 0
+  DIRA[ pin1 ] := 1
+  OUTA[ pin1 ] := 1
+
+  i := INA & %00000000000000_11111111_0000000000 ' Magic number - all pins between uart_rx and gpio_3, inclusive
+  i ^= |< pin1 ' negate pin1
+  i ^= |< pin2 ' negate pin2
+  pass := ( i == 0 )
+
+ ' go ahead and check the reverse direction.
+
+  OUTA[ uart_rx .. gpio_3] := 0
+  DIRA[ uart_rx .. gpio_3] := 0
+  DIRA[ pin2 ] := 1
+  OUTA[ pin2 ] := 1
+
+  i := INA & %00000000000000_11111111_0000000000 ' Magic number - all pins between uart_rx and gpio_3, inclusive
+  i ^= |< pin1 ' negate pin1
+  i ^= |< pin2 ' negate pin2
+  pass &= ( i == 0 )
 
 DAT
 sdFileName              byte "TestLog.txt",0 'Name of test SD file
