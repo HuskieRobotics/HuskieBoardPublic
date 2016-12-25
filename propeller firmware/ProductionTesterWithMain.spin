@@ -78,22 +78,34 @@ PUB init
 
 PRI tester   : pass
 '''If any of these tests fail, the whole board fails!'''
-    pass := $FF
-    'runLED_DIP_SwitchPassThrough 'Does not give a result within this list, it only returns 
+    pass := True
+    runLED_DIP_SwitchPassThrough 'Does not give a result within this list, it only starts a cog that lets the user manually test this function 
 
     'Wait until 12 GPIO pins pass - we assume that these are the most likely to pass, and also guaruntee that we are fully seated in the fixture.
     repeat while !GPIO_Test
-    'repeat while !GPIO_Test_Pair(gpio_1, gpio_3)
-    runLED_DIP_SwitchPassThrough  
-
-    
-    'Test SD card
-    pass &= SD_Test
-    
+    waitcnt(cnt + clkfreq)
     'Test ADC voltages
     pass &= ADC_Test
-
-    ' TODO: If passed everything, save to EEPROM, indicate on lights
+    
+    'Test SD card
+    'pass &= SD_Test
+                      
+    stopLED_DIP_SwitchPassThrough
+    OUTA[led_0 .. led_3] := 0
+    DIRA[led_0 .. led_3] := $F
+    if pass
+      'TODO: Save to eeprom!!
+      repeat                     
+        waitcnt(cnt + clkfreq/8)
+        OUTA[led_0 .. led_2] := 7
+        waitcnt(cnt + clkfreq/8)
+        OUTA[led_0 .. led_2] := 0
+    else
+      repeat       
+        waitcnt(cnt + clkfreq/8)
+        OUTA[led_3] := 1
+        waitcnt(cnt + clkfreq/8)
+        OUTA[led_3] := 0
 
 PRI runLED_DIP_SwitchPassThrough
   runLED_DIPSwitch := true
@@ -106,6 +118,8 @@ PRI LED_DIP_Switch_Pass_Through
   DIRA[led_0 .. led_3] := $F
   repeat while runLED_DIPSwitch
     OUTA[led_0 .. led_3] := !INA[dipSwitch_4 .. dipSwitch_1]
+  OUTA[led_0 .. led_3] := 0
+  DIRA[led_0 .. led_3] := 0
   
 PRI SD_Test : pass | x
   '''Write 100 bytes of data, and verify,
@@ -138,7 +152,42 @@ PRI SD_Test : pass | x
 
   
 
-PRI ADC_Test
+PRI ADC_Test   : pass | v
+''For an explanation of where these values came from, refer to the Test Plan document
+
+  pass := True
+                   
+  v := adc.read(0) 
+  pass &= (v=<3227)
+  pass &= (v=>2979)
+  
+  v := adc.read(1) 
+  pass &= (v=<3873)
+  pass &= (v=>3575)
+  
+  v := adc.read(2) 
+  pass &= (v=<3198)
+  pass &= (v=>2952)
+  
+  v := adc.read(3) 
+  pass &= (v=<2840)
+  pass &= (v=>2621)
+  
+  v := adc.read(4) 
+  pass &= (v=<2130)
+  pass &= (v=>1966)
+  
+  v := adc.read(5) 
+  pass &= (v=<1420)
+  pass &= (v=>1311)
+  
+  v := adc.read(6) 
+  pass &= (v=<1062)
+  pass &= (v=>980)
+  
+  v := adc.read(7) 
+  pass &= (v=<387)
+  pass &= (v=>357)
 
 PRI GPIO_Test  : pass
   'Test each pair of pins

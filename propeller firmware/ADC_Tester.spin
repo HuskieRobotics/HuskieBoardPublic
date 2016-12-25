@@ -54,5 +54,7 @@ pub main
     pst.char(13)
     pst.char(13)
     pst.char(13)
+
+    waitcnt(cnt+clkfreq/15)
   
   
