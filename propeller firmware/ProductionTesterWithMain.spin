@@ -65,44 +65,79 @@ OBJ
   lcd   : "Serial_Lcd"                
   util  : "Util"
   sd    : "SD Controller"
+  eeprom: "Propeller EEprom"
   main  : "main"
   
 PUB init
-  if byte[@testAlreadyPassed] == 0  ' Test program has not yet passed, so run the tester
+
+  if long[@testAlreadyPassed] == 0  ' Test program has not yet passed, so run the tester
     pst.start(115200)
     adc.start(adc_1, adc_2, adc_clk, adc_di, adc_do)
     sd.start(sd_do, sd_clk, sd_di, sd_d3) 'Start the logger, this automatically mounts the sd card
     tester
   else     ' Run the normal script
+    OUTA[led_0 .. led_3] := 0
+    DIRA[led_0 .. led_3] := $F
+    repeat 2                       
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0001
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0011
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0010
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0110
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0100
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %1100
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %1000
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %1001
+    OUTA[led_0 .. led_3] := 0
+    DIRA[led_0 .. led_3] := 0
     main.main
 
-PRI tester   : pass
+PUB tester   : pass  |GPIO_Pass, ADC_Pass, SD_Pass
 '''If any of these tests fail, the whole board fails!'''
-    pass := True
+
     runLED_DIP_SwitchPassThrough 'Does not give a result within this list, it only starts a cog that lets the user manually test this function 
 
-    'Wait until 12 GPIO pins pass - we assume that these are the most likely to pass, and also guaruntee that we are fully seated in the fixture.
+    ' Wait until 12 GPIO pins pass - we assume that these are the most likely to pass, and also guaruntee that we are fully seated in the fixture.
     repeat while !GPIO_Test
     waitcnt(cnt + clkfreq)
-    'Test ADC voltages
-    pass &= ADC_Test
+
+    GPIO_Pass := GPIO_Test
+    
+    ' Test ADC voltages
+    ADC_Pass := ADC_Test
     
     'Test SD card
-    'pass &= SD_Test
+    SD_Pass := SD_Test
+
+    pass := GPIO_Pass & ADC_Pass & SD_Pass
                       
     stopLED_DIP_SwitchPassThrough
     OUTA[led_0 .. led_3] := 0
     DIRA[led_0 .. led_3] := $F
     if pass
-      'TODO: Save to eeprom!!
+      ' Save to eeprom!!
+      long[@testAlreadyPassed] := True
+      eeprom.VarBackup(@testAlreadyPassed, @testAlreadyPassed +4) 
+      
       repeat                     
         waitcnt(cnt + clkfreq/8)
         OUTA[led_0 .. led_2] := 7
         waitcnt(cnt + clkfreq/8)
         OUTA[led_0 .. led_2] := 0
-    else
+        
+    else  'Failure: Blink red light, turn on green LEDs (solid) for which ones passed.
+      OUTA[led_0] := GPIO_Pass
+      OUTA[led_1] := ADC_Pass
+      OUTA[led_2] := SD_Pass
       repeat       
-        waitcnt(cnt + clkfreq/8)
+        waitcnt(cnt + clkfreq/8)  
         OUTA[led_3] := 1
         waitcnt(cnt + clkfreq/8)
         OUTA[led_3] := 0
@@ -220,7 +255,7 @@ PRI GPIO_Test_Pair(pin1, pin2) : pass | i
 
 DAT
 sdFileName              byte "TestLog.txt",0 'Name of test SD file
-testAlreadyPassed       byte 0  ' Stored in EEPROM
+testAlreadyPassed       long 0  ' Stored in EEPROM
                                 ' When the value is 0 on boot, it will run the test program.
                                 ' When not 0, it will run the main script.
                                 ' The test program will set it to a non 0 value once it passes.
