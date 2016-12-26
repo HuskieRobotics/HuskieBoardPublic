@@ -32,17 +32,11 @@ PUB start(sd_do, sd_clk, sd_di, sd_cs)
 PRI mount
   'wait until card is inseted, using the abort catch                                       
   repeat while \sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) < 0 
-PUB openFile(filePt)
+PUB openFile(filePt, mode)
   if fileOpen
     return
   fileOpen := true
-  sd.popen(filePt, "a")
-
-PUB readFile(filePt)
-  if fileOpen
-    return
-  fileOpen := true
-  sd.popen(filePt, "r")
+  sd.popen(filePt, mode)
 
 PUB writeData(datPt)
   sd.pputs(datPt)

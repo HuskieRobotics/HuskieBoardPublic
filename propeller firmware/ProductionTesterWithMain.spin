@@ -126,31 +126,29 @@ PRI SD_Test : pass | x
   ''' and then write the same 100 bytes inverted, and read that back with verify.
   ''' Return $FF for success, $00 for failure
 
-  pass := $FFFFFFFF
   bytefill(@dataBuffer, 0, 101)
-  sd.openFile(@sdFileName)
+  \sd.openFile(@sdFileName, "w")
   
   'Fill byte array with vals from 0 to 99
   repeat x from 0 to 99
     byte[@dataBuffer+x] := x+32 'Start writing with the " " character
 
-  sd.writeData(@dataBuffer) 'Write the data to the SD card
-  sd.closeFile
+  \sd.writeData(@dataBuffer) 'Write the data to the SD card
+  \sd.closeFile
 
   bytefill(@dataBuffer, 0, 101)
   
   'Read from the file and verify what was written
-  sd.readFile(@sdFileName)
+  \sd.openFile(@sdFileName, "r")
 
   'Read data to the readData buffer
-  sd.readData(@dataBuffer, num_data_bytes)
+  \sd.readData(@dataBuffer, num_data_bytes)
 
+  pass := True
+  
   repeat x from 0 to 99
     pass &= !( byte[@dataBuffer+x] ^ (x+32) )
-  
-  '''THIS FUNC IS NOT TESTED!'''
-
-  
+  pass === True  'Assignment: Does pass == True?
 
 PRI ADC_Test   : pass | v
 ''For an explanation of where these values came from, refer to the Test Plan document

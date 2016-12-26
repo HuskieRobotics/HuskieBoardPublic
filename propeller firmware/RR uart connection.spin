@@ -380,7 +380,7 @@ PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
 
         if checksum == checktmp
           byte[@sdfilename+length] := 0 'set the end of the string
-          sd.openFile(@sdfilename)
+          sd.openFile(@sdfilename,"a")  'append to the file
           pst.str(string("SD: Set file name to :"))
           pst.str(@sdfilename)
           pst.char(13)
