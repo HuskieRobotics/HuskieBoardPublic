@@ -8,6 +8,7 @@
 ''   E-mail..... jon@jonmcphalen.com
 ''   Started.... 
 ''   Updated.... 09 OCT 2014
+''   Updated.... 1 JAN 2017 - Interface with 2 ADCs, sharing the clock and data pins, but with separate CS pins.
 ''
 '' =================================================================================================
 
@@ -17,17 +18,6 @@
    code uses a double read each time to ensure the current channel value is returned.
    
 }}  
-
-
-
-con { fixed io pins }
-
-  RX1 = 31                                                      ' programming / terminal
-  TX1 = 30
-  
-  SDA = 29                                                      ' eeprom / i2c
-  SCL = 28
-
 
 var
 
@@ -58,13 +48,13 @@ pub start(cs1pin, cs2pin, sckpin, dipin, dopin)
 
   dira[mosi] := 1                                               ' output (to adc)
 
-pub setArray | count
+pub readToArray | count   'Fill array with 8 ADC values
     count := 0
     repeat 8
       long[@ins+count*4] := read(count)
       count++    
 
-pub readArray(ch)
+pub readArray(ch)         'Read from a pre-filled array (using readToArray).
     return long[@ins+ch*4]
  
 pub read(ch) | ctrlbits, adcval
