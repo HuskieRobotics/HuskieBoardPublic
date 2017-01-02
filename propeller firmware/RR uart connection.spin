@@ -117,15 +117,14 @@ OBJ
   ser : "FASTSERIAL-080927"
   adc : "jm_adc124s021"   'This is the adc driver for the new MXP board design       
   pst : "Parallax Serial Terminal"
-  lcd : "Serial_Lcd"                
-  util : "Util"
+  lcd : "Serial_Lcd"  
   leds : "LED Main"
   sd   : "SD Controller"
 
 PUB dontRunThisMethodDirectly | x  'this runs and tells the terminal that it is the wrong thing to run if it is run. Do not delete. Brandon
 pst.start(115200)
 repeat x from 0 to 10
-  pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN MAIN MAIN MAIN!!!",13))
+  pst.Str(string("YOU RAN THE WRONG PROGRAM!!! RUN main.spin!!!",13))
 return
 PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPointer_,neopixelPin,timepointer_,maintransmission)
 ''sets the global data pointer to the given pointer
@@ -148,18 +147,10 @@ PUB init(rx_, tx_, baudrate,dataPointer,savefilename,lcdpin_,lcdbaud_,stopSDPoin
   'neo.init(neopixelPin,64, @neopointer)   
   cognew(main,@stack)
 PRI main | x, in, errors, y, timetmp , intmp, count
-  'starts the program, and waits 3 seconds for you to open up, clear, and re-enable the terminal
-  'dira[LED_1] := true'set red LED to output
-  'dira[LED_2] := true 'set yellow LED to output
-  util.wait(1)    'wait for debugging purposes
+
   pst.start(115200)'open debug terminal
   pst.str(string("Start"))
-
-  'repeat
-   ' pst.str(string("Working")) 'For testing purposes
-                    
-  pst.str(string("Program start!",13))
-  'waitcnt(cnt + clkfreq / 2)
+                                      
 
   ''starts the serial object
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver
@@ -182,16 +173,7 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     pst.char(13)
    'get the command (The first byte of whats is being sent)
     cmd := ser.rxtime(100)
-
-    ''pst.str(string("File Name:"))
-    ''pst.str(@sdfilename)
-    ''pst.char(13)
-             
-    {pst.str(string("Datapointer: "))
-    pst.hex(long[globaldatapointer], 8)
-    pst.char(13)   }
-
-    
+  
   '  command number 0 : Send basic data
     if cmd == GIVE_DATA
       printcmd             
@@ -267,10 +249,12 @@ PRI main | x, in, errors, y, timetmp , intmp, count
     else
       pst.str(string("Error: invalid command number",14))
       pst.hex(cmd,8)
+
 PRI printcmd
     pst.str(string("cmd == "))
     pst.hex(cmd,8)
     pst.char(13)
+
 PRI recieve_string(strptr,errorMsg,maxlength) | x,checktmp
     length := ser.rx
     checksum := cmd+length
@@ -297,6 +281,7 @@ PRI recieve_string(strptr,errorMsg,maxlength) | x,checktmp
     else
       pst.str(string("Error: length recieved was longer than given max length",13))
       return false
+
 PRI give_data_func | x, checktmp
     byte[robotData+0] := ser.rx      'LED Brightness  
     byte[robotData+1] := ser.rx      'Battery Voltage
@@ -316,37 +301,29 @@ PRI give_data_func | x, checktmp
     
 PRI write_data_func | x, checktmp     ' COMMAND 01
 
-      length := ser.rx 
-      checksum := cmd+length  'set base of checksum
+    length := ser.rx 
+    checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
-      if length < 250                                                                                                                         
-        repeat x from 0 to length-1
-          byte[@writeData+x] := ser.rx
-        ' 
-        ' updates the checksum value
-          checksum+= byte[@writeData+x]
-          
-        pst.str(string("Recieved Data: "))
+    if length < 250                                                                                                                         
+      repeat x from 0 to length-1
+        byte[@writeData+x] := ser.rx
+      ' 
+      ' updates the checksum value
+        checksum+= byte[@writeData+x]
+        
+      pst.str(string("Recieved Data: "))
+      pst.str(@writeData)
+      pst.char(13)
+     
+      checktmp := ser.rx
+       
+      if checksum == checktmp 'is the checksum correct?
+        sd.writeData(@writeData)
+        pst.str(string("SD: Line written: "))     
         pst.str(@writeData)
         pst.char(13)
-
-        checktmp := ser.rx
-         
-        if checksum == checktmp 'is the checksum correct?
-          sd.writeData(@writeData)
-          pst.str(string("SD: Line written: "))     
-          pst.str(@writeData)
-          pst.char(13)
-       {
-       if recieve_string(writeData,string("Error writing data to SD!"),256)
-          sd.writeData(@writeData)
-          pst.str(string("SD: Line written: "))     
-          pst.str(@writeData)
-          pst.char(13)
-          }
-      
-        'Clear the data buffer
-      bytefill(@writeData, 0, 256)
+     
+    bytefill(@writeData, 0, 256)
 
 PRI set_log_header_func               'COMMAND 02                    
     bytefill(@filedata, 0, 256)
@@ -359,159 +336,142 @@ PRI set_log_header_func               'COMMAND 02
 PRI set_sd_file_name_func | x, checktmp, receivedFileName    'COMMAND 03
                                     
     ' length of string
-      length := ser.rx 
-      checksum := cmd+length  'set base of checksum
+    length := ser.rx 
+    checksum := cmd+length  'set base of checksum
     ' tests if the length is less than 250
-      if length < 250                                                                                                                         
-        repeat x from 0 to length-1
-          byte[@sdfilename+x] := ser.rx
-        ' 
-        ' updates the checksum value
-          checksum+= byte[@sdfilename+x]
-          
-        pst.str(string("Received name:"))
-        pst.str(@sdfilename)
-        pst.char(13)
+    if length < 250                                                                                                                         
+      repeat x from 0 to length-1
+        byte[@sdfilename+x] := ser.rx
+      ' 
+      ' updates the checksum value
+        checksum+= byte[@sdfilename+x]
         
+      pst.str(string("Received name:"))
+      pst.str(@sdfilename)
+      pst.char(13)
+      
       ' checks the sum against the given length
       ' if it is bad, then doesn't save the packet
-        checktmp := ser.rx  
-        'checksum //= 256 'mod 256 to calculate checksum
-
-        if checksum == checktmp
-          byte[@sdfilename+length] := 0 'set the end of the string
-          sd.openFile(@sdfilename,"a")  'append to the file
-          pst.str(string("SD: Set file name to :"))
-          pst.str(@sdfilename)
-          pst.char(13)
-
-          'bytemove(sdfilename,@filedata, length-3)
-          {
-        if recieve_string(sdfilename,string("Error setting SD file name!"),250)
-          byte[@sdfilename+length] := 0 'set the end of the string
-          sd.openFile(@sdfilename)
-          pst.str(string("SD: Set file name to :"))
-          pst.str(@sdfilename)
-          pst.char(13)
-           }
-          
-        'Clear the filename buffer
-        bytefill(@sdfilename, 0, 256) 
+      checktmp := ser.rx  
+      'checksum //= 256 'mod 256 to calculate checksum
+     
+      if checksum == checktmp
+        byte[@sdfilename+length] := 0 'set the end of the string
+        sd.openFile(@sdfilename,"a")  'append to the file
+        pst.str(string("SD: Set file name to :"))
+        pst.str(@sdfilename)
+        pst.char(13)
+      bytefill(@sdfilename, 0, 256) 
 
 PRI close_log_func                   'COMMAND 04
-      'pst.str(string("Error: close_log_func function isn't finished yet!"))
-      'return
-    'long[globaldatapointer] := string("stop") 'the sd card logger will recognize new data, see that it is a string "stop",
-                                               ' and call it's "reinit" function. That will wipe the filename, and setfilename
-                                               'function will have to be called again.
-       sd.closeFile
-       pst.str(string("SD card file was closed."))
+    sd.closeFile
+    pst.str(string("SD card file was closed."))
                                                
 PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
-      checksum:=SET_TIME  'originally checksum:=cmd
-      
-      intmp := ser.rx                                                   
-      checksum+= intmp
-      timetmp:=intmp
-      
-      intmp := ser.rx
-      checksum+= intmp
-      timetmp:=timetmp*256+intmp
-      
-      intmp := ser.rx
-      checksum+= intmp
-      timetmp:=timetmp*256+intmp
-      
-      intmp := ser.rx
-      checksum+= intmp
-      timetmp:=timetmp*256+intmp
-      checktmp := ser.rx                               
-      if checktmp == checksum
-        long[timepointer]:=  timetmp  
-        pst.str(string("Time set to: "))
-        pst.hex(timetmp,8)
-      else
-        pst.str(string("Error setting time!",13,"Expected_got checksum: ",13))
-        pst.hex(checksum,8)
-        pst.char("_")
-        pst.hex(checktmp,8)
-        'outa[LED_2] := true    
-      pst.char(13)
+    checksum:=SET_TIME  'originally checksum:=cmd
+     
+    intmp := ser.rx                                                   
+    checksum+= intmp
+    timetmp:=intmp
+     
+    intmp := ser.rx
+    checksum+= intmp
+    timetmp:=timetmp*256+intmp
+     
+    intmp := ser.rx
+    checksum+= intmp
+    timetmp:=timetmp*256+intmp
+     
+    intmp := ser.rx
+    checksum+= intmp
+    timetmp:=timetmp*256+intmp
+    checktmp := ser.rx                               
+    if checktmp == checksum
+      long[timepointer]:=  timetmp  
+      pst.str(string("Time set to: "))
+      pst.hex(timetmp,8)
+    else
+      pst.str(string("Error setting time!",13,"Expected_got checksum: ",13))
+      pst.hex(checksum,8)
+      pst.char("_")
+      pst.hex(checktmp,8)
+      'outa[LED_2] := true    
+    pst.char(13)
       
 PRI set_lcd_disp_func |  x, actualChecksum, expectedChecksum, count, messageLength, clear         'COMMAND 08
 
-      bytefill(@generalBuffer, 0, 251) 'fill the generalBuffer byte array with 0s or else it will show whats leftover from the last display
-
-      'Clear the screen (cannot use the cls method becuase of the 5ms implemented in it)
-      lcd.clrln(0)
-      lcd.clrln(1)
-      lcd.clrln(2)
-      lcd.clrln(3)
-      lcd.home 
-
-
-      messageLength := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
-      'actualChecksum := $8 + clear + messageLength  'Start the checksum calculation
-      actualChecksum := $8 + messageLength  'Start the checksum calculation
-      count := 0
-      pst.str(string(" Length of message: "))
-      pst.dec(messageLength)
+    bytefill(@generalBuffer, 0, 251) 'fill the generalBuffer byte array with 0s or else it will show whats leftover from the last display
+   
+    'Clear the screen (cannot use the cls method becuase of the 5ms implemented in it)
+    lcd.clrln(0)
+    lcd.clrln(1)
+    lcd.clrln(2)
+    lcd.clrln(3)
+    lcd.home 
+   
+   
+    messageLength := ser.rx  'Length is the length of the string to be displayed, so it is not including the sent checksum
+    'actualChecksum := $8 + clear + messageLength  'Start the checksum calculation
+    actualChecksum := $8 + messageLength  'Start the checksum calculation
+    count := 0
+    pst.str(string(" Length of message: "))
+    pst.dec(messageLength)
+    pst.char(13)
+    
+    if messageLength =< 250
+  '   gets all the string data     
+                                                                                                                             
+      repeat while (count < messageLength)  
+        byte[@generalBuffer+count] := ser.rx          
+        actualChecksum += byte[@generalBuffer+count]
+        pst.str(string(" loop count:"))
+        pst.dec(count)
+        pst.char(13)  
+        count++
+        
+      pst.str(string("Received String: "))
+      pst.str(byte[@generalBuffer])
       pst.char(13)
       
-      if messageLength =< 250
-    '   gets all the string data     
-                                                                                                                               
-        repeat while (count < messageLength)  
-          byte[@generalBuffer+count] := ser.rx          
-          actualChecksum += byte[@generalBuffer+count]
-          pst.str(string(" loop count:"))
-          pst.dec(count)
-          pst.char(13)  
-          count++
-          
-        pst.str(string("Received String: "))
-        pst.str(byte[@generalBuffer])
+      actualChecksum &= $FF
+      pst.str(string(" Actual Checksum:"))
+      pst.hex(actualChecksum, 2)
+        
+      expectedChecksum := ser.rx 'Get the checksum sent by from the roboRio
+      pst.str(string(" Expected checksum:"))
+      pst.hex(expectedChecksum, 2)
+   
+      if actualChecksum == expectedChecksum
+        lcd.str(@generalBuffer)
         pst.char(13)
-        
-        actualChecksum &= $FF
-        pst.str(string(" Actual Checksum:"))
-        pst.hex(actualChecksum, 2)
-          
-        expectedChecksum := ser.rx 'Get the checksum sent by from the roboRio
-        pst.str(string(" Expected checksum:"))
-        pst.hex(expectedChecksum, 2)
-
-        if actualChecksum == expectedChecksum
-          lcd.str(@generalBuffer)
-          pst.char(13)
-          pst.str(string("LCD Set display string to: "))
-          pst.str(@generalBuffer)
-          pst.char(13)
-
-          'Send confirmation back to the roboRio
-          ser.tx($08)
-          ser.tx($08)
-        else
-          pst.str(string(" Error in set_lcd_disp_func: Bad Checksum"))
-          
-        'Clear the general buffer 
-        bytefill(@generalBuffer, 0, 256)
-        
+        pst.str(string("LCD Set display string to: "))
+        pst.str(@generalBuffer)
+        pst.char(13)
+   
+        'Send confirmation back to the roboRio
+        ser.tx($08)
+        ser.tx($08)
       else
-        pst.str(string(" LCD: Error: Given length was > 32.")) 
+        pst.str(string(" Error in set_lcd_disp_func: Bad Checksum"))
+        
+      'Clear the general buffer 
+      bytefill(@generalBuffer, 0, 256)
+      
+    else
+      pst.str(string(" LCD: Error: Given length was > 32.")) 
 
 PRI set_lcd_size_func | lines        'COMMAND 09
                                          
 
-      lcd.finalize
-
-      lines := ser.rx
-                                                                   
-      pst.str(string("LCD: # of lines set to: "))
-      pst.dec(lines)
-      
-      lcd.init(lcdpin,lcdbaud,lines)
+    lcd.finalize
+     
+    lines := ser.rx
+                                                                 
+    pst.str(string("LCD: # of lines set to: "))
+    pst.dec(lines)
+     
+    lcd.init(lcdpin,lcdbaud,lines)
 
 PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send, count          'COMMAND 10
     original_checksum := ser.rx
@@ -621,48 +581,48 @@ PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transm
 
 PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND 14
 
-  mode := ser.rx
-
-  original_checksum := ser.rx
-  calc_checksum := ( $14 + mode )& $FF
-
-  if calc_checksum == original_checksum
-    leds.start_modes
-    leds.change_mode(mode)
-  else
-    pst.str(string("Error: in function set_led_mode_func: Bad checksum!"))
-    return
-
+    mode := ser.rx
+     
+    original_checksum := ser.rx
+    calc_checksum := ( $14 + mode )& $FF
+     
+    if calc_checksum == original_checksum
+      leds.start_modes
+      leds.change_mode(mode)
+    else
+      pst.str(string("Error: in function set_led_mode_func: Bad checksum!"))
+      return
+     
 
 PRI set_led_rgb_func | r,g,b, original_checksum, calc_checksum               'COMMAND 15
-  r := ser.rx
-  g := ser.rx
-  b := ser.rx
-
-  original_checksum := ser.rx
-  calc_checksum := ($15 + r + g + b) & $FF
-
-  if calc_checksum == original_checksum
-    leds.stop_modes
-    leds.set_all(r,g,b)
-  else
-    pst.str(string("Error: in function set_led_rgb_func: Bad checksum!"))
-    return
-
-
+    r := ser.rx
+    g := ser.rx
+    b := ser.rx
+     
+    original_checksum := ser.rx
+    calc_checksum := ($15 + r + g + b) & $FF
+     
+    if calc_checksum == original_checksum
+      leds.stop_modes
+      leds.set_all(r,g,b)
+    else
+      pst.str(string("Error: in function set_led_rgb_func: Bad checksum!"))
+      return
+     
+     
 PRI set_led_intensity_func | intensity, original_checksum, calc_checksum     'COMMAND 16
-  intensity := ser.rx
-
-  original_checksum := ser.rx
-  calc_checksum := ($15 + intensity) & $FF
-
-  if calc_checksum == original_checksum
-    leds.stop_modes
-    leds.set_intensity(intensity)
-  else
-    pst.str(string("Error: in function set_led_intensity_func: Bad checksum!"))
-    return
-  
+    intensity := ser.rx
+     
+    original_checksum := ser.rx
+    calc_checksum := ($15 + intensity) & $FF
+     
+    if calc_checksum == original_checksum
+      leds.stop_modes
+      leds.set_intensity(intensity)
+    else
+      pst.str(string("Error: in function set_led_intensity_func: Bad checksum!"))
+      return
+     
 
 dat
   tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
