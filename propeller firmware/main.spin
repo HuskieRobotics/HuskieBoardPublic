@@ -84,9 +84,7 @@ var
 
 
 obj
-        uart    : "RR uart connection"
-        'uart    : "RR uart connection testing"
-        sd      : "SDcardLogger" 
+        uart    : "RR uart connection"             
         adc2    : "jm_adc124s021"
         leds    : "LED Main"
 
@@ -94,19 +92,10 @@ pub main
         longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty-second byte
         init                            'Initialize all drives
 
-
-pri init
-        'adcpointer := adc.pointer                               'Set ADC Pointer to ADC Driver constant
-
-        {NeoPixel Driver}
-        'leds.start(5, 14, 111)                            
+pri init                           
 
         {UART CONNECTION DRIVER}
         uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, fat32time, robodata)
-        
-        {SD DRIVER}
-        'sd.init(27, 25, 0, 1, @sdpointer, @datfilename, adcpointer, @stop, @FAT32Time) {WISWARD NUMBERS AAAAAGHHHHHH}
-
         
         DIRA[led_0 .. led_3] := $F
         
