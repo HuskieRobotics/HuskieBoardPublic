@@ -38,17 +38,17 @@ PUB openFile(filePt, mode)
   if fileOpen
     return
   fileOpen := true
-  sd.popen(filePt, mode)
+  return \sd.popen(filePt, mode)
 
 PUB writeData(datPt)
   if fileOpen
-    sd.pputs(datPt)
-    sd.pflush
+    \sd.pputs(datPt)
+    \sd.pflush
 
 PUB readData(buffer, numBytes)
-  return sd.pread(buffer, numBytes)
+  return \sd.pread(buffer, numBytes)
   
 PUB closeFile
-  sd.pclose
+  \sd.pclose
   fileOpen := false
                        
