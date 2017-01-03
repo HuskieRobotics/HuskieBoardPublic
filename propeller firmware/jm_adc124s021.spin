@@ -5,6 +5,7 @@
 ''   Author..... Jon "JonnyMac" McPhalen
 ''               Copyright (c) 2013-14 Jon McPhalen
 ''               -- see below for terms of use
+''   Modified... Brandon John
 ''   E-mail..... jon@jonmcphalen.com
 ''   Started.... 
 ''   Updated.... 09 OCT 2014

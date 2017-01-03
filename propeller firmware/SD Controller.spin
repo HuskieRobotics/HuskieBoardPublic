@@ -9,8 +9,7 @@ CON
 
 VAR
   byte sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS
-  long stack[100] 
-  byte header[256]
+  long stack[100]    
   byte fileOpen
   
 OBJ
@@ -23,8 +22,7 @@ PUB start(sd_do, sd_clk, sd_di, sd_cs)
   sd_SPI_CLK := sd_clk
   sd_SPI_DI  := sd_di
   sd_SPI_CS  := sd_cs
-
-  header := string("-=NEW MATCH=-",13)
+                                     
   fileOpen := false
   
   cognew(mount, @stack)
@@ -32,6 +30,10 @@ PUB start(sd_do, sd_clk, sd_di, sd_cs)
 PRI mount
   'wait until card is inseted, using the abort catch                                       
   repeat while \sd.mount_explicit(sd_SPI_DO, sd_SPI_CLK, sd_SPI_DI, sd_SPI_CS) < 0 
+
+PUB setdatedirect(date) 'Must call BEFORE opening the file, if you want the "recently modified" date to be correct. Otherwise, not required.
+  sd.setdatedirect(date)
+
 PUB openFile(filePt, mode)
   if fileOpen
     return
@@ -39,13 +41,9 @@ PUB openFile(filePt, mode)
   sd.popen(filePt, mode)
 
 PUB writeData(datPt)
-  sd.pputs(datPt)
-  sd.pflush
-
-PUB setHeader(new_header)
-  byte[header] := @new_header
   if fileOpen
-    writeData(@header)
+    sd.pputs(datPt)
+    sd.pflush
 
 PUB readData(buffer, numBytes)
   return sd.pread(buffer, numBytes)

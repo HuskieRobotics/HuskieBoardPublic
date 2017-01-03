@@ -1,23 +1,13 @@
-{
-Author: Bennett Johnson
-Revision #1: Added line for new ADC driver
-Revised by: Lucas Rezac, Calvin Field
-
-Packet Types                                     
-$00ff: does something
-
-}
-
-
 con
         _clkmode    = xtal1 + pll16x                                           'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq    = 5_000_000
         
         lcd_pin     = 18        'LCD communication pin
         lcd_baud    = 19_200    'LCD communication baudrate
+        LCD_SIZE    = 4         'default lcd size is 4 lines
         
-        'prop_rx     = 31 'This might be interfering with stuff       'Prop-Plug communication recieve pin
-        'prop_tx     = 30 'This might be interfering with stuff      'Prop-Plug communication transmit pin
+        prop_rx     = 31        'Prop-Plug communication recieve pin
+        prop_tx     = 30        'Prop-Plug communication transmit pin
         
         eeprom_sda  = 29        'EEPROM data line  -- Transfers data based on clock line
         eeprom_scl  = 28        'EEPROM clock line -- Keeps time to ensure packet viability
@@ -64,40 +54,30 @@ con
         sd_SPI_DI   = sd_cmd
         sd_SPI_CS   = sd_d3
         
-        led_0       = 24        'Onboard Green LED pin 0
-        led_1       = 25        'Onboard Green LED pin 1
-        led_2       = 26        'Onboard Green LED pin 2
-        led_3       = 27        'Onboard Green LED pin 3
+        led_0       = 24        'Onboard Green  LED 0
+        led_1       = 25        'Onboard Green  LED 1
+        led_2       = 26        'Onboard Green  LED 2
+        led_3       = 27        'Onboard Red    LED 3
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use
-            
+
+
+        ROBORIO_UART_CONNECTION_BAUD = 230400    
                                 
         
 var
-    byte datfilename[256]   'SD File name long -- only 255 bytes long
-    byte stop               'Stop byte
-    byte robodata[8]        'Data Transmitted by robot
-    long sdpointer          'Pointer to SD Driver
-    long adcpointer         'Pointer to ADC Driver
-    long lcdpointer         'Pointer to LCD Driver
-    long fat32time          'Time for data file
+    byte roboRioData[8]        'Data Transmitted by robot
 
 
 obj
-        uart    : "RR uart connection"             
-        adc2    : "jm_adc124s021"
-        leds    : "LED Main"
+        uart    : "RR uart connection"
 
 pub main
-        longfill(@datfilename, 0, 32)   'fill data file name with zeros until the thirty-second byte
-        init                            'Initialize all drives
-
-pri init                           
-
         {UART CONNECTION DRIVER}
-        uart.init(robo_rx, robo_tx, 230400, sdpointer, datfilename, lcd_pin, lcd_baud, stop, neopixel, fat32time, robodata)
-        
+        uart.init(ROBORIO_UART_CONNECTION_BAUD, @roboRioData)
+
+
+        'LED stuff, for autonomous mode selection
         DIRA[led_0 .. led_3] := $F
-        
-        repeat 'LED stuff
+        repeat 
           OUTA[led_0 .. led_3] := !INA[robo_MOSI .. robo_CS]                          
