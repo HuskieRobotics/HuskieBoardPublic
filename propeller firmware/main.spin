@@ -64,6 +64,13 @@ con
 
         ROBORIO_UART_CONNECTION_BAUD = 230400    
                                 
+        FIRMWARE_MAJOR = 01 'up to 256
+        FIRMWARE_MINOR = 01 'up to 256
+        FIRMWARE_FIX   = 03 'up to 256
+        FIRMWARE_TEST  = 01 'up to 256
+
+        FIRMWARE_V = (FIRMWARE_MAJOR * |<0) + (FIRMWARE_MINOR * |<8) + (FIRMWARE_FIX* |<16) + (FIRMWARE_TEST *|<24) 
+
         
 var
     byte roboRioData[8]        'Data Transmitted by robot
@@ -74,7 +81,7 @@ obj
 
 pub main
         {UART CONNECTION DRIVER}
-        uart.init(ROBORIO_UART_CONNECTION_BAUD, @roboRioData)
+        uart.init(ROBORIO_UART_CONNECTION_BAUD, @roboRioData, FIRMWARE_V)
 
 
         'LED stuff, for autonomous mode selection

@@ -64,10 +64,10 @@ CON     'Permanent constants
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use       
                                                                                                                                             
-        { COMMAND LIST }                                                                                                                    
+CON     { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
         WRITE_DATA              = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
-        SET_LOG_HEADER          = $02 ' Set log header                                                                                             
+        SET_LOG_HEADER          = $02 ' Deprecated: Set log header. Use WRITE_DATA instead.                                                                                             
         SET_SD_FILE_NAME        = $03 ' Set SD log filename/opens file                                                                                           
         CLOSE_LOG               = $04 ' Close log file, prepare for next log file                                                                  
         SET_TIME                = $05 ' Set current time                                                                                           
@@ -82,7 +82,8 @@ CON     'Permanent constants
         SET_LED_MODE            = $14 ' Sets the LED mode for the neopixels
         SET_LED_RGB             = $15 ' Sets the LEDs to a custom RGB value
         SET_LED_INTENSITY       = $16 ' Sets the LEDs brightness intensity (0-100)    
-       '$17 - $FF reserved                                                                                                                  
+       '$17 - $FE reserved
+        REQUEST_VERSION         = $FF ' Request the HuskieBoard's current version                                                                                                                  
 CON    ''user settings
                                                         
         lcd_baud    = 19_200    'LCD communication baudrate
@@ -91,7 +92,8 @@ VAR
   long  stack[512]                                                                                                                                    
   long  baud                                                                                                                                
   long  cmd, length   
-  long  roboRioDataPtr                                                                                                                       
+  long  roboRioDataPtr
+  long  firmware_version                                                                                                                       
   byte  serialBuffer[256]    'Used for caching received data to check checksums before using.                                                        
   'byte  generalBuffer[251] 
   byte  checksum
@@ -112,10 +114,11 @@ PUB dontRunThisMethodDirectly  'this runs and tells the terminal that it is the 
     waitcnt(cnt+clkfreq)'Wait 1 second
   abort
 
-PUB init(baud_,roboRioDataPtr_)
+PUB init(baud_,roboRioDataPtr_,firmware_version_)
 
   baud := baud_
   roboRioDataPtr := roboRioDataPtr_
+  firmware_version := firmware_version_
                               
   cognew(main,@stack)
 
@@ -214,8 +217,12 @@ PRI main
       set_led_rgb_func
 
     elseif cmd == SET_LED_INTENSITY
+
+    elseif cmd == REQUEST_VERSION
+      printcmd
+      request_version_func
       
-    else
+    elseif cmd <> -1      
       pst.str(string("Error: invalid command number",14))
       pst.hex(cmd,8)
 
@@ -250,6 +257,21 @@ PRI recieve_string(strptr,errorMsg,maxlength) | x,checktmp
     else
       pst.str(string("Error: length recieved was longer than given max length",13))
       return false
+
+PRI request_version_func | originalChecksum, newChecksum, version
+    version := firmware_version
+    originalChecksum := ser.rx
+    pst.hex(version,8)
+    if originalChecksum == $FF
+      ser.tx($FF)
+      ser.tx(version&$FF)
+      ser.tx((version&$FF00)>>8)
+      ser.tx((version&$FF0000)>>16)
+      ser.tx((version&$FF000000)>>24)
+      newChecksum := ($10+(version&$FF)+((version&$FF00)>>8)+((version&$FF0000)>>16)+((version&$FF000000)>>24))&$FF
+      ser.tx(newChecksum)
+    else
+      pst.str(string("Wrong checksum in request_version_func"))
 
 PRI give_data_func | x, checktmp
     byte[roboRioDataPtr+0] := ser.rx      'LED Brightness  
@@ -288,14 +310,17 @@ PRI set_log_header_func                  'COMMAND 02
       pst.char(13)
       sd.writeData(@serialBuffer)
            
-PRI set_sd_file_name_func                'COMMAND 03
-    bytefill(@serialBuffer, 0, 16) 'Only clear first 16 bytes, the rest do not matter. File name length should never be longer than 8+1+3+1=13 bytes (8.3 file name format)
+PRI set_sd_file_name_func | t               'COMMAND 03
+    bytefill(@serialBuffer, 0, 32) 'Only clear first 32 bytes, the rest do not matter. File name length should never be longer than 8+1+3+1=13 bytes (8.3 file name format)
     
-    if recieve_string(@serialBuffer,string("Error reading new file name"),16)
-      sd.openFile(@serialBuffer,"a")  'append to the file
-      pst.str(string("SD: Set file name to :"))
+    if recieve_string(@serialBuffer,string("Error reading new file name"),32)
+      t:= sd.openFile(@serialBuffer,"a")  'append to the file
+      pst.str(string("SD: Set file name to: "))
       pst.str(@serialBuffer)
-      pst.char(13) 
+      pst.char(13)                                           
+      pst.str(string("SD: File open success (0 is good): "))
+      pst.dec(t)
+      pst.char(13)
 
 PRI close_log_func                       'COMMAND 04
     sd.closeFile
