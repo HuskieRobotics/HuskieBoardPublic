@@ -302,7 +302,6 @@ PRI write_data_func                   ' COMMAND 01
 
 PRI set_log_header_func                  'COMMAND 02                    
     bytefill(@serialBuffer, 0, 256)
-    sd.closeFile     'Make sure file is closed before opening a new one.
     
     if recieve_string(@serialBuffer,string("Error setting SD log header!"),255)
       pst.str(string("New log header recieved: "))
@@ -312,6 +311,7 @@ PRI set_log_header_func                  'COMMAND 02
            
 PRI set_sd_file_name_func | t               'COMMAND 03
     bytefill(@serialBuffer, 0, 32) 'Only clear first 32 bytes, the rest do not matter. File name length should never be longer than 8+1+3+1=13 bytes (8.3 file name format)
+    sd.closeFile     'Make sure file is closed before opening a new one.
     
     if recieve_string(@serialBuffer,string("Error reading new file name"),32)
       t:= sd.openFile(@serialBuffer,"a")  'append to the file
