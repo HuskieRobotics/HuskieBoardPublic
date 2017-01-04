@@ -64,10 +64,10 @@ con
 
         ROBORIO_UART_CONNECTION_BAUD = 230400    
                                 
-        FIRMWARE_MAJOR = 01 'up to 256
-        FIRMWARE_MINOR = 01 'up to 256
-        FIRMWARE_FIX   = 03 'up to 256
-        FIRMWARE_TEST  = 01 'up to 256
+        FIRMWARE_MAJOR = 1 'up to 256
+        FIRMWARE_MINOR = 2 'up to 256
+        FIRMWARE_FIX   = 0 'up to 256
+        FIRMWARE_TEST  = 1 'up to 256
 
         FIRMWARE_V = (FIRMWARE_MAJOR * |<0) + (FIRMWARE_MINOR * |<8) + (FIRMWARE_FIX* |<16) + (FIRMWARE_TEST *|<24) 
 
@@ -80,11 +80,35 @@ obj
         uart    : "RR uart connection"
 
 pub main
-        {UART CONNECTION DRIVER}
-        uart.init(ROBORIO_UART_CONNECTION_BAUD, @roboRioData, FIRMWARE_V)
+    scroll
+    {UART CONNECTION DRIVER}
+    uart.init(ROBORIO_UART_CONNECTION_BAUD, @roboRioData, FIRMWARE_V)
+     
+     
+    'LED stuff, for autonomous mode selection
+    DIRA[led_0 .. led_3] := $F
+    repeat 
+      OUTA[led_0 .. led_3] := !INA[robo_MOSI .. robo_CS]
 
-
-        'LED stuff, for autonomous mode selection
-        DIRA[led_0 .. led_3] := $F
-        repeat 
-          OUTA[led_0 .. led_3] := !INA[robo_MOSI .. robo_CS]                          
+pri scroll 'Quickly scroll through the LEDs twice, to clearly show that the board just booted.
+    OUTA[led_0 .. led_3] := 0
+    DIRA[led_0 .. led_3] := $F
+    repeat 2                       
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0001
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0011
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0010
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0110
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %0100
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %1100
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %1000
+      waitcnt(cnt+clkfreq/10)
+      OUTA[led_0 .. led_3] := %1001
+    OUTA[led_0 .. led_3] := 0
+    DIRA[led_0 .. led_3] := 0                        

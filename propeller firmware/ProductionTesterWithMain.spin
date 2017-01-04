@@ -60,10 +60,7 @@ VAR
   long dipSwitchStack[30]
   
 OBJ
-  adc   : "jm_adc124s021"
-  pst   : "Parallax Serial Terminal"
-  lcd   : "Serial_Lcd"                
-  util  : "Util"
+  adc   : "jm_adc124s021"    
   sd    : "SD Controller"
   eeprom: "Propeller EEprom"
   main  : "main"
@@ -71,32 +68,10 @@ OBJ
 PUB init
 
   if long[@testAlreadyPassed] == 0  ' Test program has not yet passed, so run the tester
-    pst.start(115200)
     adc.start(adc_1, adc_2, adc_clk, adc_di, adc_do)
     sd.start(sd_do, sd_clk, sd_di, sd_d3) 'Start the logger, this automatically mounts the sd card
     tester
   else     ' Run the normal script
-    OUTA[led_0 .. led_3] := 0
-    DIRA[led_0 .. led_3] := $F
-    repeat 2                       
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0001
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0011
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0010
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0110
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0100
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %1100
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %1000
-      waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %1001
-    OUTA[led_0 .. led_3] := 0
-    DIRA[led_0 .. led_3] := 0
     main.main
 
 PUB tester   : pass  |GPIO_Pass, ADC_Pass, SD_Pass
