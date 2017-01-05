@@ -19,7 +19,7 @@ VAR
   byte r,g,b  'These are the rgb values to manually change the colors
   byte level  'This is the intensity of the custom rgb vals
   byte num_leds
-  long  stack[150]
+  long stack[150]
 
 OBJ
   neo : "Neopixel Driver"
@@ -99,17 +99,17 @@ PRI set_all_blue_func | blue                             'MODE: 4
   blue := neo.colorx(0,0,255,100)
   neo.set_all(blue)
 
-PRI blue_orange_split_func | green2, blue, half, orange  'MODE: 5
+PRI blue_orange_split_func | green2, blue, x, orange  'MODE: 5
 
   orange := neo.colorx(255,50,0,255)
   blue := neo.colorx(0,0,255, 255)
    
-  half := 0
-  repeat half from 0 to (num_leds/2)-1
-    neo.set(half, blue)
+  x := 0
+  repeat x from 0 to (num_leds/2)-1
+    neo.set(x, blue)
 
-  half := num_leds/2
-  repeat half from (num_leds/2) to num_leds
-    neo.set(half, orange)
+  x := num_leds/2
+  repeat x from (num_leds/2) to num_leds
+    neo.set(x, orange)
 
   

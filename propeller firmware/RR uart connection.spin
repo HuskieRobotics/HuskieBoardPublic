@@ -135,7 +135,7 @@ PRI main
   pst.str(string("Start"))
 
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver    
-  leds.start(5, neopixel, 119)
+  leds.start(0, neopixel, 40)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcd_pin,lcd_baud,LCD_SIZE)  
   lcd.cls 'clears LCD screen
@@ -211,8 +211,6 @@ PRI main
       printcmd
       set_pin_func
 
-    
-    ''''THESE LED FUNCTIONS DO NOT WORK YET'''
     elseif cmd == SET_LED_MODE
       printcmd
       set_led_mode_func
@@ -228,8 +226,10 @@ PRI main
       request_version_func
       
     elseif cmd <> -1      
-      pst.str(string("Error: invalid command number",14))
+      pst.str(string("Error: invalid command number: "))
       pst.hex(cmd,8)
+      pst.char(13)
+      pst.char(13)
 
 PRI printcmd
     pst.str(string(13,"cmd == "))
@@ -509,6 +509,9 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
     calc_checksum := ( $14 + mode )& $FF
      
     if calc_checksum == original_checksum
+      pst.str(string("Starting mode: "))
+      pst.dec(mode)
+      pst.char(13)
       leds.start_modes
       leds.change_mode(mode)
     else
