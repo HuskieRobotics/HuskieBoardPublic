@@ -280,21 +280,27 @@ PRI request_version_func | originalChecksum, newChecksum, version
     else
       pst.str(string("Wrong checksum in request_version_func"))
 
-PRI give_data_func | x, checktmp
-    byte[roboRioDataPtr+0] := ser.rx      'LED Brightness  
-    byte[roboRioDataPtr+1] := ser.rx      'Battery Voltage
-    byte[roboRioDataPtr+2] := ser.rx      'State (enabled/disabled)
-    byte[roboRioDataPtr+3] := ser.rx      'Time Left
-    byte[roboRioDataPtr+4] := ser.rx      'User byte 1
-    byte[roboRioDataPtr+5] := ser.rx      'User byte 2
-    byte[roboRioDataPtr+6] := ser.rx      'User byte 3
-    byte[roboRioDataPtr+7] := ser.rx      'User byte 4
-    checksum := ser.rx
+PRI give_data_func | x, checktmp, buf[2] 'buf is 2 longs = 8 bytes
+    ''DEPRECATED
+    checktmp := GIVE_DATA
+    
+    repeat x from 0 to 7
+      byte[@buf+x] := ser.rx
+      checktmp += byte[@buf+x]
+    
+    if (checktmp & $FF) == ser.rx          'Does the checksum match?
+      bytemove(roboRioDataPtr, @buf, 8)    'Then write the data to memory
 
-    checktmp := byte[roboRioDataPtr+0]
-    repeat x from 1 to 5
-      checktmp += byte[roboRioDataPtr+x]
-    checktmp //= 256
+    
+    'byte[roboRioDataPtr+0] := ser.rx      'LED Brightness  
+    'byte[roboRioDataPtr+1] := ser.rx      'Battery Voltage
+    'byte[roboRioDataPtr+2] := ser.rx      'State (enabled/disabled)
+    'byte[roboRioDataPtr+3] := ser.rx      'Time Left
+    'byte[roboRioDataPtr+4] := ser.rx      'User byte 1
+    'byte[roboRioDataPtr+5] := ser.rx      'User byte 2
+    'byte[roboRioDataPtr+6] := ser.rx      'User byte 3
+    'byte[roboRioDataPtr+7] := ser.rx      'User byte 4
+    
 
     
 PRI write_data_func                   ' COMMAND 01
