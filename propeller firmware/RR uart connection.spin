@@ -31,16 +31,16 @@ CON     'Permanent constants
         
         robo_tx     = 10        'RoboRIO Transmit Pin
         robo_rx     = 11        'RoboRIO Recieve Pin
-        
-        robo_cs     = 9         'RoboRIO CS Pin
-        robo_clk    = 8         'RoboRIO Clock Pin
-        robo_miso   = 7         'RoboRIO MISO
-        robo_mosi   = 6         'RoboRIO MOSI
+                                
+        robo_mosi   = 6         'RoboRIO MOSI   
+        robo_miso   = 7         'RoboRIO MISO   
+        robo_clk    = 8         'RoboRIO Clock Pin 
+        robo_cs     = 9         'RoboRIO CS Pin    
 
-        switch_1    = robo_cs
-        switch_2    = robo_clk
-        switch_3    = robo_miso
-        switch_4    = robo_mosi
+        switch_1    = robo_mosi      '6
+        switch_2    = robo_miso      '7
+        switch_3    = robo_clk       '8
+        switch_4    = robo_cs        '9
         
         robo_sda    = 13        'RoboRIO SDA
         robo_scl    = 12        'RoboRIO SCL

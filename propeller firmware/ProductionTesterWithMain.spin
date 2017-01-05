@@ -17,10 +17,10 @@ CON
   sd_d2 =        4
   sd_d3 =        5
 
-  dipSwitch_4 =  6
-  dipSwitch_3 =  7
-  dipSwitch_2 =  8
-  dipSwitch_1 =  9
+  dipSwitch_4 =  9
+  dipSwitch_3 =  8
+  dipSwitch_2 =  7
+  dipSwitch_1 =  6
 
   uart_rx =      10
   uart_tx =      11
@@ -127,7 +127,7 @@ PRI stopLED_DIP_SwitchPassThrough
 PRI LED_DIP_Switch_Pass_Through
   DIRA[led_0 .. led_3] := $F
   repeat while runLED_DIPSwitch
-    OUTA[led_0 .. led_3] := !INA[dipSwitch_4 .. dipSwitch_1]
+    OUTA[led_0 .. led_3] := !INA[dipSwitch_1 .. dipSwitch_4]
   OUTA[led_0 .. led_3] := 0
   DIRA[led_0 .. led_3] := 0
   

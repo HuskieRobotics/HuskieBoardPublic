@@ -29,15 +29,15 @@ con
         robo_tx     = 11        'RoboRIO Transmit Pin
         robo_rx     = 10        'RoboRIO Recieve Pin
         
-        robo_cs     = 9         'RoboRIO CS Pin
-        robo_clk    = 8         'RoboRIO Clock Pin
-        robo_miso   = 7         'RoboRIO MISO
-        robo_mosi   = 6         'RoboRIO MOSI
+        robo_mosi   = 6         'RoboRIO MOSI   
+        robo_miso   = 7         'RoboRIO MISO   
+        robo_clk    = 8         'RoboRIO Clock Pin 
+        robo_cs     = 9         'RoboRIO CS Pin    
 
-        switch_1    = robo_cs
-        switch_2    = robo_clk
-        switch_3    = robo_miso
-        switch_4    = robo_mosi
+        switch_1    = robo_mosi      '6
+        switch_2    = robo_miso      '7
+        switch_3    = robo_clk       '8
+        switch_4    = robo_cs        '9
         
         robo_sda    = 13        'RoboRIO SDA
         robo_scl    = 12        'RoboRIO SCL
@@ -88,7 +88,7 @@ pub main
     'LED stuff, for autonomous mode selection
     DIRA[led_0 .. led_3] := $F
     repeat 
-      OUTA[led_0 .. led_3] := !INA[robo_MOSI .. robo_CS]
+      OUTA[led_0 .. led_3] := !INA[robo_CS .. robo_MOSI]
 
 pri scroll 'Quickly scroll through the LEDs twice, to clearly show that the board just booted.
     OUTA[led_0 .. led_3] := 0
