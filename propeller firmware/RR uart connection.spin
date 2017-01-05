@@ -63,7 +63,14 @@ CON     'Permanent constants
         led_3       = 27        'Onboard Red    LED 3
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use       
-                                                                                                                                            
+
+        
+        ' Prevent GPIO output control on certain pins
+        ' When the serial API sets DIRA or OUTA, first AND the request
+        ' with this constant so that it cannot break communication.
+        OUTPUT_MASK = %00_00_1111_00000_1111111_00_1111_000000
+        '          EEPROM+Ser      ADC         UART     SDCARD
+        'This allows control of the 4 LEDs, GPIO, roboRIO rx and tx                                                                                                                     
 CON     { COMMAND LIST }                                                                                                                    
         GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
         WRITE_DATA              = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
@@ -477,20 +484,24 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
   
 PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transmit        'COMMAND 13    
     data := ser.rx
-    dir_val := (data >> 6) & %1
-    out_val := data >> 7
-    pin := data & %11111
+    
+    dir_val := (data & %00000_010 ) >> 1
+    out_val := (data & %00000_001 )
+    pin := (data & %11111_000) >> 3
     original_checksum := ser.rx
 
-    if original_checksum == ($13 + data)
-       dira[pin] := dir_val
-       outa[pin] := out_val'Set the specified pin as an output with the the value passed in
-       ser.tx($13) 'Send the confirmation back to the RoboRio
-       ser.tx($13) 'Send the confirmation back to the RoboRio
+    if original_checksum == ($13 + data)&$FF
+      if (|<pin) & OUTPUT_MASK
+        dira[pin] := dir_val
+        outa[pin] := out_val'Set the specified pin as an output with the the value passed in 
+        ser.tx($13) 'Send the confirmation back to the RoboRio
+        ser.tx($13) 'Send the confirmation back to the RoboRio
+      else                                                   
+        ser.tx($13)
+        ser.tx($0) 'Send Error back to roboRIO
        
     else
       pst.str(string("Error: in function set_pin_func: Bad checksum!"))
-      return
 
 PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND 14
 
