@@ -371,9 +371,6 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 PRI set_lcd_disp_func | len         'COMMAND 08
 
     bytefill(@serialBuffer, 0, 256)
-       
-    'Clear the screen, home the cursor.
-    lcd.cls 
 
     len := recieve_string(@serialBuffer,string("Error reading LCD data"),251) 
     if len
