@@ -109,8 +109,8 @@ VAR
 OBJ 
   ser    : "FASTSERIAL-080927"
   adc    : "jm_adc124s021"   'This is the adc driver for the new MXP board design       
-  'pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
-  pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
+  pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
+  'pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
   lcd    : "Serial_Lcd"  
   leds   : "LED Main"
   sd     : "SD Controller"
@@ -244,10 +244,14 @@ PRI recieve_string(strptr,errorMsg,maxlength) | x,checktmp
       repeat x from 0 to length-1
         byte[strptr+x] := ser.rx
         checksum += byte[strptr+x]
-       
+
+      byte[strptr+length] := 0 
       checktmp := ser.rx
        
       if checksum == checktmp
+        pst.str(string(13,"Length: "))
+        pst.dec(length)
+        pst.char(13)
         return length
       else
         pst.str(errorMsg)
@@ -303,7 +307,6 @@ PRI give_data_func | x, checktmp, buf[2] 'buf is 2 longs = 8 bytes
 
     
 PRI write_data_func                   ' COMMAND 01
-    bytefill(@serialBuffer, 0, 256)
 
     if recieve_string(@serialBuffer,string("Error receiving in write_data_func"),255)
       sd.writeData(@serialBuffer)
@@ -313,7 +316,6 @@ PRI write_data_func                   ' COMMAND 01
                                 
 
 PRI set_log_header_func                  'COMMAND 02                    
-    bytefill(@serialBuffer, 0, 256)
     
     if recieve_string(@serialBuffer,string("Error setting SD log header!"),255)
       pst.str(string("New log header recieved: "))
@@ -322,8 +324,8 @@ PRI set_log_header_func                  'COMMAND 02
       sd.writeData(@serialBuffer)
            
 PRI set_sd_file_name_func | t               'COMMAND 03
-    bytefill(@serialBuffer, 0, 32) 'Only clear first 32 bytes, the rest do not matter. File name length should never be longer than 8+1+3+1=13 bytes (8.3 file name format)
     sd.closeFile     'Make sure file is closed before opening a new one.
+    pst.str(string("SD card file was closed."))
     
     if recieve_string(@serialBuffer,string("Error reading new file name"),32)
       t:= sd.openFile(@serialBuffer,"a")  'append to the file
@@ -335,8 +337,11 @@ PRI set_sd_file_name_func | t               'COMMAND 03
       pst.char(13)
 
 PRI close_log_func                       'COMMAND 04
-    sd.closeFile
-    pst.str(string("SD card file was closed."))
+    if ser.rx == $04
+      sd.closeFile
+      pst.str(string("SD card file was closed."))
+    else
+      pst.str(string("Did not close file - bad checksum!"))
                                                
 PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
 
@@ -370,8 +375,6 @@ PRI set_time_func | intmp, checktmp, timetmp   'COMMAND 05
     pst.char(13)
       
 PRI set_lcd_disp_func | len         'COMMAND 08
-
-    bytefill(@serialBuffer, 0, 256)
 
     len := recieve_string(@serialBuffer,string("Error reading LCD data"),251) 
     if len

@@ -66,8 +66,8 @@ con
                                 
         FIRMWARE_MAJOR = 1 'up to 256
         FIRMWARE_MINOR = 3 'up to 256
-        FIRMWARE_FIX   = 0 'up to 256
-        FIRMWARE_TEST  = 2 'up to 256
+        FIRMWARE_FIX   = 1 'up to 256
+        FIRMWARE_TEST  = 0 'up to 256
 
         FIRMWARE_V = (FIRMWARE_MAJOR * |<0) + (FIRMWARE_MINOR * |<8) + (FIRMWARE_FIX* |<16) + (FIRMWARE_TEST *|<24) 
 
