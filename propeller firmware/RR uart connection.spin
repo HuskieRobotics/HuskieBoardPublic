@@ -147,9 +147,7 @@ PRI main
   
   
   'RECIEVING CODE
-  repeat
-    pst.str(string("  Outer loop",13))
-    pst.char(13)
+  repeat                              
    'get the command (The first byte of whats is being sent)
     cmd := ser.rxtime(100)
   
@@ -234,7 +232,7 @@ PRI main
       pst.hex(cmd,8)
 
 PRI printcmd
-    pst.str(string("cmd == "))
+    pst.str(string(13,"cmd == "))
     pst.hex(cmd,8)
     pst.char(13)
 
