@@ -389,19 +389,24 @@ PRI set_lcd_disp_func | len         'COMMAND 08
 
 PRI set_lcd_size_func | lines        'COMMAND 09
 
-    lcd.finalize   'Stop LCD controller, so that it can be resumed.
-     
+
     lines := ser.rx
-                                                                 
-    pst.str(string("LCD: # of lines set to: "))
-    pst.dec(lines)
-     
-    lcd.init(lcd_pin,lcd_baud,lines)
+    if ser.rx == (($09 + lines) & $FF)
+      if lines == 2 or lines == 4
+        lcd.finalize   'Stop LCD controller, so that it can be resumed.
+        pst.str(string("LCD: # of lines set to: "))
+        pst.dec(lines) 
+        lcd.init(lcd_pin,lcd_baud,lines)
+         
+        ser.tx($09)
+        ser.tx($09)
+      else
+        pst.str(string("LCD: Invalid # of lines"))
+        ser.tx($09)
+        ser.tx($00)
 
 PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, send, count          'COMMAND 10
-    original_checksum := ser.rx
-    pst.str(string("Sending them all"))
-    if original_checksum == $10
+    if ser.rx == $10 'Does checksum byte match?
       values := INA 'Get all the digital input vals of the pins as a 4-byte long
       
       'Send all the digital pin vals along with the command byte and checksum
@@ -419,11 +424,9 @@ PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, se
       return
 
 
-PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, send, new_checksum           'COMMAND 11
-    pin := ser.rx
-    sent_checksum := ser.rx
-    original_checksum := cmd + pin
-    if original_checksum == sent_checksum
+PRI request_single_analog_func |  pin, value, send, new_checksum           'COMMAND 11
+    pin := ser.rx  
+    if ( (cmd + pin) & $FF) == ser.rx    'Does checksum byte match?
       value := adc.read(pin)  'Get the value of a single analog pin (size of 12bits)
       new_checksum := ($11 +(value&$FF) + (value>>8))&$FF
       ser.tx($11)
@@ -434,17 +437,12 @@ PRI request_single_analog_func |  sent_checksum, original_checksum, pin, value, 
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
 
-PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, count, firstByte, newFullByte      'Command 12
-    sent_checksum := ser.rx
-    if sent_checksum == $12
+PRI request_all_analog_func | new_checksum, value, values, send, count, firstByte, newFullByte      'Command 12
+    if ser.rx == $12  'Does checksum byte match?
 
     ' 'Go through all adc pins and add them to values
-    ' 'Look at software spec sheet command 12 for more info
-      'Could put this in a loop
       adc.readToArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
-
-
-      
+     
       byte[@tempdata+0] := adc.readArray(0)>>4           
       byte[@tempdata+1] := (adc.readArray(0)& $00f)<<4             'Fill in the second half of the byte first
       byte[@tempdata+1] := byte[@tempdata+1] | adc.readArray(1)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
@@ -486,15 +484,14 @@ PRI request_all_analog_func | sent_checksum, new_checksum, value, values, send, 
       return    
   
   
-PRI set_pin_func | data, pin, dir_val, out_val, original_checksum, count, transmit        'COMMAND 13    
+PRI set_pin_func | data, pin, dir_val, out_val        'COMMAND 13    
     data := ser.rx
     
     dir_val := (data & %00000_010 ) >> 1
     out_val := (data & %00000_001 )
     pin := (data & %11111_000) >> 3
-    original_checksum := ser.rx
 
-    if original_checksum == ($13 + data)&$FF
+    if ser.rx == ($13 + data)&$FF
       if (|<pin) & OUTPUT_MASK
         dira[pin] := dir_val
         outa[pin] := out_val'Set the specified pin as an output with the the value passed in 
