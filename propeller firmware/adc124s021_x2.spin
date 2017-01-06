@@ -1,3 +1,4 @@
+{ Author: Brandon John}
 CON
         _clkmode = xtal1 + pll16x                                               'Standard clock mode * crystal frequency = 80 MHz
         _xinfreq = 5_000_000
@@ -22,9 +23,9 @@ PUB tester  | x
   repeat
     'pst.bin(long[@data], 32)
     repeat x from 0 to 6
-      pst.bin(readArray(x),32)
+      pst.bin(readArray(x),12)
       pst.str(string(", "))
-    pst.bin(readArray(7),32)
+    pst.bin(readArray(7),12)
     pst.char(13)
     pst.char(13)
     waitcnt(cnt+clkfreq/10)
@@ -38,8 +39,8 @@ PUB start(cs1pin, cs2pin, sckpin, dipin, dopin)
   cs1_mask := |< cs1pin  
   cs2_mask := |< cs2pin
   clk_mask := |< sckpin
-  miso_mask := |< dipin
-  mosi_mask := |< dopin
+  miso_mask := |< dopin ' ADC DO
+  mosi_mask := |< dipin ' ADC DI
   dir_mask := cs1_mask | cs2_mask | clk_mask | mosi_mask
   clear_mask := cs1_mask | cs2_mask | clk_mask
   volts0_loc := @data
@@ -81,6 +82,7 @@ ReadPin       'Read the analog input pin "ch", set value in "volts"
                                                                                     
               mov       a, #32                  'Prepare to :loop 32 times.
               mov       volts, 0               'Clear volts reading for next measurement
+              
 :loop         'Read/write a bit
               andn      outa, clk_mask          'clock low
               rol       ctrlbits, #1     wc     'rotate ctrlbits left 1 position,                                                 
@@ -90,12 +92,14 @@ ReadPin       'Read the analog input pin "ch", set value in "volts"
               shl       volts, #1               'shift volts left 1 bit
               and       miso_mask, ina   wz,nr  'If miso is low,set z
         if_nz or        volts, #1               'if miso is high then 'adc or #1'
-              or        outa, clk_mask          'set clock high           
+              or        outa, clk_mask          'set clock high
+
+              nop                               'Match a minimum 30% duty cycle (This puts us at 32%)
+                         
               djnz      a, #:loop
               
               or        outa, clear_mask        'Turn both cs pins high, to deslect both devices. Also turn on the clock pin.
-              'and       volts, v_mask           'Keep only the actual reading
-              mov volts, clear_mask
+              and       volts, v_mask           'Keep only the actual reading
 ReadPin_ret   ret                               'Return to where this section was called.
 
 
@@ -114,3 +118,27 @@ ctrlbits      long  0
 pin_mask      long  0
 a             long  0
 temp          long  0
+
+
+{{
+
+  Terms of Use: MIT License
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this
+  software and associated documentation files (the "Software"), to deal in the Software
+  without restriction, including without limitation the rights to use, copy, modify,
+  merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to miso so, subject to the following
+  conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies
+  or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+}}
