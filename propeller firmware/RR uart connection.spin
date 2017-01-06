@@ -525,7 +525,7 @@ PRI set_led_intensity_func | intensity, original_checksum, calc_checksum     'CO
     intensity := ser.rx
      
     original_checksum := ser.rx
-    calc_checksum := ($15 + intensity) & $FF
+    calc_checksum := ($16 + intensity) & $FF
      
     if calc_checksum == original_checksum
       leds.stop_modes
