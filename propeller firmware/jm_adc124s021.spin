@@ -74,6 +74,7 @@ pub read(ch) | ctrlbits, adcval
     outa[cs1] := 0
   else
     outa[cs2] := 0                                              ' select device
+
   repeat 32                                                     ' two complete reads
     outa[sck] := 0                                              ' clock low
     outa[mosi] := (ctrlbits <-= 1)                              ' output control bits  
