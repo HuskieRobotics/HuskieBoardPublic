@@ -282,7 +282,7 @@ PRI request_version_func | originalChecksum, newChecksum, version
       ser.tx((version&$FF00)>>8)
       ser.tx((version&$FF0000)>>16)
       ser.tx((version&$FF000000)>>24)
-      newChecksum := ($10+(version&$FF)+((version&$FF00)>>8)+((version&$FF0000)>>16)+((version&$FF000000)>>24))&$FF
+      newChecksum := ($FF+(version&$FF)+((version&$FF00)>>8)+((version&$FF0000)>>16)+((version&$FF000000)>>24))&$FF
       ser.tx(newChecksum)
     else
       pst.str(string("Wrong checksum in request_version_func"))
