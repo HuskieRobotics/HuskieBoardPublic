@@ -61,8 +61,6 @@ CON     'Permanent constants
         led_1       = 25        'Onboard Green  LED 1
         led_2       = 26        'Onboard Green  LED 2
         led_3       = 27        'Onboard Red    LED 3
-        
-        neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use       
 
         
         ' Prevent GPIO output control on certain pins
@@ -70,7 +68,12 @@ CON     'Permanent constants
         ' with this constant so that it cannot break communication.
         OUTPUT_MASK = %00_00_1111_00000_1111111_00_1111_000000
         '          EEPROM+Ser      ADC         UART     SDCARD
-        'This allows control of the 4 LEDs, GPIO, roboRIO rx and tx                                                                                                                     
+        'This allows control of the 4 LEDs, GPIO, roboRIO rx and tx
+
+        
+        LED_STRIP_OUTPUT_MASK = %00_00_0000_00000_1111111_00_1111_000000  'Same as OUTPUT_MASK, except doesn't allow output to the LED pins
+        '                              LEDs
+                                                   
 CON     { COMMAND LIST }                                                                                                                    
         WRITE_DATA              = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
         SET_LOG_HEADER          = $02 ' Deprecated: Set log header. Use WRITE_DATA instead.                                                                                             
@@ -87,9 +90,12 @@ CON     { COMMAND LIST }
         SET_PIN                 = $13 ' Sets the value on a specific pin on the propeller to input, output, or releases control of it
         SET_LED_MODE            = $14 ' Sets the LED mode for the neopixels
         SET_LED_RGB             = $15 ' Sets the LEDs to a custom RGB value
-        SET_LED_INTENSITY       = $16 ' Sets the LEDs brightness intensity (0-100)    
-       '$17 - $FE reserved
-        REQUEST_VERSION         = $FF ' Request the HuskieBoard's current version                                                                                                                  
+        SET_LED_INTENSITY       = $16 ' Sets the LEDs brightness intensity (0-100)
+        CONFIGURE_LED_STRIP     = $17 ' Configures the LED strip's output pin, length, and type.    
+       '$18 - $FE reserved
+        REQUEST_VERSION         = $FF ' Request the HuskieBoard's current version
+        
+                                                                                                                      
 CON    ''user settings
                                                         
         lcd_baud    = 19_200    'LCD communication baudrate
@@ -133,7 +139,6 @@ PRI main
   pst.str(string("Start"))
 
   adc.start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)  'New adc driver    
-  leds.start(0, neopixel, 40)
   ser.start(robo_rx, robo_tx, 0, baud) 'start the FASTSERIAL-080927 cog
   lcd.init(lcd_pin,lcd_baud,LCD_SIZE)  
   lcd.cls 'clears LCD screen
@@ -213,10 +218,17 @@ PRI main
       set_led_rgb_func
 
     elseif cmd == SET_LED_INTENSITY
-
+      printcmd
+      set_led_intensity_func
+    
+    elseif cmd == CONFIGURE_LED_STRIP
+      printcmd
+      configure_led_strip_func
+      
     elseif cmd == REQUEST_VERSION
       printcmd
       request_version_func
+                                     
       
     elseif cmd <> -1      
       pst.str(string("Error: invalid command number: "))
@@ -522,6 +534,35 @@ PRI set_led_intensity_func | intensity, original_checksum, calc_checksum     'CO
       pst.str(string("Error: in function set_led_intensity_func: Bad checksum!"))
       return
      
+
+PRI configure_led_strip_func | pin, type, data, strip_len
+
+    data := ser.rx
+    strip_len := ser.rx
+
+    if ((CONFIGURE_LED_STRIP + data + strip_len) & $FF) == ser.rx ' Does checksum match?
+      pin  := (data & %11111000) >> 3
+      type := (data & %00000111)
+      strip_len += 1
+      pst.str(string(13,"Configure Neopixels: Pin, Type, Length",13))
+      pst.dec(pin)
+      pst.char(",")
+      pst.dec(type)
+      pst.char(",")
+      pst.dec(length) 
+      pst.char(13)
+      pst.bin(data,8)
+      pst.char(" ")
+      pst.bin(strip_len,8)
+      pst.char(13)  
+      if ( |< pin) & LED_STRIP_OUTPUT_MASK                
+        leds.start(0, pin, strip_len, type)
+      else
+        pst.str(string("Error: Invalid pin for LED Strip!"))
+      
+    else
+      pst.str(string("Error: in function configure_led_strip_func: Bad checksum!",13))
+        
 
 dat
   tempdata byte  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  'This is the byte array that will be used for the adc values
