@@ -54,10 +54,10 @@ con
         sd_SPI_DI   = sd_cmd
         sd_SPI_CS   = sd_d3
         
-        led_0       = 24        'Onboard Green  LED 0
-        led_1       = 25        'Onboard Green  LED 1
-        led_2       = 26        'Onboard Green  LED 2
-        led_3       = 27        'Onboard Red    LED 3
+        led_1       = 24        'Onboard Green  LED 1
+        led_2       = 25        'Onboard Green  LED 2
+        led_3       = 26        'Onboard Green  LED 3
+        led_4       = 27        'Onboard Red    LED 4
         
         neopixel    = gpio_0    'Point Neopixel to GPIO Pin 0 -- For ease of use
 
@@ -71,44 +71,39 @@ con
 
         FIRMWARE_V = (FIRMWARE_MAJOR * |<0) + (FIRMWARE_MINOR * |<8) + (FIRMWARE_FIX* |<16) + (FIRMWARE_TEST *|<24) 
 
-        
-var
-    byte roboRioData[8]        'Data Transmitted by robot
-
-
 obj
         uart    : "RR uart connection"
 
 pub main
     scroll
     {UART CONNECTION DRIVER}
-    uart.init(ROBORIO_UART_CONNECTION_BAUD, @roboRioData, FIRMWARE_V)
+    uart.init(ROBORIO_UART_CONNECTION_BAUD, FIRMWARE_V)
      
      
     'LED stuff, for autonomous mode selection
-    DIRA[led_0 .. led_3] := $F
+    DIRA[led_1 .. led_4] := $F
     repeat 
-      OUTA[led_0 .. led_3] := !INA[robo_CS .. robo_MOSI]
+      OUTA[led_1 .. led_4] := !INA[robo_MOSI .. robo_CS]
 
 pri scroll 'Quickly scroll through the LEDs twice, to clearly show that the board just booted.
-    OUTA[led_0 .. led_3] := 0
-    DIRA[led_0 .. led_3] := $F
+    OUTA[led_1 .. led_4] := 0
+    DIRA[led_1 .. led_4] := $F
     repeat 2                       
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0001
+      OUTA[led_1 .. led_4] := %0001
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0011
+      OUTA[led_1 .. led_4] := %0011
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0010
+      OUTA[led_1 .. led_4] := %0010
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0110
+      OUTA[led_1 .. led_4] := %0110
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %0100
+      OUTA[led_1 .. led_4] := %0100
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %1100
+      OUTA[led_1 .. led_4] := %1100
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %1000
+      OUTA[led_1 .. led_4] := %1000
       waitcnt(cnt+clkfreq/10)
-      OUTA[led_0 .. led_3] := %1001
-    OUTA[led_0 .. led_3] := 0
-    DIRA[led_0 .. led_3] := 0                        
+      OUTA[led_1 .. led_4] := %1001
+    OUTA[led_1 .. led_4] := 0
+    DIRA[led_1 .. led_4] := 0                        

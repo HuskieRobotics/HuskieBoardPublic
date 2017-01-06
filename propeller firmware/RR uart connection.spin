@@ -72,7 +72,6 @@ CON     'Permanent constants
         '          EEPROM+Ser      ADC         UART     SDCARD
         'This allows control of the 4 LEDs, GPIO, roboRIO rx and tx                                                                                                                     
 CON     { COMMAND LIST }                                                                                                                    
-        GIVE_DATA               = $00 ' Standard, gives basic data on robot. No response expected.                                                 
         WRITE_DATA              = $01 ' Sends a custom string for logging. Appended to current line that is being logged.                          
         SET_LOG_HEADER          = $02 ' Deprecated: Set log header. Use WRITE_DATA instead.                                                                                             
         SET_SD_FILE_NAME        = $03 ' Set SD log filename/opens file                                                                                           
@@ -99,7 +98,6 @@ VAR
   long  stack[512]                                                                                                                                    
   long  baud                                                                                                                                
   long  cmd, length   
-  long  roboRioDataPtr
   long  firmware_version                                                                                                                       
   byte  serialBuffer[256]    'Used for caching received data to check checksums before using.                                                        
   'byte  generalBuffer[251] 
@@ -122,10 +120,9 @@ PUB dontRunThisMethodDirectly  'this runs and tells the terminal that it is the 
     waitcnt(cnt+clkfreq)'Wait 1 second
   abort
 
-PUB init(baud_,roboRioDataPtr_,firmware_version_)
+PUB init(baud_,firmware_version_)
 
   baud := baud_
-  roboRioDataPtr := roboRioDataPtr_
   firmware_version := firmware_version_
                               
   cognew(main,@stack)
@@ -151,14 +148,9 @@ PRI main
   repeat                              
    'get the command (The first byte of whats is being sent)
     cmd := ser.rxtime(100)
-  
-  '  command number 0 : Send basic data
-    if cmd == GIVE_DATA
-      printcmd             
-      give_data_func
       
     'command number 1 : Recieve and write data
-    elseif cmd == WRITE_DATA
+    if cmd == WRITE_DATA
       printcmd
       write_data_func
 
@@ -283,29 +275,7 @@ PRI request_version_func | originalChecksum, newChecksum, version
     else
       pst.str(string("Wrong checksum in request_version_func"))
 
-PRI give_data_func | x, checktmp, buf[2] 'buf is 2 longs = 8 bytes
-    ''DEPRECATED
-    checktmp := GIVE_DATA
-    
-    repeat x from 0 to 7
-      byte[@buf+x] := ser.rx
-      checktmp += byte[@buf+x]
-    
-    if (checktmp & $FF) == ser.rx          'Does the checksum match?
-      bytemove(roboRioDataPtr, @buf, 8)    'Then write the data to memory
 
-    
-    'byte[roboRioDataPtr+0] := ser.rx      'LED Brightness  
-    'byte[roboRioDataPtr+1] := ser.rx      'Battery Voltage
-    'byte[roboRioDataPtr+2] := ser.rx      'State (enabled/disabled)
-    'byte[roboRioDataPtr+3] := ser.rx      'Time Left
-    'byte[roboRioDataPtr+4] := ser.rx      'User byte 1
-    'byte[roboRioDataPtr+5] := ser.rx      'User byte 2
-    'byte[roboRioDataPtr+6] := ser.rx      'User byte 3
-    'byte[roboRioDataPtr+7] := ser.rx      'User byte 4
-    
-
-    
 PRI write_data_func                   ' COMMAND 01
 
     if recieve_string(@serialBuffer,string("Error receiving in write_data_func"),255)
