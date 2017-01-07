@@ -6,31 +6,7 @@ CON
 VAR
   long  cog
   long  data[8]
-
-
-CON ''TODO: Remove this section when testing is finished!
-        adc_CS1     = 20        
-        adc_CS2     = 19        
-        adc_DO      = 21        
-        adc_DI      = 23       
-        adc_CLK     = 22
-OBJ
-        pst : "Parallax Serial Terminal"
-PUB tester  | x
-  start(adc_CS1,adc_CS2,adc_CLK,adc_DI,adc_DO)
-  pst.start(115200)
   
-  repeat
-    'pst.bin(long[@data], 32)
-    repeat x from 0 to 6
-      pst.bin(readArray(x),12)
-      pst.str(string(", "))
-    pst.bin(readArray(7),12)
-    pst.char(13)
-    pst.char(13)
-    waitcnt(cnt+clkfreq/10)
-
-''END TODO: Remove this section.  
 PUB stop                        ' Stop driver - frees a cog
   if cog
      cogstop(cog)
