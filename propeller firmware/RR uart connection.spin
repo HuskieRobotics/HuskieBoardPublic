@@ -410,7 +410,7 @@ PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, se
 PRI request_single_analog_func |  pin, value, send, new_checksum           'COMMAND 11
     pin := ser.rx  
     if ( (cmd + pin) & $FF) == ser.rx    'Does checksum byte match?
-      value := adc.read(pin)  'Get the value of a single analog pin (size of 12bits)
+      value := adc.readArray(pin)  'Get the value of a single analog pin (size of 12bits)
       new_checksum := ($11 +(value&$FF) + (value>>8))&$FF
       ser.tx($11)
       ser.tx(value&$FF)

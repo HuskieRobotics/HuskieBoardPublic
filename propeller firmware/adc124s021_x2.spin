@@ -108,7 +108,7 @@ ReadPin       'Read the analog input pin "ch", set value in "volts"
         if_z  andn      outa, cs1_mask          'If 1st ADC, pull low ADC 1 cs
         if_nz andn      outa, cs2_mask          'If 2nd ADC, pull low ADC 2 cs
                                                                                     
-              mov       a, #32                  'Prepare to :loop 32 times.
+              mov       a, #16' #32                  'Prepare to :loop 32 times.
               mov       volts, 0                'Clear volts reading for next measurement
               
 :loop         'Read/write a bit
