@@ -112,9 +112,9 @@ VAR
   
 OBJ 
   ser    : "FASTSERIAL-080927"
-  adc    : "jm_adc124s021"   'This is the adc driver for the new MXP board design       
-  pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
-  'pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
+  adc    : "adc124s021_x2"      
+  'pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
+  pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
   lcd    : "Serial_Lcd"  
   leds   : "LED Main"
   sd     : "SD Controller"
@@ -157,8 +157,8 @@ PRI main
     'command number 1 : Recieve and write data
     if cmd == WRITE_DATA
       printcmd
-      write_data_func
-
+      write_data_func            
+      
     'command number 2 : Set log header
     elseif cmd == SET_LOG_HEADER
       printcmd
@@ -410,7 +410,7 @@ PRI request_all_digitalin_func | pin, values, original_checksum, newChecksum, se
 PRI request_single_analog_func |  pin, value, send, new_checksum           'COMMAND 11
     pin := ser.rx  
     if ( (cmd + pin) & $FF) == ser.rx    'Does checksum byte match?
-      value := adc.read(pin)  'Get the value of a single analog pin (size of 12bits)
+      value := adc.readArray(pin)  'Get the value of a single analog pin (size of 12bits)
       new_checksum := ($11 +(value&$FF) + (value>>8))&$FF
       ser.tx($11)
       ser.tx(value&$FF)
@@ -420,31 +420,37 @@ PRI request_single_analog_func |  pin, value, send, new_checksum           'COMM
       pst.str(string("Error: in function request_single_analog_func: Bad checksum!"))
       return    
 
-PRI request_all_analog_func | new_checksum, value, values, send, count, firstByte, newFullByte      'Command 12
+PRI request_all_analog_func | new_checksum, a,b, count, firstByte, newFullByte      'Command 12
     if ser.rx == $12  'Does checksum byte match?
 
-    ' 'Go through all adc pins and add them to values
-      adc.readToArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
-     
-      byte[@tempdata+0] := adc.readArray(0)>>4           
-      byte[@tempdata+1] := (adc.readArray(0)& $00f)<<4             'Fill in the second half of the byte first
-      byte[@tempdata+1] := byte[@tempdata+1] | adc.readArray(1)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+2] := adc.readArray(1) & $ff
-                                   
-      byte[@tempdata+3] := adc.readArray(2)>>4
-      byte[@tempdata+4] := (adc.readArray(2)& $00f)<<4             'Fill in the second half of the byte first 
-      byte[@tempdata+4] := byte[@tempdata+4] | adc.readArray(3)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+5] := adc.readArray(3) & $ff
 
-      byte[@tempdata+6] := adc.readArray(4)>>4
-      byte[@tempdata+7] := (adc.readArray(4)& $00f)<<4             'Fill in the second half of the byte first 
-      byte[@tempdata+7] := byte[@tempdata+7] | adc.readArray(5)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+8] := adc.readArray(5) & $ff
-
-      byte[@tempdata+9] := adc.readArray(6)>>4
-      byte[@tempdata+10] := (adc.readArray(6)& $00f)<<4              'Fill in the second half of the byte first 
-      byte[@tempdata+10] := byte[@tempdata+10] | adc.readArray(7)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
-      byte[@tempdata+11] := adc.readArray(7) & $ff
+      a := adc.readArray(0)
+      b := adc.readArray(1)
+      byte[@tempdata+0] := a>>4           
+      byte[@tempdata+1] := (a& $00f)<<4             'Fill in the second half of the byte first
+      byte[@tempdata+1] := byte[@tempdata+1] | b >>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+2] := b & $ff
+                          
+      a := adc.readArray(2)
+      b := adc.readArray(3)         
+      byte[@tempdata+3] := a>>4
+      byte[@tempdata+4] := (a& $00f)<<4             'Fill in the second half of the byte first 
+      byte[@tempdata+4] := byte[@tempdata+4] | b>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+5] := b & $ff
+                             
+      a := adc.readArray(4)
+      b := adc.readArray(5)
+      byte[@tempdata+6] := a>>4
+      byte[@tempdata+7] := (a& $00f)<<4             'Fill in the second half of the byte first 
+      byte[@tempdata+7] := byte[@tempdata+7] | b>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+8] := b & $ff
+                           
+      a := adc.readArray(6)
+      b := adc.readArray(7)
+      byte[@tempdata+9] := a>>4
+      byte[@tempdata+10] := (a& $00f)<<4              'Fill in the second half of the byte first 
+      byte[@tempdata+10] := byte[@tempdata+10] | b>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it
+      byte[@tempdata+11] := b & $ff
 
       ser.tx($12)
       new_checksum := $12 'Initialize the checksum as the command byte so the final checksum is calculated correctly
