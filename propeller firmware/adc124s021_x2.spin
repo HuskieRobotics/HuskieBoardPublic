@@ -98,11 +98,10 @@ ReadAllPins_ret ret                             'Return to where this section wa
               
 ReadPin       'Read the analog input pin "ch", set value in "volts"               
               mov       temp, ch
+              add       temp, #3
               and       temp, #%011
               mov       ctrlbits, temp          'Set up the ctrlbits, as jm_adc124s021 does. Basically configures this for 2 reads of the same pin, only the second is kept.
-              shl       ctrlbits, #16
-              or        ctrlbits, temp
-              shl       ctrlbits, #11
+              shl       ctrlbits, #27
 
               and       ch, #4   wz, nr         'Is this on the 1st ADC? If so, set z 
         if_z  andn      outa, cs1_mask          'If 1st ADC, pull low ADC 1 cs
@@ -111,9 +110,9 @@ ReadPin       'Read the analog input pin "ch", set value in "volts"
               mov       a, #16' #32                  'Prepare to :loop 32 times.
               mov       volts, 0                'Clear volts reading for next measurement
               
-:loop         'Read/write a bit
-              andn      outa, clk_mask          'clock low
-              rol       ctrlbits, #1     wc     'rotate ctrlbits left 1 position,                                                 
+:loop         'Read/write a bit                                                              
+              rol       ctrlbits, #1     wc     'rotate ctrlbits left 1 position, set wc flag
+              andn      outa, clk_mask          'clock low                                                                                    
         if_nc andn      outa, mosi_mask         'set mosi to bit#0 of ctrlbits - which is in the carry flag
         if_c  or        outa, mosi_mask
         
@@ -121,8 +120,6 @@ ReadPin       'Read the analog input pin "ch", set value in "volts"
               and       miso_mask, ina   wz,nr  'If miso is low,set z
         if_nz or        volts, #1               'if miso is high then 'adc or #1'
               or        outa, clk_mask          'set clock high
-
-              nop                               'Match a minimum 30% duty cycle (This puts us at 32%)
                          
               djnz      a, #:loop
               
