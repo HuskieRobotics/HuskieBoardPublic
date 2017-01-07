@@ -23,7 +23,7 @@ PUB start(cs1pin, cs2pin, sckpin, dipin, dopin)
   clear_mask := cs1_mask | cs2_mask | clk_mask
   volts0_loc := @data
 
-  readcnt_max := 4  ''Todo: let the user define this value.
+  readcnt_max := 3  ''Todo: let the user define this value.
   
   cog := cognew(@ADC, 0)
 
