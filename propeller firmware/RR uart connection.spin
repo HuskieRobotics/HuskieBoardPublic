@@ -112,9 +112,9 @@ VAR
   
 OBJ 
   ser    : "FASTSERIAL-080927"
-  adc    : "jm_adc124s021"   'This is the adc driver for the new MXP board design       
-  pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
-  'pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
+  adc    : "adc124s021_x2"      
+  'pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
+  pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
   lcd    : "Serial_Lcd"  
   leds   : "LED Main"
   sd     : "SD Controller"
@@ -157,8 +157,8 @@ PRI main
     'command number 1 : Recieve and write data
     if cmd == WRITE_DATA
       printcmd
-      write_data_func
-
+      write_data_func            
+      
     'command number 2 : Set log header
     elseif cmd == SET_LOG_HEADER
       printcmd
@@ -423,9 +423,6 @@ PRI request_single_analog_func |  pin, value, send, new_checksum           'COMM
 PRI request_all_analog_func | new_checksum, value, values, send, count, firstByte, newFullByte      'Command 12
     if ser.rx == $12  'Does checksum byte match?
 
-    ' 'Go through all adc pins and add them to values
-      adc.readToArray 'Fill the adc array with the current adc vals (only to be used with the new adc driver)
-     
       byte[@tempdata+0] := adc.readArray(0)>>4           
       byte[@tempdata+1] := (adc.readArray(0)& $00f)<<4             'Fill in the second half of the byte first
       byte[@tempdata+1] := byte[@tempdata+1] | adc.readArray(1)>>8 'Fill in the first half of the byte by attaching the last 4 bits of adc 2 to it

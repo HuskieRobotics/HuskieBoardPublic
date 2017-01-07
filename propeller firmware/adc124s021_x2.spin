@@ -36,6 +36,8 @@ PUB stop                        ' Stop driver - frees a cog
      cogstop(cog)
 
 PUB start(cs1pin, cs2pin, sckpin, dipin, dopin)
+  stop
+  
   cs1_mask := |< cs1pin  
   cs2_mask := |< cs2pin
   clk_mask := |< sckpin
