@@ -60,7 +60,7 @@ VAR
   long dipSwitchStack[30]
   
 OBJ
-  adc   : "jm_adc124s021"    
+  adc   : "adc124s021_x2"    
   sd    : "SD Controller"
   eeprom: "Propeller EEprom"
   main  : "main"
@@ -165,35 +165,35 @@ PRI ADC_Test   : pass | v
 
   pass := True
                    
-  v := adc.read(0) 
+  v := adc.readArray(0) 
   pass &= (v=<3227)
   pass &= (v=>2979)
   
-  v := adc.read(1) 
+  v := adc.readArray(1) 
   pass &= (v=<3873)
   pass &= (v=>3575)
   
-  v := adc.read(2) 
+  v := adc.readArray(2) 
   pass &= (v=<3198)
   pass &= (v=>2952)
   
-  v := adc.read(3) 
+  v := adc.readArray(3) 
   pass &= (v=<2840)
   pass &= (v=>2621)
   
-  v := adc.read(4) 
+  v := adc.readArray(4) 
   pass &= (v=<2130)
   pass &= (v=>1966)
   
-  v := adc.read(5) 
+  v := adc.readArray(5) 
   pass &= (v=<1420)
   pass &= (v=>1311)
   
-  v := adc.read(6) 
+  v := adc.readArray(6) 
   pass &= (v=<1062)
   pass &= (v=>980)
   
-  v := adc.read(7) 
+  v := adc.readArray(7) 
   pass &= (v=<387)
   pass &= (v=>357)
 
