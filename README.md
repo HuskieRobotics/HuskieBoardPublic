@@ -1,6 +1,20 @@
-roborioExpansion
-================
-To get Eagle ready for editing, You will need to add ";(Insert github dir here)\lbr\CustomLibraries" to the lbr directory,
-and ";(Insert github dir here)\projects\RoboRio" to the Projects directory.
-These can be set under Options->Directories, where you must then append these to
-the appropriate section. Include the semicolon.
+# The Huskie Board
+## Overview
+The Huskie Board, designed by Team 3061, is an FRC qualified expansion board for the
+NI roboRIO robotics controller. In addition to breaking out all available signals on the
+MXP expansion port, this board uses a Parallax Propeller chip (8 symmetrical logical
+cores with shared memory and peripheral access) to enable tasks such as advanced
+data logging, on-field driver control and status, and NeoPixel control. Additional GPIO
+and analog inputs are added with open source code to allow further customization.
+
+
+## Firmware
+The Huskie Board's firmware is stored on a 32 KB Flash chip. It can be upgraded over USB, and teams are welcome to load their own firmware. All Huskie Board firmware is stored in the `propeller firmware/` directory.
+
+## roboRIO software
+The LabView firmware is available in the `LabView/LabVIEW API/` directory. This includes examples in the `Examples/` folder, and the API source code in the `Huskie Board/` folder. See `install.txt` for more information.
+
+Currently, the roboRIO API is only available for labview, though we hope to port it for C++ and Java soon.
+
+## Hardware
+The Huskie Board was designed in Eagle CAD, and sources are available in `Eagle CAD/projects/HuskieBoard/`.
