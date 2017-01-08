@@ -1,5 +1,3 @@
-# (GitHub-Flavored) Markdown Editor
-
 # Huskie Board Firmware
 
 ---
@@ -13,8 +11,8 @@ The Huskie Board runs on the [Parallax Propeller microcontroller](https://www.pa
 * `main.spin`
   * `RR uart connection.spin`
     * `FASTSERIAL-080927.spin`
-    * `jm_adc124s021.spin`
-    * `Parallax Serial Terminal.spin`
+    * `adc124s021_x2.spin`
+    * `Disabled Parallax Serial Terminal.spin`
     * `Serial_Lcd.spin`
       * `Simple_Serial.spin`
     * `LED Main.spin`
@@ -25,15 +23,15 @@ The Huskie Board runs on the [Parallax Propeller microcontroller](https://www.pa
 ---
 ### File Descriptions
 
-`ACD_Tester`: Used to test the ADC during development. Continuously writes all ADC input values to the serial terminal.
+`Disabled Parallax Serial Terminal.spin` - Allows us to turn off the debugging software for release versions. `Parallax Serial Terminal.spin` can be used instead to enable debugging.
 
 `FASTSERIAL-080927.spin` - Used to communicate with the RoboRio at a high baud rate.
 
 `fsrw.spin` - FAT32 filesystem control for the SD card
 
-`jm_adc124s021.spin` - Controls serial communication with the onboard ADCs
+`adc124s021_x2.spin` - Controls SPI communication with the onboard ADCs, as well as averaging of the ADC values.
 
-`LED Main.spin` - Controls a strip of Neopixel LEDs on the robot. The patterns can be selected by the RoboRIO.
+`LED Main.spin` - Controls a strip of Neopixel LEDs on the robot. The patterns can be selected by the RoboRIO. More patterns can be added here.
 
 `main.spin` - Top object file, initiates all processes. Also controls the 4 LEDs to indicate DIP switch positions.
 
@@ -49,6 +47,9 @@ The Huskie Board runs on the [Parallax Propeller microcontroller](https://www.pa
 
 `SD Controller.spin` - High level API for SD card control
 
+`Serial_Lcd.spin` - High level interface for Parallax LCD displays
+
+`Simple_Serial.spin` - A simple low baud rate serial object, for use with the LCD displays.
 ---
 
 # How To Load Code

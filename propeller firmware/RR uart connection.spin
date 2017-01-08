@@ -113,8 +113,8 @@ VAR
 OBJ 
   ser    : "FASTSERIAL-080927"
   adc    : "adc124s021_x2"      
-  'pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
-  pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
+  pst    : "Parallax Serial Terminal"   'Uncomment this line to enable debugging statements on the USB port at 115200 baud.
+  'pst    : "Disabled Parallax Serial Terminal"   'Uncomment this line to disable debugging
   lcd    : "Serial_Lcd"  
   leds   : "LED Main"
   sd     : "SD Controller"
