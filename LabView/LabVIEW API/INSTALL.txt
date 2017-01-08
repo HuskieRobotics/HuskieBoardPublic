@@ -1,0 +1,16 @@
+Huskie Board LabVIEW SDK Installation Instructions
+
+The installer for the Huskie Board LabVIEW SDK is coming soon. In the
+	meantime, the SDK has to be installed manually.
+
+1. Unzip the downloaded zip file.
+2. Copy the Huskie Board folder into the vi.lib\Rock
+	Robotics\WPI\ThirdParty\Sensors folder in the LabVIEW 2016
+	folder. By default, the full path is C:\Program Files\National
+	Instruments\LabVIEW 2016\vi.lib\Rock
+	Robotics\WPI\ThirdParty\Sensors\
+3. Copy the HB-errors.txt file into the user.lib\errors folder in the
+	LabVIEW 2016 folder. By default, the full path is C:\Program
+	Files\National Instruments\LabVIEW
+	2016\user.lib\errors\HB-errors.txt
+4. The Examples folder may be copied anywhere that is convenient.
