@@ -96,16 +96,10 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="LED Example.vi" Type="VI" URL="/Z/Desktop/roborioExpansion/LabView/LabVIEW API/Examples/LED Example/LED Example.vi"/>
+		<Item Name="LED Example.vi" Type="VI" URL="../LED Example.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
-				<Item Name="HB_CloseHuskieBoard.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Sensors/Huskie Board/HB_CloseHuskieBoard.vi"/>
-				<Item Name="HB_ConfigureLED.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Sensors/Huskie Board/HB_ConfigureLED.vi"/>
-				<Item Name="HB_OpenHuskieBoard.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Sensors/Huskie Board/HB_OpenHuskieBoard.vi"/>
-				<Item Name="HB_SetLEDRGBValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Sensors/Huskie Board/HB_SetLEDRGBValue.vi"/>
-				<Item Name="HB_SumStringOfBytes.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Sensors/Huskie Board/HB_SumStringOfBytes.vi"/>
-				<Item Name="LED Channels.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Sensors/Huskie Board/LED Channels.ctl"/>
 				<Item Name="NetComm_UsageReport_report.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_report.vi"/>
 				<Item Name="NetComm_UsageReport_ResourceType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_ResourceType.ctl"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
@@ -122,6 +116,12 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_SerialPortWrite.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/SerialPort/WPI_SerialPortWrite.vi"/>
 				<Item Name="WPI_UtilitiesFRC Build Error.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_UtilitiesFRC Build Error.vi"/>
 			</Item>
+			<Item Name="HB_CloseHuskieBoard.vi" Type="VI" URL="../../../Huskie Board/HB_CloseHuskieBoard.vi"/>
+			<Item Name="HB_ConfigureLED.vi" Type="VI" URL="../../../Huskie Board/HB_ConfigureLED.vi"/>
+			<Item Name="HB_OpenHuskieBoard.vi" Type="VI" URL="../../../Huskie Board/HB_OpenHuskieBoard.vi"/>
+			<Item Name="HB_SetLEDRGBValue.vi" Type="VI" URL="../../../Huskie Board/HB_SetLEDRGBValue.vi"/>
+			<Item Name="HB_SumStringOfBytes.vi" Type="VI" URL="../../../Huskie Board/HB_SumStringOfBytes.vi"/>
+			<Item Name="LED Channels.ctl" Type="VI" URL="../../../Huskie Board/LED Channels.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
