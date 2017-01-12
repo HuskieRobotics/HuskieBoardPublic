@@ -21,6 +21,8 @@ VAR
   byte mode
   byte stop_mode
   byte r,g,b  'These are the rgb values to manually change the colors
+  byte set_all
+  byte led_channel
   byte level  'This is the intensity of the custom rgb vals
   byte num_leds
   long cog
@@ -73,8 +75,10 @@ PRI main | custom
         blue_orange_split_func
     else
       custom := neo.colorx(r,g,b, level)
-      neo.set_all(custom)
-
+      if set_all
+        neo.set_all(custom)
+      else
+        neo.set(led_channel, custom)
 PUB change_mode(newMode)
   mode := newMode
 
@@ -84,13 +88,20 @@ PUB stop_modes
   stop_mode := 0
 PUB start_modes
   stop_mode := 1
-PUB set_all(newR,newG,newB) 'Will only display this custom set RGB value if modes are stopped
+PUB set_all_func(newR,newG,newB) 'Will only display this custom set RGB value if modes are stopped
+  set_all := true
   r := newR
   g := newG
   b := newB
 PUB set_intensity(newI)
   level := newI
-  
+
+PUB set_channel_rgb(ch, newR, newG, newB)
+  set_all := false
+  led_channel := ch
+  r := newR
+  g := newG
+  b := newB
 
 PRI led_off_func                                         'MODE: 0
   neo.off
