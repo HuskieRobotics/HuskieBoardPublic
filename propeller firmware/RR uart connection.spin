@@ -528,6 +528,8 @@ PRI set_led_rgb_func | r,g,b, start_led, end_led, original_checksum, calc_checks
 
       ch := start_led    
       repeat ch from start_led to end_led
+        pst.str(string("Led Num: "))
+        pst.dec(ch)
         leds.set_channel_rgb(ch, r,g,b)
     else
       pst.str(string("Error: in function set_led_rgb_func: Bad checksum!"))
