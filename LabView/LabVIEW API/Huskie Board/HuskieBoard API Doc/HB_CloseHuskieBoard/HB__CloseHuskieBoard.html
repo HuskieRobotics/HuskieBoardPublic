@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<TITLE>HB_CloseHuskieBoard.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="HB_CloseHuskieBoard.vi"></A><H2>HB_CloseHuskieBoard.vi</H2>
+<P>Closes the serial connection between the roboRIO and the Huskie Board.</P>
+<P><IMG SRC="HB__CloseHuskieBoardc.png" ALT="HB_CloseHuskieBoard.vi"></P>
+<P><IMG SRC="HB__CloseHuskieBoardp.png" ALT="HB_CloseHuskieBoard.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cerrcodeclst.png" ALT="cerrcodeclst"></P>
+</TD>
+<TD>
+<B>error in (no error)</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>HBDeviceRef</B> <P><B>SerialPortRef</B> specifies a reference to the serial port you want to use.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cerrcodeclst.png" ALT="cerrcodeclst"></P>
+</TD>
+<TD>
+<B>DevStatus</B> <P><B>DevStatus</B> describes the error status before this VI or function runs. The default is no error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred before this node ran or FALSE (checkmark) to indicate a warning or that no error occurred before this node ran. The default is FALSE.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code. The default is 0. If <B>status</B> is TRUE, <B>code</B> is an error code. If <B>status</B> is FALSE, <B>code</B> is 0 or a warning code.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> specifies the origin of the error or warning and is, in most cases, the name of the node that produced the error or warning. The default is an empty string.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cvsrn.png" ALT="cvsrn"></P>
+</TD>
+<TD>
+<B>Serial Port Name</B> <P><B>Serial Port Name</B> specifies the name of the serial port you want to use.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ierrcodeclst.png" ALT="ierrcodeclst"></P>
+</TD>
+<TD>
+<B>error out</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<P><IMG SRC="HB__CloseHuskieBoardd.png" ALT="HB_CloseHuskieBoard.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortClosei.png" ALT="WPI_SerialPortClose.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortClose.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortClose.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortRefctli.png" ALT="WPI_SerialPortRef.ctl"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortRef.ctl</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortRef.ctl</P>
+</TD>
+</TR>
+</Table>
+<P>&quot;HB_CloseHuskieBoard.vi History&quot;</P>
+<P>Current Revision:   13</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="HB__CloseHuskieBoardh.png" ALT="HB_CloseHuskieBoard.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>

@@ -528,8 +528,6 @@ PRI set_led_rgb_func | r,g,b, start_led, end_led, original_checksum, calc_checks
 
       ch := start_led    
       repeat ch from start_led to end_led
-        pst.str(string("Led Num: "))
-        pst.dec(ch)
         leds.set_channel_rgb(ch, r,g,b)
     else
       pst.str(string("Error: in function set_led_rgb_func: Bad checksum!"))
@@ -550,7 +548,7 @@ PRI set_led_intensity_func | intensity, original_checksum, calc_checksum     'CO
       return
      
 
-PRI configure_led_strip_func | pin, type, data, strip_len
+PRI configure_led_strip_func | pin, type, data, strip_len     'Command 17
     
     data := ser.rx
     strip_len := ser.rx

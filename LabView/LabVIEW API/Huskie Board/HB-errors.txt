@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+Warnings and errors that may be returned by the Huskie Board LabVIEW API.
+<nifamily familyname="HBErrorRange" displayname="HB Error Range">
+</nifamily>
+</nicomment>
+<nierror code="5000">
+Bad checksum received from Huskie Board. Retry operation.
+</nierror>
+<nierror code="5001">
+String length too long. Check the documentation from the generating VI for the maximum length of the string that is supported.
+</nierror>
+</nidocument>
