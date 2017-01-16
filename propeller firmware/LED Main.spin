@@ -96,7 +96,7 @@ PUB set_all_func(newR,newG,newB) 'Will only display this custom set RGB value if
 PUB set_intensity(newI)
   level := newI
 
-PUB set_channel_rgb(ch, newR, newG, newB)
+PUB set_channel_rgb(ch, newR, newG, newB)'Will only display this custom set RGB value if modes are stopped  
   set_all := false
   led_channel := ch
   r := newR
