@@ -1,0 +1,221 @@
+<HTML>
+<HEAD>
+<TITLE>HB_OpenHuskieBoard.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="HB_OpenHuskieBoard.vi"></A><H2>HB_OpenHuskieBoard.vi</H2>
+<P>Opens a serial connection between the roboRIO and the Huskie Board. The user is responsible for synchronizing all access to the Huskie Board.</P>
+<P><IMG SRC="HB__OpenHuskieBoardc.png" ALT="HB_OpenHuskieBoard.vi"></P>
+<P><IMG SRC="HB__OpenHuskieBoardp.png" ALT="HB_OpenHuskieBoard.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cerrcodeclst.png" ALT="cerrcodeclst"></P>
+</TD>
+<TD>
+<B>error in (no error)</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>HBDeviceRef</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ierrcodeclst.png" ALT="ierrcodeclst"></P>
+</TD>
+<TD>
+<B>DevStatus</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error. </P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ivsrn.png" ALT="ivsrn"></P>
+</TD>
+<TD>
+<B>Serial Port Name</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ierrcodeclst.png" ALT="ierrcodeclst"></P>
+</TD>
+<TD>
+<B>error out</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<P><IMG SRC="HB__OpenHuskieBoardd.png" ALT="HB_OpenHuskieBoard.vi"></P>
+<P><IMG SRC="HB__OpenHuskieBoardd1.png" ALT="HB_OpenHuskieBoard.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortRefctli.png" ALT="WPI_SerialPortRef.ctl"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortRef.ctl</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortRef.ctl</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortOpeni.png" ALT="WPI_SerialPortOpen.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortOpen.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortOpen.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortctli.png" ALT="WPI_SerialPort.ctl"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPort.ctl</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPort.ctl</P>
+</TD>
+</TR>
+</Table>
+<P>&quot;HB_OpenHuskieBoard.vi History&quot;</P>
+<P>Current Revision:   10</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="HB__OpenHuskieBoardh.png" ALT="HB_OpenHuskieBoard.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>

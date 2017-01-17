@@ -1,0 +1,339 @@
+<HTML>
+<HEAD>
+<TITLE>HB_ReadAIAllChannels.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="HB_ReadAIAllChannels.vi"></A><H2>HB_ReadAIAllChannels.vi</H2>
+<P>Reads all eight AI channels on the Huskie Board and returns the current values both scaled and raw.</P>
+<P><IMG SRC="HB__ReadAIAllChannelsc.png" ALT="HB_ReadAIAllChannels.vi"></P>
+<P><IMG SRC="HB__ReadAIAllChannelsp.png" ALT="HB_ReadAIAllChannels.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>HBDeviceRef</B> <P><B>SerialPortRef</B> specifies a reference to the serial port you want to use.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cerrcodeclst.png" ALT="cerrcodeclst"></P>
+</TD>
+<TD>
+<B>DevStatus</B> <P><B>DevStatus</B> describes the error status before this VI or function runs. The default is no error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred before this node ran or FALSE (checkmark) to indicate a warning or that no error occurred before this node ran. The default is FALSE.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code. The default is 0. If <B>status</B> is TRUE, <B>code</B> is an error code. If <B>status</B> is FALSE, <B>code</B> is 0 or a warning code.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> specifies the origin of the error or warning and is, in most cases, the name of the node that produced the error or warning. The default is an empty string.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cvsrn.png" ALT="cvsrn"></P>
+</TD>
+<TD>
+<B>Serial Port Name</B> <P><B>Serial Port Name</B> specifies the name of the serial port you want to use.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cerrcodeclst.png" ALT="cerrcodeclst"></P>
+</TD>
+<TD>
+<B>error in (no error)</B> <P><B>error in (no error)</B> describes error conditions that occur before this node runs. The default is no error. If an error occurred before this node runs, the node passes the <B>error in (no error)</B> value to <B>error out</B>. This node runs normally only if no error occurred before this node runs. If an error occurs while this node runs, it runs normally and sets its own error status in <B>error out</B>. Use the Simple Error Handler or General Error Handler VIs to display the description of the error code. Use exception control to treat what is normally an error as no error or to treat a warning as an error. Use <B>error in (no error)</B> and <B>error out</B> to check errors and to specify execution order by wiring <B>error out</B> from one node to <B>error in (no error)</B> of the next node.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred before this node ran or FALSE (checkmark) to indicate a warning or that no error occurred before this node ran. The default is FALSE.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code. The default is 0. If <B>status</B> is TRUE, <B>code</B> is an error code. If <B>status</B> is FALSE, <B>code</B> is 0 or a warning code.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> specifies the origin of the error or warning and is, in most cases, the name of the node that produced the error or warning. The default is an empty string.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>HBDeviceRef</B> <P><B>SerialPortRef</B> returns a reference to the serial port.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ierrcodeclst.png" ALT="ierrcodeclst"></P>
+</TD>
+<TD>
+<B>DevStatus</B> <P><B>DevStatus</B> describes the error status that this VI or function produces.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred before this node ran or FALSE (checkmark) to indicate a warning or that no error occurred before this node ran.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code. If <B>status</B> is TRUE, <B>code</B> is an error code. If <B>status</B> is FALSE, <B>code</B> is 0 or a warning code.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> specifies the origin of the error or warning and is, in most cases, the name of the node that produced the error or warning.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ivsrn.png" ALT="ivsrn"></P>
+</TD>
+<TD>
+<B>Serial Port Name</B> <P><B>Serial Port Name</B> returns the name of the serial port you want to use.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ierrcodeclst.png" ALT="ierrcodeclst"></P>
+</TD>
+<TD>
+<B>error out</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="i1ddbl.png" ALT="i1ddbl"></P>
+</TD>
+<TD>
+<B>All Channels Scaled Values</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B></B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="i1du32.png" ALT="i1du32"></P>
+</TD>
+<TD>
+<B>All Channels Raw Values</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="iu32.png" ALT="iu32"></P>
+</TD>
+<TD>
+<B></B> </TD>
+</TR>
+</Table>
+</UL>
+<P><IMG SRC="HB__ReadAIAllChannelsd.png" ALT="HB_ReadAIAllChannels.vi"></P>
+<P><IMG SRC="HB__ReadAIAllChannelsd1.png" ALT="HB_ReadAIAllChannels.vi"></P>
+<P><IMG SRC="HB__ReadAIAllChannelsd2.png" ALT="HB_ReadAIAllChannels.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortRefctli.png" ALT="WPI_SerialPortRef.ctl"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortRef.ctl</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortRef.ctl</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortReadi.png" ALT="WPI_SerialPortRead.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortRead.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortRead.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="HB__CheckChecksumi.png" ALT="HB_CheckChecksum.vi"></P>
+</TD>
+<TD>
+<B><P>HB_CheckChecksum.vi</P>
+</B><P>C:\Users\nnrobot\Documents\GitHub\roborioExpansion\LabView\LabVIEW API\Huskie Board\HB_CheckChecksum.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="Error_Cluster_From_Error_Codei.png" ALT="Error Cluster From Error Code.vi"></P>
+</TD>
+<TD>
+<B><P>Error Cluster From Error Code.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Utility\error.llb\Error Cluster From Error Code.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="WPI__SerialPortWritei.png" ALT="WPI_SerialPortWrite.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_SerialPortWrite.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2016\vi.lib\Rock Robotics\WPI\SerialPort\WPI_SerialPortWrite.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="HB__StringToBitArrayi.png" ALT="HB_StringToBitArray.vi"></P>
+</TD>
+<TD>
+<B><P>HB_StringToBitArray.vi</P>
+</B><P>C:\Users\nnrobot\Documents\GitHub\roborioExpansion\LabView\LabVIEW API\Huskie Board\HB_StringToBitArray.vi</P>
+</TD>
+</TR>
+</Table>
+<P>&quot;HB_ReadAIAllChannels.vi History&quot;</P>
+<P>Current Revision:   7</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="HB__ReadAIAllChannelsh.png" ALT="HB_ReadAIAllChannels.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>

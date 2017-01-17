@@ -108,7 +108,7 @@ VAR
   byte  serialBuffer[256]    'Used for caching received data to check checksums before using.                                                        
   'byte  generalBuffer[251] 
   byte  checksum
-  byte  len2, count2                        
+  byte  len2, count2                      
   
 OBJ 
   ser    : "FASTSERIAL-080927"
@@ -511,17 +511,24 @@ PRI set_led_mode_func | mode, original_checksum, calc_checksum          'COMMAND
       return
      
 
-PRI set_led_rgb_func | r,g,b, original_checksum, calc_checksum               'COMMAND 15
+PRI set_led_rgb_func | r,g,b, start_led, end_led, original_checksum, calc_checksum, ch               'COMMAND 15
     r := ser.rx
     g := ser.rx
     b := ser.rx
+
+    start_led := ser.rx
+    end_led := ser.rx
      
     original_checksum := ser.rx
-    calc_checksum := ($15 + r + g + b) & $FF
+    calc_checksum := ($15 + r + g + b + start_led + end_led) & $FF
      
     if calc_checksum == original_checksum
       leds.stop_modes
-      leds.set_all(r,g,b)
+      'leds.set_all(r,g,b)
+
+      ch := start_led    
+      repeat ch from start_led to end_led
+        leds.set_channel_rgb(ch, r,g,b)
     else
       pst.str(string("Error: in function set_led_rgb_func: Bad checksum!"))
       return
@@ -541,12 +548,12 @@ PRI set_led_intensity_func | intensity, original_checksum, calc_checksum     'CO
       return
      
 
-PRI configure_led_strip_func | pin, type, data, strip_len
-
+PRI configure_led_strip_func | pin, type, data, strip_len     'Command 17
+    
     data := ser.rx
     strip_len := ser.rx
 
-    if ((CONFIGURE_LED_STRIP + data + strip_len) & $FF) == ser.rx ' Does checksum match?
+    if ((CONFIGURE_LED_STRIP + data + strip_len) & $FF) == ser.rx ' Does checksum match?   
       pin  := (data & %11111000) >> 3
       type := (data & %00000111)
       strip_len += 1
